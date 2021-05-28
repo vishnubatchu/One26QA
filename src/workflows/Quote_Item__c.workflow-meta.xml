@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Clean_Alt_Desc</fullName>
+        <field>Alternate_Description_Clean__c</field>
+        <formula>SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(Alternate_Description__c,&quot;\&quot;&quot;, &quot;&apos;&apos;&quot;),&quot;@&quot;, &quot; @ &quot;),&quot;”&quot;, &quot;&apos;&apos;&quot;),&quot;“&quot;, &quot;&apos;&apos;&quot;)</formula>
+        <name>Clean Alt Desc</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Clean_Desc</fullName>
+        <field>Description_Clean__c</field>
+        <formula>SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(Description__c,&quot;\&quot;&quot;, &quot;&apos;&apos;&quot;),&quot;@&quot;, &quot; @ &quot;),&quot;”&quot;, &quot;&apos;&apos;&quot;),&quot;“&quot;, &quot;&apos;&apos;&quot;)</formula>
+        <name>Clean Desc</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Clean_Long_DE_Desc</fullName>
+        <field>II_VI_DE_Long_Description_Clean__c</field>
+        <formula>SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE( II_VI_DE_Long_Description__c ,&quot;\&quot;&quot;, &quot;&apos;&apos;&quot;),&quot;@&quot;, &quot; @ &quot;),&quot;”&quot;, &quot;&apos;&apos;&quot;),&quot;“&quot;, &quot;&apos;&apos;&quot;)</formula>
+        <name>Clean Long DE Desc</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Clean_Long_EN_Desc</fullName>
+        <field>Long_Description_English_Clean__c</field>
+        <formula>SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE( Long_Description_English__c ,&quot;\&quot;&quot;, &quot;&apos;&apos;&quot;),&quot;@&quot;, &quot; @ &quot;),&quot;”&quot;, &quot;&apos;&apos;&quot;),&quot;“&quot;, &quot;&apos;&apos;&quot;)</formula>
+        <name>Clean Long EN Desc</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Clean_Long_FR_Desc</fullName>
+        <field>Long_Description_French_Clean__c</field>
+        <formula>SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE( Long_Description_French__c ,&quot;\&quot;&quot;, &quot;&apos;&apos;&quot;),&quot;@&quot;, &quot; @ &quot;),&quot;”&quot;, &quot;&apos;&apos;&quot;),&quot;“&quot;, &quot;&apos;&apos;&quot;)</formula>
+        <name>Clean Long FR Desc</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Product_Description_Update</fullName>
+        <description>Update Product Description on quote line item with associated product description.  This will ONLY UPDATE WHEN QUOTE IS CREATED.</description>
+        <field>Product_Description2__c</field>
+        <formula>Product__r.Description</formula>
+        <name>Product Description Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Integration_Status_as_Pending</fullName>
+        <field>Integration_Status__c</field>
+        <literalValue>Integration Pending</literalValue>
+        <name>Update Integration Status as Pending</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Line_Status_as_Approval_Pending</fullName>
+        <field>Line_Status__c</field>
+        <literalValue>Approval Pending</literalValue>
+        <name>Update Line Status as Approval Pending</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Line_Status_as_Approved</fullName>
+        <field>Line_Status__c</field>
+        <literalValue>Approved</literalValue>
+        <name>Update Line Status as Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Status_as_Rejected</fullName>
+        <field>Line_Status__c</field>
+        <literalValue>Approval Rejected</literalValue>
+        <name>Update Status as Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Quote Clean Text Refresh</fullName>
+        <actions>
+            <name>Clean_Alt_Desc</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Clean_Desc</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Clean_Long_DE_Desc</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Clean_Long_EN_Desc</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Clean_Long_FR_Desc</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Quote_Item__c.CreatedDate</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update Product Description</fullName>
+        <actions>
+            <name>Product_Description_Update</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>1</booleanFilter>
+        <criteriaItems>
+            <field>Quote_Item__c.CreatedDate</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <description>Update the product description on the quote line item from the associated product when the quote line item is created.</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+</Workflow>

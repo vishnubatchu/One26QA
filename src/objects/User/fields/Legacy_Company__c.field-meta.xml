@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Legacy_Company__c</fullName>
+    <description>Used to support existing processes during the org merge processes</description>
+    <externalId>false</externalId>
+    <label>Legacy Company</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Finisar</fullName>
+                <default>false</default>
+                <label>Finisar</label>
+            </value>
+            <value>
+                <fullName>Corp II-VI</fullName>
+                <default>false</default>
+                <label>Corp II-VI</label>
+            </value>
+            <value>
+                <fullName>Marlow</fullName>
+                <default>false</default>
+                <label>Marlow</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

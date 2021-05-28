@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Non_U_S_Customer__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Is this for a Non-U.S. Customer?</description>
+    <externalId>false</externalId>
+    <inlineHelpText>If Yes to both questions, ITAR export license and Data transmission requirements apply.   See MI drawing 130-0248-001 Para 6.2.2</inlineHelpText>
+    <label>Non-U.S. Customer?</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Checkbox</type>
+</CustomField>

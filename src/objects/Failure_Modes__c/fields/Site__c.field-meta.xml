@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Site__c</fullName>
+    <externalId>false</externalId>
+    <label>Site</label>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>IPH</fullName>
+                <default>false</default>
+                <label>IPH</label>
+            </value>
+            <value>
+                <fullName>WXI</fullName>
+                <default>false</default>
+                <label>WXI</label>
+            </value>
+            <value>
+                <fullName>SNY</fullName>
+                <default>false</default>
+                <label>SNY</label>
+            </value>
+            <value>
+                <fullName>SYD</fullName>
+                <default>false</default>
+                <label>SYD</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

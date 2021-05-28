@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>What_is_the_real_expected_date_for_quali__c</fullName>
+    <description>What is the real expected date for qualification?</description>
+    <externalId>false</externalId>
+    <inlineHelpText>What is the real expected date for qualification?</inlineHelpText>
+    <label>Real Expected Date For Qualification</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

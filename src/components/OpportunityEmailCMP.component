@@ -1,0 +1,148 @@
+<apex:component controller="OpportunityEmailCustomComponent">
+    <apex:attribute name="Opportunity" type="Id" required="true" description=" Opportunity Associated with Loaner" assignTo="{!OpportunityId}"/>
+    <html>
+        <body>
+            
+            <table class="table_outer" >
+	<tr>
+		<th style='width:950px; border:1px solid white;' bgcolor="#CCCC99"><span class = "span_style" style='font-size: 14.0pt' >Loaner Opportunity Details</span>
+		</th>
+	</tr>
+<tr>
+    <br/> 
+     
+<table>
+    <apex:variable value="{!OpportunityRecord}" var="Opp"/>
+	<tr>
+		<td  class="loaner_td">
+			<p class = "label_p" ><span class = "span_style" >Opportunity # : </span></p>
+		</td >
+		<td class ="loaner_td_val">
+			<p><span class = "span_style">{!Opp.Number__c}</span></p>
+		</td>
+		<td  class="loaner_td">
+			<p class = "label_p" ><span class = "span_style" >Customer : </span></p>
+		</td >
+		<td class ="loaner_td_val">
+			<p><span class = "span_style">{!Opp.Account.Name}</span></p>
+		</td>
+		<td  class="loaner_td">
+			<p class = "label_p" ><span class = "span_style" >Next Action : </span></p>
+		</td >
+		<td class ="loaner_td_val">
+			<p><span class = "span_style">{!Opp.NextStep}</span></p>
+		</td>
+	</tr>
+
+	<tr>
+		<td  class="loaner_td">
+			<p class = "label_p" ><span class = "span_style" >Project Name : </span></p>
+		</td >
+		<td class ="loaner_td_val">
+			<p><span class = "span_style">{!Opp.Project_Name__c}</span></p>
+		</td>
+		<td  class="loaner_td">
+			<p class = "label_p" ><span class = "span_style" >Account : </span></p>
+		</td >
+		<td class ="loaner_td_val">
+			<p><span class = "span_style">{!Opp.Account.Name}</span></p>
+		</td>
+		<td  class="loaner_td">
+			<p class = "label_p" ><span class = "span_style" >Lost To : </span></p>
+		</td >
+		<td class ="loaner_td_val">
+			<p><span class = "span_style">{!Opp.Lost_To__c}</span></p>
+		</td>
+	</tr>
+
+	<tr>
+		<td  class="loaner_td">
+			<p class = "label_p" ><span class = "span_style" >Status : </span></p>
+		</td >
+		<td class ="loaner_td_val">
+			<p><span class = "span_style">{!Opp.StageName}</span></p>
+		</td>
+		<td  class="loaner_td">
+			<p class = "label_p" ><span class = "span_style" >RSM : </span></p>
+		</td >
+		<td class ="loaner_td_val">
+			<p><span class = "span_style">{!Opp.RSM__r.Name}</span></p>
+		</td>
+		<td  class="loaner_td">
+			<p class = "label_p" ><span class = "span_style">Lost To Reason : </span></p>
+		</td >
+		<td class ="loaner_td_val">
+			<p><span class = "span_style">{!Opp.Lost_Cancelled_Rejected_Reason__c}</span></p>
+		</td>
+	</tr>
+
+	<tr>
+		<td  class="loaner_td">
+			<p class = "label_p" ><span class = "span_style" >Customer Type : </span></p>
+		</td >
+		<td class ="loaner_td_val">
+			<p><span class = "span_style">{!Opp.Type}</span></p>
+		</td>
+		<td  class="loaner_td">
+			<p class = "label_p" ><span class = "span_style" >Rep Firm Name : </span></p>
+		</td >
+		<td class ="loaner_td_val">
+			<p><span class = "span_style">{!Opp.Rep_Firm_Name__r.Name}</span></p>
+		</td>
+		<td  class="loaner_td">
+			<p class = "label_p" ><span class = "span_style" >Company : </span></p>
+		</td >
+		<td class ="loaner_td_val">
+			<p><span class = "span_style">{!Opp.Company__c}</span></p>
+		</td>
+	</tr>
+
+	<tr>
+		<td  class="loaner_td">
+			<p class = "label_p" ><span class = "span_style" >Market Segment : </span></p>
+		</td >
+		<td class ="loaner_td_val">
+			<p><span class = "span_style">{!Opp.Market_Segment__c}</span></p>
+		</td>
+		<td  class="loaner_td">
+			<p class = "label_p" ><span class = "span_style" >Sales Channel : </span></p>
+		</td >
+		<td class ="loaner_td_val">
+			<p><span class = "span_style">{!Opp.Sales_Channel__r.Name}</span></p>
+		</td>
+		<td  class="loaner_td">
+			<p class = "label_p" ><span class = "span_style" >Design Reg # : </span></p>
+		</td >
+		<td class ="loaner_td_val">
+			<p><span class = "span_style">{!Opp.Design_Registration__c}</span></p>
+		</td>
+	</tr>
+
+	<tr>
+		<td  class="loaner_td">
+			<p class = "label_p" ><span class = "span_style" >Region : </span></p>
+		</td >
+		<td class ="loaner_td_val">
+			<p><span class = "span_style">{!Opp.Region__c}</span></p>
+		</td>
+		<td  class="loaner_td">
+			<p class = "label_p" ><span class = "span_style" >Next 12 Months Revenue : </span></p>
+		</td >
+		<td class ="loaner_td_val">
+			<p><span class = "span_style">{!Opp.Next_12_Months_Revenue__c}</span></p>
+		</td>
+		<td  class="loaner_td">
+			<p class = "label_p" ><span class = "span_style" >Created By : </span></p>
+		</td >
+		<td class ="loaner_td_val">
+			<p><span class = "span_style">{!Opp.CreatedBy.Name}</span></p>
+		</td>
+	</tr>
+</table>
+</tr>
+</table>
+
+        </body>
+        
+    </html>
+</apex:component>

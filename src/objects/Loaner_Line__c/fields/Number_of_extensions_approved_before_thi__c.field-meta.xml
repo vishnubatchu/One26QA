@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Number_of_extensions_approved_before_thi__c</fullName>
+    <defaultValue>0</defaultValue>
+    <description>Number of extensions approved before this approval</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Number of extensions approved before this approval</inlineHelpText>
+    <label>Number of extensions approved before</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

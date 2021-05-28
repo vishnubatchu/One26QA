@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Findings__c</fullName>
+    <externalId>false</externalId>
+    <label>Findings</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Faulty IB</fullName>
+                <default>false</default>
+                <label>Faulty IB</label>
+            </value>
+            <value>
+                <fullName>Faulty MB</fullName>
+                <default>false</default>
+                <label>Faulty MB</label>
+            </value>
+            <value>
+                <fullName>Faulty Optics</fullName>
+                <default>false</default>
+                <label>Faulty Optics</label>
+            </value>
+            <value>
+                <fullName>Mechanical</fullName>
+                <default>false</default>
+                <label>Mechanical</label>
+            </value>
+            <value>
+                <fullName>Multiple Faults</fullName>
+                <default>false</default>
+                <label>Multiple Faults</label>
+            </value>
+            <value>
+                <fullName>NFF</fullName>
+                <default>false</default>
+                <label>NFF</label>
+            </value>
+            <value>
+                <fullName>Pending</fullName>
+                <default>false</default>
+                <label>Pending</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

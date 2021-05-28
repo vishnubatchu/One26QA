@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Return_Instructions__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(ISBLANK(Product__r.Return_Instruction__c ), 
+ CASE( RSM__r.Alias , 
+&apos;DLou&apos;,  $Label.Return_Instructions_Derek,
+&apos;jhuan&apos;,  $Label.Return_Instructions_Derek , 
+&apos;SLv&apos;, $Label.Return_Instructions_Derek,
+&apos;MMa&apos;, $Label.Return_Instructions_Derek,
+&apos;JShen&apos;, $Label.Return_Instructions_Derek ,
+&apos;XCheng&apos;,  $Label.Return_Instructions_chris ,
+&apos;ixiao&apos;,  $Label.Return_Instructions_chris ,
+&apos;BYu&apos;,  $Label.Return_Instructions_chris ,
+&apos;jzeng&apos;,  $Label.Return_Instructions_chris ,
+&apos;MZeng&apos;,  $Label.Return_Instructions_chris ,
+ CASE( Loaner__r.VP_PLD_Finisar__r.Alias ,
+   &apos;yyasu&apos;, $Label.Return_Instructions_greg1,
+&apos;MRobin&apos;, $Label.Return_Instructions_greg1,
+&apos;GHart&apos;, IF( Loaner__r.Firm_Name_Sales_rep__c  &lt;&gt; null,  $Label.Return_Instructions_betty_repLocation ,  $Label.Return_Instructions_greg   ), $Label.Return_Instructions_betty) ) ,
+$Label.Return_Instructions1+
+IF(ISBLANK( Product__r.A_C__c ),  
+Product__r.Return_Instruction__c + &apos; in &apos; +  Product__r.Location__c +&apos;&quot;&apos;+BR() 
++&apos; d. Click Outbound RMA NOT Needed box.&apos;,
+Product__r.Return_Instruction__c + &apos; in &apos; +  Product__r.Location__c +&apos;-A/C#:&apos;+ Product__r.A_C__c +&apos;&quot;&apos; + BR()+&apos; d. Click Outbound RMA NOT Needed box.&apos; 
+)
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Return Instructions</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,584 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PDC_Level_1__c</fullName>
+    <externalId>false</externalId>
+    <label>PDC Level 1</label>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Site__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>10GCDRLDPA</fullName>
+                <default>false</default>
+                <label>10GCDRLDPA</label>
+            </value>
+            <value>
+                <fullName>BH1</fullName>
+                <default>false</default>
+                <label>BH1</label>
+            </value>
+            <value>
+                <fullName>BH Laser</fullName>
+                <default>false</default>
+                <label>BH Laser</label>
+            </value>
+            <value>
+                <fullName>Breakout</fullName>
+                <default>false</default>
+                <label>Breakout</label>
+            </value>
+            <value>
+                <fullName>Bulkhead</fullName>
+                <default>false</default>
+                <label>Bulkhead</label>
+            </value>
+            <value>
+                <fullName>Calibration</fullName>
+                <default>false</default>
+                <label>Calibration</label>
+            </value>
+            <value>
+                <fullName>Capacitor</fullName>
+                <default>false</default>
+                <label>Capacitor</label>
+            </value>
+            <value>
+                <fullName>Ceramic capacitor</fullName>
+                <default>false</default>
+                <label>Ceramic capacitor</label>
+            </value>
+            <value>
+                <fullName>CLEI Label</fullName>
+                <default>false</default>
+                <label>CLEI Label</label>
+            </value>
+            <value>
+                <fullName>COF</fullName>
+                <default>false</default>
+                <label>COF</label>
+            </value>
+            <value>
+                <fullName>COF Window</fullName>
+                <default>false</default>
+                <label>COF Window</label>
+            </value>
+            <value>
+                <fullName>Common</fullName>
+                <default>false</default>
+                <label>Common</label>
+            </value>
+            <value>
+                <fullName>DFB25</fullName>
+                <default>false</default>
+                <label>DFB25</label>
+            </value>
+            <value>
+                <fullName>DFB Laser</fullName>
+                <default>false</default>
+                <label>DFB Laser</label>
+            </value>
+            <value>
+                <fullName>EEPROM</fullName>
+                <default>false</default>
+                <label>EEPROM</label>
+            </value>
+            <value>
+                <fullName>EMI Collar</fullName>
+                <default>false</default>
+                <label>EMI Collar</label>
+            </value>
+            <value>
+                <fullName>FCC</fullName>
+                <default>false</default>
+                <label>FCC</label>
+            </value>
+            <value>
+                <fullName>Firmware</fullName>
+                <default>false</default>
+                <label>Firmware</label>
+            </value>
+            <value>
+                <fullName>Flex</fullName>
+                <default>false</default>
+                <label>Flex</label>
+            </value>
+            <value>
+                <fullName>Gold Finger</fullName>
+                <default>false</default>
+                <label>Gold Finger</label>
+            </value>
+            <value>
+                <fullName>Header pin / Riser board</fullName>
+                <default>false</default>
+                <label>Header pin / Riser board</label>
+            </value>
+            <value>
+                <fullName>Heat sink, Lid, Ring Frame</fullName>
+                <default>false</default>
+                <label>Heat sink, Lid, Ring Frame</label>
+            </value>
+            <value>
+                <fullName>Hotbar</fullName>
+                <default>false</default>
+                <label>Hotbar</label>
+            </value>
+            <value>
+                <fullName>I32X1B</fullName>
+                <default>false</default>
+                <label>I32X</label>
+            </value>
+            <value>
+                <fullName>ICDR3A</fullName>
+                <default>false</default>
+                <label>ICDR</label>
+            </value>
+            <value>
+                <fullName>Inductor</fullName>
+                <default>false</default>
+                <label>Inductor</label>
+            </value>
+            <value>
+                <fullName>Interface board</fullName>
+                <default>false</default>
+                <label>Interface board</label>
+            </value>
+            <value>
+                <fullName>Isolator</fullName>
+                <default>false</default>
+                <label>Isolator</label>
+            </value>
+            <value>
+                <fullName>Laser Driver</fullName>
+                <default>false</default>
+                <label>Laser Driver</label>
+            </value>
+            <value>
+                <fullName>Leadframe</fullName>
+                <default>false</default>
+                <label>Leadframe</label>
+            </value>
+            <value>
+                <fullName>Lens</fullName>
+                <default>false</default>
+                <label>Lens</label>
+            </value>
+            <value>
+                <fullName>LNCD/EDFA</fullName>
+                <default>false</default>
+                <label>LNCD/EDFA</label>
+            </value>
+            <value>
+                <fullName>Module</fullName>
+                <default>false</default>
+                <label>Module</label>
+            </value>
+            <value>
+                <fullName>Module Shell</fullName>
+                <default>false</default>
+                <label>Module Shell</label>
+            </value>
+            <value>
+                <fullName>MOSFET</fullName>
+                <default>false</default>
+                <label>MOSFET</label>
+            </value>
+            <value>
+                <fullName>Motherboard</fullName>
+                <default>false</default>
+                <label>Motherboard</label>
+            </value>
+            <value>
+                <fullName>NTF</fullName>
+                <default>false</default>
+                <label>NTF</label>
+            </value>
+            <value>
+                <fullName>Optical cables</fullName>
+                <default>false</default>
+                <label>Optical cables</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Partest</fullName>
+                <default>false</default>
+                <label>Partest</label>
+            </value>
+            <value>
+                <fullName>PCBA via</fullName>
+                <default>false</default>
+                <label>PCBA</label>
+            </value>
+            <value>
+                <fullName>COSEMI PD</fullName>
+                <default>false</default>
+                <label>PD</label>
+            </value>
+            <value>
+                <fullName>Port</fullName>
+                <default>false</default>
+                <label>Port</label>
+            </value>
+            <value>
+                <fullName>POU</fullName>
+                <default>false</default>
+                <label>POU</label>
+            </value>
+            <value>
+                <fullName>Power Supply</fullName>
+                <default>false</default>
+                <label>Power Supply</label>
+            </value>
+            <value>
+                <fullName>Product label</fullName>
+                <default>false</default>
+                <label>Product label</label>
+            </value>
+            <value>
+                <fullName>Quality</fullName>
+                <default>false</default>
+                <label>Quality</label>
+            </value>
+            <value>
+                <fullName>Resistor</fullName>
+                <default>false</default>
+                <label>Resistor</label>
+            </value>
+            <value>
+                <fullName>Rework</fullName>
+                <default>false</default>
+                <label>Rework</label>
+            </value>
+            <value>
+                <fullName>ROSA</fullName>
+                <default>false</default>
+                <label>ROSA</label>
+            </value>
+            <value>
+                <fullName>SEMTECH CDR</fullName>
+                <default>false</default>
+                <label>SEMTECH CDR</label>
+            </value>
+            <value>
+                <fullName>Software/Firmware</fullName>
+                <default>false</default>
+                <label>Software/Firmware</label>
+            </value>
+            <value>
+                <fullName>Specfile</fullName>
+                <default>false</default>
+                <label>Specfile</label>
+            </value>
+            <value>
+                <fullName>Test</fullName>
+                <default>false</default>
+                <label>Test</label>
+            </value>
+            <value>
+                <fullName>28GTIA</fullName>
+                <default>false</default>
+                <label>TIA</label>
+            </value>
+            <value>
+                <fullName>TOSA</fullName>
+                <default>false</default>
+                <label>TOSA</label>
+            </value>
+            <value>
+                <fullName>Transceiver</fullName>
+                <default>false</default>
+                <label>Transceiver</label>
+            </value>
+            <value>
+                <fullName>Unknown</fullName>
+                <default>false</default>
+                <label>Unknown</label>
+            </value>
+            <value>
+                <fullName>Unresolved</fullName>
+                <default>false</default>
+                <label>Unresolved</label>
+            </value>
+            <value>
+                <fullName>VCSEL</fullName>
+                <default>false</default>
+                <label>VCSEL</label>
+            </value>
+            <value>
+                <fullName>Voltage Regulator IC</fullName>
+                <default>false</default>
+                <label>Voltage Regulator IC</label>
+            </value>
+            <value>
+                <fullName>WSS Shipment</fullName>
+                <default>false</default>
+                <label>WSS Shipment</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>IPH</controllingFieldValue>
+            <controllingFieldValue>SNY</controllingFieldValue>
+            <valueName>10GCDRLDPA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPH</controllingFieldValue>
+            <controllingFieldValue>SNY</controllingFieldValue>
+            <valueName>BH Laser</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPH</controllingFieldValue>
+            <controllingFieldValue>SNY</controllingFieldValue>
+            <valueName>Calibration</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPH</controllingFieldValue>
+            <controllingFieldValue>SNY</controllingFieldValue>
+            <valueName>Capacitor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPH</controllingFieldValue>
+            <controllingFieldValue>SNY</controllingFieldValue>
+            <valueName>CLEI Label</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPH</controllingFieldValue>
+            <controllingFieldValue>SNY</controllingFieldValue>
+            <valueName>COF</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPH</controllingFieldValue>
+            <controllingFieldValue>SNY</controllingFieldValue>
+            <valueName>COF Window</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPH</controllingFieldValue>
+            <controllingFieldValue>SNY</controllingFieldValue>
+            <valueName>DFB Laser</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPH</controllingFieldValue>
+            <controllingFieldValue>SNY</controllingFieldValue>
+            <valueName>EMI Collar</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPH</controllingFieldValue>
+            <controllingFieldValue>SNY</controllingFieldValue>
+            <valueName>FCC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPH</controllingFieldValue>
+            <controllingFieldValue>SNY</controllingFieldValue>
+            <valueName>Firmware</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPH</controllingFieldValue>
+            <controllingFieldValue>SNY</controllingFieldValue>
+            <valueName>Flex</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPH</controllingFieldValue>
+            <controllingFieldValue>SNY</controllingFieldValue>
+            <valueName>Gold Finger</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPH</controllingFieldValue>
+            <controllingFieldValue>SNY</controllingFieldValue>
+            <valueName>Hotbar</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPH</controllingFieldValue>
+            <controllingFieldValue>SNY</controllingFieldValue>
+            <valueName>I32X1B</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPH</controllingFieldValue>
+            <controllingFieldValue>SNY</controllingFieldValue>
+            <valueName>ICDR3A</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPH</controllingFieldValue>
+            <controllingFieldValue>SNY</controllingFieldValue>
+            <valueName>Inductor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPH</controllingFieldValue>
+            <controllingFieldValue>SNY</controllingFieldValue>
+            <valueName>Isolator</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPH</controllingFieldValue>
+            <controllingFieldValue>SNY</controllingFieldValue>
+            <valueName>Laser Driver</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPH</controllingFieldValue>
+            <controllingFieldValue>SNY</controllingFieldValue>
+            <valueName>Leadframe</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPH</controllingFieldValue>
+            <controllingFieldValue>SNY</controllingFieldValue>
+            <valueName>Lens</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPH</controllingFieldValue>
+            <controllingFieldValue>SNY</controllingFieldValue>
+            <valueName>Module Shell</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPH</controllingFieldValue>
+            <controllingFieldValue>SNY</controllingFieldValue>
+            <valueName>MOSFET</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPH</controllingFieldValue>
+            <controllingFieldValue>SNY</controllingFieldValue>
+            <valueName>NTF</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPH</controllingFieldValue>
+            <controllingFieldValue>SNY</controllingFieldValue>
+            <valueName>Optical cables</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPH</controllingFieldValue>
+            <controllingFieldValue>SNY</controllingFieldValue>
+            <valueName>PCBA via</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPH</controllingFieldValue>
+            <controllingFieldValue>SNY</controllingFieldValue>
+            <valueName>COSEMI PD</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPH</controllingFieldValue>
+            <controllingFieldValue>SNY</controllingFieldValue>
+            <valueName>Product label</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPH</controllingFieldValue>
+            <controllingFieldValue>SNY</controllingFieldValue>
+            <valueName>Resistor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPH</controllingFieldValue>
+            <controllingFieldValue>SNY</controllingFieldValue>
+            <valueName>ROSA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPH</controllingFieldValue>
+            <controllingFieldValue>SNY</controllingFieldValue>
+            <valueName>SEMTECH CDR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPH</controllingFieldValue>
+            <controllingFieldValue>SNY</controllingFieldValue>
+            <valueName>Specfile</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPH</controllingFieldValue>
+            <controllingFieldValue>SNY</controllingFieldValue>
+            <valueName>Test</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPH</controllingFieldValue>
+            <controllingFieldValue>SNY</controllingFieldValue>
+            <valueName>28GTIA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPH</controllingFieldValue>
+            <controllingFieldValue>SNY</controllingFieldValue>
+            <valueName>TOSA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPH</controllingFieldValue>
+            <controllingFieldValue>SNY</controllingFieldValue>
+            <valueName>Unknown</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPH</controllingFieldValue>
+            <controllingFieldValue>SNY</controllingFieldValue>
+            <valueName>Unresolved</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPH</controllingFieldValue>
+            <controllingFieldValue>SNY</controllingFieldValue>
+            <valueName>VCSEL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPH</controllingFieldValue>
+            <controllingFieldValue>SNY</controllingFieldValue>
+            <valueName>Voltage Regulator IC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>WXI</controllingFieldValue>
+            <valueName>Common</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>WXI</controllingFieldValue>
+            <valueName>LNCD/EDFA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>WXI</controllingFieldValue>
+            <valueName>Transceiver</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SYD</controllingFieldValue>
+            <valueName>Breakout</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SYD</controllingFieldValue>
+            <valueName>Bulkhead</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SYD</controllingFieldValue>
+            <valueName>Header pin / Riser board</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SYD</controllingFieldValue>
+            <valueName>Heat sink, Lid, Ring Frame</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SYD</controllingFieldValue>
+            <valueName>Interface board</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SYD</controllingFieldValue>
+            <valueName>Motherboard</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SYD</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SYD</controllingFieldValue>
+            <valueName>POU</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SYD</controllingFieldValue>
+            <valueName>Power Supply</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SYD</controllingFieldValue>
+            <valueName>Quality</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SYD</controllingFieldValue>
+            <valueName>Rework</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SYD</controllingFieldValue>
+            <valueName>Software/Firmware</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SYD</controllingFieldValue>
+            <valueName>WSS Shipment</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

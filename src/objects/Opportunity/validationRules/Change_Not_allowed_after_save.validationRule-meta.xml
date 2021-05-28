@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Change_Not_allowed_after_save</fullName>
+    <active>false</active>
+    <errorConditionFormula>IF( ISNEW() ,FALSE,  
+AND (OR(Sales_Channel__c  &lt;&gt;  PRIORVALUE( Sales_Channel__c ),
+        AccountId &lt;&gt;  PRIORVALUE(  AccountId )) ,
+ Design_Registration__c  = TRUE) )</errorConditionFormula>
+    <errorMessage>You cannot change Customer and Saleschannel after DR save</errorMessage>
+</ValidationRule>

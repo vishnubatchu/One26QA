@@ -1,0 +1,72 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction"
+                access="global"
+                controller="GteDependentPicklist">
+    <!-- call doInit function on component load -->  
+    <aura:handler name="init" value="this" action="{!c.doInit}"/>
+   <aura:attribute name="cntroligFieldName" type="string"  />
+    <aura:attribute name="dependentFieldName" type="string"  />
+    <aura:attribute name="subdependentFieldName" type="string"  />
+    <aura:attribute name="addRow" type="boolean"  />
+
+    <!-- aura attributes-->  
+    <aura:attribute name="listControllingValues" type="list" description="to store controller field values"/>
+    <aura:attribute name="listDependingValues" type="list"  description="to store dependent field values"/>
+    <aura:attribute name="listSubDependingValues" type="list"  description="to store dependent field values"/>
+    
+    <aura:attribute name="depnedentFieldMap" type="map" description="map to store dependent values with controlling value"/>
+    <aura:attribute name="subDepnedentFieldMap" type="map" description="map to store sub dependent values with controlling value"/>
+    <aura:attribute name="bDisabledDependentFld" type="boolean" default="false"/> 
+    <aura:attribute name="bDisabledSubDependentFld" type="boolean" default="false"/> 
+    <aura:attribute name="cntrolling" type="string"  />
+    <aura:attribute name="dependent" type="string"  />
+    <aura:attribute name="subdependent" type="string" />
+    <aura:attribute name="objDetail" type="Failure_Modes__c" default="{'sobjectType' : 'Failure_Modes__c' , 'PIC_Level_2__c' : 'Damaged'}"/>
+    <aura:attribute name="controllingFieldAPI" type="string"  description="store field API name of Controller field"/>
+    <aura:attribute name="dependingFieldAPI" type="string"  description="store field API name of dependent field"/>
+    <aura:attribute name="subDependingFieldAPI" type="string"  description="store field API name of sub dependent field"/>
+    <tr>
+        <td>
+    <!--Controller Field-->
+    <lightning:layoutItem size="12" padding="around-small">
+        
+        <lightning:select name="controllerFld"
+                          value="{!v.cntrolling}"
+                          label="{!v.cntroligFieldName}"
+                          onchange="{!c.onControllerFieldChange}">
+            <aura:iteration items="{!v.listControllingValues}" var="val">
+                <option value="{!val}" >{!val}</option>
+            </aura:iteration>
+        </lightning:select>
+    </lightning:layoutItem>
+    </td>
+        <td>
+    <!--Dependent Field-->
+         
+    <lightning:layoutItem size="12" padding="around-small">
+        <lightning:select name="dependentFld"
+                          value="{!v.dependent}"
+                          label="{!v.dependentFieldName}"
+                          disabled="{!v.bDisabledDependentFld}"
+                          onchange="{!c.onSubControllerFieldChange}">
+            
+            <aura:iteration items="{!v.listDependingValues}" var="val">
+                <option value="{!val}"  >{!val}</option>
+            </aura:iteration>
+        </lightning:select>
+    </lightning:layoutItem>
+    </td>
+        <td>
+    <!--sub Dependent Field-->
+    <lightning:layoutItem size="12" padding="around-small">
+        <lightning:select name="subDependentFld"
+                          value="{!v.subdependent}"
+                          label="{!v.subdependentFieldName}"
+                          disabled="{!v.bDisabledSubDependentFld}">
+            <aura:iteration items="{!v.listSubDependingValues}" var="val">
+                <option value="{!val}">{!val}</option>
+            </aura:iteration>
+        </lightning:select>
+    </lightning:layoutItem>
+            </td>
+    </tr>
+</aura:component>

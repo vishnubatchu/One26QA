@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pricing_Effective_By__c</fullName>
+    <externalId>false</externalId>
+    <label>Pricing Effective By</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Order Date</fullName>
+                <default>false</default>
+                <label>Order Date</label>
+            </value>
+            <value>
+                <fullName>Ship Date</fullName>
+                <default>true</default>
+                <label>Ship Date</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

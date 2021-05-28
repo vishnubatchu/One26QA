@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RMA_PO__c</fullName>
+    <description>if RMA Lines PO Amount are same then RMA Line PO Amt will be copied to this field
+else RMA/MISC is copied over</description>
+    <externalId>false</externalId>
+    <label>RMA PO</label>
+    <length>80</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

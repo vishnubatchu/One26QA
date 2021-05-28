@@ -1,0 +1,294 @@
+<apex:component access="global" controller="LoanerEmailCustomComponentController" >
+    <apex:attribute name="headerId" description="LoanerHeaderRecord" type="ID" required="required" assignTo="{!recordId}" />
+    <apex:attribute name="headerObj" description="Object Name Attribute" type="String" required="required" assignTo="{!recordObject}" />
+    <apex:attribute name="ApprovalEmail" description="Approval Email" type="Boolean" default="false"/>
+    <apex:attribute name="recipientName" description="Attribute for product make" type="Id"  assignTo="{!recipientId}"/>
+    <html>
+        <style>
+            .span_style
+            {
+            font-size: 11.0pt; 
+            font-family: "Calibri","sans-serif"; 	
+            }
+            .prod_table
+            { 
+            background:'#CCCC99';
+            border:1px solid #CCC;
+            border-collapse:collapse;
+            }	  
+            .very_small
+            {		
+            width:'70px';	padding:'.25pt .25pt .25pt .25pt';	word-wrap:break-word;	border:1px solid white;
+            }  
+            .small
+            {		
+            width:'100px';	padding:'.25pt .25pt .25pt .25pt';	word-wrap:break-word;	border:1px solid white;
+            }  
+            .medium
+            {		
+            width:'110px';	padding:'.25pt .25pt .25pt .25pt';	word-wrap:break-word;	border:1px solid white;
+            }
+            .big
+            {		
+            width:'140px';	padding:'.25pt .25pt .25pt .25pt';	word-wrap:break-word;	border:1px solid white;
+            }
+            .table_outer
+            {
+            border:1px solid #CCC;
+            border-collapse:collapse;	
+            }
+            .MsoNormal
+            {
+            font-size: 11.0pt; 
+            font-family: "Calibri","sans-serif"; 	
+            }
+            .inner_td
+            {
+            padding:'.25pt .25pt .25pt .25pt';	
+            word-wrap:break-word;	
+            border:1px solid white;
+            }
+            .quest_td
+            {
+            padding:'.25pt .25pt .25pt .25pt';	
+            word-wrap:break-word;	
+            border:1px solid black;
+            }
+            .normal_td
+            {
+            padding:'.25pt .25pt .25pt .25pt';	
+            word-wrap:break-word;	
+            border:1px solid white;
+            width: 150px;	
+            }
+            .normal_small
+            {
+            padding:'.25pt .25pt .25pt .25pt';	
+            word-wrap:break-word;	
+            border:1px solid white;
+            width: 180px;	
+            }
+            td
+            {
+            padding: .25pt .25pt .25pt .25pt;
+            word-wrap:break-word;
+            };
+            .label_p
+            {
+            align= left ;
+            text-align: left;
+            }
+        </style>
+        <body>
+             <apex:variable value="{!Extension}" var="loanObj"/>
+            
+            <table class="table_outer" border="0" cellspacing="0" cellpadding="0" >
+                <tr>
+                    <th style='width: 800px; border:1px solid white;' bgcolor="#CCCC99"><span class = "span_style" style='font-size: 13.0pt' >Finisar Loaner Extension Request</span>
+                    </th>
+                </tr>
+                <tr>
+                    <table>
+                        <tr>
+                            <td  class="normal_small">
+                                <p><span class = "span_style" >Loaner Extension # : </span></p>
+                            </td >
+                            <td class ="normal_small">
+                                <p><span class = "span_style">{!loanObj.Name}</span></p>
+                            </td>
+                            <td  class="normal_small">
+                                <p><span class = "span_style">Extension Requestor : </span></p>
+                            </td>
+                            <td    class="normal_small">
+                                <p><span class = "span_style">{!loanObj.CreatedBy.Name}</span></p>
+                            </td>
+                        </tr>
+                        <tr>
+						<td   class="normal_small">
+                                <p><span class = "span_style">Loaner Request #</span></p>
+                            </td>
+							<td class ="normal_small">
+                                <p><span class = "span_style">{!loanObj.Loaner_Request__r.Name}</span></p>
+                            </td>
+                            <td   class="normal_small">
+                                <p><span class = "span_style">Extension Request Date : </span></p>
+                            </td>
+                            <td class="normal_small" >
+                                <p><span class = "span_style">
+                                       <apex:outputText value=" {0,date,MM/dd/yyyy}">
+												<apex:param value="{!loanObj.Loaner_Extension_Created_On__c}"/>
+											</apex:outputText>
+                                    
+                                    </span></p>
+                            </td>
+                        </tr>
+                        <tr>
+						<td class="normal_small">
+                                <p><span class = "span_style">Rep Firm Name : </span></p>
+                            </td>
+                            <td   class="normal_small">
+                                <p><span class = "span_style">{!loanObj.Loaner_Request__r.Firm_Name_Sales_rep__r.Name}</span></p>
+                            </td>
+							
+                            <td   class="normal_small">
+                                <p  ><span class = "span_style">Loaner Category : </span></p>
+                            </td>
+                            <td class="normal_small" >
+                                <p><span class = "span_style">{!loanObj.Loaner_Request__r.Loaner_Category__c}</span></p>
+                            </td>
+                            
+                        </tr>		
+                        <tr>
+						<td class="normal_small">
+                                <p  ><span class = "span_style">RSM/PLM : </span></p>
+                            </td>
+                            <td   class="normal_small">
+                                <p><span class = "span_style">{!loanObj.Loaner_Request__r.RSM_PLM_Approval__r.Name}</span></p>
+                            </td>
+                            <td  class="normal_small">
+                                <p  ><span class = "span_style">End Customer : </span></p>
+                            </td>
+                            <td class="normal_small" >
+                                <p><span class = "span_style">{!loanObj.Loaner_Request__r.Company_Name_End_Cust__r.Name}</span></p>	
+                            </td>
+                          
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>		
+                        </tr> 
+                        <tr>
+                            <td>&nbsp;</td>		
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="normal_small">
+                                <p class="span_style" >
+                                    Since receiving loaners, what have we done with them?</p>
+                            </td>
+                            <td colspan="2" class="normal_small">
+                                <p class="span_style" >
+                                    {!loanObj.Since_receiving_loaners_what_have_we_d__c}</p>
+                            </td>
+                        </tr>	
+                        <tr>
+                            <td colspan="2" class="normal_small">
+                                <p class="span_style" >
+                                    What engineering tests have been done?</p>
+                            </td>
+                            <td colspan="2" class="normal_small">
+                                <p class="span_style" >
+                                    {!loanObj.What_engineering_tests_have_been_done__c}</p>
+                            </td>	
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="normal_small">
+                                <p class="span_style" >
+                                    What engineering tests still need to be done?</p>
+                            </td>
+                            <td colspan="2" class="normal_small">
+                                <p class="span_style" >
+                                    {!loanObj.What_engineering_tests_still_need_to_be__c}</p>
+                            </td>	
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="normal_small">
+                                <p class="span_style" >
+                                    Additional Details and/or Comments</p>
+                            </td>
+                            <td colspan="2" class="normal_small">
+                                <p class="span_style" >
+                                    {!loanObj.Additional_Details_and_or_Comments__c}</p>
+                            </td>	
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="normal_small">
+                                <p class="span_style" >
+                                    What is the real expected date for qualification?</p>
+                            </td>
+                            <td colspan="2" class="normal_small">
+                                <p class="span_style" >
+                                     <apex:outputText value=" {0,date,MM/dd/yyyy}">
+												<apex:param value="{!loanObj.What_is_the_real_expected_date_for_quali__c}"/>
+											</apex:outputText>
+                                 </p>
+                            </td>	
+                        </tr>		
+                    </table>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>		
+                </tr>
+                           
+
+                <tr>
+                    <td class="normal_small"><p class="span_style"><b><u>Approvals</u></b></p></td>
+                </tr>
+                <tr>
+                    <table>
+                        <tr>
+                            <td class="normal_small">
+                                <p class="span_style" >
+                                    RSM :</p>
+                            </td>
+                            <td class="normal_small" style= 'width: 150px;'>
+                                <p class="span_style" >
+                                    {!loanObj.Loaner_Request__r.RSM_PLM_Finisar__r.name}</p>
+                            </td>
+                            <td class="normal_small">
+                                <p class="span_style" >
+                                    RSM Approval:</p>
+                            </td>
+                            <td class="normal_small" style= 'width: 150px;'>
+                                <p class="span_style" >
+                                    {!loanObj.Loaner_Request__r.RSM_PLM_Approval__r.name}</p>
+                            </td>			
+                        </tr>
+                        <tr>
+                            <td class="normal_small">
+                                <p class="span_style" >
+                                    VP :</p>
+                            </td>
+                            <td class="normal_small" style= 'width: 150px;'>
+                                <p class="span_style" >
+                                    {!loanObj.VP_PLD_Finisar__r.name}</p>
+                            </td>
+                            <td class="normal_small">
+                                <p class="span_style" >
+                                    VP Approval:</p>
+                            </td>
+                            <td class="normal_small" style= 'width: 150px;'>
+                                <p class="span_style" >
+                                    {!loanObj.VP_PLD_Finisar__r.name}</p>
+                            </td>			
+                       </tr>
+                     <!--   <tr>		
+                            <td class="normal_small">
+                                <p class="span_style" >
+                                    EVP:</p>
+                            </td>
+                            <td class="normal_small">
+                                <p class="span_style" >
+                                    {!loanObj.EVP_Finisar_Approval__r.Name}</p>
+                            </td>
+                            <td class="normal_small">
+                                <p class="span_style" >
+                                    EVP Approval:</p>
+                            </td>
+                            <td class="normal_small" style= 'width: 150px;'>
+                                <p class="span_style" >
+                                    {!loanObj.EVP_Finisar_Approval__r.Name}</p>
+                            </td>			
+                        </tr>	-->
+                    </table>
+                </tr>
+            </table>
+            <br/>
+            <br/>
+            <c:LoanerLinesEmailTemplate LoanerLines="{!loanObj.Loaner_Lines__r}" extensionlinesonly="true" > </c:LoanerLinesEmailTemplate> 
+        <!--    <c:LoanerLinesEmailTemplate LoanerLines="{!loanObj.Loaner_Lines__r}" extensionlinesonly="true" > </c:LoanerLinesEmailTemplate> -->
+            <c:EmailApprovalCMP lineItemsApproval="{!ApprovalEmail}" Loaner="{!loanObj}"> </c:EmailApprovalCMP>
+              <c:FinisarDisclaimerCMP />
+
+            
+        </body>
+    </html>
+</apex:component>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Share_FV_FA_with_Quality</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>This sharing rule shares all FV/FA Analysis records with the quality team.</description>
+        <label>Share FV/FA with Quality</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>Quality_Admin</roleAndSubordinatesInternal>
+        </sharedTo>
+        <criteriaItems>
+            <field>OwnerId</field>
+            <operation>notEqual</operation>
+            <value>.</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+</SharingRules>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Update_Amount_on_RMA_Request_Line</fullName>
+        <field>Amount__c</field>
+        <formula>If( Text(PO_Price__c) = &apos;Original PO&apos;,  Original_PO_Amount__c , Amount__c )</formula>
+        <name>Update Amount on RMA Request Line</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_BU_on_RMA_Line</fullName>
+        <field>Business_Unit__c</field>
+        <formula>Product__r.BU_Code__c</formula>
+        <name>Update BU on RMA Line</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Concatenated_Field</fullName>
+        <description>This will stamp the case number and serial number concatenation to check for duplicates</description>
+        <field>SerialNumber__c</field>
+        <formula>RMA_Request__r.CaseNumber +  Name</formula>
+        <name>Update Concatenated Field</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Warranty</fullName>
+        <field>Warranty__c</field>
+        <formula>If(ISNUMBER(Warranty_Information__c), VALUE(Warranty_Information__c),Warranty__c)</formula>
+        <name>Update Warranty</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Stamp Concatenated Case %2F Serial Number</fullName>
+        <actions>
+            <name>Update_Concatenated_Field</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>RMA_Request_Line__c.Name</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <description>This rule will stamp the concatenated values of the case number and the serial number for every RMA Line. This is a unique field, so if a duplicate serial number is added, and error will be thrown.</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update Amount based on PO Price</fullName>
+        <actions>
+            <name>Update_Amount_on_RMA_Request_Line</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>RMA_Request_Line__c.PO_Price__c</field>
+            <operation>equals</operation>
+            <value>Original PO,Other</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update Warranty on RMA Line</fullName>
+        <actions>
+            <name>Update_Warranty</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>ISCHANGED( LastModifiedDate )  &amp;&amp;   Warranty_Information__c &lt;&gt;&apos;&apos;</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>update Business unit</fullName>
+        <actions>
+            <name>Update_BU_on_RMA_Line</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>Product__c  &lt;&gt; &apos;&apos;</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

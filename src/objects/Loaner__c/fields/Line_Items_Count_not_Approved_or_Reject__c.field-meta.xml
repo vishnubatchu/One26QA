@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Line_Items_Count_not_Approved_or_Reject__c</fullName>
+    <externalId>false</externalId>
+    <label>Line Items Count not  Approved or Reject</label>
+    <summaryFilterItems>
+        <field>Loaner_Line__c.Line_Status__c</field>
+        <operation>notEqual</operation>
+        <value>Approved, Not Required, Rejected</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Loaner_Line__c.Loaner__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

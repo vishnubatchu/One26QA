@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Bill_To_Location__c</fullName>
+    <externalId>false</externalId>
+    <formula>Order_Line__r.Bill_To_Street__c +  TEXT(Order_Line__r.Bill_To_Number__c) +  Order_Line__r.Bill_To_City__c +  Order_Line__r.Bill_To_State__c +  Order_Line__r.Bill_to_Country__c +  Order_Line__r.Bill_To_Zip__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Bill To Location</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Non_Released__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( ISBLANK(Opportunity.Id  ) , false, Opportunity.Non_Released_Product__c)</formula>
+    <inlineHelpText>This comes over from the Opportunity.</inlineHelpText>
+    <label>Non-Released Product</label>
+    <type>Checkbox</type>
+</CustomField>

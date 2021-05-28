@@ -1,0 +1,98 @@
+<apex:page id="WebToCaseHomepage" showHeader="false" showChat="false" controller="WTC_Case_Controller"
+           standardStylesheets="true">
+    <!--<apex:messages/>-->
+
+    <style>
+        .mybutton {
+            background-color: #4CAF50 !important;
+            border: none !important;
+            color: white !important;
+            padding: 6px 20px !important;
+            text-align: center !important;
+            text-decoration: none !important;
+            display: inline-block !important;
+            font-size: 16px !important;
+        }
+
+        body {
+            background-image: URL({!URLFOR($Resource.webtocaseBackground)});
+            background-repeat;
+        }
+    </style>
+
+    <center><img src="{!URLFOR($Resource.webtocaseHeader)}"/></center>
+
+    <apex:form style="width:700px;margin:auto;">
+        <apex:pageBlock title="Case Information">
+
+            <p>Fields marked with a red bar are required.</p><br/>
+
+            <apex:panelGrid columns="2" border="0" styleClass="tableStyle" width="100%">
+                <!--old-->
+<!--                <apex:outputLabel value="Subject"/>-->
+                <apex:outputLabel value="Feedback Summary"/>
+                <apex:inputField value="{!theCase.Subject}" required="true" style="width:400px;"/>
+
+                <apex:outputLabel value="Name"/>
+                <apex:inputField value="{!theCase.SuppliedName}" required="true" style="width:400px;"/>
+
+                <apex:outputLabel value="Email"/>
+                <apex:inputField value="{!theCase.SuppliedEmail}" required="true" style="width:400px;"/>
+
+                <!--old-->
+                <!--<apex:outputLabel value="Phone"/>-->
+                <apex:outputLabel value="Customer Phone"/>
+                <apex:inputField value="{!theCase.SuppliedPhone}" style="width:400px;"/>
+                
+                <apex:outputLabel value="Company"/>
+                <apex:inputField value="{!theCase.SuppliedCompany}" required="true" style="width:400px;"/>
+
+                <apex:outputLabel value="Customer Code"/>
+                <apex:inputField value="{!theCase.AdvMat_Customer_Code__c}" style="width:400px;"/>
+
+                <!--newly added description field-->
+                <apex:outputLabel value="Feedback Details"/>
+                <apex:inputField value="{!theCase.Description}" required="true" style="width:400px;"/>
+
+                <apex:outputLabel value="Priority"/>
+                <apex:inputField value="{!theCase.Priority}" style="width:400px;"/>
+
+                <apex:outputLabel value="Original PO/SO #"/>
+                <apex:inputField value="{!theCase.Original_PO_SO__c}" style="width:400px;"/>
+
+                <apex:outputLabel value="Customer Part Number"/>
+                <apex:inputField value="{!theCase.Customer_Part_Number__c}" style="width:400px;"/>
+
+                <!--old-->
+                <!--<apex:outputLabel value="Adv. Mat. Part Number"/>-->
+                <apex:outputLabel value="Supplier Part Number"/>
+                <apex:inputField value="{!theCase.Adv_Mat_Part_Number__c}" style="width:400px;"/>
+
+                <!--old-->
+                <!--<apex:outputLabel value="Wafer ID"/>-->
+                <apex:outputLabel value="Wafer ID(s)"/>
+                <apex:inputField value="{!theCase.Wafer_ID__c}" required="true" style="width:400px;"/>
+
+                <apex:outputLabel value="Quantity Returning"/>
+                <apex:inputField value="{!theCase.Quantity_Returning__c}" required="true" style="width:400px;"/>
+
+                <apex:outputLabel value="Size"/>
+                <apex:inputField value="{!theCase.Size__c}" required="true" style="width:400px;"/>
+
+                <!--old-->
+                <!--<apex:outputLabel value="Poly"/>-->
+                <apex:outputLabel value="Polytype"/>
+                <apex:inputField value="{!theCase.Poly__c}" required="true" style="width:400px;"/>
+
+                <apex:outputLabel value="Grade"/>
+                <apex:inputField value="{!theCase.Grade__c}" required="true" style="width:400px;"/>
+
+            </apex:panelGrid>
+            <br/><br/>
+            <b>File attachments can be added on the next screen.</b>
+            <div align="center" style="padding-top:20px;">
+                <apex:commandLink value="Submit Case" action="{!doSave}" styleClass="mybutton"/>
+            </div>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

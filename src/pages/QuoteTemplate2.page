@@ -1,0 +1,38 @@
+<apex:page standardController="Quote" extensions="QuoteTemplateExt"  renderAs="Pdf">
+<html>
+<head>  
+<style type="text/css"> 
+ @page {          
+            @top-center {                   
+                content: element(header);               
+                        }
+            @bottom-left {
+                content: element(footer);
+                        }           
+             }                       
+     
+        div.header { 
+            padding: 10px;              
+            position: running(header);           
+                    }           
+        
+        div.footer {
+            padding:-5px;
+            position: running(footer);                                   
+                    }
+
+                    </style>
+                    </head>
+                    <body>
+  
+  <div class="header">   
+            <apex:image value="{!$Resource.Company_Logo}" height="60px" />
+        </div>
+
+        <div class="footer" align="center"> 
+             <img style="WIDTH:150px; HEIGHT: 100px" src='{!URLFOR($Resource.Company_Logo)}' title="logo" align="right"/>
+               
+        </div>
+        </body>
+        </html>
+        </apex:page>

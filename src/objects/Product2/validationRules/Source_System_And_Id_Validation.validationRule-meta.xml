@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Source_System_And_Id_Validation</fullName>
+    <active>true</active>
+    <description>Source System Id cannot be null when Source System is not null, and the reverse of that logic such that Source System cannot be null when Source System Id is not null</description>
+    <errorConditionFormula>OR((AND(NOT(ISPICKVAL(Source_System__c,&quot;&quot;)),ISBLANK(Source_System_Id__c))),(AND(ISPICKVAL(Source_System__c,&quot;&quot;),NOT(ISBLANK(Source_System_Id__c)))))</errorConditionFormula>
+    <errorMessage>Source System and Source System Id are both required. Please populate both fields.</errorMessage>
+</ValidationRule>

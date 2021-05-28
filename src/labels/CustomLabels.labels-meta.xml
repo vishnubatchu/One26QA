@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>Account_Migration_Flag</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Account Migration Flag</shortDescription>
+        <value>N</value>
+    </labels>
+    <labels>
+        <fullName>Apex_CaseEmail_Service_Address</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Apex CaseEmail Service Address</shortDescription>
+        <value>finisar_case_approval_email_service@sbvd6dz059zmu808icfowdy2zl388jgrht6re01jfe8qu9btc.2f-8dngeaa.cs34.apex.sandbox.salesforce.com</value>
+    </labels>
+    <labels>
+        <fullName>Apex_Email_Service_Address</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Apex Email Service Address</shortDescription>
+        <value>approval_email_service@2uj0hm1qmvd2gmupbpjcp07vf0h2ddzhz55jxfjn4j1jc66kt9.2f-8dngeaa.cs34.apex.sandbox.salesforce.com</value>
+    </labels>
+    <labels>
+        <fullName>Approval_Lightning_page</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Approval Lightning page</shortDescription>
+        <value>https://finisar.lightning.force.com/c/FinsarApprovalApp.app</value>
+    </labels>
+    <labels>
+        <fullName>ButtonProcessing</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ButtonProcessing</shortDescription>
+        <value>Processing</value>
+    </labels>
+    <labels>
+        <fullName>ButtonReturnToOrder</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ButtonReturnToOrder</shortDescription>
+        <value>Return to Order</value>
+    </labels>
+    <labels>
+        <fullName>Contact_Email_Trigger_Condition</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Contact Email Trigger Condition</shortDescription>
+        <value>True</value>
+    </labels>
+    <labels>
+        <fullName>Default_PLM_User_Email</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Default PLM User Email</shortDescription>
+        <value>Betty Dea</value>
+    </labels>
+    <labels>
+        <fullName>EMPTY_FILE</fullName>
+        <categories>CMT</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CSV file is empty.</shortDescription>
+        <value>CSV file is empty.</value>
+    </labels>
+    <labels>
+        <fullName>ERROR_JSON_BAD_FORMAT</fullName>
+        <categories>CMT</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>The provided Json String was badly formatted.</shortDescription>
+        <value>The provided Json String was badly formatted.</value>
+    </labels>
+    <labels>
+        <fullName>ERROR_JSON_EMPTY</fullName>
+        <categories>CMT</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>No field values were found in the Json String.</shortDescription>
+        <value>No field values were found in the Json String.</value>
+    </labels>
+    <labels>
+        <fullName>ERROR_OP_FAILED</fullName>
+        <categories>CMT</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Operation failed, please check messages!</shortDescription>
+        <value>Operation failed, please check messages!</value>
+    </labels>
+    <labels>
+        <fullName>ERROR_REQUEST_FAILED_NO_ERROR</fullName>
+        <categories>CMT</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Request failed with no specified error.</shortDescription>
+        <value>Request failed with no specified error.</value>
+    </labels>
+    <labels>
+        <fullName>ERROR_UNAUTHORIZED_ENDPOINT</fullName>
+        <categories>CMT</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Unauthorized endpoint, please check Setup</shortDescription>
+        <value>Unauthorized endpoint, please check Setup</value>
+    </labels>
+    <labels>
+        <fullName>Enable_and_Disable_validations_on_Loaner_Submit_For_Approval</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Enable and Disable validations on Loaner Submit For Approval</shortDescription>
+        <value>True</value>
+    </labels>
+    <labels>
+        <fullName>Endpoint</fullName>
+        <categories>SAP</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Endpoint</shortDescription>
+        <value>http://72.22.21.90:8104/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BS_SFDC_QAS&amp;receiverParty=&amp;receiverService=&amp;interface=SI_SALES_SFDC_OUT&amp;interfaceNamespace=http://ii-vi.com/sales/sfdc/ecc/salesorder</value>
+    </labels>
+    <labels>
+        <fullName>Extension_Lines_Fields</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Extension Lines Fields</shortDescription>
+        <value>Line_Number__c,Name,Part_Number__c,Marketing_P_N__c,Loaner_Line__r.Balance_to_be_returned__c,Loaner_Line__r.SO_Number__c,Loaner_Line_Shipped_Date__c,Loaner_Line__r.Number_of_Extensions__c,Line_Status__c,Extend_Date__c,Loaner_Line__r.Total_Extended_Days__c</value>
+    </labels>
+    <labels>
+        <fullName>FILE_MISSING</fullName>
+        <categories>CMT</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Please provide a comma separated file.</shortDescription>
+        <value>Please provide a comma separated file.</value>
+    </labels>
+    <labels>
+        <fullName>GDPR_Email_Address</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GDPR Email Address</shortDescription>
+        <value>finisar_gdpr_email_services@w-nj5uln1g520ehhcystrytqr95esukh6xtyxtu7gr0o59mu44l.1n-1bq3tuaw.na78.apex.salesforce.com</value>
+    </labels>
+    <labels>
+        <fullName>GDPR_Email_Service_Address</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GDPR Email Service Address</shortDescription>
+        <value>finisar_gdpr_email_services@w-nj5uln1g520ehhcystrytqr95esukh6xtyxtu7gr0o59mu44l.1n-1bq3tuaw.na78.apex.salesforce.com</value>
+    </labels>
+    <labels>
+        <fullName>INVALID_FILE_ROW_SIZE_DOESNT_MATCH</fullName>
+        <categories>CMT</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>The number of field values does not match the number of header fields on line</shortDescription>
+        <value>The number of field values does not match the number of header fields on line</value>
+    </labels>
+    <labels>
+        <fullName>InformaticaURL</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>InformaticaURL</shortDescription>
+        <value>https://na1.ai.dm-us.informaticacloud.com/active-bpel/public/soap/2yrnmaQUm2fiMBfHxHZd0l/PRC_SF_ORA_RMA_MAIN?wsdl</value>
+    </labels>
+    <labels>
+        <fullName>Integration_UserId</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Integration UserId</shortDescription>
+        <value>0051N000007GUI3QAO</value>
+    </labels>
+    <labels>
+        <fullName>Invalid_ECO_Number_Message</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Invalid ECO Number Message</shortDescription>
+        <value>Valid ECO is required for First Artical Loaner.</value>
+    </labels>
+    <labels>
+        <fullName>Item_not_present_in_FNSR_TRCVR_SAMPLES_price_Message</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Item not present in FNSR_TRCVR_SAMPLES_price Message</shortDescription>
+        <value>Price Information not available for one or more lines</value>
+    </labels>
+    <labels>
+        <fullName>LoanerLineItemTimeOut</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LoanerLineItemTimeOut</shortDescription>
+        <value>120000</value>
+    </labels>
+    <labels>
+        <fullName>LoanerRealTimeEndPoint</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LoanerRealTimeEndPoint</shortDescription>
+        <value>https://na1.ai.dm-us.informaticacloud.com/active-bpel/public/soap/2yrnmaQUm2fiMBfHxHZd0l/Prc_cai_loaner_main?wsdl</value>
+    </labels>
+    <labels>
+        <fullName>Loaner_Aproval_Roles_Allowed</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Loaner Approval Roles Allowed</shortDescription>
+        <value>PowerPartner,RSM,VP,Inside Sales/FAE,Sales Admin,SOM</value>
+    </labels>
+    <labels>
+        <fullName>Loaner_Fields</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Loaner Fields</shortDescription>
+        <value>Id,Name,CreatedDate,Status_Approval__c,CreatedBy.Name,Loaner_Extension_Created_On__c,Loaner_Request__r.Firm_Name_Sales_rep__r.Name,Loaner_Request__r.Name,VP_PLD_Finisar__c,Loaner_Request__r.RSM_PLM_Approval__r.Name,Loaner_Request__r.Loaner_Category__c,Loaner_Request__r.Company_Name_End_Cust__r.Name,Since_receiving_loaners_what_have_we_d__c,What_is_the_real_expected_date_for_quali__c,What_engineering_tests_have_been_done__c,What_engineering_tests_still_need_to_be__c,Additional_Details_and_or_Comments__c,Loaner_Request__r.RSM_PLM_Finisar__r.Name,VP_PLD_Finisar__r.Name</value>
+    </labels>
+    <labels>
+        <fullName>Loaner_Non_Orderable_Part_Message</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Loaner Non-Orderable Part Message</shortDescription>
+        <value>Item is not shippable or not customer order enabled.</value>
+    </labels>
+    <labels>
+        <fullName>Loaner_Real_Time_Integration_Process_Check</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Loaner Real Time Integration Process Check</shortDescription>
+        <value>False</value>
+    </labels>
+    <labels>
+        <fullName>Location_not_Present_Error_Message</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Location not Present Error Message</shortDescription>
+        <value>Location field can not be empty.</value>
+    </labels>
+    <labels>
+        <fullName>MSG_CHECK_API_NAMES</fullName>
+        <categories>CMT</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Please check the Api names!</shortDescription>
+        <value>Please check the Api names!</value>
+    </labels>
+    <labels>
+        <fullName>MSG_CS_MDT_EXISTS</fullName>
+        <categories>CMT</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Make sure Custom Setting and Custom Metadata Types exists in the org!</shortDescription>
+        <value>Make sure Custom Setting and Custom Metadata Types exists in the org!</value>
+    </labels>
+    <labels>
+        <fullName>MSG_CS_MDT_FIELD_NAME_FORMAT</fullName>
+        <categories>CMT</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Please check the format, Custom Setting.field and Custom Metadata Types.field</shortDescription>
+        <value>Please check the format, Custom Setting.field and Custom Metadata Types.field</value>
+    </labels>
+    <labels>
+        <fullName>MSG_CS_MDT_FIELD_NAME_REQ</fullName>
+        <categories>CMT</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Custom Setting Name/Field Name and CMT/Field Name names are required!</shortDescription>
+        <value>Custom Setting Name/Field Name and CMT/Field Name names are required!</value>
+    </labels>
+    <labels>
+        <fullName>MSG_CS_MDT_MAPPING_REQ</fullName>
+        <categories>CMT</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Custom Setting Name, Custom Metadata Types and Json Mapping names are required!</shortDescription>
+        <value>Custom Setting Name, Custom Metadata Types and Json Mapping names are required!</value>
+    </labels>
+    <labels>
+        <fullName>MSG_CS_MDT_REQ</fullName>
+        <categories>CMT</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Custom Setting Api Name and Custom Metadata Types Api names are required!</shortDescription>
+        <value>Custom Setting Api Name and Custom Metadata Types Api names are required!</value>
+    </labels>
+    <labels>
+        <fullName>MSG_CUSTOM_SETTINGS_EXISTS</fullName>
+        <categories>CMT</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Make sure Custom Setting exists in the org!</shortDescription>
+        <value>Make sure Custom Setting exists in the org!</value>
+    </labels>
+    <labels>
+        <fullName>MSG_JSON_API_NAMES</fullName>
+        <categories>CMT</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Please check the Api names in Json!</shortDescription>
+        <value>Please check the Api names in Json!</value>
+    </labels>
+    <labels>
+        <fullName>MSG_JSON_FORMAT</fullName>
+        <categories>CMT</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Please check the Json format!</shortDescription>
+        <value>Please check the Json format!</value>
+    </labels>
+    <labels>
+        <fullName>MSG_MDT_END</fullName>
+        <categories>CMT</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Custom Metadata Types name should end with</shortDescription>
+        <value>Custom Metadata Types name should end with</value>
+    </labels>
+    <labels>
+        <fullName>MSG_MIGRATION_COMPLETED</fullName>
+        <categories>CMT</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Migration Completed!</shortDescription>
+        <value>Migration Completed!</value>
+    </labels>
+    <labels>
+        <fullName>MSG_MIGRATION_IN_PROGRESS</fullName>
+        <categories>CMT</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Migration In Progress, check status under Deploy -&gt; Deployment Status, Job Id:</shortDescription>
+        <value>Migration In Progress, check status under Deploy -&gt; Deployment Status, Job Id:</value>
+    </labels>
+    <labels>
+        <fullName>MSG_NOT_SUPPORTED</fullName>
+        <categories>CMT</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Not Supported!!!</shortDescription>
+        <value>Not Supported!!!</value>
+    </labels>
+    <labels>
+        <fullName>MessageResultsSalesOrderCreation</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MessageResultsSalesOrderCreation</shortDescription>
+        <value>Results on Creation of Sales Order in SAP</value>
+    </labels>
+    <labels>
+        <fullName>MessageSalesOrderConfirmation</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MessageSalesOrderConfirmation</shortDescription>
+        <value>This will create a new Sales Order in SAP. Please confirm.</value>
+    </labels>
+    <labels>
+        <fullName>MessageSalesOrderCreation</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MessageSalesOrderCreation</shortDescription>
+        <value>Confirm to Create Sales Order in SAP</value>
+    </labels>
+    <labels>
+        <fullName>Minimum_Extensions</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Minimum Extensions</shortDescription>
+        <value>2</value>
+    </labels>
+    <labels>
+        <fullName>Number_of_Extended_Days_For_1_or_2nd_Extensions</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Number of Extended Days For 1 or 2nd Extensions</shortDescription>
+        <value>100</value>
+    </labels>
+    <labels>
+        <fullName>PASSWORD</fullName>
+        <categories>SAP</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PASSWORD</shortDescription>
+        <value>P@ssw0rd</value>
+    </labels>
+    <labels>
+        <fullName>ProductDataMigrationFlag</fullName>
+        <categories>if it is Y then Duplicate Marketing PN will be executed else  It will skip flow</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ProductDataMigrationFlag</shortDescription>
+        <value>Y</value>
+    </labels>
+    <labels>
+        <fullName>Profiles</fullName>
+        <categories>It is used in FA/FV,Steps,CreateSrNumberFaultCodeonFailureMode triggers</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Profiles</shortDescription>
+        <value>System Administrator</value>
+    </labels>
+    <labels>
+        <fullName>QuoteLineItemTimeOut</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>QuoteLineItemTimeOut</shortDescription>
+        <value>120000</value>
+    </labels>
+    <labels>
+        <fullName>QuoteRealTimeEndPoint</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>QuoteRealTimeEndPoint</shortDescription>
+        <value>https://na1.ai.dm-us.informaticacloud.com/active-bpel/public/soap/2yrnmaQUm2fiMBfHxHZd0l/prc_cai_quote_main</value>
+    </labels>
+    <labels>
+        <fullName>RMARealTimeEndPoint</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RMARealTimeEndPoint</shortDescription>
+        <value>https://na1.ai.dm-us.informaticacloud.com/active-bpel/public/soap/2yrnmaQUm2fiMBfHxHZd0l/PRC_SF_ORA_RMA_MAIN</value>
+    </labels>
+    <labels>
+        <fullName>Return_Instructions1</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Return Instructions1</shortDescription>
+        <value>Submit an RMA request as follows:
+a. Add original Loaner SO Number in [CustomerRef/RMANo] field, and also [PO Number] field if system does not populate original PO Number automatically.
+b. Select Return Reason=&quot;Sample Demo,
+c. Add Special Instruction: &quot;Issue these loaner returns to:</value>
+    </labels>
+    <labels>
+        <fullName>Return_Instructions_Derek</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Return Instructions Derek</shortDescription>
+        <value>Please contact Derek Lou &lt;derek.lou@ii-vi.com&gt; for loaner return instruction.</value>
+    </labels>
+    <labels>
+        <fullName>Return_Instructions_betty</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Return Instructions betty</shortDescription>
+        <value>Please check with RSM for loaner return instruction.</value>
+    </labels>
+    <labels>
+        <fullName>Return_Instructions_betty_repLocation</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Return Instructions betty repLocation</shortDescription>
+        <value>Return this loaner to Rep location.  Rep should email loaner return details to Betty Dea &lt;betty.dea@ii-vi.com&gt; and cc the RSM who approved the Loaner.</value>
+    </labels>
+    <labels>
+        <fullName>Return_Instructions_chris</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Return Instructions chris</shortDescription>
+        <value>Return this loaner to below address. No RMA needed.
+Room 201,Unit 2,Building A, Section 1 Wudahangyu, Wuhan University Science Park, East Lake High-tech Technology Development Zone, Wuhan
+ATTN: Meng Zhou
+Tel: 18696132795
+*Mark SO number clearly on top of each part or bag or tray*</value>
+    </labels>
+    <labels>
+        <fullName>Return_Instructions_greg</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Return Instructions greg</shortDescription>
+        <value>Return this loaner to Greg Hart at Sunnyvale office. No RMA needed.
+* Mark SO number clearly on top of each part or bag or tray.
+Email Greg Hart &lt;Greg.Hart@ii-vi.com&gt; and cc the RSM who approved the Loaner with loaner and shipment details upon shipment.
+Attn.: Greg Hart
+Finisar Corp (II-VI Inc)
+48800 Milmont Drive
+Fremont, CA 94538
+408-656-9591</value>
+    </labels>
+    <labels>
+        <fullName>Return_Instructions_greg1</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Return Instructions greg1</shortDescription>
+        <value>Return this loaner to Rep location.  Rep should take pictures to prove physical receipt and email pictures along with loaner return details to Betty Dea &lt;betty.dea@ii-vi.com&gt; and cc the RSM who approved the Loaner.</value>
+    </labels>
+    <labels>
+        <fullName>Roles_allowed_for_cancellation_after_RMA_Admin_Approval</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Roles allowed for cancellation after RMA Admin Approval</shortDescription>
+        <value>Admin,RMA Admin</value>
+    </labels>
+    <labels>
+        <fullName>SkipHeaderInCSVFile</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SkipHeaderInCSVFile</shortDescription>
+        <value>True</value>
+    </labels>
+    <labels>
+        <fullName>TYPE_OPTION_NOT_SELECTED</fullName>
+        <categories>CMT</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Please choose a valid custom metadata type.</shortDescription>
+        <value>Please choose a valid custom metadata type.</value>
+    </labels>
+    <labels>
+        <fullName>USERNAME</fullName>
+        <categories>SAP</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>USERNAME</shortDescription>
+        <value>SFDC</value>
+    </labels>
+    <labels>
+        <fullName>Valid_ECO_not_in_Approved_Message</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Valid ECO Number not in Approved Message</shortDescription>
+        <value>ECO is not in Approved status.</value>
+    </labels>
+    <labels>
+        <fullName>Validation_in_Approved_Status</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Validation in Approved Status</shortDescription>
+        <value>True</value>
+    </labels>
+    <labels>
+        <fullName>buttoncancel</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>buttoncancel</shortDescription>
+        <value>Cancel</value>
+    </labels>
+    <labels>
+        <fullName>dataservice</fullName>
+        <categories>used in GDPR</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>dataservice</shortDescription>
+        <value>DL-Salesforce-Support@finisar.com</value>
+    </labels>
+    <labels>
+        <fullName>starthere_note</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>starthere_note</shortDescription>
+        <value>NOTE</value>
+    </labels>
+</CustomLabels>

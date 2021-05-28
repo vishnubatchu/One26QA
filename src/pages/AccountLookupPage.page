@@ -1,0 +1,42 @@
+<apex:page standardController="Quote" extensions="QuoteNewButtonController">
+<apex:includeLightning />
+    <div id="QuoteContainer" />
+    <apex:form >
+        <apex:actionFunction action="{!redirect}" name="CallRedirect"  rerender="view">
+            <!--<apex:param name="RecId" id="RecId"/>-->
+            <apex:param name="RecId" assignTo="{!recordId}" value="" id="RecId"/>
+        </apex:actionFunction>
+    </apex:form>
+    <script>
+    
+    $Lightning.use("c:LookupApp", function(component) {
+        
+        $Lightning.createComponent(
+            
+            "c:Lookup",
+            
+            {
+                "fieldlabel":"Account",
+                "objectAPIName":"Account",
+                "fieldAPIName":"Name",
+                "recordLimit":"25"
+            },
+            "QuoteContainer",
+            
+            function(component) {
+                console.log('Hello');
+                 $A.eventService.addHandler({ "event": "c:QuoteNewButtonEvent", "handler" : myFunctionFromVisualforce }); 
+            });
+        
+    });
+     function myFunctionFromVisualforce (event){
+        console.log('This message is from visualforce function');
+        console.log('Data which is coming from lightning component',event.getParam("recordIdRec"));
+        var recid=event.getParam("recordIdRec");
+        console.log('recid==='+recid);
+        CallRedirect(recid);
+        
+    }
+</script>
+    
+</apex:page>

@@ -1,0 +1,805 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Additional_Customer_Info_requested</fullName>
+        <description>Additional Customer Info requested</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CostingQuoteTemplates/Costing_Additional_Information_requested</template>
+    </alerts>
+    <alerts>
+        <fullName>Closed_Response_Submitted</fullName>
+        <description>Closed Response Submitted</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CostingQuoteTemplates/Dept_Response_Submitted</template>
+    </alerts>
+    <alerts>
+        <fullName>Ex_C_S_Customer_Reponse</fullName>
+        <description>Ex - C&amp;S - Customer Reponse</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>IR_CS</recipient>
+            <type>group</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CostingQuoteTemplates/Costing_Exception_Response</template>
+    </alerts>
+    <alerts>
+        <fullName>Ex_Coating_Customer_Reponse</fullName>
+        <description>Ex - Coating - Customer Reponse</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>IR_CTG</recipient>
+            <type>group</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CostingQuoteTemplates/Costing_Exception_Response</template>
+    </alerts>
+    <alerts>
+        <fullName>Ex_DMG_Customer_Reponse</fullName>
+        <description>Ex - DMG - Customer Reponse</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>IR_DMG</recipient>
+            <type>group</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CostingQuoteTemplates/Costing_Exception_Response</template>
+    </alerts>
+    <alerts>
+        <fullName>Ex_DT_Customer_Reponse</fullName>
+        <description>Ex - DT - Customer Reponse</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>IR_DT</recipient>
+            <type>group</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CostingQuoteTemplates/Costing_Exception_Response</template>
+    </alerts>
+    <alerts>
+        <fullName>Ex_Eng_Customer_Reponse</fullName>
+        <description>Ex - Eng - Customer Reponse</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>IR_CE</recipient>
+            <type>group</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CostingQuoteTemplates/Costing_Exception_Response</template>
+    </alerts>
+    <alerts>
+        <fullName>Ex_GSC_Customer_Reponse</fullName>
+        <ccEmails>Pete.Brown@II-VI.com.test</ccEmails>
+        <description>Ex - GSC - Customer Reponse</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>IR_GSC</recipient>
+            <type>group</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CostingQuoteTemplates/Costing_Exception_Response</template>
+    </alerts>
+    <alerts>
+        <fullName>Ex_MatQual_Customer_Reponse</fullName>
+        <description>Ex - MatQual - Customer Reponse</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>IR_MQ</recipient>
+            <type>group</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CostingQuoteTemplates/Costing_Exception_Response</template>
+    </alerts>
+    <alerts>
+        <fullName>Ex_Op_Fab_Customer_Reponse</fullName>
+        <description>Ex - Op Fab - Customer Reponse</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>IR_OF</recipient>
+            <type>group</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CostingQuoteTemplates/Costing_Exception_Response</template>
+    </alerts>
+    <alerts>
+        <fullName>Ex_QA_Customer_Reponse</fullName>
+        <description>Ex - QA - Customer Reponse</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>IR_QA</recipient>
+            <type>group</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CostingQuoteTemplates/Costing_Exception_Response</template>
+    </alerts>
+    <alerts>
+        <fullName>Exceptions_Submitted</fullName>
+        <description>Exceptions Submitted</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CostingQuoteTemplates/Costing_Exception_Submitted</template>
+    </alerts>
+    <alerts>
+        <fullName>IR_C_S_Email_Alert</fullName>
+        <description>IR C&amp;S Email Alert</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>IR_CS</recipient>
+            <type>group</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CostingQuoteTemplates/C_S_Quote_Request</template>
+    </alerts>
+    <alerts>
+        <fullName>IR_Coating_Email_Alert</fullName>
+        <ccEmails>SaxCoatingQuotes@II-VI.com.test</ccEmails>
+        <description>IR Coating Email Alert</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CostingQuoteTemplates/Coating_Quote_Request</template>
+    </alerts>
+    <alerts>
+        <fullName>IR_DMG_Email_Alert</fullName>
+        <description>IR DMG Email Alert</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>IR_DMG</recipient>
+            <type>group</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CostingQuoteTemplates/DMG_Quote_Request</template>
+    </alerts>
+    <alerts>
+        <fullName>IR_DT_Assigned_Brad_Email_Alert</fullName>
+        <ccEmails>Brad.Transue@II-VI.com.test</ccEmails>
+        <description>IR DT Assigned Brad Email Alert</description>
+        <protected>false</protected>
+        <recipients>
+            <field>LastModifiedById</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CostingQuoteTemplates/DT_Quote_Assigned</template>
+    </alerts>
+    <alerts>
+        <fullName>IR_DT_Assigned_Cameron_Email_Alert</fullName>
+        <ccEmails>Cameron.Payne@II-VI.com.test</ccEmails>
+        <description>IR DT Assigned Cameron Email Alert</description>
+        <protected>false</protected>
+        <recipients>
+            <field>LastModifiedById</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CostingQuoteTemplates/DT_Quote_Assigned</template>
+    </alerts>
+    <alerts>
+        <fullName>IR_DT_Assigned_Randy_Email_Alert</fullName>
+        <ccEmails>Randy.Brown@II-VI.com.test</ccEmails>
+        <description>IR DT Assigned Randy Email Alert</description>
+        <protected>false</protected>
+        <recipients>
+            <field>LastModifiedById</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CostingQuoteTemplates/DT_Quote_Assigned</template>
+    </alerts>
+    <alerts>
+        <fullName>IR_DT_Email_Alert</fullName>
+        <description>IR DT Email Alert</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>IR_DT</recipient>
+            <type>group</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CostingQuoteTemplates/DT_Quote_Request</template>
+    </alerts>
+    <alerts>
+        <fullName>IR_Engingeering_Email_Alert</fullName>
+        <description>IR Engingeering Email Alert</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>IR_CE</recipient>
+            <type>group</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CostingQuoteTemplates/Eng_Quote_Request</template>
+    </alerts>
+    <alerts>
+        <fullName>IR_Engingeering_Info_Only_Email</fullName>
+        <description>IR Engingeering Info Only Email</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>IR_CE</recipient>
+            <type>group</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CostingQuoteTemplates/Eng_Info_Only</template>
+    </alerts>
+    <alerts>
+        <fullName>IR_GSC_Email_Alert</fullName>
+        <ccEmails>Pete.Brown@II-VI.com.test</ccEmails>
+        <description>IR GSC Email Alert</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>IR_GSC</recipient>
+            <type>group</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CostingQuoteTemplates/GSC_Quote_Request</template>
+    </alerts>
+    <alerts>
+        <fullName>IR_Mat_Qual_Email_Alert</fullName>
+        <description>IR Mat Qual Email Alert</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>IR_MQ</recipient>
+            <type>group</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CostingQuoteTemplates/MatQual_Quote_Request</template>
+    </alerts>
+    <alerts>
+        <fullName>IR_Op_Fab_Email_Alert</fullName>
+        <description>IR Op Fab Email Alert</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>IR_OF</recipient>
+            <type>group</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CostingQuoteTemplates/Op_Fab_Quote_Request</template>
+    </alerts>
+    <alerts>
+        <fullName>IR_QA_Email_Alert</fullName>
+        <description>IR QA Email Alert</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>IR_QA</recipient>
+            <type>group</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CostingQuoteTemplates/QA_Quote_Request</template>
+    </alerts>
+    <alerts>
+        <fullName>No_Bid_Submitted</fullName>
+        <description>No Bid Submitted</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CostingQuoteTemplates/NoBid_Submitted</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Close_Date_Populate</fullName>
+        <field>Close_Date__c</field>
+        <formula>NOW()</formula>
+        <name>Close Date Populate</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Costing_Quote_Name</fullName>
+        <description>Append the Dept. on the end of the Costing name for the Costing Quote Name</description>
+        <field>Name</field>
+        <formula>Name + &quot;-&quot; + TEXT(Department__c)</formula>
+        <name>Costing Quote Name</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Closed Response Submitted</fullName>
+        <actions>
+            <name>Closed_Response_Submitted</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Costing_Quote__c.Status__c</field>
+            <operation>equals</operation>
+            <value>Closed</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Costing - Additional Info Requested</fullName>
+        <actions>
+            <name>Additional_Customer_Info_requested</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Costing_Quote__c.Status__c</field>
+            <operation>equals</operation>
+            <value>Awaiting Customer Response</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Costing_Quote__c.Exceptions__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Costing - Exceptions Submitted</fullName>
+        <actions>
+            <name>Exceptions_Submitted</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Costing_Quote__c.Status__c</field>
+            <operation>equals</operation>
+            <value>Awaiting Customer Response</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Costing_Quote__c.Exceptions__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Costing Quote Name</fullName>
+        <actions>
+            <name>Costing_Quote_Name</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Costing_Quote__c.CreatedDate</field>
+            <operation>equals</operation>
+            <value>TODAY</value>
+        </criteriaItems>
+        <description>Append the Dept. onto the end of the Costing name for the Quote name.</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Ex - C%26S - Customer Responded</fullName>
+        <actions>
+            <name>Ex_C_S_Customer_Reponse</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Costing_Quote__c.Department__c</field>
+            <operation>equals</operation>
+            <value>CS</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Costing_Quote__c.Status__c</field>
+            <operation>equals</operation>
+            <value>Customer Responded</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Ex - Coating - Customer Responded</fullName>
+        <actions>
+            <name>Ex_Coating_Customer_Reponse</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Costing_Quote__c.Status__c</field>
+            <operation>equals</operation>
+            <value>Customer Responded</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Costing_Quote__c.Department__c</field>
+            <operation>equals</operation>
+            <value>CTG</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Ex - DMG - Customer Responded</fullName>
+        <actions>
+            <name>Ex_DMG_Customer_Reponse</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Costing_Quote__c.Department__c</field>
+            <operation>equals</operation>
+            <value>DMG</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Costing_Quote__c.Status__c</field>
+            <operation>equals</operation>
+            <value>Customer Responded</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Ex - DT - Customer Responded</fullName>
+        <actions>
+            <name>Ex_DT_Customer_Reponse</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Costing_Quote__c.Department__c</field>
+            <operation>equals</operation>
+            <value>DT</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Costing_Quote__c.Status__c</field>
+            <operation>equals</operation>
+            <value>Customer Responded</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Ex - Eng - Customer Responded</fullName>
+        <actions>
+            <name>Ex_Eng_Customer_Reponse</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Costing_Quote__c.Department__c</field>
+            <operation>equals</operation>
+            <value>CE</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Costing_Quote__c.Status__c</field>
+            <operation>equals</operation>
+            <value>Customer Responded</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Ex - GSC - Customer Responded</fullName>
+        <actions>
+            <name>Ex_GSC_Customer_Reponse</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Costing_Quote__c.Status__c</field>
+            <operation>equals</operation>
+            <value>Customer Responded</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Costing_Quote__c.Department__c</field>
+            <operation>equals</operation>
+            <value>GSC</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Ex - MatQual - Customer Responded</fullName>
+        <actions>
+            <name>Ex_MatQual_Customer_Reponse</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Costing_Quote__c.Department__c</field>
+            <operation>equals</operation>
+            <value>MQ</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Costing_Quote__c.Status__c</field>
+            <operation>equals</operation>
+            <value>Customer Responded</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Ex - Op Fab - Customer Responded</fullName>
+        <actions>
+            <name>Ex_Op_Fab_Customer_Reponse</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Costing_Quote__c.Department__c</field>
+            <operation>equals</operation>
+            <value>OF</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Costing_Quote__c.Status__c</field>
+            <operation>equals</operation>
+            <value>Customer Responded</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Ex - QA - Customer Responded</fullName>
+        <actions>
+            <name>Ex_QA_Customer_Reponse</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Costing_Quote__c.Department__c</field>
+            <operation>equals</operation>
+            <value>QA</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Costing_Quote__c.Status__c</field>
+            <operation>equals</operation>
+            <value>Customer Responded</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>IR C%26S Costing Quote Request Created</fullName>
+        <actions>
+            <name>IR_C_S_Email_Alert</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Costing_Quote__c.Department__c</field>
+            <operation>equals</operation>
+            <value>CS</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Costing_Quote__c.Status__c</field>
+            <operation>notEqual</operation>
+            <value>Customer Responded,Closed</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>IR Coating Costing Quote Request Created</fullName>
+        <actions>
+            <name>IR_Coating_Email_Alert</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Costing_Quote__c.Department__c</field>
+            <operation>equals</operation>
+            <value>CTG</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Costing_Quote__c.Status__c</field>
+            <operation>notEqual</operation>
+            <value>Customer Responded,Closed</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>IR DMG Costing Quote Request Created</fullName>
+        <actions>
+            <name>IR_DMG_Email_Alert</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Costing_Quote__c.Department__c</field>
+            <operation>equals</operation>
+            <value>DMG</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Costing_Quote__c.Status__c</field>
+            <operation>notEqual</operation>
+            <value>Customer Responded,Closed</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>IR DT Assigned - Brad</fullName>
+        <actions>
+            <name>IR_DT_Assigned_Brad_Email_Alert</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Costing_Quote__c.Department__c</field>
+            <operation>equals</operation>
+            <value>DT</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Costing_Quote__c.Assigned_To__c</field>
+            <operation>equals</operation>
+            <value>Brad Transue</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>IR DT Assigned - Cameron</fullName>
+        <actions>
+            <name>IR_DT_Assigned_Cameron_Email_Alert</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Costing_Quote__c.Department__c</field>
+            <operation>equals</operation>
+            <value>DT</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Costing_Quote__c.Assigned_To__c</field>
+            <operation>equals</operation>
+            <value>Cameron Payne</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>IR DT Assigned - Randy</fullName>
+        <actions>
+            <name>IR_DT_Assigned_Randy_Email_Alert</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Costing_Quote__c.Department__c</field>
+            <operation>equals</operation>
+            <value>DT</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Costing_Quote__c.Assigned_To__c</field>
+            <operation>equals</operation>
+            <value>Randy Brown</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>IR DT Costing Quote Request Created</fullName>
+        <actions>
+            <name>IR_DT_Email_Alert</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Costing_Quote__c.Department__c</field>
+            <operation>equals</operation>
+            <value>DT</value>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>IR Eng Costing Info Only Created</fullName>
+        <actions>
+            <name>IR_Engingeering_Info_Only_Email</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Costing_Quote__c.Department__c</field>
+            <operation>equals</operation>
+            <value>CE</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Costing_Quote__c.Request_Type__c</field>
+            <operation>equals</operation>
+            <value>Information Only</value>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>IR Eng Costing Quote Request Created</fullName>
+        <actions>
+            <name>IR_Engingeering_Email_Alert</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Costing_Quote__c.Department__c</field>
+            <operation>equals</operation>
+            <value>CE</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Costing_Quote__c.Request_Type__c</field>
+            <operation>equals</operation>
+            <value>Quote Request</value>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>IR GSC Costing Quote Request Created</fullName>
+        <actions>
+            <name>IR_GSC_Email_Alert</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Costing_Quote__c.Department__c</field>
+            <operation>equals</operation>
+            <value>GSC</value>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>IR MatQual Costing Quote Request Created</fullName>
+        <actions>
+            <name>IR_Mat_Qual_Email_Alert</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Costing_Quote__c.Department__c</field>
+            <operation>equals</operation>
+            <value>MQ</value>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>IR Op Fab Costing Quote Request Created</fullName>
+        <actions>
+            <name>IR_Op_Fab_Email_Alert</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Costing_Quote__c.Department__c</field>
+            <operation>equals</operation>
+            <value>OF</value>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>IR QA Costing Quote Request Created</fullName>
+        <actions>
+            <name>IR_QA_Email_Alert</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Costing_Quote__c.Department__c</field>
+            <operation>equals</operation>
+            <value>QA</value>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>NoBid submitted</fullName>
+        <actions>
+            <name>No_Bid_Submitted</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Costing_Quote__c.No_Quote_Reason__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Costing_Quote__c.Status__c</field>
+            <operation>equals</operation>
+            <value>Closed</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Populate Close Date</fullName>
+        <actions>
+            <name>Close_Date_Populate</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Costing_Quote__c.Status__c</field>
+            <operation>equals</operation>
+            <value>Closed</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Costing_Quote__c.Close_Date__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+</Workflow>

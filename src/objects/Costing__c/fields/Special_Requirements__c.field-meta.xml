@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Special_Requirements__c</fullName>
+    <description>If there is a requirement, there should be an attachment with specifications for the item(s) selected.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Select all that apply. If there is a requirement, there should be an attachment with specifications for the item(s) selected.</inlineHelpText>
+    <label>Special Requirements</label>
+    <required>true</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Design/Development/Documentation</fullName>
+                <default>false</default>
+                <label>Design/Development/Documentation</label>
+            </value>
+            <value>
+                <fullName>Program Management</fullName>
+                <default>false</default>
+                <label>Program Management</label>
+            </value>
+            <value>
+                <fullName>First Article</fullName>
+                <default>false</default>
+                <label>First Article</label>
+            </value>
+            <value>
+                <fullName>Source Inspection</fullName>
+                <default>false</default>
+                <label>Source Inspection</label>
+            </value>
+            <value>
+                <fullName>Qual Testing</fullName>
+                <default>false</default>
+                <label>Qual Testing</label>
+            </value>
+            <value>
+                <fullName>QNotes (Quality Notes)</fullName>
+                <default>false</default>
+                <label>QNotes (Quality Notes)</label>
+            </value>
+            <value>
+                <fullName>Pre-Award Review</fullName>
+                <default>false</default>
+                <label>Pre-Award Review</label>
+            </value>
+            <value>
+                <fullName>Post-Award Review</fullName>
+                <default>false</default>
+                <label>Post-Award Review</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Not Applicable</fullName>
+                <default>false</default>
+                <label>Not Applicable</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>10</visibleLines>
+</CustomField>

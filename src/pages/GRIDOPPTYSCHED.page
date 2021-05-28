@@ -1,0 +1,15 @@
+<apex:page standardController="Opportunity" sidebar="false" showHeader="false">
+
+    <apex:tabPanel switchType="client" selectedTab="tabdetails" 
+                      id="AccountTabPanel" tabClass="activeTab" 
+                      inactiveTabClass="inactiveTab">
+        
+        <apex:tab label="Products and Schedules" name="SchedDetails" id="scheddetails">
+          <iframe id="gridFrame" scrolling="auto" height="550" width="100%" frameborder="0"
+            src="/apex/gbfree__Grid?gname=opportunity with schedule&fpf=OpportunityId&fpv={!Opportunity.Id}&sh=0&ea=1">
+          </iframe>
+        </apex:tab>
+      
+    </apex:tabPanel>
+
+</apex:page>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>WSSRSM_Validation</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(NOT(CONTAINS(RSM_PLM_Finisar__r.UserRole.Name, &apos;WSS&apos;)), BUCode__c =&apos;WSS&apos;, (DATEVALUE(CreatedDate ) &gt;  DATE (2020,07,01)
+))</errorConditionFormula>
+    <errorMessage>RSM Should be WSS user</errorMessage>
+</ValidationRule>

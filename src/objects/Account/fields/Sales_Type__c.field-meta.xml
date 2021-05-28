@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sales_Type__c</fullName>
+    <description>From Glovia</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Market Segment from Glovia</inlineHelpText>
+    <label>Sales Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>10CH - DSP CHINA</fullName>
+                <default>false</default>
+                <label>10CH - DSP CHINA</label>
+            </value>
+            <value>
+                <fullName>10 - DSP</fullName>
+                <default>false</default>
+                <label>10 - DSP</label>
+            </value>
+            <value>
+                <fullName>10G - DSP GERMANY</fullName>
+                <default>false</default>
+                <label>10G - DSP GERMANY</label>
+            </value>
+            <value>
+                <fullName>10JP - DSP II-VI JAPAN SALES</fullName>
+                <default>false</default>
+                <label>10JP - DSP II-VI JAPAN SALES</label>
+            </value>
+            <value>
+                <fullName>10VN - DSP DIRECT SHIP FROM VIETNAM</fullName>
+                <default>false</default>
+                <label>10VN - DSP DIRECT SHIP FROM VIETNAM</label>
+            </value>
+            <value>
+                <fullName>15CH - INDUSTRIAL CHINA</fullName>
+                <default>false</default>
+                <label>15CH - INDUSTRIAL CHINA</label>
+            </value>
+            <value>
+                <fullName>15G - INDUSTRIAL GERMANY</fullName>
+                <default>false</default>
+                <label>15G - INDUSTRIAL GERMANY</label>
+            </value>
+            <value>
+                <fullName>15 - INDUSTRIAL</fullName>
+                <default>false</default>
+                <label>15 - INDUSTRIAL</label>
+            </value>
+            <value>
+                <fullName>15JP - INDUSTRIAL II-VI JAPAN SALES</fullName>
+                <default>false</default>
+                <label>15JP - INDUSTRIAL II-VI JAPAN SALES</label>
+            </value>
+            <value>
+                <fullName>15VN - INDUSTRIAL DIRECT SHIP FROM VIETNAM</fullName>
+                <default>false</default>
+                <label>15VN - INDUSTRIAL DIRECT SHIP FROM VIETNAM</label>
+            </value>
+            <value>
+                <fullName>20CH - TELECOM CHINA</fullName>
+                <default>false</default>
+                <label>20CH - TELECOM CHINA</label>
+            </value>
+            <value>
+                <fullName>20G - TELECOM GERMANY</fullName>
+                <default>false</default>
+                <label>20G - TELECOM GERMANY</label>
+            </value>
+            <value>
+                <fullName>20JP - TELECOM II-VI JAPAN SALES</fullName>
+                <default>false</default>
+                <label>20JP - TELECOM II-VI JAPAN SALES</label>
+            </value>
+            <value>
+                <fullName>20 - TELECOM</fullName>
+                <default>false</default>
+                <label>20 - TELECOM</label>
+            </value>
+            <value>
+                <fullName>20VN - TELECOM DIRECT SHIP FROM VIETNAM</fullName>
+                <default>false</default>
+                <label>20VN - TELECOM DIRECT SHIP FROM VIETNAM</label>
+            </value>
+            <value>
+                <fullName>25 - AUTOMOTIVE</fullName>
+                <default>false</default>
+                <label>25 - AUTOMOTIVE</label>
+            </value>
+            <value>
+                <fullName>25CH - AUTOMOTIVE CHINA</fullName>
+                <default>false</default>
+                <label>25CH - AUTOMOTIVE CHINA</label>
+            </value>
+            <value>
+                <fullName>25G - AUTOMOTIVE GERMANY</fullName>
+                <default>false</default>
+                <label>25G - AUTOMOTIVE GERMANY</label>
+            </value>
+            <value>
+                <fullName>25JP - AUTOMOTIVE II-VI JAPAN SALES</fullName>
+                <default>false</default>
+                <label>25JP - AUTOMOTIVE II-VI JAPAN SALES</label>
+            </value>
+            <value>
+                <fullName>25VN - AUTOMOTIVE DIRECT SHIP FROM VIETNAM</fullName>
+                <default>false</default>
+                <label>25VN - AUTOMOTIVE DIRECT SHIP FROM VIETNAM</label>
+            </value>
+            <value>
+                <fullName>30CH - MEDICAL CHINA</fullName>
+                <default>false</default>
+                <label>30CH - MEDICAL CHINA</label>
+            </value>
+            <value>
+                <fullName>30G - MEDICAL GERMANY</fullName>
+                <default>false</default>
+                <label>30G - MEDICAL GERMANY</label>
+            </value>
+            <value>
+                <fullName>30JP - MEDICAL II-VI JAPAN SALES</fullName>
+                <default>false</default>
+                <label>30JP - MEDICAL II-VI JAPAN SALES</label>
+            </value>
+            <value>
+                <fullName>30 - MEDICAL</fullName>
+                <default>false</default>
+                <label>30 - MEDICAL</label>
+            </value>
+            <value>
+                <fullName>30VN - MEDICAL DIRECT SHIP FROM VIETNAM</fullName>
+                <default>false</default>
+                <label>30VN - MEDICAL DIRECT SHIP FROM VIETNAM</label>
+            </value>
+            <value>
+                <fullName>35CH - CONSUMER CHINA</fullName>
+                <default>false</default>
+                <label>35CH - CONSUMER CHINA</label>
+            </value>
+            <value>
+                <fullName>35 - CONSUMER</fullName>
+                <default>false</default>
+                <label>35 - CONSUMER</label>
+            </value>
+            <value>
+                <fullName>35G - CONSUMER GERMANY</fullName>
+                <default>false</default>
+                <label>35G - CONSUMER GERMANY</label>
+            </value>
+            <value>
+                <fullName>35JP - CONSUMER II-VI JAPAN SALES</fullName>
+                <default>false</default>
+                <label>35JP - CONSUMER II-VI JAPAN SALES</label>
+            </value>
+            <value>
+                <fullName>35VN - CONSUMER DIRECT SHIP FROM VIETNAM</fullName>
+                <default>false</default>
+                <label>35VN - CONSUMER DIRECT SHIP FROM VIETNAM</label>
+            </value>
+            <value>
+                <fullName>40CH - PERSONAL COMFORT CHINA</fullName>
+                <default>false</default>
+                <label>40CH - PERSONAL COMFORT CHINA</label>
+            </value>
+            <value>
+                <fullName>40G - PERSONAL COMFORT GERMANY</fullName>
+                <default>false</default>
+                <label>40G - PERSONAL COMFORT GERMANY</label>
+            </value>
+            <value>
+                <fullName>40JP - PERSONAL COMFORT II-VI JAPAN SALES</fullName>
+                <default>false</default>
+                <label>40JP - PERSONAL COMFORT II-VI JAPAN SALES</label>
+            </value>
+            <value>
+                <fullName>40 - PERSONAL COMFORT</fullName>
+                <default>false</default>
+                <label>40 - PERSONAL COMFORT</label>
+            </value>
+            <value>
+                <fullName>40VN - PERSONAL COMFORT DIRECT SHIP FOR VIETNAM</fullName>
+                <default>false</default>
+                <label>40VN - PERSONAL COMFORT DIRECT SHIP FOR VIETNAM</label>
+            </value>
+            <value>
+                <fullName>60CH - POWER GENERATION CHINA</fullName>
+                <default>false</default>
+                <label>60CH - POWER GENERATION CHINA</label>
+            </value>
+            <value>
+                <fullName>60G - POWER GENERATION GERMANY</fullName>
+                <default>false</default>
+                <label>60G - POWER GENERATION GERMANY</label>
+            </value>
+            <value>
+                <fullName>60JP - POWER GENERATION II-VI JAPAN SALES</fullName>
+                <default>false</default>
+                <label>60JP - POWER GENERATION II-VI JAPAN SALES</label>
+            </value>
+            <value>
+                <fullName>60 - POWER GENERATION</fullName>
+                <default>false</default>
+                <label>60 - POWER GENERATION</label>
+            </value>
+            <value>
+                <fullName>60VN - POWER GENERATION DIRECT SHIP FROM VIETNA</fullName>
+                <default>false</default>
+                <label>60VN - POWER GENERATION DIRECT SHIP FROM VIETNA</label>
+            </value>
+            <value>
+                <fullName>80 - CONTRACT REVENUE</fullName>
+                <default>false</default>
+                <label>80 - CONTRACT REVENUE</label>
+            </value>
+            <value>
+                <fullName>20FN</fullName>
+                <default>false</default>
+                <label>20FN</label>
+            </value>
+            <value>
+                <fullName>20F1</fullName>
+                <default>false</default>
+                <label>20F1</label>
+            </value>
+            <value>
+                <fullName>20FW</fullName>
+                <default>false</default>
+                <label>20FW</label>
+            </value>
+            <value>
+                <fullName>20FS</fullName>
+                <default>false</default>
+                <label>20FS</label>
+            </value>
+            <value>
+                <fullName>20F2 - IIVI Finisar Shanghai</fullName>
+                <default>false</default>
+                <label>20F2 - IIVI Finisar Shanghai</label>
+            </value>
+            <value>
+                <fullName>20F3 - IIVI Finisar Berlin</fullName>
+                <default>false</default>
+                <label>20F3 - IIVI Finisar Berlin</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

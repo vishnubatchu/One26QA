@@ -1,0 +1,123 @@
+<aura:component  Implements="flexipage:availableForRecordHome,force:lightningQuickActionWithoutHeader,force:hasRecordId" controller="QuoteLineItemController">
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="errorMessage" type ="String" default=""/>
+    <aura:attribute name="errorMessage1" type ="String" default=""/>
+    <aura:attribute name="recErrorMessage" type ="String" default=""/>
+    <aura:handler name="DeleteRowEvt" event="c:DeleteRowEvt" action="{!c.removeDeletedRow}"/>
+    <aura:handler name="AddRowEvt" event="c:AddNewRowEvt" action="{!c.addNewRow}"/>
+    <aura:attribute name="QuoteLineItemList" type="Quote_Item__c[]"/> 
+    <aura:attribute name="QuoteLineItemListTemp" type="Object[]"/> 
+    <aura:attribute name="QuoteLineItemListSplit" type="Quote_Item__c[]"/>
+    <style>
+        .cuf-content {
+        padding: 0 0rem !important;
+        }
+        .slds-p-around--medium {
+        padding: 0rem !important;
+        }
+        
+        .slds-modal__container {
+        overflow-y: hidden !important;
+        width:1400px !important;
+        max-width:1400px !important; 
+        }
+        
+        
+    </style>
+    <div >
+        <div class="slds-col modal-header slds-modal__header">
+            <h2 class="title slds-text-heading--medium">Quote Line Items</h2>
+        </div>
+        <div class="slds-col modal-body   slds-p-around--medium" style=" height:50rem; max-height:560px;overflow-y: auto !important">
+            
+            <div>
+                <aura:if isTrue="{!v.errorMessage != null}">
+                    <label class="slds-text-align_center slds-text-color_error" >{!v.errorMessage}</label>
+                </aura:if><br/>
+                <!--<aura:if isTrue="{!v.recErrorMessage != null}">
+                <label class="slds-text-align_center slds-text-color_error" >{!v.recErrorMessage}</label>
+                </aura:if>-->
+                <aura:if isTrue="{!v.errorMessage1 != null}">
+                    <label class="slds-text-align_left slds-text-color_error" ><aura:unescapedHtml value="{!v.errorMessage1}"></aura:unescapedHtml></label>
+                </aura:if>
+                <table class="slds-table slds-table_bordered slds-table_cell-buffer slds-scrollable"> 
+                    <thead>
+                        <tr class="slds-text-title_caps slds-box slds-box_x-small slds-text-align_center slds-m-around_x-small">
+                            <th scope="col">
+                                <button class="slds-button slds-button_brand" style="width:110px" onclick="{!c.addNewRow}">Add LineItem</button>
+                            </th> 
+                            <th scope="col">
+                                <div class="slds-truncate"  style="width:110px" title="Line ##">Line #</div>
+                            </th>
+                            <th scope="colgroup">
+                                <div class="slds-truncate" style="width:280px" title="ID#">Product</div>
+                            </th>
+                            
+                            <th scope="col">
+                                <div class="slds-truncate" title="Marketing Part Number">MARKETING P/N </div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-truncate" title="Quantity">Quantity</div>
+                            </th>
+                            
+                            <th scope="col">
+                                <div class="slds-truncate" title="Std List Price">Std List Price</div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-truncate" title="Std Dist Cost">Std Dist Cost</div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-truncate" title="Target Price">Target Price</div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-truncate" title="Dist Resale Price">Dist Resale Price</div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-truncate" title="Disti margin">Disti Margin</div>
+                            </th>
+                            
+                            
+                            
+                            <th scope="col">
+                                <div class="slds-truncate" title="Line Status">Line Status</div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-truncate" title="Competitor Price">Competitor Price</div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-truncate" title="Competitor Info">Competitor Info</div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-truncate" title="Agreed Upon Share %">Agreed Upon Share %</div>
+                            </th>
+                            
+                            
+                        </tr>
+                    </thead>   
+                    <tbody>
+                        
+                        <aura:iteration items="{!v.QuoteLineItemList}" var="item" indexVar="index">
+                            <c:QuoteLineItemChild QuoteItemInstance="{!item}" rowIndex="{!index}" LineStatus="{!item.Line_Status__c}" productname="{!item.Product__r.Name}"  />
+                        </aura:iteration>
+                    </tbody>
+                </table>
+                <br/>
+            </div>
+        </div>
+        
+        <div class="slds-col modal-footer slds-modal__footer"> 
+            <button class="slds-button slds-button_brand" onclick="{!c.Validate}">Save And Validate</button>
+            <button class="slds-button slds-button_brand" onclick="{!c.Save}">Save And Close</button>
+            <button class="slds-button slds-button_netural" onclick="{!c.Cancel}">Cancel</button>
+            
+        </div>
+    </div>
+    <!--aura:renderif isTrue='{! equals(v.QuoteLineItemList.length,0) }'>
+     <div id = "spinnerDiv1">
+        <lightning:spinner variant="brand" size = "large" aura:id = "sps1" />
+    </div>
+    </aura:renderif-->
+    <div id = "spinnerDiv">
+        <lightning:spinner variant="brand" size = "large" aura:id = "sps" class="slds-hide"/>
+    </div>
+</aura:component>

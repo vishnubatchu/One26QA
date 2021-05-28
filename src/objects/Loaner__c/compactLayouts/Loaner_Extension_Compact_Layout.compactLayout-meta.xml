@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Loaner_Extension_Compact_Layout</fullName>
+    <fields>SO_Number__c</fields>
+    <fields>Company_Name_End_Cust__c</fields>
+    <fields>RSM_PLM_Approval__c</fields>
+    <fields>Firm_Name_Sales_rep__c</fields>
+    <fields>Firm_Name_Distributor__c</fields>
+    <fields>Inside_Sales_Finisar__c</fields>
+    <label>Loaner Extension Compact Layout</label>
+</CompactLayout>

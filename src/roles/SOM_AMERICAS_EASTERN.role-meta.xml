@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Role xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseAccessLevel>Read</caseAccessLevel>
+    <contactAccessLevel>Edit</contactAccessLevel>
+    <description>SOM of AMERICAS - EASTERN</description>
+    <mayForecastManagerShare>false</mayForecastManagerShare>
+    <name>SOM of AMERICAS - EASTERN</name>
+    <opportunityAccessLevel>None</opportunityAccessLevel>
+    <parentRole>RSM_AMERICAS_EASTERN</parentRole>
+</Role>

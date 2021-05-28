@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Inside_Sales_Finisar__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <label>Inside Sales-Finisar</label>
+    <lookupFilter>
+        <active>true</active>
+        <booleanFilter>((1 AND (2 OR (3 AND 4))) OR ( NOT (1) AND 2))</booleanFilter>
+        <filterItems>
+            <field>$Source.Loaner_Ship_From_Finisar__c</field>
+            <operation>notEqual</operation>
+            <value>Factory Stock</value>
+        </filterItems>
+        <filterItems>
+            <field>User.UserRole.DeveloperName</field>
+            <operation>contains</operation>
+            <value>Inside_Sales_FAE</value>
+        </filterItems>
+        <filterItems>
+            <field>User.FirstName</field>
+            <operation>equals</operation>
+            <value>Betty</value>
+        </filterItems>
+        <filterItems>
+            <field>User.LastName</field>
+            <operation>equals</operation>
+            <value>Dea</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>User</referenceTo>
+    <relationshipName>LoanersInsideSales</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

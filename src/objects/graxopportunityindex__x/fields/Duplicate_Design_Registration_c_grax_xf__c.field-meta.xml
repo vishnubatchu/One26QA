@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Duplicate_Design_Registration_c_grax_xf__c</fullName>
+    <description>Duplicate_Design_Registration__c_grax_xf_opportunity</description>
+    <externalDeveloperName>Duplicate_Design_Registration__c_grax_xf_opportunity</externalDeveloperName>
+    <externalId>false</externalId>
+    <isFilteringDisabled>false</isFilteringDisabled>
+    <isNameField>false</isNameField>
+    <isSortingDisabled>false</isSortingDisabled>
+    <label>Duplicate_Design_Registration__c_grax_xf</label>
+    <length>128</length>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

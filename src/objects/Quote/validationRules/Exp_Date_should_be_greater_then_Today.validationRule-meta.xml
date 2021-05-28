@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Exp_Date_should_be_greater_then_Today</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR(AND(
+
+OR(
+  ISCHANGED(  ExpirationDate  ), 
+  AND(
+   ISNEW() ,
+   NOT(ISNULL(ExpirationDate)) 
+   )
+  ),
+OR(TODAY() &gt; ExpirationDate,ISNULL(ExpirationDate)),  
+ ISPICKVAL(Type_of_Pricing__c, &apos;Fixed - One Time Order&apos;)  
+
+),(ISPICKVAL(Type_of_Pricing__c, &apos;Fixed - One Time Order&apos;)  &amp;&amp; ISNULL(ExpirationDate) ))</errorConditionFormula>
+    <errorDisplayField>ExpirationDate</errorDisplayField>
+    <errorMessage>Expiration date should be greater than today.</errorMessage>
+</ValidationRule>

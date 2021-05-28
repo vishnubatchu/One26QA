@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>AMD_WebToCase_Customer_Initial_Response</fullName>
+        <description>AMD WebToCase Customer-Initial Response</description>
+        <protected>false</protected>
+        <recipients>
+            <field>SuppliedEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>AMD_Web_to_Case_Templates/AMD_WebToCase_Customer_Initial_Response</template>
+    </alerts>
+    <alerts>
+        <fullName>AMD_WebToCase_Internal_Initial_Email</fullName>
+        <ccEmails>Gary.Ruland@II-VI.com</ccEmails>
+        <ccEmails>Tom.Wessel@II-VI.com</ccEmails>
+        <ccEmails>Michael.VanDromme@II-VI.com</ccEmails>
+        <ccEmails>Ping.Wu@II-VI.com</ccEmails>
+        <ccEmails>Jeffrey.Emerson@II-VI.com</ccEmails>
+        <description>AMD WebToCase Internal Initial Email</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>aaron.zhao@finisar.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>AMD_Web_to_Case_Templates/AMD_WebtoCase_Internal_Initial_Response</template>
+    </alerts>
+    <alerts>
+        <fullName>Email_Notification_for_new_RMA</fullName>
+        <description>Email Notification for RMA Submission</description>
+        <protected>false</protected>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <senderAddress>fnsrcrm@finisar.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/RMA_creation_template</template>
+    </alerts>
+    <alerts>
+        <fullName>HY_Emergency_Customer_Email</fullName>
+        <description>HY Emergency Customer Email</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>aaron.zhao@finisar.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Highyag_Templates/HY_Emergency_Customer_Initial_Response</template>
+    </alerts>
+    <alerts>
+        <fullName>HY_Emergency_Internal_Email</fullName>
+        <ccEmails>Tilo.Phillips@II-VI.com</ccEmails>
+        <ccEmails>matthias.kuehnel@ii-vi.com</ccEmails>
+        <description>HY Emergency Internal Email</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>aaron.zhao@finisar.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Highyag_Templates/HY_Emergency_Internal_Email_Notification</template>
+    </alerts>
+    <alerts>
+        <fullName>RMA_Request_creation_notification</fullName>
+        <description>RMA Request creation notification</description>
+        <protected>false</protected>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>RMA_Request_Email_Templates/RMA_request_creation_notification</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_Email_For_Approval_to_CFO</fullName>
+        <description>Send Email For Approval to CFO</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>CFO</recipient>
+            <type>role</type>
+        </recipients>
+        <recipients>
+            <field>CFO_User__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderAddress>fnsrcrm@finisar.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>RMA_Request_Email_Templates/RMA_Request_Approval_Email_Template</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_Email_For_Approval_to_Data_nt_BU</fullName>
+        <description>Send Email For Approval to Data nt BU</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>CFO</recipient>
+            <type>role</type>
+        </recipients>
+        <recipients>
+            <field>CFO_User__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <recipients>
+            <field>Data_n_W_BU_GM__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>DefaultWorkflowUser</senderType>
+        <template>RMA_Request_Email_Templates/RMA_Request_Approval_Email_Template</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_Email_to_BU_Controller_when_Record_is_Submitted_For_Approval</fullName>
+        <description>Send Email to BU Controller when Record is Submitted For Approval</description>
+        <protected>false</protected>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <recipients>
+            <recipient>john.calhoun@ii-vi.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>fnsrcrm@finisar.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>RMA_Request_Email_Templates/RMA_request_Submitted_for_Approval</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_Email_to_Lee_when_Record_is_Submitted_For_Approval</fullName>
+        <description>Send Email to Lee when Record is Submitted For Approval</description>
+        <protected>false</protected>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <recipients>
+            <recipient>lee.xu@finisar.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>RMA_Request_Email_Templates/RMA_request_Submitted_for_Approval</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_Email_to_steffen_when_Record_is_Submitted_For_Approval</fullName>
+        <description>Send Email to steffen when Record is Submitted For Approval</description>
+        <protected>false</protected>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <recipients>
+            <recipient>steffen.koehler@finisar.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>RMA_Request_Email_Templates/RMA_request_Submitted_for_Approval</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_Email_to_sunny_sun_when_Record_is_Submitted_For_Approval</fullName>
+        <description>Send Email to sunny sun when Record is Submitted For Approval</description>
+        <protected>false</protected>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <recipients>
+            <recipient>sunny.sun@ii-vi.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>RMA_Request_Email_Templates/RMA_request_Submitted_for_Approval</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_Email_when_Record_is_Submitted_For_Approval</fullName>
+        <description>Send Email when Record is Submitted For Approval</description>
+        <protected>false</protected>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>RMA_Request_Email_Templates/RMA_request_Submitted_for_Approval</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_RMA_Case_Integration_Errors</fullName>
+        <ccEmails>DL-GlobalRMASupport@finisar.com.test</ccEmails>
+        <description>Send RMA/Case Integration Errors</description>
+        <protected>false</protected>
+        <senderType>CurrentUser</senderType>
+        <template>RMA_Request_Email_Templates/Case_Integration_Error</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_Reminder_Mail_To_CFO</fullName>
+        <description>Send Reminder Mail To CFO</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>CFO</recipient>
+            <type>role</type>
+        </recipients>
+        <recipients>
+            <field>CFO_User__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderAddress>fnsrcrm@finisar.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>RMA_Request_Email_Templates/RMA_Request_Approval_Email_Reminder</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Case_Update_AdvMat_Record_Type</fullName>
+        <description>Sets the case record type to AdvMat</description>
+        <field>RecordTypeId</field>
+        <lookupValue>AdvMat</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Case-Update AdvMat Record Type</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Pending</fullName>
+        <field>Status</field>
+        <literalValue>Pending</literalValue>
+        <name>Pending</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_Rejected</fullName>
+        <field>Status</field>
+        <literalValue>Rejected</literalValue>
+        <name>Status Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_pending_CFO_Approval</fullName>
+        <field>Status</field>
+        <literalValue>Awaiting CFO Approval</literalValue>
+        <name>Status pending CFO Approval</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Awating_CFO_Reminder_Date</fullName>
+        <field>Awating_CFO_Approval_Start_Date__c</field>
+        <formula>TODAY()</formula>
+        <name>Update Awating CFO Reminder Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_CFO_Approved</fullName>
+        <field>CFO_Approved__c</field>
+        <literalValue>1</literalValue>
+        <name>Update CFO Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Case_Owner_for_AdvMat</fullName>
+        <field>OwnerId</field>
+        <lookupValue>AdvMat</lookupValue>
+        <lookupValueType>Queue</lookupValueType>
+        <name>Update Case Owner for AdvMat</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Status_Pending_RMA_Admin_Review</fullName>
+        <field>Status</field>
+        <literalValue>Pending RMA Admin Review</literalValue>
+        <name>Update Status Pending RMA Admin Review</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Updated_Status_to_Closed</fullName>
+        <field>Status</field>
+        <literalValue>Closed</literalValue>
+        <name>Updated Status to Closed</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>AMD Web-to-Case Created</fullName>
+        <actions>
+            <name>AMD_WebToCase_Customer_Initial_Response</name>
+            <type>Alert</type>
+        </actions>
+        <actions>
+            <name>AMD_WebToCase_Internal_Initial_Email</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>AdvMat</value>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Case-Check AdvMat Customer Code</fullName>
+        <actions>
+            <name>Case_Update_AdvMat_Record_Type</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>RecordType.DeveloperName = &apos;AdvMat_Unconfirmed&apos; &amp;&amp;  AdvMat_Customer_Code__c =  Account.AdvMat_Unique_Customer_Code__c &amp;&amp;  NOT(ISBLANK( AccountId )) &amp;&amp; NOT(ISBLANK(AdvMat_Customer_Code__c ))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Case-Update AdvMat Case Owner</fullName>
+        <actions>
+            <name>Update_Case_Owner_for_AdvMat</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>RecordType.Name = &quot;AdvMat Unconfirmed&quot;</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>HY Emergency Case</fullName>
+        <actions>
+            <name>HY_Emergency_Customer_Email</name>
+            <type>Alert</type>
+        </actions>
+        <actions>
+            <name>HY_Emergency_Internal_Email</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.CreatedById</field>
+            <operation>equals</operation>
+            <value>Sync</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Priority</field>
+            <operation>equals</operation>
+            <value>High</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>New RMA Creation Alert</fullName>
+        <actions>
+            <name>Email_Notification_for_new_RMA</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>RMA Request</value>
+        </criteriaItems>
+        <description>Sending when new RMA request is created</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+</Workflow>

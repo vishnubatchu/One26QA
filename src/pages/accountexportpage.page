@@ -1,0 +1,10 @@
+<apex:page Controller="AccountExportController" contenttype="application/vnd.ms-excel#ContactSheet.xls" showheader="false" readOnly="true">  
+   <apex:pageBlock title="Contacts">  
+     <apex:pageBlockTable value="{!accList }" var="contact">  
+       <apex:column value="{!contact.Id}"/>  
+       <apex:column value="{!contact.Name}"/> 
+       <apex:column value="{!contact.Legacy_Id__c}"/>
+       <apex:column value="{!contact.External_Id__c}"/> 
+       </apex:pageBlockTable>  
+   </apex:pageBlock>  
+ </apex:page>

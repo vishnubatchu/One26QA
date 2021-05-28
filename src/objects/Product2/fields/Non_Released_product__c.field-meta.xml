@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Non_Released_product__c</fullName>
+    <defaultValue>true</defaultValue>
+    <description>This will be checked if the product is not RTP from the rev level that is submitted by Glovia.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Advises if the product is RTP based upon the rev level that is in Glovia.  Defaults checked until rev level is changed to a alpha rev level.</inlineHelpText>
+    <label>Non-Released product</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

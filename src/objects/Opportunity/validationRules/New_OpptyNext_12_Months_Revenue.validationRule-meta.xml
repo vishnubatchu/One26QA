@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_OpptyNext_12_Months_Revenue</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( OR(Next_12_Months_Revenue__c =0 ,ISBLANK(Next_12_Months_Revenue__c )), ISPICKVAL( Type , &apos;New&apos;)
+,  NOT(Design_Registration__c) )</errorConditionFormula>
+    <errorDisplayField>Next_12_Months_Revenue__c</errorDisplayField>
+    <errorMessage>&apos;Next 12 Months Revenue&apos; cannot be null for &apos;New&apos; Opportunities</errorMessage>
+</ValidationRule>

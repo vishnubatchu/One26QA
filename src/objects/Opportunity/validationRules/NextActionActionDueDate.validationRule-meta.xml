@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NextActionActionDueDate</fullName>
+    <active>true</active>
+    <description>Next action &amp; Next Action Due Date will be required only when status is Open</description>
+    <errorConditionFormula>AND( NOT( ISNEW()), ISCHANGED(StageName), OR( ISPICKVAL( StageName , &apos;Open - Discussion&apos;), ISPICKVAL( StageName , &apos;Open - Sample Shipped&apos;), ISPICKVAL( StageName , &apos;Open - Part Qualified&apos;) ), OR( ISBLANK( NextStep ) , ISBLANK( Next_Action_Due_Date__c ) ))</errorConditionFormula>
+    <errorMessage>Next Step &amp; Next Action Due Date should be provided in Open Status</errorMessage>
+</ValidationRule>

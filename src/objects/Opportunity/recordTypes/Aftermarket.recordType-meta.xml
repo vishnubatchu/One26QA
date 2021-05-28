@@ -1,0 +1,3005 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Aftermarket</fullName>
+    <active>true</active>
+    <businessProcess>Aftermarket</businessProcess>
+    <label>Aftermarket</label>
+    <picklistValues>
+        <picklist>Application__c</picklist>
+        <values>
+            <fullName>14XXnm pump lasers - Legacy Butterfly</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>14XXnm pump lasers - miniDIL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>980nm Pump Lasers - Legacy Butterfly</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>980nm Pump Lasers - miniDIL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Avalanche Photodiodes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bio-Security</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Clinical Diagnostics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Co-Generation Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Commercial%2FIndustrial photonics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Consumer - Cooking%2FCamping Stoves</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Consumer - Cordless Mosquito Traps</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Consumer - Other Power Gen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cup-holder Cooling</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DNA and Genetic Analysis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Detector cooling %28other than uncooled%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Enclosure cooling</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Energy Harvesting - Oil%2FGas - Sensor Power</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Energy Harvesting - Other Power</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Energy Harvesting - Wireless Sensors</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Food%2C Agriculture %26 Environment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Forensic Science</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gaming</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>General Medical Cooling</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Geothermal Hybrid Solutions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HEV Battery Cooling</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Laser cooling</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mattress Cooling%2FHeating</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medical %26 Cosmetic Lasers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medical Photonics Systems</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Military - Cooking Equipment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Military - Fuel Burning%2FBattery Replacement Technology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Military - Other Power Gen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Military - Robotics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Military - Soldier Wireless Electronic Power</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Military - Tent%2FSpace Heaters</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Military - Unattended Ground Sensors</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Military - Unmanned Aerial Vehicles</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Oil and Gas - Down-hole Drilling</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Optical Channel Monitors</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>POP Displays and Equipment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Photonic Integrated Circuits</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Photonics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Physical Therapy %2FBody Temp Control</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Seat Cooling</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Seat Cooling%2FHeating</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Solar Hybrid Solutions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Space%2C detector%2Fsensor cooling</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Space%2C other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TTRS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Television</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transmission - Fixed Wavelength Laser CW - Legacy Butterfly</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transmission - Fixed Wavelength Laser CW - MSA TOSA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transmission - Fixed Wavelength Laser CW - TO Can</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transmission - Fixed Wavelength Laser DML - Legacy Butterfly</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transmission - Fixed Wavelength Laser DML - MSA TOSA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transmission - Fixed Wavelength Laser DML - TO Can</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transmission - Fixed Wavelength Laser EA%2FMZ%2FCML - Legacy Butterfly</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transmission - Fixed Wavelength Laser EA%2FMZ%2FCML - MSA TOSA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transmission - Fixed Wavelength Laser EA%2FMZ%2FCML - TO Can</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transmission - Tunable Laser CW - Legacy Butterfly</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transmission - Tunable Laser CW - MSA TOSA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transmission - Tunable Laser CW - TO Can</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transmission - Tunable Laser DML - Legacy Butterfly</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transmission - Tunable Laser DML - MSA TOSA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transmission - Tunable Laser DML - TO Can</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transmission - Tunable Laser EA%2FMZ%2FCML - Legacy Butterfly</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transmission - Tunable Laser EA%2FMZ%2FCML - MSA TOSA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transmission - Tunable Laser EA%2FMZ%2FCML - TO Can</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Triton Ice - Air-to-Air Exchangers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Triton Ice - Air-to-Liquid Exchangers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Triton Ice - Direct Conduction</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Triton Ice - Liquid-to-Liquid Exchangers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Triton Ice - Thermal Cycler</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Uncooled Detector Cooling</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vertical Cavity Surface Emitting Lasers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waste Heat Recovery - Automotive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waste Heat Recovery - Industrial</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waste Heat Recovery - Oil%2FGas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waste Heat Recovery - Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>XLT</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Country__c</picklist>
+        <values>
+            <fullName>Afghanistan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Albania</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Algeria</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>American Samoa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Andorra</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Angola</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Anguilla</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Antigua %26 Barbuda</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Argentina</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Armenia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Aruba</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Australia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Austria</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Azerbaijan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bahamas%2C The</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bahrain</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bangladesh</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Barbados</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Belarus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Belgium</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Belize</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Benin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bermuda</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bhutan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bolivia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bosnia %26 Herzegovina</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Botswana</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Brazil</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>British Virgin Is%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Brunei</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bulgaria</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Burkina Faso</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Burma</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Burundi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cambodia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cameroon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Canada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cape Verde</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cayman Islands</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Central African Rep%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chad</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chile</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>China</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Colombia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Comoros</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Congo%2C Dem%2E Rep%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Congo%2C Repub%2E of the</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cook Islands</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Costa Rica</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cote d%27Ivoire</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Croatia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cuba</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cyprus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Czech Republic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Denmark</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Djibouti</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dominica</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dominican Republic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>East Timor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ecuador</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Egypt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>El Salvador</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Equatorial Guinea</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Eritrea</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Estonia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ethiopia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Faroe Islands</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fiji</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Finland</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>France</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>French Guiana</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>French Polynesia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gabon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gambia%2C The</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gaza Strip</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Georgia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Germany</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ghana</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gibraltar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Greece</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Greenland</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Grenada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Guadeloupe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Guam</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Guatemala</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Guernsey</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Guinea</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Guinea-Bissau</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Guyana</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Haiti</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Honduras</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hong Kong</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hungary</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Iceland</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>India</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Indonesia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Iran</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Iraq</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ireland</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Isle of Man</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Israel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Italy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jamaica</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Japan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jersey</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jordan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kazakhstan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kenya</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kiribati</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Korea%2C North</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Korea%2C South</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kuwait</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kyrgyzstan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Laos</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Latvia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lebanon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lesotho</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Liberia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Libya</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Liechtenstein</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lithuania</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Luxembourg</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Macau</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Macedonia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Madagascar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Malawi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Malaysia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maldives</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mali</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Malta</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marshall Islands</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Martinique</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mauritania</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mauritius</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mayotte</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mexico</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Micronesia%2C Fed%2E St%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Moldova</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Monaco</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mongolia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Montserrat</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Morocco</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mozambique</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>N%2E Mariana Islands</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Namibia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nauru</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nepal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Netherlands</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Netherlands Antilles</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Caledonia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Zealand</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nicaragua</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Niger</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nigeria</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Norway</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Oman</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pakistan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Palau</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Panama</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Papua New Guinea</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Paraguay</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Peru</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Philippines</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Poland</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Portugal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Puerto Rico</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Qatar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reunion</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Romania</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Russia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rwanda</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Saint Helena</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Saint Kitts %26 Nevis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Saint Lucia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Saint Vincent and the Grenadines</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Samoa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>San Marino</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sao Tome %26 Principe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Saudi Arabia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Senegal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Serbia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Seychelles</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sierra Leone</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Singapore</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Slovakia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Slovenia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Solomon Islands</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Somalia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>South Africa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Spain</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sri Lanka</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>St Pierre %26 Miquelon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sudan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Suriname</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Swaziland</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sweden</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Switzerland</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Syria</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Taiwan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tajikistan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tanzania</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Thailand</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Togo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tonga</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trinidad %26 Tobago</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tunisia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Turkey</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Turkmenistan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Turks %26 Caicos Is</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tuvalu</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Uganda</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ukraine</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>United Arab Emirates</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>United Kingdom</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>United States</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Uruguay</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Uzbekistan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vanuatu</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Venezuela</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vietnam</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Virgin Islands</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wallis and Futuna</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>West Bank</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Western Sahara</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yemen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Zambia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Zimbabwe</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>DR_Status__c</picklist>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Draft</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Lost%2FCancelled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejected</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>DR_Type__c</picklist>
+        <values>
+            <fullName>Design Only</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Design%2FFulfillment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fulfillment Only</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>ForecastCategoryName</picklist>
+        <values>
+            <fullName>Best Case</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Commit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Omitted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pipeline</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>ITAR__c</picklist>
+        <values>
+            <fullName>NO</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>YES</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>IncoTerms__c</picklist>
+        <values>
+            <fullName>CFR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CIF</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CIP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CPT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DAF</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DAP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DAT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DDP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DDU</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DEQ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EXW</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FAS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FCA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FOB</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>LeadSource</picklist>
+        <values>
+            <fullName>* Existing Customer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Advertisement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contact Form</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Distributor Lead</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email Inquiry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Employee Referral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Google AdWords</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Literature Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Manufacturer Rep</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Purchased List</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Referral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Telemarketing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Telephone Inquiry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trade Show</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Webinar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Website</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Lost_Cancelled_Rejected_Reason__c</picklist>
+        <values>
+            <fullName>Alternative Technology Chosen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bought from OEM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bought from competitor %28Price%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bought from competitor %28technical%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Concept Viability Study Only</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer decided on using a different II-VI PN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer demand changed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer did not accept T%27s %26 C%27s</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Disti was Promoting Competitive solution %28for Design Reg%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Disti%E2%80%99s Lack of inventory and pipeline %28for Design Reg%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Disti%E2%80%99s end Customer preferences change %28for Design Reg%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Duplicate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Entry Error</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Long Lead Time</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Region Assigned</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No evidence of active support of customer %3F%3F</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Part not available %28NPI%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Price Request Only</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Product Cancelled by II-VI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Project Cancelled by Customer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Project lost by customer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transferred to distributor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unable to meet Technical Specification</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Uncompetitive Pricing</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Lost_To__c</picklist>
+        <values>
+            <fullName>AOI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Acacia%C2%A0%C2%A0</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Accelink</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CoAdna*</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FOC %28Fujitsu Optical Components%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FOIT %28Foxconn Optical Interconnect Technology%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hisense</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>II-VI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Innolight</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JDSU*</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lumentum</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mellanox</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NeoPhotonics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nistica*</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Oclaro</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Source</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sumitomo</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Market_Segment__c</picklist>
+        <values>
+            <fullName>Consumer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Datacom</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Industrial</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medical</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Military%2FAerospace</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Security%2FSurveillance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Telecom</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Test %26 Measurement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transportation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Video%2FBroadcast</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Market__c</picklist>
+        <values>
+            <fullName>10 - DSP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>15 - Industrial</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>20 - Telecommunications</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>25 - Automotive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>30 - Medical</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>35 - Consumer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>40 - Personal Comfort</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>60 - Power Generation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>80 - Contracts</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Media__c</picklist>
+        <values>
+            <fullName>5-Sep</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AKL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ARTESIAN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BINGO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BOX LABEL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Blechexpo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bodkin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Brochure</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CANADIAN I</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CANADIAN M</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CLEO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CMTS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>COMPETITOR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Direct Mail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EALA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EDA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EuroBLECH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Expolaser</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FABRICATOR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FABTECH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FORMING %26</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fabtech Canada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fabtech US</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Global Spec%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Google</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HARRIS GUI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Harris</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hoover</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IF</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>II-VI Website</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IMTS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IND LASER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>INDIA TELE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>INDUSTRIAL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Icaleo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>India</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>India 2012</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Internet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Label</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lamiera</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Laser</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Laser World of Photonics Munich</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Laser World of Photonics Shanghai</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>List</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MACH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Magazine</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Metapro</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Metavak</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Niche</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OEM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OPTICS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Optifab</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Photonics West</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Photonix Japan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rapid %2B TCT 2017</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SCT_DIRCT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SPIE DEF %26</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SPIE Defense</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Schweissen %26 Schneiden</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Scotts Directories</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Techni-Show</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Technician</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PLC_Gate_Status__c</picklist>
+        <values>
+            <fullName>Gate-0</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gate-1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gate-2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gate-2a</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gate-3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gate-4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gate-5</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Product_Line__c</picklist>
+        <values>
+            <fullName>VALMO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VBFFK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VBFFK1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VBIMO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VCUST</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VLCHP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VLCHPC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VLCHPQ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VLCLP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VLCQP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VLREP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VMYHD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VOREP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VPDTB</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VRL2D</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VRLSK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VRLSK1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VRLSK2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VSERV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VSHUL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VSPAR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VXCOL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VXCOL2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VXCOl1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VXFSC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VXFSC1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VXFSC2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VXFSCL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VXPDT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VXPDTN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VXRSK</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>QR_Date_Reminder_Option_Days__c</picklist>
+        <values>
+            <fullName>30</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>45</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>60</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>90</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Qual_Required__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>REACH__c</picklist>
+        <values>
+            <fullName>NO</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>YES</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Received_By__c</picklist>
+        <values>
+            <fullName>Customer Visit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fax</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Phone</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Region__c</picklist>
+        <values>
+            <fullName>AMERICAS - EASTERN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AMERICAS - WESTERN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APAC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JAPAN</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sales_Type__c</picklist>
+        <values>
+            <fullName>10 - DSP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>10CH - DSP CHINA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>10G - DSP GERMANY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>10JP - DSP II-VI JAPAN SALES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>10VN - DSP DIRECT SHIP FROM VIETNAM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>15 - INDUSTRIAL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>15B - INDUSTRIAL BELGIUM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>15CH - INDUSTRIAL CHINA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>15G - INDUSTRIAL GERMANY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>15JP - INDUSTRIAL II-VI JAPAN SALES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>15VN - INDUSTRIAL DIRECT SHIP FROM VIETNAM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>20 - TELECOM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>20CH - TELECOM CHINA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>20F1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>20F2 - IIVI Finisar Shanghai</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>20F3 - IIVI Finisar Berlin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>20FN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>20FS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>20FW</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>20G - TELECOM GERMANY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>20JP - TELECOM II-VI JAPAN SALES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>20VN - TELECOM DIRECT SHIP FROM VIETNAM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>25 - AUTOMOTIVE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>25CH - AUTOMOTIVE CHINA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>25G - AUTOMOTIVE GERMANY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>25JP - AUTOMOTIVE II-VI JAPAN SALES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>25VN - AUTOMOTIVE DIRECT SHIP FROM VIETNAM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>30 - MEDICAL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>30CH - MEDICAL CHINA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>30G - MEDICAL GERMANY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>30JP - MEDICAL II-VI JAPAN SALES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>30VN - MEDICAL DIRECT SHIP FROM VIETNAM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>35 - GESTURE RECOGNITION</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>35CH - GESTURE RECOGNITION CHINA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>35G - GESTURE RECOGNITION GERMANY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>35JP - GESTURE RECOGNITION II-VI JAPAN SALES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>35VN - GESTURE RECOG DIRECT SHIP FROM VIETNAM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>40 - PERSONAL COMFORT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>40CH - PERSONAL COMFORT CHINA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>40G - PERSONAL COMFORT GERMANY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>40JP - PERSONAL COMFORT II-VI JAPAN SALES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>40VN - PERSONAL COMFORT DIRECT SHIP FOR VIETNAM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>60 - POWER GENERATION</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>60CH - POWER GENERATION CHINA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>60G - POWER GENERATION GERMANY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>60JP - POWER GENERATION II-VI JAPAN SALES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>60VN - POWER GENERATION DIRECT SHIP FROM VIETNA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>80 - CONTRACT REVENUE</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Segment__c</picklist>
+        <values>
+            <fullName>HighYag</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Ship_Method__c</picklist>
+        <values>
+            <fullName>Collect</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PrePaid</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Shipping_Carrier__c</picklist>
+        <values>
+            <fullName>DHL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FedEx 2 Day</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FedEx 2 Day AM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FedEx Express Saver</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FedEx Ground</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FedEx Intl Economy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FedEx Intl Priority</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FedEx Priority 1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FedEx Priority 2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FedEx SAT First</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FedEx SAT Priority</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FedEx Standard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Freight Forwarder</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hand Carry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LTL Freight Service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Returns</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UPS 2 Day Air</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UPS 2 Day Air AM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UPS 3 Day Select</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UPS Ground</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UPS Intl Expedited</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UPS Intl Express</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UPS Intl Saver</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UPS Intl Standard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UPS Next Day 8%3A30AM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UPS Next Day Air</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UPS Next Day Saver</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UPS SAT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UPS SAT AM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>USPS</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Transfer_Quote_Status__c</picklist>
+        <values>
+            <fullName>Quote Submitted to Customer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transfer Quote Requested</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>VAR_SI__c</picklist>
+        <values>
+            <fullName>9 to 5 computer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AAJ Networks</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ACE Technology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AFL Hyperscale</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Advantec</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Aeon Computing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Agile IT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>All Solutions Inc</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Alpha Micro Components USA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Amax</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AmiStar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Anixter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Apollo Informations Sys Group</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Applied Computer %28ACS%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bar None Tech</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Beijing Bright Prospect</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Broadnet Telecom</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Burwood Group</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CDW</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cambridge Computer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cavar SA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cirrascale</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ClearShark</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Coda Technologies</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Continental Resources</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Convergint Technologies</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cumulus Networks</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DCS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dasher Technologies%2C Inc</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Datalink %28now Insight%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dedicated Computing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dell Marketing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dimension Data</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dynamic Computer Corp</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>E2 Optics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ergonomics Group</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FusionStorm</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GDT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GHA Technologies%2C Inc%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Genesis ATS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Genstor Systems</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Global Solutions Electronics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Granite Micro</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GroupWare</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IC-Tronix</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IES Communications</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Insight</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Integra Optics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>International Computer Concept</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Iron Bow Technologies</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Iron Systems</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Isatel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Leadman Electronics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MBX</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MDSi%2C Inc%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MantisNet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Micro Technologies</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Micromem International Inc</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Myriad Supply</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NCS Technologies</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NWN Corporation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nex Infinite</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OnX</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OneLogic Networks</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PCPC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PNH Technology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Padova</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Penguin Computing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pogo Linux</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pomeroy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Presidio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Racklive%2FASA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rahi Systems</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Red River</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Redapt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RetroHardware</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rincon Technology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RockRight</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SHE Electronics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SHI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sandstone</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sanity Solutions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SansTech</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Silicon Mechanics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sirius Computer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SkinnyIT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Source Code%2FThinkmate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sovereign Systems</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>StackVelocity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tallgrass Technologies</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Toranet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Critical</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unicom</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Valcom%2FVLCM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Westwind</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Whalley Computer Associates</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>World Wide Technology %28WWT%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Zadara Storage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Zebra Technologies</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ePLUS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>iXsystems</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

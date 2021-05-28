@@ -1,0 +1,25 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" controller ="FAFVCustomUI" access="global" >    
+    <aura:handler name="init" value="this" action="{!c.doInit}"/>
+    <aura:attribute name="FaultCodeInstance" type="Failure_Modes__c"/>
+    <aura:attribute name="rowIndex" type="Integer" default="0"/>
+    <aura:registerEvent name="DeleteRowEvt" type="c:DeleteRowEvt"/> 
+    <aura:registerEvent name="AddRowEvt" type="c:AddNewRowEvt"/> 
+    <aura:attribute name="cntrFieldName" type="Integer" default="0"/>
+    <aura:attribute name="addRowClicked" type="boolean" />
+    <tr >
+        <td>
+            <a data-value="{!v.FaultCodeInstance.Id}" onclick="{!c.removeRow}">
+                <lightning:icon variant="error" iconName="utility:delete" class="slds-icon slds-icon_small" size="small" alternativeText="icon"/>
+                <span class="slds-assistive-text">Delete Icon</span>
+            </a>
+        </td> 
+        <td>
+            <c:GetDependentPicklist3Level controllingFieldAPI ="PIC_Level_1__c" dependingFieldAPI ="PIC_Level_2__c" subDependingFieldAPI ="Fault_Specification__c" cntrolling ="{!v.FaultCodeInstance.PIC_Level_1__c}" dependent="{!v.FaultCodeInstance.PIC_Level_2__c}" subdependent ="{!v.FaultCodeInstance.Fault_Specification__c}"
+                                          cntroligFieldName =" PIC LEVEL 1" dependentFieldName ="PIC LEVEL 2" subdependentFieldName ="FAULT SPECIFICATION" addRow = "{!v.addRowClicked}"/>
+        </td>
+        <td>
+            <c:GetDependentPicklist3Level controllingFieldAPI ="Site__c" dependingFieldAPI ="PDC_Level_1__c" subDependingFieldAPI ="PDC_Level_2__c" cntrolling ="{!v.FaultCodeInstance.Site__c}" dependent="{!v.FaultCodeInstance.PDC_Level_1__c}" subdependent ="{!v.FaultCodeInstance.PDC_Level_2__c}"
+                                          cntroligFieldName ="{!v.cntrFieldName}" dependentFieldName ="PDC LEVEL 1" subdependentFieldName ="PDC LEVEL 2" addRow = "{!v.addRowClicked}"/>
+        </td>
+    </tr>
+</aura:component>

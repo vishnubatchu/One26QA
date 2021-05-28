@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Display_Other_Country</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+TEXT(Display_Other_Country__c)=&quot;&quot;,
+NOT($Permission.By_Pass_Validation),
+
+OR(
+!ISBLANK(OtherCity),
+!ISBLANK(OtherState),
+!ISBLANK(OtherStreet),
+!ISBLANK(OtherCountry),
+!ISBLANK(OtherPostalCode)
+)
+)</errorConditionFormula>
+    <errorMessage>Please indicate a Display Other Country</errorMessage>
+</ValidationRule>

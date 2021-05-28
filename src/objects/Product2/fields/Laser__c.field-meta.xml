@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Laser__c</fullName>
+    <externalId>false</externalId>
+    <label>Laser</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1310 DFB</fullName>
+                <default>false</default>
+                <label>1310 DFB</label>
+            </value>
+            <value>
+                <fullName>1310 EML</fullName>
+                <default>false</default>
+                <label>1310 EML</label>
+            </value>
+            <value>
+                <fullName>1310 FP</fullName>
+                <default>false</default>
+                <label>1310 FP</label>
+            </value>
+            <value>
+                <fullName>1310 LED</fullName>
+                <default>false</default>
+                <label>1310 LED</label>
+            </value>
+            <value>
+                <fullName>15XXDFB</fullName>
+                <default>false</default>
+                <label>15XXDFB</label>
+            </value>
+            <value>
+                <fullName>15XXEML</fullName>
+                <default>false</default>
+                <label>15XXEML</label>
+            </value>
+            <value>
+                <fullName>850 VCSEL</fullName>
+                <default>false</default>
+                <label>850 VCSEL</label>
+            </value>
+            <value>
+                <fullName>894 VCSEL</fullName>
+                <default>false</default>
+                <label>894 VCSEL</label>
+            </value>
+            <value>
+                <fullName>940 VCSEL</fullName>
+                <default>false</default>
+                <label>940 VCSEL</label>
+            </value>
+            <value>
+                <fullName>OTHER</fullName>
+                <default>false</default>
+                <label>OTHER</label>
+            </value>
+            <value>
+                <fullName>PUMP</fullName>
+                <default>false</default>
+                <label>PUMP</label>
+            </value>
+            <value>
+                <fullName>TUNABLE</fullName>
+                <default>false</default>
+                <label>TUNABLE</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

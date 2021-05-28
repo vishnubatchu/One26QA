@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Return_to_Stock_Serial_Numbers</fullName>
+    <columns>NAME</columns>
+    <columns>Actual_Ship_Date__c</columns>
+    <columns>Defect_Type__c</columns>
+    <columns>Disposition__c</columns>
+    <columns>Product_Description__c</columns>
+    <columns>Repair_Status__c</columns>
+    <columns>Return_Value__c</columns>
+    <columns>End_Customer_Name__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Disposition__c</field>
+        <operation>equals</operation>
+        <value>Return to Stock</value>
+    </filters>
+    <label>Return to Stock - Serial Numbers</label>
+</ListView>

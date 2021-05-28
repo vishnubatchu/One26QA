@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Margin__c</fullName>
+    <description>Pre-populated from the opportunity.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Total margin on the opportunity. Pre-populated, does not include additional price breaks or line items that are not included on the opportunity.</inlineHelpText>
+    <label>Margin</label>
+    <precision>4</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Percent</type>
+</CustomField>

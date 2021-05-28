@@ -1,0 +1,64 @@
+<apex:page renderAs="pdf" showHeader="false" sidebar="false" standardStylesheets="false" applyBodyTag="false" applyHtmlTag="false"
+controller="QuoteTemplateController">
+    <apex:includeScript value="/lightning/lightning.out.js" />
+    <html>
+    <head>
+        <style>
+            @page {
+                size: letter;
+                margin: 25mm;
+                @top-center {
+                    content: 'sample'
+                }
+                @bottom-center {
+                    content: "Page " counter(page) " of " counter(pages);
+                }
+            }
+            .page-break {
+                display:block;
+                page-break-after:always;
+            }
+            body {
+                font-family: Arial Unicode MS;
+            }
+        </style>
+    </head>
+    <body>
+    <div class="page-break">
+    <apex:pageBlock >
+    <table>
+    <tr><td>Quote Name  </td><td> {!qteRec.Name} </td>
+    <td>Account  </td><td> {!qteRec.Account__c} </td> </tr>
+    </table>
+    <apex:pageBlockSection >
+      
+<apex:outputText label="Quote Name : " 
+                  value=" {!qteRec.Name}" 
+                  style="white-space:pre" />
+                  <apex:outputText label="Account : " 
+                  value=" {!qteRec.Account__c}" 
+                  style="white-space:pre" />
+    </apex:pageBlockSection>
+    </apex:pageBlock>
+    </div>
+    <div class="page-break">
+        <apex:includeLightning />
+     <div id="lightning" />
+  <script>
+         var assetId = "{!$CurrentPage.parameters.id}";
+         console.log(assetId);
+        $Lightning.use("c:QuoteTemplateApp", function() {
+          $Lightning.createComponent("c:QuoteTemplate",
+          { "qteId" : assetId },
+          "lightning",
+          function(cmp) {
+              alert(assetId);
+          });
+        });
+    </script>
+
+            </div>
+    <div>Page C</div>
+    </body>
+   </html>
+</apex:page>

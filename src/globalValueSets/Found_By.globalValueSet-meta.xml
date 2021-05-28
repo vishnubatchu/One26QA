@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Customer</fullName>
+        <default>false</default>
+        <label>Customer</label>
+    </customValue>
+    <customValue>
+        <fullName>Finisar FAE</fullName>
+        <default>false</default>
+        <label>Finisar FAE</label>
+    </customValue>
+    <customValue>
+        <fullName>Finisar PE</fullName>
+        <default>false</default>
+        <label>Finisar PE</label>
+    </customValue>
+    <customValue>
+        <fullName>Finisar Quality</fullName>
+        <default>false</default>
+        <label>Finisar Quality</label>
+    </customValue>
+    <customValue>
+        <fullName>Finisar R&amp;D</fullName>
+        <default>false</default>
+        <label>Finisar R&amp;D</label>
+    </customValue>
+    <customValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </customValue>
+    <description>FoundBy on Case object</description>
+    <masterLabel>Found By</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

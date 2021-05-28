@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>More_Conversion_Detail_Qty_Validation</fullName>
+    <active>true</active>
+    <description>More Conversion Qty Should be greater than zero</description>
+    <errorConditionFormula>New_PN_Disposition_Qty__c &lt;= 0</errorConditionFormula>
+    <errorMessage>More Conversion Qty Should be greater than zero</errorMessage>
+</ValidationRule>

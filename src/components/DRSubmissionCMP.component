@@ -1,0 +1,266 @@
+<apex:component controller="OpportunityEmailCustomComponent" access="global" >
+    <apex:attribute name="contact" type="Contact" description="recipient"/>
+     <apex:attribute name="opportunityRecord" type="Opportunity" description="Opportunity" assignTo="{!currOpportunity}"/>
+   
+    <html>
+
+        <style type="text/css">
+        .prod_table { table-layout: fixed; 
+              background:'#CCCC99';
+            }
+        .MsoNormal{
+         font-size: 10.0pt; 
+         font-family: "Arial","sans-serif";
+        }  
+        .very_small {
+            width: '50px';
+            padding: '.75pt .75pt .75pt .75pt';
+            word-wrap: break-word;
+        }
+        
+        .small {
+            width: '95px';
+            padding: '.75pt .75pt .75pt .75pt';
+            word-wrap: break-word;
+        }
+        
+        .medium {
+            width: '120px';
+            padding: '.75pt .75pt .75pt .75pt';
+            word-wrap: break-word;
+        }
+        
+        .big {
+            width: '160px';
+            padding: '.75pt .75pt .75pt .75pt';
+            word-wrap: break-word;
+        }
+        
+        p {
+            font-size: 10.0pt;
+            font-family: "Arial", "sans-serif";
+        }
+        .opptyLineTable {
+          border : '0';
+          width : '75%'; 
+          cellspacing : '1'; 
+          cellpadding : '0';
+        }
+    </style>
+        <body bgcolor="white" lang="EN-US" link="blue" vlink="purple">
+         <div>
+          <p><b><u>DR Summary</u></b></p>
+          <table class="MsoNormalTable" border="0" cellspacing="1" cellpadding="0" width="75%" style='width: 70.0%'>
+                        <tr>
+                            <td  style='padding: .75pt .75pt .75pt .75pt'>
+                                <p class="MsoNormal" align="right" style='text-align: right'>
+                                    <span style='font-size: 10.0pt; font-family: "Arial","sans-serif"'>Design Registration #: </span></p>
+                            </td>
+                            <td style='padding: .75pt .75pt .75pt .75pt'>
+                                <p class="MsoNormal">
+                                    <b><span style='font-size: 10.0pt; font-family: "Arial","sans-serif"'>{!opportunityRecord.Number__c}</span></b></p>
+                            </td>
+                            <td  style='padding: .75pt .75pt .75pt .75pt'>  
+                                <p class="MsoNormal" align="right" style='text-align: right'>
+                                    <span style='font-size: 10.0pt; font-family: "Arial","sans-serif"'>Oppty/DR : </span></p>
+                            </td>
+                            <td style='padding: .75pt .75pt .75pt .75pt'>
+                                <p class="MsoNormal">
+                                    <b><span style='font-size: 10.0pt; font-family: "Arial","sans-serif"'>{!opportunityRecord.Name}</span></b></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td  style='padding: .75pt .75pt .75pt .75pt'>
+                                <p class="MsoNormal" align="right" style='text-align: right'>
+                                    <span style='font-size: 10.0pt; font-family: "Arial","sans-serif"'>Customer Name :</span></p>
+                            </td>
+                            <td style='padding: .75pt .75pt .75pt .75pt'>
+                                <p class="MsoNormal">
+                                    <b><span style='font-size: 10.0pt; font-family: "Arial","sans-serif"'>{!opportunityRecord.Account.Name}</span></b></p>
+                            </td>
+                          <td  style='padding: .75pt .75pt .75pt .75pt'>
+                                <p class="MsoNormal" align="right" style='text-align: right'>
+                                    <span style='font-size: 10.0pt; font-family: "Arial","sans-serif"'>Next 12 Months Revenue :</span>
+                                </p>
+                            </td>
+                            <td style='padding: .75pt .75pt .75pt .75pt'>
+                                <p class="MsoNormal">
+                                    <b><span style='font-size: 10.0pt; font-family: "Arial","sans-serif"'>{!opportunityRecord.Next_12_Months_Revenue__c}</span></b></p>
+                            </td>
+                        </tr>
+                               
+                        <tr>
+                            <td><p class="MsoNormal" align="right" style='text-align: right'>
+                                    <span style='font-size: 10.0pt; font-family: "Arial","sans-serif"'>Project Name :</span></p>
+                            </td>
+                            <td style='padding: .75pt .75pt .75pt .75pt'>
+                                <p class="MsoNormal">
+                                    <b><span style='font-size: 10.0pt; font-family: "Arial","sans-serif"'>{!opportunityRecord.Project_Name__c}</span></b></p>
+                            </td>
+                            <td  style='padding: .75pt .75pt .75pt .75pt'>
+                                <p class="MsoNormal" align="right" style='text-align: right'>
+                                    <span style='font-size: 10.0pt; font-family: "Arial","sans-serif"'>Rep Firm Name  :</span>
+                                </p>
+                            </td>
+                            <td style='padding: .75pt .75pt .75pt .75pt'>
+                                <p class="MsoNormal">
+                                    <b><span style='font-size: 10.0pt; font-family: "Arial","sans-serif"'>{!opportunityRecord.Rep_Firm_Name__r.Name}</span></b></p>
+                            </td>                           
+                            
+                        </tr>
+                        <tr>
+                                  
+                            <td  style='padding: .75pt .75pt .75pt .75pt'>
+                                <p class="MsoNormal" align="right" style='text-align: right'>
+                                    <span style='font-size: 10.0pt; font-family: "Arial","sans-serif"'>Sales Channel :</span></p>
+                            </td>
+                            
+                        
+                            <td style='padding: .75pt .75pt .75pt .75pt'>
+                                <p class="MsoNormal">
+                                    <b><span style='font-size: 10.0pt; font-family: "Arial","sans-serif"'>{!opportunityRecord.Sales_Channel__r.Name}</span></b></p>
+                            </td>
+                            <td  style='padding: .75pt .75pt .75pt .75pt'>
+                                <p class="MsoNormal" align="right" style='text-align: right'>
+                                    <span style='font-size: 10.0pt; font-family: "Arial","sans-serif"'>Reg Expired Date :  </span></p>
+                            </td>
+                            <td style='padding: .75pt .75pt .75pt .75pt'>
+                                <p class="MsoNormal">
+                                    <b><span style='font-size: 10.0pt; font-family: "Arial","sans-serif"'>
+                                        <apex:outputText value=" {0,date,EEE MMM d, yyyy}">
+										<apex:param value="{!opportunityRecord.Expiration_Date__c}"/>
+											</apex:outputText>
+                                        </span></b></p>
+                            </td>
+                        </tr>                       
+                        <tr>
+                            
+                            <td  style='padding: .75pt .75pt .75pt .75pt'>
+                                <p class="MsoNormal" align="right" style='text-align: right'>
+                                    <span style='font-size: 10.0pt; font-family: "Arial","sans-serif"'>RSM:  </span></p>
+                            </td>
+                            <td style='padding: .75pt .75pt .75pt .75pt'>
+                                <p class="MsoNormal">
+                                    <b><span style='font-size: 10.0pt; font-family: "Arial","sans-serif"'>{!opportunityRecord.RSM__r.Name}</span></b></p>
+                            </td>
+                             <td  style='padding: .75pt .75pt .75pt .75pt'>
+                                <p class="MsoNormal" align="right" style='text-align: right'>
+                                    <span style='font-size: 10.0pt; font-family: "Arial","sans-serif"'>DR Status:  </span></p>
+                            </td>
+                            <td style='padding: .75pt .75pt .75pt .75pt'>
+                                <p class="MsoNormal">
+                                    <b><span style='font-size: 10.0pt; font-family: "Arial","sans-serif"'>{!opportunityRecord.DR_Status__c}</span></b></p>
+                            </td> 
+                        </tr>
+                        
+                        <tr>
+                            <td  style='padding: .75pt .75pt .75pt .75pt'>
+                                <p class="MsoNormal" align="right" style='text-align: right'>
+                                    <span style='font-size: 10.0pt; font-family: "Arial","sans-serif"'>Design Reg Type : </span></p>
+                            </td>
+                            <td style='padding: .75pt .75pt .75pt .75pt'>
+                                <p class="MsoNormal">
+                                    <b><span style='font-size: 10.0pt; font-family: "Arial","sans-serif"'>{!opportunityRecord.DR_Type__c}</span></b></p>
+                            </td>
+                        </tr>
+                   
+              
+                        <apex:outputPanel rendered="{!opportunityRecord.DR_Status__c == 'Rejected'}">
+              
+              			  <tr>
+                            <td  style='padding: .75pt .75pt .75pt .75pt'>
+                                <p class="MsoNormal" align="right" style='text-align: right'>
+                                    <span style='font-size: 10.0pt; font-family: "Arial","sans-serif"'>Lost/Cancelled/Rejected Reason	:</span></p>
+                            </td>
+                            <td style='padding: .75pt .75pt .75pt .75pt'>
+                                <p class="MsoNormal">
+                                    <b><span style='font-size: 10.0pt; font-family: "Arial","sans-serif"'>{!opportunityRecord.Lost_Cancelled_Rejected_Reason__c}</span></b></p>
+                            </td>
+                              
+                             <td  style='padding: .75pt .75pt .75pt .75pt'>
+                                <p class="MsoNormal" align="right" style='text-align: right'>
+                                    <span style='font-size: 10.0pt; font-family: "Arial","sans-serif"'>Lost Rejected Details :</span></p>
+                            </td>
+                            <td style='padding: .75pt .75pt .75pt .75pt'>
+                                <p class="MsoNormal">
+                                    <b><span style='font-size: 10.0pt; font-family: "Arial","sans-serif"'>{!opportunityRecord.Lost_to_Details__c}</span></b></p>
+                            </td>  
+                              
+                        </tr>
+              
+              			</apex:outputPanel>
+              
+              
+                    </table>
+                    
+
+              </div>
+            <br/>
+            <br/>
+              <table border="2">
+            <tr> 
+               <th>Reg Line#</th>
+               <th>ID#</th>
+               <th>Marketing P/N</th>
+               <th>Other Description</th>
+               <th>Customer Part Number</th>
+               <th>Est Annual Qty</th>
+               <th>ASP($)</th>
+               <th>SAM($)</th>
+               
+            </tr>
+            <apex:repeat var="relatedToo" value="{!opportunityRecord.OpportunityLineItems}">
+              <tr>
+                  <td><a href = "{!Instanceurl}/{!relatedToo.id}">{!relatedToo.Line_Number__c}
+                    </a>
+                    </td>
+                    <td>{!relatedToo.Line_Number__c}</td>
+                    <td>{!relatedToo.Product2.Marketing_P_N__c}</td>
+                    <td>{!relatedToo.Other_Description__c}</td>
+                    <td>{!relatedToo.Customer_Part_Number__c}</td>                    
+                    <td>{!relatedToo.Quantity}</td>                    
+                    <td>{!relatedToo.UnitPrice}</td>
+                    <td>{!relatedToo.SAM__c}</td>
+                </tr>
+            </apex:repeat>
+            </table>
+            <br/>
+              <apex:outputPanel rendered="{!duplicateOpportunities.size>0}">  
+            <p> PLEASE NOTE: If duplicate Registrations/Opportunities are found with the SAME CUSTOMER AND PART NUMBER, they will be listed below. To reject a registration, you will need to log in to Salesforce CRM, open the Registration#, and change the status to [Rejected].</p>
+                  <br/>
+               
+             <table border="2">
+            <tr> 
+               <th>Reg#</th>
+               <th>Opp#</th>
+               <th>Project Name</th>
+               <th>Rep Firm Name</th>
+               <th>Sales Channel</th>
+               <th>Est Annual Qty</th>
+               <th>ASP($)</th>
+               <th>SAM($)</th>
+               
+            </tr>
+             <apex:repeat value="{!duplicateOpportunities}"  var="opportunityRecord">
+             <tr>  <td><a href = "{!Instanceurl}/{!opportunityRecord.id}">{!opportunityRecord.Name}
+                    </a>
+                                        </td>
+                    <td>{!opportunityRecord.Number__c}</td>
+                    <td>{!opportunityRecord.Project_Name__c}</td>
+                    <td>{!opportunityRecord.Company__c}</td>
+                    <td>{!opportunityRecord.Sales_Channel__r.Name}</td>                    
+                    <td>{!opportunityRecord.TotalOpportunityQuantity}</td>                    
+                    <td>{!opportunityRecord.SumofASP__c }</td>
+                    <td>{!opportunityRecord.Sum_of_SAM__c}</td> 
+                </tr>
+            </apex:repeat>
+            </table>
+          </apex:outputPanel> 
+            <br/>
+                
+    <br/>
+
+                
+        </body>
+        </html>
+</apex:component>

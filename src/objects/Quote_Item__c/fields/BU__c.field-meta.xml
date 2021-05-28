@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BU__c</fullName>
+    <description>Displays the Business Unit the Product in this Line belongs to. This data is sourced from Oracle.</description>
+    <externalId>false</externalId>
+    <formula>Product__r.BUDescription__c</formula>
+    <inlineHelpText>Displays the Business Unit the Product in this Line belongs to. This data is sourced from Oracle.</inlineHelpText>
+    <label>BU</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

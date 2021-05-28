@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>source_system_cannot_be_created_or_modif</fullName>
+    <active>true</active>
+    <description>A Finisar product cannot be created or modified if Source System = Oracle-EBS and Marketing_P_N__c, Status__c, OR ExternalId__c are null.</description>
+    <errorConditionFormula>AND(  TEXT(Source_System__c  )= &quot;Oracle-EBS&quot;  ,OR(Marketing_P_N__c  = null,  TEXT(Status__c  ) = null, ExternalId__c  = null))</errorConditionFormula>
+    <errorMessage>Marketing P/N, Status, and External Id  cannot be null</errorMessage>
+</ValidationRule>

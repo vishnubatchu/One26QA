@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Data_Networking_BU_Serial_Numbers</fullName>
+    <columns>NAME</columns>
+    <columns>Actual_Ship_Date__c</columns>
+    <columns>BU__c</columns>
+    <columns>Customer_Name__c</columns>
+    <columns>Defect_Type__c</columns>
+    <columns>Disposition__c</columns>
+    <columns>FAFV_Status__c</columns>
+    <columns>End_Customer_Name__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>BU__c</field>
+        <operation>equals</operation>
+        <value>Data Networking</value>
+    </filters>
+    <label>All Data Networking BU Serial Numbers</label>
+</ListView>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Product Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Thermoelectric Component</fullName>
+                <default>false</default>
+                <label>Thermoelectric Component</label>
+            </value>
+            <value>
+                <fullName>Thermoelectric Assembly</fullName>
+                <default>false</default>
+                <label>Thermoelectric Assembly</label>
+            </value>
+            <value>
+                <fullName>EverGen PowerStrap</fullName>
+                <default>false</default>
+                <label>EverGen PowerStrap</label>
+            </value>
+            <value>
+                <fullName>Power Generation</fullName>
+                <default>false</default>
+                <label>Power Generation</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

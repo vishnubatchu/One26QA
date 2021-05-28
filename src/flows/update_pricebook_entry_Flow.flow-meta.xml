@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>49.0</apiVersion>
+    <assignments>
+        <name>new_pricebookentries</name>
+        <label>new pricebookentries</label>
+        <locationX>775</locationX>
+        <locationY>248</locationY>
+        <assignmentItems>
+            <assignToReference>newPricebookentries</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>var_pricebookentry_products</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>each_pricebookentry</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>set_pricebook_entry_to_true</name>
+        <label>set pricebook entry to true</label>
+        <locationX>831</locationX>
+        <locationY>102</locationY>
+        <assignmentItems>
+            <assignToReference>var_pricebookentry_products.IsActive</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>new_pricebookentries</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <name>check_if_product_is_available_or_not</name>
+        <label>check if product is available or not</label>
+        <locationX>78</locationX>
+        <locationY>92</locationY>
+        <defaultConnectorLabel>current product is available</defaultConnectorLabel>
+        <rules>
+            <name>current_product_is_not_available</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>var_product_record.Available__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>get_Pricebook_Entry_associated_with_Product</targetReference>
+            </connector>
+            <label>current product is not available</label>
+        </rules>
+    </decisions>
+    <description>update pricebook entry whenever Available field on product is changed</description>
+    <interviewLabel>update pricebook entry  Flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>update pricebook entry  Flow</label>
+    <loops>
+        <name>each_pricebookentry</name>
+        <label>each pricebookentry</label>
+        <locationX>542</locationX>
+        <locationY>96</locationY>
+        <assignNextValueToReference>var_pricebookentry_products</assignNextValueToReference>
+        <collectionReference>var_pricebookentry_productsList</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>set_pricebook_entry_to_true</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>update_pricebook_entry</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>get_Pricebook_Entry_associated_with_Product</name>
+        <label>get Pricebook Entry associated with Product</label>
+        <locationX>347</locationX>
+        <locationY>99</locationY>
+        <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>each_pricebookentry</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Product2Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>var_product_record.Id</elementReference>
+            </value>
+        </filters>
+        <object>PricebookEntry</object>
+        <outputReference>var_pricebookentry_productsList</outputReference>
+        <queriedFields>IsActive</queriedFields>
+        <queriedFields>Pricebook2Id</queriedFields>
+        <queriedFields>Product2Id</queriedFields>
+    </recordLookups>
+    <recordUpdates>
+        <name>update_pricebook_entry</name>
+        <label>update pricebook entry</label>
+        <locationX>527</locationX>
+        <locationY>271</locationY>
+        <inputReference>newPricebookentries</inputReference>
+    </recordUpdates>
+    <startElementReference>check_if_product_is_available_or_not</startElementReference>
+    <status>Active</status>
+    <variables>
+        <name>newPricebookentries</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>PricebookEntry</objectType>
+    </variables>
+    <variables>
+        <description>collection of pricebook entries for  product</description>
+        <name>var_pricebookentry_products</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>PricebookEntry</objectType>
+    </variables>
+    <variables>
+        <description>{!var_pricebookentry_products</description>
+        <name>var_pricebookentry_productsList</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>PricebookEntry</objectType>
+    </variables>
+    <variables>
+        <name>var_product_record</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Product2</objectType>
+    </variables>
+</Flow>

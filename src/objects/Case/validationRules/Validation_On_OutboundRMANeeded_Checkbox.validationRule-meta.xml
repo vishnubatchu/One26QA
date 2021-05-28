@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Validation_On_OutboundRMANeeded_Checkbox</fullName>
+    <active>true</active>
+    <errorConditionFormula>Outbound_RMA_Not_Needed__c = false &amp;&amp;   Ship_To_Address__c = null &amp;&amp;   RecordType.Name = &quot;RMA Request&quot;</errorConditionFormula>
+    <errorMessage>These required fields must be completed: Ship To Address , Ship To Customer</errorMessage>
+</ValidationRule>

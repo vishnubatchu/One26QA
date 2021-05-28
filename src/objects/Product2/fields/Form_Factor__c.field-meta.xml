@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Form_Factor__c</fullName>
+    <externalId>false</externalId>
+    <label>Form Factor</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>168 PIN</fullName>
+                <default>false</default>
+                <label>168 PIN</label>
+            </value>
+            <value>
+                <fullName>17PIN</fullName>
+                <default>false</default>
+                <label>17PIN</label>
+            </value>
+            <value>
+                <fullName>1RU CHASSIS</fullName>
+                <default>false</default>
+                <label>1RU CHASSIS</label>
+            </value>
+            <value>
+                <fullName>1X20 PIN</fullName>
+                <default>false</default>
+                <label>1X20 PIN</label>
+            </value>
+            <value>
+                <fullName>28PIN</fullName>
+                <default>false</default>
+                <label>28PIN</label>
+            </value>
+            <value>
+                <fullName>2RU CHASSIS</fullName>
+                <default>false</default>
+                <label>2RU CHASSIS</label>
+            </value>
+            <value>
+                <fullName>2X10 PIN</fullName>
+                <default>false</default>
+                <label>2X10 PIN</label>
+            </value>
+            <value>
+                <fullName>2X5 PIN</fullName>
+                <default>false</default>
+                <label>2X5 PIN</label>
+            </value>
+            <value>
+                <fullName>2X6 PIN</fullName>
+                <default>false</default>
+                <label>2X6 PIN</label>
+            </value>
+            <value>
+                <fullName>2X7 PIN</fullName>
+                <default>false</default>
+                <label>2X7 PIN</label>
+            </value>
+            <value>
+                <fullName>300PIN-LFF</fullName>
+                <default>false</default>
+                <label>300PIN-LFF</label>
+            </value>
+            <value>
+                <fullName>300PIN-SFF</fullName>
+                <default>false</default>
+                <label>300PIN-SFF</label>
+            </value>
+            <value>
+                <fullName>3RU CHASSIS</fullName>
+                <default>false</default>
+                <label>3RU CHASSIS</label>
+            </value>
+            <value>
+                <fullName>41PN CNSMR</fullName>
+                <default>false</default>
+                <label>41PN CNSMR</label>
+            </value>
+            <value>
+                <fullName>9PIN</fullName>
+                <default>false</default>
+                <label>9PIN</label>
+            </value>
+            <value>
+                <fullName>AMPLIFIER MODULE</fullName>
+                <default>false</default>
+                <label>AMPLIFIER MODULE</label>
+            </value>
+            <value>
+                <fullName>BOA</fullName>
+                <default>false</default>
+                <label>BOA</label>
+            </value>
+            <value>
+                <fullName>CDFP</fullName>
+                <default>false</default>
+                <label>CDFP</label>
+            </value>
+            <value>
+                <fullName>CFP</fullName>
+                <default>false</default>
+                <label>CFP</label>
+            </value>
+            <value>
+                <fullName>CFP2</fullName>
+                <default>false</default>
+                <label>CFP2</label>
+            </value>
+            <value>
+                <fullName>CFP4</fullName>
+                <default>false</default>
+                <label>CFP4</label>
+            </value>
+            <value>
+                <fullName>CFP8</fullName>
+                <default>false</default>
+                <label>CFP8</label>
+            </value>
+            <value>
+                <fullName>CUSTOM LINECARD</fullName>
+                <default>false</default>
+                <label>CUSTOM LINECARD</label>
+            </value>
+            <value>
+                <fullName>CXP</fullName>
+                <default>false</default>
+                <label>CXP</label>
+            </value>
+            <value>
+                <fullName>DIE</fullName>
+                <default>false</default>
+                <label>DIE</label>
+            </value>
+            <value>
+                <fullName>ENDURANCE</fullName>
+                <default>false</default>
+                <label>ENDURANCE</label>
+            </value>
+            <value>
+                <fullName>GBIC</fullName>
+                <default>false</default>
+                <label>GBIC</label>
+            </value>
+            <value>
+                <fullName>LASERWIRE</fullName>
+                <default>false</default>
+                <label>LASERWIRE</label>
+            </value>
+            <value>
+                <fullName>OTHER</fullName>
+                <default>false</default>
+                <label>OTHER</label>
+            </value>
+            <value>
+                <fullName>PACKAGE</fullName>
+                <default>false</default>
+                <label>PACKAGE</label>
+            </value>
+            <value>
+                <fullName>PCSYSTEM</fullName>
+                <default>false</default>
+                <label>PCSYSTEM</label>
+            </value>
+            <value>
+                <fullName>QSFP</fullName>
+                <default>false</default>
+                <label>QSFP</label>
+            </value>
+            <value>
+                <fullName>RX-BUTTERFLY</fullName>
+                <default>false</default>
+                <label>RX-BUTTERFLY</label>
+            </value>
+            <value>
+                <fullName>SFP</fullName>
+                <default>false</default>
+                <label>SFP</label>
+            </value>
+            <value>
+                <fullName>SFP+</fullName>
+                <default>false</default>
+                <label>SFP+</label>
+            </value>
+            <value>
+                <fullName>SNAP12</fullName>
+                <default>false</default>
+                <label>SNAP12</label>
+            </value>
+            <value>
+                <fullName>WSS MODULE</fullName>
+                <default>false</default>
+                <label>WSS MODULE</label>
+            </value>
+            <value>
+                <fullName>X2</fullName>
+                <default>false</default>
+                <label>X2</label>
+            </value>
+            <value>
+                <fullName>XENPAK</fullName>
+                <default>false</default>
+                <label>XENPAK</label>
+            </value>
+            <value>
+                <fullName>XFP</fullName>
+                <default>false</default>
+                <label>XFP</label>
+            </value>
+            <value>
+                <fullName>XFP IR</fullName>
+                <default>false</default>
+                <label>XFP IR</label>
+            </value>
+            <value>
+                <fullName>XFP-E</fullName>
+                <default>false</default>
+                <label>XFP-E</label>
+            </value>
+            <value>
+                <fullName>XPAK</fullName>
+                <default>false</default>
+                <label>XPAK</label>
+            </value>
+            <value>
+                <fullName>300 PIN</fullName>
+                <default>false</default>
+                <label>300 PIN</label>
+            </value>
+            <value>
+                <fullName>SFF</fullName>
+                <default>false</default>
+                <label>SFF</label>
+            </value>
+            <value>
+                <fullName>XBI</fullName>
+                <default>false</default>
+                <label>XBI</label>
+            </value>
+            <value>
+                <fullName>CUSTOMENCL</fullName>
+                <default>false</default>
+                <label>CUSTOMENCL</label>
+            </value>
+            <value>
+                <fullName>WSS ONLY</fullName>
+                <default>false</default>
+                <label>WSS ONLY</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

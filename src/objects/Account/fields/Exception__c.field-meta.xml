@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Exception__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( ISBLANK(Customer_Warranty__c) , IF(LEN( Parent.Customer_Warranty__c )&gt;2,true,false)
+, IF(LEN( Customer_Warranty__c )&gt;2,true,false))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Exception</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

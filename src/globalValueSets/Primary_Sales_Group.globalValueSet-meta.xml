@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Andre Guimaraes</fullName>
+        <default>false</default>
+        <label>Andre Guimaraes</label>
+    </customValue>
+    <customValue>
+        <fullName>Andy Wiedor</fullName>
+        <default>false</default>
+        <label>Andy Wiedor</label>
+    </customValue>
+    <customValue>
+        <fullName>Asia</fullName>
+        <default>false</default>
+        <label>Asia</label>
+    </customValue>
+    <customValue>
+        <fullName>Barrs Lang</fullName>
+        <default>false</default>
+        <label>Barrs Lang</label>
+    </customValue>
+    <customValue>
+        <fullName>Bob Tung</fullName>
+        <default>false</default>
+        <label>Bob Tung</label>
+    </customValue>
+    <customValue>
+        <fullName>Brian Mulroe</fullName>
+        <default>false</default>
+        <label>Brian Mulroe</label>
+    </customValue>
+    <customValue>
+        <fullName>Chris Johnson</fullName>
+        <default>false</default>
+        <label>Chris Johnson</label>
+    </customValue>
+    <customValue>
+        <fullName>Cisco Sales</fullName>
+        <default>false</default>
+        <label>Cisco Sales</label>
+    </customValue>
+    <customValue>
+        <fullName>Colin Loiselle</fullName>
+        <default>false</default>
+        <label>Colin Loiselle</label>
+    </customValue>
+    <customValue>
+        <fullName>Danilo Scarano</fullName>
+        <default>false</default>
+        <label>Danilo Scarano</label>
+    </customValue>
+    <customValue>
+        <fullName>Datacenter Sales</fullName>
+        <default>false</default>
+        <label>Datacenter Sales</label>
+    </customValue>
+    <customValue>
+        <fullName>Diego Mottarella</fullName>
+        <default>false</default>
+        <label>Diego Mottarella</label>
+    </customValue>
+    <customValue>
+        <fullName>Dolores Sotelo</fullName>
+        <default>false</default>
+        <label>Dolores Sotelo</label>
+    </customValue>
+    <customValue>
+        <fullName>Europe</fullName>
+        <default>false</default>
+        <label>Europe</label>
+    </customValue>
+    <customValue>
+        <fullName>Frank WangFang</fullName>
+        <default>false</default>
+        <label>Frank WangFang</label>
+    </customValue>
+    <customValue>
+        <fullName>Giorgio Ghislotti</fullName>
+        <default>false</default>
+        <label>Giorgio Ghislotti</label>
+    </customValue>
+    <customValue>
+        <fullName>Greg Hart</fullName>
+        <default>false</default>
+        <label>Greg Hart</label>
+    </customValue>
+    <customValue>
+        <fullName>Hal Kawazoe</fullName>
+        <default>false</default>
+        <label>Hal Kawazoe</label>
+    </customValue>
+    <customValue>
+        <fullName>Hieu Ngo</fullName>
+        <default>false</default>
+        <label>Hieu Ngo</label>
+    </customValue>
+    <customValue>
+        <fullName>Holger Maerz</fullName>
+        <default>false</default>
+        <label>Holger Maerz</label>
+    </customValue>
+    <customValue>
+        <fullName>Ilan Brillant</fullName>
+        <default>false</default>
+        <label>Ilan Brillant</label>
+    </customValue>
+    <customValue>
+        <fullName>International Sales</fullName>
+        <default>false</default>
+        <label>International Sales</label>
+    </customValue>
+    <customValue>
+        <fullName>Ishii Suguru</fullName>
+        <default>false</default>
+        <label>Ishii Suguru</label>
+    </customValue>
+    <customValue>
+        <fullName>Janet Shen</fullName>
+        <default>false</default>
+        <label>Janet Shen</label>
+    </customValue>
+    <customValue>
+        <fullName>Japan</fullName>
+        <default>false</default>
+        <label>Japan</label>
+    </customValue>
+    <customValue>
+        <fullName>Jeff Mold</fullName>
+        <default>false</default>
+        <label>Jeff Mold</label>
+    </customValue>
+    <customValue>
+        <fullName>Jennifer Elliott</fullName>
+        <default>false</default>
+        <label>Jennifer Elliott</label>
+    </customValue>
+    <customValue>
+        <fullName>John Schroter</fullName>
+        <default>false</default>
+        <label>John Schroter</label>
+    </customValue>
+    <customValue>
+        <fullName>Keith Gordon</fullName>
+        <default>false</default>
+        <label>Keith Gordon</label>
+    </customValue>
+    <customValue>
+        <fullName>Ken Garrett</fullName>
+        <default>false</default>
+        <label>Ken Garrett</label>
+    </customValue>
+    <customValue>
+        <fullName>Kevin Hadley</fullName>
+        <default>false</default>
+        <label>Kevin Hadley</label>
+    </customValue>
+    <customValue>
+        <fullName>Kevin Shelton</fullName>
+        <default>false</default>
+        <label>Kevin Shelton</label>
+    </customValue>
+    <customValue>
+        <fullName>Larry Wang</fullName>
+        <default>false</default>
+        <label>Larry Wang</label>
+    </customValue>
+    <customValue>
+        <fullName>Laura Chelossi</fullName>
+        <default>false</default>
+        <label>Laura Chelossi</label>
+    </customValue>
+    <customValue>
+        <fullName>Leslie Diaz-Orellana</fullName>
+        <default>false</default>
+        <label>Leslie Diaz-Orellana</label>
+    </customValue>
+    <customValue>
+        <fullName>Lillian Chen</fullName>
+        <default>false</default>
+        <label>Lillian Chen</label>
+    </customValue>
+    <customValue>
+        <fullName>Mark Robert Lewis Willey</fullName>
+        <default>false</default>
+        <label>Mark Robert Lewis Willey</label>
+    </customValue>
+    <customValue>
+        <fullName>Mark Robinson</fullName>
+        <default>false</default>
+        <label>Mark Robinson</label>
+    </customValue>
+    <customValue>
+        <fullName>Mark Willey</fullName>
+        <default>false</default>
+        <label>Mark Willey</label>
+    </customValue>
+    <customValue>
+        <fullName>Masaaki Ohashi</fullName>
+        <default>false</default>
+        <label>Masaaki Ohashi</label>
+    </customValue>
+    <customValue>
+        <fullName>Menjoe Ding</fullName>
+        <default>false</default>
+        <label>Menjoe Ding</label>
+    </customValue>
+    <customValue>
+        <fullName>Michael Farley</fullName>
+        <default>false</default>
+        <label>Michael Farley</label>
+    </customValue>
+    <customValue>
+        <fullName>North American Sales</fullName>
+        <default>false</default>
+        <label>North American Sales</label>
+    </customValue>
+    <customValue>
+        <fullName>Oliver Brecko</fullName>
+        <default>false</default>
+        <label>Oliver Brecko</label>
+    </customValue>
+    <customValue>
+        <fullName>Optics Sales</fullName>
+        <default>false</default>
+        <label>Optics Sales</label>
+    </customValue>
+    <customValue>
+        <fullName>Perdeep Bharadwaj</fullName>
+        <default>false</default>
+        <label>Perdeep Bharadwaj</label>
+    </customValue>
+    <customValue>
+        <fullName>Peter Thornton</fullName>
+        <default>false</default>
+        <label>Peter Thornton</label>
+    </customValue>
+    <customValue>
+        <fullName>Rob Dumbrille</fullName>
+        <default>false</default>
+        <label>Rob Dumbrille</label>
+    </customValue>
+    <customValue>
+        <fullName>Robert Murphy</fullName>
+        <default>false</default>
+        <label>Robert Murphy</label>
+    </customValue>
+    <customValue>
+        <fullName>Shereen Chung Sau Cheng</fullName>
+        <default>false</default>
+        <label>Shereen Chung Sau Cheng</label>
+    </customValue>
+    <customValue>
+        <fullName>Steve Calkins</fullName>
+        <default>false</default>
+        <label>Steve Calkins</label>
+    </customValue>
+    <customValue>
+        <fullName>Suguru Ishii</fullName>
+        <default>false</default>
+        <label>Suguru Ishii</label>
+    </customValue>
+    <customValue>
+        <fullName>Thomas Walsh</fullName>
+        <default>false</default>
+        <label>Thomas Walsh</label>
+    </customValue>
+    <customValue>
+        <fullName>Todd Swanson</fullName>
+        <default>false</default>
+        <label>Todd Swanson</label>
+    </customValue>
+    <customValue>
+        <fullName>Tony Dobos</fullName>
+        <default>false</default>
+        <label>Tony Dobos</label>
+    </customValue>
+    <customValue>
+        <fullName>Tony Pearson</fullName>
+        <default>false</default>
+        <label>Tony Pearson</label>
+    </customValue>
+    <customValue>
+        <fullName>Yoichiro Fujino</fullName>
+        <default>false</default>
+        <label>Yoichiro Fujino</label>
+    </customValue>
+    <customValue>
+        <fullName>Ken Falta</fullName>
+        <default>false</default>
+        <label>Ken Falta</label>
+    </customValue>
+    <customValue>
+        <fullName>Young Tae Lee</fullName>
+        <default>false</default>
+        <label>Young Tae Lee</label>
+    </customValue>
+    <masterLabel>Primary Sales Group</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

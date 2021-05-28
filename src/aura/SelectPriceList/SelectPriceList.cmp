@@ -1,0 +1,48 @@
+<aura:component controller = "PriceListController" implements="flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" access="global" >
+	<aura:attribute name="QuoteId" type="String"/> 
+    <aura:attribute name="ErrorMessage" type="String"/> 
+    <aura:attribute name="recordId" type="Id" />
+    <aura:attribute name="AccountPickLists" type="Account[]"/> 
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <div class="slds-text-color_error" title="ErrorMess">{!v.ErrorMessage}</div>
+      <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+              <thead>
+                <tr class="slds-line-height_reset">
+                 <th class="slds-text-title_caps" scope="col">
+                    <div class="slds-truncate" title="Select">Select</div>
+                  </th>
+                  <th class="slds-text-title_caps" scope="col">
+                    <div class="slds-truncate" title="PriceList">PriceList</div>
+                  </th>
+                   <div class="slds-form-element">
+                    <button type="button" class="slds-button slds-button--brand" onclick="{!c.UpdatePriceList}">Update</button>
+                  </div>
+                  </tr>
+              </thead>
+           <tbody>
+                  <aura:iteration items="{!v.AccountPickLists}" var="AccountPickList">
+                        <tr class="slds-hint-parent">
+                           <td scope="row" class="slds-text-align--right" style="width:3.25rem;">
+                              <div class="slds-form-element">
+                                 <div class="slds-form-element__control">
+                                    <label class="slds-checkbox">
+                                       <ui:inputCheckbox text="{!AccountPickList.Price_List__c}" aura:id="boxPack" value=""/>
+                                       <span class="slds-checkbox--faux"></span>
+                                       <span class="slds-form-element__label text"></span>
+                                    </label>
+                                 </div>
+                              </div>
+                           </td>
+                          <th data-label="PickList Name" scope="row">
+                            <div class="slds-truncate" title="{!AccountPickList.Price_List__c}">{!AccountPickList.Price_List__c}</div>
+                          </th>
+                          <th data-label="Blank" scope="row">
+                            <div class="slds-truncate" title="Blank"></div>
+                          </th>
+                   </tr>
+                </aura:iteration>
+              
+              </tbody>
+            </table>
+      
+</aura:component>

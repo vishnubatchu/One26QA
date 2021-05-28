@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <allowRecall>false</allowRecall>
+    <allowedSubmitters>
+        <type>owner</type>
+    </allowedSubmitters>
+    <approvalPageFields>
+        <field>CaseNumber</field>
+        <field>Owner</field>
+        <field>CreatedDate</field>
+    </approvalPageFields>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>CreatedBy</name>
+                <type>relatedUserField</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <entryCriteria>
+            <criteriaItems>
+                <field>Case.RecordType</field>
+                <operation>equals</operation>
+                <value>Case</value>
+            </criteriaItems>
+        </entryCriteria>
+        <ifCriteriaNotMet>ApproveRecord</ifCriteriaNotMet>
+        <label>Step 1</label>
+        <name>Step_1</name>
+    </approvalStep>
+    <enableMobileDeviceAccess>false</enableMobileDeviceAccess>
+    <entryCriteria>
+        <formula>( Rolled_up_Amount__c &lt;= 10000 || BEGINS(TEXT( Billing_Type__c ), &apos;Zero&apos;) || BEGINS(TEXT( Billing_Type__c ), &apos;Credit&apos;) || BU_3D_Sensing_Amount_Sum__c &lt;= 100000 || BU_Data_Networking_Amount_Sum__c &lt;= 100000 || BU_Optical_Interconnect_Amount_Sum__c &lt;= 100000 || BU_Wavelength_Management_Amount_Sum__c &lt;= 100000 ) &amp;&amp; ( EndCustomerInbound__c != null || ( NOT(Outbound_RMA_Not_Needed__c) &amp;&amp; EndCustomerOutBound__c != null))</formula>
+    </entryCriteria>
+    <finalApprovalActions>
+        <action>
+            <name>Update_Status_Pending_RMA_Admin_Review</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalApprovalActions>
+    <finalApprovalRecordLock>false</finalApprovalRecordLock>
+    <finalRejectionRecordLock>false</finalRejectionRecordLock>
+    <initialSubmissionActions>
+        <action>
+            <name>Email_Notification_for_new_RMA</name>
+            <type>Alert</type>
+        </action>
+    </initialSubmissionActions>
+    <label>Default Case Auto ApprovalDefault Case</label>
+    <processOrder>7</processOrder>
+    <recordEditability>AdminOnly</recordEditability>
+    <showApprovalHistory>true</showApprovalHistory>
+</ApprovalProcess>

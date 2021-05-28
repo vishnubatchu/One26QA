@@ -1,0 +1,768 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VAR_SI__c</fullName>
+    <externalId>false</externalId>
+    <label>VAR/SI</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>9 to 5 computer</fullName>
+                <default>false</default>
+                <label>9 to 5 computer</label>
+            </value>
+            <value>
+                <fullName>AAJ Networks</fullName>
+                <default>false</default>
+                <label>AAJ Networks</label>
+            </value>
+            <value>
+                <fullName>ACE Technology</fullName>
+                <default>false</default>
+                <label>ACE Technology</label>
+            </value>
+            <value>
+                <fullName>Advantec</fullName>
+                <default>false</default>
+                <label>Advantec</label>
+            </value>
+            <value>
+                <fullName>Aeon Computing</fullName>
+                <default>false</default>
+                <label>Aeon Computing</label>
+            </value>
+            <value>
+                <fullName>AFL Hyperscale</fullName>
+                <default>false</default>
+                <label>AFL Hyperscale</label>
+            </value>
+            <value>
+                <fullName>Agile IT</fullName>
+                <default>false</default>
+                <label>Agile IT</label>
+            </value>
+            <value>
+                <fullName>All Solutions Inc</fullName>
+                <default>false</default>
+                <label>All Solutions Inc</label>
+            </value>
+            <value>
+                <fullName>Alpha Micro Components USA</fullName>
+                <default>false</default>
+                <label>Alpha Micro Components USA</label>
+            </value>
+            <value>
+                <fullName>Amax</fullName>
+                <default>false</default>
+                <label>Amax</label>
+            </value>
+            <value>
+                <fullName>AmiStar</fullName>
+                <default>false</default>
+                <label>AmiStar</label>
+            </value>
+            <value>
+                <fullName>Anixter</fullName>
+                <default>false</default>
+                <label>Anixter</label>
+            </value>
+            <value>
+                <fullName>Apollo Informations Sys Group</fullName>
+                <default>false</default>
+                <label>Apollo Informations Sys Group</label>
+            </value>
+            <value>
+                <fullName>Applied Computer (ACS)</fullName>
+                <default>false</default>
+                <label>Applied Computer (ACS)</label>
+            </value>
+            <value>
+                <fullName>Bar None Tech</fullName>
+                <default>false</default>
+                <label>Bar None Tech</label>
+            </value>
+            <value>
+                <fullName>Beijing Bright Prospect</fullName>
+                <default>false</default>
+                <label>Beijing Bright Prospect</label>
+            </value>
+            <value>
+                <fullName>Broadnet Telecom</fullName>
+                <default>false</default>
+                <label>Broadnet Telecom</label>
+            </value>
+            <value>
+                <fullName>Burwood Group</fullName>
+                <default>false</default>
+                <label>Burwood Group</label>
+            </value>
+            <value>
+                <fullName>Cambridge Computer</fullName>
+                <default>false</default>
+                <label>Cambridge Computer</label>
+            </value>
+            <value>
+                <fullName>Cavar SA</fullName>
+                <default>false</default>
+                <label>Cavar SA</label>
+            </value>
+            <value>
+                <fullName>CDW</fullName>
+                <default>false</default>
+                <label>CDW</label>
+            </value>
+            <value>
+                <fullName>Cirrascale</fullName>
+                <default>false</default>
+                <label>Cirrascale</label>
+            </value>
+            <value>
+                <fullName>ClearShark</fullName>
+                <default>false</default>
+                <label>ClearShark</label>
+            </value>
+            <value>
+                <fullName>Coda Technologies</fullName>
+                <default>false</default>
+                <label>Coda Technologies</label>
+            </value>
+            <value>
+                <fullName>Continental Resources</fullName>
+                <default>false</default>
+                <label>Continental Resources</label>
+            </value>
+            <value>
+                <fullName>Convergint Technologies</fullName>
+                <default>false</default>
+                <label>Convergint Technologies</label>
+            </value>
+            <value>
+                <fullName>Cumulus Networks</fullName>
+                <default>false</default>
+                <label>Cumulus Networks</label>
+            </value>
+            <value>
+                <fullName>Dasher Technologies, Inc</fullName>
+                <default>false</default>
+                <label>Dasher Technologies, Inc</label>
+            </value>
+            <value>
+                <fullName>Datalink (now Insight)</fullName>
+                <default>false</default>
+                <label>Datalink (now Insight)</label>
+            </value>
+            <value>
+                <fullName>DCS</fullName>
+                <default>false</default>
+                <label>DCS</label>
+            </value>
+            <value>
+                <fullName>Dedicated Computing</fullName>
+                <default>false</default>
+                <label>Dedicated Computing</label>
+            </value>
+            <value>
+                <fullName>Dell Marketing</fullName>
+                <default>false</default>
+                <label>Dell Marketing</label>
+            </value>
+            <value>
+                <fullName>Dimension Data</fullName>
+                <default>false</default>
+                <label>Dimension Data</label>
+            </value>
+            <value>
+                <fullName>Dynamic Computer Corp</fullName>
+                <default>false</default>
+                <label>Dynamic Computer Corp</label>
+            </value>
+            <value>
+                <fullName>E2 Optics</fullName>
+                <default>false</default>
+                <label>E2 Optics</label>
+            </value>
+            <value>
+                <fullName>ePLUS</fullName>
+                <default>false</default>
+                <label>ePLUS</label>
+            </value>
+            <value>
+                <fullName>Ergonomics Group</fullName>
+                <default>false</default>
+                <label>Ergonomics Group</label>
+            </value>
+            <value>
+                <fullName>FusionStorm</fullName>
+                <default>false</default>
+                <label>FusionStorm</label>
+            </value>
+            <value>
+                <fullName>GDT</fullName>
+                <default>false</default>
+                <label>GDT</label>
+            </value>
+            <value>
+                <fullName>Genesis ATS</fullName>
+                <default>false</default>
+                <label>Genesis ATS</label>
+            </value>
+            <value>
+                <fullName>Genstor Systems</fullName>
+                <default>false</default>
+                <label>Genstor Systems</label>
+            </value>
+            <value>
+                <fullName>GHA Technologies, Inc.</fullName>
+                <default>false</default>
+                <label>GHA Technologies, Inc.</label>
+            </value>
+            <value>
+                <fullName>Global Solutions Electronics</fullName>
+                <default>false</default>
+                <label>Global Solutions Electronics</label>
+            </value>
+            <value>
+                <fullName>Granite Micro</fullName>
+                <default>false</default>
+                <label>Granite Micro</label>
+            </value>
+            <value>
+                <fullName>GroupWare</fullName>
+                <default>false</default>
+                <label>GroupWare</label>
+            </value>
+            <value>
+                <fullName>IC-Tronix</fullName>
+                <default>false</default>
+                <label>IC-Tronix</label>
+            </value>
+            <value>
+                <fullName>IES Communications</fullName>
+                <default>false</default>
+                <label>IES Communications</label>
+            </value>
+            <value>
+                <fullName>Insight</fullName>
+                <default>false</default>
+                <label>Insight</label>
+            </value>
+            <value>
+                <fullName>Integra Optics</fullName>
+                <default>false</default>
+                <label>Integra Optics</label>
+            </value>
+            <value>
+                <fullName>International Computer Concept</fullName>
+                <default>false</default>
+                <label>International Computer Concept</label>
+            </value>
+            <value>
+                <fullName>Iron Bow Technologies</fullName>
+                <default>false</default>
+                <label>Iron Bow Technologies</label>
+            </value>
+            <value>
+                <fullName>Iron Systems</fullName>
+                <default>false</default>
+                <label>Iron Systems</label>
+            </value>
+            <value>
+                <fullName>Isatel</fullName>
+                <default>false</default>
+                <label>Isatel</label>
+            </value>
+            <value>
+                <fullName>iXsystems</fullName>
+                <default>false</default>
+                <label>iXsystems</label>
+            </value>
+            <value>
+                <fullName>Leadman Electronics</fullName>
+                <default>false</default>
+                <label>Leadman Electronics</label>
+            </value>
+            <value>
+                <fullName>MantisNet</fullName>
+                <default>false</default>
+                <label>MantisNet</label>
+            </value>
+            <value>
+                <fullName>MBX</fullName>
+                <default>false</default>
+                <label>MBX</label>
+            </value>
+            <value>
+                <fullName>MDSi, Inc.</fullName>
+                <default>false</default>
+                <label>MDSi, Inc.</label>
+            </value>
+            <value>
+                <fullName>Micro Technologies</fullName>
+                <default>false</default>
+                <label>Micro Technologies</label>
+            </value>
+            <value>
+                <fullName>Micromem International Inc</fullName>
+                <default>false</default>
+                <label>Micromem International Inc</label>
+            </value>
+            <value>
+                <fullName>Myriad Supply</fullName>
+                <default>false</default>
+                <label>Myriad Supply</label>
+            </value>
+            <value>
+                <fullName>NCS Technologies</fullName>
+                <default>false</default>
+                <label>NCS Technologies</label>
+            </value>
+            <value>
+                <fullName>Nex Infinite</fullName>
+                <default>false</default>
+                <label>Nex Infinite</label>
+            </value>
+            <value>
+                <fullName>NWN Corporation</fullName>
+                <default>false</default>
+                <label>NWN Corporation</label>
+            </value>
+            <value>
+                <fullName>OneLogic Networks</fullName>
+                <default>false</default>
+                <label>OneLogic Networks</label>
+            </value>
+            <value>
+                <fullName>OnX</fullName>
+                <default>false</default>
+                <label>OnX</label>
+            </value>
+            <value>
+                <fullName>Padova</fullName>
+                <default>false</default>
+                <label>Padova</label>
+            </value>
+            <value>
+                <fullName>PCPC</fullName>
+                <default>false</default>
+                <label>PCPC</label>
+            </value>
+            <value>
+                <fullName>Penguin Computing</fullName>
+                <default>false</default>
+                <label>Penguin Computing</label>
+            </value>
+            <value>
+                <fullName>PNH Technology</fullName>
+                <default>false</default>
+                <label>PNH Technology</label>
+            </value>
+            <value>
+                <fullName>Pogo Linux</fullName>
+                <default>false</default>
+                <label>Pogo Linux</label>
+            </value>
+            <value>
+                <fullName>Pomeroy</fullName>
+                <default>false</default>
+                <label>Pomeroy</label>
+            </value>
+            <value>
+                <fullName>Presidio</fullName>
+                <default>false</default>
+                <label>Presidio</label>
+            </value>
+            <value>
+                <fullName>Racklive/ASA</fullName>
+                <default>false</default>
+                <label>Racklive/ASA</label>
+            </value>
+            <value>
+                <fullName>Rahi Systems</fullName>
+                <default>false</default>
+                <label>Rahi Systems</label>
+            </value>
+            <value>
+                <fullName>Red River</fullName>
+                <default>false</default>
+                <label>Red River</label>
+            </value>
+            <value>
+                <fullName>Redapt</fullName>
+                <default>false</default>
+                <label>Redapt</label>
+            </value>
+            <value>
+                <fullName>RetroHardware</fullName>
+                <default>false</default>
+                <label>RetroHardware</label>
+            </value>
+            <value>
+                <fullName>Rincon Technology</fullName>
+                <default>false</default>
+                <label>Rincon Technology</label>
+            </value>
+            <value>
+                <fullName>RockRight</fullName>
+                <default>false</default>
+                <label>RockRight</label>
+            </value>
+            <value>
+                <fullName>Sandstone</fullName>
+                <default>false</default>
+                <label>Sandstone</label>
+            </value>
+            <value>
+                <fullName>Sanity Solutions</fullName>
+                <default>false</default>
+                <label>Sanity Solutions</label>
+            </value>
+            <value>
+                <fullName>SansTech</fullName>
+                <default>false</default>
+                <label>SansTech</label>
+            </value>
+            <value>
+                <fullName>SHE Electronics</fullName>
+                <default>false</default>
+                <label>SHE Electronics</label>
+            </value>
+            <value>
+                <fullName>SHI</fullName>
+                <default>false</default>
+                <label>SHI</label>
+            </value>
+            <value>
+                <fullName>Silicon Mechanics</fullName>
+                <default>false</default>
+                <label>Silicon Mechanics</label>
+            </value>
+            <value>
+                <fullName>Sirius Computer</fullName>
+                <default>false</default>
+                <label>Sirius Computer</label>
+            </value>
+            <value>
+                <fullName>SkinnyIT</fullName>
+                <default>false</default>
+                <label>SkinnyIT</label>
+            </value>
+            <value>
+                <fullName>Source Code/Thinkmate</fullName>
+                <default>false</default>
+                <label>Source Code/Thinkmate</label>
+            </value>
+            <value>
+                <fullName>Sovereign Systems</fullName>
+                <default>false</default>
+                <label>Sovereign Systems</label>
+            </value>
+            <value>
+                <fullName>StackVelocity</fullName>
+                <default>false</default>
+                <label>StackVelocity</label>
+            </value>
+            <value>
+                <fullName>Tallgrass Technologies</fullName>
+                <default>false</default>
+                <label>Tallgrass Technologies</label>
+            </value>
+            <value>
+                <fullName>Toranet</fullName>
+                <default>false</default>
+                <label>Toranet</label>
+            </value>
+            <value>
+                <fullName>Unicom</fullName>
+                <default>false</default>
+                <label>Unicom</label>
+            </value>
+            <value>
+                <fullName>US Critical</fullName>
+                <default>false</default>
+                <label>US Critical</label>
+            </value>
+            <value>
+                <fullName>Valcom/VLCM</fullName>
+                <default>false</default>
+                <label>Valcom/VLCM</label>
+            </value>
+            <value>
+                <fullName>Westwind</fullName>
+                <default>false</default>
+                <label>Westwind</label>
+            </value>
+            <value>
+                <fullName>Whalley Computer Associates</fullName>
+                <default>false</default>
+                <label>Whalley Computer Associates</label>
+            </value>
+            <value>
+                <fullName>World Wide Technology (WWT)</fullName>
+                <default>false</default>
+                <label>World Wide Technology (WWT)</label>
+            </value>
+            <value>
+                <fullName>Zadara Storage</fullName>
+                <default>false</default>
+                <label>Zadara Storage</label>
+            </value>
+            <value>
+                <fullName>Zebra Technologies</fullName>
+                <default>false</default>
+                <label>Zebra Technologies</label>
+            </value>
+            <value>
+                <fullName>ABCOM</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>ABCOM</label>
+            </value>
+            <value>
+                <fullName>Abba</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Abba</label>
+            </value>
+            <value>
+                <fullName>Allied Business Machines</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Allied Business Machines</label>
+            </value>
+            <value>
+                <fullName>Avian</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Avian</label>
+            </value>
+            <value>
+                <fullName>BUR-TECH SOLUTIONS LLC</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>BUR-TECH SOLUTIONS LLC</label>
+            </value>
+            <value>
+                <fullName>BahFed</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>BahFed</label>
+            </value>
+            <value>
+                <fullName>BlackLake Security</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>BlackLake Security</label>
+            </value>
+            <value>
+                <fullName>CSC/Wesco</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>CSC/Wesco</label>
+            </value>
+            <value>
+                <fullName>Clover International</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Clover International</label>
+            </value>
+            <value>
+                <fullName>Computacenter</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Computacenter</label>
+            </value>
+            <value>
+                <fullName>Computer Masters</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Computer Masters</label>
+            </value>
+            <value>
+                <fullName>Conical Technologies</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Conical Technologies</label>
+            </value>
+            <value>
+                <fullName>ConvergeOne</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>ConvergeOne</label>
+            </value>
+            <value>
+                <fullName>Corbel Solutions</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Corbel Solutions</label>
+            </value>
+            <value>
+                <fullName>Cuatro Networks (CDMX)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Cuatro Networks (CDMX)</label>
+            </value>
+            <value>
+                <fullName>Digithead</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Digithead</label>
+            </value>
+            <value>
+                <fullName>Distilogix</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Distilogix</label>
+            </value>
+            <value>
+                <fullName>Edge Electronics</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Edge Electronics</label>
+            </value>
+            <value>
+                <fullName>FedBiz</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>FedBiz</label>
+            </value>
+            <value>
+                <fullName>Global Convergence, Inc.</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Global Convergence, Inc.</label>
+            </value>
+            <value>
+                <fullName>Golden Star Technology</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Golden Star Technology</label>
+            </value>
+            <value>
+                <fullName>ISP Express</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>ISP Express</label>
+            </value>
+            <value>
+                <fullName>Intercable</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Intercable</label>
+            </value>
+            <value>
+                <fullName>Iunus Srl</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Iunus Srl</label>
+            </value>
+            <value>
+                <fullName>Jainam  Technologies</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Jainam  Technologies</label>
+            </value>
+            <value>
+                <fullName>Luster LightTech</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Luster LightTech</label>
+            </value>
+            <value>
+                <fullName>Lyme Computer</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Lyme Computer</label>
+            </value>
+            <value>
+                <fullName>MFP Technology  Services</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>MFP Technology  Services</label>
+            </value>
+            <value>
+                <fullName>Melcox</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Melcox</label>
+            </value>
+            <value>
+                <fullName>N2grate</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>N2grate</label>
+            </value>
+            <value>
+                <fullName>Nexgen Broadband</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Nexgen Broadband</label>
+            </value>
+            <value>
+                <fullName>Palmgroves Tech</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Palmgroves Tech</label>
+            </value>
+            <value>
+                <fullName>Phoenics Electronics</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Phoenics Electronics</label>
+            </value>
+            <value>
+                <fullName>Prism Electronics</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Prism Electronics</label>
+            </value>
+            <value>
+                <fullName>ProSys</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>ProSys</label>
+            </value>
+            <value>
+                <fullName>Sequoyah Electric, LLC</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Sequoyah Electric, LLC</label>
+            </value>
+            <value>
+                <fullName>Spinel Electronics</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Spinel Electronics</label>
+            </value>
+            <value>
+                <fullName>Trace3</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Trace3</label>
+            </value>
+            <value>
+                <fullName>Victory Global Solutions</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Victory Global Solutions</label>
+            </value>
+            <value>
+                <fullName>Worldwide Supply</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Worldwide Supply</label>
+            </value>
+            <value>
+                <fullName>Zones</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Zones</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

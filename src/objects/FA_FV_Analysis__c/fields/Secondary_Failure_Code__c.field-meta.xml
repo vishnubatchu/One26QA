@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Secondary_Failure_Code__c</fullName>
+    <externalId>false</externalId>
+    <label>Secondary Failure Code</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Laser - Dislocations</fullName>
+                <default>false</default>
+                <label>Laser - Dislocations</label>
+            </value>
+            <value>
+                <fullName>Laser - Intermittent Resist</fullName>
+                <default>false</default>
+                <label>Laser - Intermittent Resist</label>
+            </value>
+            <value>
+                <fullName>Laser- PD</fullName>
+                <default>false</default>
+                <label>Laser- PD</label>
+            </value>
+            <value>
+                <fullName>NTF</fullName>
+                <default>false</default>
+                <label>NTF</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

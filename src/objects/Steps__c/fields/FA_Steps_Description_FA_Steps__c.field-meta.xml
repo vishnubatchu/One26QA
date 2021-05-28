@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FA_Steps_Description_FA_Steps__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Please enter information about what you did during this step. Can be used for future processes and may become part of the FAR.</inlineHelpText>
+    <label>FA Steps / Description (FA Steps)</label>
+    <length>32768</length>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Html</type>
+    <visibleLines>25</visibleLines>
+</CustomField>

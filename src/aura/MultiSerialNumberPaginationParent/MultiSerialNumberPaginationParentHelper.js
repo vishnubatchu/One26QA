@@ -1,0 +1,6 @@
+({
+	 getFAFVDetailsList : function(component,event) {
+       
+        
+    },
+})

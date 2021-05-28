@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Health__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( NOT( ISNULL(Credit_Limit__c) ) , IF(($RecordType.Name = &quot;Site&quot; &amp;&amp; Site_Use_Code__c = &apos;BILL_TO&apos;),
+
+IF(Credit_Limit__c=1, IMAGE(&apos;/resource/1535629399000/green&apos;,&apos;green&apos;,25,50),  IF(Credit_Limit__c=2, IMAGE(&apos;/resource/1535629399000/green&apos;,&apos;green&apos;,25,50),  IF(Credit_Limit__c=3, IMAGE(&apos;/resource/1535629399000/green&apos;,&apos;green&apos;,25,50),  IF(Credit_Limit__c=4, IMAGE(&apos;/resource/1535629670000/red&apos;,&apos;red&apos;,25,50 ),  IF(Credit_Limit__c=5, IMAGE(&apos;/resource/1535629670000/red&apos;,&apos;red&apos;,25,50),  IF(Credit_Limit__c=7, IMAGE(&apos;/resource/1535629399000/green&apos;,&apos;green&apos;,25,50 ),  IF(Credit_Limit__c=8, IMAGE(&apos;/resource/1535629399000/green&apos;,&apos;green&apos;,25,50 ),  IF(Credit_Limit__c=13, IMAGE(&apos;/resource/1535629399000/red&apos;,&apos;red&apos;,25,50 ), 
+
+IF(((AR_Amount__c/ Credit_Limit__c)*100)&lt;=75, IMAGE(&apos;/resource/1535629399000/green&apos;,&apos;green&apos;,25,50),  IF(((AR_Amount__c/ Credit_Limit__c)*100)&gt;=100, IMAGE(&apos;/resource/1535629670000/red&apos;,&apos;red&apos;,25,50),  IF(((AR_Amount__c/ Credit_Limit__c)*100)&gt;75 &amp;&amp; ((AR_Amount__c/ Credit_Limit__c)*100)&lt;100 , IMAGE(&apos;/resource/1535629399000/yellow&apos;,&apos;yellow&apos;,25,50), null) ) )
+
+
+
+
+
+) ) ) ) ) ) ) ) ,
+
+
+IF(Credit_Limit__c=1, IMAGE(&apos;/resource/1535629399000/green&apos;,&apos;green&apos;,25,50),  IF(Credit_Limit__c=2, IMAGE(&apos;/resource/1535629399000/green&apos;,&apos;green&apos;,25,50),  IF(Credit_Limit__c=3, IMAGE(&apos;/resource/1535629399000/green&apos;,&apos;green&apos;,25,50),  IF(Credit_Limit__c=4, IMAGE(&apos;/resource/1535629670000/red&apos;,&apos;red&apos;,25,50 ),  IF(Credit_Limit__c=5, IMAGE(&apos;/resource/1535629670000/red&apos;,&apos;red&apos;,25,50),  IF(Credit_Limit__c=7, IMAGE(&apos;/resource/1535629399000/green&apos;,&apos;green&apos;,25,50 ),  IF(Credit_Limit__c=8, IMAGE(&apos;/resource/1535629399000/green&apos;,&apos;green&apos;,25,50 ),  IF(Credit_Limit__c=13, IMAGE(&apos;/resource/1535629399000/red&apos;,&apos;red&apos;,25,50 ), 
+
+IF(((AR_Amount_Rollup__c/ Credit_Limit__c)*100)&lt;=75, IMAGE(&apos;/resource/1535629399000/green&apos;,&apos;green&apos;,25,50),  IF(((AR_Amount_Rollup__c/ Credit_Limit__c)*100)&gt;=100, IMAGE(&apos;/resource/1535629670000/red&apos;,&apos;red&apos;,25,50),  IF(((AR_Amount_Rollup__c/ Credit_Limit__c)*100)&gt;75 &amp;&amp; ((AR_Amount__c/ Credit_Limit__c)*100)&lt;100 , IMAGE(&apos;/resource/1535629399000/yellow&apos;,&apos;yellow&apos;,25,50), null) ) )
+
+
+
+
+
+) ) ) ) ) ) ) ) 
+
+
+), null)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Health</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

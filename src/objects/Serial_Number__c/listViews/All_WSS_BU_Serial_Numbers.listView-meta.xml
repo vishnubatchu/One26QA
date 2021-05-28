@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_WSS_BU_Serial_Numbers</fullName>
+    <columns>NAME</columns>
+    <columns>Actual_Ship_Date__c</columns>
+    <columns>BU__c</columns>
+    <columns>Completion_Date__c</columns>
+    <columns>Customer_Name__c</columns>
+    <columns>Defect_Type__c</columns>
+    <columns>Disposition__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>BU__c</field>
+        <operation>equals</operation>
+        <value>WSS</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>notEqual</operation>
+        <value>Closed</value>
+    </filters>
+    <label>All WSS BU Serial Numbers</label>
+</ListView>

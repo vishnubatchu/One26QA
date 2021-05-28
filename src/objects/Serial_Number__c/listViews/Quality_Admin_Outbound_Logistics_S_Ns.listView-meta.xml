@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Quality_Admin_Outbound_Logistics_S_Ns</fullName>
+    <columns>Order_Line__c</columns>
+    <columns>NAME</columns>
+    <columns>Customer_Name__c</columns>
+    <columns>Aging_Days__c</columns>
+    <columns>Disposition__c</columns>
+    <columns>Original_Shipped_Date__c</columns>
+    <columns>Original_Shipment_SO__c</columns>
+    <columns>Received_Date__c</columns>
+    <columns>Status__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Outbound Logistics</value>
+    </filters>
+    <label>Quality Admin Outbound Logistics S/Ns</label>
+    <sharedTo>
+        <role>Quality_Admin</role>
+    </sharedTo>
+</ListView>

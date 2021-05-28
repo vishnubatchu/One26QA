@@ -1,0 +1,15 @@
+<apex:component access="global" >
+    <apex:attribute name="Quotedisclaimertext" Description="Quote disclaimer text" type="Boolean" default="false"/>
+      <apex:attribute name="Generaldisclaimertext" Description="Loaner disclaimer text" type="Boolean" default="false"/>
+       <apex:attribute name="GDPRDisclamertext" Description="General disclaimer text" type="Boolean" default="false"/>                      
+                    
+                    
+      <apex:outputPanel rendered="{!Quotedisclaimertext}" >
+        &quot;Finisar Standard Terms and Conditions Apply - <a href="http://www.finisar.com">www.finisar.com</a>.  All currency in U.S. Dollars.  Prices quoted are exclusive of tariffs, import duties and similar taxes. A surcharge will be imposed and invoiced to the customer for any such amounts paid by Finisar or its agents in connection with shipments made with respect to the units listed on this quote.&quot;
+        </apex:outputPanel>
+    
+    	<apex:outputPanel rendered="{!GDPRDisclamertext}" >
+            &quot;Finisar Standard Terms and Conditions Apply - <a href="http://www.finisar.com">www.finisar.com</a>.  All currency in U.S. Dollars.  Prices quoted are exclusive of tariffs, import duties and similar taxes. A surcharge will be imposed and invoiced to the customer for any such amounts paid by Finisar or its agents in connection with shipments made with respect to the units listed on this quote.&quot;
+      </apex:outputPanel>
+    
+</apex:component>

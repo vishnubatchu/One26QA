@@ -1,0 +1,17 @@
+<apex:page standardController="Quote_Item__c" extensions="QuoteRatePlan_Controller">
+    <apex:form >
+        <apex:pageBlock >
+        <apex:actionFunction name="updateconverison" action="{!updatesalesPrice}" reRender="tab"/>
+            <apex:commandButton value="Add New" action="{!addNewRow}" />
+            <apex:commandButton value="Save" action="{!saveAction}"/>
+            <apex:commandButton value="Cancel" action="{!CancelAction}"/>
+            <apex:pageBlockTable id="tab" value="{!quoteTier}" var="rate">
+                <apex:column headerValue="Quantity" ><apex:inputField value="{!rate.SequenceNumber__c}"/> </apex:column>
+                <apex:column headerValue="Sales Price" ><apex:inputField value="{!rate.SalesPrice__c}"/> </apex:column>
+                <apex:column headerValue="Lead Time" ><apex:inputField value="{!rate.LeadTime__c}"/> </apex:column>
+                <apex:column headerValue="TQ Currency" rendered="{!transfrQuote}"><apex:outputField value="{!rate.TQ_Currency__c}"/> </apex:column>
+                <apex:column headerValue="Transfer Price" rendered="{!transfrQuote}" ><apex:inputField value="{!rate.Transfer_Price__c}" onchange="updateconverison()" /> </apex:column>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

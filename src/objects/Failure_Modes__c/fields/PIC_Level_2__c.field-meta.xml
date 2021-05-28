@@ -1,0 +1,681 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PIC_Level_2__c</fullName>
+    <externalId>false</externalId>
+    <label>PIC Level 2</label>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>PIC_Level_1__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Active Electronic Components</fullName>
+                <default>false</default>
+                <label>Active Electronic Components</label>
+            </value>
+            <value>
+                <fullName>Adhesive/Epoxy</fullName>
+                <default>false</default>
+                <label>Adhesive/Epoxy</label>
+            </value>
+            <value>
+                <fullName>APD</fullName>
+                <default>false</default>
+                <label>APD</label>
+            </value>
+            <value>
+                <fullName>Cables</fullName>
+                <default>false</default>
+                <label>Cables</label>
+            </value>
+            <value>
+                <fullName>Connector</fullName>
+                <default>false</default>
+                <label>Connector</label>
+            </value>
+            <value>
+                <fullName>Electric / Electronic Assemblies</fullName>
+                <default>false</default>
+                <label>Electric / Electronic Assemblies</label>
+            </value>
+            <value>
+                <fullName>Feed-Through Hermetic</fullName>
+                <default>false</default>
+                <label>Feed-Through Hermetic</label>
+            </value>
+            <value>
+                <fullName>IC</fullName>
+                <default>false</default>
+                <label>IC</label>
+            </value>
+            <value>
+                <fullName>Laser</fullName>
+                <default>false</default>
+                <label>Laser</label>
+            </value>
+            <value>
+                <fullName>Laser BH</fullName>
+                <default>false</default>
+                <label>Laser BH</label>
+            </value>
+            <value>
+                <fullName>Laser DFB</fullName>
+                <default>false</default>
+                <label>Laser DFB</label>
+            </value>
+            <value>
+                <fullName>Laser FP</fullName>
+                <default>false</default>
+                <label>Laser FP</label>
+            </value>
+            <value>
+                <fullName>Laser VCSEL</fullName>
+                <default>false</default>
+                <label>Laser VCSEL</label>
+            </value>
+            <value>
+                <fullName>LCoS / MEMs</fullName>
+                <default>false</default>
+                <label>LCoS / MEMs</label>
+            </value>
+            <value>
+                <fullName>Mechanical</fullName>
+                <default>false</default>
+                <label>Mechanical</label>
+            </value>
+            <value>
+                <fullName>MPD</fullName>
+                <default>false</default>
+                <label>MPD</label>
+            </value>
+            <value>
+                <fullName>Optical</fullName>
+                <default>false</default>
+                <label>Optical</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Package</fullName>
+                <default>false</default>
+                <label>Package</label>
+            </value>
+            <value>
+                <fullName>Passive Electronic Component</fullName>
+                <default>false</default>
+                <label>Passive Electronic Component</label>
+            </value>
+            <value>
+                <fullName>PCBA,PCB,Flex</fullName>
+                <default>false</default>
+                <label>PCBA,PCB,Flex</label>
+            </value>
+            <value>
+                <fullName>PD</fullName>
+                <default>false</default>
+                <label>PD</label>
+            </value>
+            <value>
+                <fullName>TIA</fullName>
+                <default>false</default>
+                <label>TIA</label>
+            </value>
+            <value>
+                <fullName>Vendor</fullName>
+                <default>false</default>
+                <label>Vendor</label>
+            </value>
+            <value>
+                <fullName>Build Standard</fullName>
+                <default>false</default>
+                <label>Build Standard</label>
+            </value>
+            <value>
+                <fullName>Calibration</fullName>
+                <default>false</default>
+                <label>Calibration</label>
+            </value>
+            <value>
+                <fullName>Firmware setting</fullName>
+                <default>false</default>
+                <label>Firmware setting</label>
+            </value>
+            <value>
+                <fullName>Firmware Version</fullName>
+                <default>false</default>
+                <label>Firmware Version</label>
+            </value>
+            <value>
+                <fullName>Product Definition</fullName>
+                <default>false</default>
+                <label>Product Definition</label>
+            </value>
+            <value>
+                <fullName>Revision</fullName>
+                <default>false</default>
+                <label>Revision</label>
+            </value>
+            <value>
+                <fullName>Application</fullName>
+                <default>false</default>
+                <label>Application</label>
+            </value>
+            <value>
+                <fullName>Damage</fullName>
+                <default>false</default>
+                <label>Damage</label>
+            </value>
+            <value>
+                <fullName>Environmental Stress</fullName>
+                <default>false</default>
+                <label>Environmental Stress</label>
+            </value>
+            <value>
+                <fullName>Mechanical Stress</fullName>
+                <default>false</default>
+                <label>Mechanical Stress</label>
+            </value>
+            <value>
+                <fullName>Request</fullName>
+                <default>false</default>
+                <label>Request</label>
+            </value>
+            <value>
+                <fullName>Specification</fullName>
+                <default>false</default>
+                <label>Specification</label>
+            </value>
+            <value>
+                <fullName>Thermal Stress</fullName>
+                <default>false</default>
+                <label>Thermal Stress</label>
+            </value>
+            <value>
+                <fullName>Component Selection</fullName>
+                <default>false</default>
+                <label>Component Selection</label>
+            </value>
+            <value>
+                <fullName>Electrical</fullName>
+                <default>false</default>
+                <label>Electrical</label>
+            </value>
+            <value>
+                <fullName>Firmware</fullName>
+                <default>false</default>
+                <label>Firmware</label>
+            </value>
+            <value>
+                <fullName>FPGA HDL</fullName>
+                <default>false</default>
+                <label>FPGA HDL</label>
+            </value>
+            <value>
+                <fullName>Manufacturing Process</fullName>
+                <default>false</default>
+                <label>Manufacturing Process</label>
+            </value>
+            <value>
+                <fullName>Assembly</fullName>
+                <default>false</default>
+                <label>Assembly</label>
+            </value>
+            <value>
+                <fullName>Assembly Workmanship</fullName>
+                <default>false</default>
+                <label>Assembly Workmanship</label>
+            </value>
+            <value>
+                <fullName>Code Load</fullName>
+                <default>false</default>
+                <label>Code Load</label>
+            </value>
+            <value>
+                <fullName>Equipment / OOC</fullName>
+                <default>false</default>
+                <label>Equipment / OOC</label>
+            </value>
+            <value>
+                <fullName>Escaping Defect</fullName>
+                <default>false</default>
+                <label>Escaping Defect</label>
+            </value>
+            <value>
+                <fullName>ESD / EOS</fullName>
+                <default>false</default>
+                <label>ESD / EOS</label>
+            </value>
+            <value>
+                <fullName>Handling</fullName>
+                <default>false</default>
+                <label>Handling</label>
+            </value>
+            <value>
+                <fullName>IQC</fullName>
+                <default>false</default>
+                <label>IQC</label>
+            </value>
+            <value>
+                <fullName>Kitting</fullName>
+                <default>false</default>
+                <label>Kitting</label>
+            </value>
+            <value>
+                <fullName>Operator Error</fullName>
+                <default>false</default>
+                <label>Operator Error</label>
+            </value>
+            <value>
+                <fullName>OQC</fullName>
+                <default>false</default>
+                <label>OQC</label>
+            </value>
+            <value>
+                <fullName>Rework</fullName>
+                <default>false</default>
+                <label>Rework</label>
+            </value>
+            <value>
+                <fullName>Soldering</fullName>
+                <default>false</default>
+                <label>Soldering</label>
+            </value>
+            <value>
+                <fullName>NTF</fullName>
+                <default>false</default>
+                <label>NTF</label>
+            </value>
+            <value>
+                <fullName>Labelling</fullName>
+                <default>false</default>
+                <label>Labelling</label>
+            </value>
+            <value>
+                <fullName>Mixed Shipments</fullName>
+                <default>false</default>
+                <label>Mixed Shipments</label>
+            </value>
+            <value>
+                <fullName>Packaging</fullName>
+                <default>false</default>
+                <label>Packaging</label>
+            </value>
+            <value>
+                <fullName>Shipping Damage</fullName>
+                <default>false</default>
+                <label>Shipping Damage</label>
+            </value>
+            <value>
+                <fullName>Change Control</fullName>
+                <default>false</default>
+                <label>Change Control</label>
+            </value>
+            <value>
+                <fullName>PCN</fullName>
+                <default>false</default>
+                <label>PCN</label>
+            </value>
+            <value>
+                <fullName>Risk Assessment</fullName>
+                <default>false</default>
+                <label>Risk Assessment</label>
+            </value>
+            <value>
+                <fullName>Traceability</fullName>
+                <default>false</default>
+                <label>Traceability</label>
+            </value>
+            <value>
+                <fullName>Burn-In Escapes</fullName>
+                <default>false</default>
+                <label>Burn-In Escapes</label>
+            </value>
+            <value>
+                <fullName>Dpram Failure</fullName>
+                <default>false</default>
+                <label>Dpram Failure</label>
+            </value>
+            <value>
+                <fullName>Eeprom Related</fullName>
+                <default>false</default>
+                <label>Eeprom Related</label>
+            </value>
+            <value>
+                <fullName>Final Test Escapes</fullName>
+                <default>false</default>
+                <label>Final Test Escapes</label>
+            </value>
+            <value>
+                <fullName>Spec File</fullName>
+                <default>false</default>
+                <label>Spec File</label>
+            </value>
+            <value>
+                <fullName>Test Coverage</fullName>
+                <default>false</default>
+                <label>Test Coverage</label>
+            </value>
+            <value>
+                <fullName>Test Method</fullName>
+                <default>false</default>
+                <label>Test Method</label>
+            </value>
+            <value>
+                <fullName>Test Software</fullName>
+                <default>false</default>
+                <label>Test Software</label>
+            </value>
+            <value>
+                <fullName>Unknown</fullName>
+                <default>false</default>
+                <label>Unknown</label>
+            </value>
+            <value>
+                <fullName>Unresolved</fullName>
+                <default>false</default>
+                <label>Unresolved</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Unresolved</controllingFieldValue>
+            <valueName>Unresolved</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Component</controllingFieldValue>
+            <valueName>Active Electronic Components</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Component</controllingFieldValue>
+            <valueName>Adhesive/Epoxy</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Component</controllingFieldValue>
+            <valueName>APD</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Component</controllingFieldValue>
+            <valueName>Cables</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Component</controllingFieldValue>
+            <valueName>Connector</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Component</controllingFieldValue>
+            <valueName>Electric / Electronic Assemblies</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Component</controllingFieldValue>
+            <valueName>Feed-Through Hermetic</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Component</controllingFieldValue>
+            <valueName>IC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Component</controllingFieldValue>
+            <valueName>Laser</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Component</controllingFieldValue>
+            <valueName>Laser BH</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Component</controllingFieldValue>
+            <valueName>Laser DFB</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Component</controllingFieldValue>
+            <valueName>Laser FP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Component</controllingFieldValue>
+            <valueName>Laser VCSEL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Component</controllingFieldValue>
+            <valueName>LCoS / MEMs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Component</controllingFieldValue>
+            <valueName>Mechanical</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Component</controllingFieldValue>
+            <valueName>MPD</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Component</controllingFieldValue>
+            <valueName>Optical</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Component</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Component</controllingFieldValue>
+            <valueName>Package</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Component</controllingFieldValue>
+            <valueName>Passive Electronic Component</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Component</controllingFieldValue>
+            <valueName>PCBA,PCB,Flex</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Component</controllingFieldValue>
+            <valueName>PD</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Component</controllingFieldValue>
+            <valueName>TIA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Component</controllingFieldValue>
+            <valueName>Vendor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Configuration</controllingFieldValue>
+            <valueName>Build Standard</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Configuration</controllingFieldValue>
+            <valueName>Calibration</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Configuration</controllingFieldValue>
+            <valueName>Firmware setting</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Configuration</controllingFieldValue>
+            <valueName>Firmware Version</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Configuration</controllingFieldValue>
+            <valueName>Product Definition</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Configuration</controllingFieldValue>
+            <valueName>Revision</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Customer</controllingFieldValue>
+            <valueName>Application</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Customer</controllingFieldValue>
+            <valueName>Damage</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Customer</controllingFieldValue>
+            <valueName>Environmental Stress</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Customer</controllingFieldValue>
+            <valueName>Mechanical Stress</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Customer</controllingFieldValue>
+            <valueName>Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Customer</controllingFieldValue>
+            <valueName>Specification</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Customer</controllingFieldValue>
+            <valueName>Thermal Stress</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Design</controllingFieldValue>
+            <valueName>Component Selection</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Design</controllingFieldValue>
+            <valueName>Electrical</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Design</controllingFieldValue>
+            <valueName>Firmware</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Design</controllingFieldValue>
+            <valueName>FPGA HDL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Design</controllingFieldValue>
+            <valueName>Manufacturing Process</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Manufacturing</controllingFieldValue>
+            <valueName>Assembly</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Manufacturing</controllingFieldValue>
+            <valueName>Assembly Workmanship</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Manufacturing</controllingFieldValue>
+            <valueName>Code Load</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Manufacturing</controllingFieldValue>
+            <valueName>Equipment / OOC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Manufacturing</controllingFieldValue>
+            <valueName>Escaping Defect</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Manufacturing</controllingFieldValue>
+            <valueName>ESD / EOS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Manufacturing</controllingFieldValue>
+            <valueName>Handling</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Manufacturing</controllingFieldValue>
+            <valueName>IQC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Manufacturing</controllingFieldValue>
+            <valueName>Kitting</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Manufacturing</controllingFieldValue>
+            <valueName>Operator Error</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Manufacturing</controllingFieldValue>
+            <valueName>OQC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Manufacturing</controllingFieldValue>
+            <valueName>Rework</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Manufacturing</controllingFieldValue>
+            <valueName>Soldering</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NTF</controllingFieldValue>
+            <valueName>NTF</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Packaging, Labelling &amp; Transport</controllingFieldValue>
+            <valueName>Labelling</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Packaging, Labelling &amp; Transport</controllingFieldValue>
+            <valueName>Mixed Shipments</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Packaging, Labelling &amp; Transport</controllingFieldValue>
+            <valueName>Packaging</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Packaging, Labelling &amp; Transport</controllingFieldValue>
+            <valueName>Shipping Damage</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Quality system</controllingFieldValue>
+            <valueName>Change Control</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Quality system</controllingFieldValue>
+            <valueName>PCN</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Quality system</controllingFieldValue>
+            <valueName>Risk Assessment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Quality system</controllingFieldValue>
+            <valueName>Traceability</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Test &amp; burn-in</controllingFieldValue>
+            <valueName>Burn-In Escapes</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Test &amp; burn-in</controllingFieldValue>
+            <valueName>Dpram Failure</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Test &amp; burn-in</controllingFieldValue>
+            <valueName>Eeprom Related</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Test &amp; burn-in</controllingFieldValue>
+            <valueName>Final Test Escapes</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Test &amp; burn-in</controllingFieldValue>
+            <valueName>Spec File</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Test &amp; burn-in</controllingFieldValue>
+            <valueName>Test Coverage</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Test &amp; burn-in</controllingFieldValue>
+            <valueName>Test Method</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Test &amp; burn-in</controllingFieldValue>
+            <valueName>Test Software</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unknown</controllingFieldValue>
+            <valueName>Unknown</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

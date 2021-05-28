@@ -1,0 +1,35 @@
+<aura:component controller="RecordApprovalController" 
+                implements="force:lightningQuickActionWithoutHeader,force:hasRecordId">
+    <aura:attribute name="param" type="String"/>
+    <aura:attribute name="Spinner" type="boolean" default="false"/>
+    <aura:handler event="aura:waiting" action="{!c.showSpinner}"/>
+    <aura:handler event="aura:doneWaiting" action="{!c.hideSpinner}"/>
+     <ltng:require styles="{!$Resource.ToastMultipleLines}" />
+    
+    <div class="slds">
+        <div class="slds-grid slds-grid_vertical slds-align_absolute-center ">
+            <div class="slds-col slds-align_absolute-center slds-page-header__title slds-border_bottom slds-grid_pull-padded">
+                <span>Submit Line Items</span>
+            </div>
+            <div class="slds-col slds-align_absolute-center slds-text-body_regular slds-text-align_center slds-grid_pull-padded slds-p-top_medium">Are you sure you want to submit records for Approval
+            </div>
+            <div class="slds-button-group slds-grid_pull-padded slds-p-top_large" role="group"></div>
+            <div class="slds-button-group slds-grid_pull-padded slds-p-top_large" role="group">
+                <button class="slds-button slds-button_neutral" onclick="{!c.doCancel}">Close</button>
+                <button class="slds-button slds-button_brand" onclick="{!c.doInit}">Submit</button>
+            </div>
+        </div>
+           <aura:if isTrue="{!v.Spinner}">
+                <div class="slds-p-around--medium slds-is-relative">
+                    <div aura:id="spinnerId" class="slds-spinner_container">
+                        <div class="slds-spinner--brand slds-spinner slds-spinner_small" role="alert">
+                            <span class="slds-assistive-text">Loading</span>
+                            <div class="slds-spinner__dot-a"></div>
+                            <div class="slds-spinner__dot-b"></div>
+                        </div>
+                    </div>
+                </div>
+            </aura:if>
+    </div>
+    
+</aura:component>

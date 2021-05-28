@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RMA_Request</fullName>
+    <fields>AccountId</fields>
+    <fields>CaseNumber</fields>
+    <fields>RMA_Order_Number__c</fields>
+    <fields>Status</fields>
+    <fields>Priority</fields>
+    <fields>Validation_Status__c</fields>
+    <fields>Requested_Service__c</fields>
+    <label>RMA Request</label>
+</CompactLayout>

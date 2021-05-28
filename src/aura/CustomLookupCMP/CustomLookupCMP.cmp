@@ -1,0 +1,7 @@
+<aura:component >
+    <aura:attribute name="searchStr" type="string"/>
+    <div>
+        <lightning:input type="text" name="searchKey" label="Enter" aura:id="searchKey" valu="{v.searchStr}" 
+                         onchange="{!c.searchKeyChange}" placeholder="Search" />
+    </div>
+</aura:component>

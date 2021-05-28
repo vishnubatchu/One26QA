@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Update_FA_FV_Completion_Date</fullName>
+        <field>FA_Completion_Date__c</field>
+        <formula>TODAY()</formula>
+        <name>Update FA/FV Completion Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_FA_FV_Type_Column</fullName>
+        <field>FA_FV_Type_Col__c</field>
+        <formula>FA_FV__r.RecordType.Name</formula>
+        <name>Update FA/FV Type Column</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_record_type</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>FA_FV_Detail_Readonly</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Update record type</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Update FA%2FFV Type on Junction Object</fullName>
+        <actions>
+            <name>Update_FA_FV_Type_Column</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>FA_FV_Detail__c.FA_FV_Type_Col__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update FA%2FFV junction record to Readonly on Complete</fullName>
+        <actions>
+            <name>Update_record_type</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>FA_FV_Detail__c.Status__c</field>
+            <operation>equals</operation>
+            <value>Complete</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>update FAFV Detail Completion Date</fullName>
+        <actions>
+            <name>Update_FA_FV_Completion_Date</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>FA_FV_Detail__c.Status__c</field>
+            <operation>equals</operation>
+            <value>Complete</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>FA_FV_Detail__c.FA_Completion_Date__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+</Workflow>

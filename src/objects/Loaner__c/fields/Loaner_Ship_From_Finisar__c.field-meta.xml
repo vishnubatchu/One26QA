@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Loaner_Ship_From_Finisar__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Keep Default=&quot;Factory Stock&quot; for any loaner shipping from factory through Sales Order.  Use &quot;Transfer From Existing Loaner&quot; for loaner transfer only.  Do not change to other choices unless you have discussed with Betty.</inlineHelpText>
+    <label>Loaner Ship From</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Ship_From</valueSetName>
+    </valueSet>
+</CustomField>

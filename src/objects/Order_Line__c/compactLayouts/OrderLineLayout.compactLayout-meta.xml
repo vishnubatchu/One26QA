@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OrderLineLayout</fullName>
+    <fields>Name</fields>
+    <fields>SO_Number_Formula__c</fields>
+    <fields>Line__c</fields>
+    <fields>Marketing_Part__c</fields>
+    <fields>Oracle_Order_Line_Status__c</fields>
+    <label>OrderLineLayout</label>
+</CompactLayout>

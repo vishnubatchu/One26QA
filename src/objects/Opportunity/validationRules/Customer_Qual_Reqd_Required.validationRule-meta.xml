@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Customer_Qual_Reqd_Required</fullName>
+    <active>true</active>
+    <description>Customer_Qual_Req&apos;d is mandaory for Legacy Marlow users</description>
+    <errorConditionFormula>AND(ISPICKVAL( $User.Legacy_Company__c , &apos;Marlow&apos;),ISPICKVAL( Qual_Required__c , &quot;&quot;))</errorConditionFormula>
+    <errorDisplayField>Qual_Required__c</errorDisplayField>
+    <errorMessage>Please select the Customer_Qual_Req&apos;d</errorMessage>
+</ValidationRule>

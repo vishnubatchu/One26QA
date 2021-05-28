@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Loaner_qty_shold_be_Greater_than_0</fullName>
+    <active>true</active>
+    <errorConditionFormula>Loaner_Qty__c  &lt;= 0</errorConditionFormula>
+    <errorMessage>Loaner Quantity Should be Greater than Zero</errorMessage>
+</ValidationRule>

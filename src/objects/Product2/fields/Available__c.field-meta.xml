@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Available__c</fullName>
+    <externalId>false</externalId>
+    <formula>AND(NOT( OR(ISPICKVAL( Status__c , &apos;Obsolete&apos;),ISPICKVAL( Status__c , &apos;Inactive&apos;))),  
+   NOT(Duplicate_Product__c), 
+   AND(Commodity_Code__c  &lt;&gt;  &apos;915&apos;,Commodity_Code__c  &lt;&gt;  &apos;903&apos;),
+    OR(AND(NOT(ISPICKVAL( Type__c , &apos;Generic&apos;)),NOT(ISPICKVAL( Type__c , &apos;Generic Parent&apos;))),
+         AND(OR(ISPICKVAL( Type__c , &apos;Generic&apos;),ISPICKVAL( Type__c , &apos;Generic Parent&apos;)),
+		Child_Product_Check__c)), 
+	IsActive)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Available</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

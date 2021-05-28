@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>49.0</apiVersion>
+    <interviewLabel>updateDuplicateOpportunities {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>updateDuplicateOpportunities</label>
+    <loops>
+        <name>for_each_duplicate_opportunities</name>
+        <label>for each duplicate opportunities</label>
+        <locationX>262</locationX>
+        <locationY>189</locationY>
+        <assignNextValueToReference>Opportunity</assignNextValueToReference>
+        <collectionReference>OpportunitiesList</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>updateOpportunity</targetReference>
+        </nextValueConnector>
+    </loops>
+    <processType>Flow</processType>
+    <recordUpdates>
+        <name>updateOpportunity</name>
+        <label>updateOpportunity</label>
+        <locationX>493</locationX>
+        <locationY>183</locationY>
+        <connector>
+            <targetReference>for_each_duplicate_opportunities</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>Error_Message</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Opportunity</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Duplicate_Design_Registration__c</field>
+            <value>
+                <elementReference>OpportunityID</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Opportunity</object>
+    </recordUpdates>
+    <screens>
+        <name>Error_Message</name>
+        <label>Error Message</label>
+        <locationX>768</locationX>
+        <locationY>191</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>ErrorScreen</name>
+            <fieldText>Please Kindly Check Opportunity for any errors 
+on RSM 
+Error Message : {!$Flow.FaultMessage}</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <startElementReference>for_each_duplicate_opportunities</startElementReference>
+    <status>Active</status>
+    <variables>
+        <name>OpportunitiesList</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>Opportunity</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Opportunity from which flow got invoked</description>
+        <name>OpportunityID</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+</Flow>

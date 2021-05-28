@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Loaner_Line__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Lookup to Loaner Item  which it is extended by number of days</description>
+    <externalId>false</externalId>
+    <label>Loaner Requestor Line</label>
+    <lookupFilter>
+        <active>true</active>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <filterItems>
+            <field>Loaner_Line__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Loaner Item</value>
+        </filterItems>
+        <filterItems>
+            <field>Loaner_Line__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Loaner Item Read Only</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Loaner_Line__c</referenceTo>
+    <relationshipLabel>Extension Lines</relationshipLabel>
+    <relationshipName>Extension_Lines</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

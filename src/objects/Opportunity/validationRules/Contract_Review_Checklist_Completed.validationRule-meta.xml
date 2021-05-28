@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contract_Review_Checklist_Completed</fullName>
+    <active>true</active>
+    <description>Contract Review Checklist completed prior to closing the Opp as a win in Aftermarket</description>
+    <errorConditionFormula>AND(
+OR ( TEXT(StageName) = &quot;Closed Won&quot;, TEXT(StageName) = &quot;Closed via PO&quot;),
+ISPICKVAL( Segment__c , &quot;Aftermarket&quot;),
+OR (CONTAINS ( $UserRole.Name , &quot;- Aftermarket&quot;), CONTAINS ($UserRole.Name, &quot;West&quot;)),
+Contract_Review_Checklist_Completed__c=FALSE
+)</errorConditionFormula>
+    <errorDisplayField>Contract_Review_Checklist_Completed__c</errorDisplayField>
+    <errorMessage>You must validate the checklist and confirm prior to closing the Opp</errorMessage>
+</ValidationRule>

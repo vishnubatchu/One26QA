@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Quantity_Schedule_Start_Date__c</fullName>
+    <description>Earliest date listed on the Opportunity Product Quantity Schedule.</description>
+    <externalId>false</externalId>
+    <label>Quantity Schedule Start Date</label>
+    <required>false</required>
+    <type>Date</type>
+</CustomField>

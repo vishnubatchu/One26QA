@@ -1,0 +1,1051 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Quote_Record_Type</fullName>
+    <active>true</active>
+    <label>Normal Quote</label>
+    <picklistValues>
+        <picklist>Class_Level__c</picklist>
+        <values>
+            <fullName>0</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Contract_Manufacturer__c</picklist>
+        <values>
+            <fullName>BENCHMARK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CELESTICA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FLEXTRONICS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FOXCONN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JABIL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MC ASSEMBLY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OTHER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PLEXUS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SANMINA%2FSCI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VENTURE</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Currency__c</picklist>
+        <values>
+            <fullName>EURO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>USD</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>FCA__c</picklist>
+        <values>
+            <fullName>Door-to-door</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FOB</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Saxonburg%2C PA%2C USA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Singapore</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Suzhou%2C CN</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Integration_Status__c</picklist>
+        <values>
+            <fullName>Error</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Integration Pending</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Success</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Manufacture_Location__c</picklist>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Saxonburg%2C PA%2C USA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Singapore</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Singapore %2F Saxonburg%2C PA%2C USA</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Pricing_Effective_By__c</picklist>
+        <values>
+            <fullName>Order Date</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ship Date</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Primary_Sales_Group__c</picklist>
+        <values>
+            <fullName>Andre Guimaraes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Andy Wiedor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Asia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Barrs Lang</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bob Tung</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Brian Mulroe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chris Johnson</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cisco Sales</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Colin Loiselle</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Danilo Scarano</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Datacenter Sales</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Diego Mottarella</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dolores Sotelo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Europe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Frank WangFang</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Giorgio Ghislotti</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Greg Hart</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hal Kawazoe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hieu Ngo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Holger Maerz</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ilan Brillant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>International Sales</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ishii Suguru</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Janet Shen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Japan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jeff Mold</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jennifer Elliott</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>John Schroter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Keith Gordon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ken Falta</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ken Garrett</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kevin Hadley</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kevin Shelton</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Larry Wang</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Laura Chelossi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Leslie Diaz-Orellana</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lillian Chen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mark Robert Lewis Willey</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mark Robinson</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mark Willey</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Masaaki Ohashi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Menjoe Ding</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Michael Farley</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>North American Sales</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Oliver Brecko</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Optics Sales</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Perdeep Bharadwaj</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Peter Thornton</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rob Dumbrille</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Robert Murphy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shereen Chung Sau Cheng</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Steve Calkins</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Suguru Ishii</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Thomas Walsh</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Todd Swanson</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tony Dobos</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tony Pearson</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yoichiro Fujino</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Young Tae Lee</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>QuoteType__c</picklist>
+        <values>
+            <fullName>Customer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transfer</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Rejection_Reason__c</picklist>
+        <values>
+            <fullName>Alternative Technology Chosen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bought from OEM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bought from competitor %28Price%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bought from competitor %28technical%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Concept Viability Study Only</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer decided on using a different II-VI PN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer demand changed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer did not accept T%27s %26 C%27s</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Disti was Promoting Competitive solution %28for Design Reg%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Disti%E2%80%99s Lack of inventory and pipeline %28for Design Reg%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Disti%E2%80%99s end Customer preferences change %28for Design Reg%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Duplicate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Entry Error</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Long Lead Time</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No evidence of active support of customer %3F%3F</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Part not available %28NPI%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Price Request Only</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Product Cancelled by II-VI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Project Cancelled by Customer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Project lost by customer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transferred to distributor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unable to meet Technical Specification</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Uncompetitive Pricing</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status</picklist>
+        <values>
+            <fullName>Accepted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Approval Canceled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Approval Cycle Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Approval Pending</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cancelled after Approval</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Denied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Draft</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>In Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lost-Delivery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lost-Technical</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needs Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Order Received</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Presented</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Project Cancelled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ship_Debit_Approved</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Template_Name__c</picklist>
+        <values>
+            <fullName>DEFAULT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>II-VI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ITAR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MIE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MIE IN GERMAN</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>TqCurrency__c</picklist>
+        <values>
+            <fullName>CAD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CHF</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CNY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EUR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GBP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JPY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KRW</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SGD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TWD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>USD</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type_of_Pricing__c</picklist>
+        <values>
+            <fullName>Blanket Price Agreement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dist Quote</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fixed - One Time Order</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>VAR_SI__c</picklist>
+        <values>
+            <fullName>9 to 5 computer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AAJ Networks</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ACE Technology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AFL Hyperscale</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Advantec</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Aeon Computing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Agile IT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>All Solutions Inc</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Alpha Micro Components USA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Amax</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AmiStar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Anixter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Apollo Informations Sys Group</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Applied Computer %28ACS%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bar None Tech</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Beijing Bright Prospect</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Broadnet Telecom</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Burwood Group</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CDW</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cambridge Computer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cavar SA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cirrascale</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ClearShark</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Coda Technologies</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Continental Resources</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Convergint Technologies</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cumulus Networks</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DCS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dasher Technologies%2C Inc</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Datalink %28now Insight%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dedicated Computing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dell Marketing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dimension Data</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dynamic Computer Corp</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>E2 Optics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ergonomics Group</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FusionStorm</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GDT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GHA Technologies%2C Inc%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Genesis ATS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Genstor Systems</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Global Solutions Electronics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Granite Micro</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GroupWare</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IC-Tronix</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IES Communications</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Insight</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Integra Optics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>International Computer Concept</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Iron Bow Technologies</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Iron Systems</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Isatel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Leadman Electronics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MBX</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MDSi%2C Inc%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MantisNet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Micro Technologies</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Micromem International Inc</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Myriad Supply</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NCS Technologies</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NWN Corporation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nex Infinite</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OnX</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OneLogic Networks</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PCPC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PNH Technology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Padova</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Penguin Computing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pogo Linux</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pomeroy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Presidio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Racklive%2FASA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rahi Systems</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Red River</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Redapt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RetroHardware</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rincon Technology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RockRight</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SHE Electronics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SHI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sandstone</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sanity Solutions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SansTech</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Silicon Mechanics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sirius Computer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SkinnyIT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Source Code%2FThinkmate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sovereign Systems</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>StackVelocity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tallgrass Technologies</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Toranet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Critical</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unicom</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Valcom%2FVLCM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Westwind</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Whalley Computer Associates</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>World Wide Technology %28WWT%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Zadara Storage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Zebra Technologies</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ePLUS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>iXsystems</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

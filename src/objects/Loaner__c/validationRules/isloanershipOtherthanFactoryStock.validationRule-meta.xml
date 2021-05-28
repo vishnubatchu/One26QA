@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>isloanershipOtherthanFactoryStock</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+
+ AND( NOT(  ISBLANK(TEXT(Loaner_Ship_From_Finisar__c )) &amp;&amp;  NOT (ISBLANK(Inside_Sales_Finisar__c) ) ) ,NOT(ISPICKVAL( Loaner_Ship_From_Finisar__c , &apos;Factory Stock&apos;))),   Inside_Sales_Finisar__r.FirstName &lt;&gt; &apos;Betty&apos; , Inside_Sales_Finisar__r.LastName &lt;&gt; &apos;Dea&apos;, RecordType.Name == &apos;Loaner Request&apos;)</errorConditionFormula>
+    <errorDisplayField>Inside_Sales_Finisar__c</errorDisplayField>
+    <errorMessage>User should be &quot;Betty Dea&quot;
+Betty Dea Should be Contacted</errorMessage>
+</ValidationRule>

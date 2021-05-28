@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opportunity_Type__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Select &quot;New Opportunity&quot; only if this loaner links to an Opportunity in Salesforce.Then there should only be 1 P/N on this loaner which matches to the Opportunity P/N.Select any other choice if this is a stand-alone loaner which can include multiple P/Ns.</inlineHelpText>
+    <label>Opportunity Type</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>New Opportunity</fullName>
+                <default>false</default>
+                <label>New Opportunity</label>
+            </value>
+            <value>
+                <fullName>New Opportunity - &lt; 100K SAM</fullName>
+                <default>false</default>
+                <label>New Opportunity - &lt; 100K SAM</label>
+            </value>
+            <value>
+                <fullName>Not New Opportunity -  Demand already forecasted</fullName>
+                <default>false</default>
+                <label>Not New Opportunity -  Demand already forecasted</label>
+            </value>
+            <value>
+                <fullName>Not New Opportunity - Misc</fullName>
+                <default>false</default>
+                <label>Not New Opportunity - Misc</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

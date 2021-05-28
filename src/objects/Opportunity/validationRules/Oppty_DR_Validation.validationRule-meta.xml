@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Oppty_DR_Validation</fullName>
+    <active>true</active>
+    <description>DR Type and Sales Channel should be Mandatory when DR Registration is checked</description>
+    <errorConditionFormula>AND(
+ Design_Registration__c ,
+OR(
+    ISBLANK( TEXT(DR_Type__c) ),
+    ISBLANK( Sales_Channel__c ) 
+ )  
+
+)</errorConditionFormula>
+    <errorMessage>Please enter DR Type and Sales Channel if  Opportunity is Design Registration</errorMessage>
+</ValidationRule>

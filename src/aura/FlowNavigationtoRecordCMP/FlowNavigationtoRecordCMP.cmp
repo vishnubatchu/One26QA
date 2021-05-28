@@ -1,0 +1,7 @@
+<!---
+
+This Component Used by Create Loaner Request Flow to navigate to new Record created from Flow  
+-->
+<aura:component implements='lightning:availableForFlowActions,lightning:availableForFlowScreens' >
+    <aura:attribute  name='newRecord' type='String' required='true'/>           
+</aura:component>

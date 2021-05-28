@@ -1,0 +1,222 @@
+<apex:page standardController="Lead" extensions="CustomLeadConversion" standardStylesheets="true">
+    <style type="text/css">
+        .req{ padding-left:3px; border:1px solid #c6c6c6; border-left:3px solid #cc0000; }
+    </style>
+   <apex:form >
+    <script language="JavaScript1.2" src="/js/functions.js"></script>
+    <script src="/soap/ajax/9.0/connection.js" type="text/javascript"></script>     
+    <script>        
+        function viewAccount() {
+            var acc_id = accid.options[accid.selectedIndex].value;
+            if (acc_id == null || acc_id == "" || acc_id == 000000000000000) {
+                alert("You can only view existing accounts.");
+            } else {
+                var url = UserContext.getUrl('/'+acc_id+'/p');
+                printWin(url);
+            }
+        }
+        function oppnames(){
+            var existingSel = document.getElementById('conid');
+            sforce.connection.sessionId = '{!$Api.Session_ID}';
+            var acc_Ids = document.getElementById("acclkid_lkid").value;
+            document.getElementById("{!$Component.hdnField}").value = document.getElementById("acclkid_lkid").value;            
+            //alert('Input Change '+document.getElementById("{!$Component.hdnField}").value);
+            if(acc_Ids == null || acc_Ids == "" || acc_Ids == 000000000000000) {
+                if (existingSel == null) return;
+                if (existingSel.options == null) return;
+                while (existingSel.options.length > 1) {
+                    existingSel.remove(1);
+                }
+            }else{
+                var strQuery = "SELECT id, accountId,name from Contact where firstName= '{!leadinfo.firstname}' AND lastName = '{!leadinfo.lastName}' AND accountid = '"+acc_Ids+"'"; 
+                var qr = sforce.connection.query(strQuery);
+                var records = qr.getArray("records");                
+                //alert(records); 
+                if(records.length == 0 ){
+                    if (existingSel == null) return;
+                    if (existingSel.options == null) return;
+                    while (existingSel.options.length > 1) {
+                        existingSel.remove(1);
+                    }
+                }
+                if (qr.records.get("Name")){
+                    //alert(qr.records.get("Name"));
+                    existingSel.options[1] = new Option('Attach to Existing : ' +qr.records.get("Name"), qr.records.get("Id"));
+                }if(qr.records.length > 0){
+                    for (var i=0;i<=qr.records.length;i++) {
+                        existingSel.options[i+1] = new Option('Attach to Existing : ' +qr.records[i].get("Name"), qr.records[i].get("Id"));
+                    }
+                }               
+            }
+        }
+        function setVal(){
+            var existingSel = document.getElementById('conid');
+            sforce.connection.sessionId = '{!$Api.Session_ID}';
+            var acc_id = accid.options[accid.selectedIndex].value;            
+            var con_id = conid.options[conid.selectedIndex].value;             
+            if (acc_id == null || acc_id == "" || acc_id == 000000000000000) {
+                document.getElementById("{!$Component.hdnField}").value = "Test Account";
+                document.getElementById("acclkid").value = '';
+            }else{           
+                var strQuery = "SELECT id,name from Account where id = '"+acc_id+"'"; 
+                var qr = sforce.connection.query(strQuery);
+                var records = qr.getArray("records");                
+                //alert(records);               
+                document.getElementById("{!$Component.hdnField}").value = accid.options[accid.selectedIndex].value;
+                document.getElementById("acclkid").value = qr.records.get("Name");            
+            }
+            //alert('Picklist Change '+document.getElementById("{!$Component.hdnField}").value);
+            if (con_id == null || con_id == "" || con_id == 000000000000000) {
+                document.getElementById("{!$Component.chdnField}").value = "Test Contact";
+            }else{            
+                document.getElementById("{!$Component.chdnField}").value = conid.options[conid.selectedIndex].value;            
+            }
+            if (acc_id == null || acc_id == "" || acc_id == 000000000000000) {
+                if (existingSel == null) return;
+                if (existingSel.options == null) return;
+                while (existingSel.options.length > 1) {
+                    existingSel.remove(1);
+                }
+            }else{
+                var strQuery = "SELECT id, accountId,name from Contact where firstName= '{!leadinfo.firstname}' AND lastName = '{!leadinfo.lastName}' AND accountid = '"+acc_id+"'"; 
+                var qr = sforce.connection.query(strQuery);
+                var records = qr.getArray("records");                
+                //alert(records.length);
+                if(records.length == 0 ){
+                    if (existingSel == null) return;
+                    if (existingSel.options == null) return;
+                    while (existingSel.options.length > 1) {
+                        existingSel.remove(1);
+                    }
+                }
+                if (qr.records.get("Name")){
+                    //alert(qr.records.get("Name"));
+                    existingSel.options[1] = new Option('Attach to Existing : ' +qr.records.get("Name"), qr.records.get("Id"));
+                }
+                if(qr.records.length > 0){
+                    for (var i=0;i<=qr.records.length;i++) {
+                        existingSel.options[i+1] = new Option('Attach to Existing : ' +qr.records[i].get("Name"), qr.records[i].get("Id"));
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <apex:inputHidden id="hdnField" value="{!acctName}" />        
+    <apex:inputHidden id="chdnField" value="{!contName}" />        
+    
+    <apex:sectionHeader title="Convert Lead"/>
+        Leads can be converted to accounts, contacts, opportunities, and followup tasks.<br/>
+        You should only convert a lead once you have identified it as qualified.<br/>
+        After this lead has been converted, it can no longer be viewed or edited as a lead, but can be viewed in lead reports.<br/><br/>
+        
+        <apex:actionfunction name="call" action="{!getContNames}"/>
+        <apex:pageBlock mode="edit">
+            <apex:pagemessages />
+            
+            <apex:pageBlockButtons >
+                <apex:commandButton value="Convert" action="{!ConvertMe}" />
+                <apex:commandButton value="Cancel" action="{!back}"/>
+            </apex:pageBlockButtons>
+            
+            <apex:pageBlockSection title="Convert Lead" columns="1">
+                <apex:pageBlockSectionItem >
+                    <b style="font-size:11px;">Record Owner &nbsp;</b> <apex:inputField value="{!leadInfo.OwnerID}" style="width=150px;"/>
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputpanel >
+                    <!--    <tr><td class="labelCol requiredInput">Account Name</td><td class="data2Col" colspan="3"><div class="requiredInput">
+                        <div class="requiredBlock"></div><select  id="accid" name="accid" title="Account Name" onchange = "setVal();">
+                        <option value="000000000000000">Create New Account: {!leadInfo.Company}</option>
+                        <apex:repeat value="{!acct}" var="acc">
+                            <option value="{!acc.id}">Attach to Existing : {!acc.Name}</option>
+                        </apex:repeat>
+                        </select>
+                        <input type="hidden" name="acclkid_lkid" id="acclkid_lkid" value="000000000000000" />
+                        <input type="hidden" name="acclkid_lkold" id="acclkid_lkold" value="null" />
+                        <input type="hidden" name="acclkid_lktp" id="acclkid_lktp" value="001" />
+                        <input type="hidden" name="acclkid_lspf" id="acclkid_lspf" value="0" />
+                        <input type="hidden" name="acclkid_lspfsub" id="acclkid_lspfsub" value="0" />
+                        <input type="hidden" name="acclkid_mod" id="acclkid_mod" value="0" />                        
+                        <span class="lookupInput">
+                        <input  id="acclkid" maxlength="255" name="acclkid" onchange="setVal();getElementByIdCS('acclkid_lkid').value='';getElementByIdCS('acclkid_mod').value='1';" size="35" type="text"/>                  
+                        <a href="javascript:%20openLookup%28%27%2F_ui%2Fcommon%2Fdata%2FLookupPage%3Flkpr%3D00Q9000000ENz2D%26lkfm%3DeditPage%26lknm%3Dacclkid%26leadconv%3D1%26lktp%3D%27%20%2B%20getElementByIdCS%28%27acclkid_lktp%27%29.value%2C670%2C%271%27%2C%27%26lksrch%3D%27%20%2B%20escapeUTF%28getElementByIdCS%28%27acclkid%27%29.value.substring%280%2C%2080%29%29%29" id="acclkid_lkwgt" onclick="setLastMousePosition(event)" title=" Lookup (New Window)">
+                        <img src="/s.gif" alt=" Lookup (New Window)"  class="lookupIcon" onblur="this.className = 'lookupIcon';" onfocus="this.className = 'lookupIconOn';" onmouseout="this.className = 'lookupIcon';this.className = 'lookupIcon';" onmouseover="this.className = 'lookupIconOn';this.className = 'lookupIconOn';" title=" Lookup (New Window)"/></a></span>
+                        <a href="javascript:%20viewAccount%28%29%3B" title="View (New Window)">View</a></div></td></tr>-->
+                       <tr><td class="labelCol requiredInput">Account Name</td><td class="data2Col" colspan="3"><div class="requiredInput">
+                       <div class="requiredBlock"></div>
+                       <select  id="accid" name="accid" title="Account Name" onchange = "setVal();">
+                           <option value="000000000000000">Create New Account: {!leadInfo.Company}</option>
+                       </select>
+                       <input type="hidden" name="acclkid_lkid" id="acclkid_lkid" value="000000000000000" />
+                       <input type="hidden" name="acclkid_lkold" id="acclkid_lkold" value="null" />
+                       <input type="hidden" name="acclkid_lktp" id="acclkid_lktp" value="001" />
+                       <input type="hidden" name="acclkid_lspf" id="acclkid_lspf" value="0" />
+                       <input type="hidden" name="acclkid_lspfsub" id="acclkid_lspfsub" value="0" />
+                       <input type="hidden" name="acclkid_mod" id="acclkid_mod" value="0" />
+                       <span class="lookupInput">                       
+                       <input type="text" id="acclkid" maxlength="255" name="acclkid" onchange="oppnames();getElementByIdCS('acclkid_lkid').value='';getElementByIdCS('acclkid_mod').value='1';" size="0" style="width:0;height:0;border-left-color:Red;border-bottom-color:#C4BEBE;border-top-color:none;border-right-color:#C4BEBE;border-left-width:0px;border-top-width:0px;border-right-width:0px;border-bottom-width:0px;border-bottom-style:solid;"/>
+                       <a href="javascript:%20openLookup%28%27%2F_ui%2Fcommon%2Fdata%2FLookupPage%3Flkpr%3D00Qe0000001MEOC%26lkfm%3DeditPage%26lknm%3Dacclkid%26leadconv%3D1%26lktp%3D%27%20%2B%20getElementByIdCS%28%27acclkid_lktp%27%29.value%2C670%2C%271%27%2C%27%26lksrch%3D%27%20%2B%20escapeUTF%28getElementByIdCS%28%27acclkid%27%29.value.substring%280%2C%2080%29%29%29" id="acclkid_lkwgt" onclick="setLastMousePosition(event)" title=" Lookup (New Window)">
+                       <img src="/s.gif" alt=" Lookup (New Window)"  class="lookupIcon" onblur="this.className = 'lookupIcon';" onfocus="this.className = 'lookupIconOn';" onmouseout="this.className = 'lookupIcon';this.className = 'lookupIcon';" onmouseover="this.className = 'lookupIconOn';this.className = 'lookupIconOn';" title=" Lookup (New Window)"/></a></span>                       
+                       <a href="javascript:%20viewAccount%28%29%3B" title="View (New Window)">View</a></div></td></tr>
+                       </apex:outputpanel>
+                </apex:pageBlockSectionItem>                              
+                
+                <apex:pageBlockSectionItem >                              
+                    <apex:outputpanel id="contactids">
+                            <tr><td class="labelCol requiredInput">Contact Name</td><td class="data2Col" colspan="3"><div class="requiredInput">
+                            <div class="requiredBlock"></div><select  id="conid" name="conid" title="Contact Name" onchange = "setVal();">
+                            <option value="000000000000000" >Create New Contact: {!leadInfo.Name}</option>
+                            </select></div></td></tr>
+                    </apex:outputpanel>
+                </apex:pageBlockSectionItem>                              
+                    
+             <!--   <apex:pageBlockSectionItem rendered="{!contactList}">
+                    <b style="font-size:11px;">Contact Name &nbsp;</b>
+                    <apex:selectList size="1" id="contName" style="width:225px" value="{!contName}">
+                        <apex:selectOptions value="{!conoptions}"/>
+                    </apex:selectList>
+                </apex:pageBlockSectionItem> -->
+                                
+                <apex:pageBlockSectionItem >
+                    <apex:inputCheckbox value="{!contCheckBox}"/> Replace existing Lead Source with the value from this lead.
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem id="o1">
+                    <apex:outputLabel value="Opportunity" for="exp"/>
+                    <apex:outputpanel id="Opp" layout="block">
+                        <apex:inputText id="exp" value="{!CompanyNameAsOppy}" style="width:225px" disabled="{!oppyCheckBox == true}" styleClass="req"/>                       
+                    </apex:outputpanel>
+                </apex:pageBlockSectionItem>
+               
+                <apex:pageBlockSectionItem >
+                    <apex:inputCheckbox value="{!oppyCheckBox}"> <apex:actionSupport event="onchange" reRender="Opp"/></apex:inputCheckbox>
+                    Do not create a new opportunity upon conversion.
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                    <b style="font-size:11px;"> Converted Status &nbsp; </b> <apex:inputField value="{!leadInfo.ConvertedStatus__c}" style="width:225px" styleClass="req" required="false"/>
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockSection title="Task Information">
+                <apex:inputField value="{!inClsTask.tk.Subject}"      required="false"/>
+                <apex:inputField value="{!inClsTask.tk.Status}"       required="false"/>
+                <apex:inputField value="{!inClsTask.tk.ActivityDate}" />
+                <apex:inputField value="{!inClsTask.tk.Priority}"     required="false"/>
+                <apex:inputField value="{!inClsTask.tk.Type}"         required="false"/>
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockSection title="Additional Information" columns="1">
+                <apex:pageBlockSectionItem >
+                    <b style="font-size:11px;"> Comments &nbsp; </b> <apex:inputField value="{!leadInfo.Description}" style="width:500px"/>
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                    <apex:inputCheckbox value="{!sendEmail}"/> Send Notification Email.
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

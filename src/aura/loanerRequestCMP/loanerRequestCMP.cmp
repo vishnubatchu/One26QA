@@ -1,0 +1,4 @@
+<aura:component implements='lightning:availableForFlowActions' >
+    <aura:attribute  name='loanerRequest' type='String' />
+   
+</aura:component>

@@ -1,0 +1,8 @@
+<aura:component controller="CancelRMACase" implements="force:appHostable,lightning:availableForFlowScreens,lightning:availableForFlowActions,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" access="global">
+    <aura:attribute type="String" name="RecordId" access='global'/> 
+    <aura:attribute type="String" name="errormessage" access='global'/>
+    <aura:handler name="init" action="{!c.doInit}" value="{!this}"/>
+  <aura:if isTrue="{!v.errormessage != null}">
+                <label class="slds-text-align_center slds-text-color_error" >{!v.errormessage}</label>
+                </aura:if><br/>
+</aura:component>

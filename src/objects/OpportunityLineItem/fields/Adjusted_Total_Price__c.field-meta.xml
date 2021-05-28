@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Adjusted_Total_Price__c</fullName>
+    <description>Captures the adjusted total price from the formula field - to be used for the roll up summary field on the Opportunity.</description>
+    <externalId>false</externalId>
+    <label>Adjusted Total Price</label>
+    <precision>12</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <type>Currency</type>
+</CustomField>

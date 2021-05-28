@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rolled_up_Amount__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Sum of RMA lines - amount</inlineHelpText>
+    <label>Rolled up Amount</label>
+    <summarizedField>RMA_Request_Line__c.Amount__c</summarizedField>
+    <summaryForeignKey>RMA_Request_Line__c.RMA_Request__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

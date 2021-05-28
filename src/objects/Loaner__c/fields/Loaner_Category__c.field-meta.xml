@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Loaner_Category__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>This field links to Order Type on the Loaner SO.  It cannot be changed if selected incorrectly.  Check with Inside Sales/RSM first and make sure your selection is correct before submitting loaner for approval.</inlineHelpText>
+    <label>Loaner Category</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Qual Loaner TLC</fullName>
+                <default>false</default>
+                <label>Qual Loaner TLC</label>
+            </value>
+            <value>
+                <fullName>Standard loaner</fullName>
+                <default>false</default>
+                <label>Standard loaner</label>
+            </value>
+            <value>
+                <fullName>First Article loaner</fullName>
+                <default>false</default>
+                <label>First Article loaner</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

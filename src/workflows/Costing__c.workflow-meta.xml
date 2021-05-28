@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Costing_Request_Updated_by_BU_Director</fullName>
+        <description>Costing Request Updated by BU Director</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>pooja.u@ii-vi.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>yashasvi.agrawal@ii-vi.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Costing_Request_Updated_by_Business_Unit_Director</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Costing_Name</fullName>
+        <description>Update the Costing Name to be &quot;SF-#####-COST&quot;</description>
+        <field>Name</field>
+        <formula>Opportunity__r.Opp_ID__c + &quot;-COST&quot;</formula>
+        <name>Costing Name</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Costing_Request</fullName>
+        <description>Update the Costing Request to be &quot;SF-#####-COST&quot;</description>
+        <field>Costing_Request__c</field>
+        <formula>Opportunity__r.Opp_ID__c + &quot;-COST&quot;</formula>
+        <name>Costing Request</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Populate_Overall_Close_Date</fullName>
+        <field>Overall_Close_Date__c</field>
+        <formula>NOW ()</formula>
+        <name>Populate Overall Close Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_BU_Status_to_Pending</fullName>
+        <field>BU_Approval_Status__c</field>
+        <literalValue>Pending</literalValue>
+        <name>Update BU Status to Pending</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Status</fullName>
+        <field>BU_Approval_Status__c</field>
+        <literalValue>Approved</literalValue>
+        <name>Update Status</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Status2</fullName>
+        <field>BU_Approval_Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Update Status2</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Costing Name</fullName>
+        <actions>
+            <name>Costing_Name</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Costing__c.CreatedDate</field>
+            <operation>equals</operation>
+            <value>TODAY</value>
+        </criteriaItems>
+        <description>Rename Costing object &quot;SF-#####-COST&quot;</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Populate Overall Close Date</fullName>
+        <actions>
+            <name>Populate_Overall_Close_Date</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Costing__c.Overall_Status__c</field>
+            <operation>equals</operation>
+            <value>Closed</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+</Workflow>

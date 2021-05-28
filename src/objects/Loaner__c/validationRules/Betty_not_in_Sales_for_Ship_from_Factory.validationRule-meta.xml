@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Betty_not_in_Sales_for_Ship_from_Factory</fullName>
+    <active>true</active>
+    <errorConditionFormula>NOT(ISBLANK(TEXT(Loaner_Ship_From_Finisar__c ))) &amp;&amp; 
+NOT (ISBLANK(Inside_Sales_Finisar__c)) &amp;&amp; 
+ISPICKVAL( Loaner_Ship_From_Finisar__c , &apos;Factory Stock&apos;) &amp;&amp; 
+Inside_Sales_Finisar__r.FirstName = &apos;Betty&apos; &amp;&amp; Inside_Sales_Finisar__r.LastName = &apos;Dea&apos;&amp;&amp; 
+RecordType.Name = &apos;Loaner Request&apos;</errorConditionFormula>
+    <errorDisplayField>Inside_Sales_Finisar__c</errorDisplayField>
+    <errorMessage>Betty Dea should not be the Inside Sales Rep if the Loaner is Shipped from Factory Stock</errorMessage>
+</ValidationRule>

@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>49.0</apiVersion>
+    <assignments>
+        <name>assign_Return_Due_Date_to_var_returndate</name>
+        <label>assign Return Due Date to var_returndate</label>
+        <locationX>454</locationX>
+        <locationY>60</locationY>
+        <assignmentItems>
+            <assignToReference>var_return_date</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>selectedLoanerRequestorLine.Effective_Return_Due_Date__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Loaner_items_to_be_extended</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>assignextendeddays</name>
+        <label>assignextendeddaysto ExtensionItem</label>
+        <locationX>426</locationX>
+        <locationY>264</locationY>
+        <assignmentItems>
+            <assignToReference>NumberofExtendedDays</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>NumberofExtensions</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>newextensionItem.Extend_Date__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>calcExtensionDatebasedonReturnDueDate</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>extension_Request_Exists1</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>calculate_extended_days</name>
+        <label>calculate extended days</label>
+        <locationX>914</locationX>
+        <locationY>43</locationY>
+        <assignmentItems>
+            <assignToReference>NumberofExtendedDays</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>calculateExtendedDays</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>newextensionItem.Extend_Date__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Extend_To_Date</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>newextensionItem.Total_Extended_Days__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>calculateExtendedDays</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>extension_Request_Exists1</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>map_Extension_Request_fields</name>
+        <label>Map  Extension Item</label>
+        <locationX>1009</locationX>
+        <locationY>439</locationY>
+        <assignmentItems>
+            <assignToReference>newextensionItem.Line_Status__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Draft</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>newextensionItem.RecordTypeId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>extensionItemRecordType</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>newextensionItem.Extension_Loaner_Qty__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>selectedLoanerRequestorLine.Balance_to_be_returned__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>newextensionItem.Extension_Return_Due_Date__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>selectedLoanerRequestorLine.Effective_Return_Due_Date__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>newextensionItem.Total_Extended_Days__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>NumberofExtendedDays</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>newextensionItem.Number_of_extensions_approved_before_thi__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>selectedLoanerRequestorLine.Number_of_Extensions__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>newextensionItem.Loaner__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>newExtensionRequest.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>newextensionItem.Loaner_Line__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>selectedLoanerRequestorLine.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>newextensionItem.Product__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>selectedLoanerRequestorLine.Product__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>newExtensionItemsList</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>newExtensionItemsList</name>
+        <label>newExtensionItemsList</label>
+        <locationX>1195</locationX>
+        <locationY>438</locationY>
+        <assignmentItems>
+            <assignToReference>newExtensionItemList</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>newextensionItem</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <decisions>
+        <name>check_number_of_extension_for_each_loaner_requestor_Item</name>
+        <label>check number of extension for each loaner requestor Item</label>
+        <locationX>180</locationX>
+        <locationY>157</locationY>
+        <defaultConnector>
+            <targetReference>assign_Return_Due_Date_to_var_returndate</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Number of Extensions is greater than 2</defaultConnectorLabel>
+        <rules>
+            <name>for1and2extensions</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>selectedLoanerRequestorLine.Number_of_Extensions__c</leftValueReference>
+                <operator>LessThan</operator>
+                <rightValue>
+                    <elementReference>MinExtensions</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>assignextendeddays</targetReference>
+            </connector>
+            <label>Number of Extensions is less than 2</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>extension_Request_Exists1</name>
+        <label>Check Extension Request Exists</label>
+        <locationX>759</locationX>
+        <locationY>268</locationY>
+        <defaultConnector>
+            <targetReference>create_Extension_Request</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Create Extension Request</defaultConnectorLabel>
+        <rules>
+            <name>Extension_Request_Exists</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>newExtensionRequest.Id</leftValueReference>
+                <operator>WasSet</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>map_Extension_Request_fields</targetReference>
+            </connector>
+            <label>Extension Request Exists</label>
+        </rules>
+    </decisions>
+    <description>calculate Extended for each selected Loaner Requestor Line Item</description>
+    <formulas>
+        <description>Effective Return Due Date + 100</description>
+        <name>calcExtensionDatebasedonReturnDueDate</name>
+        <dataType>Date</dataType>
+        <expression>{!selectedLoanerRequestorLine.Effective_Return_Due_Date__c} + VALUE({!$Label.Number_of_Extended_Days_For_1_or_2nd_Extensions})</expression>
+    </formulas>
+    <formulas>
+        <description>Extension Date - Return Due Date</description>
+        <name>calculateExtendedDays</name>
+        <dataType>Number</dataType>
+        <expression>{!Extend_To_Date} - {!var_return_date}</expression>
+        <scale>2</scale>
+    </formulas>
+    <formulas>
+        <description>Number Of Extensions Label</description>
+        <name>NumberofExtensions</name>
+        <dataType>Number</dataType>
+        <expression>VALUE({!$Label.Number_of_Extended_Days_For_1_or_2nd_Extensions})</expression>
+        <scale>0</scale>
+    </formulas>
+    <interviewLabel>calculate Extended Days For Each Loaner Line {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>calculate Extended Days For Each Loaner Line</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <recordCreates>
+        <name>create_Extension_Request</name>
+        <label>create Extension Request</label>
+        <locationX>778</locationX>
+        <locationY>447</locationY>
+        <connector>
+            <targetReference>map_Extension_Request_fields</targetReference>
+        </connector>
+        <inputReference>newExtensionRequest</inputReference>
+    </recordCreates>
+    <screens>
+        <name>Loaner_items_to_be_extended</name>
+        <label>Loaner Items Extension Screen</label>
+        <locationX>692</locationX>
+        <locationY>54</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>calculate_extended_days</targetReference>
+        </connector>
+        <fields>
+            <name>LoanerLineTable</name>
+            <fieldText>LoanerLineName  : {!selectedLoanerRequestorLine.Name}
+Product Name    : {!selectedLoanerRequestorLine.Product__r.Name}
+Marketing P/N   : {!selectedLoanerRequestorLine.Marketing_P_N__c}
+Shipped Date    : {!selectedLoanerRequestorLine.Shipped_Date__c}
+LoanerQuantity  :{!selectedLoanerRequestorLine.Balance_to_be_returned__c}
+Return Due Date : {!selectedLoanerRequestorLine.Effective_Return_Due_Date__c}</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Extend_To_Date</name>
+            <dataType>Date</dataType>
+            <defaultValue>
+                <elementReference>selectedLoanerRequestorLine.Effective_Return_Due_Date__c</elementReference>
+            </defaultValue>
+            <fieldText>Extend To Date</fieldText>
+            <fieldType>InputField</fieldType>
+            <helpText>Extend  Loaner Line By</helpText>
+            <isRequired>true</isRequired>
+            <validationRule>
+                <errorMessage>Extension Date should be greater than return due date</errorMessage>
+                <formulaExpression>AND({!Extend_To_Date} &gt; {!var_return_date})</formulaExpression>
+            </validationRule>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <startElementReference>check_number_of_extension_for_each_loaner_requestor_Item</startElementReference>
+    <status>Active</status>
+    <variables>
+        <description>extension Item Record Type</description>
+        <name>extensionItemRecordType</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Minimum Extensions Required for Deafault</description>
+        <name>MinExtensions</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <scale>2</scale>
+        <value>
+            <numberValue>2.0</numberValue>
+        </value>
+    </variables>
+    <variables>
+        <name>newextensionItem</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+        <objectType>Loaner_Line__c</objectType>
+    </variables>
+    <variables>
+        <name>newExtensionItemList</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <objectType>Loaner_Line__c</objectType>
+    </variables>
+    <variables>
+        <description>new ExtensionRequest</description>
+        <name>newExtensionRequest</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <objectType>Loaner__c</objectType>
+    </variables>
+    <variables>
+        <description>NumberofExtendedDays</description>
+        <name>NumberofExtendedDays</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>0</scale>
+        <value>
+            <numberValue>0.0</numberValue>
+        </value>
+    </variables>
+    <variables>
+        <description>selected Loaner Requestor Line Item</description>
+        <name>selectedLoanerRequestorLine</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Loaner_Line__c</objectType>
+    </variables>
+    <variables>
+        <description>return Due Date Variable used for Validation</description>
+        <name>var_return_date</name>
+        <dataType>Date</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <elementReference>selectedLoanerRequestorLine.Effective_Return_Due_Date__c</elementReference>
+        </value>
+    </variables>
+</Flow>

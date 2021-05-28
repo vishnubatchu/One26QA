@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>49.0</apiVersion>
+    <decisions>
+        <name>check_extension_creation_flag</name>
+        <label>check extension creation flag</label>
+        <locationX>954</locationX>
+        <locationY>203</locationY>
+        <defaultConnector>
+            <targetReference>Error_Message</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>go to next selected loaner item in list</defaultConnectorLabel>
+        <rules>
+            <name>create_extension_Request_flg</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>extensionRequestCreationFlag</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Calculate_Extended_Days_For_Each_Line_Item</targetReference>
+            </connector>
+            <label>create extension Request</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>check_extension_Items_is_not_null</name>
+        <label>check extension Items is not null</label>
+        <locationX>83</locationX>
+        <locationY>389</locationY>
+        <defaultConnector>
+            <targetReference>create_extension_Items</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>extension Item List is not empty</defaultConnectorLabel>
+        <rules>
+            <name>extension_Item_List_is_Empty</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>newextensionItemList</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>ErrorMessage</targetReference>
+            </connector>
+            <label>extension Items List is  Empty</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>loaner_Item_is_selected_or_not</name>
+        <label>loaner Item is selected or not</label>
+        <locationX>406</locationX>
+        <locationY>65</locationY>
+        <defaultConnector>
+            <targetReference>each_Loaner_Requestor_Lines</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>go to next element</defaultConnectorLabel>
+        <rules>
+            <name>loaner_Item_is_selected</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>selectedLoanerRequestorLine</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <elementReference>LoanerRequestorLine.Id</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>check_extension_request_can_be_created_or_not</targetReference>
+            </connector>
+            <label>loaner Item is selected</label>
+        </rules>
+    </decisions>
+    <formulas>
+        <name>addDaystoReturnDueDate</name>
+        <dataType>Date</dataType>
+        <expression>{!LoanerRequestorLine.Return_Due_Date__c} + 100</expression>
+    </formulas>
+    <formulas>
+        <description>Minimmum Number of Extensions for which extension days is fixed</description>
+        <name>MinimumExtensions</name>
+        <dataType>Number</dataType>
+        <expression>VALUE({!$Label.Minimum_Extensions})</expression>
+        <scale>0</scale>
+    </formulas>
+    <interviewLabel>check whether extension request created or not {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>check whether extension request created or not</label>
+    <loops>
+        <name>each_Loaner_Requestor_Lines</name>
+        <label>each Loaner Requestor Lines</label>
+        <locationX>85</locationX>
+        <locationY>210</locationY>
+        <assignNextValueToReference>LoanerRequestorLine</assignNextValueToReference>
+        <collectionReference>LoanerRequestorLines</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>loaner_Item_is_selected_or_not</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>check_extension_Items_is_not_null</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <recordCreates>
+        <name>create_extension_Items</name>
+        <label>create extension Items</label>
+        <locationX>84</locationX>
+        <locationY>537</locationY>
+        <faultConnector>
+            <targetReference>Error_Messages</targetReference>
+        </faultConnector>
+        <inputReference>newextensionItemList</inputReference>
+    </recordCreates>
+    <screens>
+        <name>Error_Message</name>
+        <label>Error Message</label>
+        <locationX>961</locationX>
+        <locationY>8</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>ErrorScreen</name>
+            <fieldText>&lt;DIV ALIGN=&quot;LEFT&quot;&gt;&lt;FONT FACE=&quot;Arial&quot; STYLE=&quot;font-size:12px&quot; COLOR=&quot;#000000&quot; LETTERSPACING=&quot;0&quot; KERNING=&quot;0&quot;&gt; &lt;A HREF=&quot;/{!LoanerRequestorLine.Id}&quot; TARGET=&quot;_blank&quot;&gt;Click here &lt;/A&gt;  Or Finish to check Loaner Request line items in new tab   &lt;/FONT&gt;&lt;/DIV&gt;&lt;DIV ALIGN=&quot;LEFT&quot;&gt;&lt;FONT FACE=&quot;Arial&quot; STYLE=&quot;font-size:12px&quot; COLOR=&quot;#000000&quot; LETTERSPACING=&quot;0&quot; KERNING=&quot;0&quot;&gt;Loaner Item has pending extension lines&lt;/FONT&gt;&lt;/DIV&gt;&lt;DIV ALIGN=&quot;LEFT&quot;&gt;&lt;FONT FACE=&quot;Arial&quot; STYLE=&quot;font-size:12px&quot; COLOR=&quot;#000000&quot; LETTERSPACING=&quot;0&quot; KERNING=&quot;0&quot;&gt;{!LoanerRequestorLine.Display_Product_Code_Marketing__c}&lt;/FONT&gt;&lt;/DIV&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Error_Messages</name>
+        <label>Error Message</label>
+        <locationX>261</locationX>
+        <locationY>705</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>Error</name>
+            <fieldText>Please Contact Your System Admin {!$Flow.FaultMessage}</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>ErrorMessage</name>
+        <label>Error Message</label>
+        <locationX>441</locationX>
+        <locationY>387</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>LoanerItemsCannotbeextended</name>
+            <fieldText>Loaner extension cannot be created as no loaner line items were selected for extension.</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <startElementReference>each_Loaner_Requestor_Lines</startElementReference>
+    <status>Active</status>
+    <subflows>
+        <name>Calculate_Extended_Days_For_Each_Line_Item</name>
+        <label>Calculate Extended Days For Each Line Item</label>
+        <locationX>946</locationX>
+        <locationY>396</locationY>
+        <connector>
+            <targetReference>each_Loaner_Requestor_Lines</targetReference>
+        </connector>
+        <flowName>calculate_Extended_Days_For_Each_Loaner_Line</flowName>
+        <inputAssignments>
+            <name>selectedLoanerRequestorLine</name>
+            <value>
+                <elementReference>LoanerRequestorLine</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>extensionItemRecordType</name>
+            <value>
+                <elementReference>extensionItemRecordType</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>MinExtensions</name>
+            <value>
+                <elementReference>MinimumExtensions</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>newExtensionItemList</name>
+            <value>
+                <elementReference>newextensionItemList</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>newExtensionRequest</name>
+            <value>
+                <elementReference>extensionRequest</elementReference>
+            </value>
+        </inputAssignments>
+        <outputAssignments>
+            <assignToReference>newextensionItemList</assignToReference>
+            <name>newExtensionItemList</name>
+        </outputAssignments>
+        <outputAssignments>
+            <assignToReference>extensionRequest</assignToReference>
+            <name>newExtensionRequest</name>
+        </outputAssignments>
+    </subflows>
+    <subflows>
+        <name>check_extension_request_can_be_created_or_not</name>
+        <label>check extension request can be created or not</label>
+        <locationX>663</locationX>
+        <locationY>214</locationY>
+        <connector>
+            <targetReference>check_extension_creation_flag</targetReference>
+        </connector>
+        <flowName>extensionCreationFlagCheck</flowName>
+        <inputAssignments>
+            <name>LoanerRequestorLine</name>
+            <value>
+                <elementReference>LoanerRequestorLine.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>extensionItemRecordType</name>
+            <value>
+                <elementReference>extensionItemRecordType</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>extensionRequestCreationFlag</name>
+            <value>
+                <elementReference>extensionRequestCreationFlag</elementReference>
+            </value>
+        </inputAssignments>
+        <outputAssignments>
+            <assignToReference>extensionRequestCreationFlag</assignToReference>
+            <name>extensionRequestCreationFlag</name>
+        </outputAssignments>
+    </subflows>
+    <variables>
+        <description>extension Item Object</description>
+        <name>extensionItem</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Loaner_Line__c</objectType>
+    </variables>
+    <variables>
+        <description>extension Items Pending for Approval</description>
+        <name>extensionItemList</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Loaner_Line__c</objectType>
+    </variables>
+    <variables>
+        <description>extension Item Record Type Id</description>
+        <name>extensionItemRecordType</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>extension Request Object</description>
+        <name>extensionRequest</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <objectType>Loaner__c</objectType>
+    </variables>
+    <variables>
+        <description>to Create Extension Request  if already existing Extension Items are in Approved or Rejected Status</description>
+        <name>extensionRequestCreationFlag</name>
+        <dataType>Boolean</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <booleanValue>true</booleanValue>
+        </value>
+    </variables>
+    <variables>
+        <description>extension Request Record Type Id</description>
+        <name>extensionRequestRecordType</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Loaner Requestor Line</description>
+        <name>LoanerRequestorLine</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Loaner_Line__c</objectType>
+    </variables>
+    <variables>
+        <description>LoanerRequestor Lines</description>
+        <name>LoanerRequestorLines</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Loaner_Line__c</objectType>
+    </variables>
+    <variables>
+        <description>new Extension Item List</description>
+        <name>newextensionItemList</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+        <objectType>Loaner_Line__c</objectType>
+    </variables>
+    <variables>
+        <description>Number of Extended days to 100</description>
+        <name>NumberofExtendedDays</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>0</scale>
+    </variables>
+    <variables>
+        <description>Old Extension Item to check for Draft and Approval Pending Status</description>
+        <name>oldextensionItem</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Loaner_Line__c</objectType>
+    </variables>
+    <variables>
+        <description>selected Loaner Line for Extension</description>
+        <name>selectedLoanerRequestorLine</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>var_return_date</name>
+        <dataType>Date</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

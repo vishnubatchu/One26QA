@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Visual_Status_Code_II__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE(Visual_Status__c ,&quot;servlet/servlet.FileDownload?file=015C0000002tp5j&quot;,2,
+&quot;servlet/servlet.FileDownload?file=015C0000002tp5i&quot;,3,
+&quot;servlet/servlet.FileDownload?file=015C0000002tp5h&quot;,1,0)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Visual Status Code II</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reason_Lost_Required</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ISPICKVAL( StageName , &quot;Closed Lost&quot;),
+ISPICKVAL( Lost_Cancelled_Rejected_Reason__c , &quot;&quot;),ISPICKVAL($User.Legacy_Company__c,&apos;Marlow&apos;) )</errorConditionFormula>
+    <errorDisplayField>Lost_Cancelled_Rejected_Reason__c</errorDisplayField>
+    <errorMessage>Please enter a Reason Lost.</errorMessage>
+</ValidationRule>

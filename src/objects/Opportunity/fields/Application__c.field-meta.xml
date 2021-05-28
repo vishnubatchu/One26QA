@@ -1,0 +1,715 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Application__c</fullName>
+    <externalId>false</externalId>
+    <label>Application</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Market__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Photonics</fullName>
+                <default>false</default>
+                <label>Photonics</label>
+            </value>
+            <value>
+                <fullName>TTRS</fullName>
+                <default>false</default>
+                <label>TTRS</label>
+            </value>
+            <value>
+                <fullName>Uncooled Detector Cooling</fullName>
+                <default>false</default>
+                <label>Uncooled Detector Cooling</label>
+            </value>
+            <value>
+                <fullName>Detector cooling (other than uncooled)</fullName>
+                <default>false</default>
+                <label>Detector cooling (other than uncooled)</label>
+            </value>
+            <value>
+                <fullName>Laser cooling</fullName>
+                <default>false</default>
+                <label>Laser cooling</label>
+            </value>
+            <value>
+                <fullName>Enclosure cooling</fullName>
+                <default>false</default>
+                <label>Enclosure cooling</label>
+            </value>
+            <value>
+                <fullName>Space, detector/sensor cooling</fullName>
+                <default>false</default>
+                <label>Space, detector/sensor cooling</label>
+            </value>
+            <value>
+                <fullName>Space, other</fullName>
+                <default>false</default>
+                <label>Space, other</label>
+            </value>
+            <value>
+                <fullName>Commercial/Industrial photonics</fullName>
+                <default>false</default>
+                <label>Commercial/Industrial photonics</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Transmission - Fixed Wavelength Laser CW - Legacy Butterfly</fullName>
+                <default>false</default>
+                <label>Transmission - Fixed Wavelength Laser CW - Legacy Butterfly</label>
+            </value>
+            <value>
+                <fullName>Transmission - Fixed Wavelength Laser CW - MSA TOSA</fullName>
+                <default>false</default>
+                <label>Transmission - Fixed Wavelength Laser CW - MSA TOSA</label>
+            </value>
+            <value>
+                <fullName>Transmission - Fixed Wavelength Laser CW - TO Can</fullName>
+                <default>false</default>
+                <label>Transmission - Fixed Wavelength Laser CW - TO Can</label>
+            </value>
+            <value>
+                <fullName>Transmission - Fixed Wavelength Laser DML - Legacy Butterfly</fullName>
+                <default>false</default>
+                <label>Transmission - Fixed Wavelength Laser DML - Legacy Butterfly</label>
+            </value>
+            <value>
+                <fullName>Transmission - Fixed Wavelength Laser DML - MSA TOSA</fullName>
+                <default>false</default>
+                <label>Transmission - Fixed Wavelength Laser DML - MSA TOSA</label>
+            </value>
+            <value>
+                <fullName>Transmission - Fixed Wavelength Laser DML - TO Can</fullName>
+                <default>false</default>
+                <label>Transmission - Fixed Wavelength Laser DML - TO Can</label>
+            </value>
+            <value>
+                <fullName>Transmission - Fixed Wavelength Laser EA/MZ/CML - Legacy Butterfly</fullName>
+                <default>false</default>
+                <label>Transmission - Fixed Wavelength Laser EA/MZ/CML - Legacy Butterfly</label>
+            </value>
+            <value>
+                <fullName>Transmission - Fixed Wavelength Laser EA/MZ/CML - MSA TOSA</fullName>
+                <default>false</default>
+                <label>Transmission - Fixed Wavelength Laser EA/MZ/CML - MSA TOSA</label>
+            </value>
+            <value>
+                <fullName>Transmission - Fixed Wavelength Laser EA/MZ/CML - TO Can</fullName>
+                <default>false</default>
+                <label>Transmission - Fixed Wavelength Laser EA/MZ/CML - TO Can</label>
+            </value>
+            <value>
+                <fullName>Transmission - Tunable Laser CW - Legacy Butterfly</fullName>
+                <default>false</default>
+                <label>Transmission - Tunable Laser CW - Legacy Butterfly</label>
+            </value>
+            <value>
+                <fullName>Transmission - Tunable Laser CW - MSA TOSA</fullName>
+                <default>false</default>
+                <label>Transmission - Tunable Laser CW - MSA TOSA</label>
+            </value>
+            <value>
+                <fullName>Transmission - Tunable Laser CW - TO Can</fullName>
+                <default>false</default>
+                <label>Transmission - Tunable Laser CW - TO Can</label>
+            </value>
+            <value>
+                <fullName>Transmission - Tunable Laser DML - Legacy Butterfly</fullName>
+                <default>false</default>
+                <label>Transmission - Tunable Laser DML - Legacy Butterfly</label>
+            </value>
+            <value>
+                <fullName>Transmission - Tunable Laser DML - MSA TOSA</fullName>
+                <default>false</default>
+                <label>Transmission - Tunable Laser DML - MSA TOSA</label>
+            </value>
+            <value>
+                <fullName>Transmission - Tunable Laser DML - TO Can</fullName>
+                <default>false</default>
+                <label>Transmission - Tunable Laser DML - TO Can</label>
+            </value>
+            <value>
+                <fullName>Transmission - Tunable Laser EA/MZ/CML - Legacy Butterfly</fullName>
+                <default>false</default>
+                <label>Transmission - Tunable Laser EA/MZ/CML - Legacy Butterfly</label>
+            </value>
+            <value>
+                <fullName>Transmission - Tunable Laser EA/MZ/CML - MSA TOSA</fullName>
+                <default>false</default>
+                <label>Transmission - Tunable Laser EA/MZ/CML - MSA TOSA</label>
+            </value>
+            <value>
+                <fullName>Transmission - Tunable Laser EA/MZ/CML - TO Can</fullName>
+                <default>false</default>
+                <label>Transmission - Tunable Laser EA/MZ/CML - TO Can</label>
+            </value>
+            <value>
+                <fullName>980nm Pump Lasers - Legacy Butterfly</fullName>
+                <default>false</default>
+                <label>980nm Pump Lasers - Legacy Butterfly</label>
+            </value>
+            <value>
+                <fullName>980nm Pump Lasers - miniDIL</fullName>
+                <default>false</default>
+                <label>980nm Pump Lasers - miniDIL</label>
+            </value>
+            <value>
+                <fullName>14XXnm pump lasers - Legacy Butterfly</fullName>
+                <default>false</default>
+                <label>14XXnm pump lasers - Legacy Butterfly</label>
+            </value>
+            <value>
+                <fullName>14XXnm pump lasers - miniDIL</fullName>
+                <default>false</default>
+                <label>14XXnm pump lasers - miniDIL</label>
+            </value>
+            <value>
+                <fullName>Photonic Integrated Circuits</fullName>
+                <default>false</default>
+                <label>Photonic Integrated Circuits</label>
+            </value>
+            <value>
+                <fullName>Avalanche Photodiodes</fullName>
+                <default>false</default>
+                <label>Avalanche Photodiodes</label>
+            </value>
+            <value>
+                <fullName>Optical Channel Monitors</fullName>
+                <default>false</default>
+                <label>Optical Channel Monitors</label>
+            </value>
+            <value>
+                <fullName>Vertical Cavity Surface Emitting Lasers</fullName>
+                <default>false</default>
+                <label>Vertical Cavity Surface Emitting Lasers</label>
+            </value>
+            <value>
+                <fullName>XLT</fullName>
+                <default>false</default>
+                <label>XLT</label>
+            </value>
+            <value>
+                <fullName>Triton Ice - Thermal Cycler</fullName>
+                <default>false</default>
+                <label>Triton Ice - Thermal Cycler</label>
+            </value>
+            <value>
+                <fullName>Triton Ice - Direct Conduction</fullName>
+                <default>false</default>
+                <label>Triton Ice - Direct Conduction</label>
+            </value>
+            <value>
+                <fullName>Triton Ice - Air-to-Air Exchangers</fullName>
+                <default>false</default>
+                <label>Triton Ice - Air-to-Air Exchangers</label>
+            </value>
+            <value>
+                <fullName>Triton Ice - Air-to-Liquid Exchangers</fullName>
+                <default>false</default>
+                <label>Triton Ice - Air-to-Liquid Exchangers</label>
+            </value>
+            <value>
+                <fullName>Triton Ice - Liquid-to-Liquid Exchangers</fullName>
+                <default>false</default>
+                <label>Triton Ice - Liquid-to-Liquid Exchangers</label>
+            </value>
+            <value>
+                <fullName>Energy Harvesting - Wireless Sensors</fullName>
+                <default>false</default>
+                <label>Energy Harvesting - Wireless Sensors</label>
+            </value>
+            <value>
+                <fullName>Energy Harvesting - Oil/Gas - Sensor Power</fullName>
+                <default>false</default>
+                <label>Energy Harvesting - Oil/Gas - Sensor Power</label>
+            </value>
+            <value>
+                <fullName>Energy Harvesting - Other Power</fullName>
+                <default>false</default>
+                <label>Energy Harvesting - Other Power</label>
+            </value>
+            <value>
+                <fullName>Waste Heat Recovery - Automotive</fullName>
+                <default>false</default>
+                <label>Waste Heat Recovery - Automotive</label>
+            </value>
+            <value>
+                <fullName>Waste Heat Recovery - Industrial</fullName>
+                <default>false</default>
+                <label>Waste Heat Recovery - Industrial</label>
+            </value>
+            <value>
+                <fullName>Waste Heat Recovery - Oil/Gas</fullName>
+                <default>false</default>
+                <label>Waste Heat Recovery - Oil/Gas</label>
+            </value>
+            <value>
+                <fullName>Waste Heat Recovery - Other</fullName>
+                <default>false</default>
+                <label>Waste Heat Recovery - Other</label>
+            </value>
+            <value>
+                <fullName>Consumer - Cordless Mosquito Traps</fullName>
+                <default>false</default>
+                <label>Consumer - Cordless Mosquito Traps</label>
+            </value>
+            <value>
+                <fullName>Consumer - Cooking/Camping Stoves</fullName>
+                <default>false</default>
+                <label>Consumer - Cooking/Camping Stoves</label>
+            </value>
+            <value>
+                <fullName>Consumer - Other Power Gen</fullName>
+                <default>false</default>
+                <label>Consumer - Other Power Gen</label>
+            </value>
+            <value>
+                <fullName>Military - Cooking Equipment</fullName>
+                <default>false</default>
+                <label>Military - Cooking Equipment</label>
+            </value>
+            <value>
+                <fullName>Military - Tent/Space Heaters</fullName>
+                <default>false</default>
+                <label>Military - Tent/Space Heaters</label>
+            </value>
+            <value>
+                <fullName>Military - Fuel Burning/Battery Replacement Technology</fullName>
+                <default>false</default>
+                <label>Military - Fuel Burning/Battery Replacement Technology</label>
+            </value>
+            <value>
+                <fullName>Military - Unmanned Aerial Vehicles</fullName>
+                <default>false</default>
+                <label>Military - Unmanned Aerial Vehicles</label>
+            </value>
+            <value>
+                <fullName>Military - Unattended Ground Sensors</fullName>
+                <default>false</default>
+                <label>Military - Unattended Ground Sensors</label>
+            </value>
+            <value>
+                <fullName>Military - Robotics</fullName>
+                <default>false</default>
+                <label>Military - Robotics</label>
+            </value>
+            <value>
+                <fullName>Military - Other Power Gen</fullName>
+                <default>false</default>
+                <label>Military - Other Power Gen</label>
+            </value>
+            <value>
+                <fullName>Military - Soldier Wireless Electronic Power</fullName>
+                <default>false</default>
+                <label>Military - Soldier Wireless Electronic Power</label>
+            </value>
+            <value>
+                <fullName>Oil and Gas - Down-hole Drilling</fullName>
+                <default>false</default>
+                <label>Oil and Gas - Down-hole Drilling</label>
+            </value>
+            <value>
+                <fullName>Geothermal Hybrid Solutions</fullName>
+                <default>false</default>
+                <label>Geothermal Hybrid Solutions</label>
+            </value>
+            <value>
+                <fullName>Solar Hybrid Solutions</fullName>
+                <default>false</default>
+                <label>Solar Hybrid Solutions</label>
+            </value>
+            <value>
+                <fullName>Seat Cooling</fullName>
+                <default>false</default>
+                <label>Seat Cooling</label>
+            </value>
+            <value>
+                <fullName>Cup-holder Cooling</fullName>
+                <default>false</default>
+                <label>Cup-holder Cooling</label>
+            </value>
+            <value>
+                <fullName>HEV Battery Cooling</fullName>
+                <default>false</default>
+                <label>HEV Battery Cooling</label>
+            </value>
+            <value>
+                <fullName>Gaming</fullName>
+                <default>false</default>
+                <label>Gaming</label>
+            </value>
+            <value>
+                <fullName>Television</fullName>
+                <default>false</default>
+                <label>Television</label>
+            </value>
+            <value>
+                <fullName>Mattress Cooling/Heating</fullName>
+                <default>false</default>
+                <label>Mattress Cooling/Heating</label>
+            </value>
+            <value>
+                <fullName>Seat Cooling/Heating</fullName>
+                <default>false</default>
+                <label>Seat Cooling/Heating</label>
+            </value>
+            <value>
+                <fullName>POP Displays and Equipment</fullName>
+                <default>false</default>
+                <label>POP Displays and Equipment</label>
+            </value>
+            <value>
+                <fullName>DNA and Genetic Analysis</fullName>
+                <default>false</default>
+                <label>DNA and Genetic Analysis</label>
+            </value>
+            <value>
+                <fullName>Clinical Diagnostics</fullName>
+                <default>false</default>
+                <label>Clinical Diagnostics</label>
+            </value>
+            <value>
+                <fullName>Medical Photonics Systems</fullName>
+                <default>false</default>
+                <label>Medical Photonics Systems</label>
+            </value>
+            <value>
+                <fullName>Medical &amp; Cosmetic Lasers</fullName>
+                <default>false</default>
+                <label>Medical &amp; Cosmetic Lasers</label>
+            </value>
+            <value>
+                <fullName>Physical Therapy /Body Temp Control</fullName>
+                <default>false</default>
+                <label>Physical Therapy /Body Temp Control</label>
+            </value>
+            <value>
+                <fullName>Bio-Security</fullName>
+                <default>false</default>
+                <label>Bio-Security</label>
+            </value>
+            <value>
+                <fullName>Forensic Science</fullName>
+                <default>false</default>
+                <label>Forensic Science</label>
+            </value>
+            <value>
+                <fullName>Food, Agriculture &amp; Environment</fullName>
+                <default>false</default>
+                <label>Food, Agriculture &amp; Environment</label>
+            </value>
+            <value>
+                <fullName>General Medical Cooling</fullName>
+                <default>false</default>
+                <label>General Medical Cooling</label>
+            </value>
+            <value>
+                <fullName>Co-Generation Other</fullName>
+                <default>false</default>
+                <label>Co-Generation Other</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>10 - DSP</controllingFieldValue>
+            <valueName>TTRS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>10 - DSP</controllingFieldValue>
+            <valueName>Uncooled Detector Cooling</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>10 - DSP</controllingFieldValue>
+            <valueName>Detector cooling (other than uncooled)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>10 - DSP</controllingFieldValue>
+            <valueName>Laser cooling</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>10 - DSP</controllingFieldValue>
+            <valueName>Enclosure cooling</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>10 - DSP</controllingFieldValue>
+            <valueName>Space, detector/sensor cooling</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>10 - DSP</controllingFieldValue>
+            <valueName>Space, other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>10 - DSP</controllingFieldValue>
+            <valueName>Commercial/Industrial photonics</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>10 - DSP</controllingFieldValue>
+            <controllingFieldValue>15 - Industrial</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>15 - Industrial</controllingFieldValue>
+            <valueName>POP Displays and Equipment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>20 - Telecommunications</controllingFieldValue>
+            <valueName>Transmission - Fixed Wavelength Laser CW - Legacy Butterfly</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>20 - Telecommunications</controllingFieldValue>
+            <valueName>Transmission - Fixed Wavelength Laser CW - MSA TOSA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>20 - Telecommunications</controllingFieldValue>
+            <valueName>Transmission - Fixed Wavelength Laser CW - TO Can</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>20 - Telecommunications</controllingFieldValue>
+            <valueName>Transmission - Fixed Wavelength Laser DML - Legacy Butterfly</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>20 - Telecommunications</controllingFieldValue>
+            <valueName>Transmission - Fixed Wavelength Laser DML - MSA TOSA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>20 - Telecommunications</controllingFieldValue>
+            <valueName>Transmission - Fixed Wavelength Laser DML - TO Can</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>20 - Telecommunications</controllingFieldValue>
+            <valueName>Transmission - Fixed Wavelength Laser EA/MZ/CML - Legacy Butterfly</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>20 - Telecommunications</controllingFieldValue>
+            <valueName>Transmission - Fixed Wavelength Laser EA/MZ/CML - MSA TOSA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>20 - Telecommunications</controllingFieldValue>
+            <valueName>Transmission - Fixed Wavelength Laser EA/MZ/CML - TO Can</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>20 - Telecommunications</controllingFieldValue>
+            <valueName>Transmission - Tunable Laser CW - Legacy Butterfly</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>20 - Telecommunications</controllingFieldValue>
+            <valueName>Transmission - Tunable Laser CW - MSA TOSA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>20 - Telecommunications</controllingFieldValue>
+            <valueName>Transmission - Tunable Laser CW - TO Can</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>20 - Telecommunications</controllingFieldValue>
+            <valueName>Transmission - Tunable Laser DML - Legacy Butterfly</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>20 - Telecommunications</controllingFieldValue>
+            <valueName>Transmission - Tunable Laser DML - MSA TOSA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>20 - Telecommunications</controllingFieldValue>
+            <valueName>Transmission - Tunable Laser DML - TO Can</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>20 - Telecommunications</controllingFieldValue>
+            <valueName>Transmission - Tunable Laser EA/MZ/CML - Legacy Butterfly</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>20 - Telecommunications</controllingFieldValue>
+            <valueName>Transmission - Tunable Laser EA/MZ/CML - MSA TOSA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>20 - Telecommunications</controllingFieldValue>
+            <valueName>Transmission - Tunable Laser EA/MZ/CML - TO Can</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>20 - Telecommunications</controllingFieldValue>
+            <valueName>980nm Pump Lasers - Legacy Butterfly</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>20 - Telecommunications</controllingFieldValue>
+            <valueName>980nm Pump Lasers - miniDIL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>20 - Telecommunications</controllingFieldValue>
+            <valueName>14XXnm pump lasers - Legacy Butterfly</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>20 - Telecommunications</controllingFieldValue>
+            <valueName>14XXnm pump lasers - miniDIL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>20 - Telecommunications</controllingFieldValue>
+            <valueName>Photonic Integrated Circuits</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>20 - Telecommunications</controllingFieldValue>
+            <valueName>Avalanche Photodiodes</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>20 - Telecommunications</controllingFieldValue>
+            <valueName>Optical Channel Monitors</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>20 - Telecommunications</controllingFieldValue>
+            <valueName>Vertical Cavity Surface Emitting Lasers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>30 - Medical</controllingFieldValue>
+            <valueName>DNA and Genetic Analysis</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>30 - Medical</controllingFieldValue>
+            <valueName>Clinical Diagnostics</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>30 - Medical</controllingFieldValue>
+            <valueName>Medical Photonics Systems</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>30 - Medical</controllingFieldValue>
+            <valueName>Medical &amp; Cosmetic Lasers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>30 - Medical</controllingFieldValue>
+            <valueName>Physical Therapy /Body Temp Control</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>30 - Medical</controllingFieldValue>
+            <valueName>Bio-Security</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>30 - Medical</controllingFieldValue>
+            <valueName>Forensic Science</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>30 - Medical</controllingFieldValue>
+            <valueName>Food, Agriculture &amp; Environment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>30 - Medical</controllingFieldValue>
+            <valueName>General Medical Cooling</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>25 - Automotive</controllingFieldValue>
+            <valueName>Seat Cooling</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>25 - Automotive</controllingFieldValue>
+            <valueName>Cup-holder Cooling</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>25 - Automotive</controllingFieldValue>
+            <valueName>HEV Battery Cooling</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>35 - Consumer</controllingFieldValue>
+            <valueName>Gaming</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>35 - Consumer</controllingFieldValue>
+            <valueName>Television</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>40 - Personal Comfort</controllingFieldValue>
+            <valueName>Mattress Cooling/Heating</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>40 - Personal Comfort</controllingFieldValue>
+            <valueName>Seat Cooling/Heating</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>60 - Power Generation</controllingFieldValue>
+            <valueName>Energy Harvesting - Wireless Sensors</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>60 - Power Generation</controllingFieldValue>
+            <valueName>Energy Harvesting - Oil/Gas - Sensor Power</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>60 - Power Generation</controllingFieldValue>
+            <valueName>Energy Harvesting - Other Power</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>60 - Power Generation</controllingFieldValue>
+            <valueName>Waste Heat Recovery - Automotive</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>60 - Power Generation</controllingFieldValue>
+            <valueName>Waste Heat Recovery - Industrial</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>60 - Power Generation</controllingFieldValue>
+            <valueName>Waste Heat Recovery - Oil/Gas</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>60 - Power Generation</controllingFieldValue>
+            <valueName>Waste Heat Recovery - Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>60 - Power Generation</controllingFieldValue>
+            <valueName>Consumer - Cordless Mosquito Traps</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>60 - Power Generation</controllingFieldValue>
+            <valueName>Consumer - Cooking/Camping Stoves</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>60 - Power Generation</controllingFieldValue>
+            <valueName>Consumer - Other Power Gen</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>60 - Power Generation</controllingFieldValue>
+            <valueName>Military - Cooking Equipment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>60 - Power Generation</controllingFieldValue>
+            <valueName>Military - Tent/Space Heaters</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>60 - Power Generation</controllingFieldValue>
+            <valueName>Military - Fuel Burning/Battery Replacement Technology</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>60 - Power Generation</controllingFieldValue>
+            <valueName>Military - Unmanned Aerial Vehicles</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>60 - Power Generation</controllingFieldValue>
+            <valueName>Military - Unattended Ground Sensors</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>60 - Power Generation</controllingFieldValue>
+            <valueName>Military - Robotics</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>60 - Power Generation</controllingFieldValue>
+            <valueName>Military - Other Power Gen</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>60 - Power Generation</controllingFieldValue>
+            <valueName>Military - Soldier Wireless Electronic Power</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>60 - Power Generation</controllingFieldValue>
+            <valueName>Oil and Gas - Down-hole Drilling</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>60 - Power Generation</controllingFieldValue>
+            <valueName>Geothermal Hybrid Solutions</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>60 - Power Generation</controllingFieldValue>
+            <valueName>Co-Generation Other</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BUDescription__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE( BU_Code__c , &quot;0010&quot;, &quot;Transceiver(TBU)&quot;, 
+&quot;0020&quot;, &quot;Coherent(COBU)&quot;,
+&quot;0030&quot;,&quot;Optoelectronic &amp; RF Devices&quot;,
+&quot;0040&quot;, &quot;FNSR WSS&quot;,
+&quot;0050&quot;, &quot;Indium Phosphide&quot;,
+&quot;0060&quot;, &quot;ROADM(Amplifiers/Linecards)&quot;,
+&quot;0070&quot;, &quot;Marlow Products&quot;, 
+&quot;Unspecified&quot;
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>BU Description</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

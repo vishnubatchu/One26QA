@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>300 pin-connector</fullName>
+        <default>false</default>
+        <label>300 pin-connector</label>
+    </customValue>
+    <customValue>
+        <fullName>300 pin-DEMUX</fullName>
+        <default>false</default>
+        <label>300 pin-DEMUX</label>
+    </customValue>
+    <customValue>
+        <fullName>300 pin-fibers</fullName>
+        <default>false</default>
+        <label>300 pin-fibers</label>
+    </customValue>
+    <customValue>
+        <fullName>300 pin-Jitter Filter</fullName>
+        <default>false</default>
+        <label>300 pin-Jitter Filter</label>
+    </customValue>
+    <customValue>
+        <fullName>300 pin-modulator</fullName>
+        <default>false</default>
+        <label>300 pin-modulator</label>
+    </customValue>
+    <customValue>
+        <fullName>300 pin-MUX</fullName>
+        <default>false</default>
+        <label>300 pin-MUX</label>
+    </customValue>
+    <customValue>
+        <fullName>300 pin-phase adjust</fullName>
+        <default>false</default>
+        <label>300 pin-phase adjust</label>
+    </customValue>
+    <customValue>
+        <fullName>300 pin-Rx DTV</fullName>
+        <default>false</default>
+        <label>300 pin-Rx DTV</label>
+    </customValue>
+    <customValue>
+        <fullName>300 pin-TEC</fullName>
+        <default>false</default>
+        <label>300 pin-TEC</label>
+    </customValue>
+    <customValue>
+        <fullName>300 pin-tunability</fullName>
+        <default>false</default>
+        <label>300 pin-tunability</label>
+    </customValue>
+    <customValue>
+        <fullName>APS Timing</fullName>
+        <default>false</default>
+        <label>APS Timing</label>
+    </customValue>
+    <customValue>
+        <fullName>Berlin ICR</fullName>
+        <default>false</default>
+        <label>Berlin ICR</label>
+    </customValue>
+    <customValue>
+        <fullName>Berlin Photodetector</fullName>
+        <default>false</default>
+        <label>Berlin Photodetector</label>
+    </customValue>
+    <customValue>
+        <fullName>Bit Errors</fullName>
+        <default>false</default>
+        <label>Bit Errors</label>
+    </customValue>
+    <customValue>
+        <fullName>CDR</fullName>
+        <default>false</default>
+        <label>CDR</label>
+    </customValue>
+    <customValue>
+        <fullName>Components</fullName>
+        <default>false</default>
+        <label>Components</label>
+    </customValue>
+    <customValue>
+        <fullName>Documentation</fullName>
+        <default>false</default>
+        <label>Documentation</label>
+    </customValue>
+    <customValue>
+        <fullName>EEPROM</fullName>
+        <default>false</default>
+        <label>EEPROM</label>
+    </customValue>
+    <customValue>
+        <fullName>EEPROM/FW change</fullName>
+        <default>false</default>
+        <label>EEPROM/FW change</label>
+    </customValue>
+    <customValue>
+        <fullName>Electrical</fullName>
+        <default>false</default>
+        <label>Electrical</label>
+    </customValue>
+    <customValue>
+        <fullName>EMI</fullName>
+        <default>false</default>
+        <label>EMI</label>
+    </customValue>
+    <customValue>
+        <fullName>Eval Boards</fullName>
+        <default>false</default>
+        <label>Eval Boards</label>
+    </customValue>
+    <customValue>
+        <fullName>FEC</fullName>
+        <default>false</default>
+        <label>FEC</label>
+    </customValue>
+    <customValue>
+        <fullName>Fiber</fullName>
+        <default>false</default>
+        <label>Fiber</label>
+    </customValue>
+    <customValue>
+        <fullName>Fibre Channel Std</fullName>
+        <default>false</default>
+        <label>Fibre Channel Std</label>
+    </customValue>
+    <customValue>
+        <fullName>Firmware</fullName>
+        <default>false</default>
+        <label>Firmware</label>
+    </customValue>
+    <customValue>
+        <fullName>Gbit Ethernet Std</fullName>
+        <default>false</default>
+        <label>Gbit Ethernet Std</label>
+    </customValue>
+    <customValue>
+        <fullName>General Xcvr/Xpndr</fullName>
+        <default>false</default>
+        <label>General Xcvr/Xpndr</label>
+    </customValue>
+    <customValue>
+        <fullName>GUI</fullName>
+        <default>false</default>
+        <label>GUI</label>
+    </customValue>
+    <customValue>
+        <fullName>HROCM-Development/Qualification/Application</fullName>
+        <default>false</default>
+        <label>HROCM-Development/Qualification/Application</label>
+    </customValue>
+    <customValue>
+        <fullName>HROCM- Electronics/Communications</fullName>
+        <default>false</default>
+        <label>HROCM- Electronics/Communications</label>
+    </customValue>
+    <customValue>
+        <fullName>HROCM-Mechanical</fullName>
+        <default>false</default>
+        <label>HROCM-Mechanical</label>
+    </customValue>
+    <customValue>
+        <fullName>HROCM-Optical</fullName>
+        <default>false</default>
+        <label>HROCM-Optical</label>
+    </customValue>
+    <customValue>
+        <fullName>HROCM-Other</fullName>
+        <default>false</default>
+        <label>HROCM-Other</label>
+    </customValue>
+    <customValue>
+        <fullName>I2C</fullName>
+        <default>false</default>
+        <label>I2C</label>
+    </customValue>
+    <customValue>
+        <fullName>IC-CDRLDPA</fullName>
+        <default>false</default>
+        <label>IC-CDRLDPA</label>
+    </customValue>
+    <customValue>
+        <fullName>ICC-iCDR</fullName>
+        <default>false</default>
+        <label>ICC-iCDR</label>
+    </customValue>
+    <customValue>
+        <fullName>IC-Dallas</fullName>
+        <default>false</default>
+        <label>IC-Dallas</label>
+    </customValue>
+    <customValue>
+        <fullName>IC-FCC</fullName>
+        <default>false</default>
+        <label>IC-FCC</label>
+    </customValue>
+    <customValue>
+        <fullName>IC-FCC2</fullName>
+        <default>false</default>
+        <label>IC-FCC2</label>
+    </customValue>
+    <customValue>
+        <fullName>IC-FCC3</fullName>
+        <default>false</default>
+        <label>IC-FCC3</label>
+    </customValue>
+    <customValue>
+        <fullName>IC-FCC4 SmartLDPA</fullName>
+        <default>false</default>
+        <label>IC-FCC4 SmartLDPA</label>
+    </customValue>
+    <customValue>
+        <fullName>IC-LDPA</fullName>
+        <default>false</default>
+        <label>IC-LDPA</label>
+    </customValue>
+    <customValue>
+        <fullName>IC-MSP430</fullName>
+        <default>false</default>
+        <label>IC-MSP430</label>
+    </customValue>
+    <customValue>
+        <fullName>IC-Omega LD/PA</fullName>
+        <default>false</default>
+        <label>IC-Omega LD/PA</label>
+    </customValue>
+    <customValue>
+        <fullName>Initialization</fullName>
+        <default>false</default>
+        <label>Initialization</label>
+    </customValue>
+    <customValue>
+        <fullName>Interoperability</fullName>
+        <default>false</default>
+        <label>Interoperability</label>
+    </customValue>
+    <customValue>
+        <fullName>Link Budget</fullName>
+        <default>false</default>
+        <label>Link Budget</label>
+    </customValue>
+    <customValue>
+        <fullName>MDIO</fullName>
+        <default>false</default>
+        <label>MDIO</label>
+    </customValue>
+    <customValue>
+        <fullName>Mechanical</fullName>
+        <default>false</default>
+        <label>Mechanical</label>
+    </customValue>
+    <customValue>
+        <fullName>N/A</fullName>
+        <default>false</default>
+        <label>N/A</label>
+    </customValue>
+    <customValue>
+        <fullName>NVR</fullName>
+        <default>false</default>
+        <label>NVR</label>
+    </customValue>
+    <customValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </customValue>
+    <customValue>
+        <fullName>Power Up Init Time</fullName>
+        <default>false</default>
+        <label>Power Up Init Time</label>
+    </customValue>
+    <customValue>
+        <fullName>Pre-emphasis/Gain settings</fullName>
+        <default>false</default>
+        <label>Pre-emphasis/Gain settings</label>
+    </customValue>
+    <customValue>
+        <fullName>Rate Select</fullName>
+        <default>false</default>
+        <label>Rate Select</label>
+    </customValue>
+    <customValue>
+        <fullName>Reliability</fullName>
+        <default>false</default>
+        <label>Reliability</label>
+    </customValue>
+    <customValue>
+        <fullName>RS-232 back door</fullName>
+        <default>false</default>
+        <label>RS-232 back door</label>
+    </customValue>
+    <customValue>
+        <fullName>RX APD</fullName>
+        <default>false</default>
+        <label>RX APD</label>
+    </customValue>
+    <customValue>
+        <fullName>RX PIN</fullName>
+        <default>false</default>
+        <label>RX PIN</label>
+    </customValue>
+    <customValue>
+        <fullName>RX TIA</fullName>
+        <default>false</default>
+        <label>RX TIA</label>
+    </customValue>
+    <customValue>
+        <fullName>Signal Integrity</fullName>
+        <default>false</default>
+        <label>Signal Integrity</label>
+    </customValue>
+    <customValue>
+        <fullName>SONET Standard</fullName>
+        <default>false</default>
+        <label>SONET Standard</label>
+    </customValue>
+    <customValue>
+        <fullName>TX Back Facet Monitor</fullName>
+        <default>false</default>
+        <label>TX Back Facet Monitor</label>
+    </customValue>
+    <customValue>
+        <fullName>TX CML</fullName>
+        <default>false</default>
+        <label>TX CML</label>
+    </customValue>
+    <customValue>
+        <fullName>TX DFB</fullName>
+        <default>false</default>
+        <label>TX DFB</label>
+    </customValue>
+    <customValue>
+        <fullName>TX Fabry-Perot</fullName>
+        <default>false</default>
+        <label>TX Fabry-Perot</label>
+    </customValue>
+    <customValue>
+        <fullName>TX VCSEL</fullName>
+        <default>false</default>
+        <label>TX VCSEL</label>
+    </customValue>
+    <customValue>
+        <fullName>WSS-Development/Qualification/Application</fullName>
+        <default>false</default>
+        <label>WSS-Development/Qualification/Application</label>
+    </customValue>
+    <customValue>
+        <fullName>WSS-Electronics/Communications</fullName>
+        <default>false</default>
+        <label>WSS-Electronics/Communications</label>
+    </customValue>
+    <customValue>
+        <fullName>WSS-Mechanical</fullName>
+        <default>false</default>
+        <label>WSS-Mechanical</label>
+    </customValue>
+    <customValue>
+        <fullName>WSS-Optical</fullName>
+        <default>false</default>
+        <label>WSS-Optical</label>
+    </customValue>
+    <customValue>
+        <fullName>WSS-Other</fullName>
+        <default>false</default>
+        <label>WSS-Other</label>
+    </customValue>
+    <customValue>
+        <fullName>General WSS</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>General WSS</label>
+    </customValue>
+    <description>Issue with on Case Object</description>
+    <masterLabel>Issue with</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

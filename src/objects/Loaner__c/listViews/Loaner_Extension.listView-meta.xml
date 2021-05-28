@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Loaner_Extension</fullName>
+    <booleanFilter>1 AND 2</booleanFilter>
+    <columns>NAME</columns>
+    <columns>Extend_To_Date__c</columns>
+    <columns>Est_Production_Date__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>Loaner_Requestor_Company__c</columns>
+    <columns>What_is_the_real_expected_date_for_quali__c</columns>
+    <columns>Since_receiving_loaners_what_have_we_d__c</columns>
+    <columns>What_engineering_tests_have_been_done__c</columns>
+    <columns>What_engineering_tests_still_need_to_be__c</columns>
+    <columns>Loaner_Extension_Created_On__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Loaner__c.Loaner_Extension</value>
+    </filters>
+    <filters>
+        <field>Status_Approval__c</field>
+        <operation>equals</operation>
+        <value>Pending Approval</value>
+    </filters>
+    <label>Loaner Extension</label>
+</ListView>

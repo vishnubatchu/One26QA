@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_Quote_Reason__c</fullName>
+    <externalId>false</externalId>
+    <label>No Quote Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <controllingField>Department__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Metallization/braze</fullName>
+                <default>false</default>
+                <label>Metallization/braze</label>
+            </value>
+            <value>
+                <fullName>UV Alignment</fullName>
+                <default>false</default>
+                <label>UV Alignment</label>
+            </value>
+            <value>
+                <fullName>Infrared alignment</fullName>
+                <default>false</default>
+                <label>Infrared alignment</label>
+            </value>
+            <value>
+                <fullName>Material</fullName>
+                <default>false</default>
+                <label>Material</label>
+            </value>
+            <value>
+                <fullName>Incompatible with Tooling</fullName>
+                <default>false</default>
+                <label>Incompatible with Tooling</label>
+            </value>
+            <value>
+                <fullName>Wavelength</fullName>
+                <default>false</default>
+                <label>Wavelength</label>
+            </value>
+            <value>
+                <fullName>Does not fit in coater</fullName>
+                <default>false</default>
+                <label>Does not fit in coater</label>
+            </value>
+            <value>
+                <fullName>Cannot be cleaned</fullName>
+                <default>false</default>
+                <label>Cannot be cleaned</label>
+            </value>
+            <value>
+                <fullName>Plastic</fullName>
+                <default>false</default>
+                <label>Plastic</label>
+            </value>
+            <value>
+                <fullName>cannot coat desired shape</fullName>
+                <default>false</default>
+                <label>cannot coat desired shape</label>
+            </value>
+            <value>
+                <fullName>Pulsed</fullName>
+                <default>false</default>
+                <label>Pulsed</label>
+            </value>
+            <value>
+                <fullName>x-y</fullName>
+                <default>false</default>
+                <label>x-y</label>
+            </value>
+            <value>
+                <fullName>thickness</fullName>
+                <default>false</default>
+                <label>thickness</label>
+            </value>
+            <value>
+                <fullName>grown near-net (dome)</fullName>
+                <default>false</default>
+                <label>grown near-net (dome)</label>
+            </value>
+            <value>
+                <fullName>thickness of MS-ZnS / HIP</fullName>
+                <default>false</default>
+                <label>thickness of MS-ZnS / HIP</label>
+            </value>
+            <value>
+                <fullName>Cosmetics</fullName>
+                <default>false</default>
+                <label>Cosmetics</label>
+            </value>
+            <value>
+                <fullName>Regulatory Requirements</fullName>
+                <default>false</default>
+                <label>Regulatory Requirements</label>
+            </value>
+            <value>
+                <fullName>Cryogenic</fullName>
+                <default>false</default>
+                <label>Cryogenic</label>
+            </value>
+            <value>
+                <fullName>Target Price</fullName>
+                <default>false</default>
+                <label>Target Price</label>
+            </value>
+            <value>
+                <fullName>Documentaiton Requirements</fullName>
+                <default>false</default>
+                <label>Documentaiton Requirements</label>
+            </value>
+            <value>
+                <fullName>PPAP</fullName>
+                <default>false</default>
+                <label>PPAP</label>
+            </value>
+            <value>
+                <fullName>EHS</fullName>
+                <default>false</default>
+                <label>EHS</label>
+            </value>
+            <value>
+                <fullName>Capacity</fullName>
+                <default>false</default>
+                <label>Capacity</label>
+            </value>
+            <value>
+                <fullName>Diffractive Designs</fullName>
+                <default>false</default>
+                <label>Diffractive Designs</label>
+            </value>
+            <value>
+                <fullName>Functional Tests</fullName>
+                <default>false</default>
+                <label>Functional Tests</label>
+            </value>
+            <value>
+                <fullName>Wavefront Testing</fullName>
+                <default>false</default>
+                <label>Wavefront Testing</label>
+            </value>
+            <value>
+                <fullName>MTF Testing</fullName>
+                <default>false</default>
+                <label>MTF Testing</label>
+            </value>
+            <value>
+                <fullName>Pwr/Irr too low</fullName>
+                <default>false</default>
+                <label>Pwr/Irr too low</label>
+            </value>
+            <value>
+                <fullName>Diameter too small</fullName>
+                <default>false</default>
+                <label>Diameter too small</label>
+            </value>
+            <value>
+                <fullName>Diameter too big</fullName>
+                <default>false</default>
+                <label>Diameter too big</label>
+            </value>
+            <value>
+                <fullName>Diameter tolerance</fullName>
+                <default>false</default>
+                <label>Diameter tolerance</label>
+            </value>
+            <value>
+                <fullName>CT too small</fullName>
+                <default>false</default>
+                <label>CT too small</label>
+            </value>
+            <value>
+                <fullName>CT too big</fullName>
+                <default>false</default>
+                <label>CT too big</label>
+            </value>
+            <value>
+                <fullName>CT tolerance</fullName>
+                <default>false</default>
+                <label>CT tolerance</label>
+            </value>
+            <value>
+                <fullName>Bevels too small</fullName>
+                <default>false</default>
+                <label>Bevels too small</label>
+            </value>
+            <value>
+                <fullName>Bevels too big</fullName>
+                <default>false</default>
+                <label>Bevels too big</label>
+            </value>
+            <value>
+                <fullName>Bevel tolerance</fullName>
+                <default>false</default>
+                <label>Bevel tolerance</label>
+            </value>
+            <value>
+                <fullName>Surface roughness too low</fullName>
+                <default>false</default>
+                <label>Surface roughness too low</label>
+            </value>
+            <value>
+                <fullName>Scr/Dig too low</fullName>
+                <default>false</default>
+                <label>Scr/Dig too low</label>
+            </value>
+            <value>
+                <fullName>Radius tolerance too tight</fullName>
+                <default>false</default>
+                <label>Radius tolerance too tight</label>
+            </value>
+            <value>
+                <fullName>Radius too steep</fullName>
+                <default>false</default>
+                <label>Radius too steep</label>
+            </value>
+            <value>
+                <fullName>Wedge tolerance</fullName>
+                <default>false</default>
+                <label>Wedge tolerance</label>
+            </value>
+            <value>
+                <fullName>Flats too small</fullName>
+                <default>false</default>
+                <label>Flats too small</label>
+            </value>
+            <value>
+                <fullName>Parrellism</fullName>
+                <default>false</default>
+                <label>Parrellism</label>
+            </value>
+            <value>
+                <fullName>Sag tolerance</fullName>
+                <default>false</default>
+                <label>Sag tolerance</label>
+            </value>
+            <value>
+                <fullName>Measurement Process of Pwr/Irr</fullName>
+                <default>false</default>
+                <label>Measurement Process of Pwr/Irr</label>
+            </value>
+            <value>
+                <fullName>Machine limitations</fullName>
+                <default>false</default>
+                <label>Machine limitations</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>DT</controllingFieldValue>
+            <controllingFieldValue>OF</controllingFieldValue>
+            <valueName>Material</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DT</controllingFieldValue>
+            <controllingFieldValue>OF</controllingFieldValue>
+            <valueName>Pwr/Irr too low</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DT</controllingFieldValue>
+            <controllingFieldValue>OF</controllingFieldValue>
+            <valueName>Diameter too big</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DT</controllingFieldValue>
+            <controllingFieldValue>OF</controllingFieldValue>
+            <valueName>CT too small</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DT</controllingFieldValue>
+            <controllingFieldValue>OF</controllingFieldValue>
+            <valueName>Surface roughness too low</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DT</controllingFieldValue>
+            <controllingFieldValue>OF</controllingFieldValue>
+            <valueName>Scr/Dig too low</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DT</controllingFieldValue>
+            <controllingFieldValue>OF</controllingFieldValue>
+            <valueName>Radius tolerance too tight</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DT</controllingFieldValue>
+            <valueName>Machine limitations</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DT</controllingFieldValue>
+            <controllingFieldValue>CTG</controllingFieldValue>
+            <controllingFieldValue>OF</controllingFieldValue>
+            <controllingFieldValue>CS</controllingFieldValue>
+            <controllingFieldValue>QA</controllingFieldValue>
+            <controllingFieldValue>CE</controllingFieldValue>
+            <controllingFieldValue>MQ</controllingFieldValue>
+            <controllingFieldValue>GSC</controllingFieldValue>
+            <controllingFieldValue>DMG</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CTG</controllingFieldValue>
+            <valueName>Incompatible with Tooling</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CTG</controllingFieldValue>
+            <valueName>Wavelength</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CTG</controllingFieldValue>
+            <valueName>Does not fit in coater</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CTG</controllingFieldValue>
+            <valueName>Cannot be cleaned</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CTG</controllingFieldValue>
+            <valueName>Plastic</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CTG</controllingFieldValue>
+            <valueName>cannot coat desired shape</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CTG</controllingFieldValue>
+            <valueName>Pulsed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OF</controllingFieldValue>
+            <valueName>Diameter too small</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OF</controllingFieldValue>
+            <valueName>Diameter tolerance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OF</controllingFieldValue>
+            <valueName>CT too big</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OF</controllingFieldValue>
+            <valueName>CT tolerance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OF</controllingFieldValue>
+            <valueName>Bevels too small</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OF</controllingFieldValue>
+            <valueName>Bevels too big</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OF</controllingFieldValue>
+            <valueName>Bevel tolerance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OF</controllingFieldValue>
+            <valueName>Radius too steep</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OF</controllingFieldValue>
+            <valueName>Wedge tolerance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OF</controllingFieldValue>
+            <valueName>Flats too small</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OF</controllingFieldValue>
+            <valueName>Parrellism</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OF</controllingFieldValue>
+            <valueName>Sag tolerance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OF</controllingFieldValue>
+            <valueName>Measurement Process of Pwr/Irr</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CS</controllingFieldValue>
+            <valueName>Metallization/braze</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CS</controllingFieldValue>
+            <valueName>UV Alignment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CS</controllingFieldValue>
+            <valueName>Infrared alignment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CE</controllingFieldValue>
+            <valueName>Diffractive Designs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CE</controllingFieldValue>
+            <valueName>Functional Tests</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CE</controllingFieldValue>
+            <valueName>Wavefront Testing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CE</controllingFieldValue>
+            <valueName>MTF Testing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MQ</controllingFieldValue>
+            <valueName>x-y</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MQ</controllingFieldValue>
+            <valueName>thickness</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MQ</controllingFieldValue>
+            <valueName>grown near-net (dome)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MQ</controllingFieldValue>
+            <valueName>thickness of MS-ZnS / HIP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MQ</controllingFieldValue>
+            <valueName>Cosmetics</valueName>
+        </valueSettings>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

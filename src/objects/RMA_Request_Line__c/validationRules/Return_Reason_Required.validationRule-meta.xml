@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Return_Reason_Required</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( ISBLANK(TEXT(Return_Reason__c) ) , ISNEW() )</errorConditionFormula>
+    <errorMessage>Return Reason Required on New RMA Lines</errorMessage>
+</ValidationRule>

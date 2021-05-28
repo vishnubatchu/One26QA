@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_Line_Items_Pending_Admin_Review_Erro</fullName>
+    <active>true</active>
+    <description>Error message to be thrown while creating new line items when status is pending admin review error</description>
+    <errorConditionFormula>AND(
+ISPICKVAL(RMA_Request__r.Status, &apos;Pending RMA Admin Review&apos;) ,
+ISNEW() 
+)</errorConditionFormula>
+    <errorMessage>New Line Items can not be added when Status is in Pending RMA Admin Review</errorMessage>
+</ValidationRule>

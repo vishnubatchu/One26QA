@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sales_Price_Reflects_Opp_Currency_Req</fullName>
+    <active>true</active>
+    <description>&quot;Sales Price reflects Opp. Currency&quot; checkbox field required if parent Opportunity: Opportunity Currency is NOT &quot;USD - U.S. Dollar&quot;.</description>
+    <errorConditionFormula>AND( NOT(ISPICKVAL(Opportunity.CurrencyIsoCode , &quot;USD&quot;)), 
+Sales_Price_reflects_Opp_Currency__c  = FALSE, ISPICKVAL($User.Legacy_Company__c,&apos;Marlow&apos;) )</errorConditionFormula>
+    <errorDisplayField>Sales_Price_reflects_Opp_Currency__c</errorDisplayField>
+    <errorMessage>Please check this box to confirm that the Sales Price you have entered (and any other monetary values you have entered on this record) reflects parent Opportunity: Opportunity Currency value.</errorMessage>
+</ValidationRule>

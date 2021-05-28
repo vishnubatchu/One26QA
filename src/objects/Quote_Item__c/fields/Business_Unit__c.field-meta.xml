@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Business_Unit__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( AND(Product__r.BU_Code__c == &apos;0040&apos;,NOT(  ISPICKVAL(Product__r.Product_Family__c, &apos;WSS-OIG&apos;)),NOT(ISPICKVAL(Product__r.Product_Family__c, &apos;WSS-OCM&apos;)  )), &apos;WSS&apos;, &apos;Non WSS&apos;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Business Unit</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

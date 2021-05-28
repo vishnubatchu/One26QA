@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Email_to_RSM_on_Opportunity_Closed_Won</fullName>
+        <description>Email to RSM on Opportunity Closed Won</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Team Member</recipient>
+            <type>opportunityTeam</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/SUPPORTNewassignmentnotificationSAMPLE</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_Email_to_Salesteam</fullName>
+        <description>Send Email to Salesteam</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Team Member</recipient>
+            <type>opportunityTeam</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Opportunity_Email_Templates/DR_Expiration_Alert_before_30_Days</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_Email_to_Salesteam_on_DR_Rejection</fullName>
+        <ccEmails>skaja@huronconsultinggroup.com</ccEmails>
+        <description>Send Email to Salesteam on DR Rejection</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Team Member</recipient>
+            <type>opportunityTeam</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Opportunities_Email_Templates/DR_Rejection_Notification</template>
+    </alerts>
+    <alerts>
+        <fullName>sendEmailfor_DuplicateDRs</fullName>
+        <description>sendEmailfor DuplicateDRs</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Team Member</recipient>
+            <type>opportunityTeam</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Opportunity_Email_Templates/DR_Submission_Template</template>
+    </alerts>
+    <alerts>
+        <fullName>sendEmailto_Admin</fullName>
+        <description>sendEmailto Admin</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Admin</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Fault_Email</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Automated_Opportunity_Naming_Convention</fullName>
+        <description>Automatically inserts Account Name + SF Opportunity Number + Close Date + Project name field values into the Opportunity: Opportunity Name field.</description>
+        <field>Name</field>
+        <formula>Account.Name &amp; &quot;_&quot; &amp; Opportunity_Number__c &amp; &quot;_&quot; &amp; TEXT(CloseDate) &amp; &quot;_&quot; &amp;  Project_Name__c</formula>
+        <name>Automated Opportunity Naming Convention</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Opportunity_Expiration_Date</fullName>
+        <field>Expiration_Date__c</field>
+        <formula>ADDMONTHS(Submitted_Date__c , 6)</formula>
+        <name>Opportunity Expiration Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Opportunity_Expiration_Date_After_Renew</fullName>
+        <field>Expiration_Date__c</field>
+        <formula>ADDMONTHS(LastModifiedDate  ,6)</formula>
+        <name>Opportunity Expiration Date After Renew</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Opportunity_Renewed_Date</fullName>
+        <field>Renewed_Date__c</field>
+        <formula>LastModifiedDate</formula>
+        <name>Opportunity Renewed Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_DR_Rejected_Status</fullName>
+        <field>DR_Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Update DR Rejected Status</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_DR_Status</fullName>
+        <field>DR_Status__c</field>
+        <literalValue>Approved</literalValue>
+        <name>Update DR Status</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Opp_Close_Date</fullName>
+        <field>CloseDate</field>
+        <formula>TODAY()</formula>
+        <name>Update Opp Close Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Opp_Pay_Terms</fullName>
+        <description>Updates Opportunity Payment Terms to match default on the Account</description>
+        <field>Terms__c</field>
+        <formula>Account.Payment_Terms__c</formula>
+        <name>Update Opp Pay Terms</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Oppty_Submit_Date</fullName>
+        <field>Submitted_Date__c</field>
+        <formula>Renewed_Date__c</formula>
+        <name>Update Oppty Submit Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>updatedPreviousclosedate</fullName>
+        <field>CloseDate</field>
+        <formula>PRIORVALUE( CloseDate )</formula>
+        <name>updatedPreviousclosedate</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>DR Expiration Alert before 30 Days</fullName>
+        <active>true</active>
+        <criteriaItems>
+            <field>Opportunity.Design_Registration__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>notEqual</operation>
+            <value>Won,Lost/Project Cancelled</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Send_Email_to_Salesteam</name>
+                <type>Alert</type>
+            </actions>
+            <offsetFromField>Opportunity.Expiration_Date__c</offsetFromField>
+            <timeLength>-30</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>DR Rejection Notification</fullName>
+        <actions>
+            <name>Send_Email_to_Salesteam_on_DR_Rejection</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Opportunity.Design_Registration__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.DR_Status__c</field>
+            <operation>equals</operation>
+            <value>Lost/Cancelled,Rejected</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Opp Close Date</fullName>
+        <actions>
+            <name>Update_Opp_Close_Date</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>IsClosed</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Opp Payment Terms</fullName>
+        <actions>
+            <name>Update_Opp_Pay_Terms</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.Payment_Terms__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.Terms__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Opportunity Name NOT NULL</fullName>
+        <actions>
+            <name>Automated_Opportunity_Naming_Convention</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Opportunity.Name</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <description>Opportunity Name field is NOT EQUAL TO NULL.</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update Expiration Date -Six Months After Renewed Date</fullName>
+        <actions>
+            <name>Opportunity_Expiration_Date_After_Renew</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Opportunity_Renewed_Date</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Opportunity.Design_Registration__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.Submitted_Date__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <description>If users change anything after submitting the DR, the date those changes were made will be the renewed date, and the expiration date will be updated to six months after the renewed date</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update Expiration Date -Six Months After Submitted Date</fullName>
+        <actions>
+            <name>Opportunity_Expiration_Date</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.Design_Registration__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.Submitted_Date__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <description>The expiration date on a submitted DR should be set to six months after the submitted date</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>UpdateClosedate</fullName>
+        <actions>
+            <name>updatedPreviousclosedate</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Opportunity.IsClosed</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+</Workflow>

@@ -1,0 +1,36 @@
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickActionWithoutHeader,force:appHostable,lightning:isUrlAddressable" controller="FAFVCustomUI" access="global" >
+    <aura:attribute name="recID" type= "String" />
+    <aura:attribute name = "soNumber" type = "String"/>
+    <aura:handler name="init" action="{!c.doInit}" value="{!this}" description="Call doInit function on component load to get picklist values"/>
+    <lightning:workspaceAPI aura:id="workspace"/>
+    <aura:html tag="style">
+    </aura:html>
+    <div class="slds-grid slds-grid_vertical slds-size_1-of-1 slds-p-around--xx-small" style="background-color :#223f68 ;margin-top:-4%;">
+        <div class="slds-col--padded slds-size_1-of-1  slds-m-bottom--x-small">
+           <div class="slds-grid slds-size_3-of-3">
+            <div class="slds-size_1-of-3 slds-text-align_left">  
+                 <div class="slds-grid slds-size_1-of-2">
+               		  <div class=" slds-size_.5-of-2 slds-m-right--large slds-text-align_left slds-wrap">  
+                          <lightning:button onclick="{!c.openFVFA}">
+                          Select
+                          </lightning:button>
+               			 </div>
+                		<div class="slds-size_.5-of-2  slds-wrap">  
+                		<lightning:button label="Clone" onclick="{!c.cloneFVFA}"/>
+               			</div>
+              	  </div>
+             </div>
+              
+            <div class="slds-size_1-of-3 slds-text-align_center">
+                <h4 class="title slds-text-heading--medium" style="color: white;  font-size: 22px; font-weight: bold;" >FV/FA for {!v.soNumber}</h4>
+            </div>
+            <div class="slds-size_1-of-3 slds-text-align_right">
+                <lightning:button label="Close" onclick="{!c.closeUi}"/>
+           </div>
+           </div>
+        </div>
+        <div class='slds-col--padded slds-size_1-of-1'>
+            <c:FAFVCustomUICMP1 aura:id='childCmp1'  /> 
+        </div >
+    </div>
+</aura:component>

@@ -1,0 +1,15 @@
+<apex:page standardController="OpportunityLineItem" extensions="AddRatePlanController">
+  <apex:form >
+  <apex:pageBlock >
+      <apex:pageMessages />
+  <apex:commandButton value="Add New" action="{!addNewRow}"/>
+    <apex:commandButton value="Save" action="{!saveAction}"/>
+    <apex:commandButton value="Cancel" action="{!CancelAction}"/>
+      <apex:pageBlockTable value="{!ratePlans}" var="rate">
+          <apex:column headerValue="Quantity" ><apex:inputField value="{!rate.SequenceNumber__c}" /> </apex:column>
+          <apex:column headerValue="Sales Price" ><apex:inputField value="{!rate.SalesPrice__c}" /> </apex:column>
+          <apex:column headerValue="Lead Time" ><apex:inputField value="{!rate.LeadTime__c}"/> </apex:column>
+       </apex:pageBlockTable>
+  </apex:pageBlock>
+  </apex:form>
+</apex:page>

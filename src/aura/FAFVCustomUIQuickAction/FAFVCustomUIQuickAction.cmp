@@ -1,0 +1,11 @@
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickActionWithoutHeader,force:appHostable,lightning:isUrlAddressable">
+    <aura:attribute name="pageReference" type="Object"/>
+    <aura:attribute name="recordId" type="String" />
+    <aura:handler name="init" value="{! this }" action="{! c.init }"/>
+    <!--lightning:navigation aura:id="navService"/-->
+    <!--aura:attribute name="myBool" type="Boolean" default="true"/-->
+    <!--aura:handler name="change" value="{!v.myBool}" action="{!c.handleClick}"/-->
+   <!--Added by Surendar -->
+    <lightning:workspaceAPI aura:id="workspace" />
+     
+</aura:component>

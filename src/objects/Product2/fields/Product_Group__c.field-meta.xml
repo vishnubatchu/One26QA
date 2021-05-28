@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Group__c</fullName>
+    <externalId>false</externalId>
+    <label>Product Group</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>10 GIG</fullName>
+                <default>false</default>
+                <label>10 GIG</label>
+            </value>
+            <value>
+                <fullName>100 GIG</fullName>
+                <default>false</default>
+                <label>100 GIG</label>
+            </value>
+            <value>
+                <fullName>16-32 GIG</fullName>
+                <default>false</default>
+                <label>16-32 GIG</label>
+            </value>
+            <value>
+                <fullName>200 GIG</fullName>
+                <default>false</default>
+                <label>200 GIG</label>
+            </value>
+            <value>
+                <fullName>3D SENSORS</fullName>
+                <default>false</default>
+                <label>3D SENSORS</label>
+            </value>
+            <value>
+                <fullName>40 GIG</fullName>
+                <default>false</default>
+                <label>40 GIG</label>
+            </value>
+            <value>
+                <fullName>400 GIG</fullName>
+                <default>false</default>
+                <label>400 GIG</label>
+            </value>
+            <value>
+                <fullName>&lt;10 GIG</fullName>
+                <default>false</default>
+                <label>&lt;10 GIG</label>
+            </value>
+            <value>
+                <fullName>ACCESSORIES</fullName>
+                <default>false</default>
+                <label>ACCESSORIES</label>
+            </value>
+            <value>
+                <fullName>AMPLIFIER</fullName>
+                <default>false</default>
+                <label>AMPLIFIER</label>
+            </value>
+            <value>
+                <fullName>ANALOG</fullName>
+                <default>false</default>
+                <label>ANALOG</label>
+            </value>
+            <value>
+                <fullName>ANALOG-ISR</fullName>
+                <default>false</default>
+                <label>ANALOG-ISR</label>
+            </value>
+            <value>
+                <fullName>ANALOG-US</fullName>
+                <default>false</default>
+                <label>ANALOG-US</label>
+            </value>
+            <value>
+                <fullName>CATV</fullName>
+                <default>false</default>
+                <label>CATV</label>
+            </value>
+            <value>
+                <fullName>CDAUI-16</fullName>
+                <default>false</default>
+                <label>CDAUI-16</label>
+            </value>
+            <value>
+                <fullName>CDAUI-8</fullName>
+                <default>false</default>
+                <label>CDAUI-8</label>
+            </value>
+            <value>
+                <fullName>LW/SONET MODULE</fullName>
+                <default>false</default>
+                <label>LW/SONET MODULE</label>
+            </value>
+            <value>
+                <fullName>OPT COMPS-OTHER</fullName>
+                <default>false</default>
+                <label>OPT COMPS-OTHER</label>
+            </value>
+            <value>
+                <fullName>OPT COMPS-TRX</fullName>
+                <default>false</default>
+                <label>OPT COMPS-TRX</label>
+            </value>
+            <value>
+                <fullName>PASSIVES</fullName>
+                <default>false</default>
+                <label>PASSIVES</label>
+            </value>
+            <value>
+                <fullName>ROADM</fullName>
+                <default>false</default>
+                <label>ROADM</label>
+            </value>
+            <value>
+                <fullName>SW MODULES</fullName>
+                <default>false</default>
+                <label>SW MODULES</label>
+            </value>
+            <value>
+                <fullName>SWMODULES</fullName>
+                <default>false</default>
+                <label>SWMODULES</label>
+            </value>
+            <value>
+                <fullName>WDMMODULES</fullName>
+                <default>false</default>
+                <label>WDMMODULES</label>
+            </value>
+            <value>
+                <fullName>NETWORK TOOLS</fullName>
+                <default>false</default>
+                <label>NETWORK TOOLS</label>
+            </value>
+            <value>
+                <fullName>LWMODULES</fullName>
+                <default>false</default>
+                <label>LWMODULES</label>
+            </value>
+            <value>
+                <fullName>ACTIVES</fullName>
+                <default>false</default>
+                <label>ACTIVES</label>
+            </value>
+            <value>
+                <fullName>25 GIG</fullName>
+                <default>false</default>
+                <label>25 GIG</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

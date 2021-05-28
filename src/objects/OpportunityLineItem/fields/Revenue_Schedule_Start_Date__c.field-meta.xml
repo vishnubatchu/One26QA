@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Revenue_Schedule_Start_Date__c</fullName>
+    <description>Earliest date listed on the Opportunity Product Revenue Schedule.</description>
+    <externalId>false</externalId>
+    <label>Revenue Schedule Start Date</label>
+    <required>false</required>
+    <type>Date</type>
+</CustomField>

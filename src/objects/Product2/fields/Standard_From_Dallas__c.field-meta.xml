@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Standard_From_Dallas__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Dallas -01 standard</description>
+    <externalId>false</externalId>
+    <inlineHelpText>If this box is checked the standard cost showing came from -01 Dallas Glovia</inlineHelpText>
+    <label>Standard From Dallas</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

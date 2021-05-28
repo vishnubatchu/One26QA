@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>WDMMODULES Owner</label>
+    <protected>false</protected>
+    <values>
+        <field>End_Customer__c</field>
+        <value xsi:type="xsd:string">ALIBABA (CHINA) LTD.</value>
+    </values>
+    <values>
+        <field>Form_Factor__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Location__c</field>
+        <value xsi:type="xsd:string">WXI</value>
+    </values>
+    <values>
+        <field>Marketing_Family__c</field>
+        <value xsi:type="xsd:string">FTLX6871MCC</value>
+    </values>
+    <values>
+        <field>Owner__c</field>
+        <value xsi:type="xsd:string">jack.wang@finisar.com</value>
+    </values>
+    <values>
+        <field>Product_Group__c</field>
+        <value xsi:type="xsd:string">WDMMODULES</value>
+    </values>
+    <values>
+        <field>Product__c</field>
+        <value xsi:nil="true"/>
+    </values>
+</CustomMetadata>

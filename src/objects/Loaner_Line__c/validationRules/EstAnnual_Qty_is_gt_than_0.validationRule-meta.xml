@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EstAnnual_Qty_is_gt_than_0</fullName>
+    <active>true</active>
+    <errorConditionFormula>Est_Annual_Qty__c &lt; 0</errorConditionFormula>
+    <errorDisplayField>Est_Annual_Qty__c</errorDisplayField>
+    <errorMessage>Est Annual Qty should be greater than 0</errorMessage>
+</ValidationRule>

@@ -1,0 +1,50 @@
+<aura:component implements="force:hasRecordId" access="global" controller ="FAFVCustomUI" >    
+    <aura:attribute name="StepInstance" type="Steps__c" default="{'sobjectType':'Steps__c','Name':'','FA_FV__c':'','FA_Findings__c':'','Comments__c':'','FA_Steps_Description_FA_Steps__c':''}" />
+    <aura:attribute name="rowIndex" type="Integer" default="0"/>
+    <aura:attribute name ="orderIDs" type ="string" />
+    <aura:registerEvent name="DeleteRowEvt" type="c:DeleteRowEvt"/> 
+    <aura:registerEvent name="AddRowEvt" type="c:AddNewRowEvt"/> 
+    <aura:registerEvent name="lightningEvent" type="c:RefreshSerialNumberUI"/>
+    <aura:attribute name ="showDelet" type ="boolean" default="true" />
+    <aura:attribute name ="editMods" type ="string"  />
+    <aura:attribute name="fieldsArray" type="String[]"
+                    default="['Name','FA_Steps_Description_FA_Steps__c']" />
+    
+    <aura:if isTrue="{!v.editMods =='view'}">
+        <div>
+            <aura:if isTrue ="{!v.showDelet}">
+                <a data-value="{!v.StepInstance.Id}" onclick="{!c.removeRow}">
+                    <lightning:icon variant="error" iconName="utility:delete" class="slds-icon slds-icon_small" size="small" alternativeText="icon"/>
+                    <span class="slds-assistive-text">Delete Icon</span>
+                </a>
+            </aura:if>
+        </div>
+         <div style='width: 96%;'>
+            <lightning:recordForm aura:id="recordForm"
+                                  recordId="{!v.StepInstance.Id}"
+                                  objectApiName="Steps__c"
+                                  mode='{!v.editMods}'
+                                  onsubmit="{!c.handleSubmit}" 
+                                  onsuccess = "{!c.refreshParent}"
+                                  fields='{!v.fieldsArray}' />
+        </div>
+    </aura:if>
+    <aura:if isTrue="{!v.editMods =='readonly'}">
+        
+        <div class='slds-col slds-size_1-of-1'>
+            <lightning:recordEditForm aura:id="recordForm"
+                                      recordId="{!v.StepInstance.Id}"
+                                      objectApiName="Steps__c" >
+                <div class='slds-grid slds-grid_vertical'>
+                    <div class='slds-col slds-size_1-of-1' style="width:96%;">
+                        <lightning:outputField  fieldName='Name' disabled='true'/>
+                    </div>
+                    <div class='slds-col slds-size_1-of-1' style="width:96%;">    
+                        <lightning:outputField fieldName='FA_Steps_Description_FA_Steps__c'  disabled ='true'/>
+                    </div>
+                </div>
+            </lightning:recordEditForm>
+            
+        </div>           
+    </aura:if>
+</aura:component>

@@ -1,0 +1,131 @@
+<aura:component  Implements="force:hasRecordId" controller="FAFVCustomUI">
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:handler name="DeleteRowEvt" event="c:DeleteRowEvt" action="{!c.removeDeletedRow}"/>
+    <aura:handler name="AddRowEvt" event="c:AddNewRowEvt" action="{!c.addNewRow}"/>
+    <aura:attribute name="serialList" type="FA_FV_Detail__c[]" />
+    <aura:attribute name="selectedSerialNo" type="list"/>
+    <aura:attribute name="AllserialList" type="list"/>
+    <aura:attribute name="recID" type="string"/> 
+    <aura:attribute name="orderIDs" type="string"/>
+    <aura:attribute name="SLAFieldName" type="Integer" default="0"/>
+    <aura:registerEvent name="lightningEvent" type="c:RefreshSerialNumberUI"/>
+   
+    
+    <div >
+        <div class="slds-col modal-body   slds-p-around--medium" style=" overflow:auto; padding: 0rem ">
+            <div >
+                
+                <table class="slds-table slds-table_bordered slds-table_cell-buffer slds-scrollable"> 
+                    <thead>
+                        <tr class="slds-text-title_caps slds-box slds-box_x-small slds-text-align_center slds-m-around_x-small">
+                            <th scope="col" style=" cursor: pointer">
+                                <!-- <button class="slds-button slds-button_brand" style="width:10px" onclick="{!c.openModel}"></button> -->
+                                <lightning:icon iconName="utility:add" alternativeText="Click to Call" size="small" onclick="{!c.openModel}"/>                         
+                            </th>
+                            <th scope="col" style="padding-left: 46px;    padding-right: 46px;">
+                                <div class="slds-truncate" title="Serial Number" style="width:100%">Serial Number</div>
+                            </th>
+                            
+                            <th scope="col">
+                                <div class="slds-truncate"  title="FA Completion Date">Completion Date</div>
+                            </th>
+                             <th scope="col" style="padding-left: 11px;    padding-right: 19px;">
+                                <div class="slds-truncate" title="Status">Detail Status </div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-truncate" title="Traceability Information ">Traceability Info</div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-truncate" title="Lane">Lane</div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-truncate" title="Operating Time">Operating Time</div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-truncate" title="Component Description ">Component Desc</div>
+                            </th>
+                            <th scope="col" >
+                                <div class="slds-truncate" title="FA / FV Notes">FA / FV Notes</div>
+                            </th>
+                            <!--th scope="col" style="padding-left: 20px;    padding-right: 20px;">
+                                <div class="slds-truncate" title="FA / FV Notes">Suppliers</div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-truncate" title="Vendor Name">Vendor Name</div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-truncate" title="Relevant Vendor Contact">Vendor Contact</div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-truncate" title="Vendor Ship-to addres">Vendor Address</div>
+                            </th>
+                            <th scope="col" style="padding-left: 26px;    padding-right: 20px;">
+                                <div  class="slds-truncate" title="SLA">SLA</div>
+                            </th-->
+                        </tr>
+                    </thead> 
+                    <tbody>
+                        
+                        <c:MultiSerialNumberPaginationParent  recId='{!v.recID}' orderIDs='{!v.orderIDs}' FAFVDetailslist='{!v.serialList}'/>
+                        
+                        <tr><td></td><td></td><td></td>
+                            <lightning:button class="slds-text-algin_center" name="Save" label="Save" onclick="{!c.saveRecord}"/>
+                            <td></td><td></td><td></td>
+                        </tr>
+                    </tbody>
+                </table>
+   		       <br/>
+            </div>
+        </div>
+    </div>
+    <div id = "spinnerDiv1">
+        <lightning:spinner variant="brand" size = "large" aura:id = "sps1" class="slds-hide"/>
+    </div> 
+    <!--  Select Related Serial No Model --> 
+    
+    <div aura:id="openSelectSerialNo"> 
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container" >
+                <header class="slds-modal__header">
+                    <lightning:buttonIcon iconName="utility:close"
+                                          onclick="{! c.closeModel }"
+                                          alternativeText="close"
+                                          variant="bare-inverse"
+                                          class="slds-modal__close"/>
+                </header>
+                <aura:if isTrue='{!v.AllserialList.length >0}'>
+                    <div aura:id="showSerialNo" class="slds-modal__content slds-p-around_medium" style = "height : 300px" id="modal-content-id-1">
+                        <lightning:dualListbox aura:id="selectSerialNo"
+                                               name="SerialNo"
+                                               label="Select Serial Number"
+                                               sourceLabel="Available Serial Number"
+                                               selectedLabel="Selected Serial Number"
+                                               options="{!v.AllserialList}" 
+                                               value="{!v.selectedSerialNo}"
+                                               onchange="{!c.handleSerialNoChange}"/>
+                    </div>
+                    
+                    <footer class="slds-modal__footer">
+                        <lightning:button variant="neutral" 
+                                          label="Cancel"
+                                          title="Cancel"
+                                          onclick="{! c.closeModel }"/>
+                        <lightning:button variant="brand" 
+                                          label="Save"
+                                          title="Save"
+                                          onclick="{!c.addNewRow}"/>
+                    </footer>
+                </aura:if>
+                <aura:if isTrue='{!v.AllserialList.length ==0}'>
+                    <div aura:id="showMsg" class="slds-modal__content slds-p-around_small" style = "height : 70px;left:700px" id="modal-content-id-1">
+                        <h1>All Serial Number's are tagged.</h1> 
+                    </div>
+                    
+                </aura:if>
+                
+                
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </div>
+</aura:component>

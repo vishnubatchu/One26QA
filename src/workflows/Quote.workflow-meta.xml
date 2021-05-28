@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Email_Alert_For_Distibutor_Contact_oh_Ship_and_Debit_Updation</fullName>
+        <description>Email Alert For Distibutor Contact oh Ship and Debit Updation</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Distributor_Contact__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Quote_Email_Templates/Quote_DistributorContact_Mail</template>
+    </alerts>
+    <alerts>
+        <fullName>Email_To_Quote_Creator_when_quote_is_cancelled</fullName>
+        <description>Email To Quote Creator when quote is cancelled</description>
+        <protected>false</protected>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Quote_Email_Templates/Quote_Notification_to_Creator_cancelled</template>
+    </alerts>
+    <alerts>
+        <fullName>Quote_Integration_Email_Alert</fullName>
+        <description>Quote Integration Email Alert</description>
+        <protected>false</protected>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Quote_Email_Templates/Quote_Integration_Email_Template</template>
+    </alerts>
+    <alerts>
+        <fullName>Quote_S_D_End_Dated</fullName>
+        <description>Quote S&amp;D End Dated</description>
+        <protected>false</protected>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <senderAddress>fnsrcrm@finisar.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Quote_Email_Templates/Quote_S_D_Update_Notification_for_Past</template>
+    </alerts>
+    <alerts>
+        <fullName>Quote_S_D_Extension</fullName>
+        <description>Quote S&amp;D Extension</description>
+        <protected>false</protected>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <recipients>
+            <field>Owner_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Quote_Email_Templates/Quote_S_D_Update_Notification</template>
+    </alerts>
+    <alerts>
+        <fullName>Quote_S_D_Number_Updated</fullName>
+        <description>Quote S&amp;D Number Updated</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Distributor_Contact__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Quote_Email_Templates/Quote_S_D_Number_Updated_Notification</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_Email_to_Quote_Creator</fullName>
+        <description>Send Email to Quote Creator</description>
+        <protected>false</protected>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Quote_Email_Templates/Quote_Notification_To_Creator</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_Email_to_Quote_Creator_when_Ship_And_Debit_Apporved</fullName>
+        <description>Send Email to Quote Creator when Ship And Debit Apporved</description>
+        <protected>false</protected>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Quote_Email_Templates/Quote_S_D_Number_Updated_Notification</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_Quote_to_Creator_When_Status_is_Order_Received</fullName>
+        <description>Send Quote to Creator When Status is Order Received</description>
+        <protected>false</protected>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Quote_Email_Templates/Quote_to_User_Cycle_complete</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_S_D_Reminder_Email</fullName>
+        <ccEmails>surendar.ch@ii-vi.com</ccEmails>
+        <description>Send S &amp; D Reminder Email</description>
+        <protected>false</protected>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <senderAddress>fnsrcrm@finisar.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Quote_Email_Templates/SD_Quote_Reminder</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Default_Delivery_Charge_for_UK_Sales</fullName>
+        <field>Delivery_Charge__c</field>
+        <formula>15</formula>
+        <name>Default Delivery Charge for UK Sales</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Highyag_VAT_Pct_Update</fullName>
+        <field>Highyag_VAT_Pct__c</field>
+        <formula>Opportunity.Account.Highyag_VAT_Rate__c</formula>
+        <name>Highyag VAT Pct Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Margin_Update</fullName>
+        <field>Margin__c</field>
+        <formula>Opportunity.Margin__c</formula>
+        <name>Margin Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Delivery_Terms_Update</fullName>
+        <field>Delivery_Terms__c</field>
+        <formula>Opportunity.Account.Delivery_Terms__c</formula>
+        <name>Set Delivery Terms Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_ITAR_Language_for_Quote</fullName>
+        <description>Update ITAR Language field with ITAR quotation terms.  This text will appear on customer quotation template, if it is an ITAR part.</description>
+        <field>ITAR_Language__c</field>
+        <formula>&quot;This product is controlled by the U.S. International Traffic in Arms Regulations which requires that an export license be obtained for the shipment of hardware and technical data and a Technical Assistance Agreement for the transfer of information.  MI will be required to submit an End Use statement for an export license per the following attachment entitled &apos;Suggested End Use Statement for Marlow Industries&apos; Thermoelectric Cooler Products&apos;.  When issuing a purchase order, please include the End Use statement with order.  Export Licenses typically take between 6-10 weeks to obtain from the date when MI receives an acceptable End Use Statement and a Purchase Order.&quot;</formula>
+        <name>Update ITAR Language for Quote</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Integration_Status_as_Pending</fullName>
+        <field>Integration_Status__c</field>
+        <literalValue>Integration Pending</literalValue>
+        <name>Update Integration Status as Pending</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Name_Field</fullName>
+        <field>Name</field>
+        <formula>Account__r.Name +&apos;-Quote&apos;</formula>
+        <name>Update Name Field</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Quote_Status_To_Order_Received</fullName>
+        <field>Status</field>
+        <literalValue>Order Received</literalValue>
+        <name>Update Quote Status To Order Received</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Quote_Terms</fullName>
+        <description>Pulls the opportunity terms</description>
+        <field>Terms__c</field>
+        <formula>Opportunity.Terms__c</formula>
+        <name>Update Quote Terms</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Record_Type_To_Quote_Record_Type</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>Quote_Record_Type</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Update Record Type To Quote Record Type</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Record_Type_To_Read_Only</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>Quote_Read_Only</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Update Record Type To Read Only</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Record_Type_To_Read_Only_S_D</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>Quote_Read_Only</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Update Record Type To Read Only</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Status_To_Pending_Approval</fullName>
+        <field>Status</field>
+        <literalValue>Approval Pending</literalValue>
+        <name>Update Status To Pending Approval</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Status_to_Approval_Cycle_Complete</fullName>
+        <field>Status</field>
+        <literalValue>Approval Cycle Completed</literalValue>
+        <name>Update Status to Approval Cycle Complete</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Status_to_Integration_Pending</fullName>
+        <field>Integration_Status__c</field>
+        <literalValue>Integration Pending</literalValue>
+        <name>Update Status to Integration Pending</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Status_to_Integration_Pending_S_D</fullName>
+        <field>Integration_Status__c</field>
+        <literalValue>Integration Pending</literalValue>
+        <name>Update Status to Integration Pending</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_quote_Status_To_Rejected</fullName>
+        <field>Status</field>
+        <literalValue>Rejected</literalValue>
+        <name>Update quote Status To Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_quote_status_approval_date</fullName>
+        <field>Quote_Status_Approval_Pending_Date__c</field>
+        <formula>Now()</formula>
+        <name>Update quote status approval date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_status_to_ship_and_debit</fullName>
+        <field>Status</field>
+        <literalValue>Ship_Debit_Approved</literalValue>
+        <name>Update status to Ship and Debit Appr</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Approval Cycle Completed</fullName>
+        <actions>
+            <name>Update_Status_to_Approval_Cycle_Complete</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>AND(  ISCHANGED( Count_Of_Line_Items_Fields_Not_Approved__c ),  Count_Of_Line_Items_Fields_Not_Approved__c = 0,  Count_of_line_Status_Not_in_Approval__c = 0 ,  ISPICKVAL( Type_of_Pricing__c ,&apos;Fixed - One Time Order&apos;),   Count_Of_Line_Items__c &gt;0 ,  Count_Of_Line_Item_Status_Rejected__c &gt;=0,  Count_of_Line_Items_Approved__c &gt; 0,  Count_Of_Line_Item_Status_Rejected__c != Count_Of_Line_Items__c )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Default Delivery Charge</fullName>
+        <actions>
+            <name>Default_Delivery_Charge_for_UK_Sales</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>User.UserRoleId</field>
+            <operation>equals</operation>
+            <value>UK Sales</value>
+        </criteriaItems>
+        <description>Evaluate if role = UK Sales so that field update will then assign the default as 15.00.</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>ITAR Quote</fullName>
+        <actions>
+            <name>Update_ITAR_Language_for_Quote</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Quote.Custom_or_modified_part_for_defense__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Quote.Template_Name__c</field>
+            <operation>equals</operation>
+            <value>ITAR</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Opportunity Margin Pull-In</fullName>
+        <actions>
+            <name>Margin_Update</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Quote.CreatedDate</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <description>Pulling the opportunity margin onto the quote record.</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Quote Payment Terms</fullName>
+        <actions>
+            <name>Update_Quote_Terms</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Opportunity.Terms__c</field>
+            <operation>greaterThan</operation>
+            <value>0</value>
+        </criteriaItems>
+        <description>Will pull the payment terms from the opportunity.</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Send Reminder Email 1 month before SND Expiration date</fullName>
+        <active>true</active>
+        <criteriaItems>
+            <field>Quote.S_D_End_Date__c</field>
+            <operation>greaterThan</operation>
+            <value>TODAY</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Quote.Type_of_Pricing__c</field>
+            <operation>equals</operation>
+            <value>Dist Quote</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Send_S_D_Reminder_Email</name>
+                <type>Alert</type>
+            </actions>
+            <offsetFromField>Quote.S_D_End_Date__c</offsetFromField>
+            <timeLength>-30</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Set Delivery Terms</fullName>
+        <actions>
+            <name>Set_Delivery_Terms_Update</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Quote.Delivery_Terms__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update Integration Status On S D Extension</fullName>
+        <actions>
+            <name>Update_Integration_Status_as_Pending</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Quote.S_D_Extension_flag__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Quote.Type_of_Pricing__c</field>
+            <operation>equals</operation>
+            <value>Dist Quote</value>
+        </criteriaItems>
+        <description>Update Integration status to integration pending when there is extension in S &amp; D quote</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update Line Items To Approval Rejected</fullName>
+        <actions>
+            <name>Update_Record_Type_To_Quote_Record_Type</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_quote_Status_To_Rejected</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>AND( ISCHANGED( Count_Of_Line_Item_Status_Rejected__c ), Count_Of_Line_Item_Status_Rejected__c ==  Count_Of_Line_Items__c  )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update Quote Name</fullName>
+        <actions>
+            <name>Update_Name_Field</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>Account__c  &lt;&gt;  null</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update Quote Status To Pending Approval</fullName>
+        <actions>
+            <name>Update_Record_Type_To_Read_Only</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_Status_To_Pending_Approval</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_quote_status_approval_date</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>AND( ISCHANGED( Count_Of_Line_Items_Pending_Approval__c ), Count_Of_Line_Items_Pending_Approval__c &gt;0, Count_Of_Line_Items__c=Count_Of_Line_Items_Pending_Approval__c+Count_of_Line_Items_Approved__c)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update Quote Status To Ship and Debit Approved</fullName>
+        <actions>
+            <name>Update_Record_Type_To_Read_Only_S_D</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_Status_to_Integration_Pending_S_D</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_status_to_ship_and_debit</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>AND(  ISCHANGED( Count_Of_Line_Items_Fields_Not_Approved__c ),  Count_Of_Line_Items_Fields_Not_Approved__c = 0,  Count_of_line_Status_Not_in_Approval__c = 0 ,  ISPICKVAL( Type_of_Pricing__c ,&apos;Dist Quote&apos;),  Count_Of_Line_Items__c &gt;0 , Count_Of_Line_Item_Status_Rejected__c &gt;=0, Count_of_Line_Items_Approved__c &gt; 0, Count_Of_Line_Item_Status_Rejected__c != Count_Of_Line_Items__c )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update Quote status to Order Received</fullName>
+        <actions>
+            <name>Update_Quote_Status_To_Order_Received</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_Record_Type_To_Read_Only</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_Status_to_Integration_Pending</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>AND(  ISCHANGED( Count_Of_Line_Items_Fields_Not_Approved__c ),  Count_Of_Line_Items_Fields_Not_Approved__c = 0,  Count_of_line_Status_Not_in_Approval__c = 0 ,  ISPICKVAL( Type_of_Pricing__c ,&apos;Blanket Price Agreement&apos;),   Count_Of_Line_Items__c &gt;0 ,  Count_Of_Line_Item_Status_Rejected__c &gt;=0,  Count_of_Line_Items_Approved__c &gt; 0,  Count_Of_Line_Item_Status_Rejected__c != Count_Of_Line_Items__c )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>VAT Populate</fullName>
+        <actions>
+            <name>Highyag_VAT_Pct_Update</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Quote.OwnerId</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+</Workflow>

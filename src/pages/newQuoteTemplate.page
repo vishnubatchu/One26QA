@@ -1,0 +1,196 @@
+<apex:page standardController="Quote" extensions="QuoteTemplateExt" pageStyle="Quote" renderAs="pdf">
+    <head>
+        
+        <style type="text/css" media="print">
+            @page {
+            size: 10in 11in;/* width height */
+            }
+            
+            @page {
+            
+            
+            @top-center {
+            
+            content: element(header);
+            
+            }
+            
+            @bottom-left {
+            
+            content: element(footer);
+            
+            }
+            
+            }
+            
+            div.header {
+            
+            padding: 10px;
+            
+            position: running(header);
+            
+            }
+            div.footer {
+            
+            display: block;
+            
+            padding: 1px;
+            
+            position: running(footer);
+            
+            }
+            
+            .pagenumber:before {
+            
+            content: counter(page);
+            
+            }
+            
+            .pagecount:before {
+            
+            content: counter(pages);
+            
+            }
+            
+        </style>
+        
+    </head>
+    
+    
+    
+    <div class="header">
+        
+        <div align="center">
+            <apex:image value="{!$Resource.Company_Logo}" height="60px" />
+            <!--apex:outputField value="{! qteRec.CreatedDate}"/-->
+            <apex:outputText label="Quote CreatedDate" 
+                             value=" {!qteRec.CreatedDate}" />
+        </div>
+        
+    </div>
+    
+    <div class="footer">
+        <apex:pageBlock >
+            <apex:pageBlockSection columns="1">
+                <apex:outputText > Finisar Corporation ltd</apex:outputText>
+                <!--apex:outputText label=" " style="white-space:pre"/-->
+                <apex:outputText > Phone : XXXXXXXXX</apex:outputText>
+                <!--apex:outputText label=" " style="white-space:pre"/-->
+                <!--apex:outputText label=" " style="white-space:pre"/-->
+                <apex:outputText >Fax : XXXXXXXX</apex:outputText>
+                </apex:pageBlockSection>
+        </apex:pageBlock> 
+        
+        
+        
+    </div>
+    
+    <div class="content">
+        <apex:pageBlock >
+            <apex:pageBlockSection collapsible="false" title="Quote Details" columns="3">
+                <!--apex:outputField value="{! qteRec.Name}"/--> 
+                
+                <apex:outputText label="Quote Number" 
+                                 value=" {!qteRec.QuoteNumber}" 
+                                 styleClass="ClassName"/>&nbsp;
+                
+                <apex:outputText label="Account Name" 
+                                 value=" {!qteRec.Account__r.Name}" 
+                                 style="white-space:pre"/>
+                <apex:outputText label="Quote Name" 
+                                 value=" {!qteRec.Name}" 
+                                 styleClass="ClassName"/>&nbsp;
+                <apex:outputText label="Account Number" 
+                                 value=" {!qteRec.Account__r.AccountNumber}" 
+                                 style="white-space:pre"/>
+                <apex:outputText label="Status" 
+                                 value=" {!qteRec.Status}" 
+                                 styleClass="ClassName"/>&nbsp;
+                <apex:outputText label="Type Of Pricing" 
+                                 value=" {!qteRec.Type_of_Pricing__c}" 
+                                 style="white-space:pre"/>
+                <apex:outputText label="Primary Sales Person  " 
+                                 value=" {!qteRec.PrimarySalesperson__r.name}" 
+                                 styleClass="ClassName"/>&nbsp;
+                <apex:outputText label="Expiration Date" 
+                                 value=" {!qteRec.ExpirationDate}" 
+                                 style="white-space:pre"/>
+                
+                <apex:outputText label="Price List" 
+                                 value=" {!qteRec.Price_List__c}" 
+                                 styleClass="ClassName"/>&nbsp;
+                <apex:outputText label="Pricing Effective By" 
+                                 value=" {!qteRec.Pricing_Effective_By__c}" 
+                                 style="white-space:pre"/>
+                
+                <apex:outputText label="Pricing Effective Start Date  " 
+                                 value=" {!qteRec.Pricing_Effective_Start_Date__c}" 
+                                 styleClass="ClassName"/>&nbsp;
+                <apex:outputText label="Pricing Effective End Date" 
+                                 value=" {!qteRec.Pricing_Effective_End_Date__c}" 
+                                 style="white-space:pre"/>
+                
+            </apex:pageBlockSection>
+            <apex:pageBlockSection collapsible="false" title="Disti Quote Details" columns="3" rendered="{! qteRec.Type_of_Pricing__c == 'Dist Quote'}">
+                <apex:outputText label="Ship & Debit#" 
+                                 value=" {!qteRec.Ship_Debit__c}" 
+                                 styleClass="ClassName"/>&nbsp;
+                <apex:outputText label="Sales Channel" 
+                                 value=" {!qteRec.Sales_Channel__r.Name}" 
+                                 style="white-space:pre"/>
+                <apex:outputText label="S&D Start Date" 
+                                 value=" {!qteRec.S_D_Start_Date__c}" 
+                                 styleClass="ClassName"/>&nbsp;
+                <apex:outputText label="Sales Channel Code" 
+                                 value=" {!qteRec.Sales_Channel_Code__c}" 
+                                 style="white-space:pre"/>
+                <apex:outputText label="S&D End Date  " 
+                                 value=" {!qteRec.S_D_End_Date__c}" 
+                                 styleClass="ClassName"/>&nbsp;
+                <apex:outputText label="Contract Manufacturer" 
+                                 value=" {!qteRec.Contract_Manufacturer__c}" 
+                                 style="white-space:pre"/>
+                
+                <apex:outputText label="S&D End Date Reason" 
+                                 value=" {!qteRec.S_D_End_Date_Reason__c}" 
+                                 styleClass="ClassName"/>&nbsp;&nbsp;&nbsp;<br/><br/>
+                <apex:outputText label=" " style="white-space:pre"/>
+                <apex:outputText label="VAR/SI" 
+                                 value=" {!qteRec.VAR_SI__c}" 
+                                 styleClass="ClassName"/>&nbsp;
+                <apex:outputText label="VAR/SI Disti/EC" 
+                                 value=" {!qteRec.VAR_SI_Disti_EC__c}" 
+                                 style="white-space:pre"/>
+                
+            </apex:pageBlockSection>
+            <apex:pageBlockSection title="Line Details" rendered="{! approvedLines}">
+                <apex:pageBlockTable value="{! qteRec.Quote_Items__r }" var="line" border="1px">
+                    <apex:column value="{! line.Name}"/>
+                    <apex:column value="{! line.Product__c}"/>
+                    <apex:column value="{! line.Marketing_PN__c}"/>
+                    <apex:column value="{! line.Target_Price__c}"/>
+                    <apex:column value="{! line.Disti_Resale_Price__c}" rendered="{! qteRec.Type_of_Pricing__c == 'Dist Quote'}"/>
+                    <apex:column value="{! line.Quantity__c}"/>
+                    <apex:column value="{! line.Disti_Margin__c }" rendered="{! qteRec.Type_of_Pricing__c == 'Dist Quote'}"/>
+                    <apex:column value="{!line.Product__r.Lead_Time__c}" title="Lead Time"/>
+                </apex:pageBlockTable>
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockSection collapsible="false" columns="1" title="Terms & Conditions">
+                Finisar terms and conditions of sale:
+                <apex:outputLink value="https://www.finisar.com/sites/default/files/resources/finisar_termsconditions_april2013.pdf" id="theLink">https://www.finisar.com/sites/default/files/resources/finisar_termsconditions_april2013.pdf</apex:outputLink>
+                
+                <b>Provision Clause:</b>
+                This offer / acceptance of order keeps its availability only provided that our company will receive an export
+                license for the offered goods from the corresponding authorities where required. Our company is not
+                bound to meet any deliveries and other obligations which arise from an offer, a contract or an acceptance
+                order, if it is detained at it by effective export control regulations of the Federal Republic of Germany, the
+                European Union, the USA or another country respectively, if there exists a common prohibition.
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+        
+        
+    </div>
+    
+    
+</apex:page>

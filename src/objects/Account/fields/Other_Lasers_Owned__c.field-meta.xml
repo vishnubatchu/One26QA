@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Other_Lasers_Owned__c</fullName>
+    <description>number of in Use other lasers for End of April, 2017 mailing</description>
+    <externalId>false</externalId>
+    <label># Other Lasers Owned</label>
+    <summaryFilterItems>
+        <field>Equipment_Owned__c.Laser_Status__c</field>
+        <operation>equals</operation>
+        <value>In Use</value>
+    </summaryFilterItems>
+    <summaryFilterItems>
+        <field>Equipment_Owned__c.System__c</field>
+        <operation>equals</operation>
+        <value>CINCINNATI, COHERENT, EPILOG, HIGHYAG, LOW POWER, MAZAK, MITSUBISHI, NO LASERS, TROTEC</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Equipment_Owned__c.Account__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Customer_Name__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( RecordType.DeveloperName =&apos;Extension_Item&apos;,Loaner__r.Loaner_Request__r.Company_Name_End_Cust__r.Name, Loaner__r.Company_Name_End_Cust__r.Name )</formula>
+    <label>Customer Name</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

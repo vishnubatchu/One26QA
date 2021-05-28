@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FA_Analysis</fullName>
+    <columns>NAME</columns>
+    <columns>FA_FV_Status__c</columns>
+    <columns>FA_FV_Type__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>LAST_UPDATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>FA_FV_Analysis__c.FA_Analysis</value>
+    </filters>
+    <filters>
+        <field>CREATEDBY_USER</field>
+        <operation>notEqual</operation>
+        <value>Integration User</value>
+    </filters>
+    <label>FA Analysis</label>
+</ListView>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Open_FA_FV</fullName>
+    <columns>NAME</columns>
+    <columns>FA_FV__c</columns>
+    <columns>Serial_Number__c</columns>
+    <columns>Status__c</columns>
+    <columns>Site__c</columns>
+    <columns>CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <label>Open FA  / FV Sydney</label>
+</ListView>

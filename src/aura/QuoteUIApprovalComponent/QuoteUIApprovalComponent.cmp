@@ -1,0 +1,194 @@
+<aura:component controller="QuoteApprovalController" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute name="QuoteId" type="String"/> 
+    <aura:attribute name="QuoteRes" type="Quote"/> 
+    <!--<aura:attribute name="AllRequiredQuotes" type="Quote[]"/> In case of multiple Quotes-->
+    <aura:attribute name="RequiredQuote" type="Quote"/>
+    <aura:attribute name="QuoteLineRes" type="QuoteLineItem[]"/> 
+    <aura:attribute name="QuoteLine" type="QuoteLineItem"/> 
+    <aura:attribute name="Product" type="Product2"/>
+    <aura:attribute name="eMail" type="String"/>
+    <aura:attribute name="OperationResult" type="String"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" /> 
+    
+    <lightning:card iconName="standard:approval" title="Quote Data" >
+    </lightning:card>
+    
+    <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+        <thead>
+            <tr class="slds-line-height_reset">
+                <th class="slds-text-title_caps" scope="col">
+                    <div class="slds-truncate" title="QuoteName">QuoteName</div>
+                </th>
+                <th class="slds-text-title_caps" scope="col">
+                    <div class="slds-truncate" title="QuoteNum">QuoteNumber</div>
+                </th>
+                <th class="slds-text-title_caps" scope="col">
+                    <div class="slds-truncate" title="Sales Channel">Sales Channel</div>
+                </th>
+                <th class="slds-text-title_caps" scope="col">
+                    <div class="slds-truncate" title="Account_Name">AccountName</div>
+                </th>
+                <th class="slds-text-title_caps" scope="col">
+                    <div class="slds-truncate" title="Costumer_Name">CostumerName</div>
+                </th>
+                <th class="slds-text-title_caps" scope="col">
+                    <div class="slds-truncate" title="ExpirationDate">ExpirationDate</div>
+                </th>
+            </tr>    
+        </thead>
+        
+        <!--<aura:iteration items="{!v.AllRequiredQuotes}" var="RequiredQuote"> In case of multiple Quotes-->
+        <tr class="slds-hint-parent">
+            <th data-label="QuoteName" scope="row">
+                <div class="slds-truncate" title="{!v.RequiredQuote.Name}" >
+                    <!-- <a onclick="{!c.QuoteSelected}" data-recordId="{!v.RequiredQuote.Id}"> to store Id in case of multiple Quotes-->
+                    {!v.RequiredQuote.Name}
+                    <!--	</a>-->
+                </div>
+            </th>
+            <td data-label="QuoteNum">
+                <div class="slds-truncate" title="{!v.RequiredQuote.QuoteNumber}">{!v.RequiredQuote.QuoteNumber}</div>
+            </td>
+            <td data-label="Sales Channel">
+                <div class="slds-truncate" title="{!v.RequiredQuote.Sales_Channel__r.Name}">{!v.RequiredQuote.Sales_Channel__r.Name}</div>
+            </td>
+            <td data-label="Account Name">
+                <div class="slds-truncate" title="{!v.RequiredQuote.Account__r.Name}">{!v.RequiredQuote.Account__r.Name}</div>
+            </td>
+            <td data-label="Customer Name">
+                <div class="slds-truncate" title="{!v.RequiredQuote.Customer__r.Name}">{!v.RequiredQuote.Customer__r.Name}</div>
+            </td>
+            <td data-label="Quote_Id">
+                <div class="slds-truncate" title="{!v.RequiredQuote.ExpirationDate}">{!v.RequiredQuote.ExpirationDate}</div>
+            </td>
+        </tr>
+        <!--</aura:iteration>-->
+    </table>
+    
+    
+    <lightning:card title="QuoteLineItems">
+        
+        <form class="slds-form--inline">  
+            
+            <div class="slds-text-color_error" title="OperResult">{!v.OperationResult}</div>
+            
+            <div class="slds-form-element">
+                <label class="slds-form-element__label" for="email">Email</label>
+                <lightning:input name="input8" value="{! v.eMail }" placeholder="Email for Reassignment"/>
+            </div>
+            <div class="slds-form-element">
+                <button type="button" class="slds-button slds-button--brand" onclick="{!c.RassignSelected}">Reassign LineItems</button>
+            </div>
+            <div class="slds-form-element">
+                <button type="button" class="slds-button slds-button--brand" onclick="{!c.ApproveSelected}">Approve Selected</button>
+            </div>
+            <div class="slds-form-element">
+                <button type="button" class="slds-button slds-button--brand" onclick="{!c.RejectSelected}">Reject Selected</button>
+            </div>
+        </form>  
+        
+        
+    </lightning:card> 
+    
+    <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+        <thead>
+            <tr class="slds-line-height_reset">
+                <th style="width:3.25rem;" class="slds-text-align--right">
+                    <div class="slds-form-element">
+                        <div class="slds-form-element__control">
+                            <label class="slds-checkbox">
+                                <!--header checkbox for select all-->
+                                <ui:inputCheckbox aura:id="box3" change="{!c.selectAll}"/>
+                                <span class="slds-checkbox--faux"></span>
+                                <span class="slds-form-element__label text"></span>
+                            </label>
+                        </div>
+                    </div>
+                </th>
+                <th class="slds-text-title_caps" scope="col">
+                    <div class="slds-truncate" title="Quote Line">QuoteLine Number</div>
+                </th>
+                <th class="slds-text-title_caps" scope="col">
+                    <div class="slds-truncate" title="Std List Price">Std List Price</div>
+                </th>
+                <th class="slds-text-title_caps" scope="col">
+                    <div class="slds-truncate" title="Quantity">Quantity</div>
+                </th>
+                <th class="slds-text-title_caps" scope="col">
+                    <div class="slds-truncate" title="Disti Resale Price">Disti Resale Price</div>
+                </th>
+                <th class="slds-text-title_caps" scope="col">
+                    <div class="slds-truncate" title="Product">Product</div>
+                </th>
+                <th class="slds-text-title_caps" scope="col">
+                    <div class="slds-truncate" title="Line Total">Line Total</div>
+                </th>
+                <th class="slds-text-title_caps" scope="col">
+                    <div class="slds-truncate" title="TargetPrice">Target Price</div>
+                </th>
+                <th class="slds-text-title_caps" scope="col">
+                    <div class="slds-truncate" title="RSM Approver">RSM Approver</div>
+                </th>
+                <th class="slds-text-title_caps" scope="col">
+                    <div class="slds-truncate" title="PLM Approver">PLM Approver</div>
+                </th>
+                
+            </tr>
+        </thead>
+        
+        <tbody>
+            <aura:iteration items="{!v.RequiredQuote.Quote_Items__r}" var="QuoteLine">
+                <tr class="slds-hint-parent">
+                    <td scope="row" class="slds-text-align--right" style="width:3.25rem;">
+                        <div class="slds-form-element">
+                            <div class="slds-form-element__control">
+                                <label class="slds-checkbox">
+                                    <ui:inputCheckbox text="{!QuoteLine.Id}" aura:id="boxPack" value=""/>
+                                    <span class="slds-checkbox--faux"></span>
+                                    <span class="slds-form-element__label text"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </td>
+                    <th data-label="Quote Line" scope="row">
+                        <div class="slds-truncate" title="{!QuoteLine.Name}">{!QuoteLine.Name}</div>
+                    </th>
+                    <th data-label="Std List Price" scope="row">
+                        <div class="slds-truncate" title="{!QuoteLine.Std_List_Price__c}">{!QuoteLine.Std_List_Price__c}</div>
+                    </th>
+                    <td data-label="Quantity">
+                        <div class="slds-truncate" title="{!QuoteLine.Quantity__c}">{!QuoteLine.Quantity__c}</div>
+                    </td>
+                    <td data-label="Disti Resale Price">
+                        <div class="slds-truncate" title="{!QuoteLine.Disti_Resale_Price__c}">{!QuoteLine.Disti_Resale_Price__c}</div>
+                    </td>
+                    <td data-label="Product">
+                        <div class="slds-truncate" title="{!QuoteLine.Product__r.Name}">{!QuoteLine.Product__r.Name}</div>
+                    </td>
+                    <td data-label="Line Total">
+                        <div class="slds-truncate" title="{!QuoteLine.Line_Total__c}">{!QuoteLine.Line_Total__c}</div>
+                    </td>
+                    <td data-label="Target Price">
+                        <div class="slds-truncate" title="{!QuoteLine.Target_Price__c}">{!QuoteLine.Target_Price__c}</div>
+                    </td>
+                    <td data-label="RSM Approver">
+                        <aura:if isTrue="{!QuoteLine.Approval_From__c=='BothApprovers' || QuoteLine.Approval_From__c=='RSM'}">
+                            <div class="slds-truncate" title="{!QuoteLine.RSM_Approver__r.Name}">{!QuoteLine.RSM_Approver__r.Name}</div>
+                            <aura:set attribute="else">
+                                <div class="slds-truncate" title="{!QuoteLine.PLM_Approver__r.Name}">NOT REQUIRED</div>
+                            </aura:set>
+                        </aura:if>                  
+                    </td>
+                    <td data-label="REP Approver">
+                        <aura:if isTrue="{!QuoteLine.Approval_From__c=='BothApprovers' || QuoteLine.Approval_From__c=='PLM'}">
+                            <div class="slds-truncate" title="{!QuoteLine.PLM_Approver__r.Name}">{!QuoteLine.PLM_Approver__r.Name}</div>
+                        <aura:set attribute="else">
+                            <div class="slds-truncate" title="{!QuoteLine.PLM_Approver__r.Name}">NOT REQUIRED</div>
+                        </aura:set>
+                        </aura:if>                  
+                    </td>
+                </tr>
+            </aura:iteration>
+        </tbody>
+    </table>
+</aura:component>

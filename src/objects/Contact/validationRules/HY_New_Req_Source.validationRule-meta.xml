@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HY_New_Req_Source</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( 
+ISNEW(), 
+ISBLANK(TEXT( LeadSource )), 
+ISPICKVAL( Account.Business_Segment__c ,&apos;HIGHYAG&apos;) 
+)</errorConditionFormula>
+    <errorDisplayField>LeadSource</errorDisplayField>
+    <errorMessage>You must select a Lead Source</errorMessage>
+</ValidationRule>

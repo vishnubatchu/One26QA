@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Watt__c</fullName>
+    <externalId>false</externalId>
+    <label>Watt</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>* UNKNOWN</fullName>
+                <default>false</default>
+                <label>* UNKNOWN</label>
+            </value>
+            <value>
+                <fullName>&lt;100 watts</fullName>
+                <default>false</default>
+                <label>&lt;100 watts</label>
+            </value>
+            <value>
+                <fullName>100-500 watts</fullName>
+                <default>false</default>
+                <label>100-500 watts</label>
+            </value>
+            <value>
+                <fullName>501-999 watts</fullName>
+                <default>false</default>
+                <label>501-999 watts</label>
+            </value>
+            <value>
+                <fullName>1000-2000 watts</fullName>
+                <default>false</default>
+                <label>1000-2000 watts</label>
+            </value>
+            <value>
+                <fullName>2001-3000 watts</fullName>
+                <default>false</default>
+                <label>2001-3000 watts</label>
+            </value>
+            <value>
+                <fullName>3001-4000 watts</fullName>
+                <default>false</default>
+                <label>3001-4000 watts</label>
+            </value>
+            <value>
+                <fullName>4001-5000 watts</fullName>
+                <default>false</default>
+                <label>4001-5000 watts</label>
+            </value>
+            <value>
+                <fullName>5001-6000 watts</fullName>
+                <default>false</default>
+                <label>5001-6000 watts</label>
+            </value>
+            <value>
+                <fullName>&gt;6000 watts</fullName>
+                <default>false</default>
+                <label>&gt;6000 watts</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type_of_Pricing__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Blanket Price Agreement creates/updates customer price list. Dist Quote generates S&amp;D# for Distributor to ship standard parts to customer at lower price than current Disti Cost. Fixed-One Time Order does not update customer price list or generate S&amp;D#.</inlineHelpText>
+    <label>Type of Pricing</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Blanket Price Agreement</fullName>
+                <default>false</default>
+                <label>Blanket Price Agreement</label>
+            </value>
+            <value>
+                <fullName>Dist Quote</fullName>
+                <default>false</default>
+                <label>Dist Quote</label>
+            </value>
+            <value>
+                <fullName>Fixed - One Time Order</fullName>
+                <default>false</default>
+                <label>Fixed - One Time Order</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

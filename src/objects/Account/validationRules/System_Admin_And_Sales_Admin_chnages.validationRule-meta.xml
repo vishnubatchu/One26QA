@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>System_Admin_And_Sales_Admin_chnages</fullName>
+    <active>false</active>
+    <description>Only System Admin and Sales Admin can Edit these fields</description>
+    <errorConditionFormula>AND(
+	NOT(
+		OR(
+			CONTAINS($Profile.Name,&apos;Sales Admin Profile&apos;),
+			CONTAINS($Profile.Name,&apos;System Administrator&apos;)
+		)
+	),
+	OR(
+		ISCHANGED(Name),
+		ISCHANGED(ParentId),
+		ISCHANGED(OwnerId),
+		ISCHANGED(Type)
+	 )
+)</errorConditionFormula>
+    <errorMessage>User access level does not allow to edit Account Name,Parent Account, Type, Address and Account Owner.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Market__c</fullName>
+    <description>Consumer</description>
+    <externalId>false</externalId>
+    <label>Market</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>10 - DSP</fullName>
+                <default>false</default>
+                <label>10 - DSP</label>
+            </value>
+            <value>
+                <fullName>15 - Industrial</fullName>
+                <default>false</default>
+                <label>15 - Industrial</label>
+            </value>
+            <value>
+                <fullName>20 - Telecommunications</fullName>
+                <default>false</default>
+                <label>20 - Telecommunications</label>
+            </value>
+            <value>
+                <fullName>30 - Medical</fullName>
+                <default>false</default>
+                <label>30 - Medical</label>
+            </value>
+            <value>
+                <fullName>25 - Automotive</fullName>
+                <default>false</default>
+                <label>25 - Automotive</label>
+            </value>
+            <value>
+                <fullName>35 - Consumer</fullName>
+                <default>false</default>
+                <label>35 - Consumer</label>
+            </value>
+            <value>
+                <fullName>40 - Personal Comfort</fullName>
+                <default>false</default>
+                <label>40 - Personal Comfort</label>
+            </value>
+            <value>
+                <fullName>60 - Power Generation</fullName>
+                <default>false</default>
+                <label>60 - Power Generation</label>
+            </value>
+            <value>
+                <fullName>80 - Contracts</fullName>
+                <default>false</default>
+                <label>80 - Contracts</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

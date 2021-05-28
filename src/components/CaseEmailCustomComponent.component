@@ -1,0 +1,91 @@
+<apex:component access="global" controller="QuoteEmailCustomComponentController">
+    <apex:attribute name="headerId" description="headerQuoteRecordId" type="ID" required="required" assignTo="{!recordId}" />
+    <apex:attribute name="headerObj" description="HeaderObjectName" type="String" required="required" assignTo="{!recordObject}" />
+    <apex:attribute name="quoteSummary" description="boleanFlag To Redender Quote Details" type="boolean" assignTo="{!quoteSummry}" />
+    <apex:attribute name="quoteLineItemsApprovalList" description="Attribute for product make" type="boolean"  assignTo="{!quoteLineItem}" />
+    <apex:attribute name="quoteLineItemWithStatusField" description="Attribute for product make" type="boolean"  assignTo="{!quoteLineItemWithStatusFields}" />
+    <apex:attribute name="quoteLineItemShipAndDebits" description="Attribute for product make" type="boolean"  assignTo="{!quoteLineItemShipAndDebit}" />
+    <apex:attribute name="quoteLineItemsAllStatus" description="Attribute for product make" type="boolean"  assignTo="{!quoteAllStatus}" />
+    <apex:attribute name="quoteLineItemsApprovals" description="Attribute for product make" type="boolean"  assignTo="{!quoteLineItemsApproval}" />
+    <apex:attribute name="quoteFooterValue" description="Attribute for product make" type="boolean"  assignTo="{!quoteFooter}" />
+    <apex:attribute name="recipientName" description="Attribute for product make" type="Id"  assignTo="{!recipientId}" />
+    <apex:attribute name="errormessages" description="error messages" type="Boolean" default="false"/>
+    <style type="text/css">
+        .quoteSummary .prod_table { 
+        table-layout: fixed; 
+        }
+        .quoteSummary .headerSummary {
+        font-size: 11.0pt; 
+        text-decoration:underline; 
+        font-weight: bold;
+        }    
+        body{       
+        font-size: 10.0pt; 
+        font-family: "Arial","sans-serif"; 
+        word-wrap:break-word;
+        }
+        
+        .quoteSummary .headerTable {
+        border : 0px;
+        width: 70.0%;
+        
+        }   
+        .quoteSummary td{
+        padding: .75pt .75pt .75pt .75pt;
+        align:right;
+        }
+        .quoteSummary .textalign{
+        text-align: right;
+        white-space: nowrap;
+        }
+        .quoteLineItems table {
+        border-width: 0px;
+        cellspacing : 1; 
+        cellpadding : 0;
+        table-layout: fixed;
+        align : center;
+        
+        }
+        
+        .quoteLineItems td {
+        padding: .75pt .75pt .75pt .75pt;
+        text-align: center;
+        background-color: #F7F7E7;
+        }
+        
+        .quoteLineItems th { 
+        color: #000000;
+        padding: 4px ;
+        background-color: #CCCC99;
+        }
+        .EmailApproval{
+        font-size: 11.0pt;
+        }
+        a {
+        color: blue;
+        }
+    </style>
+    
+    
+    
+    
+    <!--Email Approval  Component-->
+    <apex:outputPanel rendered="{!quoteLineItemsApprovals}">
+        
+        <br/><br/>
+        Clicking Approve or Reject below will apply to all lines listed in this notification. If you decide to approve and reject specific lines in this notification, you must do so by logging into Salesforce. <a href="{!$Label.Approval_Lightning_page}?QId={!headerId}">Click here to login</a>
+        <br/>
+        <p class="EmailApproval"> <b>Action: </b>&nbsp;&nbsp;&nbsp;
+            <a href="mailto:{!$Label.Apex_CaseEmail_Service_Address}?subject=case:{!case.id} has been forwarded for your approval by &body=Action: Approve %0AAdd Comments in between the apostrophes to append to this notification %0AComments: '' %0A%0A%0ACase Id : [{!headerID}] %0A%0ANOTE: PLEASE DO NOT MODIFY ACTION AND QUOTE ID PARAMETERS"><b>Approve</b></a> &nbsp;&nbsp;&nbsp;
+            <a href="mailto:{!$Label.Apex_CaseEmail_Service_Address}?subject=case:{!case.id} has been forwarded for your approval by &body=Action: Reject %0AAdd Comments in between the apostrophes to append to this notification %0AComments: '' %0A%0A%0ACase Id : [{!headerID}] %0A%0ANOTE: PLEASE DO NOT MODIFY ACTION AND QUOTE ID PARAMETERS"><b>Reject</b></a> &nbsp;&nbsp;&nbsp;
+        </p>
+        <br/>
+        
+    </apex:outputPanel>
+    
+    
+    <!--Footer  Component-->
+    <apex:outputPanel rendered="{!quoteFooterValue}">
+        &quot;Finisar Standard Terms and Conditions Apply - <a href="http://www.finisar.com">www.finisar.com</a>.  All currency in U.S. Dollars.  Prices quoted are exclusive of tariffs, import duties and similar taxes. A surcharge will be imposed and invoiced to the customer for any such amounts paid by Finisar or its agents in connection with shipments made with respect to the units listed on this quote.&quot;
+</apex:outputPanel>
+</apex:component>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Created_w_Clone_with_Products_Button__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Create for interim use until custom solution is developed.</description>
+    <externalId>false</externalId>
+    <label>Created w/ &quot;Clone with Products&quot; Button</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

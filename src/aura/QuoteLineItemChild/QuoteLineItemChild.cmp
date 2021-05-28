@@ -1,0 +1,112 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" access="global" 
+                controller="QuoteLineItemController" >    
+    <aura:attribute name="QuoteItemInstance" type="Quote_Item__c" />
+    <aura:attribute name="rowIndex" type="String"/>
+    <aura:attribute name="LineStatus" type="String"/>
+    <aura:attribute name="productname" type="String"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:registerEvent name="DeleteRowEvt" type="c:DeleteRowEvt"/> 
+    <aura:registerEvent name="AddRowEvt" type="c:AddNewRowEvt"/> 
+    <tr>
+        <td>
+            <a onclick="{!c.removeRow}">
+                <lightning:icon variant="error" iconName="utility:delete" class="slds-icon slds-icon_small" size="small" alternativeText="icon"/>
+                <span class="slds-assistive-text">Delete Icon</span>
+            </a>
+            
+        </td>
+        <aura:renderif isTrue ="{!v.LineStatus !='Approved'}">
+            <td>
+                <ui:outputText class="slds-input;outputClass" value="{!v.QuoteItemInstance.Name}"/>
+            </td>
+            <td >
+                <!--<lightning:recordEditForm aura:id="recordEditForm" objectApiName="Quote_Item__c" >
+              <lightning:messages />
+                <lightning:inputField  fieldName="Product__c"  value="{!v.QuoteItemInstance.Product__c}" variant="label-hidden" />
+            </lightning:recordEditForm> -->
+                
+                       <c:ProductLookupCMP objectName='Product2' field_API_text='Name' field_API_val='Id' field_API_search='Name' field_API_search_marketingPN='Marketing_P_N__c' lookupIcon='standard:product' limit='100' selItem ='{!v.QuoteItemInstance.Product__r}' />
+                    <!--c:QuoteItemProductLookup QuoteLineItem="{!v.QuoteItemInstance}" /-->
+                
+            </td>
+            <td>
+                <ui:outputText class="slds-input;outputClass"  value="{!v.QuoteItemInstance.Marketing_PN__c}"/>
+            </td>
+            <td>
+                <ui:inputNumber class="slds-input"  value="{!v.QuoteItemInstance.Quantity__c}"/>
+            </td>
+            <td>
+                <ui:outputText class="slds-input;outputClass" value="{!v.QuoteItemInstance.Std_List_Price__c}"/>
+            </td>
+            <td>
+                <ui:outputText class="slds-input;outputClass" value="{!v.QuoteItemInstance.Std_Disti_Cost__c}"/>
+            </td>
+            <td>
+                <ui:inputCurrency class="slds-input" value="{!v.QuoteItemInstance.Target_Price__c}"/>
+            </td>
+            <td>
+                <ui:inputCurrency class="slds-input"  value="{!v.QuoteItemInstance.Disti_Resale_Price__c}"/>
+            </td>
+            <td>
+                <ui:outputText class="slds-input;outputClass"  value="{!v.QuoteItemInstance.Disti_Margin__c}"/>
+            </td>
+            <td>
+                <ui:outputText class="slds-input;outputClass" value="{!v.QuoteItemInstance.Line_Status__c}"/>
+            </td>
+            <td>
+                <ui:inputCurrency class="slds-input"  value="{!v.QuoteItemInstance.Competitor_Price__c}"/>
+            </td>
+            <td>
+                <ui:inputText class="slds-input"   value="{!v.QuoteItemInstance.Competitor_Info__c}"/>
+            </td>
+            <td>
+                <ui:inputNumber class="slds-input"  value="{!v.QuoteItemInstance.Agreed_Upon_Share__c}"/>
+            </td>
+        </aura:renderif>
+        <aura:renderif isTrue ="{!v.LineStatus =='Approved'}">
+            <td>
+                <ui:outputText class="slds-input;outputClass"  value="{!v.QuoteItemInstance.Name}"/>
+            </td>
+             <td>
+                <ui:outputText class="slds-input;outputClass"  value="{!v.QuoteItemInstance.Product__r.Name}"/>
+            </td>
+            
+            <td>
+                <ui:outputText class="slds-input;outputClass"  value="{!v.QuoteItemInstance.Marketing_PN__c}"/>
+            </td>
+           
+            <td>
+                <ui:outputText class="slds-input;outputClass"  value="{!v.QuoteItemInstance.Quantity__c}"/>
+            </td>
+            <td>
+                <ui:outputText class="slds-input;outputClass" value="{!v.QuoteItemInstance.Std_List_Price__c}"/>
+            </td>
+            <td>
+                <ui:outputText class="slds-input;outputClass" value="{!v.QuoteItemInstance.Std_Disti_Cost__c}"/>
+            </td>
+            <td>
+                <ui:outputText class="slds-input;outputClass"  value="{!v.QuoteItemInstance.Target_Price__c}"/>
+            </td>
+            
+             <td>
+                <ui:outputText class="slds-input;outputClass"  value="{!v.QuoteItemInstance.Disti_Margin__c}"/>
+            </td>
+            <td>
+                <ui:outputText class="slds-input;outputClass" value="{!v.QuoteItemInstance.Disti_Resale_Price__c}"/>
+            </td>
+           
+            <td>
+                <ui:outputText class="slds-input;outputClass" value="{!v.QuoteItemInstance.Line_Status__c}"/>
+            </td>
+            <td>
+                <ui:outputText class="slds-input;outputClass"  value="{!v.QuoteItemInstance.Competitor_Price__c}"/>
+            </td>
+            <td>
+                <ui:outputText class="slds-input;outputClass"  value="{!v.QuoteItemInstance.Competitor_Info__c}"/>
+            </td>
+            <td>
+                <ui:outputText class="slds-input;outputClass"  value="{!v.QuoteItemInstance.Agreed_Upon_Share__c}"/>
+            </td>
+        </aura:renderif>
+    </tr>
+</aura:component>

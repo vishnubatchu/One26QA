@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Aaron Zhao</fullName>
+        <default>false</default>
+        <label>Aaron Zhao</label>
+    </customValue>
+    <customValue>
+        <fullName>Abdi Zolfaghari</fullName>
+        <default>false</default>
+        <label>Abdi Zolfaghari</label>
+    </customValue>
+    <customValue>
+        <fullName>Adison Xue</fullName>
+        <default>false</default>
+        <label>Adison Xue</label>
+    </customValue>
+    <customValue>
+        <fullName>Andrea Guglierame</fullName>
+        <default>false</default>
+        <label>Andrea Guglierame</label>
+    </customValue>
+    <customValue>
+        <fullName>Andy Park</fullName>
+        <default>false</default>
+        <label>Andy Park</label>
+    </customValue>
+    <customValue>
+        <fullName>Chris Yien</fullName>
+        <default>false</default>
+        <label>Chris Yien</label>
+    </customValue>
+    <customValue>
+        <fullName>Davy Zhou</fullName>
+        <default>false</default>
+        <label>Davy Zhou</label>
+    </customValue>
+    <customValue>
+        <fullName>Derrick Wang</fullName>
+        <default>false</default>
+        <label>Derrick Wang</label>
+    </customValue>
+    <customValue>
+        <fullName>Dipanka Borah</fullName>
+        <default>false</default>
+        <label>Dipanka Borah</label>
+    </customValue>
+    <customValue>
+        <fullName>Eddie Zhao</fullName>
+        <default>false</default>
+        <label>Eddie Zhao</label>
+    </customValue>
+    <customValue>
+        <fullName>Eric Rechner</fullName>
+        <default>false</default>
+        <label>Eric Rechner</label>
+    </customValue>
+    <customValue>
+        <fullName>Etsuo Ikoma</fullName>
+        <default>false</default>
+        <label>Etsuo Ikoma</label>
+    </customValue>
+    <customValue>
+        <fullName>Firouz Keramati</fullName>
+        <default>false</default>
+        <label>Firouz Keramati</label>
+    </customValue>
+    <customValue>
+        <fullName>George Badulak</fullName>
+        <default>false</default>
+        <label>George Badulak</label>
+    </customValue>
+    <customValue>
+        <fullName>Gianluca Mantegani</fullName>
+        <default>false</default>
+        <label>Gianluca Mantegani</label>
+    </customValue>
+    <customValue>
+        <fullName>Jacob Song</fullName>
+        <default>false</default>
+        <label>Jacob Song</label>
+    </customValue>
+    <customValue>
+        <fullName>Juri Adachi</fullName>
+        <default>false</default>
+        <label>Juri Adachi</label>
+    </customValue>
+    <customValue>
+        <fullName>Kerrie Gong</fullName>
+        <default>false</default>
+        <label>Kerrie Gong</label>
+    </customValue>
+    <customValue>
+        <fullName>Larry Fabiny</fullName>
+        <default>false</default>
+        <label>Larry Fabiny</label>
+    </customValue>
+    <customValue>
+        <fullName>Marvin Zhou</fullName>
+        <default>false</default>
+        <label>Marvin Zhou</label>
+    </customValue>
+    <customValue>
+        <fullName>Matteo Cirigliano</fullName>
+        <default>false</default>
+        <label>Matteo Cirigliano</label>
+    </customValue>
+    <customValue>
+        <fullName>Mitch Ito</fullName>
+        <default>false</default>
+        <label>Mitch Ito</label>
+    </customValue>
+    <customValue>
+        <fullName>Nolan Shen</fullName>
+        <default>false</default>
+        <label>Nolan Shen</label>
+    </customValue>
+    <customValue>
+        <fullName>Patrick Guillemot</fullName>
+        <default>false</default>
+        <label>Patrick Guillemot</label>
+    </customValue>
+    <customValue>
+        <fullName>Quin Mai</fullName>
+        <default>false</default>
+        <label>Quin Mai</label>
+    </customValue>
+    <customValue>
+        <fullName>Richard Johnson</fullName>
+        <default>false</default>
+        <label>Richard Johnson</label>
+    </customValue>
+    <customValue>
+        <fullName>Roger Chen</fullName>
+        <default>false</default>
+        <label>Roger Chen</label>
+    </customValue>
+    <customValue>
+        <fullName>Shew Aynalem</fullName>
+        <default>false</default>
+        <label>Shew Aynalem</label>
+    </customValue>
+    <customValue>
+        <fullName>Snow Xue</fullName>
+        <default>false</default>
+        <label>Snow Xue</label>
+    </customValue>
+    <customValue>
+        <fullName>Vasanta Rao</fullName>
+        <default>false</default>
+        <label>Vasanta Rao</label>
+    </customValue>
+    <customValue>
+        <fullName>Vera Koleva</fullName>
+        <default>false</default>
+        <label>Vera Koleva</label>
+    </customValue>
+    <customValue>
+        <fullName>Wenjie (Ben) Gong</fullName>
+        <default>false</default>
+        <label>Wenjie (Ben) Gong</label>
+    </customValue>
+    <customValue>
+        <fullName>Yukiyasu Kobayashi</fullName>
+        <default>false</default>
+        <label>Yukiyasu Kobayashi</label>
+    </customValue>
+    <description>FAE on Case</description>
+    <masterLabel>FAE</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Create_Quote</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <height>600</height>
+    <linkType>url</linkType>
+    <masterLabel>Create Quote</masterLabel>
+    <openType>sidebar</openType>
+    <protected>false</protected>
+    <url>https://composer.congamerge.com
+?sessionId={!API.Session_ID}
+&amp;serverUrl={!API.Partner_Server_URL_290}
+&amp;id={!Quote.Id}
+&amp;OFN=II-VIQuote_{!Quote.QuoteNumber}
+&amp;DefaultPDF=1
+&amp;LG4=1
+&amp;LG1=Quote+{!Quote.QuoteNumber}+Sent
+&amp;LG7=Followup+on+Quote+{!Quote.QuoteNumber}
+&amp;TemplateGroup=Quotes
+&amp;LG3=1</url>
+</WebLink>

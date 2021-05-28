@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>requireSOnumber</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( ISBLANK( Notes__c ) ,ISPICKVAL( Loaner_Ship_From_Finisar__c , &apos;Transfer From Existing Loaner&apos;),RecordType.Name = &apos;Loaner Request&apos;)</errorConditionFormula>
+    <errorDisplayField>Notes__c</errorDisplayField>
+    <errorMessage>user should enter SO number in notes</errorMessage>
+</ValidationRule>

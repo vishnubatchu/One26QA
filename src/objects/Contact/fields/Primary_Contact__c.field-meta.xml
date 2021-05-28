@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Primary_Contact__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Use to indicate the primary contact for an Account</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Use to select the primary contact for the purposes of email/mailings.</inlineHelpText>
+    <label>Primary Contact</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

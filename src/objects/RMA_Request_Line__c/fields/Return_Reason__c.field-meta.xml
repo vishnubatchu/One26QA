@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Return_Reason__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Why is the part being returned</inlineHelpText>
+    <label>Return Reason</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Field Failure</fullName>
+                <default>false</default>
+                <label>Field Failure</label>
+            </value>
+            <value>
+                <fullName>Rework</fullName>
+                <default>false</default>
+                <label>Rework</label>
+            </value>
+            <value>
+                <fullName>Rework/Re-test</fullName>
+                <default>false</default>
+                <label>Rework/Re-test</label>
+            </value>
+            <value>
+                <fullName>Customer Accommodation</fullName>
+                <default>false</default>
+                <label>Customer Accommodation</label>
+            </value>
+            <value>
+                <fullName>Sample/Demo Return</fullName>
+                <default>false</default>
+                <label>Sample/Demo Return</label>
+            </value>
+            <value>
+                <fullName>Product Failure</fullName>
+                <default>false</default>
+                <label>Product Failure</label>
+            </value>
+            <value>
+                <fullName>&quot;Equipment failure,  Service outage. Verified by Telesur Network operations together with Ciena support&quot;</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>&quot;Equipment failure,  Service outage. Verified by Telesur Network operations together with Ciena support&quot;</label>
+            </value>
+            <value>
+                <fullName>AA</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>AA</label>
+            </value>
+            <value>
+                <fullName>ASAS</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>ASAS</label>
+            </value>
+            <value>
+                <fullName>DFD</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>DFD</label>
+            </value>
+            <value>
+                <fullName>DSD</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>DSD</label>
+            </value>
+            <value>
+                <fullName>Faulty CFP2 causing OTL Loss of Lane Alignment</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Faulty CFP2 causing OTL Loss of Lane Alignment</label>
+            </value>
+            <value>
+                <fullName>Functional</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Functional</label>
+            </value>
+            <value>
+                <fullName>Loss Of Signal</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Loss Of Signal</label>
+            </value>
+            <value>
+                <fullName>Loss of frame alarm flapping</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Loss of frame alarm flapping</label>
+            </value>
+            <value>
+                <fullName>OO</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>OO</label>
+            </value>
+            <value>
+                <fullName>Pluggable alarm occurred</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Pluggable alarm occurred</label>
+            </value>
+            <value>
+                <fullName>Ports would not validate</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Ports would not validate</label>
+            </value>
+            <value>
+                <fullName>Problem Description: Pluggable Tx power is OOR-LO. Tried re-seating and also tried installing pluggable on different port.</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Problem Description: Pluggable Tx power is OOR-LO. Tried re-seating and also tried installing pluggable on different port.</label>
+            </value>
+            <value>
+                <fullName>SDS</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>SDS</label>
+            </value>
+            <value>
+                <fullName>TEST UAT</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>TEST UAT</label>
+            </value>
+            <value>
+                <fullName>TXing errors</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>TXing errors</label>
+            </value>
+            <value>
+                <fullName>Test</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Test</label>
+            </value>
+            <value>
+                <fullName>a</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>a</label>
+            </value>
+            <value>
+                <fullName>alarms raised</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>alarms raised</label>
+            </value>
+            <value>
+                <fullName>as</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>as</label>
+            </value>
+            <value>
+                <fullName>asa</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>asa</label>
+            </value>
+            <value>
+                <fullName>dsds</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>dsds</label>
+            </value>
+            <value>
+                <fullName>sdsda</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>sdsda</label>
+            </value>
+            <value>
+                <fullName>upgrade to firmware 35 per details and file attached in FAE case</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>upgrade to firmware 35 per details and file attached in FAE case</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

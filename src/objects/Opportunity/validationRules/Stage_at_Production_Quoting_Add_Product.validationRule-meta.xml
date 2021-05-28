@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Stage_at_Production_Quoting_Add_Product</fullName>
+    <active>true</active>
+    <description>Throws error when the Opportunity: Stage is at &quot;Quoting&quot; or further in the Sales Process and a Product has not been added (Product Record Count = 0).</description>
+    <errorConditionFormula>AND($Profile.Name &lt;&gt; &quot;System Administrator&quot;,($Profile.Name &lt;&gt;&quot;Magento Web Profile&quot;), 
+ISPICKVAL( StageName , &quot;Quoting&quot;),
+ISPICKVAL( StageName , &quot;Final Negotiating&quot;),
+ISPICKVAL( StageName , &quot;Initiating Purchase&quot;),
+ISPICKVAL( StageName , &quot;Closed Won&quot;),
+( Product_Record_Count__c = 0),ISPICKVAL($User.Legacy_Company__c,&apos;Marlow&apos;) )</errorConditionFormula>
+    <errorDisplayField>StageName</errorDisplayField>
+    <errorMessage>Please add at least one Product to this Opportunity (on the Products Related List) before saving the Stage as &quot;Quoting&quot; or a later Stage.</errorMessage>
+</ValidationRule>

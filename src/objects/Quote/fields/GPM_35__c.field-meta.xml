@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GPM_35__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>If GPM is less than 35% for any pricing category more than $15K check the box.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>If GPM is less than 35% for any pricing category more than $15K check the box.</inlineHelpText>
+    <label>GPM &lt; 35%</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Checkbox</type>
+</CustomField>

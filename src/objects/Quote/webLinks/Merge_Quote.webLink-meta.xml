@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Merge_Quote</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <height>600</height>
+    <linkType>url</linkType>
+    <masterLabel>Merge Quote</masterLabel>
+    <openType>sidebar</openType>
+    <protected>false</protected>
+    <url>/apex/APXTConga4__Conga_Composer?SolMgr=1
+&amp;serverUrl={!API.Partner_Server_URL_370}
+&amp;id={!Quote.Id}
+&amp;OFN=II-VIQuote_{!Quote.QuoteNumber}
+&amp;DefaultPDF=1
+&amp;LG4=1
+&amp;LG1=Quote+{!Quote.QuoteNumber}+Created
+&amp;LG7=Followup+on+Quote+{!Quote.QuoteNumber}
+&amp;TemplateGroup=Quotes
+&amp;LG3=1
+&amp;QueryId=[LineItems]a0z2f000000OTYrAAO,[HYCOMP]a0z2f000000OTYwAAO, [QN]a0z2f000000OTZBAA4</url>
+</WebLink>

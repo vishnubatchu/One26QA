@@ -1,0 +1,32 @@
+<aura:component  Implements="force:hasRecordId" controller="FAFVCustomUI">
+    <aura:handler name="DeleteRowEvt" event="c:DeleteRowEvt" action="{!c.removeDeletedRow}"/>
+    <aura:handler name="AddRowEvt" event="c:AddNewRowEvt" action="{!c.addNewRow}"/>
+    <aura:method name="SmakeReadonly" action="{!c.doInit}" > 
+        <aura:attribute name="param2" type= "String" /> 
+        <aura:attribute name="param3" type= "boolean" /> 
+    </aura:method>
+    <aura:attribute name="recordId" type="string"/>
+    <aura:attribute name="orderID" type="string"/>
+    <aura:attribute name="serialList" type="list"/> 
+    <aura:attribute name="FailureList" type="list"/> 
+    <aura:attribute name="StepList" type="list"/>
+    <aura:attribute name="editAccess" type="string"/>
+    <aura:attribute name="editMode"  type ="boolean" default ="true" />
+    <div >
+        <div class="slds-col  slds-size_1-of-1" style="background-color:white;">
+            <aura:if isTrue ="{!v.editMode}" >
+                <tr class="slds-text-title_caps slds-box slds-box_x-small slds-text-align_center slds-m-around_x-small">
+                    <th scope="col" style="cursor: pointer">
+                        <!--  <button class="slds-button slds-button_brand" style="width:110px" onclick="{!c.addNewRow}">Add Record</button> -->
+                        <lightning:icon iconName="utility:add" alternativeText="Click to Call" size="small" onclick="{!c.addNewRow}"/> 
+                    </th>
+                </tr>
+            </aura:if>
+            <aura:iteration items="{!v.StepList}" var="item" indexVar="index">
+                <div class="slds-grid slds-box slds-box_xx-small slds-p-around_none">
+                    <c:AddMultiStepChild orderIDs ="{!v.orderID}" StepInstance="{!item}" rowIndex="{!index}" showDelet ="{!v.editMode}" editMods = "{!v.editAccess}"/>
+                </div>
+            </aura:iteration>
+        </div>
+    </div>
+</aura:component>

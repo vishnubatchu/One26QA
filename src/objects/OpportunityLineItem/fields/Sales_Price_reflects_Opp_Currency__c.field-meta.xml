@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sales_Price_reflects_Opp_Currency__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>If checked, user is confirming that the Sales Price entered (and other monetary value fields entered, if applicable) reflects the Opportunity Currency field value on the parent Opportunity.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>If checked, user is confirming that the Sales Price entered (and other monetary value fields entered, if applicable) reflects the Opportunity Currency field value on the parent Opportunity.</inlineHelpText>
+    <label>Sales Price reflects Opp. Currency</label>
+    <type>Checkbox</type>
+</CustomField>

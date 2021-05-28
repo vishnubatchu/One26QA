@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ship_To_Address__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Ship-To Address</description>
+    <externalId>false</externalId>
+    <label>Ship-To Address</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>Account.RecordType.Name</field>
+            <operation>equals</operation>
+            <value>Site</value>
+        </filterItems>
+        <filterItems>
+            <field>Account.Site_Use_Code__c</field>
+            <operation>equals</operation>
+            <value>SHIP_TO</value>
+        </filterItems>
+        <filterItems>
+            <field>Account.Status__c</field>
+            <operation>equals</operation>
+            <value>Active</value>
+        </filterItems>
+        <filterItems>
+            <field>Account.Site_Use_Status__c</field>
+            <operation>equals</operation>
+            <value>Active</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Cases / RMA Requests (Ship-To Address)</relationshipLabel>
+    <relationshipName>Cases_RMA_Requests2</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

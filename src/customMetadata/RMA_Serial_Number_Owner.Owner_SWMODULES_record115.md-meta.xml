@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <description>mohdshahrizal.hassim@finisar.com</description>
+    <label>SWMODULES Owner</label>
+    <protected>false</protected>
+    <values>
+        <field>End_Customer__c</field>
+        <value xsi:type="xsd:string">All</value>
+    </values>
+    <values>
+        <field>Form_Factor__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Location__c</field>
+        <value xsi:type="xsd:string">IPH</value>
+    </values>
+    <values>
+        <field>Marketing_Family__c</field>
+        <value xsi:type="xsd:string">FCLF-8521-3</value>
+    </values>
+    <values>
+        <field>Owner__c</field>
+        <value xsi:type="xsd:string">mohdshahrizal.hassim@finisar.com</value>
+    </values>
+    <values>
+        <field>Product_Group__c</field>
+        <value xsi:type="xsd:string">SWMODULES</value>
+    </values>
+    <values>
+        <field>Product__c</field>
+        <value xsi:nil="true"/>
+    </values>
+</CustomMetadata>

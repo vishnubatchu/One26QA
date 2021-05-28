@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Assigned_RMA_Admin__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>The RMA Admin assigned to this case should be selected here</inlineHelpText>
+    <label>Assigned RMA Admin</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>June Ng Siong Yi</fullName>
+                <default>false</default>
+                <label>June Ng Siong Yi</label>
+            </value>
+            <value>
+                <fullName>Lim Ming Fhong</fullName>
+                <default>false</default>
+                <label>Lim Ming Fhong</label>
+            </value>
+            <value>
+                <fullName>Mengya Yuan</fullName>
+                <default>false</default>
+                <label>Mengya Yuan</label>
+            </value>
+            <value>
+                <fullName>Rachel Lucero</fullName>
+                <default>false</default>
+                <label>Rachel Lucero</label>
+            </value>
+            <value>
+                <fullName>Santhi Nada Raja</fullName>
+                <default>false</default>
+                <label>Santhi Nada Raja</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

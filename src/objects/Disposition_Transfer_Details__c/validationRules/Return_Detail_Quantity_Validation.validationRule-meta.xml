@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Return_Detail_Quantity_Validation</fullName>
+    <active>true</active>
+    <errorConditionFormula>Quantity__c  &lt;=  0</errorConditionFormula>
+    <errorDisplayField>Quantity__c</errorDisplayField>
+    <errorMessage>Disposition/Transfer  Quantity Should be  greater than zero</errorMessage>
+</ValidationRule>

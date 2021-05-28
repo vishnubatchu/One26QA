@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>To_Validate_Next12Months_Rev_of_DR</fullName>
+    <active>true</active>
+    <description>If Desi sign registration is True, it can not be greater than the sum of SAM of all lines.</description>
+    <errorConditionFormula>Design_Registration__c == True  &amp;&amp;  Next_12_Months_Revenue__c &gt;  Sum_of_SAM__c &amp;&amp; Sum_of_SAM__c &gt; 0</errorConditionFormula>
+    <errorMessage>&apos;Next 12 Months Revenue&apos; cannot be greater than Sum of SAM of all lines.</errorMessage>
+</ValidationRule>

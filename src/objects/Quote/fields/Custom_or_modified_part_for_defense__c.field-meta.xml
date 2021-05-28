@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Custom_or_modified_part_for_defense__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Is this a custom or modified part for a defense application?</description>
+    <externalId>false</externalId>
+    <inlineHelpText>If Yes, drawings restricted per 130- 9055-001 Para. 9.0</inlineHelpText>
+    <label>Custom or modified part for defense?</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Checkbox</type>
+</CustomField>

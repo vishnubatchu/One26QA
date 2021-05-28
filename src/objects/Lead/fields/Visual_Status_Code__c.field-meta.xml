@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Visual_Status_Code__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE(Visual_Status__c,&quot; _IM1_servlet/servlet.FileDownload?file=015C0000002tp5j_IM2_Yellow Circle_IM3_&quot;,&quot;Yellow&quot;,
+&quot;_IM1_servlet/servlet.FileDownload?file=015C0000002tp5i_IM2_Red Circle_IM3_&quot;,&quot;Red&quot;,
+&quot; _IM1_servlet/servlet.FileDownload?file=015C0000002tp5h_IM2_Green Circle_IM3_&quot;,&quot;Green&quot;,&quot;N/A&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Visual Status Code</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

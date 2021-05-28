@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Project_Name_Required</fullName>
+    <active>true</active>
+    <description>Project_Name is mandaory for Legacy Marlow &amp; Finisar users</description>
+    <errorConditionFormula>AND(OR(ISPICKVAL( $User.Legacy_Company__c , &apos;Marlow&apos;),ISPICKVAL( $User.Legacy_Company__c , &apos;Finisar&apos;)),ISBLANK(Project_Name__c))</errorConditionFormula>
+    <errorDisplayField>Project_Name__c</errorDisplayField>
+    <errorMessage>Please enter the Project Name</errorMessage>
+</ValidationRule>

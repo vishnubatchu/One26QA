@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DistiUserQuoteCreation</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( ISCHANGED( Type_of_Pricing__c ),   NOT(ISPICKVAL(Type_of_Pricing__c , &apos;Dist Quote&apos;)) ,  $Profile.Name = &apos;Finisar Partner Community User (Disti Users)&apos;)</errorConditionFormula>
+    <errorMessage>Disti User can create only Disti quotes.</errorMessage>
+</ValidationRule>

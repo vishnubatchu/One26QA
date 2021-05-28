@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IPH_RMA_Orders</fullName>
+    <columns>NAME</columns>
+    <columns>RMA_Number__c</columns>
+    <columns>Line__c</columns>
+    <columns>FAFV_Status__c</columns>
+    <columns>Count_of_Serial_s__c</columns>
+    <columns>Aging_Days__c</columns>
+    <columns>End_Customer_Name__c</columns>
+    <columns>Marketing_Part__c</columns>
+    <columns>Ship_From_Inventory__c</columns>
+    <columns>RMA_Received_Date__c</columns>
+    <columns>OWNER.FIRST_NAME</columns>
+    <columns>Return_Reason__c</columns>
+    <columns>Defect_Type__c</columns>
+    <columns>Finisar_HRMA_Num__c</columns>
+    <columns>FA_FV_Completion_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Ship_From_Inventory__c</field>
+        <operation>equals</operation>
+        <value>IPH</value>
+    </filters>
+    <filters>
+        <field>FAFV_Status__c</field>
+        <operation>equals</operation>
+        <value>Open</value>
+    </filters>
+    <filters>
+        <field>RMA_Received_Date__c</field>
+        <operation>greaterThan</operation>
+        <value>1/1/2018</value>
+    </filters>
+    <label>IPH RMA Orders</label>
+    <sharedTo>
+        <role>FA_Engineer_IPH</role>
+        <role>FA_Manager_IPH</role>
+        <role>Quality_Admin</role>
+    </sharedTo>
+</ListView>

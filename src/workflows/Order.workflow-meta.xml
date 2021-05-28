@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Update_order_changed_value_to_true</fullName>
+        <field>Order_Changed__c</field>
+        <literalValue>1</literalValue>
+        <name>Update order changed value to true</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Update order When case Id is changed</fullName>
+        <actions>
+            <name>Update_order_changed_value_to_true</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>OR( AND( 	NOT(ISBLANK( RMA_Request__c )), 	ISNEW()), ISCHANGED (RMA_Request__c ), ISCHANGED( Disti_Name__c ) )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

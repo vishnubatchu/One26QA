@@ -1,0 +1,72 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,force:lightningQuickAction" 
+                controller = "ProductHelper"
+                access="global" >
+    <aura:attribute name ='productGroup' type = 'String' default="ROADM"/>
+    <aura:attribute name ='productFamily' type = 'String' default="WSS-DWP100"/>
+    <aura:attribute name ='MarketingPN' type = 'String' default="10WSAAA0901ZZL"/>
+    <aura:attribute name ='LeadTime' type = 'String'/>
+    <aura:attribute name ='Message' type = 'String'/>
+    <aura:attribute name ='noOfprds' type = 'integer'/>
+    <aura:attribute name ='Products' type = 'List'/>
+    <aura:attribute name ='disBtn' type = 'Boolean' default="true"/>
+    <aura:if isTrue="{! v.Message != null}">
+        {! v.Message}
+    </aura:if>
+    <div class="row">
+        <lightning:input type='String' value='{!v.productGroup}' label='Product Group' placeholder='Enter Product Group'/>
+        <lightning:input type='String' value='{!v.productFamily}' label='Product Family' placeholder='Enter Product Family'/>
+        <lightning:input type='String' value='{!v.MarketingPN}' label='Marketing Family' placeholder='Enter Marketing Family'/>
+        <lightning:button variant="brand" label="Show Products" onclick="{! c.ShowProducts }" />
+    </div>
+    <aura:if isTrue="{! v.disBtn}">
+        <div aura:id = "div1" class="slds-hide">
+            <div class="slds-align_absolute-center">
+                <lightning:button variant="brand" label="Update Lead time" onclick="{! c.updateProducts }" /><br/><br/>
+            </div>
+            <div aura:id = "MessageDiv" class ="slds-hide">
+                Total Number of products are {!v.noOfprds} , Provide Lead time to update Products.
+                <lightning:input type='String' value='{!v.LeadTime}' label='Lead Time' placeholder='Enter Lead time'/>
+                <!--lightning:button variant="brand" label="Update Lead time" onclick="{! c.updateProducts }" /-->
+            </div>
+            <div aura:id = "tbl" class ="slds-hide">
+                
+                <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+                    <thead>
+                        <tr>
+                            <th>Product Name</th>
+                            <th>Marketing PN</th>
+                            <th>Product Group</th>
+                            <th>Product Family</th>
+                            <th>Marketing Family</th>
+                            <th>Lead Time</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <aura:iteration items="{!v.Products}" var="prd" >
+                            <tr>
+                                <th>{! prd.Name}</th>
+                                <th>{! prd.Marketing_P_N__c}</th>
+                                <th>{! prd.Product_Group__c}</th>
+                                <th>{! prd.Product_Family__c}</th>
+                                <th>{! prd.Marketing_Family__c}</th>
+                                <th>
+                                    <lightning:input value="{! prd.Lead_Time__c}" />
+                                </th>
+                            </tr>
+                        </aura:iteration>
+                    </tbody>
+                </table>
+                <br/>
+                
+            </div>
+            <div class="slds-align_absolute-center">
+                <lightning:button aura:id ="btn" variant="brand" label="Update Lead time" onclick="{! c.updateProducts }" />
+            </div>
+        </div>
+        <aura:set attribute="else">
+            <div>
+                <lightning:spinner alternativeText="Updating....." />
+            </div>
+        </aura:set>
+    </aura:if>
+</aura:component>

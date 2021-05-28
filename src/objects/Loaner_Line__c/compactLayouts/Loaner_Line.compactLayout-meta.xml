@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Loaner_Line</fullName>
+    <fields>Name</fields>
+    <fields>Line_Status__c</fields>
+    <fields>Balance_to_be_returned__c</fields>
+    <fields>Loaner_Total__c</fields>
+    <fields>RecordTypeId</fields>
+    <fields>Effective_Return_Due_Date__c</fields>
+    <label>Loaner Line</label>
+</CompactLayout>

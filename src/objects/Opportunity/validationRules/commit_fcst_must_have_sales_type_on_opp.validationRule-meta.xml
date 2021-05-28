@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>commit_fcst_must_have_sales_type_on_opp</fullName>
+    <active>true</active>
+    <description>Commit forecast category must have sales type required if it is blank</description>
+    <errorConditionFormula>AND(TEXT(ForecastCategoryName) = &quot;Commit&quot;,
+ISBLANK(TEXT( Sales_Type__c )),ISPICKVAL($User.Legacy_Company__c,&apos;Marlow&apos;) )</errorConditionFormula>
+    <errorMessage>Forecast category is commit, you must have Sales Type on Opportunity</errorMessage>
+</ValidationRule>

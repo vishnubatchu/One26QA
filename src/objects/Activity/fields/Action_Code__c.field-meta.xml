@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Action_Code__c</fullName>
+    <externalId>false</externalId>
+    <label>Action Code</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Accounting Call</fullName>
+                <default>false</default>
+                <label>Accounting Call</label>
+            </value>
+            <value>
+                <fullName>Accounting Alert</fullName>
+                <default>false</default>
+                <label>Accounting Alert</label>
+            </value>
+            <value>
+                <fullName>Generate Coating &amp; DT Policy</fullName>
+                <default>false</default>
+                <label>Generate Coating &amp; DT Policy</label>
+            </value>
+            <value>
+                <fullName>Generate Customer Worksheet</fullName>
+                <default>false</default>
+                <label>Generate Customer Worksheet</label>
+            </value>
+            <value>
+                <fullName>Email</fullName>
+                <default>false</default>
+                <label>Email</label>
+            </value>
+            <value>
+                <fullName>Fax</fullName>
+                <default>false</default>
+                <label>Fax</label>
+            </value>
+            <value>
+                <fullName>In Call</fullName>
+                <default>false</default>
+                <label>In Call</label>
+            </value>
+            <value>
+                <fullName>Notes</fullName>
+                <default>false</default>
+                <label>Notes</label>
+            </value>
+            <value>
+                <fullName>Proactive Call</fullName>
+                <default>false</default>
+                <label>Proactive Call</label>
+            </value>
+            <value>
+                <fullName>Proactive Email</fullName>
+                <default>false</default>
+                <label>Proactive Email</label>
+            </value>
+            <value>
+                <fullName>Generate Purchase Order</fullName>
+                <default>false</default>
+                <label>Generate Purchase Order</label>
+            </value>
+            <value>
+                <fullName>Send a letter</fullName>
+                <default>false</default>
+                <label>Send a letter</label>
+            </value>
+            <value>
+                <fullName>Generate standard fax</fullName>
+                <default>false</default>
+                <label>Generate standard fax</label>
+            </value>
+            <value>
+                <fullName>Generate terms and conditions</fullName>
+                <default>false</default>
+                <label>Generate terms and conditions</label>
+            </value>
+            <value>
+                <fullName>Request for Quote</fullName>
+                <default>false</default>
+                <label>Request for Quote</label>
+            </value>
+            <value>
+                <fullName>Generate MSDS</fullName>
+                <default>false</default>
+                <label>Generate MSDS</label>
+            </value>
+            <value>
+                <fullName>Out Call</fullName>
+                <default>false</default>
+                <label>Out Call</label>
+            </value>
+            <value>
+                <fullName>Request from Saxonburg</fullName>
+                <default>false</default>
+                <label>Request from Saxonburg</label>
+            </value>
+            <value>
+                <fullName>Customer Visit</fullName>
+                <default>false</default>
+                <label>Customer Visit</label>
+            </value>
+            <value>
+                <fullName>Exhibition Visit</fullName>
+                <default>false</default>
+                <label>Exhibition Visit</label>
+            </value>
+            <value>
+                <fullName>Promotional Items Sent</fullName>
+                <default>false</default>
+                <label>Promotional Items Sent</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

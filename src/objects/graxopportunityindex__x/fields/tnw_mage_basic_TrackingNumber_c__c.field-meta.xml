@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>tnw_mage_basic_TrackingNumber_c__c</fullName>
+    <description>tnw_mage_basic__TrackingNumber__c</description>
+    <externalDeveloperName>tnw_mage_basic__TrackingNumber__c</externalDeveloperName>
+    <externalId>false</externalId>
+    <isFilteringDisabled>false</isFilteringDisabled>
+    <isNameField>false</isNameField>
+    <isSortingDisabled>false</isSortingDisabled>
+    <label>tnw_mage_basic__TrackingNumber__c</label>
+    <length>128</length>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

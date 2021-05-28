@@ -1,0 +1,36 @@
+<!--
+Component Embeds and starts flow Create Loaner Extension Flow 
+-->
+<aura:component implements='force:lightningQuickActionWithoutHeader,force:hasRecordId' >
+	 <aura:handler name="init" value="{!this}" action="{!c.init}" />
+    <aura:attribute name='ApprovalSection' type='Boolean' default='false'/>
+    <aura:attribute name='extensionRequest' type='Loaner__c' Description='new Extension Request Id' />
+  
+     <div class="slds" >
+           <aura:if isTrue ='{!v.ApprovalSection !=true }'>
+        <div class="slds-grid slds-grid_vertical slds-align_absolute-center ">
+            <div class="slds-col slds-align_absolute-center slds-page-header__title slds-border_bottom slds-grid_pull-padded slds-p-top_large">
+                <lightning:flow aura:id='extensionFlow'  onstatuschange ='{!c.onFinish}'/>
+    
+            </div>
+               </div>
+         </aura:if>
+           <aura:if isTrue ='{!v.ApprovalSection}'>
+               <c:SubmitRecordsForApproval recordId ='{!v.extensionRequest.Id}'/>
+             <!--
+       <div class="slds-col slds-align_absolute-center slds-text-body_regular slds-text-align_center slds-grid_pull-padded slds-p-top_medium">Are you sure you want to submit records for Approval
+            </div>
+           
+            <div class="slds-button-group slds-grid_pull-padded slds-p-top_x__large slds-align_absolute-center" role="group"></div>
+            <div class="slds-button-group slds-grid_pull-padded slds-p-top_x__large slds-align_absolute-center" role="group">
+                <button class="slds-button slds-button_neutral" onclick="{!c.doCancel}">Cancel</button>
+                <button class="slds-button slds-button_brand" >Submit For Approval</button>
+            </div>-->
+        </aura:if>
+     
+
+
+    </div>
+ 
+    
+</aura:component>

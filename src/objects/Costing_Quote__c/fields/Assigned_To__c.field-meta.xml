@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Assigned_To__c</fullName>
+    <externalId>false</externalId>
+    <label>Assigned To</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Department__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Stan Himelinski</fullName>
+                <default>false</default>
+                <label>Stan Himelinski</label>
+            </value>
+            <value>
+                <fullName>Dan Schwarcz</fullName>
+                <default>false</default>
+                <label>Dan Schwarcz</label>
+            </value>
+            <value>
+                <fullName>Matthew Snyder</fullName>
+                <default>false</default>
+                <label>Matthew Snyder</label>
+            </value>
+            <value>
+                <fullName>Domenic Michaux</fullName>
+                <default>false</default>
+                <label>Domenic Michaux</label>
+            </value>
+            <value>
+                <fullName>Bill Smith</fullName>
+                <default>false</default>
+                <label>Bill Smith</label>
+            </value>
+            <value>
+                <fullName>Coleman Strohm</fullName>
+                <default>false</default>
+                <label>Coleman Strohm</label>
+            </value>
+            <value>
+                <fullName>Steve Napoletan</fullName>
+                <default>false</default>
+                <label>Steve Napoletan</label>
+            </value>
+            <value>
+                <fullName>Gary Benn</fullName>
+                <default>false</default>
+                <label>Gary Benn</label>
+            </value>
+            <value>
+                <fullName>Derec Ciafre</fullName>
+                <default>false</default>
+                <label>Derec Ciafre</label>
+            </value>
+            <value>
+                <fullName>Rachel Sportelli</fullName>
+                <default>false</default>
+                <label>Rachel Sportelli</label>
+            </value>
+            <value>
+                <fullName>Chris Hunter</fullName>
+                <default>false</default>
+                <label>Chris Hunter</label>
+            </value>
+            <value>
+                <fullName>Pete Brown</fullName>
+                <default>false</default>
+                <label>Pete Brown</label>
+            </value>
+            <value>
+                <fullName>Gerald Fetterman</fullName>
+                <default>false</default>
+                <label>Gerald Fetterman</label>
+            </value>
+            <value>
+                <fullName>Lynn Keitzer</fullName>
+                <default>false</default>
+                <label>Lynn Keitzer</label>
+            </value>
+            <value>
+                <fullName>Mike Skalski</fullName>
+                <default>false</default>
+                <label>Mike Skalski</label>
+            </value>
+            <value>
+                <fullName>Jeff Barca</fullName>
+                <default>false</default>
+                <label>Jeff Barca</label>
+            </value>
+            <value>
+                <fullName>Jan Emerick</fullName>
+                <default>false</default>
+                <label>Jan Emerick</label>
+            </value>
+            <value>
+                <fullName>Mark Klabnik</fullName>
+                <default>false</default>
+                <label>Mark Klabnik</label>
+            </value>
+            <value>
+                <fullName>Randy Brown</fullName>
+                <default>false</default>
+                <label>Randy Brown</label>
+            </value>
+            <value>
+                <fullName>Cameron Payne</fullName>
+                <default>false</default>
+                <label>Cameron Payne</label>
+            </value>
+            <value>
+                <fullName>Brad Transue</fullName>
+                <default>false</default>
+                <label>Brad Transue</label>
+            </value>
+            <value>
+                <fullName>Rob Mrozek</fullName>
+                <default>false</default>
+                <label>Rob Mrozek</label>
+            </value>
+            <value>
+                <fullName>Steve Omecinski</fullName>
+                <default>false</default>
+                <label>Steve Omecinski</label>
+            </value>
+            <value>
+                <fullName>Kim Braden</fullName>
+                <default>false</default>
+                <label>Kim Braden</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>DT</controllingFieldValue>
+            <valueName>Mark Klabnik</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DT</controllingFieldValue>
+            <valueName>Randy Brown</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DT</controllingFieldValue>
+            <valueName>Cameron Payne</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DT</controllingFieldValue>
+            <valueName>Brad Transue</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DT</controllingFieldValue>
+            <valueName>Rob Mrozek</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DT</controllingFieldValue>
+            <valueName>Steve Omecinski</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DT</controllingFieldValue>
+            <valueName>Kim Braden</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CTG</controllingFieldValue>
+            <valueName>Stan Himelinski</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CTG</controllingFieldValue>
+            <valueName>Dan Schwarcz</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CTG</controllingFieldValue>
+            <valueName>Matthew Snyder</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CTG</controllingFieldValue>
+            <valueName>Domenic Michaux</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OF</controllingFieldValue>
+            <valueName>Bill Smith</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OF</controllingFieldValue>
+            <valueName>Coleman Strohm</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OF</controllingFieldValue>
+            <valueName>Steve Napoletan</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OF</controllingFieldValue>
+            <valueName>Gary Benn</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OF</controllingFieldValue>
+            <valueName>Derec Ciafre</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OF</controllingFieldValue>
+            <valueName>Rachel Sportelli</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OF</controllingFieldValue>
+            <valueName>Chris Hunter</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>GSC</controllingFieldValue>
+            <valueName>Pete Brown</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>GSC</controllingFieldValue>
+            <valueName>Gerald Fetterman</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>GSC</controllingFieldValue>
+            <valueName>Lynn Keitzer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>GSC</controllingFieldValue>
+            <valueName>Mike Skalski</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>GSC</controllingFieldValue>
+            <valueName>Jeff Barca</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>GSC</controllingFieldValue>
+            <valueName>Jan Emerick</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

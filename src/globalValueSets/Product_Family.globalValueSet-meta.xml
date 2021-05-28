@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>10G-300ER</fullName>
+        <default>false</default>
+        <label>10G-300ER</label>
+    </customValue>
+    <customValue>
+        <fullName>10G-300IR</fullName>
+        <default>false</default>
+        <label>10G-300IR</label>
+    </customValue>
+    <customValue>
+        <fullName>10G-300LR</fullName>
+        <default>false</default>
+        <label>10G-300LR</label>
+    </customValue>
+    <customValue>
+        <fullName>10G-300SR</fullName>
+        <default>false</default>
+        <label>10G-300SR</label>
+    </customValue>
+    <customValue>
+        <fullName>10G-300VSR</fullName>
+        <default>false</default>
+        <label>10G-300VSR</label>
+    </customValue>
+    <customValue>
+        <fullName>200GAUI-4</fullName>
+        <default>false</default>
+        <label>200GAUI-4</label>
+    </customValue>
+    <customValue>
+        <fullName>40G-DPSK</fullName>
+        <default>false</default>
+        <label>40G-DPSK</label>
+    </customValue>
+    <customValue>
+        <fullName>40G-DQPSK</fullName>
+        <default>false</default>
+        <label>40G-DQPSK</label>
+    </customValue>
+    <customValue>
+        <fullName>40G-NRZ</fullName>
+        <default>false</default>
+        <label>40G-NRZ</label>
+    </customValue>
+    <customValue>
+        <fullName>40G-ODB</fullName>
+        <default>false</default>
+        <label>40G-ODB</label>
+    </customValue>
+    <customValue>
+        <fullName>ANALOG-NR</fullName>
+        <default>false</default>
+        <label>ANALOG-NR</label>
+    </customValue>
+    <customValue>
+        <fullName>ANALOG-RES</fullName>
+        <default>false</default>
+        <label>ANALOG-RES</label>
+    </customValue>
+    <customValue>
+        <fullName>BIDI P2P</fullName>
+        <default>false</default>
+        <label>BIDI P2P</label>
+    </customValue>
+    <customValue>
+        <fullName>BIDI PON</fullName>
+        <default>false</default>
+        <label>BIDI PON</label>
+    </customValue>
+    <customValue>
+        <fullName>BUS DOCTOR</fullName>
+        <default>false</default>
+        <label>BUS DOCTOR</label>
+    </customValue>
+    <customValue>
+        <fullName>CABLE</fullName>
+        <default>false</default>
+        <label>CABLE</label>
+    </customValue>
+    <customValue>
+        <fullName>CATV</fullName>
+        <default>false</default>
+        <label>CATV</label>
+    </customValue>
+    <customValue>
+        <fullName>CATV1310PR</fullName>
+        <default>false</default>
+        <label>CATV1310PR</label>
+    </customValue>
+    <customValue>
+        <fullName>CATV1310ST</fullName>
+        <default>false</default>
+        <label>CATV1310ST</label>
+    </customValue>
+    <customValue>
+        <fullName>CATV1550ND</fullName>
+        <default>false</default>
+        <label>CATV1550ND</label>
+    </customValue>
+    <customValue>
+        <fullName>CATV1550QM</fullName>
+        <default>false</default>
+        <label>CATV1550QM</label>
+    </customValue>
+    <customValue>
+        <fullName>CATV-FTTH</fullName>
+        <default>false</default>
+        <label>CATV-FTTH</label>
+    </customValue>
+    <customValue>
+        <fullName>CATV-XMOD</fullName>
+        <default>false</default>
+        <label>CATV-XMOD</label>
+    </customValue>
+    <customValue>
+        <fullName>CAUI</fullName>
+        <default>false</default>
+        <label>CAUI</label>
+    </customValue>
+    <customValue>
+        <fullName>CAUI-4</fullName>
+        <default>false</default>
+        <label>CAUI-4</label>
+    </customValue>
+    <customValue>
+        <fullName>CDAUI-8</fullName>
+        <default>false</default>
+        <label>CDAUI-8</label>
+    </customValue>
+    <customValue>
+        <fullName>CKTPK-4D</fullName>
+        <default>false</default>
+        <label>CKTPK-4D</label>
+    </customValue>
+    <customValue>
+        <fullName>CKTPK-8D</fullName>
+        <default>false</default>
+        <label>CKTPK-8D</label>
+    </customValue>
+    <customValue>
+        <fullName>CKTPK-CCM</fullName>
+        <default>false</default>
+        <label>CKTPK-CCM</label>
+    </customValue>
+    <customValue>
+        <fullName>CKTPK-OLA</fullName>
+        <default>false</default>
+        <label>CKTPK-OLA</label>
+    </customValue>
+    <customValue>
+        <fullName>COHERENT</fullName>
+        <default>false</default>
+        <label>COHERENT</label>
+    </customValue>
+    <customValue>
+        <fullName>COPPER</fullName>
+        <default>false</default>
+        <label>COPPER</label>
+    </customValue>
+    <customValue>
+        <fullName>CWDM</fullName>
+        <default>false</default>
+        <label>CWDM</label>
+    </customValue>
+    <customValue>
+        <fullName>DWDM</fullName>
+        <default>false</default>
+        <label>DWDM</label>
+    </customValue>
+    <customValue>
+        <fullName>EDFA</fullName>
+        <default>false</default>
+        <label>EDFA</label>
+    </customValue>
+    <customValue>
+        <fullName>EVALCARD</fullName>
+        <default>false</default>
+        <label>EVALCARD</label>
+    </customValue>
+    <customValue>
+        <fullName>GTX</fullName>
+        <default>false</default>
+        <label>GTX</label>
+    </customValue>
+    <customValue>
+        <fullName>HYBRID EDFA-RAMAN</fullName>
+        <default>false</default>
+        <label>HYBRID EDFA-RAMAN</label>
+    </customValue>
+    <customValue>
+        <fullName>LED</fullName>
+        <default>false</default>
+        <label>LED</label>
+    </customValue>
+    <customValue>
+        <fullName>LINE CARD</fullName>
+        <default>false</default>
+        <label>LINE CARD</label>
+    </customValue>
+    <customValue>
+        <fullName>LSWR ADPTR</fullName>
+        <default>false</default>
+        <label>LSWR ADPTR</label>
+    </customValue>
+    <customValue>
+        <fullName>LWDFB</fullName>
+        <default>false</default>
+        <label>LWDFB</label>
+    </customValue>
+    <customValue>
+        <fullName>LWFP</fullName>
+        <default>false</default>
+        <label>LWFP</label>
+    </customValue>
+    <customValue>
+        <fullName>None</fullName>
+        <default>false</default>
+        <label>None</label>
+    </customValue>
+    <customValue>
+        <fullName>OPT ENGINE</fullName>
+        <default>false</default>
+        <label>OPT ENGINE</label>
+    </customValue>
+    <customValue>
+        <fullName>OPTICAL CHANNEL MONITOR</fullName>
+        <default>false</default>
+        <label>OPTICAL CHANNEL MONITOR</label>
+    </customValue>
+    <customValue>
+        <fullName>OPT INSTRU</fullName>
+        <default>false</default>
+        <label>OPT INSTRU</label>
+    </customValue>
+    <customValue>
+        <fullName>OTHER</fullName>
+        <default>false</default>
+        <label>OTHER</label>
+    </customValue>
+    <customValue>
+        <fullName>PASSIVES</fullName>
+        <default>false</default>
+        <label>PASSIVES</label>
+    </customValue>
+    <customValue>
+        <fullName>PCKT MAKER</fullName>
+        <default>false</default>
+        <label>PCKT MAKER</label>
+    </customValue>
+    <customValue>
+        <fullName>PROBES</fullName>
+        <default>false</default>
+        <label>PROBES</label>
+    </customValue>
+    <customValue>
+        <fullName>QSFP+</fullName>
+        <default>false</default>
+        <label>QSFP+</label>
+    </customValue>
+    <customValue>
+        <fullName>QSFP28</fullName>
+        <default>false</default>
+        <label>QSFP28</label>
+    </customValue>
+    <customValue>
+        <fullName>RAMAN</fullName>
+        <default>false</default>
+        <label>RAMAN</label>
+    </customValue>
+    <customValue>
+        <fullName>SFP+ LR</fullName>
+        <default>false</default>
+        <label>SFP+ LR</label>
+    </customValue>
+    <customValue>
+        <fullName>SFP+ LRM</fullName>
+        <default>false</default>
+        <label>SFP+ LRM</label>
+    </customValue>
+    <customValue>
+        <fullName>SFP+ SR</fullName>
+        <default>false</default>
+        <label>SFP+ SR</label>
+    </customValue>
+    <customValue>
+        <fullName>SFP+ TUNABLE</fullName>
+        <default>false</default>
+        <label>SFP+ TUNABLE</label>
+    </customValue>
+    <customValue>
+        <fullName>SOFTWARE</fullName>
+        <default>false</default>
+        <label>SOFTWARE</label>
+    </customValue>
+    <customValue>
+        <fullName>STRUCTURED LIGHT</fullName>
+        <default>false</default>
+        <label>STRUCTURED LIGHT</label>
+    </customValue>
+    <customValue>
+        <fullName>SW</fullName>
+        <default>false</default>
+        <label>SW</label>
+    </customValue>
+    <customValue>
+        <fullName>TAPS</fullName>
+        <default>false</default>
+        <label>TAPS</label>
+    </customValue>
+    <customValue>
+        <fullName>THG</fullName>
+        <default>false</default>
+        <label>THG</label>
+    </customValue>
+    <customValue>
+        <fullName>TIME OF FLIGHT</fullName>
+        <default>false</default>
+        <label>TIME OF FLIGHT</label>
+    </customValue>
+    <customValue>
+        <fullName>TRAINING</fullName>
+        <default>false</default>
+        <label>TRAINING</label>
+    </customValue>
+    <customValue>
+        <fullName>VCSEL</fullName>
+        <default>false</default>
+        <label>VCSEL</label>
+    </customValue>
+    <customValue>
+        <fullName>WSS-DLP2</fullName>
+        <default>false</default>
+        <label>WSS-DLP2</label>
+    </customValue>
+    <customValue>
+        <fullName>WSS-DSP1</fullName>
+        <default>false</default>
+        <label>WSS-DSP1</label>
+    </customValue>
+    <customValue>
+        <fullName>WSS-DUAL</fullName>
+        <default>false</default>
+        <label>WSS-DUAL</label>
+    </customValue>
+    <customValue>
+        <fullName>WSS-DWP100</fullName>
+        <default>false</default>
+        <label>WSS-DWP100</label>
+    </customValue>
+    <customValue>
+        <fullName>WSS-DWP50</fullName>
+        <default>false</default>
+        <label>WSS-DWP50</label>
+    </customValue>
+    <customValue>
+        <fullName>WSS-EWP50</fullName>
+        <default>false</default>
+        <label>WSS-EWP50</label>
+    </customValue>
+    <customValue>
+        <fullName>WSS-OCM</fullName>
+        <default>false</default>
+        <label>WSS-OCM</label>
+    </customValue>
+    <customValue>
+        <fullName>WSS-OIG</fullName>
+        <default>false</default>
+        <label>WSS-OIG</label>
+    </customValue>
+    <customValue>
+        <fullName>WSS-SLP</fullName>
+        <default>false</default>
+        <label>WSS-SLP</label>
+    </customValue>
+    <customValue>
+        <fullName>XAUI</fullName>
+        <default>false</default>
+        <label>XAUI</label>
+    </customValue>
+    <customValue>
+        <fullName>XAUI ER</fullName>
+        <default>false</default>
+        <label>XAUI ER</label>
+    </customValue>
+    <customValue>
+        <fullName>XAUI-IFFO</fullName>
+        <default>false</default>
+        <label>XAUI-IFFO</label>
+    </customValue>
+    <customValue>
+        <fullName>XAUI LR</fullName>
+        <default>false</default>
+        <label>XAUI LR</label>
+    </customValue>
+    <customValue>
+        <fullName>XAUI LRM</fullName>
+        <default>false</default>
+        <label>XAUI LRM</label>
+    </customValue>
+    <customValue>
+        <fullName>XAUI SR</fullName>
+        <default>false</default>
+        <label>XAUI SR</label>
+    </customValue>
+    <customValue>
+        <fullName>XAUI ZR</fullName>
+        <default>false</default>
+        <label>XAUI ZR</label>
+    </customValue>
+    <customValue>
+        <fullName>XFP</fullName>
+        <default>false</default>
+        <label>XFP</label>
+    </customValue>
+    <customValue>
+        <fullName>XFP-E</fullName>
+        <default>false</default>
+        <label>XFP-E</label>
+    </customValue>
+    <customValue>
+        <fullName>XFP IR</fullName>
+        <default>false</default>
+        <label>XFP IR</label>
+    </customValue>
+    <customValue>
+        <fullName>XFP LR</fullName>
+        <default>false</default>
+        <label>XFP LR</label>
+    </customValue>
+    <customValue>
+        <fullName>XFP-RFTX</fullName>
+        <default>false</default>
+        <label>XFP-RFTX</label>
+    </customValue>
+    <customValue>
+        <fullName>XFP SR</fullName>
+        <default>false</default>
+        <label>XFP SR</label>
+    </customValue>
+    <customValue>
+        <fullName>XFP TUNABLE</fullName>
+        <default>false</default>
+        <label>XFP TUNABLE</label>
+    </customValue>
+    <customValue>
+        <fullName>XGIG</fullName>
+        <default>false</default>
+        <label>XGIG</label>
+    </customValue>
+    <customValue>
+        <fullName>XLAUI</fullName>
+        <default>false</default>
+        <label>XLAUI</label>
+    </customValue>
+    <masterLabel>Product Family</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

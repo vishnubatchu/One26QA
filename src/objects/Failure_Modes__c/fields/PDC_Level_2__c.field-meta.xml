@@ -1,0 +1,1930 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PDC_Level_2__c</fullName>
+    <externalId>false</externalId>
+    <label>PDC Level 2</label>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>PDC_Level_1__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Accuracy</fullName>
+                <default>false</default>
+                <label>Accuracy</label>
+            </value>
+            <value>
+                <fullName>ACF</fullName>
+                <default>false</default>
+                <label>ACF</label>
+            </value>
+            <value>
+                <fullName>alignment guide broken</fullName>
+                <default>false</default>
+                <label>alignment guide broken</label>
+            </value>
+            <value>
+                <fullName>Alignment shift</fullName>
+                <default>false</default>
+                <label>Alignment shift</label>
+            </value>
+            <value>
+                <fullName>assembly issue</fullName>
+                <default>false</default>
+                <label>assembly issue</label>
+            </value>
+            <value>
+                <fullName>ATE bug</fullName>
+                <default>false</default>
+                <label>ATE bug</label>
+            </value>
+            <value>
+                <fullName>AWG IL failure</fullName>
+                <default>false</default>
+                <label>AWG IL failure</label>
+            </value>
+            <value>
+                <fullName>bent pin</fullName>
+                <default>false</default>
+                <label>bent pin</label>
+            </value>
+            <value>
+                <fullName>BGA</fullName>
+                <default>false</default>
+                <label>BGA</label>
+            </value>
+            <value>
+                <fullName>Breakout fibre damage</fullName>
+                <default>false</default>
+                <label>Breakout fibre damage</label>
+            </value>
+            <value>
+                <fullName>Broken/Damage Fiber</fullName>
+                <default>false</default>
+                <label>Broken/Damage Fiber</label>
+            </value>
+            <value>
+                <fullName>Broken/Damage OE Fiber</fullName>
+                <default>false</default>
+                <label>Broken/Damage OE Fiber</label>
+            </value>
+            <value>
+                <fullName>broken attenuator</fullName>
+                <default>false</default>
+                <label>broken attenuator</label>
+            </value>
+            <value>
+                <fullName>broken fiber</fullName>
+                <default>false</default>
+                <label>broken fiber</label>
+            </value>
+            <value>
+                <fullName>broken flex (trace)</fullName>
+                <default>false</default>
+                <label>broken flex (trace)</label>
+            </value>
+            <value>
+                <fullName>broken pigtail</fullName>
+                <default>false</default>
+                <label>broken pigtail</label>
+            </value>
+            <value>
+                <fullName>broken ROSA sleeve</fullName>
+                <default>false</default>
+                <label>broken ROSA sleeve</label>
+            </value>
+            <value>
+                <fullName>Bug</fullName>
+                <default>false</default>
+                <label>Bug</label>
+            </value>
+            <value>
+                <fullName>cable cut off</fullName>
+                <default>false</default>
+                <label>cable cut off</label>
+            </value>
+            <value>
+                <fullName>Calibration</fullName>
+                <default>false</default>
+                <label>Calibration</label>
+            </value>
+            <value>
+                <fullName>Capacitor</fullName>
+                <default>false</default>
+                <label>Capacitor</label>
+            </value>
+            <value>
+                <fullName>capacitor crack</fullName>
+                <default>false</default>
+                <label>capacitor crack</label>
+            </value>
+            <value>
+                <fullName>capacitor short</fullName>
+                <default>false</default>
+                <label>capacitor short</label>
+            </value>
+            <value>
+                <fullName>CDR EOS/ESD damage</fullName>
+                <default>false</default>
+                <label>CDR EOS/ESD damage</label>
+            </value>
+            <value>
+                <fullName>CDR hard failure</fullName>
+                <default>false</default>
+                <label>CDR hard failure</label>
+            </value>
+            <value>
+                <fullName>CDR setting issue</fullName>
+                <default>false</default>
+                <label>CDR setting issue</label>
+            </value>
+            <value>
+                <fullName>CDR switch port sensitivity</fullName>
+                <default>false</default>
+                <label>CDR switch port sensitivity</label>
+            </value>
+            <value>
+                <fullName>CDR weak VCO failure</fullName>
+                <default>false</default>
+                <label>CDR weak VCO failure</label>
+            </value>
+            <value>
+                <fullName>chip failure</fullName>
+                <default>false</default>
+                <label>chip failure</label>
+            </value>
+            <value>
+                <fullName>Cold Solder</fullName>
+                <default>false</default>
+                <label>Cold Solder</label>
+            </value>
+            <value>
+                <fullName>component peeling off/missing</fullName>
+                <default>false</default>
+                <label>component peeling off/missing</label>
+            </value>
+            <value>
+                <fullName>Connector</fullName>
+                <default>false</default>
+                <label>Connector</label>
+            </value>
+            <value>
+                <fullName>Connector damage</fullName>
+                <default>false</default>
+                <label>Connector damage</label>
+            </value>
+            <value>
+                <fullName>Contamination</fullName>
+                <default>false</default>
+                <label>Contamination</label>
+            </value>
+            <value>
+                <fullName>contamination on lens</fullName>
+                <default>false</default>
+                <label>contamination on lens</label>
+            </value>
+            <value>
+                <fullName>contamination on port</fullName>
+                <default>false</default>
+                <label>contamination on port</label>
+            </value>
+            <value>
+                <fullName>Corruption</fullName>
+                <default>false</default>
+                <label>Corruption</label>
+            </value>
+            <value>
+                <fullName>Cosmetic defect</fullName>
+                <default>false</default>
+                <label>Cosmetic defect</label>
+            </value>
+            <value>
+                <fullName>Coupler Assembly</fullName>
+                <default>false</default>
+                <label>Coupler Assembly</label>
+            </value>
+            <value>
+                <fullName>Crack</fullName>
+                <default>false</default>
+                <label>Crack</label>
+            </value>
+            <value>
+                <fullName>Crack Solder</fullName>
+                <default>false</default>
+                <label>Crack Solder</label>
+            </value>
+            <value>
+                <fullName>Crack via</fullName>
+                <default>false</default>
+                <label>Crack via</label>
+            </value>
+            <value>
+                <fullName>Customer flex</fullName>
+                <default>false</default>
+                <label>Customer flex</label>
+            </value>
+            <value>
+                <fullName>customer introduced</fullName>
+                <default>false</default>
+                <label>customer introduced</label>
+            </value>
+            <value>
+                <fullName>Damaged</fullName>
+                <default>false</default>
+                <label>Damaged</label>
+            </value>
+            <value>
+                <fullName>Damaged Components</fullName>
+                <default>false</default>
+                <label>Damaged Components</label>
+            </value>
+            <value>
+                <fullName>Damaged Label</fullName>
+                <default>false</default>
+                <label>Damaged Label</label>
+            </value>
+            <value>
+                <fullName>Damaged Leads</fullName>
+                <default>false</default>
+                <label>Damaged Leads</label>
+            </value>
+            <value>
+                <fullName>Damaged Mechanical Piece Part</fullName>
+                <default>false</default>
+                <label>Damaged Mechanical Piece Part</label>
+            </value>
+            <value>
+                <fullName>Defective IC</fullName>
+                <default>false</default>
+                <label>Defective IC</label>
+            </value>
+            <value>
+                <fullName>Degradation</fullName>
+                <default>false</default>
+                <label>Degradation</label>
+            </value>
+            <value>
+                <fullName>Demux failure</fullName>
+                <default>false</default>
+                <label>Demux failure</label>
+            </value>
+            <value>
+                <fullName>Dendrite</fullName>
+                <default>false</default>
+                <label>Dendrite</label>
+            </value>
+            <value>
+                <fullName>Dent/Damaged Bail</fullName>
+                <default>false</default>
+                <label>Dent/Damaged Bail</label>
+            </value>
+            <value>
+                <fullName>Dent/Deformed Enclosure</fullName>
+                <default>false</default>
+                <label>Dent/Deformed Enclosure</label>
+            </value>
+            <value>
+                <fullName>Dent Label</fullName>
+                <default>false</default>
+                <label>Dent Label</label>
+            </value>
+            <value>
+                <fullName>Detached</fullName>
+                <default>false</default>
+                <label>Detached</label>
+            </value>
+            <value>
+                <fullName>Diode</fullName>
+                <default>false</default>
+                <label>Diode</label>
+            </value>
+            <value>
+                <fullName>Dislocation</fullName>
+                <default>false</default>
+                <label>Dislocation</label>
+            </value>
+            <value>
+                <fullName>Displaced optics</fullName>
+                <default>false</default>
+                <label>Displaced optics</label>
+            </value>
+            <value>
+                <fullName>Documentation</fullName>
+                <default>false</default>
+                <label>Documentation</label>
+            </value>
+            <value>
+                <fullName>E2000 endface damaged</fullName>
+                <default>false</default>
+                <label>E2000 endface damaged</label>
+            </value>
+            <value>
+                <fullName>EEPROM Corruption</fullName>
+                <default>false</default>
+                <label>EEPROM Corruption</label>
+            </value>
+            <value>
+                <fullName>EEPROM failure</fullName>
+                <default>false</default>
+                <label>EEPROM failure</label>
+            </value>
+            <value>
+                <fullName>EMI contamination</fullName>
+                <default>false</default>
+                <label>EMI contamination</label>
+            </value>
+            <value>
+                <fullName>EOS</fullName>
+                <default>false</default>
+                <label>EOS</label>
+            </value>
+            <value>
+                <fullName>Epoxy / Adhesive</fullName>
+                <default>false</default>
+                <label>Epoxy / Adhesive</label>
+            </value>
+            <value>
+                <fullName>Epoxy short</fullName>
+                <default>false</default>
+                <label>Epoxy short</label>
+            </value>
+            <value>
+                <fullName>Fan</fullName>
+                <default>false</default>
+                <label>Fan</label>
+            </value>
+            <value>
+                <fullName>Fastener</fullName>
+                <default>false</default>
+                <label>Fastener</label>
+            </value>
+            <value>
+                <fullName>Faulty</fullName>
+                <default>false</default>
+                <label>Faulty</label>
+            </value>
+            <value>
+                <fullName>Feedthrough damage</fullName>
+                <default>false</default>
+                <label>Feedthrough damage</label>
+            </value>
+            <value>
+                <fullName>field environment</fullName>
+                <default>false</default>
+                <label>field environment</label>
+            </value>
+            <value>
+                <fullName>Firmware bug</fullName>
+                <default>false</default>
+                <label>Firmware bug</label>
+            </value>
+            <value>
+                <fullName>Firmware feature</fullName>
+                <default>false</default>
+                <label>Firmware feature</label>
+            </value>
+            <value>
+                <fullName>Flash Memory</fullName>
+                <default>false</default>
+                <label>Flash Memory</label>
+            </value>
+            <value>
+                <fullName>FPGA</fullName>
+                <default>false</default>
+                <label>FPGA</label>
+            </value>
+            <value>
+                <fullName>FPGA chip failure</fullName>
+                <default>false</default>
+                <label>FPGA chip failure</label>
+            </value>
+            <value>
+                <fullName>Frequency shift</fullName>
+                <default>false</default>
+                <label>Frequency shift</label>
+            </value>
+            <value>
+                <fullName>Front end assembly</fullName>
+                <default>false</default>
+                <label>Front end assembly</label>
+            </value>
+            <value>
+                <fullName>Fuse</fullName>
+                <default>false</default>
+                <label>Fuse</label>
+            </value>
+            <value>
+                <fullName>Header pin damage</fullName>
+                <default>false</default>
+                <label>Header pin damage</label>
+            </value>
+            <value>
+                <fullName>Hermeticity</fullName>
+                <default>false</default>
+                <label>Hermeticity</label>
+            </value>
+            <value>
+                <fullName>High impendance</fullName>
+                <default>false</default>
+                <label>High impendance</label>
+            </value>
+            <value>
+                <fullName>High Resistance</fullName>
+                <default>false</default>
+                <label>High Resistance</label>
+            </value>
+            <value>
+                <fullName>Hotbar cold joint</fullName>
+                <default>false</default>
+                <label>Hotbar cold joint</label>
+            </value>
+            <value>
+                <fullName>Hotbar short</fullName>
+                <default>false</default>
+                <label>Hotbar short</label>
+            </value>
+            <value>
+                <fullName>Illegible Text</fullName>
+                <default>false</default>
+                <label>Illegible Text</label>
+            </value>
+            <value>
+                <fullName>Illigibel Text</fullName>
+                <default>false</default>
+                <label>Illigibel Text</label>
+            </value>
+            <value>
+                <fullName>Incorrect assembly</fullName>
+                <default>false</default>
+                <label>Incorrect assembly</label>
+            </value>
+            <value>
+                <fullName>Incorrect component</fullName>
+                <default>false</default>
+                <label>Incorrect component</label>
+            </value>
+            <value>
+                <fullName>Incorrect fibre organisation</fullName>
+                <default>false</default>
+                <label>Incorrect fibre organisation</label>
+            </value>
+            <value>
+                <fullName>Incorrect firmware upload</fullName>
+                <default>false</default>
+                <label>Incorrect firmware upload</label>
+            </value>
+            <value>
+                <fullName>Incorrect labelling</fullName>
+                <default>false</default>
+                <label>Incorrect labelling</label>
+            </value>
+            <value>
+                <fullName>Incorrect Rx Calibration</fullName>
+                <default>false</default>
+                <label>Incorrect Rx Calibration</label>
+            </value>
+            <value>
+                <fullName>incorrect software upload</fullName>
+                <default>false</default>
+                <label>incorrect software upload</label>
+            </value>
+            <value>
+                <fullName>Incorrect Specfile</fullName>
+                <default>false</default>
+                <label>Incorrect Specfile</label>
+            </value>
+            <value>
+                <fullName>Incorrect Tx Calibration</fullName>
+                <default>false</default>
+                <label>Incorrect Tx Calibration</label>
+            </value>
+            <value>
+                <fullName>Inductor</fullName>
+                <default>false</default>
+                <label>Inductor</label>
+            </value>
+            <value>
+                <fullName>inductor failure</fullName>
+                <default>false</default>
+                <label>inductor failure</label>
+            </value>
+            <value>
+                <fullName>Insufficient coverage</fullName>
+                <default>false</default>
+                <label>Insufficient coverage</label>
+            </value>
+            <value>
+                <fullName>Insufficient Solder</fullName>
+                <default>false</default>
+                <label>Insufficient Solder</label>
+            </value>
+            <value>
+                <fullName>Interconnect</fullName>
+                <default>false</default>
+                <label>Interconnect</label>
+            </value>
+            <value>
+                <fullName>Inventory Return</fullName>
+                <default>false</default>
+                <label>Inventory Return</label>
+            </value>
+            <value>
+                <fullName>Isolator Assembly</fullName>
+                <default>false</default>
+                <label>Isolator Assembly</label>
+            </value>
+            <value>
+                <fullName>Kylia</fullName>
+                <default>false</default>
+                <label>Kylia</label>
+            </value>
+            <value>
+                <fullName>Labelling</fullName>
+                <default>false</default>
+                <label>Labelling</label>
+            </value>
+            <value>
+                <fullName>Laser</fullName>
+                <default>false</default>
+                <label>Laser</label>
+            </value>
+            <value>
+                <fullName>LC end face</fullName>
+                <default>false</default>
+                <label>LC end face</label>
+            </value>
+            <value>
+                <fullName>LCOS Fault</fullName>
+                <default>false</default>
+                <label>LCOS Fault</label>
+            </value>
+            <value>
+                <fullName>Ldpa Boost Setting</fullName>
+                <default>false</default>
+                <label>Ldpa Boost Setting</label>
+            </value>
+            <value>
+                <fullName>Leaky</fullName>
+                <default>false</default>
+                <label>Leaky</label>
+            </value>
+            <value>
+                <fullName>Lens delamination</fullName>
+                <default>false</default>
+                <label>Lens delamination</label>
+            </value>
+            <value>
+                <fullName>LOL</fullName>
+                <default>false</default>
+                <label>LOL</label>
+            </value>
+            <value>
+                <fullName>LRS Fault</fullName>
+                <default>false</default>
+                <label>LRS Fault</label>
+            </value>
+            <value>
+                <fullName>Mainboard damaged</fullName>
+                <default>false</default>
+                <label>Mainboard damaged</label>
+            </value>
+            <value>
+                <fullName>Mainboard failure</fullName>
+                <default>false</default>
+                <label>Mainboard failure</label>
+            </value>
+            <value>
+                <fullName>MCU chipping/crack</fullName>
+                <default>false</default>
+                <label>MCU chipping/crack</label>
+            </value>
+            <value>
+                <fullName>MEMS</fullName>
+                <default>false</default>
+                <label>MEMS</label>
+            </value>
+            <value>
+                <fullName>Microprocessor</fullName>
+                <default>false</default>
+                <label>Microprocessor</label>
+            </value>
+            <value>
+                <fullName>Microzed Board</fullName>
+                <default>false</default>
+                <label>Microzed Board</label>
+            </value>
+            <value>
+                <fullName>Module carton damage</fullName>
+                <default>false</default>
+                <label>Module carton damage</label>
+            </value>
+            <value>
+                <fullName>Module carton label</fullName>
+                <default>false</default>
+                <label>Module carton label</label>
+            </value>
+            <value>
+                <fullName>Moisture</fullName>
+                <default>false</default>
+                <label>Moisture</label>
+            </value>
+            <value>
+                <fullName>MOSFET</fullName>
+                <default>false</default>
+                <label>MOSFET</label>
+            </value>
+            <value>
+                <fullName>MPO end face</fullName>
+                <default>false</default>
+                <label>MPO end face</label>
+            </value>
+            <value>
+                <fullName>NTF</fullName>
+                <default>false</default>
+                <label>NTF</label>
+            </value>
+            <value>
+                <fullName>OCM failure</fullName>
+                <default>false</default>
+                <label>OCM failure</label>
+            </value>
+            <value>
+                <fullName>ODC failure</fullName>
+                <default>false</default>
+                <label>ODC failure</label>
+            </value>
+            <value>
+                <fullName>Offset</fullName>
+                <default>false</default>
+                <label>Offset</label>
+            </value>
+            <value>
+                <fullName>Optical Alignment</fullName>
+                <default>false</default>
+                <label>Optical Alignment</label>
+            </value>
+            <value>
+                <fullName>Optical connector</fullName>
+                <default>false</default>
+                <label>Optical connector</label>
+            </value>
+            <value>
+                <fullName>Oscillator</fullName>
+                <default>false</default>
+                <label>Oscillator</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Others</fullName>
+                <default>false</default>
+                <label>Others</label>
+            </value>
+            <value>
+                <fullName>Out Of Specifications</fullName>
+                <default>false</default>
+                <label>Out Of Specifications</label>
+            </value>
+            <value>
+                <fullName>Overload</fullName>
+                <default>false</default>
+                <label>Overload</label>
+            </value>
+            <value>
+                <fullName>Oxide Delamination</fullName>
+                <default>false</default>
+                <label>Oxide Delamination</label>
+            </value>
+            <value>
+                <fullName>Pallet damage</fullName>
+                <default>false</default>
+                <label>Pallet damage</label>
+            </value>
+            <value>
+                <fullName>Pallet label</fullName>
+                <default>false</default>
+                <label>Pallet label</label>
+            </value>
+            <value>
+                <fullName>Pallet straps</fullName>
+                <default>false</default>
+                <label>Pallet straps</label>
+            </value>
+            <value>
+                <fullName>Pallet wrapping</fullName>
+                <default>false</default>
+                <label>Pallet wrapping</label>
+            </value>
+            <value>
+                <fullName>Passivation Degradation</fullName>
+                <default>false</default>
+                <label>Passivation Degradation</label>
+            </value>
+            <value>
+                <fullName>PD failure</fullName>
+                <default>false</default>
+                <label>PD failure</label>
+            </value>
+            <value>
+                <fullName>Periphery Degradation</fullName>
+                <default>false</default>
+                <label>Periphery Degradation</label>
+            </value>
+            <value>
+                <fullName>POU Cosmetic defect</fullName>
+                <default>false</default>
+                <label>POU Cosmetic defect</label>
+            </value>
+            <value>
+                <fullName>POU Damage</fullName>
+                <default>false</default>
+                <label>POU Damage</label>
+            </value>
+            <value>
+                <fullName>POU Flex</fullName>
+                <default>false</default>
+                <label>POU Flex</label>
+            </value>
+            <value>
+                <fullName>Product revision change</fullName>
+                <default>false</default>
+                <label>Product revision change</label>
+            </value>
+            <value>
+                <fullName>pump failure</fullName>
+                <default>false</default>
+                <label>pump failure</label>
+            </value>
+            <value>
+                <fullName>PWM</fullName>
+                <default>false</default>
+                <label>PWM</label>
+            </value>
+            <value>
+                <fullName>QVLD failure</fullName>
+                <default>false</default>
+                <label>QVLD failure</label>
+            </value>
+            <value>
+                <fullName>RAM Failure</fullName>
+                <default>false</default>
+                <label>RAM Failure</label>
+            </value>
+            <value>
+                <fullName>Regulator</fullName>
+                <default>false</default>
+                <label>Regulator</label>
+            </value>
+            <value>
+                <fullName>Resistive Short</fullName>
+                <default>false</default>
+                <label>Resistive Short</label>
+            </value>
+            <value>
+                <fullName>Resistor</fullName>
+                <default>false</default>
+                <label>Resistor</label>
+            </value>
+            <value>
+                <fullName>resistor failure</fullName>
+                <default>false</default>
+                <label>resistor failure</label>
+            </value>
+            <value>
+                <fullName>Revision update</fullName>
+                <default>false</default>
+                <label>Revision update</label>
+            </value>
+            <value>
+                <fullName>Ribbon fibre damage</fullName>
+                <default>false</default>
+                <label>Ribbon fibre damage</label>
+            </value>
+            <value>
+                <fullName>Riser board pad contamination</fullName>
+                <default>false</default>
+                <label>Riser board pad contamination</label>
+            </value>
+            <value>
+                <fullName>Riser board pad damage</fullName>
+                <default>false</default>
+                <label>Riser board pad damage</label>
+            </value>
+            <value>
+                <fullName>Rma Failure</fullName>
+                <default>false</default>
+                <label>Rma Failure</label>
+            </value>
+            <value>
+                <fullName>ROSA failure</fullName>
+                <default>false</default>
+                <label>ROSA failure</label>
+            </value>
+            <value>
+                <fullName>Scratch Label</fullName>
+                <default>false</default>
+                <label>Scratch Label</label>
+            </value>
+            <value>
+                <fullName>shell cosmetic failure</fullName>
+                <default>false</default>
+                <label>shell cosmetic failure</label>
+            </value>
+            <value>
+                <fullName>Shipping carton damage</fullName>
+                <default>false</default>
+                <label>Shipping carton damage</label>
+            </value>
+            <value>
+                <fullName>Shipping carton label</fullName>
+                <default>false</default>
+                <label>Shipping carton label</label>
+            </value>
+            <value>
+                <fullName>Silver epoxy encroachment</fullName>
+                <default>false</default>
+                <label>Silver epoxy encroachment</label>
+            </value>
+            <value>
+                <fullName>Software bug</fullName>
+                <default>false</default>
+                <label>Software bug</label>
+            </value>
+            <value>
+                <fullName>Software feature</fullName>
+                <default>false</default>
+                <label>Software feature</label>
+            </value>
+            <value>
+                <fullName>Solder</fullName>
+                <default>false</default>
+                <label>Solder</label>
+            </value>
+            <value>
+                <fullName>Squelch</fullName>
+                <default>false</default>
+                <label>Squelch</label>
+            </value>
+            <value>
+                <fullName>Structural damage</fullName>
+                <default>false</default>
+                <label>Structural damage</label>
+            </value>
+            <value>
+                <fullName>Supply connector</fullName>
+                <default>false</default>
+                <label>Supply connector</label>
+            </value>
+            <value>
+                <fullName>TEC controller</fullName>
+                <default>false</default>
+                <label>TEC controller</label>
+            </value>
+            <value>
+                <fullName>TEC damage</fullName>
+                <default>false</default>
+                <label>TEC damage</label>
+            </value>
+            <value>
+                <fullName>TEC fault</fullName>
+                <default>false</default>
+                <label>TEC fault</label>
+            </value>
+            <value>
+                <fullName>Temperature Alarm Issue</fullName>
+                <default>false</default>
+                <label>Temperature Alarm Issue</label>
+            </value>
+            <value>
+                <fullName>Thermistor</fullName>
+                <default>false</default>
+                <label>Thermistor</label>
+            </value>
+            <value>
+                <fullName>Thermode Alignment Problem</fullName>
+                <default>false</default>
+                <label>Thermode Alignment Problem</label>
+            </value>
+            <value>
+                <fullName>TIA EOS/ESD damage</fullName>
+                <default>false</default>
+                <label>TIA EOS/ESD damage</label>
+            </value>
+            <value>
+                <fullName>TIA failure</fullName>
+                <default>false</default>
+                <label>TIA failure</label>
+            </value>
+            <value>
+                <fullName>Tolerance</fullName>
+                <default>false</default>
+                <label>Tolerance</label>
+            </value>
+            <value>
+                <fullName>TOSA failure</fullName>
+                <default>false</default>
+                <label>TOSA failure</label>
+            </value>
+            <value>
+                <fullName>TOSA MZ related failure</fullName>
+                <default>false</default>
+                <label>TOSA MZ related failure</label>
+            </value>
+            <value>
+                <fullName>Unit Destroyed During Analysis</fullName>
+                <default>false</default>
+                <label>Unit Destroyed During Analysis</label>
+            </value>
+            <value>
+                <fullName>Unit Failure Recovered During Analysis</fullName>
+                <default>false</default>
+                <label>Unit Failure Recovered During Analysis</label>
+            </value>
+            <value>
+                <fullName>Unreleased PCN</fullName>
+                <default>false</default>
+                <label>Unreleased PCN</label>
+            </value>
+            <value>
+                <fullName>Unresolved</fullName>
+                <default>false</default>
+                <label>Unresolved</label>
+            </value>
+            <value>
+                <fullName>Upgrade</fullName>
+                <default>false</default>
+                <label>Upgrade</label>
+            </value>
+            <value>
+                <fullName>VCOM</fullName>
+                <default>false</default>
+                <label>VCOM</label>
+            </value>
+            <value>
+                <fullName>VCSEL failure</fullName>
+                <default>false</default>
+                <label>VCSEL failure</label>
+            </value>
+            <value>
+                <fullName>Voltage supervisor</fullName>
+                <default>false</default>
+                <label>Voltage supervisor</label>
+            </value>
+            <value>
+                <fullName>Voltage supply assembly</fullName>
+                <default>false</default>
+                <label>Voltage supply assembly</label>
+            </value>
+            <value>
+                <fullName>Wirebond</fullName>
+                <default>false</default>
+                <label>Wirebond</label>
+            </value>
+            <value>
+                <fullName>Worned Out Thermode</fullName>
+                <default>false</default>
+                <label>Worned Out Thermode</label>
+            </value>
+            <value>
+                <fullName>Wrong</fullName>
+                <default>false</default>
+                <label>Wrong</label>
+            </value>
+            <value>
+                <fullName>Wrong ECI</fullName>
+                <default>false</default>
+                <label>Wrong ECI</label>
+            </value>
+            <value>
+                <fullName>Wrong Label</fullName>
+                <default>false</default>
+                <label>Wrong Label</label>
+            </value>
+            <value>
+                <fullName>Wrong Sequence</fullName>
+                <default>false</default>
+                <label>Wrong Sequence</label>
+            </value>
+            <value>
+                <fullName>Wrong specification</fullName>
+                <default>false</default>
+                <label>Wrong specification</label>
+            </value>
+            <value>
+                <fullName>Wrong Value</fullName>
+                <default>false</default>
+                <label>Wrong Value</label>
+            </value>
+            <value>
+                <fullName>Wrong Version</fullName>
+                <default>false</default>
+                <label>Wrong Version</label>
+            </value>
+            <value>
+                <fullName>WSS failure</fullName>
+                <default>false</default>
+                <label>WSS failure</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Quality</controllingFieldValue>
+            <controllingFieldValue>Rework</controllingFieldValue>
+            <controllingFieldValue>Software/Firmware</controllingFieldValue>
+            <controllingFieldValue>WSS Shipment</controllingFieldValue>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <controllingFieldValue>Voltage Regulator IC</controllingFieldValue>
+            <controllingFieldValue>Breakout</controllingFieldValue>
+            <controllingFieldValue>Heat sink, Lid, Ring Frame</controllingFieldValue>
+            <controllingFieldValue>Interface board</controllingFieldValue>
+            <controllingFieldValue>Header pin / Riser board</controllingFieldValue>
+            <controllingFieldValue>POU</controllingFieldValue>
+            <controllingFieldValue>Power Supply</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Quality</controllingFieldValue>
+            <valueName>Product revision change</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Quality</controllingFieldValue>
+            <valueName>Unreleased PCN</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rework</controllingFieldValue>
+            <valueName>Calibration</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rework</controllingFieldValue>
+            <valueName>Optical connector</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rework</controllingFieldValue>
+            <valueName>Revision update</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rework</controllingFieldValue>
+            <valueName>Upgrade</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Software/Firmware</controllingFieldValue>
+            <valueName>Firmware bug</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Software/Firmware</controllingFieldValue>
+            <valueName>Firmware feature</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Software/Firmware</controllingFieldValue>
+            <valueName>Software bug</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Software/Firmware</controllingFieldValue>
+            <valueName>Software feature</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>WSS Shipment</controllingFieldValue>
+            <valueName>Documentation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>WSS Shipment</controllingFieldValue>
+            <valueName>Inventory Return</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>WSS Shipment</controllingFieldValue>
+            <valueName>Module carton damage</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>WSS Shipment</controllingFieldValue>
+            <valueName>Module carton label</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>WSS Shipment</controllingFieldValue>
+            <valueName>Pallet damage</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>WSS Shipment</controllingFieldValue>
+            <valueName>Pallet label</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>WSS Shipment</controllingFieldValue>
+            <valueName>Pallet straps</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>WSS Shipment</controllingFieldValue>
+            <valueName>Pallet wrapping</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>WSS Shipment</controllingFieldValue>
+            <valueName>Shipping carton damage</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>WSS Shipment</controllingFieldValue>
+            <valueName>Shipping carton label</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <valueName>Kylia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <valueName>Microzed Board</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Optical cables</controllingFieldValue>
+            <valueName>Broken/Damage Fiber</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Optical cables</controllingFieldValue>
+            <valueName>Broken/Damage OE Fiber</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Optical cables</controllingFieldValue>
+            <controllingFieldValue>Capacitor</controllingFieldValue>
+            <controllingFieldValue>Resistor</controllingFieldValue>
+            <controllingFieldValue>BH Laser</controllingFieldValue>
+            <controllingFieldValue>DFB Laser</controllingFieldValue>
+            <controllingFieldValue>SEMTECH CDR</controllingFieldValue>
+            <controllingFieldValue>Firmware</controllingFieldValue>
+            <controllingFieldValue>PCBA via</controllingFieldValue>
+            <controllingFieldValue>I32X1B</controllingFieldValue>
+            <controllingFieldValue>ICDR3A</controllingFieldValue>
+            <controllingFieldValue>28GTIA</controllingFieldValue>
+            <controllingFieldValue>Specfile</controllingFieldValue>
+            <controllingFieldValue>Test</controllingFieldValue>
+            <controllingFieldValue>COSEMI PD</controllingFieldValue>
+            <controllingFieldValue>CLEI Label</controllingFieldValue>
+            <controllingFieldValue>Flex</controllingFieldValue>
+            <controllingFieldValue>Hotbar</controllingFieldValue>
+            <controllingFieldValue>Leadframe</controllingFieldValue>
+            <controllingFieldValue>EMI Collar</controllingFieldValue>
+            <controllingFieldValue>Gold Finger</controllingFieldValue>
+            <controllingFieldValue>ROSA</controllingFieldValue>
+            <controllingFieldValue>TOSA</controllingFieldValue>
+            <controllingFieldValue>Module Shell</controllingFieldValue>
+            <controllingFieldValue>COF Window</controllingFieldValue>
+            <controllingFieldValue>Lens</controllingFieldValue>
+            <controllingFieldValue>Isolator</controllingFieldValue>
+            <controllingFieldValue>Laser Driver</controllingFieldValue>
+            <controllingFieldValue>Inductor</controllingFieldValue>
+            <controllingFieldValue>Calibration</controllingFieldValue>
+            <controllingFieldValue>MOSFET</controllingFieldValue>
+            <controllingFieldValue>10GCDRLDPA</controllingFieldValue>
+            <controllingFieldValue>COF</controllingFieldValue>
+            <controllingFieldValue>VCSEL</controllingFieldValue>
+            <valueName>Others</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Capacitor</controllingFieldValue>
+            <controllingFieldValue>Resistor</controllingFieldValue>
+            <controllingFieldValue>BH Laser</controllingFieldValue>
+            <controllingFieldValue>DFB Laser</controllingFieldValue>
+            <controllingFieldValue>PCBA via</controllingFieldValue>
+            <controllingFieldValue>I32X1B</controllingFieldValue>
+            <controllingFieldValue>28GTIA</controllingFieldValue>
+            <controllingFieldValue>EMI Collar</controllingFieldValue>
+            <controllingFieldValue>Gold Finger</controllingFieldValue>
+            <controllingFieldValue>Voltage Regulator IC</controllingFieldValue>
+            <controllingFieldValue>COF Window</controllingFieldValue>
+            <controllingFieldValue>Lens</controllingFieldValue>
+            <controllingFieldValue>Isolator</controllingFieldValue>
+            <controllingFieldValue>Inductor</controllingFieldValue>
+            <controllingFieldValue>MOSFET</controllingFieldValue>
+            <controllingFieldValue>10GCDRLDPA</controllingFieldValue>
+            <controllingFieldValue>COF</controllingFieldValue>
+            <controllingFieldValue>VCSEL</controllingFieldValue>
+            <valueName>Damaged</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Capacitor</controllingFieldValue>
+            <controllingFieldValue>Ceramic capacitor</controllingFieldValue>
+            <controllingFieldValue>Inductor</controllingFieldValue>
+            <controllingFieldValue>MOSFET</controllingFieldValue>
+            <valueName>Leaky</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Capacitor</controllingFieldValue>
+            <valueName>Resistive Short</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Resistor</controllingFieldValue>
+            <valueName>Out Of Specifications</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Resistor</controllingFieldValue>
+            <valueName>Wrong Value</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BH Laser</controllingFieldValue>
+            <controllingFieldValue>DFB Laser</controllingFieldValue>
+            <valueName>Degradation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SEMTECH CDR</controllingFieldValue>
+            <controllingFieldValue>I32X1B</controllingFieldValue>
+            <controllingFieldValue>ICDR3A</controllingFieldValue>
+            <controllingFieldValue>28GTIA</controllingFieldValue>
+            <controllingFieldValue>FCC</controllingFieldValue>
+            <controllingFieldValue>COSEMI PD</controllingFieldValue>
+            <controllingFieldValue>Voltage Regulator IC</controllingFieldValue>
+            <controllingFieldValue>10GCDRLDPA</controllingFieldValue>
+            <valueName>Defective IC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SEMTECH CDR</controllingFieldValue>
+            <valueName>Squelch</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Firmware</controllingFieldValue>
+            <valueName>Ldpa Boost Setting</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Firmware</controllingFieldValue>
+            <valueName>Temperature Alarm Issue</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PCBA via</controllingFieldValue>
+            <valueName>Crack via</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PCBA via</controllingFieldValue>
+            <valueName>Damaged Components</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product label</controllingFieldValue>
+            <valueName>Dent Label</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product label</controllingFieldValue>
+            <valueName>Illegible Text</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product label</controllingFieldValue>
+            <controllingFieldValue>CLEI Label</controllingFieldValue>
+            <valueName>Scratch Label</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product label</controllingFieldValue>
+            <valueName>Wrong ECI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product label</controllingFieldValue>
+            <controllingFieldValue>CLEI Label</controllingFieldValue>
+            <valueName>Wrong Label</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>I32X1B</controllingFieldValue>
+            <controllingFieldValue>ICDR3A</controllingFieldValue>
+            <controllingFieldValue>28GTIA</controllingFieldValue>
+            <controllingFieldValue>FCC</controllingFieldValue>
+            <controllingFieldValue>COSEMI PD</controllingFieldValue>
+            <controllingFieldValue>Voltage Regulator IC</controllingFieldValue>
+            <controllingFieldValue>Laser Driver</controllingFieldValue>
+            <valueName>EOS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>I32X1B</controllingFieldValue>
+            <controllingFieldValue>ICDR3A</controllingFieldValue>
+            <controllingFieldValue>10GCDRLDPA</controllingFieldValue>
+            <valueName>LOL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>I32X1B</controllingFieldValue>
+            <valueName>RAM Failure</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unknown</controllingFieldValue>
+            <valueName>Unit Destroyed During Analysis</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unknown</controllingFieldValue>
+            <valueName>Unit Failure Recovered During Analysis</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unresolved</controllingFieldValue>
+            <valueName>Unresolved</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>28GTIA</controllingFieldValue>
+            <controllingFieldValue>COSEMI PD</controllingFieldValue>
+            <valueName>Overload</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NTF</controllingFieldValue>
+            <controllingFieldValue>Common</controllingFieldValue>
+            <valueName>NTF</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Specfile</controllingFieldValue>
+            <valueName>Incorrect Specfile</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Specfile</controllingFieldValue>
+            <valueName>Wrong Sequence</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Test</controllingFieldValue>
+            <valueName>Bug</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Test</controllingFieldValue>
+            <valueName>EEPROM Corruption</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Test</controllingFieldValue>
+            <valueName>Wrong Version</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CLEI Label</controllingFieldValue>
+            <valueName>Damaged Label</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CLEI Label</controllingFieldValue>
+            <valueName>Illigibel Text</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Flex</controllingFieldValue>
+            <controllingFieldValue>Lens</controllingFieldValue>
+            <controllingFieldValue>Isolator</controllingFieldValue>
+            <controllingFieldValue>VCSEL</controllingFieldValue>
+            <valueName>Crack</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hotbar</controllingFieldValue>
+            <controllingFieldValue>Leadframe</controllingFieldValue>
+            <valueName>Cold Solder</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hotbar</controllingFieldValue>
+            <valueName>Crack Solder</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hotbar</controllingFieldValue>
+            <valueName>Thermode Alignment Problem</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hotbar</controllingFieldValue>
+            <valueName>Worned Out Thermode</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Leadframe</controllingFieldValue>
+            <valueName>Damaged Leads</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Leadframe</controllingFieldValue>
+            <valueName>Insufficient Solder</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Port</controllingFieldValue>
+            <controllingFieldValue>ROSA</controllingFieldValue>
+            <controllingFieldValue>TOSA</controllingFieldValue>
+            <controllingFieldValue>Module Shell</controllingFieldValue>
+            <controllingFieldValue>Interface board</controllingFieldValue>
+            <controllingFieldValue>POU</controllingFieldValue>
+            <valueName>Contamination</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Gold Finger</controllingFieldValue>
+            <valueName>Offset</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ROSA</controllingFieldValue>
+            <controllingFieldValue>TOSA</controllingFieldValue>
+            <valueName>Damaged Mechanical Piece Part</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ROSA</controllingFieldValue>
+            <controllingFieldValue>Laser Driver</controllingFieldValue>
+            <valueName>Faulty</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TOSA</controllingFieldValue>
+            <valueName>Optical Alignment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EEPROM</controllingFieldValue>
+            <valueName>Corruption</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Module Shell</controllingFieldValue>
+            <valueName>Dent/Damaged Bail</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Module Shell</controllingFieldValue>
+            <valueName>Dent/Deformed Enclosure</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COF Window</controllingFieldValue>
+            <controllingFieldValue>Lens</controllingFieldValue>
+            <controllingFieldValue>Isolator</controllingFieldValue>
+            <valueName>Detached</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Module</controllingFieldValue>
+            <valueName>Labelling</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Inductor</controllingFieldValue>
+            <valueName>High Resistance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Calibration</controllingFieldValue>
+            <valueName>Incorrect Rx Calibration</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Calibration</controllingFieldValue>
+            <valueName>Incorrect Tx Calibration</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COF</controllingFieldValue>
+            <valueName>Epoxy short</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VCSEL</controllingFieldValue>
+            <valueName>Dislocation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VCSEL</controllingFieldValue>
+            <valueName>Oxide Delamination</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VCSEL</controllingFieldValue>
+            <valueName>Passivation Degradation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VCSEL</controllingFieldValue>
+            <valueName>Periphery Degradation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Common</controllingFieldValue>
+            <valueName>ATE bug</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Common</controllingFieldValue>
+            <valueName>bent pin</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Common</controllingFieldValue>
+            <valueName>broken fiber</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Common</controllingFieldValue>
+            <valueName>broken pigtail</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Common</controllingFieldValue>
+            <valueName>capacitor crack</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Common</controllingFieldValue>
+            <valueName>capacitor short</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Common</controllingFieldValue>
+            <valueName>chip failure</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Common</controllingFieldValue>
+            <valueName>component peeling off/missing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Common</controllingFieldValue>
+            <valueName>contamination on lens</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Common</controllingFieldValue>
+            <valueName>contamination on port</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Common</controllingFieldValue>
+            <valueName>customer introduced</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Common</controllingFieldValue>
+            <valueName>Demux failure</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Common</controllingFieldValue>
+            <valueName>EEPROM failure</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Common</controllingFieldValue>
+            <valueName>field environment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Common</controllingFieldValue>
+            <valueName>inductor failure</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Common</controllingFieldValue>
+            <valueName>MCU chipping/crack</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Common</controllingFieldValue>
+            <valueName>resistor failure</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Common</controllingFieldValue>
+            <valueName>shell cosmetic failure</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LNCD/EDFA</controllingFieldValue>
+            <valueName>AWG IL failure</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LNCD/EDFA</controllingFieldValue>
+            <valueName>broken attenuator</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LNCD/EDFA</controllingFieldValue>
+            <valueName>E2000 endface damaged</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LNCD/EDFA</controllingFieldValue>
+            <valueName>FPGA chip failure</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LNCD/EDFA</controllingFieldValue>
+            <valueName>Mainboard damaged</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LNCD/EDFA</controllingFieldValue>
+            <valueName>Mainboard failure</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LNCD/EDFA</controllingFieldValue>
+            <valueName>OCM failure</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LNCD/EDFA</controllingFieldValue>
+            <valueName>PD failure</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LNCD/EDFA</controllingFieldValue>
+            <valueName>pump failure</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LNCD/EDFA</controllingFieldValue>
+            <valueName>WSS failure</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transceiver</controllingFieldValue>
+            <valueName>alignment guide broken</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transceiver</controllingFieldValue>
+            <valueName>broken flex (trace)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transceiver</controllingFieldValue>
+            <valueName>broken ROSA sleeve</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transceiver</controllingFieldValue>
+            <valueName>cable cut off</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transceiver</controllingFieldValue>
+            <valueName>CDR EOS/ESD damage</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transceiver</controllingFieldValue>
+            <valueName>CDR hard failure</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transceiver</controllingFieldValue>
+            <valueName>CDR setting issue</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transceiver</controllingFieldValue>
+            <valueName>CDR switch port sensitivity</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transceiver</controllingFieldValue>
+            <valueName>CDR weak VCO failure</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transceiver</controllingFieldValue>
+            <valueName>EMI contamination</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transceiver</controllingFieldValue>
+            <valueName>Hotbar cold joint</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transceiver</controllingFieldValue>
+            <valueName>Hotbar short</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transceiver</controllingFieldValue>
+            <valueName>Lens delamination</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transceiver</controllingFieldValue>
+            <valueName>ODC failure</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transceiver</controllingFieldValue>
+            <valueName>QVLD failure</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transceiver</controllingFieldValue>
+            <valueName>ROSA failure</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transceiver</controllingFieldValue>
+            <valueName>Silver epoxy encroachment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transceiver</controllingFieldValue>
+            <valueName>TIA EOS/ESD damage</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transceiver</controllingFieldValue>
+            <valueName>TIA failure</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transceiver</controllingFieldValue>
+            <valueName>TOSA failure</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transceiver</controllingFieldValue>
+            <valueName>TOSA MZ related failure</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transceiver</controllingFieldValue>
+            <valueName>VCSEL failure</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Breakout</controllingFieldValue>
+            <valueName>Breakout fibre damage</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Breakout</controllingFieldValue>
+            <valueName>Cosmetic defect</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Breakout</controllingFieldValue>
+            <valueName>Coupler Assembly</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Breakout</controllingFieldValue>
+            <valueName>Incorrect fibre organisation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Breakout</controllingFieldValue>
+            <valueName>Incorrect labelling</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Breakout</controllingFieldValue>
+            <valueName>Isolator Assembly</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Breakout</controllingFieldValue>
+            <valueName>LC end face</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Breakout</controllingFieldValue>
+            <valueName>MPO end face</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bulkhead</controllingFieldValue>
+            <controllingFieldValue>Heat sink, Lid, Ring Frame</controllingFieldValue>
+            <controllingFieldValue>Interface board</controllingFieldValue>
+            <controllingFieldValue>Header pin / Riser board</controllingFieldValue>
+            <controllingFieldValue>Motherboard</controllingFieldValue>
+            <controllingFieldValue>POU</controllingFieldValue>
+            <valueName>Incorrect assembly</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bulkhead</controllingFieldValue>
+            <controllingFieldValue>Heat sink, Lid, Ring Frame</controllingFieldValue>
+            <controllingFieldValue>Interface board</controllingFieldValue>
+            <valueName>Incorrect component</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Heat sink, Lid, Ring Frame</controllingFieldValue>
+            <valueName>Fan</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Heat sink, Lid, Ring Frame</controllingFieldValue>
+            <valueName>Fastener</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Heat sink, Lid, Ring Frame</controllingFieldValue>
+            <valueName>Structural damage</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Heat sink, Lid, Ring Frame</controllingFieldValue>
+            <controllingFieldValue>Header pin / Riser board</controllingFieldValue>
+            <valueName>Tolerance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Interface board</controllingFieldValue>
+            <valueName>Connector damage</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Interface board</controllingFieldValue>
+            <valueName>Customer flex</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Interface board</controllingFieldValue>
+            <controllingFieldValue>Motherboard</controllingFieldValue>
+            <valueName>Interconnect</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Interface board</controllingFieldValue>
+            <controllingFieldValue>Motherboard</controllingFieldValue>
+            <valueName>Solder</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Header pin / Riser board</controllingFieldValue>
+            <valueName>Header pin damage</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Header pin / Riser board</controllingFieldValue>
+            <valueName>Riser board pad contamination</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Header pin / Riser board</controllingFieldValue>
+            <valueName>Riser board pad damage</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Motherboard</controllingFieldValue>
+            <valueName>BGA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Motherboard</controllingFieldValue>
+            <valueName>Capacitor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Motherboard</controllingFieldValue>
+            <valueName>Connector</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Motherboard</controllingFieldValue>
+            <controllingFieldValue>POU</controllingFieldValue>
+            <valueName>Diode</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Motherboard</controllingFieldValue>
+            <valueName>Flash Memory</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Motherboard</controllingFieldValue>
+            <valueName>FPGA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Motherboard</controllingFieldValue>
+            <valueName>Fuse</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Motherboard</controllingFieldValue>
+            <valueName>Incorrect firmware upload</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Motherboard</controllingFieldValue>
+            <valueName>incorrect software upload</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Motherboard</controllingFieldValue>
+            <valueName>Inductor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Motherboard</controllingFieldValue>
+            <valueName>Microprocessor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Motherboard</controllingFieldValue>
+            <valueName>MOSFET</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Motherboard</controllingFieldValue>
+            <valueName>Oscillator</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Motherboard</controllingFieldValue>
+            <valueName>PWM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Motherboard</controllingFieldValue>
+            <valueName>Regulator</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Motherboard</controllingFieldValue>
+            <valueName>Resistor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Motherboard</controllingFieldValue>
+            <valueName>TEC controller</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Motherboard</controllingFieldValue>
+            <valueName>Thermistor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Motherboard</controllingFieldValue>
+            <valueName>VCOM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Motherboard</controllingFieldValue>
+            <valueName>Voltage supervisor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Motherboard</controllingFieldValue>
+            <valueName>Voltage supply assembly</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>POU</controllingFieldValue>
+            <valueName>ACF</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>POU</controllingFieldValue>
+            <valueName>Alignment shift</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>POU</controllingFieldValue>
+            <valueName>Dendrite</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>POU</controllingFieldValue>
+            <valueName>Displaced optics</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>POU</controllingFieldValue>
+            <valueName>Epoxy / Adhesive</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>POU</controllingFieldValue>
+            <valueName>Feedthrough damage</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>POU</controllingFieldValue>
+            <valueName>Frequency shift</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>POU</controllingFieldValue>
+            <valueName>Front end assembly</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>POU</controllingFieldValue>
+            <valueName>Hermeticity</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>POU</controllingFieldValue>
+            <valueName>Laser</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>POU</controllingFieldValue>
+            <valueName>LCOS Fault</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>POU</controllingFieldValue>
+            <valueName>LRS Fault</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>POU</controllingFieldValue>
+            <valueName>MEMS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>POU</controllingFieldValue>
+            <valueName>Moisture</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>POU</controllingFieldValue>
+            <valueName>POU Cosmetic defect</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>POU</controllingFieldValue>
+            <valueName>POU Damage</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>POU</controllingFieldValue>
+            <valueName>POU Flex</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>POU</controllingFieldValue>
+            <valueName>Ribbon fibre damage</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>POU</controllingFieldValue>
+            <valueName>TEC damage</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>POU</controllingFieldValue>
+            <valueName>TEC fault</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>POU</controllingFieldValue>
+            <valueName>Wirebond</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Power Supply</controllingFieldValue>
+            <valueName>Supply connector</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

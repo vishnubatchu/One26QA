@@ -1,0 +1,7 @@
+<aura:component extends='c:FAFVCustomUICMP1' controller='CloneFAFVRecord' access="global" >
+    <aura:attribute name='FAFVRecordId' type='String'/>
+      <aura:attribute name='newFAFVRecordName' type='String'/>
+    <aura:handler name="init" action="{!c.doInit}" value="{!this}"/>
+
+
+</aura:component>

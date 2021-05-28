@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>send</name>
+        <label>send</label>
+        <locationX>211</locationX>
+        <locationY>116</locationY>
+        <actionName>Loaner__c.Loaner_Manual_SO_Update_Status_Alert</actionName>
+        <actionType>emailAlert</actionType>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>LoanerId</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <apiVersion>49.0</apiVersion>
+    <interviewLabel>UpdateManualStatus {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>UpdateManualStatus</label>
+    <processType>AutoLaunchedFlow</processType>
+    <startElementReference>send</startElementReference>
+    <status>Active</status>
+    <variables>
+        <name>LoanerId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

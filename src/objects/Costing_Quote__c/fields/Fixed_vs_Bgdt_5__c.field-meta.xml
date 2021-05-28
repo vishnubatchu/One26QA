@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Fixed_vs_Bgdt_5__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Alpha Samples = Performance Verification Units
+Beta Samples = Qualification Units</inlineHelpText>
+    <label>Fixed vs. Bgdt - #5</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Fixed</fullName>
+                <default>false</default>
+                <label>Fixed</label>
+            </value>
+            <value>
+                <fullName>Budgetary</fullName>
+                <default>false</default>
+                <label>Budgetary</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

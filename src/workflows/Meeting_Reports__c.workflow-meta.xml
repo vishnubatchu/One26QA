@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Market_60_Call_Reports</fullName>
+        <description>Market 60 Call Reports</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>susmithra.murugan@ii-vi.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/New_Call_Report</template>
+    </alerts>
+    <alerts>
+        <fullName>Submit_Call_Report</fullName>
+        <description>Submit Call Report</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>susmithra.murugan@ii-vi.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/New_Call_Report</template>
+    </alerts>
+    <alerts>
+        <fullName>Submit_Call_ReportMIE</fullName>
+        <description>Submit Call Report MIE</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>susmithra.murugan@ii-vi.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/New_Call_Report</template>
+    </alerts>
+    <alerts>
+        <fullName>Submit_Call_Report_Competitor</fullName>
+        <description>Submit Call Report - Competitor</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>susmithra.murugan@ii-vi.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/New_Call_Report_Competitor</template>
+    </alerts>
+    <rules>
+        <fullName>Submit Call Report</fullName>
+        <actions>
+            <name>Submit_Call_Report</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Meeting_Reports__c.Call_Report_Status__c</field>
+            <operation>equals</operation>
+            <value>Submit for Review</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Meeting_Reports__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Customer</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Region__c</field>
+            <operation>notEqual</operation>
+            <value>MIE</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Market__c</field>
+            <operation>notEqual</operation>
+            <value>60 - Power Generation</value>
+        </criteriaItems>
+        <description>Costing - Submit Call Report to Team</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Submit Call Report - Competitor</fullName>
+        <actions>
+            <name>Submit_Call_Report_Competitor</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Meeting_Reports__c.Call_Report_Status__c</field>
+            <operation>equals</operation>
+            <value>Submit for Review</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Meeting_Reports__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Competitor</value>
+        </criteriaItems>
+        <description>Costing</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Submit Call Report -MKT 60</fullName>
+        <actions>
+            <name>Market_60_Call_Reports</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>1 AND 2 AND 3</booleanFilter>
+        <criteriaItems>
+            <field>Meeting_Reports__c.Call_Report_Status__c</field>
+            <operation>equals</operation>
+            <value>Submit for Review</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Meeting_Reports__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Customer</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Market__c</field>
+            <operation>equals</operation>
+            <value>60 - Power Generation</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Submit Call Report MIE</fullName>
+        <actions>
+            <name>Submit_Call_ReportMIE</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Meeting_Reports__c.Call_Report_Status__c</field>
+            <operation>equals</operation>
+            <value>Submit for Review</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Meeting_Reports__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Customer</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Region__c</field>
+            <operation>equals</operation>
+            <value>MIE</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+</Workflow>

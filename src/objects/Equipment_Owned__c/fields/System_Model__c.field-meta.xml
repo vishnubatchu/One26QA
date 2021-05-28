@@ -1,0 +1,3827 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>System_Model__c</fullName>
+    <externalId>false</externalId>
+    <label>System Model</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>System__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1005</fullName>
+                <default>false</default>
+                <label>1005</label>
+            </value>
+            <value>
+                <fullName>1200</fullName>
+                <default>false</default>
+                <label>1200</label>
+            </value>
+            <value>
+                <fullName>1212</fullName>
+                <default>false</default>
+                <label>1212</label>
+            </value>
+            <value>
+                <fullName>1212HC</fullName>
+                <default>false</default>
+                <label>1212HC</label>
+            </value>
+            <value>
+                <fullName>1212HV</fullName>
+                <default>false</default>
+                <label>1212HV</label>
+            </value>
+            <value>
+                <fullName>15SPR 2512H2</fullName>
+                <default>false</default>
+                <label>15SPR 2512H2</label>
+            </value>
+            <value>
+                <fullName>15SPR 806T2</fullName>
+                <default>false</default>
+                <label>15SPR 806T2</label>
+            </value>
+            <value>
+                <fullName>15SRP 1212H2</fullName>
+                <default>false</default>
+                <label>15SRP 1212H2</label>
+            </value>
+            <value>
+                <fullName>2015-VZ-1</fullName>
+                <default>false</default>
+                <label>2015-VZ-1</label>
+            </value>
+            <value>
+                <fullName>2030</fullName>
+                <default>false</default>
+                <label>2030</label>
+            </value>
+            <value>
+                <fullName>2503</fullName>
+                <default>false</default>
+                <label>2503</label>
+            </value>
+            <value>
+                <fullName>2503 AUTOLAS</fullName>
+                <default>false</default>
+                <label>2503 AUTOLAS</label>
+            </value>
+            <value>
+                <fullName>2503 PLUS</fullName>
+                <default>false</default>
+                <label>2503 PLUS</label>
+            </value>
+            <value>
+                <fullName>2510</fullName>
+                <default>false</default>
+                <label>2510</label>
+            </value>
+            <value>
+                <fullName>2510 AUTOLAS</fullName>
+                <default>false</default>
+                <label>2510 AUTOLAS</label>
+            </value>
+            <value>
+                <fullName>2510 PLUS</fullName>
+                <default>false</default>
+                <label>2510 PLUS</label>
+            </value>
+            <value>
+                <fullName>2512</fullName>
+                <default>false</default>
+                <label>2512</label>
+            </value>
+            <value>
+                <fullName>2512HV</fullName>
+                <default>false</default>
+                <label>2512HV</label>
+            </value>
+            <value>
+                <fullName>2512LX</fullName>
+                <default>false</default>
+                <label>2512LX</label>
+            </value>
+            <value>
+                <fullName>2512LXP</fullName>
+                <default>false</default>
+                <label>2512LXP</label>
+            </value>
+            <value>
+                <fullName>2512LZP</fullName>
+                <default>false</default>
+                <label>2512LZP</label>
+            </value>
+            <value>
+                <fullName>2520</fullName>
+                <default>false</default>
+                <label>2520</label>
+            </value>
+            <value>
+                <fullName>2525</fullName>
+                <default>false</default>
+                <label>2525</label>
+            </value>
+            <value>
+                <fullName>2530</fullName>
+                <default>false</default>
+                <label>2530</label>
+            </value>
+            <value>
+                <fullName>2530 AUTOLAS</fullName>
+                <default>false</default>
+                <label>2530 AUTOLAS</label>
+            </value>
+            <value>
+                <fullName>2530 PLUS</fullName>
+                <default>false</default>
+                <label>2530 PLUS</label>
+            </value>
+            <value>
+                <fullName>25SPR 1212H2</fullName>
+                <default>false</default>
+                <label>25SPR 1212H2</label>
+            </value>
+            <value>
+                <fullName>25SPR 2512H2</fullName>
+                <default>false</default>
+                <label>25SPR 2512H2</label>
+            </value>
+            <value>
+                <fullName>25SPR 806T2</fullName>
+                <default>false</default>
+                <label>25SPR 806T2</label>
+            </value>
+            <value>
+                <fullName>3000</fullName>
+                <default>false</default>
+                <label>3000</label>
+            </value>
+            <value>
+                <fullName>3015</fullName>
+                <default>false</default>
+                <label>3015</label>
+            </value>
+            <value>
+                <fullName>3015HD</fullName>
+                <default>false</default>
+                <label>3015HD</label>
+            </value>
+            <value>
+                <fullName>3015HV</fullName>
+                <default>false</default>
+                <label>3015HV</label>
+            </value>
+            <value>
+                <fullName>3015LVP</fullName>
+                <default>false</default>
+                <label>3015LVP</label>
+            </value>
+            <value>
+                <fullName>3015LXP</fullName>
+                <default>false</default>
+                <label>3015LXP</label>
+            </value>
+            <value>
+                <fullName>3015LZP</fullName>
+                <default>false</default>
+                <label>3015LZP</label>
+            </value>
+            <value>
+                <fullName>3016C 2512HC</fullName>
+                <default>false</default>
+                <label>3016C 2512HC</label>
+            </value>
+            <value>
+                <fullName>3016C 3015C</fullName>
+                <default>false</default>
+                <label>3016C 3015C</label>
+            </value>
+            <value>
+                <fullName>3016F2 1212HC</fullName>
+                <default>false</default>
+                <label>3016F2 1212HC</label>
+            </value>
+            <value>
+                <fullName>3016F2 2512HC</fullName>
+                <default>false</default>
+                <label>3016F2 2512HC</label>
+            </value>
+            <value>
+                <fullName>3016F3</fullName>
+                <default>false</default>
+                <label>3016F3</label>
+            </value>
+            <value>
+                <fullName>3016F3 1212HC</fullName>
+                <default>false</default>
+                <label>3016F3 1212HC</label>
+            </value>
+            <value>
+                <fullName>3016F3 2512HC</fullName>
+                <default>false</default>
+                <label>3016F3 2512HC</label>
+            </value>
+            <value>
+                <fullName>3016S 1212HB</fullName>
+                <default>false</default>
+                <label>3016S 1212HB</label>
+            </value>
+            <value>
+                <fullName>3016S 2512HB</fullName>
+                <default>false</default>
+                <label>3016S 2512HB</label>
+            </value>
+            <value>
+                <fullName>3020D LB</fullName>
+                <default>false</default>
+                <label>3020D LB</label>
+            </value>
+            <value>
+                <fullName>3020 LXP</fullName>
+                <default>false</default>
+                <label>3020 LXP</label>
+            </value>
+            <value>
+                <fullName>3030</fullName>
+                <default>false</default>
+                <label>3030</label>
+            </value>
+            <value>
+                <fullName>3030 AUTOLAS</fullName>
+                <default>false</default>
+                <label>3030 AUTOLAS</label>
+            </value>
+            <value>
+                <fullName>3030 PLUS</fullName>
+                <default>false</default>
+                <label>3030 PLUS</label>
+            </value>
+            <value>
+                <fullName>3040</fullName>
+                <default>false</default>
+                <label>3040</label>
+            </value>
+            <value>
+                <fullName>3050</fullName>
+                <default>false</default>
+                <label>3050</label>
+            </value>
+            <value>
+                <fullName>3050 AUTOLAS</fullName>
+                <default>false</default>
+                <label>3050 AUTOLAS</label>
+            </value>
+            <value>
+                <fullName>3050 PLUS</fullName>
+                <default>false</default>
+                <label>3050 PLUS</label>
+            </value>
+            <value>
+                <fullName>3060</fullName>
+                <default>false</default>
+                <label>3060</label>
+            </value>
+            <value>
+                <fullName>3122VZ1</fullName>
+                <default>false</default>
+                <label>3122VZ1</label>
+            </value>
+            <value>
+                <fullName>3530</fullName>
+                <default>false</default>
+                <label>3530</label>
+            </value>
+            <value>
+                <fullName>3718 LVP</fullName>
+                <default>false</default>
+                <label>3718 LVP</label>
+            </value>
+            <value>
+                <fullName>4000</fullName>
+                <default>false</default>
+                <label>4000</label>
+            </value>
+            <value>
+                <fullName>4020</fullName>
+                <default>false</default>
+                <label>4020</label>
+            </value>
+            <value>
+                <fullName>4030</fullName>
+                <default>false</default>
+                <label>4030</label>
+            </value>
+            <value>
+                <fullName>4030 AUTOLAS</fullName>
+                <default>false</default>
+                <label>4030 AUTOLAS</label>
+            </value>
+            <value>
+                <fullName>4030F3</fullName>
+                <default>false</default>
+                <label>4030F3</label>
+            </value>
+            <value>
+                <fullName>4030F3 1212HD</fullName>
+                <default>false</default>
+                <label>4030F3 1212HD</label>
+            </value>
+            <value>
+                <fullName>4030F3 2512HD</fullName>
+                <default>false</default>
+                <label>4030F3 2512HD</label>
+            </value>
+            <value>
+                <fullName>4030 PLUS</fullName>
+                <default>false</default>
+                <label>4030 PLUS</label>
+            </value>
+            <value>
+                <fullName>4050</fullName>
+                <default>false</default>
+                <label>4050</label>
+            </value>
+            <value>
+                <fullName>4050 AUTOLAS</fullName>
+                <default>false</default>
+                <label>4050 AUTOLAS</label>
+            </value>
+            <value>
+                <fullName>4050 PLUS</fullName>
+                <default>false</default>
+                <label>4050 PLUS</label>
+            </value>
+            <value>
+                <fullName>40CFX</fullName>
+                <default>false</default>
+                <label>40CFX</label>
+            </value>
+            <value>
+                <fullName>41</fullName>
+                <default>false</default>
+                <label>41</label>
+            </value>
+            <value>
+                <fullName>42</fullName>
+                <default>false</default>
+                <label>42</label>
+            </value>
+            <value>
+                <fullName>43</fullName>
+                <default>false</default>
+                <label>43</label>
+            </value>
+            <value>
+                <fullName>48</fullName>
+                <default>false</default>
+                <label>48</label>
+            </value>
+            <value>
+                <fullName>5030</fullName>
+                <default>false</default>
+                <label>5030</label>
+            </value>
+            <value>
+                <fullName>5036HD</fullName>
+                <default>false</default>
+                <label>5036HD</label>
+            </value>
+            <value>
+                <fullName>5036LZP</fullName>
+                <default>false</default>
+                <label>5036LZP</label>
+            </value>
+            <value>
+                <fullName>5036 LZP</fullName>
+                <default>false</default>
+                <label>5036 LZP</label>
+            </value>
+            <value>
+                <fullName>5042LZP</fullName>
+                <default>false</default>
+                <label>5042LZP</label>
+            </value>
+            <value>
+                <fullName>6000</fullName>
+                <default>false</default>
+                <label>6000</label>
+            </value>
+            <value>
+                <fullName>6000L</fullName>
+                <default>false</default>
+                <label>6000L</label>
+            </value>
+            <value>
+                <fullName>6030</fullName>
+                <default>false</default>
+                <label>6030</label>
+            </value>
+            <value>
+                <fullName>6030 AUTOLAS</fullName>
+                <default>false</default>
+                <label>6030 AUTOLAS</label>
+            </value>
+            <value>
+                <fullName>6030 PLUS</fullName>
+                <default>false</default>
+                <label>6030 PLUS</label>
+            </value>
+            <value>
+                <fullName>6050</fullName>
+                <default>false</default>
+                <label>6050</label>
+            </value>
+            <value>
+                <fullName>6050 AUTOLAS</fullName>
+                <default>false</default>
+                <label>6050 AUTOLAS</label>
+            </value>
+            <value>
+                <fullName>6050PLUS</fullName>
+                <default>false</default>
+                <label>6050PLUS</label>
+            </value>
+            <value>
+                <fullName>790</fullName>
+                <default>false</default>
+                <label>790</label>
+            </value>
+            <value>
+                <fullName>820</fullName>
+                <default>false</default>
+                <label>820</label>
+            </value>
+            <value>
+                <fullName>860</fullName>
+                <default>false</default>
+                <label>860</label>
+            </value>
+            <value>
+                <fullName>880</fullName>
+                <default>false</default>
+                <label>880</label>
+            </value>
+            <value>
+                <fullName>890</fullName>
+                <default>false</default>
+                <label>890</label>
+            </value>
+            <value>
+                <fullName>ACIES</fullName>
+                <default>false</default>
+                <label>ACIES</label>
+            </value>
+            <value>
+                <fullName>ADIGE SALA</fullName>
+                <default>false</default>
+                <label>ADIGE SALA</label>
+            </value>
+            <value>
+                <fullName>ADILAS2</fullName>
+                <default>false</default>
+                <label>ADILAS2</label>
+            </value>
+            <value>
+                <fullName>ALTAIR</fullName>
+                <default>false</default>
+                <label>ALTAIR</label>
+            </value>
+            <value>
+                <fullName>AMADA</fullName>
+                <default>false</default>
+                <label>AMADA</label>
+            </value>
+            <value>
+                <fullName>APELIO</fullName>
+                <default>false</default>
+                <label>APELIO</label>
+            </value>
+            <value>
+                <fullName>APELIO III 2510V</fullName>
+                <default>false</default>
+                <label>APELIO III 2510V</label>
+            </value>
+            <value>
+                <fullName>APELIO III 357V</fullName>
+                <default>false</default>
+                <label>APELIO III 357V</label>
+            </value>
+            <value>
+                <fullName>APELIO III 367V</fullName>
+                <default>false</default>
+                <label>APELIO III 367V</label>
+            </value>
+            <value>
+                <fullName>ARROW</fullName>
+                <default>false</default>
+                <label>ARROW</label>
+            </value>
+            <value>
+                <fullName>ARROW ULTIMATE</fullName>
+                <default>false</default>
+                <label>ARROW ULTIMATE</label>
+            </value>
+            <value>
+                <fullName>ASK</fullName>
+                <default>false</default>
+                <label>ASK</label>
+            </value>
+            <value>
+                <fullName>AXEL 3015</fullName>
+                <default>false</default>
+                <label>AXEL 3015</label>
+            </value>
+            <value>
+                <fullName>BAASEL</fullName>
+                <default>false</default>
+                <label>BAASEL</label>
+            </value>
+            <value>
+                <fullName>BCL-B</fullName>
+                <default>false</default>
+                <label>BCL-B</label>
+            </value>
+            <value>
+                <fullName>BCL-BM</fullName>
+                <default>false</default>
+                <label>BCL-BM</label>
+            </value>
+            <value>
+                <fullName>BCL-MU</fullName>
+                <default>false</default>
+                <label>BCL-MU</label>
+            </value>
+            <value>
+                <fullName>BCL-X</fullName>
+                <default>false</default>
+                <label>BCL-X</label>
+            </value>
+            <value>
+                <fullName>BCL-X2H</fullName>
+                <default>false</default>
+                <label>BCL-X2H</label>
+            </value>
+            <value>
+                <fullName>BCL-XM</fullName>
+                <default>false</default>
+                <label>BCL-XM</label>
+            </value>
+            <value>
+                <fullName>BEAM DYNAMICS</fullName>
+                <default>false</default>
+                <label>BEAM DYNAMICS</label>
+            </value>
+            <value>
+                <fullName>BEHRENS</fullName>
+                <default>false</default>
+                <label>BEHRENS</label>
+            </value>
+            <value>
+                <fullName>BIMO</fullName>
+                <default>false</default>
+                <label>BIMO</label>
+            </value>
+            <value>
+                <fullName>BIMO-FSC</fullName>
+                <default>false</default>
+                <label>BIMO-FSC</label>
+            </value>
+            <value>
+                <fullName>BLADE</fullName>
+                <default>false</default>
+                <label>BLADE</label>
+            </value>
+            <value>
+                <fullName>BLADE 100</fullName>
+                <default>false</default>
+                <label>BLADE 100</label>
+            </value>
+            <value>
+                <fullName>BLADE 200</fullName>
+                <default>false</default>
+                <label>BLADE 200</label>
+            </value>
+            <value>
+                <fullName>BLADE 200S</fullName>
+                <default>false</default>
+                <label>BLADE 200S</label>
+            </value>
+            <value>
+                <fullName>BLADE 250</fullName>
+                <default>false</default>
+                <label>BLADE 250</label>
+            </value>
+            <value>
+                <fullName>BLADE 250S</fullName>
+                <default>false</default>
+                <label>BLADE 250S</label>
+            </value>
+            <value>
+                <fullName>BLADE 500</fullName>
+                <default>false</default>
+                <label>BLADE 500</label>
+            </value>
+            <value>
+                <fullName>BLADE 500S</fullName>
+                <default>false</default>
+                <label>BLADE 500S</label>
+            </value>
+            <value>
+                <fullName>BML-FC</fullName>
+                <default>false</default>
+                <label>BML-FC</label>
+            </value>
+            <value>
+                <fullName>BML-FS</fullName>
+                <default>false</default>
+                <label>BML-FS</label>
+            </value>
+            <value>
+                <fullName>BML-FT</fullName>
+                <default>false</default>
+                <label>BML-FT</label>
+            </value>
+            <value>
+                <fullName>BTL 2800</fullName>
+                <default>false</default>
+                <label>BTL 2800</label>
+            </value>
+            <value>
+                <fullName>BYFLEX</fullName>
+                <default>false</default>
+                <label>BYFLEX</label>
+            </value>
+            <value>
+                <fullName>BYHAN</fullName>
+                <default>false</default>
+                <label>BYHAN</label>
+            </value>
+            <value>
+                <fullName>BYLAS6520</fullName>
+                <default>false</default>
+                <label>BYLAS6520</label>
+            </value>
+            <value>
+                <fullName>BYSMALL</fullName>
+                <default>false</default>
+                <label>BYSMALL</label>
+            </value>
+            <value>
+                <fullName>BYSPEED</fullName>
+                <default>false</default>
+                <label>BYSPEED</label>
+            </value>
+            <value>
+                <fullName>BYSPEED3015</fullName>
+                <default>false</default>
+                <label>BYSPEED3015</label>
+            </value>
+            <value>
+                <fullName>BYSPEED4020</fullName>
+                <default>false</default>
+                <label>BYSPEED4020</label>
+            </value>
+            <value>
+                <fullName>BYSPRINT</fullName>
+                <default>false</default>
+                <label>BYSPRINT</label>
+            </value>
+            <value>
+                <fullName>BYSPRINT3015</fullName>
+                <default>false</default>
+                <label>BYSPRINT3015</label>
+            </value>
+            <value>
+                <fullName>BYSTAR</fullName>
+                <default>false</default>
+                <label>BYSTAR</label>
+            </value>
+            <value>
+                <fullName>BYSTAR2512</fullName>
+                <default>false</default>
+                <label>BYSTAR2512</label>
+            </value>
+            <value>
+                <fullName>BYSTAR3015</fullName>
+                <default>false</default>
+                <label>BYSTAR3015</label>
+            </value>
+            <value>
+                <fullName>BYSTAR3015-2</fullName>
+                <default>false</default>
+                <label>BYSTAR3015-2</label>
+            </value>
+            <value>
+                <fullName>BYSTAR4020</fullName>
+                <default>false</default>
+                <label>BYSTAR4020</label>
+            </value>
+            <value>
+                <fullName>BYSTAR4025</fullName>
+                <default>false</default>
+                <label>BYSTAR4025</label>
+            </value>
+            <value>
+                <fullName>BYSTRONIC</fullName>
+                <default>false</default>
+                <label>BYSTRONIC</label>
+            </value>
+            <value>
+                <fullName>BYTUBE</fullName>
+                <default>false</default>
+                <label>BYTUBE</label>
+            </value>
+            <value>
+                <fullName>BYTUBE3024</fullName>
+                <default>false</default>
+                <label>BYTUBE3024</label>
+            </value>
+            <value>
+                <fullName>BYTUBE6504</fullName>
+                <default>false</default>
+                <label>BYTUBE6504</label>
+            </value>
+            <value>
+                <fullName>BYVISION</fullName>
+                <default>false</default>
+                <label>BYVISION</label>
+            </value>
+            <value>
+                <fullName>CL-5</fullName>
+                <default>false</default>
+                <label>CL-5</label>
+            </value>
+            <value>
+                <fullName>CL-6</fullName>
+                <default>false</default>
+                <label>CL-6</label>
+            </value>
+            <value>
+                <fullName>CL-7</fullName>
+                <default>false</default>
+                <label>CL-7</label>
+            </value>
+            <value>
+                <fullName>CL 707</fullName>
+                <default>false</default>
+                <label>CL 707</label>
+            </value>
+            <value>
+                <fullName>CL-7A</fullName>
+                <default>false</default>
+                <label>CL-7A</label>
+            </value>
+            <value>
+                <fullName>CL-840</fullName>
+                <default>false</default>
+                <label>CL-840</label>
+            </value>
+            <value>
+                <fullName>CL-850</fullName>
+                <default>false</default>
+                <label>CL-850</label>
+            </value>
+            <value>
+                <fullName>COHERENT</fullName>
+                <default>false</default>
+                <label>COHERENT</label>
+            </value>
+            <value>
+                <fullName>C Series</fullName>
+                <default>false</default>
+                <label>C Series</label>
+            </value>
+            <value>
+                <fullName>C-SERIES</fullName>
+                <default>false</default>
+                <label>C-SERIES</label>
+            </value>
+            <value>
+                <fullName>DATATECH</fullName>
+                <default>false</default>
+                <label>DATATECH</label>
+            </value>
+            <value>
+                <fullName>DC025</fullName>
+                <default>false</default>
+                <label>DC025</label>
+            </value>
+            <value>
+                <fullName>DC030</fullName>
+                <default>false</default>
+                <label>DC030</label>
+            </value>
+            <value>
+                <fullName>DOMINO</fullName>
+                <default>false</default>
+                <label>DOMINO</label>
+            </value>
+            <value>
+                <fullName>DRILL STARR 600</fullName>
+                <default>false</default>
+                <label>DRILL STARR 600</label>
+            </value>
+            <value>
+                <fullName>D SERIES</fullName>
+                <default>false</default>
+                <label>D SERIES</label>
+            </value>
+            <value>
+                <fullName>ECHO III</fullName>
+                <default>false</default>
+                <label>ECHO III</label>
+            </value>
+            <value>
+                <fullName>EFAM-50</fullName>
+                <default>false</default>
+                <label>EFAM-50</label>
+            </value>
+            <value>
+                <fullName>ELAS FLY 3</fullName>
+                <default>false</default>
+                <label>ELAS FLY 3</label>
+            </value>
+            <value>
+                <fullName>ELCEDE</fullName>
+                <default>false</default>
+                <label>ELCEDE</label>
+            </value>
+            <value>
+                <fullName>ELECTROX</fullName>
+                <default>false</default>
+                <label>ELECTROX</label>
+            </value>
+            <value>
+                <fullName>EMKZ 3015NT</fullName>
+                <default>false</default>
+                <label>EMKZ 3015NT</label>
+            </value>
+            <value>
+                <fullName>EML</fullName>
+                <default>false</default>
+                <label>EML</label>
+            </value>
+            <value>
+                <fullName>EMLK</fullName>
+                <default>false</default>
+                <label>EMLK</label>
+            </value>
+            <value>
+                <fullName>E Series</fullName>
+                <default>false</default>
+                <label>E Series</label>
+            </value>
+            <value>
+                <fullName>E-T Series</fullName>
+                <default>false</default>
+                <label>E-T Series</label>
+            </value>
+            <value>
+                <fullName>EVERLASE 150 (M45-1)</fullName>
+                <default>false</default>
+                <label>EVERLASE 150 (M45-1)</label>
+            </value>
+            <value>
+                <fullName>EVERLASE 325-1</fullName>
+                <default>false</default>
+                <label>EVERLASE 325-1</label>
+            </value>
+            <value>
+                <fullName>EVERLASE 325-2</fullName>
+                <default>false</default>
+                <label>EVERLASE 325-2</label>
+            </value>
+            <value>
+                <fullName>EVERLASE 525-2</fullName>
+                <default>false</default>
+                <label>EVERLASE 525-2</label>
+            </value>
+            <value>
+                <fullName>EVERLASE 525-4</fullName>
+                <default>false</default>
+                <label>EVERLASE 525-4</label>
+            </value>
+            <value>
+                <fullName>EVERLASE 725-1</fullName>
+                <default>false</default>
+                <label>EVERLASE 725-1</label>
+            </value>
+            <value>
+                <fullName>EVERLASE M-50</fullName>
+                <default>false</default>
+                <label>EVERLASE M-50</label>
+            </value>
+            <value>
+                <fullName>EVERLASE M-51</fullName>
+                <default>false</default>
+                <label>EVERLASE M-51</label>
+            </value>
+            <value>
+                <fullName>EVERLASE M51 SH</fullName>
+                <default>false</default>
+                <label>EVERLASE M51 SH</label>
+            </value>
+            <value>
+                <fullName>EVERLASER 525-1</fullName>
+                <default>false</default>
+                <label>EVERLASER 525-1</label>
+            </value>
+            <value>
+                <fullName>FABRIGEAR</fullName>
+                <default>false</default>
+                <label>FABRIGEAR</label>
+            </value>
+            <value>
+                <fullName>FARLEY LASERLAB</fullName>
+                <default>false</default>
+                <label>FARLEY LASERLAB</label>
+            </value>
+            <value>
+                <fullName>FC1250 LASERTOOL</fullName>
+                <default>false</default>
+                <label>FC1250 LASERTOOL</label>
+            </value>
+            <value>
+                <fullName>FERRANTI/LASER ECOSSE</fullName>
+                <default>false</default>
+                <label>FERRANTI/LASER ECOSSE</label>
+            </value>
+            <value>
+                <fullName>FFL</fullName>
+                <default>false</default>
+                <label>FFL</label>
+            </value>
+            <value>
+                <fullName>FIBER-RABIDO EVOLUZIONE-2</fullName>
+                <default>false</default>
+                <label>FIBER-RABIDO EVOLUZIONE-2</label>
+            </value>
+            <value>
+                <fullName>Finecut 1020</fullName>
+                <default>false</default>
+                <label>Finecut 1020</label>
+            </value>
+            <value>
+                <fullName>Finecut 1530 Linear Drive</fullName>
+                <default>false</default>
+                <label>Finecut 1530 Linear Drive</label>
+            </value>
+            <value>
+                <fullName>FINN-POWER</fullName>
+                <default>false</default>
+                <label>FINN-POWER</label>
+            </value>
+            <value>
+                <fullName>FL</fullName>
+                <default>false</default>
+                <label>FL</label>
+            </value>
+            <value>
+                <fullName>FL 250 3D</fullName>
+                <default>false</default>
+                <label>FL 250 3D</label>
+            </value>
+            <value>
+                <fullName>FL3015</fullName>
+                <default>false</default>
+                <label>FL3015</label>
+            </value>
+            <value>
+                <fullName>FL 400 3D</fullName>
+                <default>false</default>
+                <label>FL 400 3D</label>
+            </value>
+            <value>
+                <fullName>FL 600 3D</fullName>
+                <default>false</default>
+                <label>FL 600 3D</label>
+            </value>
+            <value>
+                <fullName>FLA</fullName>
+                <default>false</default>
+                <label>FLA</label>
+            </value>
+            <value>
+                <fullName>fLASER</fullName>
+                <default>false</default>
+                <label>fLASER</label>
+            </value>
+            <value>
+                <fullName>Flashcut Linear Drive</fullName>
+                <default>false</default>
+                <label>Flashcut Linear Drive</label>
+            </value>
+            <value>
+                <fullName>FLC-AJ</fullName>
+                <default>false</default>
+                <label>FLC-AJ</label>
+            </value>
+            <value>
+                <fullName>FL DISK</fullName>
+                <default>false</default>
+                <label>FL DISK</label>
+            </value>
+            <value>
+                <fullName>FLEXPOSE</fullName>
+                <default>false</default>
+                <label>FLEXPOSE</label>
+            </value>
+            <value>
+                <fullName>FLW</fullName>
+                <default>false</default>
+                <label>FLW</label>
+            </value>
+            <value>
+                <fullName>FMS</fullName>
+                <default>false</default>
+                <label>FMS</label>
+            </value>
+            <value>
+                <fullName>FO</fullName>
+                <default>false</default>
+                <label>FO</label>
+            </value>
+            <value>
+                <fullName>FOL3015NT C4500E</fullName>
+                <default>false</default>
+                <label>FOL3015NT C4500E</label>
+            </value>
+            <value>
+                <fullName>FOL-AJ</fullName>
+                <default>false</default>
+                <label>FOL-AJ</label>
+            </value>
+            <value>
+                <fullName>F Series</fullName>
+                <default>false</default>
+                <label>F Series</label>
+            </value>
+            <value>
+                <fullName>F SERIES PULSED</fullName>
+                <default>false</default>
+                <label>F SERIES PULSED</label>
+            </value>
+            <value>
+                <fullName>FT</fullName>
+                <default>false</default>
+                <label>FT</label>
+            </value>
+            <value>
+                <fullName>FT-2400</fullName>
+                <default>false</default>
+                <label>FT-2400</label>
+            </value>
+            <value>
+                <fullName>F-T Series</fullName>
+                <default>false</default>
+                <label>F-T Series</label>
+            </value>
+            <value>
+                <fullName>G150</fullName>
+                <default>false</default>
+                <label>G150</label>
+            </value>
+            <value>
+                <fullName>GCC</fullName>
+                <default>false</default>
+                <label>GCC</label>
+            </value>
+            <value>
+                <fullName>GE</fullName>
+                <default>false</default>
+                <label>GE</label>
+            </value>
+            <value>
+                <fullName>GEMINI</fullName>
+                <default>false</default>
+                <label>GEMINI</label>
+            </value>
+            <value>
+                <fullName>GEMINI FO3015</fullName>
+                <default>false</default>
+                <label>GEMINI FO3015</label>
+            </value>
+            <value>
+                <fullName>GEMINI FO4020</fullName>
+                <default>false</default>
+                <label>GEMINI FO4020</label>
+            </value>
+            <value>
+                <fullName>GEMINI NT</fullName>
+                <default>false</default>
+                <label>GEMINI NT</label>
+            </value>
+            <value>
+                <fullName>GERBER</fullName>
+                <default>false</default>
+                <label>GERBER</label>
+            </value>
+            <value>
+                <fullName>gLASER</fullName>
+                <default>false</default>
+                <label>gLASER</label>
+            </value>
+            <value>
+                <fullName>GRAVOGRAPH</fullName>
+                <default>false</default>
+                <label>GRAVOGRAPH</label>
+            </value>
+            <value>
+                <fullName>G-SERIES</fullName>
+                <default>false</default>
+                <label>G-SERIES</label>
+            </value>
+            <value>
+                <fullName>HACO</fullName>
+                <default>false</default>
+                <label>HACO</label>
+            </value>
+            <value>
+                <fullName>HDM 3015</fullName>
+                <default>false</default>
+                <label>HDM 3015</label>
+            </value>
+            <value>
+                <fullName>HP50100</fullName>
+                <default>false</default>
+                <label>HP50100</label>
+            </value>
+            <value>
+                <fullName>HP60120</fullName>
+                <default>false</default>
+                <label>HP60120</label>
+            </value>
+            <value>
+                <fullName>HPD SERIES</fullName>
+                <default>false</default>
+                <label>HPD SERIES</label>
+            </value>
+            <value>
+                <fullName>HUFFMAN</fullName>
+                <default>false</default>
+                <label>HUFFMAN</label>
+            </value>
+            <value>
+                <fullName>HX1290 SE</fullName>
+                <default>false</default>
+                <label>HX1290 SE</label>
+            </value>
+            <value>
+                <fullName>HYPERDRIVE</fullName>
+                <default>false</default>
+                <label>HYPERDRIVE</label>
+            </value>
+            <value>
+                <fullName>HYPER GEAR</fullName>
+                <default>false</default>
+                <label>HYPER GEAR</label>
+            </value>
+            <value>
+                <fullName>i3 Linear</fullName>
+                <default>false</default>
+                <label>i3 Linear</label>
+            </value>
+            <value>
+                <fullName>i5 Series</fullName>
+                <default>false</default>
+                <label>i5 Series</label>
+            </value>
+            <value>
+                <fullName>i7 Series</fullName>
+                <default>false</default>
+                <label>i7 Series</label>
+            </value>
+            <value>
+                <fullName>iCON</fullName>
+                <default>false</default>
+                <label>iCON</label>
+            </value>
+            <value>
+                <fullName>iLABEL</fullName>
+                <default>false</default>
+                <label>iLABEL</label>
+            </value>
+            <value>
+                <fullName>IMPACT</fullName>
+                <default>false</default>
+                <label>IMPACT</label>
+            </value>
+            <value>
+                <fullName>IMPULS</fullName>
+                <default>false</default>
+                <label>IMPULS</label>
+            </value>
+            <value>
+                <fullName>INDEX</fullName>
+                <default>false</default>
+                <label>INDEX</label>
+            </value>
+            <value>
+                <fullName>IPEX</fullName>
+                <default>false</default>
+                <label>IPEX</label>
+            </value>
+            <value>
+                <fullName>JUMBO</fullName>
+                <default>false</default>
+                <label>JUMBO</label>
+            </value>
+            <value>
+                <fullName>KIP-1080-UHS</fullName>
+                <default>false</default>
+                <label>KIP-1080-UHS</label>
+            </value>
+            <value>
+                <fullName>KOBA</fullName>
+                <default>false</default>
+                <label>KOBA</label>
+            </value>
+            <value>
+                <fullName>KOBA PLUS</fullName>
+                <default>false</default>
+                <label>KOBA PLUS</label>
+            </value>
+            <value>
+                <fullName>K SERIES</fullName>
+                <default>false</default>
+                <label>K SERIES</label>
+            </value>
+            <value>
+                <fullName>K-SERIES</fullName>
+                <default>false</default>
+                <label>K-SERIES</label>
+            </value>
+            <value>
+                <fullName>L1</fullName>
+                <default>false</default>
+                <label>L1</label>
+            </value>
+            <value>
+                <fullName>L2</fullName>
+                <default>false</default>
+                <label>L2</label>
+            </value>
+            <value>
+                <fullName>L203030</fullName>
+                <default>false</default>
+                <label>L203030</label>
+            </value>
+            <value>
+                <fullName>L2503E</fullName>
+                <default>false</default>
+                <label>L2503E</label>
+            </value>
+            <value>
+                <fullName>L2 LIGHTNING</fullName>
+                <default>false</default>
+                <label>L2 LIGHTNING</label>
+            </value>
+            <value>
+                <fullName>L6</fullName>
+                <default>false</default>
+                <label>L6</label>
+            </value>
+            <value>
+                <fullName>LASERBLADE</fullName>
+                <default>false</default>
+                <label>LASERBLADE</label>
+            </value>
+            <value>
+                <fullName>Lasercel</fullName>
+                <default>false</default>
+                <label>Lasercel</label>
+            </value>
+            <value>
+                <fullName>LASERCUT</fullName>
+                <default>false</default>
+                <label>LASERCUT</label>
+            </value>
+            <value>
+                <fullName>LASERLAB</fullName>
+                <default>false</default>
+                <label>LASERLAB</label>
+            </value>
+            <value>
+                <fullName>LASERMAC LC1212</fullName>
+                <default>false</default>
+                <label>LASERMAC LC1212</label>
+            </value>
+            <value>
+                <fullName>LASERMARK</fullName>
+                <default>false</default>
+                <label>LASERMARK</label>
+            </value>
+            <value>
+                <fullName>LASERMATE</fullName>
+                <default>false</default>
+                <label>LASERMATE</label>
+            </value>
+            <value>
+                <fullName>Laser Next</fullName>
+                <default>false</default>
+                <label>Laser Next</label>
+            </value>
+            <value>
+                <fullName>LB6</fullName>
+                <default>false</default>
+                <label>LB6</label>
+            </value>
+            <value>
+                <fullName>LC</fullName>
+                <default>false</default>
+                <label>LC</label>
+            </value>
+            <value>
+                <fullName>LC1212A3</fullName>
+                <default>false</default>
+                <label>LC1212A3</label>
+            </value>
+            <value>
+                <fullName>LC2415</fullName>
+                <default>false</default>
+                <label>LC2415</label>
+            </value>
+            <value>
+                <fullName>LC644</fullName>
+                <default>false</default>
+                <label>LC644</label>
+            </value>
+            <value>
+                <fullName>LC644II</fullName>
+                <default>false</default>
+                <label>LC644II</label>
+            </value>
+            <value>
+                <fullName>LC667</fullName>
+                <default>false</default>
+                <label>LC667</label>
+            </value>
+            <value>
+                <fullName>LC667II</fullName>
+                <default>false</default>
+                <label>LC667II</label>
+            </value>
+            <value>
+                <fullName>LC-C1</fullName>
+                <default>false</default>
+                <label>LC-C1</label>
+            </value>
+            <value>
+                <fullName>LCD</fullName>
+                <default>false</default>
+                <label>LCD</label>
+            </value>
+            <value>
+                <fullName>LCE645</fullName>
+                <default>false</default>
+                <label>LCE645</label>
+            </value>
+            <value>
+                <fullName>LCE655</fullName>
+                <default>false</default>
+                <label>LCE655</label>
+            </value>
+            <value>
+                <fullName>LCE656</fullName>
+                <default>false</default>
+                <label>LCE656</label>
+            </value>
+            <value>
+                <fullName>LC-F1</fullName>
+                <default>false</default>
+                <label>LC-F1</label>
+            </value>
+            <value>
+                <fullName>LM60120</fullName>
+                <default>false</default>
+                <label>LM60120</label>
+            </value>
+            <value>
+                <fullName>LM80160</fullName>
+                <default>false</default>
+                <label>LM80160</label>
+            </value>
+            <value>
+                <fullName>LMC 10000</fullName>
+                <default>false</default>
+                <label>LMC 10000</label>
+            </value>
+            <value>
+                <fullName>LMC5000</fullName>
+                <default>false</default>
+                <label>LMC5000</label>
+            </value>
+            <value>
+                <fullName>LMX</fullName>
+                <default>false</default>
+                <label>LMX</label>
+            </value>
+            <value>
+                <fullName>LMX1</fullName>
+                <default>false</default>
+                <label>LMX1</label>
+            </value>
+            <value>
+                <fullName>LMX3</fullName>
+                <default>false</default>
+                <label>LMX3</label>
+            </value>
+            <value>
+                <fullName>LMX III</fullName>
+                <default>false</default>
+                <label>LMX III</label>
+            </value>
+            <value>
+                <fullName>LMXV</fullName>
+                <default>false</default>
+                <label>LMXV</label>
+            </value>
+            <value>
+                <fullName>LMX VII</fullName>
+                <default>false</default>
+                <label>LMX VII</label>
+            </value>
+            <value>
+                <fullName>LP 4040</fullName>
+                <default>false</default>
+                <label>LP 4040</label>
+            </value>
+            <value>
+                <fullName>LP4080</fullName>
+                <default>false</default>
+                <label>LP4080</label>
+            </value>
+            <value>
+                <fullName>LP50100</fullName>
+                <default>false</default>
+                <label>LP50100</label>
+            </value>
+            <value>
+                <fullName>LP6</fullName>
+                <default>false</default>
+                <label>LP6</label>
+            </value>
+            <value>
+                <fullName>LPE5</fullName>
+                <default>false</default>
+                <label>LPE5</label>
+            </value>
+            <value>
+                <fullName>LS DISK</fullName>
+                <default>false</default>
+                <label>LS DISK</label>
+            </value>
+            <value>
+                <fullName>LT120</fullName>
+                <default>false</default>
+                <label>LT120</label>
+            </value>
+            <value>
+                <fullName>LT712D</fullName>
+                <default>false</default>
+                <label>LT712D</label>
+            </value>
+            <value>
+                <fullName>LT813D</fullName>
+                <default>false</default>
+                <label>LT813D</label>
+            </value>
+            <value>
+                <fullName>LT905D</fullName>
+                <default>false</default>
+                <label>LT905D</label>
+            </value>
+            <value>
+                <fullName>LUMEN</fullName>
+                <default>false</default>
+                <label>LUMEN</label>
+            </value>
+            <value>
+                <fullName>LUMONICS</fullName>
+                <default>false</default>
+                <label>LUMONICS</label>
+            </value>
+            <value>
+                <fullName>LVD</fullName>
+                <default>false</default>
+                <label>LVD</label>
+            </value>
+            <value>
+                <fullName>LVP</fullName>
+                <default>false</default>
+                <label>LVP</label>
+            </value>
+            <value>
+                <fullName>LXP</fullName>
+                <default>false</default>
+                <label>LXP</label>
+            </value>
+            <value>
+                <fullName>M400</fullName>
+                <default>false</default>
+                <label>M400</label>
+            </value>
+            <value>
+                <fullName>MARKEM</fullName>
+                <default>false</default>
+                <label>MARKEM</label>
+            </value>
+            <value>
+                <fullName>MARK II 612</fullName>
+                <default>false</default>
+                <label>MARK II 612</label>
+            </value>
+            <value>
+                <fullName>MAXIMIO</fullName>
+                <default>false</default>
+                <label>MAXIMIO</label>
+            </value>
+            <value>
+                <fullName>MAZAK</fullName>
+                <default>false</default>
+                <label>MAZAK</label>
+            </value>
+            <value>
+                <fullName>MF</fullName>
+                <default>false</default>
+                <label>MF</label>
+            </value>
+            <value>
+                <fullName>MICRO</fullName>
+                <default>false</default>
+                <label>MICRO</label>
+            </value>
+            <value>
+                <fullName>MITSUBISHI</fullName>
+                <default>false</default>
+                <label>MITSUBISHI</label>
+            </value>
+            <value>
+                <fullName>MKII</fullName>
+                <default>false</default>
+                <label>MKII</label>
+            </value>
+            <value>
+                <fullName>ML</fullName>
+                <default>false</default>
+                <label>ML</label>
+            </value>
+            <value>
+                <fullName>ML2015VZ</fullName>
+                <default>false</default>
+                <label>ML2015VZ</label>
+            </value>
+            <value>
+                <fullName>ML2512 LZP</fullName>
+                <default>false</default>
+                <label>ML2512 LZP</label>
+            </value>
+            <value>
+                <fullName>ML3015</fullName>
+                <default>false</default>
+                <label>ML3015</label>
+            </value>
+            <value>
+                <fullName>ML-3015-NX</fullName>
+                <default>false</default>
+                <label>ML-3015-NX</label>
+            </value>
+            <value>
+                <fullName>ML3020</fullName>
+                <default>false</default>
+                <label>ML3020</label>
+            </value>
+            <value>
+                <fullName>MODEL 780</fullName>
+                <default>false</default>
+                <label>MODEL 780</label>
+            </value>
+            <value>
+                <fullName>Model 890</fullName>
+                <default>false</default>
+                <label>Model 890</label>
+            </value>
+            <value>
+                <fullName>MOSAICO</fullName>
+                <default>false</default>
+                <label>MOSAICO</label>
+            </value>
+            <value>
+                <fullName>MultiCam 2000</fullName>
+                <default>false</default>
+                <label>MultiCam 2000</label>
+            </value>
+            <value>
+                <fullName>NANO</fullName>
+                <default>false</default>
+                <label>NANO</label>
+            </value>
+            <value>
+                <fullName>NOVA</fullName>
+                <default>false</default>
+                <label>NOVA</label>
+            </value>
+            <value>
+                <fullName>NTC</fullName>
+                <default>false</default>
+                <label>NTC</label>
+            </value>
+            <value>
+                <fullName>NTX48</fullName>
+                <default>false</default>
+                <label>NTX48</label>
+            </value>
+            <value>
+                <fullName>NULL</fullName>
+                <default>false</default>
+                <label>NULL</label>
+            </value>
+            <value>
+                <fullName>OPTIMO</fullName>
+                <default>false</default>
+                <label>OPTIMO</label>
+            </value>
+            <value>
+                <fullName>OPTIPLEX 3015</fullName>
+                <default>false</default>
+                <label>OPTIPLEX 3015</label>
+            </value>
+            <value>
+                <fullName>OPTIPLEX 4020</fullName>
+                <default>false</default>
+                <label>OPTIPLEX 4020</label>
+            </value>
+            <value>
+                <fullName>Optipro</fullName>
+                <default>false</default>
+                <label>Optipro</label>
+            </value>
+            <value>
+                <fullName>ORION</fullName>
+                <default>false</default>
+                <label>ORION</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>P-A Series</fullName>
+                <default>false</default>
+                <label>P-A Series</label>
+            </value>
+            <value>
+                <fullName>PDT</fullName>
+                <default>false</default>
+                <label>PDT</label>
+            </value>
+            <value>
+                <fullName>PDT-B</fullName>
+                <default>false</default>
+                <label>PDT-B</label>
+            </value>
+            <value>
+                <fullName>PENTA</fullName>
+                <default>false</default>
+                <label>PENTA</label>
+            </value>
+            <value>
+                <fullName>PENTACON</fullName>
+                <default>false</default>
+                <label>PENTACON</label>
+            </value>
+            <value>
+                <fullName>PL-30-15</fullName>
+                <default>false</default>
+                <label>PL-30-15</label>
+            </value>
+            <value>
+                <fullName>PLATINO 1530</fullName>
+                <default>false</default>
+                <label>PLATINO 1530</label>
+            </value>
+            <value>
+                <fullName>PLATINO 2040</fullName>
+                <default>false</default>
+                <label>PLATINO 2040</label>
+            </value>
+            <value>
+                <fullName>PNEUMATIC</fullName>
+                <default>false</default>
+                <label>PNEUMATIC</label>
+            </value>
+            <value>
+                <fullName>Powercut 2040</fullName>
+                <default>false</default>
+                <label>Powercut 2040</label>
+            </value>
+            <value>
+                <fullName>Powercut Linear Drive 2060</fullName>
+                <default>false</default>
+                <label>Powercut Linear Drive 2060</label>
+            </value>
+            <value>
+                <fullName>Powerline</fullName>
+                <default>false</default>
+                <label>Powerline</label>
+            </value>
+            <value>
+                <fullName>PRIMA/LASERYNE</fullName>
+                <default>false</default>
+                <label>PRIMA/LASERYNE</label>
+            </value>
+            <value>
+                <fullName>PROFILE</fullName>
+                <default>false</default>
+                <label>PROFILE</label>
+            </value>
+            <value>
+                <fullName>PROFILE PLUS</fullName>
+                <default>false</default>
+                <label>PROFILE PLUS</label>
+            </value>
+            <value>
+                <fullName>P Series</fullName>
+                <default>false</default>
+                <label>P Series</label>
+            </value>
+            <value>
+                <fullName>PT Series</fullName>
+                <default>false</default>
+                <label>PT Series</label>
+            </value>
+            <value>
+                <fullName>PULSAR</fullName>
+                <default>false</default>
+                <label>PULSAR</label>
+            </value>
+            <value>
+                <fullName>PULSAR LC1212XL</fullName>
+                <default>false</default>
+                <label>PULSAR LC1212XL</label>
+            </value>
+            <value>
+                <fullName>PULSAR LC2415XL</fullName>
+                <default>false</default>
+                <label>PULSAR LC2415XL</label>
+            </value>
+            <value>
+                <fullName>PULSE MASTER</fullName>
+                <default>false</default>
+                <label>PULSE MASTER</label>
+            </value>
+            <value>
+                <fullName>QUATTRO</fullName>
+                <default>false</default>
+                <label>QUATTRO</label>
+            </value>
+            <value>
+                <fullName>RAPIDO</fullName>
+                <default>false</default>
+                <label>RAPIDO</label>
+            </value>
+            <value>
+                <fullName>REIS</fullName>
+                <default>false</default>
+                <label>REIS</label>
+            </value>
+            <value>
+                <fullName>RL</fullName>
+                <default>false</default>
+                <label>RL</label>
+            </value>
+            <value>
+                <fullName>RLSK</fullName>
+                <default>false</default>
+                <label>RLSK</label>
+            </value>
+            <value>
+                <fullName>ROFIN SINAR</fullName>
+                <default>false</default>
+                <label>ROFIN SINAR</label>
+            </value>
+            <value>
+                <fullName>RQL</fullName>
+                <default>false</default>
+                <label>RQL</label>
+            </value>
+            <value>
+                <fullName>RS1700SM</fullName>
+                <default>false</default>
+                <label>RS1700SM</label>
+            </value>
+            <value>
+                <fullName>RS200SM</fullName>
+                <default>false</default>
+                <label>RS200SM</label>
+            </value>
+            <value>
+                <fullName>RSK</fullName>
+                <default>false</default>
+                <label>RSK</label>
+            </value>
+            <value>
+                <fullName>SCORPION</fullName>
+                <default>false</default>
+                <label>SCORPION</label>
+            </value>
+            <value>
+                <fullName>SG U44</fullName>
+                <default>false</default>
+                <label>SG U44</label>
+            </value>
+            <value>
+                <fullName>SLC DC</fullName>
+                <default>false</default>
+                <label>SLC DC</label>
+            </value>
+            <value>
+                <fullName>SLR RF</fullName>
+                <default>false</default>
+                <label>SLR RF</label>
+            </value>
+            <value>
+                <fullName>Smartline</fullName>
+                <default>false</default>
+                <label>Smartline</label>
+            </value>
+            <value>
+                <fullName>SPACECAM</fullName>
+                <default>false</default>
+                <label>SPACECAM</label>
+            </value>
+            <value>
+                <fullName>SPACEGEAR</fullName>
+                <default>false</default>
+                <label>SPACEGEAR</label>
+            </value>
+            <value>
+                <fullName>SPACE GEAR 510</fullName>
+                <default>false</default>
+                <label>SPACE GEAR 510</label>
+            </value>
+            <value>
+                <fullName>S SERIES</fullName>
+                <default>false</default>
+                <label>S SERIES</label>
+            </value>
+            <value>
+                <fullName>Storesystem LUS30</fullName>
+                <default>false</default>
+                <label>Storesystem LUS30</label>
+            </value>
+            <value>
+                <fullName>STX3D</fullName>
+                <default>false</default>
+                <label>STX3D</label>
+            </value>
+            <value>
+                <fullName>STX 44</fullName>
+                <default>false</default>
+                <label>STX 44</label>
+            </value>
+            <value>
+                <fullName>STX48</fullName>
+                <default>false</default>
+                <label>STX48</label>
+            </value>
+            <value>
+                <fullName>STX 510</fullName>
+                <default>false</default>
+                <label>STX 510</label>
+            </value>
+            <value>
+                <fullName>SUPER TURBO</fullName>
+                <default>false</default>
+                <label>SUPER TURBO</label>
+            </value>
+            <value>
+                <fullName>SYNCRONO</fullName>
+                <default>false</default>
+                <label>SYNCRONO</label>
+            </value>
+            <value>
+                <fullName>SYNRAD</fullName>
+                <default>false</default>
+                <label>SYNRAD</label>
+            </value>
+            <value>
+                <fullName>T230</fullName>
+                <default>false</default>
+                <label>T230</label>
+            </value>
+            <value>
+                <fullName>T230A</fullName>
+                <default>false</default>
+                <label>T230A</label>
+            </value>
+            <value>
+                <fullName>TANAKA</fullName>
+                <default>false</default>
+                <label>TANAKA</label>
+            </value>
+            <value>
+                <fullName>THETA</fullName>
+                <default>false</default>
+                <label>THETA</label>
+            </value>
+            <value>
+                <fullName>THETA LC3015C2</fullName>
+                <default>false</default>
+                <label>THETA LC3015C2</label>
+            </value>
+            <value>
+                <fullName>THETA LC6030C2</fullName>
+                <default>false</default>
+                <label>THETA LC6030C2</label>
+            </value>
+            <value>
+                <fullName>TL 312 3D SPEED</fullName>
+                <default>false</default>
+                <label>TL 312 3D SPEED</label>
+            </value>
+            <value>
+                <fullName>TLC 6005</fullName>
+                <default>false</default>
+                <label>TLC 6005</label>
+            </value>
+            <value>
+                <fullName>TLC CUT 5</fullName>
+                <default>false</default>
+                <label>TLC CUT 5</label>
+            </value>
+            <value>
+                <fullName>TLF 1500 T</fullName>
+                <default>false</default>
+                <label>TLF 1500 T</label>
+            </value>
+            <value>
+                <fullName>TLM610</fullName>
+                <default>false</default>
+                <label>TLM610</label>
+            </value>
+            <value>
+                <fullName>TLM914</fullName>
+                <default>false</default>
+                <label>TLM914</label>
+            </value>
+            <value>
+                <fullName>TLN408</fullName>
+                <default>false</default>
+                <label>TLN408</label>
+            </value>
+            <value>
+                <fullName>TLN510</fullName>
+                <default>false</default>
+                <label>TLN510</label>
+            </value>
+            <value>
+                <fullName>TLV408</fullName>
+                <default>false</default>
+                <label>TLV408</label>
+            </value>
+            <value>
+                <fullName>TLV510</fullName>
+                <default>false</default>
+                <label>TLV510</label>
+            </value>
+            <value>
+                <fullName>TLV714</fullName>
+                <default>false</default>
+                <label>TLV714</label>
+            </value>
+            <value>
+                <fullName>TLX1045</fullName>
+                <default>false</default>
+                <label>TLX1045</label>
+            </value>
+            <value>
+                <fullName>TLX14100</fullName>
+                <default>false</default>
+                <label>TLX14100</label>
+            </value>
+            <value>
+                <fullName>TLX820</fullName>
+                <default>false</default>
+                <label>TLX820</label>
+            </value>
+            <value>
+                <fullName>TLZ408</fullName>
+                <default>false</default>
+                <label>TLZ408</label>
+            </value>
+            <value>
+                <fullName>TLZ510</fullName>
+                <default>false</default>
+                <label>TLZ510</label>
+            </value>
+            <value>
+                <fullName>TRUFLOW-6000</fullName>
+                <default>false</default>
+                <label>TRUFLOW-6000</label>
+            </value>
+            <value>
+                <fullName>TRULASER_7040</fullName>
+                <default>false</default>
+                <label>TRULASER 7040</label>
+            </value>
+            <value>
+                <fullName>Trulaser 1030</fullName>
+                <default>false</default>
+                <label>Trulaser 1030</label>
+            </value>
+            <value>
+                <fullName>TRULASER 3600</fullName>
+                <default>false</default>
+                <label>TRULASER 3600</label>
+            </value>
+            <value>
+                <fullName>Trulaser 5005</fullName>
+                <default>false</default>
+                <label>Trulaser 5005</label>
+            </value>
+            <value>
+                <fullName>TRULASER 5030</fullName>
+                <default>false</default>
+                <label>TRULASER 5030</label>
+            </value>
+            <value>
+                <fullName>TRULASER 5040</fullName>
+                <default>false</default>
+                <label>TRULASER 5040</label>
+            </value>
+            <value>
+                <fullName>Trulaser 5060</fullName>
+                <default>false</default>
+                <label>Trulaser 5060</label>
+            </value>
+            <value>
+                <fullName>Trulaser 7020</fullName>
+                <default>false</default>
+                <label>Trulaser 7020</label>
+            </value>
+            <value>
+                <fullName>Trulaser 7030</fullName>
+                <default>false</default>
+                <label>Trulaser 7030</label>
+            </value>
+            <value>
+                <fullName>TRULASER 8030</fullName>
+                <default>false</default>
+                <label>TRULASER 8030</label>
+            </value>
+            <value>
+                <fullName>Trulaser Cell 1000</fullName>
+                <default>false</default>
+                <label>Trulaser Cell 1000</label>
+            </value>
+            <value>
+                <fullName>Trulaser Cell 3000</fullName>
+                <default>false</default>
+                <label>Trulaser Cell 3000</label>
+            </value>
+            <value>
+                <fullName>Trulaser Robot 5020</fullName>
+                <default>false</default>
+                <label>Trulaser Robot 5020</label>
+            </value>
+            <value>
+                <fullName>TruLaser Tube 5000</fullName>
+                <default>false</default>
+                <label>TruLaser Tube 5000</label>
+            </value>
+            <value>
+                <fullName>TruLaser Tube 7000</fullName>
+                <default>false</default>
+                <label>TruLaser Tube 7000</label>
+            </value>
+            <value>
+                <fullName>TruLaser Weld 5000</fullName>
+                <default>false</default>
+                <label>TruLaser Weld 5000</label>
+            </value>
+            <value>
+                <fullName>TRUMARK-3020</fullName>
+                <default>false</default>
+                <label>TRUMARK-3020</label>
+            </value>
+            <value>
+                <fullName>TRUMATIC 7000</fullName>
+                <default>false</default>
+                <label>TRUMATIC 7000</label>
+            </value>
+            <value>
+                <fullName>TRUMATIC L4030</fullName>
+                <default>false</default>
+                <label>TRUMATIC L4030</label>
+            </value>
+            <value>
+                <fullName>TRUMPF</fullName>
+                <default>false</default>
+                <label>TRUMPF</label>
+            </value>
+            <value>
+                <fullName>TS 4.20</fullName>
+                <default>false</default>
+                <label>TS 4.20</label>
+            </value>
+            <value>
+                <fullName>TURBO</fullName>
+                <default>false</default>
+                <label>TURBO</label>
+            </value>
+            <value>
+                <fullName>TURBO JR</fullName>
+                <default>false</default>
+                <label>TURBO JR</label>
+            </value>
+            <value>
+                <fullName>TXT48</fullName>
+                <default>false</default>
+                <label>TXT48</label>
+            </value>
+            <value>
+                <fullName>UNIVERSAL</fullName>
+                <default>false</default>
+                <label>UNIVERSAL</label>
+            </value>
+            <value>
+                <fullName>UNKNOWN</fullName>
+                <default>false</default>
+                <label>UNKNOWN</label>
+            </value>
+            <value>
+                <fullName>V-500</fullName>
+                <default>false</default>
+                <label>V-500</label>
+            </value>
+            <value>
+                <fullName>VECTOR</fullName>
+                <default>false</default>
+                <label>VECTOR</label>
+            </value>
+            <value>
+                <fullName>VECTOR WALC</fullName>
+                <default>false</default>
+                <label>VECTOR WALC</label>
+            </value>
+            <value>
+                <fullName>VIDEOJET</fullName>
+                <default>false</default>
+                <label>VIDEOJET</label>
+            </value>
+            <value>
+                <fullName>VULCAN</fullName>
+                <default>false</default>
+                <label>VULCAN</label>
+            </value>
+            <value>
+                <fullName>VYTEK</fullName>
+                <default>false</default>
+                <label>VYTEK</label>
+            </value>
+            <value>
+                <fullName>VZ21</fullName>
+                <default>false</default>
+                <label>VZ21</label>
+            </value>
+            <value>
+                <fullName>WEIDERMAN</fullName>
+                <default>false</default>
+                <label>WEIDERMAN</label>
+            </value>
+            <value>
+                <fullName>ZAPHIRO</fullName>
+                <default>false</default>
+                <label>ZAPHIRO</label>
+            </value>
+            <value>
+                <fullName>ZENATECH</fullName>
+                <default>false</default>
+                <label>ZENATECH</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>PHOTON</controllingFieldValue>
+            <valueName>M400</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PHOTON</controllingFieldValue>
+            <valueName>V-500</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PNEUMATIC</controllingFieldValue>
+            <valueName>PNEUMATIC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PRIMA_POWER</controllingFieldValue>
+            <controllingFieldValue>PRIMA/LASERDYNE</controllingFieldValue>
+            <controllingFieldValue>DOMINO</controllingFieldValue>
+            <valueName>DOMINO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PRIMA_POWER</controllingFieldValue>
+            <valueName>Laser Next</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PRIMA_POWER</controllingFieldValue>
+            <controllingFieldValue>PRIMA/LASERDYNE</controllingFieldValue>
+            <valueName>OPTIMO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PRIMA_POWER</controllingFieldValue>
+            <controllingFieldValue>PRIMA/LASERDYNE</controllingFieldValue>
+            <valueName>PLATINO 1530</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PRIMA_POWER</controllingFieldValue>
+            <controllingFieldValue>PRIMA/LASERDYNE</controllingFieldValue>
+            <valueName>PLATINO 2040</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PRIMA_POWER</controllingFieldValue>
+            <controllingFieldValue>PRIMA/LASERDYNE</controllingFieldValue>
+            <controllingFieldValue>AMADA</controllingFieldValue>
+            <valueName>RAPIDO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PRIMA_POWER</controllingFieldValue>
+            <controllingFieldValue>PRIMA/LASERDYNE</controllingFieldValue>
+            <valueName>SYNCRONO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PRIMA_POWER</controllingFieldValue>
+            <valueName>ZAPHIRO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PRIMA/LASERDYNE</controllingFieldValue>
+            <valueName>MAXIMIO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PRIMA/LASERDYNE</controllingFieldValue>
+            <valueName>MOSAICO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PRIMA/LASERDYNE</controllingFieldValue>
+            <valueName>PRIMA/LASERYNE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MITSUBISHI</controllingFieldValue>
+            <valueName>2512</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MITSUBISHI</controllingFieldValue>
+            <valueName>2512HV</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MITSUBISHI</controllingFieldValue>
+            <valueName>2512LX</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MITSUBISHI</controllingFieldValue>
+            <valueName>2512LXP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MITSUBISHI</controllingFieldValue>
+            <valueName>2512LZP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MITSUBISHI</controllingFieldValue>
+            <controllingFieldValue>TRUMPF</controllingFieldValue>
+            <valueName>2520</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MITSUBISHI</controllingFieldValue>
+            <controllingFieldValue>TRUMPF</controllingFieldValue>
+            <valueName>2525</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MITSUBISHI</controllingFieldValue>
+            <controllingFieldValue>TRUMPF</controllingFieldValue>
+            <valueName>2530</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MITSUBISHI</controllingFieldValue>
+            <controllingFieldValue>TRUMPF</controllingFieldValue>
+            <valueName>3015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MITSUBISHI</controllingFieldValue>
+            <valueName>3015HD</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MITSUBISHI</controllingFieldValue>
+            <valueName>3015HV</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MITSUBISHI</controllingFieldValue>
+            <valueName>3015LVP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MITSUBISHI</controllingFieldValue>
+            <valueName>3015LXP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MITSUBISHI</controllingFieldValue>
+            <valueName>3015LZP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MITSUBISHI</controllingFieldValue>
+            <valueName>3016C 2512HC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MITSUBISHI</controllingFieldValue>
+            <valueName>3016C 3015C</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MITSUBISHI</controllingFieldValue>
+            <valueName>3016F2 1212HC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MITSUBISHI</controllingFieldValue>
+            <valueName>3016F2 2512HC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MITSUBISHI</controllingFieldValue>
+            <valueName>3016F3</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MITSUBISHI</controllingFieldValue>
+            <valueName>3016F3 1212HC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MITSUBISHI</controllingFieldValue>
+            <valueName>3016F3 2512HC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MITSUBISHI</controllingFieldValue>
+            <valueName>3016S 1212HB</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MITSUBISHI</controllingFieldValue>
+            <valueName>3016S 2512HB</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MITSUBISHI</controllingFieldValue>
+            <valueName>3020D LB</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MITSUBISHI</controllingFieldValue>
+            <valueName>3020 LXP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MITSUBISHI</controllingFieldValue>
+            <valueName>3122VZ1</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MITSUBISHI</controllingFieldValue>
+            <valueName>3718 LVP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MITSUBISHI</controllingFieldValue>
+            <controllingFieldValue>TRUMPF</controllingFieldValue>
+            <valueName>4030</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MITSUBISHI</controllingFieldValue>
+            <valueName>4030F3</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MITSUBISHI</controllingFieldValue>
+            <valueName>4030F3 1212HD</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MITSUBISHI</controllingFieldValue>
+            <valueName>4030F3 2512HD</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MITSUBISHI</controllingFieldValue>
+            <valueName>40CFX</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MITSUBISHI</controllingFieldValue>
+            <valueName>5036HD</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MITSUBISHI</controllingFieldValue>
+            <valueName>5036LZP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MITSUBISHI</controllingFieldValue>
+            <valueName>5036 LZP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MITSUBISHI</controllingFieldValue>
+            <valueName>5042LZP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MITSUBISHI</controllingFieldValue>
+            <valueName>LVP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MITSUBISHI</controllingFieldValue>
+            <valueName>LXP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MITSUBISHI</controllingFieldValue>
+            <valueName>MITSUBISHI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MITSUBISHI</controllingFieldValue>
+            <valueName>ML2015VZ</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MITSUBISHI</controllingFieldValue>
+            <valueName>ML2512 LZP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MITSUBISHI</controllingFieldValue>
+            <valueName>ML3015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MITSUBISHI</controllingFieldValue>
+            <valueName>ML-3015-NX</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MITSUBISHI</controllingFieldValue>
+            <valueName>ML3020</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MITSUBISHI</controllingFieldValue>
+            <valueName>VZ21</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BEAM DYNAMICS</controllingFieldValue>
+            <valueName>BEAM DYNAMICS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BEAM DYNAMICS</controllingFieldValue>
+            <valueName>LMC 10000</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BEAM DYNAMICS</controllingFieldValue>
+            <valueName>LMC5000</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BEAM DYNAMICS</controllingFieldValue>
+            <valueName>LUMEN</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BEHRENS</controllingFieldValue>
+            <valueName>BEHRENS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BODOR</controllingFieldValue>
+            <valueName>BCL-B</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BODOR</controllingFieldValue>
+            <valueName>BCL-BM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BODOR</controllingFieldValue>
+            <valueName>BCL-MU</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BODOR</controllingFieldValue>
+            <valueName>BCL-X</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BODOR</controllingFieldValue>
+            <valueName>BCL-X2H</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BODOR</controllingFieldValue>
+            <valueName>BCL-XM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BODOR</controllingFieldValue>
+            <valueName>BML-FC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BODOR</controllingFieldValue>
+            <valueName>BML-FS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BODOR</controllingFieldValue>
+            <valueName>BML-FT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BODOR</controllingFieldValue>
+            <valueName>C Series</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BODOR</controllingFieldValue>
+            <valueName>E Series</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BODOR</controllingFieldValue>
+            <valueName>E-T Series</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BODOR</controllingFieldValue>
+            <valueName>F Series</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BODOR</controllingFieldValue>
+            <valueName>F-T Series</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BODOR</controllingFieldValue>
+            <valueName>i3 Linear</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BODOR</controllingFieldValue>
+            <valueName>i5 Series</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BODOR</controllingFieldValue>
+            <valueName>i7 Series</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BODOR</controllingFieldValue>
+            <valueName>P-A Series</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BODOR</controllingFieldValue>
+            <valueName>P Series</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BODOR</controllingFieldValue>
+            <valueName>PT Series</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BODOR</controllingFieldValue>
+            <controllingFieldValue>MACSA ID</controllingFieldValue>
+            <valueName>S SERIES</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BODOR</controllingFieldValue>
+            <valueName>T230</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BODOR</controllingFieldValue>
+            <valueName>T230A</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BYSTRONIC</controllingFieldValue>
+            <valueName>4020</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BYSTRONIC</controllingFieldValue>
+            <valueName>BTL 2800</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BYSTRONIC</controllingFieldValue>
+            <valueName>BYFLEX</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BYSTRONIC</controllingFieldValue>
+            <valueName>BYHAN</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BYSTRONIC</controllingFieldValue>
+            <valueName>BYLAS6520</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BYSTRONIC</controllingFieldValue>
+            <valueName>BYSMALL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BYSTRONIC</controllingFieldValue>
+            <valueName>BYSPEED</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BYSTRONIC</controllingFieldValue>
+            <valueName>BYSPEED3015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BYSTRONIC</controllingFieldValue>
+            <valueName>BYSPEED4020</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BYSTRONIC</controllingFieldValue>
+            <valueName>BYSPRINT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BYSTRONIC</controllingFieldValue>
+            <valueName>BYSPRINT3015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BYSTRONIC</controllingFieldValue>
+            <valueName>BYSTAR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BYSTRONIC</controllingFieldValue>
+            <valueName>BYSTAR2512</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BYSTRONIC</controllingFieldValue>
+            <valueName>BYSTAR3015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BYSTRONIC</controllingFieldValue>
+            <valueName>BYSTAR3015-2</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BYSTRONIC</controllingFieldValue>
+            <valueName>BYSTAR4020</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BYSTRONIC</controllingFieldValue>
+            <valueName>BYSTAR4025</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BYSTRONIC</controllingFieldValue>
+            <valueName>BYSTRONIC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BYSTRONIC</controllingFieldValue>
+            <valueName>BYTUBE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BYSTRONIC</controllingFieldValue>
+            <valueName>BYTUBE3024</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BYSTRONIC</controllingFieldValue>
+            <valueName>BYTUBE6504</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BYSTRONIC</controllingFieldValue>
+            <valueName>BYVISION</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CINCINNATI</controllingFieldValue>
+            <valueName>CL-5</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CINCINNATI</controllingFieldValue>
+            <valueName>CL-6</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CINCINNATI</controllingFieldValue>
+            <valueName>CL-7</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CINCINNATI</controllingFieldValue>
+            <valueName>CL 707</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CINCINNATI</controllingFieldValue>
+            <valueName>CL-7A</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CINCINNATI</controllingFieldValue>
+            <valueName>CL-840</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CINCINNATI</controllingFieldValue>
+            <valueName>CL-850</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CNC Laser Cutting Solutions</controllingFieldValue>
+            <valueName>MultiCam 2000</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COHERENT</controllingFieldValue>
+            <valueName>41</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COHERENT</controllingFieldValue>
+            <valueName>42</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COHERENT</controllingFieldValue>
+            <valueName>43</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COHERENT</controllingFieldValue>
+            <valueName>48</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COHERENT</controllingFieldValue>
+            <valueName>ARROW</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COHERENT</controllingFieldValue>
+            <valueName>ARROW ULTIMATE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COHERENT</controllingFieldValue>
+            <valueName>COHERENT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COHERENT</controllingFieldValue>
+            <valueName>C-SERIES</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COHERENT</controllingFieldValue>
+            <valueName>EFAM-50</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COHERENT</controllingFieldValue>
+            <valueName>EVERLASE 150 (M45-1)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COHERENT</controllingFieldValue>
+            <valueName>EVERLASE 325-1</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COHERENT</controllingFieldValue>
+            <valueName>EVERLASE 325-2</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COHERENT</controllingFieldValue>
+            <valueName>EVERLASE 525-2</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COHERENT</controllingFieldValue>
+            <valueName>EVERLASE 525-4</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COHERENT</controllingFieldValue>
+            <valueName>EVERLASE 725-1</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COHERENT</controllingFieldValue>
+            <valueName>EVERLASE M-50</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COHERENT</controllingFieldValue>
+            <valueName>EVERLASE M-51</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COHERENT</controllingFieldValue>
+            <valueName>EVERLASE M51 SH</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COHERENT</controllingFieldValue>
+            <valueName>EVERLASER 525-1</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COHERENT</controllingFieldValue>
+            <valueName>G150</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COHERENT</controllingFieldValue>
+            <valueName>G-SERIES</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COHERENT</controllingFieldValue>
+            <valueName>K-SERIES</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ROFIN</controllingFieldValue>
+            <controllingFieldValue>ROFIN SINAR</controllingFieldValue>
+            <valueName>890</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ROFIN</controllingFieldValue>
+            <valueName>RS1700SM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ROFIN</controllingFieldValue>
+            <valueName>RS200SM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ROFIN SINAR</controllingFieldValue>
+            <valueName>1200</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ROFIN SINAR</controllingFieldValue>
+            <valueName>820</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ROFIN SINAR</controllingFieldValue>
+            <valueName>860</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ROFIN SINAR</controllingFieldValue>
+            <valueName>880</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ROFIN SINAR</controllingFieldValue>
+            <valueName>DC025</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ROFIN SINAR</controllingFieldValue>
+            <valueName>DC030</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ROFIN SINAR</controllingFieldValue>
+            <valueName>ROFIN SINAR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ADIGE SALA</controllingFieldValue>
+            <valueName>ADIGE SALA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ADIGE SALA</controllingFieldValue>
+            <valueName>ADILAS2</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ADIGE SALA</controllingFieldValue>
+            <valueName>JUMBO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ADIGE SALA</controllingFieldValue>
+            <valueName>LT120</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ADIGE SALA</controllingFieldValue>
+            <valueName>LT712D</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ADIGE SALA</controllingFieldValue>
+            <valueName>LT813D</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ADIGE SALA</controllingFieldValue>
+            <valueName>LT905D</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SALVAGNINI</controllingFieldValue>
+            <valueName>L1</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SALVAGNINI</controllingFieldValue>
+            <valueName>L2</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SALVAGNINI</controllingFieldValue>
+            <valueName>L2 LIGHTNING</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMADA</controllingFieldValue>
+            <valueName>1212</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMADA</controllingFieldValue>
+            <valueName>ACIES</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMADA</controllingFieldValue>
+            <valueName>ALTAIR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMADA</controllingFieldValue>
+            <valueName>AMADA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMADA</controllingFieldValue>
+            <valueName>APELIO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMADA</controllingFieldValue>
+            <valueName>APELIO III 2510V</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMADA</controllingFieldValue>
+            <valueName>APELIO III 357V</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMADA</controllingFieldValue>
+            <valueName>APELIO III 367V</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMADA</controllingFieldValue>
+            <valueName>EMKZ 3015NT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMADA</controllingFieldValue>
+            <valueName>EML</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMADA</controllingFieldValue>
+            <valueName>FLC-AJ</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMADA</controllingFieldValue>
+            <valueName>FLW</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMADA</controllingFieldValue>
+            <valueName>FO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMADA</controllingFieldValue>
+            <valueName>FOL3015NT C4500E</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMADA</controllingFieldValue>
+            <valueName>FOL-AJ</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMADA</controllingFieldValue>
+            <valueName>GEMINI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMADA</controllingFieldValue>
+            <valueName>GEMINI FO3015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMADA</controllingFieldValue>
+            <valueName>GEMINI FO4020</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMADA</controllingFieldValue>
+            <valueName>GEMINI NT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMADA</controllingFieldValue>
+            <valueName>LASERMAC LC1212</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMADA</controllingFieldValue>
+            <valueName>LC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMADA</controllingFieldValue>
+            <valueName>LC1212A3</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMADA</controllingFieldValue>
+            <valueName>LC2415</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMADA</controllingFieldValue>
+            <valueName>LC644</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMADA</controllingFieldValue>
+            <valueName>LC644II</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMADA</controllingFieldValue>
+            <valueName>LC667</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMADA</controllingFieldValue>
+            <valueName>LC667II</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMADA</controllingFieldValue>
+            <valueName>LC-C1</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMADA</controllingFieldValue>
+            <valueName>LCE645</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMADA</controllingFieldValue>
+            <valueName>LCE655</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMADA</controllingFieldValue>
+            <valueName>LCE656</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMADA</controllingFieldValue>
+            <valueName>LC-F1</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMADA</controllingFieldValue>
+            <valueName>PULSAR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMADA</controllingFieldValue>
+            <valueName>PULSAR LC1212XL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMADA</controllingFieldValue>
+            <valueName>PULSAR LC2415XL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMADA</controllingFieldValue>
+            <controllingFieldValue>LUMONICS</controllingFieldValue>
+            <valueName>PULSE MASTER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMADA</controllingFieldValue>
+            <valueName>QUATTRO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BAASEL</controllingFieldValue>
+            <valueName>BAASEL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DATATECH</controllingFieldValue>
+            <valueName>DATATECH</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DATATECH</controllingFieldValue>
+            <valueName>FFL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DATATECH</controllingFieldValue>
+            <valueName>FT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DATATECH</controllingFieldValue>
+            <valueName>ML</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DATATECH</controllingFieldValue>
+            <valueName>RL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DATATECH</controllingFieldValue>
+            <valueName>RQL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Durma</controllingFieldValue>
+            <valueName>HDM 3015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELCEDE</controllingFieldValue>
+            <valueName>ELCEDE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELCEDE</controllingFieldValue>
+            <controllingFieldValue>LASERMATE</controllingFieldValue>
+            <valueName>LASERMATE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTROX</controllingFieldValue>
+            <valueName>ELECTROX</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTROX</controllingFieldValue>
+            <valueName>LASERBLADE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTROX</controllingFieldValue>
+            <valueName>NOVA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTROX</controllingFieldValue>
+            <valueName>SCORPION</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>STRIPPIT/LVD</controllingFieldValue>
+            <valueName>AXEL 3015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>STRIPPIT/LVD</controllingFieldValue>
+            <valueName>FC1250 LASERTOOL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>STRIPPIT/LVD</controllingFieldValue>
+            <valueName>IMPULS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>STRIPPIT/LVD</controllingFieldValue>
+            <valueName>ORION</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SYNRAD</controllingFieldValue>
+            <valueName>SYNRAD</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TANAKA</controllingFieldValue>
+            <valueName>3000</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TANAKA</controllingFieldValue>
+            <valueName>4000</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TANAKA</controllingFieldValue>
+            <controllingFieldValue>TRUMPF</controllingFieldValue>
+            <valueName>6000</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TANAKA</controllingFieldValue>
+            <valueName>LMX</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TANAKA</controllingFieldValue>
+            <valueName>LMX1</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TANAKA</controllingFieldValue>
+            <valueName>LMX3</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TANAKA</controllingFieldValue>
+            <valueName>LMX III</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TANAKA</controllingFieldValue>
+            <valueName>LMXV</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TANAKA</controllingFieldValue>
+            <valueName>LMX VII</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TANAKA</controllingFieldValue>
+            <valueName>TANAKA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TCI Cutting</controllingFieldValue>
+            <valueName>Powerline</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TCI Cutting</controllingFieldValue>
+            <valueName>Smartline</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Tecoi</controllingFieldValue>
+            <valueName>FLA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Tecoi</controllingFieldValue>
+            <valueName>FL DISK</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Tecoi</controllingFieldValue>
+            <valueName>LS DISK</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EL EN</controllingFieldValue>
+            <controllingFieldValue>PENTA</controllingFieldValue>
+            <valueName>BLADE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FARLEY LASERLAB</controllingFieldValue>
+            <valueName>FARLEY LASERLAB</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FARLEY LASERLAB</controllingFieldValue>
+            <valueName>PROFILE PLUS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FARLEY LASERLAB</controllingFieldValue>
+            <valueName>VECTOR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FARLEY LASERLAB</controllingFieldValue>
+            <valueName>VECTOR WALC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FASTRAK</controllingFieldValue>
+            <valueName>FT-2400</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FERRANTI/LASER ECOSSE</controllingFieldValue>
+            <valueName>FERRANTI/LASER ECOSSE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FERRANTI/LASER ECOSSE</controllingFieldValue>
+            <valueName>MF</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRUMPF</controllingFieldValue>
+            <valueName>1005</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRUMPF</controllingFieldValue>
+            <valueName>2030</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRUMPF</controllingFieldValue>
+            <valueName>2503</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRUMPF</controllingFieldValue>
+            <valueName>2510</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRUMPF</controllingFieldValue>
+            <valueName>3030</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRUMPF</controllingFieldValue>
+            <valueName>3040</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRUMPF</controllingFieldValue>
+            <controllingFieldValue>HANKWANG</controllingFieldValue>
+            <valueName>3050</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRUMPF</controllingFieldValue>
+            <valueName>3060</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRUMPF</controllingFieldValue>
+            <valueName>3530</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRUMPF</controllingFieldValue>
+            <valueName>4030 AUTOLAS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRUMPF</controllingFieldValue>
+            <valueName>4030 PLUS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRUMPF</controllingFieldValue>
+            <valueName>4050</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRUMPF</controllingFieldValue>
+            <valueName>4050 AUTOLAS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRUMPF</controllingFieldValue>
+            <valueName>4050 PLUS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRUMPF</controllingFieldValue>
+            <valueName>6000L</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRUMPF</controllingFieldValue>
+            <valueName>6030</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRUMPF</controllingFieldValue>
+            <valueName>6030 AUTOLAS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRUMPF</controllingFieldValue>
+            <valueName>6030 PLUS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRUMPF</controllingFieldValue>
+            <valueName>6050</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRUMPF</controllingFieldValue>
+            <valueName>6050 AUTOLAS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRUMPF</controllingFieldValue>
+            <valueName>6050PLUS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRUMPF</controllingFieldValue>
+            <valueName>L203030</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRUMPF</controllingFieldValue>
+            <valueName>L2503E</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRUMPF</controllingFieldValue>
+            <valueName>TLC 6005</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRUMPF</controllingFieldValue>
+            <valueName>TLC CUT 5</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRUMPF</controllingFieldValue>
+            <valueName>TLF 1500 T</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRUMPF</controllingFieldValue>
+            <valueName>TRUFLOW-6000</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRUMPF</controllingFieldValue>
+            <valueName>TRULASER_7040</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRUMPF</controllingFieldValue>
+            <valueName>Trulaser 1030</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRUMPF</controllingFieldValue>
+            <valueName>TRULASER 3600</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRUMPF</controllingFieldValue>
+            <valueName>Trulaser 5005</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRUMPF</controllingFieldValue>
+            <valueName>TRULASER 5030</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRUMPF</controllingFieldValue>
+            <valueName>TRULASER 5040</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRUMPF</controllingFieldValue>
+            <valueName>Trulaser 5060</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRUMPF</controllingFieldValue>
+            <valueName>Trulaser 7020</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRUMPF</controllingFieldValue>
+            <valueName>Trulaser 7030</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRUMPF</controllingFieldValue>
+            <valueName>TRULASER 8030</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRUMPF</controllingFieldValue>
+            <valueName>Trulaser Cell 1000</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRUMPF</controllingFieldValue>
+            <valueName>Trulaser Cell 3000</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRUMPF</controllingFieldValue>
+            <valueName>Trulaser Robot 5020</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRUMPF</controllingFieldValue>
+            <valueName>TruLaser Tube 5000</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRUMPF</controllingFieldValue>
+            <valueName>TruLaser Tube 7000</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRUMPF</controllingFieldValue>
+            <valueName>TruLaser Weld 5000</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRUMPF</controllingFieldValue>
+            <valueName>TRUMARK-3020</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRUMPF</controllingFieldValue>
+            <valueName>TRUMATIC 7000</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRUMPF</controllingFieldValue>
+            <valueName>TRUMATIC L4030</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRUMPF</controllingFieldValue>
+            <valueName>TRUMPF</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TTM - Tube Tech Machinery</controllingFieldValue>
+            <valueName>FL 250 3D</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TTM - Tube Tech Machinery</controllingFieldValue>
+            <valueName>FL 400 3D</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TTM - Tube Tech Machinery</controllingFieldValue>
+            <valueName>FL 600 3D</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TTM - Tube Tech Machinery</controllingFieldValue>
+            <valueName>TL 312 3D SPEED</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TTM - Tube Tech Machinery</controllingFieldValue>
+            <valueName>TS 4.20</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>UNIVERSAL</controllingFieldValue>
+            <valueName>UNIVERSAL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VIDEOJET</controllingFieldValue>
+            <valueName>VIDEOJET</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FINN-POWER</controllingFieldValue>
+            <valueName>FINN-POWER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FINN-POWER</controllingFieldValue>
+            <valueName>L6</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FINN-POWER</controllingFieldValue>
+            <valueName>LB6</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FINN-POWER</controllingFieldValue>
+            <valueName>LP6</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FINN-POWER</controllingFieldValue>
+            <valueName>LPE5</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>GCC</controllingFieldValue>
+            <valueName>GCC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>GE</controllingFieldValue>
+            <valueName>GE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>GERBER</controllingFieldValue>
+            <valueName>GERBER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>GRAVOTECH</controllingFieldValue>
+            <valueName>GRAVOGRAPH</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>XENATECH</controllingFieldValue>
+            <valueName>ZENATECH</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>HACO</controllingFieldValue>
+            <valueName>ELAS FLY 3</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>HACO</controllingFieldValue>
+            <valueName>HACO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>HANKWANG</controllingFieldValue>
+            <valueName>ECHO III</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>HANKWANG</controllingFieldValue>
+            <valueName>KOBA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>HANKWANG</controllingFieldValue>
+            <valueName>KOBA PLUS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>HANKWANG</controllingFieldValue>
+            <valueName>PL-30-15</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>HIGHYAG</controllingFieldValue>
+            <valueName>ASK</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>HIGHYAG</controllingFieldValue>
+            <valueName>BIMO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>HIGHYAG</controllingFieldValue>
+            <valueName>BIMO-FSC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>HIGHYAG</controllingFieldValue>
+            <valueName>MICRO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>HIGHYAG</controllingFieldValue>
+            <valueName>PDT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>HIGHYAG</controllingFieldValue>
+            <valueName>PDT-B</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>HIGHYAG</controllingFieldValue>
+            <valueName>RLSK</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>HIGHYAG</controllingFieldValue>
+            <valueName>RSK</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>HUFFMAN</controllingFieldValue>
+            <valueName>HUFFMAN</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ZED</controllingFieldValue>
+            <valueName>FLEXPOSE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kimla</controllingFieldValue>
+            <valueName>Finecut 1020</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kimla</controllingFieldValue>
+            <valueName>Finecut 1530 Linear Drive</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kimla</controllingFieldValue>
+            <valueName>Flashcut Linear Drive</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kimla</controllingFieldValue>
+            <valueName>Lasercel</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kimla</controllingFieldValue>
+            <valueName>Powercut 2040</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kimla</controllingFieldValue>
+            <valueName>Powercut Linear Drive 2060</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kimla</controllingFieldValue>
+            <valueName>Storesystem LUS30</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LASERCUT</controllingFieldValue>
+            <valueName>HP50100</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LASERCUT</controllingFieldValue>
+            <valueName>HP60120</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LASERCUT</controllingFieldValue>
+            <valueName>LASERCUT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LASERCUT</controllingFieldValue>
+            <valueName>LM60120</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LASERCUT</controllingFieldValue>
+            <valueName>LM80160</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LASERDYNE</controllingFieldValue>
+            <valueName>790</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LASERDYNE</controllingFieldValue>
+            <valueName>MODEL 780</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LASERDYNE</controllingFieldValue>
+            <valueName>Model 890</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LASERLAB</controllingFieldValue>
+            <valueName>LASERLAB</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LCD</controllingFieldValue>
+            <valueName>LCD</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NTC</controllingFieldValue>
+            <valueName>NTC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NTC</controllingFieldValue>
+            <valueName>TLM610</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NTC</controllingFieldValue>
+            <valueName>TLM914</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NTC</controllingFieldValue>
+            <valueName>TLN408</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NTC</controllingFieldValue>
+            <valueName>TLN510</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NTC</controllingFieldValue>
+            <valueName>TLV408</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NTC</controllingFieldValue>
+            <valueName>TLV510</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NTC</controllingFieldValue>
+            <valueName>TLV714</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NTC</controllingFieldValue>
+            <valueName>TLX1045</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NTC</controllingFieldValue>
+            <valueName>TLX14100</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NTC</controllingFieldValue>
+            <valueName>TLX820</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NTC</controllingFieldValue>
+            <valueName>TLZ408</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NTC</controllingFieldValue>
+            <valueName>TLZ510</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PENTA</controllingFieldValue>
+            <valueName>BLADE 100</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PENTA</controllingFieldValue>
+            <valueName>BLADE 200</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PENTA</controllingFieldValue>
+            <valueName>BLADE 200S</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PENTA</controllingFieldValue>
+            <valueName>BLADE 250</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PENTA</controllingFieldValue>
+            <valueName>BLADE 250S</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PENTA</controllingFieldValue>
+            <valueName>BLADE 500</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PENTA</controllingFieldValue>
+            <valueName>BLADE 500S</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lumenis</controllingFieldValue>
+            <valueName>Optipro</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LUMONICS</controllingFieldValue>
+            <valueName>DRILL STARR 600</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LUMONICS</controllingFieldValue>
+            <valueName>INDEX</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LUMONICS</controllingFieldValue>
+            <valueName>IPEX</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LUMONICS</controllingFieldValue>
+            <valueName>LASERMARK</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LUMONICS</controllingFieldValue>
+            <valueName>SLC DC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LUMONICS</controllingFieldValue>
+            <valueName>SLR RF</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LVD</controllingFieldValue>
+            <valueName>LVD</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MACSA ID</controllingFieldValue>
+            <valueName>D SERIES</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MACSA ID</controllingFieldValue>
+            <valueName>fLASER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MACSA ID</controllingFieldValue>
+            <valueName>F SERIES PULSED</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MACSA ID</controllingFieldValue>
+            <valueName>gLASER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MACSA ID</controllingFieldValue>
+            <valueName>HPD SERIES</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MACSA ID</controllingFieldValue>
+            <valueName>iCON</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MACSA ID</controllingFieldValue>
+            <valueName>iLABEL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MACSA ID</controllingFieldValue>
+            <valueName>KIP-1080-UHS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MACSA ID</controllingFieldValue>
+            <valueName>K SERIES</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MACSA ID</controllingFieldValue>
+            <valueName>NANO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MARKEM</controllingFieldValue>
+            <valueName>MARKEM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MAZAK</controllingFieldValue>
+            <valueName>FABRIGEAR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MAZAK</controllingFieldValue>
+            <valueName>FMS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MAZAK</controllingFieldValue>
+            <valueName>HYPERDRIVE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MAZAK</controllingFieldValue>
+            <valueName>HYPER GEAR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MAZAK</controllingFieldValue>
+            <valueName>LP 4040</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MAZAK</controllingFieldValue>
+            <valueName>LP4080</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MAZAK</controllingFieldValue>
+            <valueName>LP50100</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MAZAK</controllingFieldValue>
+            <valueName>MARK II 612</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MAZAK</controllingFieldValue>
+            <valueName>MAZAK</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MAZAK</controllingFieldValue>
+            <valueName>MKII</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MAZAK</controllingFieldValue>
+            <valueName>NTX48</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MAZAK</controllingFieldValue>
+            <valueName>OPTIPLEX 3015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MAZAK</controllingFieldValue>
+            <valueName>OPTIPLEX 4020</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MAZAK</controllingFieldValue>
+            <valueName>SG U44</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MAZAK</controllingFieldValue>
+            <valueName>SPACECAM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MAZAK</controllingFieldValue>
+            <valueName>SPACEGEAR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MAZAK</controllingFieldValue>
+            <valueName>SPACE GEAR 510</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MAZAK</controllingFieldValue>
+            <valueName>STX3D</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MAZAK</controllingFieldValue>
+            <valueName>STX 44</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MAZAK</controllingFieldValue>
+            <valueName>STX48</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MAZAK</controllingFieldValue>
+            <valueName>STX 510</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MAZAK</controllingFieldValue>
+            <valueName>SUPER TURBO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MAZAK</controllingFieldValue>
+            <valueName>TURBO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MAZAK</controllingFieldValue>
+            <valueName>TURBO JR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MAZAK</controllingFieldValue>
+            <valueName>TXT48</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

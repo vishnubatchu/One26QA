@@ -1,0 +1,69 @@
+<apex:component controller="NewRmaAlertController" access="global" >
+    <apex:attribute name="RMAID" type="ID" assignTo="{!recordId}" description="Id of the RMA case"/>
+    <html>
+        <apex:variable value="{!rmaDetails}" var="rma"/> 
+        Hi {!rma.CreatedBy.Name},
+        <br/><br/>
+        Response Mail Alert for RMA Requestor  <br/>
+        <br/>
+        We have received your request for RMA.  <br/>
+        <br/>
+        <table>
+            <tr>
+                <td>Submitted By :</td>
+                <td>{!rma.CreatedBy.Name}</td>
+            </tr>
+            <tr>
+                <td>RMAId :</td>
+                <td>{!rma.CaseNumber}</td>
+            </tr>
+            <tr>
+                <td>Company :</td>
+                <td>Finisar</td>
+            </tr>
+            <tr>
+                <td>Account Name :</td>
+                <td>{!rma.Account.Name}</td>
+            </tr>
+            <tr>
+                <td>End Customer :</td>
+                <td>{!rma.End_Customer__c}</td>
+            </tr>
+            <tr>
+                <td>Submit Date :</td>
+                <td>{!rma.CreatedDate}</td>
+            </tr>
+        </table>
+        <br/>
+        RMA Request Lines <br/>
+        <body>
+            <!--apex:pageblocksection rendered ="{!hasLines}"-->
+            <table border = "1" >
+                <tr>
+                    <td>Customer Serial Number</td>
+                    <td>Product</td>
+                    <td>Marketing PN</td>
+                    <td>Org Name</td>
+                    <td>Return Reason</td>
+                    <td>Description</td>
+                </tr>
+                
+                <apex:repeat value="{!rma.RMA_Request_Lines__r}" var="line">
+                    <tr>
+                        <td>{!line.Name}</td>
+                        <td>{!line.Product__r.Name}</td>
+                        <td>{!line.Marketing_PN__c}</td>
+                        <td>{!line.Org_Code__c}</td>
+                        <td>{!line.Return_Reason__c}</td>
+                        <td>{!line.Brief_description_of_the_failure__c}</td>
+                    </tr>
+                </apex:repeat>        
+            </table>
+        </body>
+        <br/>
+        Warm Regards, <br/>
+        Finisar Web Administrator <br/>
+        
+        This is a system generated message. Please do not reply to this email.
+    </html>
+</apex:component>

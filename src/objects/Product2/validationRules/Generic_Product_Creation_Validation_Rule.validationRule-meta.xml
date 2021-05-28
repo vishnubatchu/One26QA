@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Generic_Product_Creation_Validation_Rule</fullName>
+    <active>true</active>
+    <description>Sales Admin Can Create Product of Type Generic or Generic Parent</description>
+    <errorConditionFormula>AND(
+
+   CONTAINS( $Profile.Name , &apos;Sales Admin Profile&apos;)  ,
+ OR( ISNEW() ,
+   ISCHANGED(Type__c ) ),
+NOT(OR(
+
+(ISPICKVAL(Type__c , &apos;Generic&apos;) ), 
+(ISPICKVAL(Type__c , &apos;Generic Parent&apos;) ))
+
+)
+)</errorConditionFormula>
+    <errorMessage>Sales Admin Can Create Product of Type Generic or Generic Parent</errorMessage>
+</ValidationRule>

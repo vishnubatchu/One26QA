@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Other_Product_Other_DescriptionRequired</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+
+ OR(ISBLANK( Other_Description__c ) , ISNULL(Other_Description__c)),
+OR(UPPER(PricebookEntry.Product2.Name)  = &apos;OTHER&apos;,LOWER(PricebookEntry.Product2.Name) =&apos;other&apos;)
+)</errorConditionFormula>
+    <errorDisplayField>Other_Description__c</errorDisplayField>
+    <errorMessage>Other Description is required if Product selected is OTHER</errorMessage>
+</ValidationRule>

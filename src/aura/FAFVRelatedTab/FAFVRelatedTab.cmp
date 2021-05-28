@@ -1,0 +1,125 @@
+<aura:component controller="FAFVCustomUI" access="global" >
+    <aura:method name="getFARecID" action="{!c.doInit}" > 
+        <aura:attribute name="param2" type= "String" /> 
+        <aura:attribute name="param3" type= "String" /> 
+        <aura:attribute name="param4" type= "String" />
+    </aura:method>
+    <aura:attribute name ="viewMode" type ="String" />
+    <aura:attribute name ="showAddBtn" type ="boolean" default ="true" />
+    <aura:attribute name="FAFields" type="String[]"
+                    default="['Name','FA_FV_Status__c','Owner','Site__c','CA_Required__c','CreatedById','FA_Findings__c','CA_Requiredc__c','LastModifiedById']" />
+    <aura:attribute name="FARichFields" type="String[]"
+                    default="['RC_Analysis__c','Failure_Mechanism__c','Containment__c','Corrective_Action__c','Risk_Assessment__c','Conclusion__c']" />
+    <aura:attribute name="FVFields" type="String[]"
+                    default="['Name','FA_FV_Status__c','OwnerId','Site__c','CA_Required__c','CreatedById','VMI__c','VMI_Comments__c','LastModifiedById','Temp_BERT__c','Temp_Bert_Comments__c','Count_of_Completed_FA_FVaDetails__c','Final_Function_Test__c','Final_Functional_Comments__c','Count_of_Completed_FA_FVcDetails__c']" />
+    <aura:attribute name="FVRichTextFields" type="String[]"
+                    default="['FV_Findings__c']"/>
+    
+    <aura:attribute name="ShowFA" type="boolean" default="false" />
+    <aura:attribute name="ShowFV" type="boolean" default="false" />
+    <aura:attribute name="hideSpinner" type ="boolean" default ="false" />
+    <aura:attribute name= "orderLineID" type ="string"/>
+    <aura:attribute name= "fafvID" type ="string"/>
+    <aura:attribute name="StepssList" type="Steps__c[]"/>
+    <aura:attribute name="serialNoList" type="list"/> 
+    <aura:attribute name="allRelatedSerialNoList" type="list"/> 
+    <aura:attribute name="FailureModeList" type="list"/>
+    <aura:attribute name="blanckArray" type="String[]"/>
+    <aura:attribute name="fieldsArray" type="String[]"/>
+    <aura:attribute name="property" type="FA_FV_Analysis__c"/> 
+    <aura:registerEvent name="lightningEvent1" type="c:RefreshFAFVCustomUI"/>
+    <aura:registerEvent name="hideSpinnerEvent" type="c:hideSpinner"/>
+    <aura:handler name="lightningEvent" event="c:RefreshSerialNumberUI" action="{!c.doInit}"/>
+    
+    <div style="height: 3rem; padding:0rem">
+        <div class="slds-context-bar " style="height:45px;background-color : #f2f2f2"  >
+            <nav class="slds-context-bar__secondary" role="navigation">
+                <ul class="slds-grid">
+                    <li aura:id="FA/FV" class="slds-context-bar__item " data-value="FA/FV"  onclick = "{!c.showDetail}" >
+                        <a href="javascript:void(0);" class="slds-context-bar__label-action" title="FA/FV">
+                            <span class="slds-truncate" title="FA/FV">FV/FA</span>
+                        </a>
+                    </li>
+                    <li aura:id="SerialNumber" data-value="SerialNumber"  onclick = "{!c.showDetail}" class="slds-context-bar__item ">
+                        <a href="javascript:void(0);" class="slds-context-bar__label-action" title="Serial Number">
+                            <span class="slds-truncate" title="Serial Number">Serial Number</span>
+                        </a>
+                    </li>
+                    <li aura:id="Steps" data-value="Steps"  onclick = "{!c.showDetail}" class="slds-context-bar__item">
+                        <a href="javascript:void(0);" class="slds-context-bar__label-action" title="Steps">
+                            <span class="slds-truncate" title="Steps">Steps</span>
+                        </a>
+                    </li>
+                    <li aura:id="FailureMode" data-value="FailureMode"  onclick = "{!c.showDetail}" class="slds-context-bar__item">
+                        <a href="javascript:void(0);" class="slds-context-bar__label-action" title="Failure Mode">
+                            <span class="slds-truncate" title="Failure Mode">Failure Mode</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div  aura:id='showFA/FV' style="  overflow:auto;background-color : #FFFF"> 
+        <aura:if isTrue="{!v.ShowFA}">
+            <lightning:accordion aura:id="FA Analysis" activeSectionName="GeneralInformation" >
+                <lightning:accordionSection name="GeneralInformation" label="General Information">
+                    <lightning:card iconName="standard:user" title="">
+                        <lightning:recordForm aura:id="recordForm"
+                                              recordId="{!v.fafvID}"
+                                              objectApiName="FA_FV_Analysis__c"
+                                              fields="{!v.FAFields}"                  
+                                              layout="Compact"
+                                              columns="3"
+                                              mode="{!v.viewMode}"
+                                              onsuccess="{!c.handleSubmit}"
+                                              />
+                    </lightning:card>
+                </lightning:accordionSection>
+                <lightning:accordionSection name="DetailedFindings" label="Detailed Findings">
+                    <lightning:card iconName="standard:user" title="">
+                        <lightning:recordForm aura:id="recordFormRich"
+                                              recordId="{!v.fafvID}"
+                                              objectApiName="FA_FV_Analysis__c"
+                                              fields="{!v.FARichFields}"                  
+                                              layout="Compact"
+                                              columns="1"
+                                              mode="{!v.viewMode}"
+                                              onsuccess="{!c.handleSubmit}"
+                                              />
+                    </lightning:card>
+                </lightning:accordionSection>
+            </lightning:accordion>
+        </aura:if>
+        <aura:if isTrue="{!v.ShowFV}">
+            <lightning:card iconName="standard:user" title="">
+                <lightning:recordForm aura:id="recordForm2"
+                                      recordId="{!v.fafvID}"
+                                      objectApiName="FA_FV_Analysis__c"
+                                      fields="{!v.FVFields}"                  
+                                      layout="Compact"
+                                      columns="3"
+                                      mode="{!v.viewMode}"
+                                      onsuccess="{!c.handleSubmit}"
+                                      />
+                <lightning:recordForm aura:id="recordForm2"
+                                      recordId="{!v.fafvID}"
+                                      objectApiName="FA_FV_Analysis__c"
+                                      fields="{!v.FVRichTextFields}"                  
+                                      layout="Compact"
+                                      columns="3"
+                                      mode="{!v.viewMode}"
+                                      onsuccess="{!c.handleSubmit}"
+                                      />
+            </lightning:card>
+        </aura:if>
+    </div >
+    <div aura:id='showSteps'>
+        <c:AddMultiStepParent aura:id='steps' StepList ="{!v.StepssList}" recordId="{!v.fafvID}" orderID ="{!v.orderLineID}"   />
+    </div>
+    <div aura:id='showSerialNumber'>
+        <c:AddMultiSerialNoParent orderIDs ="{!v.orderLineID}" serialList="{!v.serialNoList}" recID="{!v.fafvID}" AllserialList ="{!v.allRelatedSerialNoList}"/> 
+    </div>
+    <div aura:id='showFailureMode'>
+        <c:AddMultiFaultCodeParent aura:id='FModes' FaultCodeList="{!v.FailureModeList}" recID="{!v.fafvID}"  /> 
+    </div>
+</aura:component>

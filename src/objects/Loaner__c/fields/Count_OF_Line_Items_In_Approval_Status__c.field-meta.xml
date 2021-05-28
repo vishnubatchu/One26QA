@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Count_OF_Line_Items_In_Approval_Status__c</fullName>
+    <externalId>false</externalId>
+    <label>Count OF Line Items In Approval Status</label>
+    <summaryFilterItems>
+        <field>Loaner_Line__c.Line_Status__c</field>
+        <operation>equals</operation>
+        <value>Approved</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Loaner_Line__c.Loaner__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

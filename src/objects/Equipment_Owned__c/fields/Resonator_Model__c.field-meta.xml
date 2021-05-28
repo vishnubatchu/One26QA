@@ -1,0 +1,1674 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Resonator_Model__c</fullName>
+    <externalId>false</externalId>
+    <label>Resonator Model</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Resonator__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1000</fullName>
+                <default>false</default>
+                <label>1000</label>
+            </value>
+            <value>
+                <fullName>1200SM</fullName>
+                <default>false</default>
+                <label>1200SM</label>
+            </value>
+            <value>
+                <fullName>1212HV</fullName>
+                <default>false</default>
+                <label>1212HV</label>
+            </value>
+            <value>
+                <fullName>1350SM</fullName>
+                <default>false</default>
+                <label>1350SM</label>
+            </value>
+            <value>
+                <fullName>1500</fullName>
+                <default>false</default>
+                <label>1500</label>
+            </value>
+            <value>
+                <fullName>1500/2</fullName>
+                <default>false</default>
+                <label>1500/2</label>
+            </value>
+            <value>
+                <fullName>1508S</fullName>
+                <default>false</default>
+                <label>1508S</label>
+            </value>
+            <value>
+                <fullName>15SRP</fullName>
+                <default>false</default>
+                <label>15SRP</label>
+            </value>
+            <value>
+                <fullName>1700SM</fullName>
+                <default>false</default>
+                <label>1700SM</label>
+            </value>
+            <value>
+                <fullName>1750</fullName>
+                <default>false</default>
+                <label>1750</label>
+            </value>
+            <value>
+                <fullName>1800</fullName>
+                <default>false</default>
+                <label>1800</label>
+            </value>
+            <value>
+                <fullName>2000</fullName>
+                <default>false</default>
+                <label>2000</label>
+            </value>
+            <value>
+                <fullName>2000SM</fullName>
+                <default>false</default>
+                <label>2000SM</label>
+            </value>
+            <value>
+                <fullName>2000 WATT</fullName>
+                <default>false</default>
+                <label>2000 WATT</label>
+            </value>
+            <value>
+                <fullName>20CF</fullName>
+                <default>false</default>
+                <label>20CF</label>
+            </value>
+            <value>
+                <fullName>20CF LVP</fullName>
+                <default>false</default>
+                <label>20CF LVP</label>
+            </value>
+            <value>
+                <fullName>2200</fullName>
+                <default>false</default>
+                <label>2200</label>
+            </value>
+            <value>
+                <fullName>2500</fullName>
+                <default>false</default>
+                <label>2500</label>
+            </value>
+            <value>
+                <fullName>2512</fullName>
+                <default>false</default>
+                <label>2512</label>
+            </value>
+            <value>
+                <fullName>2512HV</fullName>
+                <default>false</default>
+                <label>2512HV</label>
+            </value>
+            <value>
+                <fullName>25SRP</fullName>
+                <default>false</default>
+                <label>25SRP</label>
+            </value>
+            <value>
+                <fullName>2600</fullName>
+                <default>false</default>
+                <label>2600</label>
+            </value>
+            <value>
+                <fullName>2700</fullName>
+                <default>false</default>
+                <label>2700</label>
+            </value>
+            <value>
+                <fullName>2800</fullName>
+                <default>false</default>
+                <label>2800</label>
+            </value>
+            <value>
+                <fullName>3000</fullName>
+                <default>false</default>
+                <label>3000</label>
+            </value>
+            <value>
+                <fullName>3000/2</fullName>
+                <default>false</default>
+                <label>3000/2</label>
+            </value>
+            <value>
+                <fullName>3000RF</fullName>
+                <default>false</default>
+                <label>3000RF</label>
+            </value>
+            <value>
+                <fullName>3000 WATT</fullName>
+                <default>false</default>
+                <label>3000 WATT</label>
+            </value>
+            <value>
+                <fullName>3008S</fullName>
+                <default>false</default>
+                <label>3008S</label>
+            </value>
+            <value>
+                <fullName>3015HC</fullName>
+                <default>false</default>
+                <label>3015HC</label>
+            </value>
+            <value>
+                <fullName>3015HV</fullName>
+                <default>false</default>
+                <label>3015HV</label>
+            </value>
+            <value>
+                <fullName>3015 LVP</fullName>
+                <default>false</default>
+                <label>3015 LVP</label>
+            </value>
+            <value>
+                <fullName>3015LVPlus</fullName>
+                <default>false</default>
+                <label>3015LVPlus</label>
+            </value>
+            <value>
+                <fullName>3015LXP</fullName>
+                <default>false</default>
+                <label>3015LXP</label>
+            </value>
+            <value>
+                <fullName>3016C</fullName>
+                <default>false</default>
+                <label>3016C</label>
+            </value>
+            <value>
+                <fullName>3016F2</fullName>
+                <default>false</default>
+                <label>3016F2</label>
+            </value>
+            <value>
+                <fullName>3016F3</fullName>
+                <default>false</default>
+                <label>3016F3</label>
+            </value>
+            <value>
+                <fullName>3016S</fullName>
+                <default>false</default>
+                <label>3016S</label>
+            </value>
+            <value>
+                <fullName>3020D</fullName>
+                <default>false</default>
+                <label>3020D</label>
+            </value>
+            <value>
+                <fullName>3200</fullName>
+                <default>false</default>
+                <label>3200</label>
+            </value>
+            <value>
+                <fullName>3300</fullName>
+                <default>false</default>
+                <label>3300</label>
+            </value>
+            <value>
+                <fullName>3500</fullName>
+                <default>false</default>
+                <label>3500</label>
+            </value>
+            <value>
+                <fullName>3500 WATT</fullName>
+                <default>false</default>
+                <label>3500 WATT</label>
+            </value>
+            <value>
+                <fullName>35CFA</fullName>
+                <default>false</default>
+                <label>35CFA</label>
+            </value>
+            <value>
+                <fullName>3600 WATT</fullName>
+                <default>false</default>
+                <label>3600 WATT</label>
+            </value>
+            <value>
+                <fullName>36EXT</fullName>
+                <default>false</default>
+                <label>36EXT</label>
+            </value>
+            <value>
+                <fullName>3718LVPlus</fullName>
+                <default>false</default>
+                <label>3718LVPlus</label>
+            </value>
+            <value>
+                <fullName>4000</fullName>
+                <default>false</default>
+                <label>4000</label>
+            </value>
+            <value>
+                <fullName>4000/2</fullName>
+                <default>false</default>
+                <label>4000/2</label>
+            </value>
+            <value>
+                <fullName>4000D</fullName>
+                <default>false</default>
+                <label>4000D</label>
+            </value>
+            <value>
+                <fullName>4000E</fullName>
+                <default>false</default>
+                <label>4000E</label>
+            </value>
+            <value>
+                <fullName>4000 WATT</fullName>
+                <default>false</default>
+                <label>4000 WATT</label>
+            </value>
+            <value>
+                <fullName>4030D</fullName>
+                <default>false</default>
+                <label>4030D</label>
+            </value>
+            <value>
+                <fullName>40 CFX</fullName>
+                <default>false</default>
+                <label>40 CFX</label>
+            </value>
+            <value>
+                <fullName>4400</fullName>
+                <default>false</default>
+                <label>4400</label>
+            </value>
+            <value>
+                <fullName>4500</fullName>
+                <default>false</default>
+                <label>4500</label>
+            </value>
+            <value>
+                <fullName>48-1</fullName>
+                <default>false</default>
+                <label>48-1</label>
+            </value>
+            <value>
+                <fullName>48-2</fullName>
+                <default>false</default>
+                <label>48-2</label>
+            </value>
+            <value>
+                <fullName>5000</fullName>
+                <default>false</default>
+                <label>5000</label>
+            </value>
+            <value>
+                <fullName>5036</fullName>
+                <default>false</default>
+                <label>5036</label>
+            </value>
+            <value>
+                <fullName>5036D</fullName>
+                <default>false</default>
+                <label>5036D</label>
+            </value>
+            <value>
+                <fullName>5036 LVP</fullName>
+                <default>false</default>
+                <label>5036 LVP</label>
+            </value>
+            <value>
+                <fullName>5036 LXP</fullName>
+                <default>false</default>
+                <label>5036 LXP</label>
+            </value>
+            <value>
+                <fullName>5036 LZP</fullName>
+                <default>false</default>
+                <label>5036 LZP</label>
+            </value>
+            <value>
+                <fullName>5040 LVP</fullName>
+                <default>false</default>
+                <label>5040 LVP</label>
+            </value>
+            <value>
+                <fullName>5042</fullName>
+                <default>false</default>
+                <label>5042</label>
+            </value>
+            <value>
+                <fullName>5200</fullName>
+                <default>false</default>
+                <label>5200</label>
+            </value>
+            <value>
+                <fullName>6000</fullName>
+                <default>false</default>
+                <label>6000</label>
+            </value>
+            <value>
+                <fullName>6000RF</fullName>
+                <default>false</default>
+                <label>6000RF</label>
+            </value>
+            <value>
+                <fullName>7000</fullName>
+                <default>false</default>
+                <label>7000</label>
+            </value>
+            <value>
+                <fullName>840HF</fullName>
+                <default>false</default>
+                <label>840HF</label>
+            </value>
+            <value>
+                <fullName>860HF</fullName>
+                <default>false</default>
+                <label>860HF</label>
+            </value>
+            <value>
+                <fullName>880HF</fullName>
+                <default>false</default>
+                <label>880HF</label>
+            </value>
+            <value>
+                <fullName>AF2000E-LU2.5</fullName>
+                <default>false</default>
+                <label>AF2000E-LU2.5</label>
+            </value>
+            <value>
+                <fullName>AF4500E</fullName>
+                <default>false</default>
+                <label>AF4500E</label>
+            </value>
+            <value>
+                <fullName>BYSTRONIC</fullName>
+                <default>false</default>
+                <label>BYSTRONIC</label>
+            </value>
+            <value>
+                <fullName>C1000</fullName>
+                <default>false</default>
+                <label>C1000</label>
+            </value>
+            <value>
+                <fullName>C1000E</fullName>
+                <default>false</default>
+                <label>C1000E</label>
+            </value>
+            <value>
+                <fullName>C1500</fullName>
+                <default>false</default>
+                <label>C1500</label>
+            </value>
+            <value>
+                <fullName>C1500B</fullName>
+                <default>false</default>
+                <label>C1500B</label>
+            </value>
+            <value>
+                <fullName>C2000</fullName>
+                <default>false</default>
+                <label>C2000</label>
+            </value>
+            <value>
+                <fullName>C2000B</fullName>
+                <default>false</default>
+                <label>C2000B</label>
+            </value>
+            <value>
+                <fullName>C2000C</fullName>
+                <default>false</default>
+                <label>C2000C</label>
+            </value>
+            <value>
+                <fullName>C2000D</fullName>
+                <default>false</default>
+                <label>C2000D</label>
+            </value>
+            <value>
+                <fullName>C2000E</fullName>
+                <default>false</default>
+                <label>C2000E</label>
+            </value>
+            <value>
+                <fullName>C3000</fullName>
+                <default>false</default>
+                <label>C3000</label>
+            </value>
+            <value>
+                <fullName>C3000B</fullName>
+                <default>false</default>
+                <label>C3000B</label>
+            </value>
+            <value>
+                <fullName>C3000C</fullName>
+                <default>false</default>
+                <label>C3000C</label>
+            </value>
+            <value>
+                <fullName>C3000D</fullName>
+                <default>false</default>
+                <label>C3000D</label>
+            </value>
+            <value>
+                <fullName>C3000D &quot;A VER&quot;</fullName>
+                <default>false</default>
+                <label>C3000D &quot;A VER&quot;</label>
+            </value>
+            <value>
+                <fullName>C3000D &quot;US VER&quot;</fullName>
+                <default>false</default>
+                <label>C3000D &quot;US VER&quot;</label>
+            </value>
+            <value>
+                <fullName>C4000</fullName>
+                <default>false</default>
+                <label>C4000</label>
+            </value>
+            <value>
+                <fullName>C4000A</fullName>
+                <default>false</default>
+                <label>C4000A</label>
+            </value>
+            <value>
+                <fullName>C4000E &quot;A VER&quot;</fullName>
+                <default>false</default>
+                <label>C4000E &quot;A VER&quot;</label>
+            </value>
+            <value>
+                <fullName>C4000IB</fullName>
+                <default>false</default>
+                <label>C4000IB</label>
+            </value>
+            <value>
+                <fullName>C5000</fullName>
+                <default>false</default>
+                <label>C5000</label>
+            </value>
+            <value>
+                <fullName>C5000-E</fullName>
+                <default>false</default>
+                <label>C5000-E</label>
+            </value>
+            <value>
+                <fullName>C6000</fullName>
+                <default>false</default>
+                <label>C6000</label>
+            </value>
+            <value>
+                <fullName>C6000A</fullName>
+                <default>false</default>
+                <label>C6000A</label>
+            </value>
+            <value>
+                <fullName>C6000B</fullName>
+                <default>false</default>
+                <label>C6000B</label>
+            </value>
+            <value>
+                <fullName>C6000E</fullName>
+                <default>false</default>
+                <label>C6000E</label>
+            </value>
+            <value>
+                <fullName>DC010</fullName>
+                <default>false</default>
+                <label>DC010</label>
+            </value>
+            <value>
+                <fullName>DC015</fullName>
+                <default>false</default>
+                <label>DC015</label>
+            </value>
+            <value>
+                <fullName>DC020</fullName>
+                <default>false</default>
+                <label>DC020</label>
+            </value>
+            <value>
+                <fullName>DC025</fullName>
+                <default>false</default>
+                <label>DC025</label>
+            </value>
+            <value>
+                <fullName>DC030</fullName>
+                <default>false</default>
+                <label>DC030</label>
+            </value>
+            <value>
+                <fullName>DC035</fullName>
+                <default>false</default>
+                <label>DC035</label>
+            </value>
+            <value>
+                <fullName>DC040</fullName>
+                <default>false</default>
+                <label>DC040</label>
+            </value>
+            <value>
+                <fullName>DC045</fullName>
+                <default>false</default>
+                <label>DC045</label>
+            </value>
+            <value>
+                <fullName>DC050</fullName>
+                <default>false</default>
+                <label>DC050</label>
+            </value>
+            <value>
+                <fullName>DC060</fullName>
+                <default>false</default>
+                <label>DC060</label>
+            </value>
+            <value>
+                <fullName>EAGLE</fullName>
+                <default>false</default>
+                <label>EAGLE</label>
+            </value>
+            <value>
+                <fullName>EPILOG</fullName>
+                <default>false</default>
+                <label>EPILOG</label>
+            </value>
+            <value>
+                <fullName>EVOLUTION</fullName>
+                <default>false</default>
+                <label>EVOLUTION</label>
+            </value>
+            <value>
+                <fullName>FA040</fullName>
+                <default>false</default>
+                <label>FA040</label>
+            </value>
+            <value>
+                <fullName>FANUC</fullName>
+                <default>false</default>
+                <label>FANUC</label>
+            </value>
+            <value>
+                <fullName>FH SERIES</fullName>
+                <default>false</default>
+                <label>FH SERIES</label>
+            </value>
+            <value>
+                <fullName>FIRESTAR F</fullName>
+                <default>false</default>
+                <label>FIRESTAR F</label>
+            </value>
+            <value>
+                <fullName>FIRESTAR T</fullName>
+                <default>false</default>
+                <label>FIRESTAR T</label>
+            </value>
+            <value>
+                <fullName>FIRESTAR V</fullName>
+                <default>false</default>
+                <label>FIRESTAR V</label>
+            </value>
+            <value>
+                <fullName>FLD4872</fullName>
+                <default>false</default>
+                <label>FLD4872</label>
+            </value>
+            <value>
+                <fullName>HAN KWANG</fullName>
+                <default>false</default>
+                <label>HAN KWANG</label>
+            </value>
+            <value>
+                <fullName>HELIX24</fullName>
+                <default>false</default>
+                <label>HELIX24</label>
+            </value>
+            <value>
+                <fullName>lASER MECH</fullName>
+                <default>false</default>
+                <label>lASER MECH</label>
+            </value>
+            <value>
+                <fullName>LOW POWER</fullName>
+                <default>false</default>
+                <label>LOW POWER</label>
+            </value>
+            <value>
+                <fullName>MARKEM</fullName>
+                <default>false</default>
+                <label>MARKEM</label>
+            </value>
+            <value>
+                <fullName>MAZAK</fullName>
+                <default>false</default>
+                <label>MAZAK</label>
+            </value>
+            <value>
+                <fullName>MINI18</fullName>
+                <default>false</default>
+                <label>MINI18</label>
+            </value>
+            <value>
+                <fullName>MINI24</fullName>
+                <default>false</default>
+                <label>MINI24</label>
+            </value>
+            <value>
+                <fullName>MITSUBISHI</fullName>
+                <default>false</default>
+                <label>MITSUBISHI</label>
+            </value>
+            <value>
+                <fullName>NO LASER</fullName>
+                <default>false</default>
+                <label>NO LASER</label>
+            </value>
+            <value>
+                <fullName>NULL</fullName>
+                <default>false</default>
+                <label>NULL</label>
+            </value>
+            <value>
+                <fullName>OTHER</fullName>
+                <default>false</default>
+                <label>OTHER</label>
+            </value>
+            <value>
+                <fullName>PANASONIC</fullName>
+                <default>false</default>
+                <label>PANASONIC</label>
+            </value>
+            <value>
+                <fullName>PRC</fullName>
+                <default>false</default>
+                <label>PRC</label>
+            </value>
+            <value>
+                <fullName>RETRO FIT</fullName>
+                <default>false</default>
+                <label>RETRO FIT</label>
+            </value>
+            <value>
+                <fullName>RF040</fullName>
+                <default>false</default>
+                <label>RF040</label>
+            </value>
+            <value>
+                <fullName>RF050</fullName>
+                <default>false</default>
+                <label>RF050</label>
+            </value>
+            <value>
+                <fullName>ROFIN SINAR</fullName>
+                <default>false</default>
+                <label>ROFIN SINAR</label>
+            </value>
+            <value>
+                <fullName>RS610</fullName>
+                <default>false</default>
+                <label>RS610</label>
+            </value>
+            <value>
+                <fullName>RS700SM</fullName>
+                <default>false</default>
+                <label>RS700SM</label>
+            </value>
+            <value>
+                <fullName>RS830HF</fullName>
+                <default>false</default>
+                <label>RS830HF</label>
+            </value>
+            <value>
+                <fullName>RS840HF</fullName>
+                <default>false</default>
+                <label>RS840HF</label>
+            </value>
+            <value>
+                <fullName>RS850HF</fullName>
+                <default>false</default>
+                <label>RS850HF</label>
+            </value>
+            <value>
+                <fullName>RS860HF</fullName>
+                <default>false</default>
+                <label>RS860HF</label>
+            </value>
+            <value>
+                <fullName>RS880HF</fullName>
+                <default>false</default>
+                <label>RS880HF</label>
+            </value>
+            <value>
+                <fullName>SF810</fullName>
+                <default>false</default>
+                <label>SF810</label>
+            </value>
+            <value>
+                <fullName>SF820</fullName>
+                <default>false</default>
+                <label>SF820</label>
+            </value>
+            <value>
+                <fullName>SF825</fullName>
+                <default>false</default>
+                <label>SF825</label>
+            </value>
+            <value>
+                <fullName>SLAB</fullName>
+                <default>false</default>
+                <label>SLAB</label>
+            </value>
+            <value>
+                <fullName>SMARTLASE 110</fullName>
+                <default>false</default>
+                <label>SMARTLASE 110</label>
+            </value>
+            <value>
+                <fullName>SMARTLASE 1105</fullName>
+                <default>false</default>
+                <label>SMARTLASE 1105</label>
+            </value>
+            <value>
+                <fullName>SMARTLASE130</fullName>
+                <default>false</default>
+                <label>SMARTLASE130</label>
+            </value>
+            <value>
+                <fullName>SMARTLASE 130S</fullName>
+                <default>false</default>
+                <label>SMARTLASE 130S</label>
+            </value>
+            <value>
+                <fullName>SMARTTRANSE</fullName>
+                <default>false</default>
+                <label>SMARTTRANSE</label>
+            </value>
+            <value>
+                <fullName>SP971</fullName>
+                <default>false</default>
+                <label>SP971</label>
+            </value>
+            <value>
+                <fullName>SP975</fullName>
+                <default>false</default>
+                <label>SP975</label>
+            </value>
+            <value>
+                <fullName>SYNRAD</fullName>
+                <default>false</default>
+                <label>SYNRAD</label>
+            </value>
+            <value>
+                <fullName>TR017</fullName>
+                <default>false</default>
+                <label>TR017</label>
+            </value>
+            <value>
+                <fullName>TR020</fullName>
+                <default>false</default>
+                <label>TR020</label>
+            </value>
+            <value>
+                <fullName>TR025</fullName>
+                <default>false</default>
+                <label>TR025</label>
+            </value>
+            <value>
+                <fullName>TR030</fullName>
+                <default>false</default>
+                <label>TR030</label>
+            </value>
+            <value>
+                <fullName>TR040</fullName>
+                <default>false</default>
+                <label>TR040</label>
+            </value>
+            <value>
+                <fullName>TR050</fullName>
+                <default>false</default>
+                <label>TR050</label>
+            </value>
+            <value>
+                <fullName>TR060</fullName>
+                <default>false</default>
+                <label>TR060</label>
+            </value>
+            <value>
+                <fullName>TR100</fullName>
+                <default>false</default>
+                <label>TR100</label>
+            </value>
+            <value>
+                <fullName>TRIGONE</fullName>
+                <default>false</default>
+                <label>TRIGONE</label>
+            </value>
+            <value>
+                <fullName>TRUMPF</fullName>
+                <default>false</default>
+                <label>TRUMPF</label>
+            </value>
+            <value>
+                <fullName>TURBO X-48</fullName>
+                <default>false</default>
+                <label>TURBO X-48</label>
+            </value>
+            <value>
+                <fullName>TXT48</fullName>
+                <default>false</default>
+                <label>TXT48</label>
+            </value>
+            <value>
+                <fullName>TYPE 3</fullName>
+                <default>false</default>
+                <label>TYPE 3</label>
+            </value>
+            <value>
+                <fullName>TYPE 3 .5 KW</fullName>
+                <default>false</default>
+                <label>TYPE 3 .5 KW</label>
+            </value>
+            <value>
+                <fullName>TYPE 3 1.0 KW</fullName>
+                <default>false</default>
+                <label>TYPE 3 1.0 KW</label>
+            </value>
+            <value>
+                <fullName>TYPE 4</fullName>
+                <default>false</default>
+                <label>TYPE 4</label>
+            </value>
+            <value>
+                <fullName>TYPE 4 .5 KW</fullName>
+                <default>false</default>
+                <label>TYPE 4 .5 KW</label>
+            </value>
+            <value>
+                <fullName>TYPE 4 1.0 KW</fullName>
+                <default>false</default>
+                <label>TYPE 4 1.0 KW</label>
+            </value>
+            <value>
+                <fullName>TYPE 4 1.5 KW</fullName>
+                <default>false</default>
+                <label>TYPE 4 1.5 KW</label>
+            </value>
+            <value>
+                <fullName>TYPE 5</fullName>
+                <default>false</default>
+                <label>TYPE 5</label>
+            </value>
+            <value>
+                <fullName>TYPE 5 1.5 KW</fullName>
+                <default>false</default>
+                <label>TYPE 5 1.5 KW</label>
+            </value>
+            <value>
+                <fullName>TYPE 5 2.0 KW</fullName>
+                <default>false</default>
+                <label>TYPE 5 2.0 KW</label>
+            </value>
+            <value>
+                <fullName>TYPE 7</fullName>
+                <default>false</default>
+                <label>TYPE 7</label>
+            </value>
+            <value>
+                <fullName>TYPE 7 1.0 KW</fullName>
+                <default>false</default>
+                <label>TYPE 7 1.0 KW</label>
+            </value>
+            <value>
+                <fullName>TYPE 7 1.5 KW</fullName>
+                <default>false</default>
+                <label>TYPE 7 1.5 KW</label>
+            </value>
+            <value>
+                <fullName>TYPE 7 2.0 KW</fullName>
+                <default>false</default>
+                <label>TYPE 7 2.0 KW</label>
+            </value>
+            <value>
+                <fullName>Type 8</fullName>
+                <default>false</default>
+                <label>Type 8</label>
+            </value>
+            <value>
+                <fullName>UNKNOWN</fullName>
+                <default>false</default>
+                <label>UNKNOWN</label>
+            </value>
+            <value>
+                <fullName>WEGMAN BAASEL</fullName>
+                <default>false</default>
+                <label>WEGMAN BAASEL</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>MAZAK</controllingFieldValue>
+            <controllingFieldValue>PRC</controllingFieldValue>
+            <valueName>2500</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MAZAK</controllingFieldValue>
+            <valueName>MAZAK</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MAZAK</controllingFieldValue>
+            <valueName>TURBO X-48</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MAZAK</controllingFieldValue>
+            <valueName>TXT48</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MITSUBISHI</controllingFieldValue>
+            <valueName>1212HV</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MITSUBISHI</controllingFieldValue>
+            <valueName>1508S</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MITSUBISHI</controllingFieldValue>
+            <valueName>15SRP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MITSUBISHI</controllingFieldValue>
+            <valueName>2000 WATT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MITSUBISHI</controllingFieldValue>
+            <valueName>20CF</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MITSUBISHI</controllingFieldValue>
+            <valueName>20CF LVP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MITSUBISHI</controllingFieldValue>
+            <valueName>2512</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MITSUBISHI</controllingFieldValue>
+            <valueName>2512HV</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MITSUBISHI</controllingFieldValue>
+            <valueName>25SRP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MITSUBISHI</controllingFieldValue>
+            <valueName>3000 WATT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MITSUBISHI</controllingFieldValue>
+            <valueName>3008S</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MITSUBISHI</controllingFieldValue>
+            <valueName>3015HC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MITSUBISHI</controllingFieldValue>
+            <valueName>3015HV</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MITSUBISHI</controllingFieldValue>
+            <valueName>3015 LVP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MITSUBISHI</controllingFieldValue>
+            <valueName>3015LVPlus</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MITSUBISHI</controllingFieldValue>
+            <valueName>3015LXP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MITSUBISHI</controllingFieldValue>
+            <valueName>3016C</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MITSUBISHI</controllingFieldValue>
+            <valueName>3016F2</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MITSUBISHI</controllingFieldValue>
+            <valueName>3016F3</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MITSUBISHI</controllingFieldValue>
+            <valueName>3016S</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MITSUBISHI</controllingFieldValue>
+            <valueName>3020D</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MITSUBISHI</controllingFieldValue>
+            <controllingFieldValue>TRUMPF</controllingFieldValue>
+            <valueName>3200</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MITSUBISHI</controllingFieldValue>
+            <valueName>3500 WATT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MITSUBISHI</controllingFieldValue>
+            <valueName>3718LVPlus</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MITSUBISHI</controllingFieldValue>
+            <controllingFieldValue>FANUC</controllingFieldValue>
+            <valueName>4000D</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MITSUBISHI</controllingFieldValue>
+            <controllingFieldValue>FANUC</controllingFieldValue>
+            <valueName>4000E</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MITSUBISHI</controllingFieldValue>
+            <valueName>4000 WATT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MITSUBISHI</controllingFieldValue>
+            <valueName>4030D</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MITSUBISHI</controllingFieldValue>
+            <valueName>40 CFX</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MITSUBISHI</controllingFieldValue>
+            <valueName>4400</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MITSUBISHI</controllingFieldValue>
+            <valueName>5036</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MITSUBISHI</controllingFieldValue>
+            <valueName>5036D</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MITSUBISHI</controllingFieldValue>
+            <valueName>5036 LVP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MITSUBISHI</controllingFieldValue>
+            <valueName>5036 LXP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MITSUBISHI</controllingFieldValue>
+            <valueName>5036 LZP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MITSUBISHI</controllingFieldValue>
+            <valueName>5040 LVP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MITSUBISHI</controllingFieldValue>
+            <valueName>5042</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MITSUBISHI</controllingFieldValue>
+            <valueName>MITSUBISHI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NO LASER</controllingFieldValue>
+            <valueName>NO LASER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PANASONIC</controllingFieldValue>
+            <valueName>PANASONIC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PANASONIC</controllingFieldValue>
+            <valueName>TYPE 3</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PANASONIC</controllingFieldValue>
+            <valueName>TYPE 3 .5 KW</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PANASONIC</controllingFieldValue>
+            <valueName>TYPE 3 1.0 KW</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PANASONIC</controllingFieldValue>
+            <valueName>TYPE 4</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PANASONIC</controllingFieldValue>
+            <valueName>TYPE 4 .5 KW</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PANASONIC</controllingFieldValue>
+            <valueName>TYPE 4 1.0 KW</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PANASONIC</controllingFieldValue>
+            <valueName>TYPE 4 1.5 KW</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PANASONIC</controllingFieldValue>
+            <valueName>TYPE 5</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PANASONIC</controllingFieldValue>
+            <valueName>TYPE 5 1.5 KW</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PANASONIC</controllingFieldValue>
+            <valueName>TYPE 5 2.0 KW</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PANASONIC</controllingFieldValue>
+            <valueName>TYPE 7</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PANASONIC</controllingFieldValue>
+            <valueName>TYPE 7 1.0 KW</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PANASONIC</controllingFieldValue>
+            <valueName>TYPE 7 1.5 KW</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PANASONIC</controllingFieldValue>
+            <valueName>TYPE 7 2.0 KW</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PANASONIC</controllingFieldValue>
+            <valueName>Type 8</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PRC</controllingFieldValue>
+            <valueName>1000</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PRC</controllingFieldValue>
+            <valueName>1500</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PRC</controllingFieldValue>
+            <valueName>1500/2</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PRC</controllingFieldValue>
+            <controllingFieldValue>TRUMPF</controllingFieldValue>
+            <valueName>2000</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PRC</controllingFieldValue>
+            <controllingFieldValue>BYSTRONIC</controllingFieldValue>
+            <valueName>3000</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PRC</controllingFieldValue>
+            <valueName>3000/2</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PRC</controllingFieldValue>
+            <valueName>3300</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PRC</controllingFieldValue>
+            <controllingFieldValue>TRUMPF</controllingFieldValue>
+            <controllingFieldValue>BYSTRONIC</controllingFieldValue>
+            <valueName>4000</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PRC</controllingFieldValue>
+            <valueName>4000/2</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PRC</controllingFieldValue>
+            <valueName>4500</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PRC</controllingFieldValue>
+            <controllingFieldValue>TRUMPF</controllingFieldValue>
+            <valueName>5000</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PRC</controllingFieldValue>
+            <valueName>6000</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PRC</controllingFieldValue>
+            <valueName>7000</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PRC</controllingFieldValue>
+            <valueName>FH SERIES</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PRC</controllingFieldValue>
+            <valueName>PRC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ROFIN</controllingFieldValue>
+            <controllingFieldValue>ROFIN SINAR</controllingFieldValue>
+            <valueName>DC035</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ROFIN SINAR</controllingFieldValue>
+            <valueName>1200SM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ROFIN SINAR</controllingFieldValue>
+            <valueName>1350SM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ROFIN SINAR</controllingFieldValue>
+            <valueName>1700SM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ROFIN SINAR</controllingFieldValue>
+            <valueName>1750</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ROFIN SINAR</controllingFieldValue>
+            <valueName>2000SM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ROFIN SINAR</controllingFieldValue>
+            <valueName>3000RF</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ROFIN SINAR</controllingFieldValue>
+            <valueName>6000RF</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ROFIN SINAR</controllingFieldValue>
+            <valueName>840HF</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ROFIN SINAR</controllingFieldValue>
+            <valueName>860HF</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ROFIN SINAR</controllingFieldValue>
+            <valueName>880HF</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ROFIN SINAR</controllingFieldValue>
+            <valueName>DC010</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ROFIN SINAR</controllingFieldValue>
+            <valueName>DC015</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ROFIN SINAR</controllingFieldValue>
+            <valueName>DC020</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ROFIN SINAR</controllingFieldValue>
+            <valueName>DC025</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ROFIN SINAR</controllingFieldValue>
+            <valueName>DC030</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ROFIN SINAR</controllingFieldValue>
+            <valueName>DC040</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ROFIN SINAR</controllingFieldValue>
+            <valueName>DC045</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ROFIN SINAR</controllingFieldValue>
+            <valueName>DC050</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ROFIN SINAR</controllingFieldValue>
+            <valueName>DC060</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ROFIN SINAR</controllingFieldValue>
+            <valueName>FA040</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ROFIN SINAR</controllingFieldValue>
+            <valueName>RETRO FIT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ROFIN SINAR</controllingFieldValue>
+            <valueName>RF040</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ROFIN SINAR</controllingFieldValue>
+            <valueName>RF050</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ROFIN SINAR</controllingFieldValue>
+            <valueName>ROFIN SINAR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ROFIN SINAR</controllingFieldValue>
+            <valueName>RS610</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ROFIN SINAR</controllingFieldValue>
+            <valueName>RS700SM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ROFIN SINAR</controllingFieldValue>
+            <valueName>RS830HF</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ROFIN SINAR</controllingFieldValue>
+            <valueName>RS840HF</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ROFIN SINAR</controllingFieldValue>
+            <valueName>RS850HF</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ROFIN SINAR</controllingFieldValue>
+            <valueName>RS860HF</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ROFIN SINAR</controllingFieldValue>
+            <valueName>RS880HF</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ROFIN SINAR</controllingFieldValue>
+            <valueName>SF810</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ROFIN SINAR</controllingFieldValue>
+            <valueName>SF820</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ROFIN SINAR</controllingFieldValue>
+            <valueName>SF825</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ROFIN SINAR</controllingFieldValue>
+            <valueName>SLAB</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ROFIN SINAR</controllingFieldValue>
+            <valueName>TR017</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ROFIN SINAR</controllingFieldValue>
+            <valueName>TR020</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ROFIN SINAR</controllingFieldValue>
+            <valueName>TR025</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ROFIN SINAR</controllingFieldValue>
+            <valueName>TR030</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ROFIN SINAR</controllingFieldValue>
+            <valueName>TR040</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ROFIN SINAR</controllingFieldValue>
+            <valueName>TR050</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ROFIN SINAR</controllingFieldValue>
+            <valueName>TR060</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ROFIN SINAR</controllingFieldValue>
+            <valueName>TR100</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EPILOG</controllingFieldValue>
+            <valueName>36EXT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EPILOG</controllingFieldValue>
+            <valueName>EPILOG</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EPILOG</controllingFieldValue>
+            <valueName>HELIX24</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EPILOG</controllingFieldValue>
+            <valueName>MINI18</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EPILOG</controllingFieldValue>
+            <valueName>MINI24</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FANUC</controllingFieldValue>
+            <valueName>AF2000E-LU2.5</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FANUC</controllingFieldValue>
+            <valueName>AF4500E</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FANUC</controllingFieldValue>
+            <valueName>C1000</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FANUC</controllingFieldValue>
+            <valueName>C1000E</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FANUC</controllingFieldValue>
+            <valueName>C1500</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FANUC</controllingFieldValue>
+            <valueName>C1500B</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FANUC</controllingFieldValue>
+            <valueName>C2000</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FANUC</controllingFieldValue>
+            <valueName>C2000B</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FANUC</controllingFieldValue>
+            <valueName>C2000C</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FANUC</controllingFieldValue>
+            <valueName>C2000D</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FANUC</controllingFieldValue>
+            <valueName>C2000E</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FANUC</controllingFieldValue>
+            <valueName>C3000</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FANUC</controllingFieldValue>
+            <valueName>C3000B</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FANUC</controllingFieldValue>
+            <valueName>C3000C</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FANUC</controllingFieldValue>
+            <valueName>C3000D</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FANUC</controllingFieldValue>
+            <valueName>C3000D &quot;A VER&quot;</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FANUC</controllingFieldValue>
+            <valueName>C3000D &quot;US VER&quot;</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FANUC</controllingFieldValue>
+            <valueName>C4000</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FANUC</controllingFieldValue>
+            <valueName>C4000A</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FANUC</controllingFieldValue>
+            <valueName>C4000E &quot;A VER&quot;</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FANUC</controllingFieldValue>
+            <valueName>C4000IB</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FANUC</controllingFieldValue>
+            <valueName>C5000</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FANUC</controllingFieldValue>
+            <controllingFieldValue>GE FANUC</controllingFieldValue>
+            <valueName>C5000-E</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FANUC</controllingFieldValue>
+            <valueName>C6000</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FANUC</controllingFieldValue>
+            <valueName>C6000A</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FANUC</controllingFieldValue>
+            <valueName>C6000B</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FANUC</controllingFieldValue>
+            <valueName>C6000E</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SYNRAD</controllingFieldValue>
+            <valueName>48-1</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SYNRAD</controllingFieldValue>
+            <valueName>48-2</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SYNRAD</controllingFieldValue>
+            <valueName>EVOLUTION</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SYNRAD</controllingFieldValue>
+            <valueName>FIRESTAR F</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SYNRAD</controllingFieldValue>
+            <valueName>FIRESTAR T</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SYNRAD</controllingFieldValue>
+            <valueName>FIRESTAR V</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SYNRAD</controllingFieldValue>
+            <valueName>SYNRAD</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRUMPF</controllingFieldValue>
+            <valueName>2600</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRUMPF</controllingFieldValue>
+            <valueName>2700</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRUMPF</controllingFieldValue>
+            <valueName>TRUMPF</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>HAN KWANG</controllingFieldValue>
+            <valueName>HAN KWANG</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>WEGMAN BAASEL</controllingFieldValue>
+            <valueName>TRIGONE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>WEGMAN BAASEL</controllingFieldValue>
+            <valueName>WEGMAN BAASEL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LASER MECH</controllingFieldValue>
+            <valueName>lASER MECH</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BYSTRONIC</controllingFieldValue>
+            <valueName>1800</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BYSTRONIC</controllingFieldValue>
+            <valueName>2200</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BYSTRONIC</controllingFieldValue>
+            <valueName>2800</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BYSTRONIC</controllingFieldValue>
+            <valueName>3500</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BYSTRONIC</controllingFieldValue>
+            <valueName>5200</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BYSTRONIC</controllingFieldValue>
+            <valueName>BYSTRONIC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DATA TECH</controllingFieldValue>
+            <valueName>FLD4872</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LMI</controllingFieldValue>
+            <valueName>EAGLE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MARKEM</controllingFieldValue>
+            <valueName>MARKEM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MARKEM</controllingFieldValue>
+            <valueName>SMARTLASE 110</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MARKEM</controllingFieldValue>
+            <valueName>SMARTLASE 1105</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MARKEM</controllingFieldValue>
+            <valueName>SMARTLASE130</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MARKEM</controllingFieldValue>
+            <valueName>SMARTLASE 130S</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MARKEM</controllingFieldValue>
+            <valueName>SMARTTRANSE</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

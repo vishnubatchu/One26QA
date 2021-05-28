@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>false</active>
+    <allowRecall>false</allowRecall>
+    <allowedSubmitters>
+        <type>owner</type>
+    </allowedSubmitters>
+    <approvalPageFields>
+        <field>CaseNumber</field>
+        <field>Owner</field>
+        <field>Status</field>
+    </approvalPageFields>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>SVP_of_Sales__c</name>
+                <type>relatedUserField</type>
+            </approver>
+            <approver>
+                <name>CFO_User__c</name>
+                <type>relatedUserField</type>
+            </approver>
+            <approver>
+                <name>Data_n_W_BU_GM__c</name>
+                <type>relatedUserField</type>
+            </approver>
+            <whenMultipleApprovers>Unanimous</whenMultipleApprovers>
+        </assignedApprover>
+        <label>DN BU Approval Step</label>
+        <name>DN_BU_Approval_Step</name>
+    </approvalStep>
+    <enableMobileDeviceAccess>true</enableMobileDeviceAccess>
+    <entryCriteria>
+        <criteriaItems>
+            <field>Case.BU_3D_Sensing_Amount_Sum__c</field>
+            <operation>lessThan</operation>
+            <value>&quot;USD 100,000&quot;</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.BU_Data_Networking_Amount_Sum__c</field>
+            <operation>greaterThan</operation>
+            <value>&quot;USD 100,000&quot;</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.BU_Optical_Interconnect_Amount_Sum__c</field>
+            <operation>lessThan</operation>
+            <value>&quot;USD 100,000&quot;</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.BU_Wavelength_Management_Amount_Sum__c</field>
+            <operation>lessThan</operation>
+            <value>&quot;USD 100,000&quot;</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Billing_Type__c</field>
+            <operation>notEqual</operation>
+            <value>Zero Dollar Inbound and Outbound ( No Dollar Amount Involved)</value>
+        </criteriaItems>
+    </entryCriteria>
+    <finalApprovalActions>
+        <action>
+            <name>Update_Status_Pending_RMA_Admin_Review</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalApprovalActions>
+    <finalApprovalRecordLock>true</finalApprovalRecordLock>
+    <finalRejectionActions>
+        <action>
+            <name>Status_Rejected</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalRejectionActions>
+    <finalRejectionRecordLock>false</finalRejectionRecordLock>
+    <initialSubmissionActions>
+        <action>
+            <name>Email_Notification_for_new_RMA</name>
+            <type>Alert</type>
+        </action>
+        <action>
+            <name>Send_Email_For_Approval_to_Data_nt_BU</name>
+            <type>Alert</type>
+        </action>
+        <action>
+            <name>Send_Email_when_Record_is_Submitted_For_Approval</name>
+            <type>Alert</type>
+        </action>
+    </initialSubmissionActions>
+    <label>Data networking BU Approval</label>
+    <processOrder>2</processOrder>
+    <recordEditability>AdminOnly</recordEditability>
+    <showApprovalHistory>true</showApprovalHistory>
+</ApprovalProcess>

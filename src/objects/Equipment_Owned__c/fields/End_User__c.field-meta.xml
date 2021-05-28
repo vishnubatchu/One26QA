@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>End_User__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>End user of the laser</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Laser end user, if different than the Account it is entered on.</inlineHelpText>
+    <label>End User</label>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Equipment Owned (End User)</relationshipLabel>
+    <relationshipName>Equipment_Owned1</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

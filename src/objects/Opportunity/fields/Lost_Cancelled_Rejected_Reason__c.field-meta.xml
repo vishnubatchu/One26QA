@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lost_Cancelled_Rejected_Reason__c</fullName>
+    <externalId>false</externalId>
+    <label>Lost/Cancelled/Rejected Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Price Request Only</fullName>
+                <default>false</default>
+                <label>Price Request Only</label>
+            </value>
+            <value>
+                <fullName>Concept Viability Study Only</fullName>
+                <default>false</default>
+                <label>Concept Viability Study Only</label>
+            </value>
+            <value>
+                <fullName>Uncompetitive Pricing</fullName>
+                <default>false</default>
+                <label>Uncompetitive Pricing</label>
+            </value>
+            <value>
+                <fullName>Unable to meet Technical Specification</fullName>
+                <default>false</default>
+                <label>Unable to meet Technical Specification</label>
+            </value>
+            <value>
+                <fullName>Alternative Technology Chosen</fullName>
+                <default>false</default>
+                <label>Alternative Technology Chosen</label>
+            </value>
+            <value>
+                <fullName>Part not available (NPI)</fullName>
+                <default>false</default>
+                <label>Part not available (NPI)</label>
+            </value>
+            <value>
+                <fullName>Long Lead Time</fullName>
+                <default>false</default>
+                <label>Long Lead Time</label>
+            </value>
+            <value>
+                <fullName>Project Cancelled by Customer</fullName>
+                <default>false</default>
+                <label>Project Cancelled by Customer</label>
+            </value>
+            <value>
+                <fullName>Project lost by customer</fullName>
+                <default>false</default>
+                <label>Project lost by customer</label>
+            </value>
+            <value>
+                <fullName>Product Cancelled by II-VI</fullName>
+                <default>false</default>
+                <label>Product Cancelled by II-VI</label>
+            </value>
+            <value>
+                <fullName>No evidence of active support of customer ??</fullName>
+                <default>false</default>
+                <label>No evidence of active support of customer ??</label>
+            </value>
+            <value>
+                <fullName>Customer demand changed</fullName>
+                <default>false</default>
+                <label>Customer demand changed</label>
+            </value>
+            <value>
+                <fullName>Customer decided on using a different II-VI PN</fullName>
+                <default>false</default>
+                <label>Customer decided on using a different II-VI PN</label>
+            </value>
+            <value>
+                <fullName>Customer did not accept T&apos;s &amp; C&apos;s</fullName>
+                <default>false</default>
+                <label>Customer did not accept T&apos;s &amp; C&apos;s</label>
+            </value>
+            <value>
+                <fullName>Bought from OEM</fullName>
+                <default>false</default>
+                <label>Bought from OEM</label>
+            </value>
+            <value>
+                <fullName>Bought from competitor (Price)</fullName>
+                <default>false</default>
+                <label>Bought from competitor (Price)</label>
+            </value>
+            <value>
+                <fullName>Bought from competitor (technical)</fullName>
+                <default>false</default>
+                <label>Bought from competitor (technical)</label>
+            </value>
+            <value>
+                <fullName>Duplicate</fullName>
+                <default>false</default>
+                <label>Duplicate</label>
+            </value>
+            <value>
+                <fullName>Entry Error</fullName>
+                <default>false</default>
+                <label>Entry Error</label>
+            </value>
+            <value>
+                <fullName>Transferred to distributor</fullName>
+                <default>false</default>
+                <label>Transferred to distributor</label>
+            </value>
+            <value>
+                <fullName>Disti was Promoting Competitive solution (for Design Reg)</fullName>
+                <default>false</default>
+                <label>Disti was Promoting Competitive solution (for Design Reg)</label>
+            </value>
+            <value>
+                <fullName>Disti’s end Customer preferences change (for Design Reg)</fullName>
+                <default>false</default>
+                <label>Disti’s end Customer preferences change (for Design Reg)</label>
+            </value>
+            <value>
+                <fullName>Disti’s Lack of inventory and pipeline (for Design Reg)</fullName>
+                <default>false</default>
+                <label>Disti’s Lack of inventory and pipeline (for Design Reg)</label>
+            </value>
+            <value>
+                <fullName>New Region Assigned</fullName>
+                <default>false</default>
+                <label>New Region Assigned</label>
+            </value>
+            <value>
+                <fullName>Customer decided on using a different Finisar PN</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Customer decided on using a different Finisar PN</label>
+            </value>
+            <value>
+                <fullName>Disti&apos;s end Customer preferences change (for Design Reg)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Disti&apos;s end Customer preferences change (for Design Reg)</label>
+            </value>
+            <value>
+                <fullName>Factory Leadtimes, can&apos;t support volume/schedule</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Factory Leadtimes, can&apos;t support volume/schedule</label>
+            </value>
+            <value>
+                <fullName>Factory Leadtimes, can’t support volume/schedule</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Factory Leadtimes, can’t support volume/schedule</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Price</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Price</label>
+            </value>
+            <value>
+                <fullName>Product Cancelled by Finisar</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Product Cancelled by Finisar</label>
+            </value>
+            <value>
+                <fullName>Time to Market (like NPI schedule)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Time to Market (like NPI schedule)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

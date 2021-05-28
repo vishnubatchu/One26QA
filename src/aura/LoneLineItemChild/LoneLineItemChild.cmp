@@ -1,0 +1,273 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" access="global" controller="LineItemController">    
+    <aura:attribute name="LineItemInstance" type="Loaner_Line__c"/>
+    <aura:attribute name="recordtypename" type="String"/>
+    <aura:attribute name="userPermission" type ="Boolean" />
+    <aura:attribute name="headerLineStatus" type="String"/>
+     <aura:attribute name="productname" type="String"/>
+     <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="rowIndex" type="Integer" default="0"/>
+    <aura:registerEvent name="DeleteRowEvt" type="c:DeleteRowEvt"/> 
+    <aura:registerEvent name="AddRowEvt" type="c:AddNewRowEvt"/> 
+    <tr >
+       <td>
+             <aura:renderif isTrue ="{!or(or(v.headerLineStatus == 'Draft',v.headerLineStatus == 'Rejected'),v.headerLineStatus == 'Cancelled')}">
+            <a onclick="{!c.removeRow}">
+                <lightning:icon variant="error" iconName="utility:delete" class="slds-icon slds-icon_small" size="small" alternativeText="icon"/>
+                <span class="slds-assistive-text">Delete Icon</span>
+            </a>
+            </aura:renderif>
+        </td> 
+        
+        <aura:renderif isTrue ="{!or(or(v.recordtypename == 'Loaner Item',v.recordtypename == null),v.userPermission)}">
+            <td>
+            <ui:outputText class="slds-input;outputClass" value="{!v.LineItemInstance.Name}" />
+        </td>
+       <td>
+                 <!--<lightning:recordEditForm aura:id="recordEditForm" objectApiName="Loaner_Line__c" >
+     	        <lightning:messages />
+                <lightning:inputField  fieldName="Product__c"  value="{!v.LineItemInstance.Product__c}" /> 
+			 </lightning:recordEditForm> -->
+           <!--div style="margin-top:-25px;"-->
+               <!--c:LonerLineProductLookup lonerLineItem="{!v.LineItemInstance}" /-->
+               <c:ProductLookupCMP objectName='Product2' field_API_text='Name' field_API_val='Id' field_API_search='Name' field_API_search_marketingPN='Marketing_P_N__c' lookupIcon='standard:product' limit='100' selItem ='{!v.LineItemInstance.Product__r}' />
+            <!--/div-->
+            </td>
+            
+            <td>
+            <ui:outputText class="slds-input;outputClass"  value="{!v.LineItemInstance.Marketing_P_N__c}"/>
+        </td>
+		
+		<td>
+             <ui:inputNumber class="slds-input" value="{!v.LineItemInstance.Loaner_Qty__c}" required ="true"/>
+        </td>
+        <td>
+            <ui:inputNumber class="slds-input"  value="{!v.LineItemInstance.Loaner_Price_100_999_column_price__c}"/>
+        </td>
+        <td>
+             <ui:inputCurrency class="slds-input"  value="{!v.LineItemInstance.Production_Price_ASP__c}"/>
+        </td>
+        <td>
+            <ui:inputNumber class="slds-input"  value="{!v.LineItemInstance.Est_Annual_Qty__c}" required ="true"/>
+        </td>
+        <td>
+            <ui:inputText class="slds-input" value="{!v.LineItemInstance.SOM__c}" required ="true"/>
+        </td>
+         <td>
+            <ui:outputText class="slds-input;outputClass"  value="{!v.LineItemInstance.SAM__c}"/>
+        </td>
+        
+        <td>
+            <ui:outputText class="slds-input;outputClass"  value="{!v.LineItemInstance.Line_Total__c}"/>
+        </td>
+        <td>
+            <ui:outputText class="slds-input;outputClass"  value="{!v.LineItemInstance.Loaner_Total__c}"/>
+        </td>
+        <td>
+            <ui:outputText class="slds-input;outputClass" value="{!v.LineItemInstance.Line_Status__c}"/>
+        </td>
+        
+        
+        <td>
+            <ui:inputText class="slds-input"  value="{!v.LineItemInstance.Serial_Number__c}"/>
+        </td>
+        <td>
+            <ui:inputText class="slds-input"  value="{!v.LineItemInstance.CPN_Description__c}"/>
+        </td>
+        
+        
+        <td>
+            <ui:inputText class="slds-input"  value="{!v.LineItemInstance.User_Notes__c}"/>
+        </td>
+            <td>
+            <ui:inputText class="slds-input"  value="{!v.LineItemInstance.Part_Type__c}"/>
+        </td>
+        <td>
+            <ui:inputText class="slds-input"  value="{!v.LineItemInstance.Part_Type_Notes__c}"/>
+        </td>
+        <td>
+            <ui:inputText class="slds-input"  value="{!v.LineItemInstance.Admin_Status__c}"/>
+        </td>
+        <td>
+            <ui:outputText class="slds-input;outputClass"  value="{!v.LineItemInstance.Initial_Error_Message__c}"/>
+        </td>
+        <td>
+            <ui:outputText class="slds-input;outputClass" value="{!v.LineItemInstance.SO_Line_Number__c}"/>
+        </td>
+        
+		<td>
+           <ui:inputText class="slds-input"  value="{!v.LineItemInstance.Loaner_Return_Carrier__c}"/>
+        </td>
+        <td>
+            <lightning:input type="date" value="{!v.LineItemInstance.Loaner_Return_Ship_Date__c}"/>
+            
+        </td>
+        <td>
+            <ui:inputText class="slds-input"  value="{!v.LineItemInstance.Loaner_Return_Tracking_Number__c}"/>
+        </td>
+        </aura:renderif>
+         <aura:renderif isTrue ="{!and(v.recordtypename == 'Loaner Item Pending Sales Record Type', !v.userPermission)}">
+             <td>
+            <ui:outputText class="slds-input;outputClass" value="{!v.LineItemInstance.Name}"  />
+        </td>
+        <td>
+            <div style="margin-top:-25px;">
+                <c:LonerLineProductLookup lonerLineItem="{!v.LineItemInstance}" />
+                <!--c:ProductLookupCMP objectName = 'Product2' field_API_text='Name' field_API_val='Id' field_API_search='Name' field_API_search_marketingPN='Marketing_P_N__c' lookupIcon ='standard:product' limit='100' selItem='{v.LineItemInstance.Product__r}' /-->
+            </div>
+        </td>
+              <td>
+            <ui:outputText class="slds-input;outputClass"  value="{!v.LineItemInstance.Marketing_P_N__c}"/>
+        </td>
+		
+        <td>
+            <ui:outputText class="slds-input;outputClass"  value="{!v.LineItemInstance.Loaner_Qty__c}"/>
+        </td>
+        <td>
+            <ui:outputText class="slds-input;outputClass" value="{!v.LineItemInstance.Loaner_Price_100_999_column_price__c}"/>
+        </td>
+        <td>
+            <ui:outputText class="slds-input;outputClass"  value="{!v.LineItemInstance.Production_Price_ASP__c}"/>
+        </td>
+        <td>
+            <ui:outputText class="slds-input;outputClass"  value="{!v.LineItemInstance.Est_Annual_Qty__c}"/>
+        </td>
+        <td>
+            <ui:outputText  class="slds-input;outputClass" value="{!v.LineItemInstance.SOM__c}" />
+        </td>
+        <td>
+            <ui:outputText class="slds-input;outputClass"  value="{!v.LineItemInstance.SAM__c}"/>
+        </td>
+        
+        <td>
+            <ui:outputText class="slds-input;outputClass"  value="{!v.LineItemInstance.Line_Total__c}"/>
+        </td>
+        <td>
+            <ui:outputText class="slds-input;outputClass"  value="{!v.LineItemInstance.Loaner_Total__c}"/>
+        </td>
+        <td>
+            <ui:outputText class="slds-input;outputClass" value="{!v.LineItemInstance.Line_Status__c}"/>
+        </td>
+        
+        
+        <td>
+             <ui:outputText class="slds-input;outputClass"  value="{!v.LineItemInstance.Serial_Number__c}"/>
+        </td>
+        <td>
+            <ui:outputText class="slds-input;outputClass"  value="{!v.LineItemInstance.CPN_Description__c}"/>
+        </td>
+       
+        
+        <td>
+            <ui:outputText class="slds-input;outputClass"  value="{!v.LineItemInstance.User_Notes__c}"/>
+        </td>
+        <td>
+             <ui:outputText class="slds-input;outputClass"  value="{!v.LineItemInstance.Part_Type__c}"/>
+        </td>
+        <td>
+             <ui:outputText class="slds-input;outputClass" value="{!v.LineItemInstance.Part_Type_Notes__c}"/>
+        </td>
+        <td>
+             <ui:outputText class="slds-input;outputClass"  value="{!v.LineItemInstance.Admin_Status__c}"/>
+        </td>
+        
+        <td>
+            <ui:outputText class="slds-input;outputClass"  value="{!v.LineItemInstance.Initial_Error_Message__c}"/>
+        </td>
+        <td>
+            <ui:outputText class="slds-input;outputClass" value="{!v.LineItemInstance.SO_Line_Number__c}"/>
+        </td>
+      
+		<td>
+            <ui:outputText class="slds-input;outputClass" value="{!v.LineItemInstance.Loaner_Return_Carrier__c}"/>
+        </td>
+        <td>
+            <ui:outputText class="slds-input;outputClass"  value="{!v.LineItemInstance.Loaner_Return_Ship_Date__c}"/>
+        </td>
+        <td>
+            <ui:outputText class="slds-input;outputClass"  value="{!v.LineItemInstance.Loaner_Return_Tracking_Number__c}"/>
+        </td>
+        </aura:renderif>
+        <aura:renderif isTrue ="{!and(v.recordtypename == 'Loaner Item Read Only', !v.userPermission)}">
+         <td>
+            <ui:outputText class="slds-input;outputClass" value="{!v.LineItemInstance.Name}" />
+        </td>
+        <td>
+            <ui:outputText class="slds-input;outputClass"  value="{!v.productname}" />
+        </td>
+             <td>
+            <ui:outputText class="slds-input;outputClass"  value="{!v.LineItemInstance.Marketing_P_N__c}"/>
+        </td>
+		
+		<td>
+            <ui:outputText class="slds-input;outputClass"  value="{!v.LineItemInstance.Loaner_Qty__c}"/>
+        </td>
+        <td>
+            <ui:outputText class="slds-input;outputClass" value="{!v.LineItemInstance.Loaner_Price_100_999_column_price__c}"/>
+        </td>
+        <td>
+            <ui:outputText class="slds-input;outputClass"  value="{!v.LineItemInstance.Production_Price_ASP__c}"/>
+        </td>
+        <td>
+            <ui:outputText class="slds-input;outputClass"  value="{!v.LineItemInstance.Est_Annual_Qty__c}"/>
+        </td>
+        <td>
+            <ui:outputText  class="slds-input;outputClass" value="{!v.LineItemInstance.SOM__c}" />
+        </td>
+        
+         <td>
+            <ui:outputText class="slds-input;outputClass"  value="{!v.LineItemInstance.SAM__c}"/>
+        </td>
+        
+        <td>
+            <ui:outputText class="slds-input;outputClass"  value="{!v.LineItemInstance.Line_Total__c}"/>
+        </td>
+        <td>
+            <ui:outputText class="slds-input;outputClass"  value="{!v.LineItemInstance.Loaner_Total__c}"/>
+        </td>
+        <td>
+            <ui:outputText class="slds-input;outputClass" value="{!v.LineItemInstance.Line_Status__c}"/>
+        </td>
+        
+        
+        <td>
+            <ui:inputText class="slds-input"  value="{!v.LineItemInstance.Serial_Number__c}"/>
+        </td>
+        <td>
+            <ui:inputText class="slds-input"  value="{!v.LineItemInstance.CPN_Description__c}"/>
+        </td>
+        
+       
+       <td>
+            <ui:inputText class="slds-input"  value="{!v.LineItemInstance.User_Notes__c}"/>
+        </td>
+            <td>
+            <ui:inputText class="slds-input"  value="{!v.LineItemInstance.Part_Type__c}"/>
+        </td>
+            
+        <td>
+             <ui:outputText class="slds-input;outputClass"  value="{!v.LineItemInstance.Part_Type_Notes__c}"/>
+        </td>
+        <td>
+            <ui:outputText class="slds-input;outputClass" value="{!v.LineItemInstance.Admin_Status__c}"/>
+        </td>
+        
+        <td>
+            <ui:outputText class="slds-input;outputClass"  value="{!v.LineItemInstance.Initial_Error_Message__c}"/>
+        </td>
+        <td>
+            <ui:outputText class="slds-input;outputClass" value="{!v.LineItemInstance.SO_Line_Number__c}"/>
+        </td>
+        
+         <td>
+           <ui:inputText class="slds-input"  value="{!v.LineItemInstance.Loaner_Return_Carrier__c}"/>
+        </td>
+        <td>
+            <lightning:input type="date" value="{!v.LineItemInstance.Loaner_Return_Ship_Date__c}"/>
+            
+        </td>
+        <td>
+            <ui:inputText class="slds-input"  value="{!v.LineItemInstance.Loaner_Return_Tracking_Number__c}"/>
+        </td>
+        </aura:renderif>
+</tr>
+</aura:component>

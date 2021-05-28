@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Next_Step_Action_Items__c</fullName>
+    <description>WHAT is the Action Item, WHO owns it and WHEN is it due?</description>
+    <externalId>false</externalId>
+    <label>Next Step/Action Items</label>
+    <length>1000</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>20</visibleLines>
+</CustomField>

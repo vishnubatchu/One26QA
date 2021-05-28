@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Return_Detail_Creation_Validation</fullName>
+    <active>true</active>
+    <description>Loaner Cannot be Returned.Please check whether Loaner is Approved or Shipped.</description>
+    <errorConditionFormula>AND(
+
+ OR(TEXT(Loaner_Line__r.Line_Status__c) =&apos;Approved&apos;,
+    TEXT(Loaner_Line__r.Line_Status__c) =&apos;Approval Pending&apos;
+),
+ ISBLANK( Loaner_Line__r.Shipped_Date__c),
+ ISNEW()  
+
+ 
+)</errorConditionFormula>
+    <errorMessage>Return Detail can be created only if Loaner is Approved and Shipped</errorMessage>
+</ValidationRule>

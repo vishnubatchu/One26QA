@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Closed</fullName>
+        <default>false</default>
+        <label>Closed</label>
+    </customValue>
+    <customValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </customValue>
+    <customValue>
+        <fullName>Received</fullName>
+        <default>true</default>
+        <label>Received</label>
+    </customValue>
+    <customValue>
+        <fullName>Failure Verification</fullName>
+        <default>false</default>
+        <label>Failure Verification</label>
+    </customValue>
+    <customValue>
+        <fullName>Failure Analysis</fullName>
+        <default>false</default>
+        <label>Failure Analysis</label>
+    </customValue>
+    <customValue>
+        <fullName>Corrective Actions</fullName>
+        <default>false</default>
+        <label>Corrective Actions</label>
+    </customValue>
+    <customValue>
+        <fullName>2nd Level Failure Analysis</fullName>
+        <default>false</default>
+        <label>2nd Level Failure Analysis</label>
+    </customValue>
+    <customValue>
+        <fullName>Disposition</fullName>
+        <default>false</default>
+        <label>Disposition</label>
+    </customValue>
+    <customValue>
+        <fullName>Outbound Logistics</fullName>
+        <default>false</default>
+        <label>Outbound Logistics</label>
+    </customValue>
+    <customValue>
+        <fullName>Hold</fullName>
+        <default>false</default>
+        <label>Hold</label>
+    </customValue>
+    <customValue>
+        <fullName>Open-Interim Solution-Doc Note</fullName>
+        <default>false</default>
+        <label>Open-Interim Solution-Doc Note</label>
+    </customValue>
+    <customValue>
+        <fullName>Open-Solution Known</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Open-Solution Known</label>
+    </customValue>
+    <customValue>
+        <fullName>Open-Interim Solution-Tech Note</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Open-Interim Solution-Tech Note</label>
+    </customValue>
+    <customValue>
+        <fullName>Closed-Thick Client Only</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Closed-Thick Client Only</label>
+    </customValue>
+    <customValue>
+        <fullName>Open</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Open</label>
+    </customValue>
+    <customValue>
+        <fullName>Open-Approved</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Open-Approved</label>
+    </customValue>
+    <customValue>
+        <fullName>Open-Awaiting Approval</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Open-Awaiting Approval</label>
+    </customValue>
+    <customValue>
+        <fullName>Open-Checked-in</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Open-Checked-in</label>
+    </customValue>
+    <customValue>
+        <fullName>Closed-Dup-Double Entry</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Closed-Dup-Double Entry</label>
+    </customValue>
+    <customValue>
+        <fullName>Closed-Enhancement Declined</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Closed-Enhancement Declined</label>
+    </customValue>
+    <customValue>
+        <fullName>Open-Interim Solution-FAQ</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Open-Interim Solution-FAQ</label>
+    </customValue>
+    <customValue>
+        <fullName>Closed-FOL</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Closed-FOL</label>
+    </customValue>
+    <customValue>
+        <fullName>Closed-Fixed</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Closed-Fixed</label>
+    </customValue>
+    <customValue>
+        <fullName>Open-Investigating</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Open-Investigating</label>
+    </customValue>
+    <customValue>
+        <fullName>Open-Need MRD</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Open-Need MRD</label>
+    </customValue>
+    <customValue>
+        <fullName>Open-Need More Info</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Open-Need More Info</label>
+    </customValue>
+    <customValue>
+        <fullName>Open-Needs Discussion</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Open-Needs Discussion</label>
+    </customValue>
+    <customValue>
+        <fullName>Closed-No Longer Applicable</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Closed-No Longer Applicable</label>
+    </customValue>
+    <customValue>
+        <fullName>Closed-Not A Bug</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Closed-Not A Bug</label>
+    </customValue>
+    <customValue>
+        <fullName>Closed-Not Reproducible</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Closed-Not Reproducible</label>
+    </customValue>
+    <customValue>
+        <fullName>Open-Interim Solution-Release Note</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Open-Interim Solution-Release Note</label>
+    </customValue>
+    <customValue>
+        <fullName>Open-Open</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Open-Open</label>
+    </customValue>
+    <customValue>
+        <fullName>Closed-Applies to JTC/WTC Only</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Closed-Applies to JTC/WTC Only</label>
+    </customValue>
+    <customValue>
+        <fullName>In Repair</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>In Repair</label>
+    </customValue>
+    <customValue>
+        <fullName>2nd FA Review</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>2nd FA Review</label>
+    </customValue>
+    <customValue>
+        <fullName>2nd FA</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>2nd FA</label>
+    </customValue>
+    <customValue>
+        <fullName>FA Review</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>FA Review</label>
+    </customValue>
+    <customValue>
+        <fullName>FV/FA Queue</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>FV/FA Queue</label>
+    </customValue>
+    <customValue>
+        <fullName>Closed-Verified</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Closed-Verified</label>
+    </customValue>
+    <customValue>
+        <fullName>FV Review</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>FV Review</label>
+    </customValue>
+    <customValue>
+        <fullName>Open-Disagree</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Open-Disagree</label>
+    </customValue>
+    <customValue>
+        <fullName>FV Queue</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>FV Queue</label>
+    </customValue>
+    <customValue>
+        <fullName>FV Level 1 Complete</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>FV Level 1 Complete</label>
+    </customValue>
+    <customValue>
+        <fullName>Open-Interim Solution</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Open-Interim Solution</label>
+    </customValue>
+    <masterLabel>Serial Number Status</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

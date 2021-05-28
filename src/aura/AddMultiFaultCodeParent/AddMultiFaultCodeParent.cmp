@@ -1,0 +1,180 @@
+<aura:component  Implements="flexipage:availableForRecordHome,force:lightningQuickActionWithoutHeader,force:hasRecordId" controller="FAFVCustomUI">
+    <!--<aura:handler name="init" value="{!this}" action="{!c.doInit}"/> -->
+    <aura:handler name="DeleteRowEvt" event="c:DeleteRowEvt" action="{!c.removeDeletedRow}"/>
+    <aura:handler name="AddRowEvt" event="c:AddNewRowEvt" action="{!c.addNewRow}"/>
+    <aura:attribute name="FaultCodeList" type="list"/>
+    <aura:attribute name="recID" type="string"/> 
+    <aura:method name="makeReadonly" action="{!c.doInit}" > 
+        <aura:attribute name="param4" type= "String" /> 
+        <aura:attribute name="param5" type= "boolean" default="true" /> 
+    </aura:method>
+    <aura:attribute name="ShowFCode" type="boolean" default="false" />
+    <aura:attribute name="faultCodeId" type="string"/> 
+    <aura:attribute name="editAccess" type="string"/>
+    <aura:attribute name="editMode" type="boolean" default="true"  />
+    <aura:attribute name='faultCodeNewShow' type='boolean' default='false' />
+    <aura:attribute name='faultCodeEdit' type='boolean' default='false'/>
+    <aura:attribute name="addRow" type="boolean"/>
+    <aura:registerEvent name="lightningEvent" type="c:RefreshSerialNumberUI"/>
+    <aura:attribute name="FVFields1" type="String[]"
+                    default="['PIC_Level_1__c','PIC_Level_2__c','Fault_Specification__c','Site__c','PDC_Level_1__c','PDC_Level_2__c']" />
+    
+    <div class="slds-table--header-fixed_container slds-card" style="/*height:200px;width:100%*/">
+        <div  >            
+            <table class="slds-table slds-table_bordered slds-table--header-fixed">
+                <thead>
+                    <tr class="slds-line-height_reset">
+                        <aura:if isTrue ="{!v.editMode}">
+                            <th class="customWidth3" scope="col">
+                                <div class="customPadding slds-truncate slds-cell-fixed slds-p-top--small" title="">   <lightning:icon iconName="utility:add" alternativeText="Click to Call" size="small" onclick="{!c.addNewRow}"/> </div>
+                            </th>
+                        </aura:if>
+                        <th class="customWidth3" scope="col">
+                            <div class="customPadding slds-truncate slds-cell-fixed slds-p-top--small" title="PIC LEVEL 1">PIC LEVEL 1</div>
+                        </th>
+                        <th class="customWidth3" scope="col">
+                            <div class="customPadding slds-truncate slds-cell-fixed slds-p-top--small" title="PIC LEVEL 2">PIC LEVEL 2</div>
+                        </th>
+                        <th class="customWidth3" scope="col">
+                            <div class="customPadding slds-truncate slds-cell-fixed slds-p-top--small" title="FAULT SPECIFICATION">FAULT SPECIFICATION</div>
+                        </th>
+                        <th class="customWidth3" scope="col">
+                            <div class="customPadding slds-truncate slds-cell-fixed slds-p-top--small" title="SITE">      SITE      </div>
+                        </th>
+                        <th class="customWidth3" scope="col">
+                            <div class="customPadding slds-truncate slds-cell-fixed slds-p-top--small" title="PDC LEVEL 1">PDC LEVEL 1</div>
+                        </th>
+                        <th class="customWidth3" scope="col">
+                            <div class="customPadding slds-truncate slds-cell-fixed slds-p-top--small" title="PDC LEVEL 2">PDC LEVEL 2</div>
+                        </th>
+                        <aura:if isTrue ="{!v.editMode}">
+                            <th class="customWidth3" scope="col">
+                                <div class="customPadding slds-truncate slds-cell-fixed slds-p-top--small" title=""></div>
+                            </th>
+                        </aura:if>
+                    </tr>
+                </thead>
+                <tbody>
+                    <aura:iteration items="{!v.FaultCodeList}" var="FC">
+                        <tr > 
+                            <aura:if isTrue ="{!v.editMode}">
+                                <td data-label="Account Name" >
+                                    <a data-value="{!FC.Id}" onclick="{!c.removeDeletedRow}">
+                                        <lightning:icon variant="error" iconName="utility:delete" class="slds-icon slds-icon_small" size="small" alternativeText="icon"/>
+                                        <span class="slds-assistive-text">Delete Icon</span>
+                                    </a>
+                                    
+                                </td>
+                            </aura:if>
+                            <td data-label="">
+                                <div class="slds-truncate" title="{!FC.PIC_Level_1__c}">{!FC.PIC_Level_1__c}</div>
+                            </td>
+                            <td data-label="">
+                                <div class="slds-truncate" title="{!FC.PIC_Level_2__c}">{!FC.PIC_Level_2__c}</div>
+                            </td>
+                            <td data-label="">
+                                <div class="slds-truncate" title="{!FC.Fault_Specification__c}">{!FC.Fault_Specification__c}</div>
+                            </td>
+                            <td data-label="">
+                                <div class="slds-truncate" title="{!FC.Site__c}">{!FC.Site__c}</div>
+                            </td>
+                            <td data-label="">
+                                <div class="slds-truncate" title="{!FC.PDC_Level_1__c}">{!FC.PDC_Level_1__c}</div>
+                            </td>
+                            <td data-label="">
+                                <div class="slds-truncate" title="{!FC.PDC_Level_2__c}">{!FC.PDC_Level_2__c}</div>
+                            </td>
+                            <aura:if isTrue ="{!v.editMode}">
+                                <td data-label="">
+                                    <a data-value="{!FC.Id}" onclick="{!c.EditRecord}">
+                                        <lightning:icon  iconName="utility:edit" class="slds-icon slds-icon_small" size="small" alternativeText="icon"/>
+                                        <span class="slds-assistive-text"></span>
+                                    </a>
+                                </td>
+                            </aura:if>
+                            
+                        </tr> 
+                        
+                    </aura:iteration>
+                </tbody>
+            </table></div>
+    </div>
+    
+     <aura:if isTrue="{!v.faultCodeNewShow}">
+    <div style="width:15rem" aura:id="openExistingFA1">
+     
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container" >
+                <!-- ###### MODAL BOX HEADER Start ######-->
+                <header class="slds-modal__header">
+                    <lightning:buttonIcon iconName="utility:close"
+                                          onclick="{! c.Cancel }"
+                                          alternativeText="close"
+                                          class="slds-modal__close"/>
+                    <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">New</h2>
+                </header>
+                <div  class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                    <lightning:card iconName="standard:user" title="">
+                        <lightning:recordForm aura:id="recordForm1"
+                                              objectApiName="Failure_Modes__c"
+                                              fields="{!v.FVFields1}"                  
+                                              layout="Compact"
+                                              columns="3"
+                                              mode="View"
+                                              onsubmit="{!c.onRecordSubmit}" 
+                                              onsuccess="{!c.saveFcode}"
+                                              oncancel ="{! c.Cancel }"
+                                              style = "slds-modal__content"/>
+                    </lightning:card>
+                </div>
+                <footer class="slds-modal__footer">
+                    <lightning:button variant="neutral" 
+                                      label="Cancel"
+                                      title="Cancel"
+                                      onclick="{! c.Cancel }"/>
+                </footer>
+            </div>
+        </section>
+         
+    </div>
+     </aura:if>
+    
+ <aura:if isTrue="{!v.faultCodeEdit}">
+    <div style="width:5rem" aura:id="openExistingFA2">    
+
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container" >
+                <!-- ###### MODAL BOX HEADER Start ######-->
+                <header class="slds-modal__header">
+                    <lightning:buttonIcon iconName="utility:close"
+                                          onclick="{! c.Cancel }"
+                                          alternativeText="close"
+                                          class="slds-modal__close"/>
+                    <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Edit</h2>
+                </header>
+                <div  class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                    <lightning:card iconName="standard:user" title="">
+                        <lightning:recordForm aura:id="recordForm"
+                                              objectApiName="Failure_Modes__c"
+                                              recordId="{!v.faultCodeId}"
+                                              fields="{!v.FVFields1}"                  
+                                              layout="Compact"
+                                              columns="3"
+                                              mode="View"
+                                              oncancel ="{! c.Cancel }"
+                                              onsuccess="{!c.saveFcode}"
+                                              />
+                    </lightning:card>
+                </div>
+                <footer class="slds-modal__footer">
+                    <lightning:button variant="neutral" 
+                                      label="Cancel"
+                                      title="Cancel"
+                                      onclick="{! c.Cancel }"/>
+                </footer>
+            </div>
+        </section>
+       
+    </div>
+      </aura:if>
+</aura:component>

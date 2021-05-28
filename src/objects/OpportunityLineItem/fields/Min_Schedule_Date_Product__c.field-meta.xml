@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Min_Schedule_Date_Product__c</fullName>
+    <description>Created by EMD for reminder for Users to check the schedule dates whenever they update the Close Date.</description>
+    <externalId>false</externalId>
+    <label>Min Schedule Date_Product</label>
+    <required>false</required>
+    <type>Date</type>
+</CustomField>

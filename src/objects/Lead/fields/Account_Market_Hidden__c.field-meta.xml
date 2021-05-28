@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_Market_Hidden__c</fullName>
+    <description>Created as a workaround to map Lead.Market to Account.Market (Lead.Market currently mapped to Opportunity.Market).</description>
+    <externalId>false</externalId>
+    <label>Account Market (Hidden)</label>
+    <length>100</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

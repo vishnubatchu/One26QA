@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ship_Territory__c</fullName>
+    <description>Territory that the product will ship ... pulls from glovia Buy location.  Sales Territory Code</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Field advises the territory that parts will be shipped.</inlineHelpText>
+    <label>Ship Territory</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>MIA</fullName>
+                <default>false</default>
+                <label>MIA</label>
+            </value>
+            <value>
+                <fullName>MIC</fullName>
+                <default>false</default>
+                <label>MIC</label>
+            </value>
+            <value>
+                <fullName>MIE</fullName>
+                <default>false</default>
+                <label>MIE</label>
+            </value>
+            <value>
+                <fullName>MIJ</fullName>
+                <default>false</default>
+                <label>MIJ</label>
+            </value>
+            <value>
+                <fullName>MIS</fullName>
+                <default>false</default>
+                <label>MIS</label>
+            </value>
+            <value>
+                <fullName>MIT</fullName>
+                <default>false</default>
+                <label>MIT</label>
+            </value>
+            <value>
+                <fullName>NA</fullName>
+                <default>false</default>
+                <label>NA</label>
+            </value>
+            <value>
+                <fullName>WC</fullName>
+                <default>false</default>
+                <label>WC</label>
+            </value>
+            <value>
+                <fullName>WC2</fullName>
+                <default>false</default>
+                <label>WC2</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

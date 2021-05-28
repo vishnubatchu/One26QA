@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Require_Display_ISO_Country</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+TEXT(Display_ISO_Country__c)=&quot;&quot;,
+NOT($Permission.By_Pass_Validation),
+
+OR(
+!ISBLANK(City),
+!ISBLANK(State),
+!ISBLANK(Street),
+!ISBLANK(Country),
+!ISBLANK(PostalCode)
+)
+)</errorConditionFormula>
+    <errorMessage>Please indicate a Display ISO Country</errorMessage>
+</ValidationRule>

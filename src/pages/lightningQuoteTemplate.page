@@ -1,0 +1,18 @@
+<apex:page >
+    <apex:includeScript value="/lightning/lightning.out.js" />
+    <!--<apex:stylesheet value="/resource/slds0120/assets/styles/salesforce-lightning-design-system-vf.css"/>-->
+    <apex:includeLightning />
+     <div id="lightning" />
+   <script>
+         var assetId = "{!$CurrentPage.parameters.id}";
+         console.log(assetId);
+        $Lightning.use("c:QuoteTemplateApp", function() {
+          $Lightning.createComponent("c:QuoteTemplate",
+          { "qteId" : assetId },
+          "lightning",
+          function(cmp) {
+              // alert(assetId);
+          });
+        });
+    </script>
+</apex:page>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_not_Party_for_Blanket_Quote</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( ISPICKVAL( Type_of_Pricing__c ,&apos;Blanket Price Agreement&apos;), ISPICKVAL( Account__r.Type ,&apos;Party&apos;) )</errorConditionFormula>
+    <errorDisplayField>Type_of_Pricing__c</errorDisplayField>
+    <errorMessage>Blanket Price Agreement Quote cannot be created for a Party Account (non-direct customer). Please change the Type of Pricing field or select a different Account.</errorMessage>
+</ValidationRule>

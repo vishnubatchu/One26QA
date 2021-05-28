@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mailing_Country</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+TEXT( Display_Mailing_Country__c )=&quot;&quot;,
+NOT($Permission.By_Pass_Validation),
+
+
+OR(
+!ISBLANK(MailingCity),
+!ISBLANK(MailingState),
+!ISBLANK(MailingStreet),
+!ISBLANK(MailingCountry),
+!ISBLANK(MailingPostalCode)
+)
+)</errorConditionFormula>
+    <errorDisplayField>Display_Mailing_Country__c</errorDisplayField>
+    <errorMessage>Please indicate a Display Mailing Country</errorMessage>
+</ValidationRule>

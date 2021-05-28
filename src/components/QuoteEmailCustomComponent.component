@@ -1,0 +1,371 @@
+<apex:component access="global" controller="QuoteEmailCustomComponentController">
+    <apex:attribute name="headerId" description="headerQuoteRecordId" type="ID" required="required" assignTo="{!recordId}" />
+    <apex:attribute name="headerObj" description="HeaderObjectName" type="String" required="required" assignTo="{!recordObject}" />
+    <apex:attribute name="quoteSummary" description="boleanFlag To Redender Quote Details" type="boolean" assignTo="{!quoteSummry}" />
+    <apex:attribute name="quoteLineItemsApprovalList" description="Attribute for product make" type="boolean"  assignTo="{!quoteLineItem}" />
+    <apex:attribute name="quoteLineItemWithStatusField" description="Attribute for product make" type="boolean"  assignTo="{!quoteLineItemWithStatusFields}" />
+    <apex:attribute name="quoteLineItemShipAndDebits" description="Attribute for product make" type="boolean"  assignTo="{!quoteLineItemShipAndDebit}" />
+    <apex:attribute name="quoteLineItemsAllStatus" description="Attribute for product make" type="boolean"  assignTo="{!quoteAllStatus}" />
+    <apex:attribute name="quoteLineItemsApprovals" description="Attribute for product make" type="boolean"  assignTo="{!quoteLineItemsApproval}" />
+    <apex:attribute name="quoteFooterValue" description="Attribute for product make" type="boolean"  assignTo="{!quoteFooter}" />
+    <apex:attribute name="recipientName" description="Attribute for product make" type="Id"  assignTo="{!recipientId}" />
+    <apex:attribute name="RSMPLMApprovarStatus" description="error messages" type="Boolean" default="false"/>
+    <apex:attribute name="errormessages" description="error messages" type="Boolean" default="false"/>
+    <style type="text/css">
+        .quoteSummary .prod_table { 
+        table-layout: fixed; 
+        }
+        .quoteSummary .headerSummary {
+        font-size: 11.0pt; 
+        text-decoration:underline; 
+        font-weight: bold;
+        }    
+        body{       
+        font-size: 10.0pt; 
+        font-family: "Arial","sans-serif"; 
+        word-wrap:break-word;
+        }
+        
+        .quoteSummary .headerTable {
+        border : 0px;
+        width: 70.0%;
+        
+        }   
+        .quoteSummary td{
+        padding: .75pt .75pt .75pt .75pt;
+        align:right;
+        }
+        .quoteSummary .textalign{
+        text-align: right;
+        white-space: nowrap;
+        }
+        .quoteLineItems table {
+        border-width: 0px;
+        cellspacing : 1; 
+        cellpadding : 0;
+        table-layout: fixed;
+        align : center;
+        
+        }
+        
+        .quoteLineItems td {
+        padding: .75pt .75pt .75pt .75pt;
+        text-align: center;
+        background-color: #F7F7E7;
+        }
+        
+        .quoteLineItems th { 
+        color: #000000;
+        padding: 4px ;
+        background-color: #CCCC99;
+        }
+        .EmailApproval{
+        font-size: 11.0pt;
+        }
+        a {
+        color: blue;
+        }
+    </style>
+    
+    <!--Quote Summary Component-->
+    <apex:outputPanel styleClass="quoteSummary" rendered="{!quoteSummry}">
+        <div class="headerSummary"> Quote Summary </div>
+        <table class="headerTable" cellspacing="1" cellpadding="0" width="75%" >
+            <apex:variable value="{!Quote}" var="quoteObject"/>
+            <tr>
+                <td class="textalign"> Quote# : </td>
+                <td><b>{!quoteObject.QuoteNumber}</b></td>
+                <td class="textalign">Opportunity# :</td>
+                <td><b>{!quoteObject.Opportunity.Name}</b></td>
+            </tr>
+            <tr>
+                <td class="textalign"> Customer :</td>
+                <td><b>{!quoteObject.Customer__r.Name}</b></td>
+                <td class="textalign"> Add’l CM :</td>
+                <td><b> {!quoteObject.Additional_CM__c}</b></td>
+                
+            </tr>
+            <tr>
+                <td class="textalign"> Account : </td>
+                <td><b> {!quoteObject.Account__r.Name}</b></td>
+                <td class="textalign">Sales Channel :</td>
+                <td><b>{!quoteObject.Sales_Channel__r.Name}</b></td>
+            </tr>
+            <tr>
+                <td class="textalign">Price List :</td>
+                <td><b>{!quoteObject.Price_List__c}</b></td>
+                <td class="textalign">Contract Mfg :</td>
+                <td><b>{!quoteObject.Contract_Manufacturer__c}</b></td>
+            </tr>
+            <tr>
+                <td class="textalign"> Type of Pricing :</td>
+                <td><b>{!quoteObject.Type_of_Pricing__c}</b></td>
+                <td class="textalign"> Primary Salesperson :</td>
+                <td><b>{!quoteObject.PrimarySalesperson__r.Name}</b></td>
+            </tr>
+            
+            <tr>
+                
+                <td class="textalign">Primary Sales Group :</td>
+                <td><b> {!quoteObject.Primary_Sales_Group__c}</b></td>
+                
+                
+                <td class="textalign">VAR/SI :</td>
+                <td><b>{!quoteObject.VAR_SI__c} </b></td>
+            </tr>
+            <tr>
+                <tr>
+                    
+                    <td class="textalign">VAR/SI Disti/EC :</td>
+                    <td><b>{!quoteObject.VAR_SI_Disti_EC__c}</b></td>
+                    <td class="textalign">Justification :</td>
+                    <td><b>{!quoteObject.Justification__c}</b></td>
+            </tr>
+            <apex:outputPanel rendered="{!quoteObject.Type_of_Pricing__c =='Blanket Price Agreement'}">
+                <tr>
+                    <td class="textalign"> Pricing Effective Start Date : </td>
+                    <td><b>
+                        <apex:outputText value=" {0,date,EEE MMM d, yyyy}">
+                            <apex:param value="{!quoteObject.Pricing_Effective_Start_Date__c}"/>
+                        </apex:outputText>
+                        </b></td>
+                    <td class="textalign">Pricing Effective End Date :</td>
+                    <td><b>
+                        <apex:outputText value=" {0,date,EEE MMM d, yyyy}">
+                            <apex:param value="{!quoteObject.Pricing_Effective_End_Date__c}"/>
+                        </apex:outputText>
+                        </b></td>
+                </tr>
+            </apex:outputPanel>
+            <apex:outputPanel rendered="{!quoteObject.Type_of_Pricing__c =='Dist Quote'}">
+                <tr>
+                    <td class='textalign'>Ship and  Debit #:  </td>
+                    <td ><b>{!quoteObject.Ship_Debit__c}</b></td>
+                    
+                    
+                </tr>
+                
+                <tr>
+                    <td class="textalign"> S&amp;D Start Date :</td> 
+                    <td><b><apex:outputText value=" {0,date,EEE MMM d, yyyy}">
+                        <apex:param value="{!quoteObject.S_D_Start_Date__c}"/>
+                        </apex:outputText></b></td>
+                    
+                    <td class="textalign"> S&amp;D End Date :</td> 
+                    <td><b><apex:outputText value=" {0,date,EEE MMM d, yyyy}">
+                        <apex:param value="{!quoteObject.S_D_End_Date__c}"/>
+                        </apex:outputText></b></td>
+                    
+                </tr>
+            </apex:outputPanel>
+            
+            <apex:outputPanel rendered="{!quoteObject.Type_of_Pricing__c =='Fixed - One Time Order'}">
+                <tr>
+                    <td class='textalign'>Created Date : </td>
+                    <td >
+                       <b> <apex:outputText value=" {0,date,EEE MMM d, yyyy}">
+                            <apex:param value="{!quoteObject.CreatedDate}"/>
+                        </apex:outputText></b>
+                    </td>
+                    
+                    <td class="textalign"> Expiration Date</td> 
+                    <td><b><apex:outputText value=" {0,date,EEE MMM d, yyyy}">
+                        <apex:param value="{!quoteObject.ExpirationDate}"/>
+                        </apex:outputText></b></td>
+                </tr>
+                
+                
+            </apex:outputPanel>
+            
+            
+            <apex:outputPanel rendered="{!errormessages}">
+                
+                <tr>
+                    <td class='textalign'>Integration Status:</td>
+                    <td><b>{!quoteObject.Integration_Status__c}</b></td>
+                    <td class='textalign'>Initial Error Message :</td>
+                    <td><b>{!quoteObject.Initial_Error_Message__c}</b></td>
+                </tr>
+            </apex:outputPanel>
+            
+        </tr>
+    </table>
+</apex:outputPanel>
+<br/><br/>
+
+<!--Quote Line Item Component-->
+<apex:outputPanel styleClass="quoteLineItems" rendered="{!quoteLineItemsApprovalList}">
+    <table >
+        <tr > 
+            <th>Line #</th>
+            <th>ID#</th>
+            <th>Product</th> 
+            <th>Quantity</th>
+            <th>Target Price</th>
+            <th>Disti Resale Price</th>
+            <th>Disti Margin %</th>    
+            <th>Agreed Upon Share %</th>
+            <th>Competitor Info</th>
+            <th>Competitor Price</th>
+            <th>RSM Approver</th>
+            <th>PLM Approver</th>                
+        </tr>
+        <apex:repeat var="cx" value="{!LineItems}">
+            <apex:outputPanel rendered="{!cx.Line_Status__c!='Approval Rejected'}">
+                <tr>
+                    <td>{!cx.Name}</td>
+                    <td>{!cx.Product__r.Name}</td>
+                    <td>{!cx.Product__r.Marketing_P_N__c}</td>
+                    <td>{!cx.Quantity__c}</td>
+                    <td>{!cx.Target_Price__c}</td>
+                    <td>{!cx.Disti_Resale_Price__c}</td>
+                    <td>{!cx.Disti_Margin__c}</td>                     
+                    <td>{!cx.Agreed_Upon_Share__c}</td>
+                    <td>{!cx.Competitor_Info__c}</td>
+                    <td>{!cx.Competitor_Price__c}</td>
+                    <td>{!IF(cx.Approval_From__c=='BothApprovers',cx.RSM_Approver__r.Name,IF(cx.Approval_From__c=='RSM',cx.RSM_Approver__r.Name,'NOT REQUIRED'))}</td>
+                    <td>{!IF(cx.Approval_From__c=='BothApprovers',cx.PLM_Approver__r.Name,IF(cx.Approval_From__c=='PLM',cx.PLM_Approver__r.Name,'NOT REQUIRED'))}</td>
+                </tr>
+            </apex:outputPanel>
+        </apex:repeat>
+    </table>
+</apex:outputPanel>
+
+
+<!--Quote Line Item Component-->
+<apex:outputPanel styleClass="quoteLineItems" rendered="{!quoteAllStatus}">
+    <table >
+        <tr > 
+            <th>Line #</th>
+            <th>ID#</th>
+            <th>Product</th> 
+            <th>Quantity</th>
+            <th>Target Price</th>
+            <th>Disti Resale Price</th>
+            <th>Disti Margin %</th>    
+            <th>Agreed Upon Share %</th>
+            <th>Competitor Info</th>
+            <th>Competitor Price</th>
+            <th>RSM Approver</th>
+            <th>PLM Approver</th>
+            <apex:outputPanel rendered="{!RSMPLMApprovarStatus}">
+                <th>Line Status</th>
+                <th>RSM Approval</th>
+                <th>PLM Approval</th>
+            </apex:outputPanel>
+        </tr>
+        <apex:repeat var="cx" value="{!ShipAndDebitLineItems}">
+            <apex:outputPanel rendered="{!cx.Line_Status__c!='Approval Rejected'}">
+                <tr>
+                    <td>{!cx.Name}</td>
+                    <td>{!cx.Product__r.Name}</td>
+                    <td>{!cx.Product__r.Marketing_P_N__c}</td>
+                    <td>{!cx.Quantity__c}</td>
+                    <td>{!cx.Target_Price__c}</td>
+                    <td>{!cx.Disti_Resale_Price__c}</td>
+                    <td>{!cx.Disti_Margin__c}</td>
+                    <td>{!cx.Agreed_Upon_Share__c}</td>
+                    <td>{!cx.Competitor_Info__c}</td>
+                    <td>{!cx.Competitor_Price__c}</td>
+                    <td>{!cx.RSM_Approver__r.Name}</td>
+                    <td>{!cx.PLM_Approver__r.Name}</td>
+                    <apex:outputPanel rendered="{!RSMPLMApprovarStatus}">
+                        <td>{!cx.Line_Status__c}</td>
+                        <td>{!cx.RSM_Approval__c}</td>
+                        <td>{!cx.PLM_Approval__c}</td>
+                    </apex:outputPanel>
+                </tr>
+            </apex:outputPanel>
+        </apex:repeat>
+    </table>
+</apex:outputPanel>
+
+
+<!--Quote Line Item Component with Shipped and Debit Status-->
+<apex:outputPanel styleClass="quoteLineItems" rendered="{!quoteLineItemShipAndDebit}">
+    <table >
+        <tr > 
+            <th>Line #</th>
+            <th>ID#</th>
+            <th>Product</th> 
+            <th>Quantity</th>
+            <th>Target Price</th>
+            <th>Disti Resale Price</th>
+            <th>Disti Margin %</th>    
+        </tr>
+        <apex:repeat var="cx" value="{!ShipAndDebitLineItems}">
+            <apex:outputPanel rendered="{!cx.Line_Status__c!='Approval Rejected'}">
+                <tr>
+                    <td>{!cx.Name}</td>
+                    <td>{!cx.Product__r.Name}</td>
+                    <td>{!cx.Product__r.Marketing_P_N__c}</td>
+                    <td>{!cx.Quantity__c}</td>
+                    <td>{!cx.Target_Price__c}</td>
+                    <td>{!cx.Disti_Resale_Price__c}</td>
+                    <td>{!cx.Disti_Margin__c}</td>
+                </tr>
+            </apex:outputPanel>
+        </apex:repeat>
+    </table>
+</apex:outputPanel>
+
+<!--Quote Line Item Component with line Item Status And Approval Status-->
+<apex:outputPanel styleClass="quoteLineItems" rendered="{!quoteLineItemWithStatusFields}">
+    <table >
+        <tr > 
+            <th>Line #</th>
+            <th>ID#</th>
+            <th>Product</th> 
+            <th>Quantity</th>
+            <th>Target Price</th>
+            <th>Disti Resale Price</th>
+            <th>Disti Margin %</th>  
+            <th>Agreed Upon Share %</th>
+            <th>Line Status</th>
+            <th>RSM Approval</th>
+            <th>PLM Approval</th>
+        </tr>
+        <apex:repeat var="cx" value="{!LineItems}">
+            <apex:outputPanel rendered="{!cx.Line_Status__c!='Approval Rejected'}">
+                <tr>
+                    <td>{!cx.Name}</td>
+                    <td>{!cx.Product__r.Name}</td>
+                    <td>{!cx.Product__r.Marketing_P_N__c}</td>
+                    <td>{!cx.Quantity__c}</td>
+                    <td>{!cx.Target_Price__c}</td>
+                    <td>{!cx.Disti_Resale_Price__c}</td>
+                    <td>{!cx.Disti_Margin__c}</td>
+                    <td>{!cx.Agreed_Upon_Share__c}</td>
+                    <td>{!cx.Line_Status__c}</td>
+                    <td>{!cx.RSM_Approval__c}</td>
+                    <td>{!cx.PLM_Approval__c}</td>
+                </tr>
+            </apex:outputPanel>
+        </apex:repeat>
+    </table>
+</apex:outputPanel>  
+
+
+
+
+<!--Email Approval  Component-->
+<apex:outputPanel rendered="{!quoteLineItemsApprovals}">
+    
+    <br/><br/>
+    Clicking Approve or Reject below will apply to all lines listed in this notification. If you decide to approve and reject specific lines in this notification, you must do so by logging into Salesforce. <a href="{!$Label.Approval_Lightning_page}?QId={!headerId}">Click here to login</a>
+    <br/>
+    <p class="EmailApproval"> <b>Action: </b>&nbsp;&nbsp;&nbsp;
+        <a href="mailto:{!$Label.Apex_Email_Service_Address}?subject=Quote:{!Quote.QuoteNumber} has been forwarded for your approval by &body=Action: Approve %0AAdd Comments in between the apostrophes to append to this notification %0AComments: '' %0A%0A%0AQuote Id : [{!headerID}] %0A%0ANOTE: PLEASE DO NOT MODIFY ACTION AND QUOTE ID PARAMETERS"><b>Approve</b></a> &nbsp;&nbsp;&nbsp;
+        <a href="mailto:{!$Label.Apex_Email_Service_Address}?subject=Quote:{!Quote.QuoteNumber} has been forwarded for your approval by &body=Action: Reject %0AAdd Comments in between the apostrophes to append to this notification %0AComments: '' %0A%0A%0AQuote Id : [{!headerID}] %0A%0ANOTE: PLEASE DO NOT MODIFY ACTION AND QUOTE ID PARAMETERS"><b>Reject</b></a> &nbsp;&nbsp;&nbsp;
+        <a href="mailto:{!$Label.Apex_Email_Service_Address}?subject=FW:Quote:{!Quote.QuoteNumber} has been forwarded for your approval by &body=Action: Forward %0A%0A%0AEnter email address in between the apostrophes to forward%0A%0AForward to: ''%0AAdd Comments in between the apostrophes to append to this notification %0AComments: '' %0A%0A%0AQuote Id : [{!headerID}] %0A%0ANOTE: PLEASE DO NOT MODIFY ACTION AND QUOTE ID PARAMETERS"><b>Reassign/Forward</b></a> &nbsp;&nbsp;&nbsp;
+    </p>
+    <br/>
+    <br/>
+</apex:outputPanel>
+
+
+<!--Footer  Component-->
+<apex:outputPanel rendered="{!quoteFooterValue}">
+    <br/>&quot;This quotation is made under the existing master purchase agreement between customer and Finisar, or if no such agreement is in place, the Terms &amp; Conditions of Sale at <a href="www.ii-vi.com/legal/">www.ii-vi.com/legal/</a>. All currency in U.S. Dollars. Prices quoted are exclusive of tariffs, import duties and similar taxes. A surcharge will be imposed and invoiced to the customer for any such amounts paid by Finisar or its agents in connection with shipments made with respect to the units listed on this quote.&quot;
+</apex:outputPanel>
+</apex:component>

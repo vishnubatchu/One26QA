@@ -1,0 +1,101 @@
+<apex:component >
+    <!-- <apex:attribute name="headerId" description="LoanerHeaderRecord" type="ID" required="required" assignTo="{!recordId}" />
+<apex:attribute name="headerObj" description="Object Name Attribute" type="String" required="required" assignTo="{!recordObject}" /> -->
+    <apex:attribute name="LoanerLines" description="Loaner Lines " type="Loaner_Line__c[]" required="true"/>
+    <apex:attribute name="extensionlinesonly" Description="Displays only extension lines" type="Boolean" default="false"/> 
+    <apex:attribute name="ErrorOnlyLineItems" Description="Displays only line Items with Error" type="Boolean" default="false"/> 
+    <apex:attribute name="rejectedHeaderStatus" Description="Displays Line Items on Rejected Status Only" type="Boolean" default="false"/> 
+    <apex:attribute name="YesStr" Description="Displays Line Items on Rejected Status Only" type="String" default="Yes"/> 
+    <html>
+        
+        <body>
+            <!--  <apex:variable value="{!Loaner}" var="loanObj"/> -->
+            <!-- Lineitems Component -->
+            <apex:outputPanel rendered="{! NOT(extensionlinesonly)}">
+                <table  border = "1">
+                    <tr bgcolor="#CCCC99"> 
+                        <th>Line #</th>
+                        <th>Part#</th>
+                        <th>Marketing P/N</th> 
+                        <th>Loaner Qty</th>
+                        <th>Loaner Price (100-999 column price)</th>
+                        <th>Production Price (ASP)</th>
+                        <th>Est Annual Qty</th>
+                        <th>SOM%</th>
+                        <th>SAM</th>
+                        <th>Line Total</th>
+                        <th>Loaner Total</th>
+                        <th>Line Status</th>
+                        <!--th>Return Required?</th-->
+                    </tr>
+                    <apex:repeat var="cx" value="{!LoanerLines}">
+                        <apex:outputPanel rendered="{!(cx.Line_Status__c!='Rejected' || rejectedHeaderStatus)}">
+                            <tr>
+                                <td >{!cx.Name}</td>
+                                <td >{!cx.Part_Number__c}</td>
+                                <td>{!cx.Marketing_P_N__c}</td>
+                                <td>{!cx.Loaner_Qty__c}</td>
+                                <td>{!cx.Loaner_Price_100_999_column_price__c}</td>
+                                <td>{!cx.Production_Price_ASP__c}</td>
+                                <td>{!cx.Est_Annual_Qty__c}</td>
+                                <td>{!cx.SOM__c}</td>
+                                <td>{!cx.SAM__c}</td>
+                                <td>{!cx.line_total__c}</td>
+                                <td>{!cx.Loaner_Total__c}</td>
+                                <td>{!cx.Line_Status__c}</td>
+                                <!--td>
+                                    <apex:outputText value="{!cx.Return_Instructions__c}" rendered="{! cx.Return_Instructions__c == 'No return'}"/>
+                                    <apex:outputText style="color:red" rendered="{! cx.Return_Instructions__c != 'No return'}" value="{!YesStr}"/>
+                                </td-->   
+                            </tr>
+                        </apex:outputPanel>
+                    </apex:repeat>
+                </table>
+                
+            </apex:outputPanel> 
+            
+            <apex:outputPanel rendered="{!extensionlinesonly}">
+                <table  border = "1">
+                    <tr bgcolor="#CCCC99"> 
+                        <th>Line #</th>
+                        <th>Part#</th>
+                        <th>Marketing P/N</th> 
+                        <th>Balance to be returned</th>
+                        <th>SO#</th>
+                        <th>Original ship date</th>
+                        <th>Number of Extensions approved before this</th>
+                        <th>Total Extended Days</th>
+                        <th>Extend To Date </th>
+                        <th>Line Status</th>
+                        
+                    </tr>
+                    <apex:repeat var="cx" value="{!LoanerLines}">
+                        <apex:outputPanel rendered="{!(cx.Line_Status__c!='Rejected' || rejectedHeaderStatus)}">
+                            <tr>
+                                <td >{!cx.Name}</td>
+                                <td >{!cx.Part_Number__c}</td>
+                                <td>{!cx.Marketing_P_N__c}</td>
+                                <td>{!cx.Loaner_Line__r.Balance_to_be_returned__c}</td>
+                                <td>{!cx.Loaner_Line__r.SO_Number__c}</td>
+                                <td>
+                                    <apex:outputText value=" {0,date,MM/dd/yyyy}">
+                                        <apex:param value="{!cx.Loaner_Line_Shipped_Date__c}"/>
+                                    </apex:outputText>
+                                </td>
+                                <td>{!cx.Loaner_Line__r.Number_of_Extensions__c}</td>
+                                <td>{!cx.Loaner_Line__r.Total_Extended_Days__c}</td>
+                                <td>
+                                    <apex:outputText value=" {0,date,MM/dd/yyyy}">
+                                        <apex:param value="{!cx.Extend_Date__c}"/>
+                                    </apex:outputText>
+                                </td>
+                                <td>{!cx.Line_Status__c}</td>
+                                
+                            </tr>
+                        </apex:outputPanel>
+                    </apex:repeat>
+                </table>
+            </apex:outputPanel>
+        </body>
+    </html>
+</apex:component>

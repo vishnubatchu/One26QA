@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reminder_Date_for_Return_Date__c</fullName>
+    <description>Copies Return Due Date to this field for posting alerts to Chatter</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Copies Return Due Date to this field for posting alerts to Chatter</inlineHelpText>
+    <label>Reminder Date for Return Date</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

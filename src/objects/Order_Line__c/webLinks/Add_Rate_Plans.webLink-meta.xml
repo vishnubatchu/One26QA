@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Add_Rate_Plans</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <height>600</height>
+    <linkType>page</linkType>
+    <masterLabel>Add Rate Plans</masterLabel>
+    <openType>sidebar</openType>
+    <page>OrderRatePlan</page>
+    <protected>false</protected>
+</WebLink>

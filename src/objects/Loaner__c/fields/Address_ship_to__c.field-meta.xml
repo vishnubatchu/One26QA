@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Address_ship_to__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Ship to Locations for Company Name Ship to</description>
+    <externalId>false</externalId>
+    <label>Location</label>
+    <lookupFilter>
+        <active>true</active>
+        <booleanFilter>((1 AND 2) OR (1 AND 3)) AND 4 AND 5 AND 6</booleanFilter>
+        <filterItems>
+            <field>Account.RecordType.DeveloperName</field>
+            <operation>equals</operation>
+            <value>Site</value>
+        </filterItems>
+        <filterItems>
+            <field>Account.ParentId</field>
+            <operation>equals</operation>
+            <valueField>$Source.Company_Name_Ship_To__c</valueField>
+        </filterItems>
+        <filterItems>
+            <field>$Source.Company_Name_Ship_To__c</field>
+            <operation>equals</operation>
+            <value></value>
+        </filterItems>
+        <filterItems>
+            <field>Account.Site_Use_Code__c</field>
+            <operation>equals</operation>
+            <value>SHIP_TO</value>
+        </filterItems>
+        <filterItems>
+            <field>Account.Site_Use_Status__c</field>
+            <operation>equals</operation>
+            <value>Active</value>
+        </filterItems>
+        <filterItems>
+            <field>Account.Org_ID__c</field>
+            <operation>equals</operation>
+            <value>2</value>
+        </filterItems>
+        <infoMessage>If a Company Ship to is selected, then, the address related to company ship to is shown by default. User can override this filter</infoMessage>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Loaners (Address)</relationshipLabel>
+    <relationshipName>ShiptoLocations</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

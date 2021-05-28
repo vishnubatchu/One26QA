@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Fault_Specification__c</fullName>
+    <externalId>false</externalId>
+    <label>Fault Specification</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>PIC_Level_2__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Defective</fullName>
+                <default>false</default>
+                <label>Defective</label>
+            </value>
+            <value>
+                <fullName>Degradation</fullName>
+                <default>false</default>
+                <label>Degradation</label>
+            </value>
+            <value>
+                <fullName>Electrical</fullName>
+                <default>false</default>
+                <label>Electrical</label>
+            </value>
+            <value>
+                <fullName>Mechanical</fullName>
+                <default>false</default>
+                <label>Mechanical</label>
+            </value>
+            <value>
+                <fullName>Optical</fullName>
+                <default>false</default>
+                <label>Optical</label>
+            </value>
+            <value>
+                <fullName>Hermetic</fullName>
+                <default>false</default>
+                <label>Hermetic</label>
+            </value>
+            <value>
+                <fullName>Packaging</fullName>
+                <default>false</default>
+                <label>Packaging</label>
+            </value>
+            <value>
+                <fullName>Product</fullName>
+                <default>false</default>
+                <label>Product</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Laser BH</controllingFieldValue>
+            <controllingFieldValue>Laser DFB</controllingFieldValue>
+            <controllingFieldValue>Laser FP</controllingFieldValue>
+            <controllingFieldValue>Laser VCSEL</controllingFieldValue>
+            <controllingFieldValue>Mechanical</controllingFieldValue>
+            <controllingFieldValue>MPD</controllingFieldValue>
+            <controllingFieldValue>Optical</controllingFieldValue>
+            <controllingFieldValue>Active Electronic Components</controllingFieldValue>
+            <controllingFieldValue>APD</controllingFieldValue>
+            <controllingFieldValue>IC</controllingFieldValue>
+            <controllingFieldValue>Laser</controllingFieldValue>
+            <controllingFieldValue>Passive Electronic Component</controllingFieldValue>
+            <controllingFieldValue>PD</controllingFieldValue>
+            <controllingFieldValue>TIA</controllingFieldValue>
+            <valueName>Defective</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Laser BH</controllingFieldValue>
+            <controllingFieldValue>Laser DFB</controllingFieldValue>
+            <controllingFieldValue>Laser FP</controllingFieldValue>
+            <controllingFieldValue>Laser VCSEL</controllingFieldValue>
+            <controllingFieldValue>MPD</controllingFieldValue>
+            <controllingFieldValue>Optical</controllingFieldValue>
+            <controllingFieldValue>Active Electronic Components</controllingFieldValue>
+            <controllingFieldValue>APD</controllingFieldValue>
+            <controllingFieldValue>IC</controllingFieldValue>
+            <controllingFieldValue>Laser</controllingFieldValue>
+            <controllingFieldValue>Passive Electronic Component</controllingFieldValue>
+            <controllingFieldValue>PD</controllingFieldValue>
+            <controllingFieldValue>TIA</controllingFieldValue>
+            <valueName>Degradation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Labelling</controllingFieldValue>
+            <controllingFieldValue>Shipping Damage</controllingFieldValue>
+            <valueName>Packaging</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Labelling</controllingFieldValue>
+            <controllingFieldValue>Shipping Damage</controllingFieldValue>
+            <valueName>Product</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Packaging</controllingFieldValue>
+            <controllingFieldValue>Package</controllingFieldValue>
+            <valueName>Hermetic</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Connector</controllingFieldValue>
+            <valueName>Electrical</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Connector</controllingFieldValue>
+            <valueName>Mechanical</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Connector</controllingFieldValue>
+            <valueName>Optical</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pricing_Start_Date_required_for_Blanket</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( TEXT(Type_of_Pricing__c) =&apos;Blanket Price Agreement&apos;, ISNULL(Pricing_Effective_Start_Date__c) )</errorConditionFormula>
+    <errorDisplayField>Pricing_Effective_Start_Date__c</errorDisplayField>
+    <errorMessage>Blanket Price Quotes must have a start date!</errorMessage>
+</ValidationRule>

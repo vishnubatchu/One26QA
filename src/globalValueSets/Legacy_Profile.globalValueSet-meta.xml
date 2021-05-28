@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Standard-Germany</fullName>
+        <default>false</default>
+        <label>Standard-Germany</label>
+    </customValue>
+    <customValue>
+        <fullName>Standard-Suzhou</fullName>
+        <default>false</default>
+        <label>Standard-Suzhou</label>
+    </customValue>
+    <customValue>
+        <fullName>Standard-Korea</fullName>
+        <default>false</default>
+        <label>Standard-Korea</label>
+    </customValue>
+    <customValue>
+        <fullName>Standard-US</fullName>
+        <default>false</default>
+        <label>Standard-US</label>
+    </customValue>
+    <customValue>
+        <fullName>Standard-Europe</fullName>
+        <default>false</default>
+        <label>Standard-Europe</label>
+    </customValue>
+    <customValue>
+        <fullName>Standard-HighYag</fullName>
+        <default>false</default>
+        <label>Standard-HighYag</label>
+    </customValue>
+    <customValue>
+        <fullName>Standard-Military</fullName>
+        <default>false</default>
+        <label>Standard-Military</label>
+    </customValue>
+    <customValue>
+        <fullName>Standard-MCubed</fullName>
+        <default>false</default>
+        <label>Standard-MCubed</label>
+    </customValue>
+    <customValue>
+        <fullName>Standard-US-CTIR</fullName>
+        <default>false</default>
+        <label>Standard-US-CTIR</label>
+    </customValue>
+    <customValue>
+        <fullName>Standard - Japan</fullName>
+        <default>false</default>
+        <label>Standard - Japan</label>
+    </customValue>
+    <customValue>
+        <fullName>Standard-Singapore</fullName>
+        <default>false</default>
+        <label>Standard-Singapore</label>
+    </customValue>
+    <customValue>
+        <fullName>User Profile 1 - Customer Service</fullName>
+        <default>false</default>
+        <label>User Profile 1 - Customer Service</label>
+    </customValue>
+    <customValue>
+        <fullName>User Profile 2 - Engineering</fullName>
+        <default>false</default>
+        <label>User Profile 2 - Engineering</label>
+    </customValue>
+    <customValue>
+        <fullName>User Profile 3 - Sales</fullName>
+        <default>false</default>
+        <label>User Profile 3 - Sales</label>
+    </customValue>
+    <customValue>
+        <fullName>User Profile 4 - Regional/Market Managers</fullName>
+        <default>false</default>
+        <label>User Profile 4 - Regional/Market Managers</label>
+    </customValue>
+    <customValue>
+        <fullName>User Profile 5 - Call Center</fullName>
+        <default>false</default>
+        <label>User Profile 5 - Call Center</label>
+    </customValue>
+    <customValue>
+        <fullName>User Profile 6 - Senior Management</fullName>
+        <default>false</default>
+        <label>User Profile 6 - Senior Management</label>
+    </customValue>
+    <customValue>
+        <fullName>User Profile 7 - IT/Support</fullName>
+        <default>false</default>
+        <label>User Profile 7 - IT/Support</label>
+    </customValue>
+    <masterLabel>Legacy Profile</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

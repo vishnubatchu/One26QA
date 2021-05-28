@@ -1,0 +1,8 @@
+<apex:page standardController="Opportunity" extensions="CloneOpportunityExtension" action="{!cloneOpp}">
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageMessages id="showmsg"></apex:pageMessages>
+            <apex:commandButton value="Cancel" action="{!Cancel}"/>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

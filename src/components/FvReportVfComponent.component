@@ -1,0 +1,249 @@
+<apex:component controller="FvReportCustomComponentController" access="global" >
+    <apex:attribute type="String" name="myRecordIdString" assignTo="{!orderlineId}" 
+                    description="Passed to controller to render vf page."/>
+    <apex:attribute type="String" name="SelectedSerialNumbers" assignTo="{!serialId}" 
+                    description="Select serial Number For Records to be displayed"/>
+      <style>
+        body {
+        font-family: "Times New Roman";
+        font-size: 13.33;
+        }
+        table ,tr {
+        border-collapse: collapse;
+        width : 100%;
+        
+        }
+        
+        table, td, th,tr {
+        border: 1px solid black;
+        }
+        table.headerfooter td{
+        border-width: 1px;
+        } 
+        
+        p.MsoHeader, li.MsoHeader, div.MsoHeader{
+        margin:0in;
+        margin-top:.0001pt;
+        mso-pagination:widow-orphan;
+        tab-stops:center 3.0in right 6.0in;
+        }
+        p.MsoFooter, li.MsoFooter, div.MsoFooter{
+        margin:0in;
+        margin-bottom:.0001pt;
+        mso-pagination:widow-orphan;
+        tab-stops:center 3.0in right 6.0in;
+        }
+        @page Section1{
+        size:8.5in 11.0in; 
+        margin:0.5in 0.5in 0.5in 0.5in;
+        mso-header-margin:0.5in;
+        mso-header:h1;
+        mso-footer:f1; 
+        mso-footer-margin:0.5in;
+        mso-paper-source:0;
+        }
+        div.Section1{
+        page:Section1;
+        }
+        /*Below is the style to prevent the repetition of header and Footer.. Cheers!!!*/
+        table#hrdftrtbl{
+        margin:0in 0in 0in 9in;
+        }        
+    </style>
+    
+    
+    <div style='mso-element:header' id="h1" >
+        <table border="0" width="100%" class="headerfooter" style="border:0px">
+            <tr>
+                <td width="60%" >
+                    <h1 style="font-family:Calibri;font-size: 30px;color:#00549E">
+                        FINISAR <br/><br/> 
+                    </h1>
+                </td>
+                
+                <td align="right" width="40%" >
+                    Final Report:   <apex:outputText value="{0,date,dd-MMM-yyyy}"> 
+                    <apex:param value="{!NOW()+ offset}" /> </apex:outputText><br/><br/>
+                </td>
+            </tr>
+            
+        </table>
+        
+    </div>
+    
+    
+    <!-- Content -->
+    <div class="Section1"><!--Section1 div starts-->
+        <h2 style="text-Align: center;">Failure Verification Report</h2>
+        <apex:pageBlock > 
+            <table>
+                <tr >
+                    <td style="font-weight: bold;background-color:#BBB1A5;" height= "20%" colspan="2">
+                        <h3 >
+                            GENERAL INFORMATION 
+                        </h3>
+                    </td>
+                    
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;padding-right: 80px;">
+                        <div>Finisar RMA </div>
+                    </td>
+                    <td style="padding-right: 80px;">
+                        <div>{!OrderlineData.order__r.PONumber} </div> 
+                    </td>
+                </tr><tr>
+                <td style="font-weight: bold; padding-right: 80px;">
+                    <div>Customer </div>
+                </td>
+                <td>
+                    <div>{!OrderlineData.order__r.Account.name} </div> 
+                </td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold; padding-right: 80px;">
+                        <div>Finisar Part Number </div>
+                    </td>
+                    <td>
+                        <div>{!OrderlineData.Part_Number__r.name} </div> 
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold; padding-right: 80px;">
+                        <div>Finisar Part Description</div>
+                    </td>
+                    <td>
+                        <div>{!OrderlineData.Marketing_Part__c} </div> 
+                    </td>
+                </tr>
+                
+                <tr>   
+                    <td style="font-weight: bold;padding-right: 80px;">
+                        <div>End Customer </div>
+                    </td>
+                    <td>
+                        <div>{!OrderlineData.order__r.End_Customer__c} </div> 
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;padding-right: 80px;">
+                        <div>Failure verification (FV) Report Date</div>
+                    </td>
+                    <td>
+                        <div> <apex:outputText value="{0,date,dd-MMM-yyyy}"> 
+                            <apex:param value="{!NOW() + offset}" /> </apex:outputText></div> 
+                    </td>
+                </tr><tr>
+                <td style="font-weight: bold;padding-right: 80px;">
+                    <div>Received Date</div>
+                </td>
+                <td>
+                    <div>
+                        <apex:outputText value="{0,date,dd-MMM-yyyy}"> 
+                            <apex:param value="{!OrderlineData.RMA_Received_Date__c}" /> </apex:outputText>
+                    </div> 
+                </td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;padding-right: 80px;">
+                        <div>Analysis by</div>
+                    </td>
+                    <td>
+                        <div>{!OrderlineData.Owner.name} </div> 
+                    </td>
+                    
+                </tr>
+            </table>
+            <br/>
+            <table class="innerTable">
+                <tr ><td style="font-weight: bold;background-color:#BBB1A5;" colspan="1">
+                    <h3 >
+                        SUMMARY  
+                    </h3>
+                    </td>
+                </tr>
+                <tr><td>
+                    <table class="table_outer" border="1" cellspacing="0" cellpadding="0" style="width : 100%;">
+                        <tr bgcolor="#CCCC99">
+                            
+                            <td class="inner_td" >
+                                <p class="MsoNormal" style="text-align: center; "><b>Serial Number name</b></p>
+                            </td>
+                            <td class="inner_td">
+                                <p class="MsoNormal" style="text-align: center; "><b>FV/FA Name</b></p>
+                            </td>
+                            <td class="inner_td">
+                                <p class="MsoNormal" style="text-align: center; "><b>Owner</b></p>
+                            </td>
+                            <td class="inner_td">
+                                <p class="MsoNormal" style="text-align: center; "><b>FV Findings</b></p>
+                            </td>
+                            <td class="inner_td">
+                                <p class="MsoNormal" style="text-align: center; "><b>Serial Number Date Code</b></p>
+                            </td>
+                            <!--td class="inner_td" style="width: 20%">
+<p class="MsoNormal" style="text-align: center; "><b>Final Functional Test</b></p>
+</td-->
+                            <td class="inner_td">
+                                <p class="MsoNormal" style="text-align: center; "><b>VMI</b></p>
+                            </td>
+                            <td class="inner_td">
+                                <p class="MsoNormal" style="text-align: center; "><b>Temp Bert</b></p>
+                            </td>
+                            <td class="inner_td">
+                                <p class="MsoNormal" style="text-align: center; "><b>Result</b></p>
+                            </td>
+                        </tr>
+                        
+                        <apex:repeat value="{!FVDetail}" var="item" >
+                            <tr bgcolor="#F7F7E7">
+                                <td class="datarows">{!item.Serial_Number__r.Name}</td>
+                                <td class="datarows">{!item.FA_FV__r.Name}</td>
+                                <td class="datarows">{!item.FA_FV__r.Owner.Name}</td>
+                                <td class="datarows">{!item.FA_FV__r.FV_Findings__c}</td>
+                                <td class="datarows">{!item.Serial_Number__r.Date_Code__c}</td>
+                                <!--td class="datarows">{!item.FA_FV__r.Final_Functional_Comments__c} </td-->
+                                <td class="datarows">{!item.FA_FV__r.VMI__c} </td>
+                                <td class="datarows">{!item.FA_FV__r.Temp_BERT__c} </td>
+                                <!--td class="datarows">{!item.FA_FV__r.Final_Function_Test__c +'-'+ item.FA_FV__r.Final_Functional_Comments__c} </td-->
+                                <td class="datarows">{! if(item.FA_FV__r.Final_Functional_Comments__c != null, item.FA_FV__r.Final_Function_Test__c+'-'+ item.FA_FV__r.Final_Functional_Comments__c, item.FA_FV__r.Final_Function_Test__c)} </td>
+                                
+                            </tr>
+                            
+                        </apex:repeat>
+                        
+                    </table>
+                    </td>
+                </tr>
+            </table>
+            <table>
+            <apex:repeat value="{!FAFVData}" var="FARec">
+                <tr>
+                <apex:pageBlockTable value="{!FARec.Steps__r}" var="item"  align="left" cellpadding="5px" cellspacing="1px" >
+                    
+                    <apex:facet name="header">
+                        <tr>
+                            <td  style="font-weight: bold;background-color:#BBB1A5;" colspan="1"> FAILURE VERIFICATION DETAILS </td>
+                            <td  style="font-weight: bold;background-color:#BBB1A5;" colspan="1">S/Ns:{!FAtoSNMap[FARec.id]}</td>
+                        </tr>
+                        
+                    </apex:facet>
+                    <tr>
+                        <apex:column >
+                            <apex:outputField value="{!item.name}" style="border:0px"/>
+                            <apex:facet name="header"><p style="font-weight: bold;text-align:left;">FV Steps</p></apex:facet>
+                        </apex:column>
+                        <apex:column >
+                            <apex:outputText value="{!item.FA_Steps_Description_FA_Steps__c}" escape="false" style="border:0px" />
+                            <apex:facet name="header"><p style="font-weight: bold;text-align:left;">
+                                Results
+                                </p></apex:facet>
+                        </apex:column>
+                    </tr>
+                </apex:pageBlockTable>
+                </tr>
+            </apex:repeat>
+            </table>
+        </apex:pageBlock>
+    </div>    
+</apex:component>

@@ -1,0 +1,19 @@
+<aura:component implements="flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes,force:lightningQuickAction,force:hasRecordId,flexipage:availableForRecordHome" controller="FileUploadController" access="global" >
+    <aura:attribute name="recID" type= "String" />    
+    <aura:handler name="init" action="{!c.doInit}" value="{!this}" description="Call doInit function on component load to get picklist values"/>
+    <aura:attribute name="showLoadingSpinner" type="boolean" default="false" />
+    <aura:attribute name="fileName" type="String" default="No File Selected.." />
+    <div class="slds-box " style="max-width: 400px;background-color:white">
+        <div class="slds-media slds-media--center slds-has-flexi-truncate" >
+        <lightning:input aura:id="fileId"  onchange="{!c.handleFilesChange}" type="file" name="file" accept= '.csv' label="Upload Serial Number" multiple="true"/>
+        </div>
+            <div aura:id='showMsg' >{!v.fileName} </div> 
+        <!--use aura:if for show-hide the loading spinner image--> 
+        <aura:if isTrue="{!v.showLoadingSpinner}">
+            <div  class="slds-text-body_small slds-text-color_error">Uploading... 
+                <img src="/auraFW/resources/aura/images/spinner.gif" class="spinner-img" alt="Loading"/>'
+            </div>
+        </aura:if>
+        <button class="slds-button slds-button_brand" onclick="{!c.doSave}">Upload Serial Number</button>
+        </div>
+</aura:component>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Qty_is_not_more_than_Loaner_line_Qty</fullName>
+    <active>true</active>
+    <errorConditionFormula>Return_Quantity__c &lt;    Dispostion_Transfer_Quantity__c</errorConditionFormula>
+    <errorMessage>Total Disposition/Transfer Quantity should be less than Return Quantity.</errorMessage>
+</ValidationRule>

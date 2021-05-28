@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Latest_Laser_Update__c</fullName>
+    <description>Most-recent save date on any Equipment Owned object under this Account</description>
+    <externalId>false</externalId>
+    <label>Latest Laser Update</label>
+    <summarizedField>Equipment_Owned__c.LastModifiedDate</summarizedField>
+    <summaryForeignKey>Equipment_Owned__c.Account__c</summaryForeignKey>
+    <summaryOperation>max</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

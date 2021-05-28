@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Business_Unit_Name__c</fullName>
+    <description>This field is populated using a field update and is updated to the parent Product: Business Unit Name field when Created By field is not equal to NULL (essentially, upon record creation), whenever the record is saved.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This field is populated using a field update and is updated to the parent Product: Business Unit Name field whenever the record is saved.</inlineHelpText>
+    <label>Business Unit Name</label>
+    <length>40</length>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

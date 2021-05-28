@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>In_Use_Laser_Systems__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Roll-up of &quot;In Use&quot; Laser Systems at the Account.  (Note: Duplicate names indicate multiple In Use Lasers.)</inlineHelpText>
+    <label>In Use Laser Systems</label>
+    <length>32768</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

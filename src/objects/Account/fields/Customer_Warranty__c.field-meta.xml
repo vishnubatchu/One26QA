@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Customer_Warranty__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Warranty is specific to this account and may not apply to all underneath accounts in the hierarchy</inlineHelpText>
+    <label>Customer Warranty (In Months)</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

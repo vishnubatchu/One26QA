@@ -1,0 +1,14 @@
+<aura:component Implements="flexipage:availableForRecordHome,force:appHostable,force:lightningQuickActionWithoutHeader,force:hasRecordId" 
+                controller="QuoteNewButtonController" access="global">
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="errorMessage" type ="String" default=""/>
+    <aura:attribute name="QuoteInstance" type="Quote" default="{ 'sobjectType': 'Quote' }"/>
+    <div>
+        <aura:if isTrue="{!v.errorMessage != null}">
+            <label class="slds-text-align_center slds-text-color_error" >{!v.errorMessage}</label>
+        </aura:if>
+    </div>
+    <div id = "spinnerDiv">
+        <lightning:spinner variant="brand" size = "large" aura:id = "sps" class="slds-hide"/>
+    </div>
+</aura:component>

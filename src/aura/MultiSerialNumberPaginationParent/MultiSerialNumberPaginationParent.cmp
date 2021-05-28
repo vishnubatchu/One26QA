@@ -1,0 +1,54 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" controller ="FAFVCustomUI" access="global" >
+    <aura:attribute name='FAFVDetail' type='FA_FV_Detail__c' default="{'Serial_Number__c' :''}" />
+    <aura:attribute name="FAFVDetailslist" type="FA_FV_Detail__c[]"/>
+    
+    <!--pagiation  starts required attributes to call pagination component-->
+    <aura:attribute name="maxLength" 	 type="integer" default="0" />     
+    <aura:attribute name="startPoint" 		type="integer" default="0"/>
+    <aura:attribute name="endPoint" 	   type="integer" default="10"/>
+    <aura:attribute name="PageLimit" 	   type="integer" default="10"/>
+    <aura:attribute name="ButtonLimit"    type="integer" default="10"/>    
+    <!---->
+     <aura:attribute name="recID" type="string"/> 
+    <aura:attribute name="orderIDs" type="string"/>
+    
+    
+    <aura:attribute name="Total" 				type="integer" default="0" />
+    <aura:attribute name="currentPage" 		type="integer" default="1"/>
+    <aura:attribute name="lastPage"			  type="integer" />    
+    <aura:attribute name="preFlag" 			  type="Boolean" default="true"/>
+    <aura:attribute name="nextFlag" 		 type="Boolean" default="false"/>
+    
+    <!--pagiation  ends-->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/> 
+    <aura:handler name='setStartandEndPointEvent' event='c:navigationPageEvent' action='{!c.setStartandEndPoint}'/>
+  
+
+     
+        <aura:iteration items="{!v.FAFVDetailslist}" var="FAFVDetail" indexVar="index" start="{!v.startPoint}" end="{!v.endPoint}">
+     	
+         
+        <c:AddMultiSerialNoChild serialNoInstance ='{!FAFVDetail}'  rowIndex="{!index}"/>
+        
+          
+            
+        </aura:iteration>
+    
+		  			  
+        <tr>      
+          <td></td>
+             <td></td>
+                <aura:if isTrue="{!((v.FAFVDetailslist.length > 0) &amp;&amp; (v.PageLimit > 0 ) &amp;&amp; (v.ButtonLimit > 0 ) )  }">
+                    <c:MultiSerialNumberPagination PageLimit="{!v.PageLimit}" 
+                                                   ButtonLimit="{!v.ButtonLimit}"
+                                                   maxLength="{!v.FAFVDetailslist.length}"
+                                                   startPoint="{!v.startPoint}"
+                                                   endPoint="{!v.endPoint}"
+                                                   ObjectList ="{!FAFVDetailslist}"
+                                                   aura:id='paginationfooter'           />
+                </aura:if>
+    </tr>    
+                 
+     
+    
+</aura:component>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Oppty_Revenue_Validation_rule</fullName>
+    <active>true</active>
+    <description>Oppty Type = Replacement, Next 12 Months Revenue should be Empty</description>
+    <errorConditionFormula>AND( NOT(ISBLANK( Next_12_Months_Revenue__c )) , ISPICKVAL( Type , &apos;Replacement&apos;) )</errorConditionFormula>
+    <errorDisplayField>Next_12_Months_Revenue__c</errorDisplayField>
+    <errorMessage>Next 12 Months Revenue should be Null for Replacement Opportunities</errorMessage>
+</ValidationRule>

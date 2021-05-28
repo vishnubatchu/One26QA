@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Min_Schedule_Date_from_Product__c</fullName>
+    <description>Created by EMD.</description>
+    <externalId>false</externalId>
+    <label>Min Schedule Date from Product</label>
+    <summarizedField>OpportunityLineItem.Min_Schedule_Date_Product__c</summarizedField>
+    <summaryForeignKey>OpportunityLineItem.OpportunityId</summaryForeignKey>
+    <summaryOperation>min</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

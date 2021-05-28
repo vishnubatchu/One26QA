@@ -1,0 +1,223 @@
+<aura:component controller="LoanerApprovalController" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	<aura:attribute name="LoanerId" type="String"/> 
+    <aura:attribute name="RequiredLoaner" type="Loaner__c"/>
+    <aura:attribute name="LoanerLine" type="Loaner_Line__c"/> 
+    <aura:attribute name="LeMail" type="String"/>
+    <aura:attribute name="LOperationResult" type="String"/>
+   	<aura:handler name="init" value="{!this}" action="{!c.doInit}" /> 
+   
+    <lightning:card iconName="standard:approval" title="Loaner Data" >
+    </lightning:card>
+    
+      <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+            <thead>
+                  <tr class="slds-line-height_reset">
+                       <th class="slds-text-title_caps" scope="col">
+                        <div class="slds-truncate" title="RequestId">RequestId</div>
+                      </th>
+                      <th class="slds-text-title_caps" scope="col">
+                        <div class="slds-truncate" title="LoanerNum">LoanerNum</div>
+                      </th>
+                      <th class="slds-text-title_caps" scope="col">
+                        <div class="slds-truncate" title="Loaner Status">Loaner Status</div>
+                      </th>
+                       <th class="slds-text-title_caps" scope="col">
+                        <div class="slds-truncate" title="Eco Number">Eco Number</div>
+                      </th>
+                      <th class="slds-text-title_caps" scope="col">
+                        <div class="slds-truncate" title="Loaner_Category">Loaner Category</div>
+                      </th>
+                       <th class="slds-text-title_caps" scope="col">
+                        <div class="slds-truncate" title="Opportunity">Opportunity</div>
+                      </th>
+                      <th class="slds-text-title_caps" scope="col">
+                        <div class="slds-truncate" title="Opportunity_Type">Opportunity Type</div>
+                      </th>
+                      <th class="slds-text-title_caps" scope="col">
+                        <div class="slds-truncate" title="LoanerDurationInDays">Loaner Duration</div>
+                      </th>
+                      <th class="slds-text-title_caps" scope="col">
+                        <div class="slds-truncate" title="Company_Name">Company Name</div>
+                      </th>
+                      
+              	 </tr>    
+              </thead>
+            
+        
+            <tr class="slds-hint-parent">
+                      <th data-label="LoanerName" scope="row">
+                        <div class="slds-truncate" title="{!v.RequiredLoaner.Name}" >
+                            <!-- <a onclick="{!c.QuoteSelected}" data-recordId="{!v.RequiredLoaner.Id}"> to store Id in case of multiple Quotes-->
+                				{!v.RequiredLoaner.Name}
+            				<!--	</a>-->
+                          </div>
+                      </th>
+                      <td data-label="LoanerNum">
+                        <div class="slds-truncate" title="{!v.RequiredLoaner.Request__c}">{!v.RequiredLoaner.Request__c}</div>
+                      </td>
+                      <td data-label="LoanerStaus">
+                        <div class="slds-truncate" title="{!v.RequiredLoaner.Status_Approval__c}">{!v.RequiredLoaner.Status_Approval__c}</div>
+                      </td>
+                      <td data-label="Eco Number">
+                        <div class="slds-truncate" title="{!v.RequiredLoaner.ECO_Number__c}">{!v.RequiredLoaner.ECO_Number__c}</div>
+                      </td>
+                	 <td data-label="Loaner Category">
+                        <div class="slds-truncate" title="{!v.RequiredLoaner.Loaner_Category__c}">{!v.RequiredLoaner.Loaner_Category__c}</div>
+                      </td>
+                	 <td data-label="Opportunity">
+                        <div class="slds-truncate" title="{!v.RequiredLoaner.Opportunity__r.Name}">{!v.RequiredLoaner.Opportunity__r.Name}</div>
+                      </td>
+                	 <td data-label="OpptyType">
+                        <div class="slds-truncate" title="{!v.RequiredLoaner.Opportunity_Type__c}">{!v.RequiredLoaner.Opportunity_Type__c}</div>
+                      </td>
+                	<td data-label="LoanerDuration">
+                        <div class="slds-truncate" title="{!v.RequiredLoaner.Loaner_Duration_In_Days__c}">{!v.RequiredLoaner.Loaner_Duration_In_Days__c}</div>
+                      </td>
+                	<td data-label="CompanyName">
+                        <div class="slds-truncate" title="{!v.RequiredLoaner.Company_Name_End_Cust__r.Name}">{!v.RequiredLoaner.Company_Name_End_Cust__r.Name}</div>
+                      </td>
+                </tr>
+  
+        </table>
+    
+    
+    <lightning:card title="LoanerLineItems">
+            
+                <form class="slds-form--inline">  
+
+                  <div class="slds-text-color_error" title="OperResult">{!v.LOperationResult}</div>
+                  
+                  <div class="slds-form-element">
+                   <label class="slds-form-element__label" for="email">Email</label>
+                   <lightning:input name="input8" value="{! v.LeMail }" placeholder="Email for Reassignment"/>
+                  </div>
+                   <div class="slds-form-element">
+                    <button type="button" class="slds-button slds-button--brand" onclick="{!c.RassignSelected}">Reassign LineItems</button>
+                  </div>
+                  <div class="slds-form-element">
+                    <button type="button" class="slds-button slds-button--brand" onclick="{!c.ApproveSelected}">Approve Selected</button>
+                  </div>
+                  <div class="slds-form-element">
+                    <button type="button" class="slds-button slds-button--brand" onclick="{!c.RejectSelected}">Reject Selected</button>
+                  </div>
+					</form>  
+					
+               
+             </lightning:card> 
+    
+             <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+              <thead>
+                <tr class="slds-line-height_reset">
+                     <th style="width:3.25rem;" class="slds-text-align--right">
+                           <div class="slds-form-element">
+                              <div class="slds-form-element__control">
+                                 <label class="slds-checkbox">
+                                    <!--header checkbox for select all-->
+                                    <ui:inputCheckbox aura:id="box3" change="{!c.selectAll}"/>
+                                    <span class="slds-checkbox--faux"></span>
+                                    <span class="slds-form-element__label text"></span>
+                                 </label>
+                              </div>
+                           </div>
+            			</th>
+                 
+                  
+                  <th class="slds-text-title_caps" scope="col">
+                    <div class="slds-truncate" title="Line_Name">Line Name</div>
+                  </th>
+                  <th class="slds-text-title_caps" scope="col">
+                    <div class="slds-truncate" title="Product Name">Product Name</div>
+                  </th>
+                  <th class="slds-text-title_caps" scope="col">
+                      <div class="slds-truncate" title="Marketing P/N">Marketing P/N</div>
+                  </th>
+                  <th class="slds-text-title_caps" scope="col">
+                      <div class="slds-truncate" title="Loaner Qty">Loaner Qty</div>
+                  </th>
+                  <th class="slds-text-title_caps" scope="col">
+                      <div class="slds-truncate" title="Loaner Price">Loaner Price</div>
+                  </th>
+                    <th class="slds-text-title_caps" scope="col">
+                      <div class="slds-truncate" title="Production Price">Production Price</div>
+                  </th>
+                 <th class="slds-text-title_caps" scope="col">
+                      <div class="slds-truncate" title="Est. Annual Qty">Est. Annual Qty</div>
+                  </th> 
+                     <th class="slds-text-title_caps" scope="col">
+                      <div class="slds-truncate" title="SOM%">SOM%</div>
+                  </th> 
+                     <th class="slds-text-title_caps" scope="col">
+                      <div class="slds-truncate" title="SAM">SAM</div>
+                  </th> 
+                     <th class="slds-text-title_caps" scope="col">
+                      <div class="slds-truncate" title="Line Total">Line Total</div>
+                  </th> 
+                     <th class="slds-text-title_caps" scope="col">
+                      <div class="slds-truncate" title="Loaner Total">Loaner Total</div>
+                  </th> 
+                     <th class="slds-text-title_caps" scope="col">
+                      <div class="slds-truncate" title="Line Status">Line Status</div>
+                  </th> 
+                    
+                </tr>
+              </thead>
+                 
+              <tbody>
+                  <aura:iteration items="{!v.RequiredLoaner.Loaner_Lines__r}" var="LoanerLine">
+                <tr class="slds-hint-parent">
+                    <td scope="row" class="slds-text-align--right" style="width:3.25rem;">
+                  <div class="slds-form-element">
+                     <div class="slds-form-element__control">
+                        <label class="slds-checkbox">
+                           <ui:inputCheckbox text="{!LoanerLine.Id}" aura:id="boxPack" value=""/>
+                           <span class="slds-checkbox--faux"></span>
+                           <span class="slds-form-element__label text"></span>
+                        </label>
+                     </div>
+                  </div>
+               </td>
+                
+                  
+                  <td data-label="Quantity">
+                    <div class="slds-truncate" title="{!LoanerLine.Name}">{!LoanerLine.Name}</div>
+                  </td>
+                   <td data-label="Product Name">
+                    <div class="slds-truncate" title="{!LoanerLine.Product__r.Name}">{!LoanerLine.Product__r.Name}</div>
+                  </td>
+                    <td data-label="Marketing P/N">
+                    <div class="slds-truncate" title="{!LoanerLine.Marketing_P_N__c}">{!LoanerLine.Marketing_P_N__c}</div>
+                  </td>
+                  <td data-label="Loaner Qty">
+                    <div class="slds-truncate" title="{!LoanerLine.Loaner_Qty__c}">{!LoanerLine.Loaner_Qty__c}</div>
+                  </td>
+                  <td data-label="Loaner Price">
+                    <div class="slds-truncate" title="{!LoanerLine.Loaner_Price_100_999_column_price__c}">{!LoanerLine.Loaner_Price_100_999_column_price__c}</div>
+                  </td>
+                  <td data-label="Production Price">
+                    <div class="slds-truncate" title="{!LoanerLine.Production_Price_ASP__c}">{!LoanerLine.Production_Price_ASP__c}</div>
+                  </td>
+                  <td data-label="Est. Annual Qty">
+                    <div class="slds-truncate" title="{!LoanerLine.Est_Annual_Qty__c}">{!LoanerLine.Est_Annual_Qty__c}</div>
+                  </td>   
+                 <td data-label="SOM%">
+                    <div class="slds-truncate" title="{!LoanerLine.SOM__c}">{!LoanerLine.SOM__c}</div>
+                  </td>  
+                    <td data-label="SAM">
+                    <div class="slds-truncate" title="{!LoanerLine.SAM__c}">{!LoanerLine.SAM__c}</div>
+                  </td>
+                    <td data-label="Line Total">
+                    <div class="slds-truncate" title="{!LoanerLine.Line_Total__c}">{!LoanerLine.Line_Total__c}</div>
+                  </td>
+                    <td data-label="Loaner Total">
+                    <div class="slds-truncate" title="{!LoanerLine.Loaner_Total__c}">{!LoanerLine.Loaner_Total__c}</div>
+                  </td>
+                    <td data-label="Line Status">
+                    <div class="slds-truncate" title="{!LoanerLine.Line_Status__c}">{!LoanerLine.Line_Status__c}</div>
+                  </td>
+           
+                 </tr>
+                </aura:iteration>
+              </tbody>
+            </table>
+
+</aura:component>

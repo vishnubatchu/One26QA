@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ITAR_Language__c</fullName>
+    <description>ITAR language to be inserted into customer quotation template via Conga (field will not appear on quote page layout)</description>
+    <externalId>false</externalId>
+    <label>ITAR Language</label>
+    <length>32768</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

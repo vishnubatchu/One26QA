@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Requested_Service__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>What is the requested service for this RMA?</inlineHelpText>
+    <label>Requested Service</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Failure Verification Only</fullName>
+                <default>false</default>
+                <label>Failure Verification Only</label>
+            </value>
+            <value>
+                <fullName>Failure Analysis</fullName>
+                <default>false</default>
+                <label>Failure Analysis</label>
+            </value>
+            <value>
+                <fullName>Rework / Upgrade (No FA)</fullName>
+                <default>false</default>
+                <label>Rework / Upgrade (No FA)</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Loaner Return</fullName>
+                <default>false</default>
+                <label>Loaner Return</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

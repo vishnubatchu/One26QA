@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Loss_to_Details_required_Oppty_Lost</fullName>
+    <active>true</active>
+    <description>When closed-lost, the lost to and lost reason fields should be required fields on the opportunity</description>
+    <errorConditionFormula>TEXT(StageName) = &apos;Lost/Project Cancelled&apos; &amp;&amp; (ISPICKVAL(Lost_To__c, &apos;&apos;) || ISPICKVAL( Lost_Cancelled_Rejected_Reason__c ,&apos;&apos; ))</errorConditionFormula>
+    <errorMessage>&apos;Lost To&apos; and &apos;Lost Cancelled Rejected Reason&apos;  cannot be blank.</errorMessage>
+</ValidationRule>

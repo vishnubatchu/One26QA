@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Conversion_Qty_Non_Negative_Validation</fullName>
+    <active>true</active>
+    <description>Conversion Qty Should be greater than zero</description>
+    <errorConditionFormula>Conversion_Qty__c &lt;= 0</errorConditionFormula>
+    <errorMessage>Conversion Quantity should be greater than zero</errorMessage>
+</ValidationRule>

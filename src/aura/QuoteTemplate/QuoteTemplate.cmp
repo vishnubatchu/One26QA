@@ -1,0 +1,13 @@
+<aura:component implements="flexipage:availableForAllPageTypes" controller="QuoteTemplateController" >
+    <aura:attribute name="qteId" type="String" default="0Q02f0000004VubCAE" />
+    <aura:attribute name="qteRec" type="Quote" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <div>
+        <table>
+            <tr>
+                <td>Quote Name : </td><td>{! v.qteRec.Name}</td>
+                <td>Account : </td><td>{! v.qteRec.Account__c}</td>
+            </tr>
+        </table>
+    </div>
+</aura:component>

@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Distance__c</fullName>
+    <externalId>false</externalId>
+    <label>Distance</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1 E</fullName>
+                <default>false</default>
+                <label>1 E</label>
+            </value>
+            <value>
+                <fullName>1-24 E</fullName>
+                <default>false</default>
+                <label>1-24 E</label>
+            </value>
+            <value>
+                <fullName>1.4 KM</fullName>
+                <default>false</default>
+                <label>1.4 KM</label>
+            </value>
+            <value>
+                <fullName>10 KM</fullName>
+                <default>false</default>
+                <label>10 KM</label>
+            </value>
+            <value>
+                <fullName>100 M</fullName>
+                <default>false</default>
+                <label>100 M</label>
+            </value>
+            <value>
+                <fullName>100KM</fullName>
+                <default>false</default>
+                <label>100KM</label>
+            </value>
+            <value>
+                <fullName>120 KM</fullName>
+                <default>false</default>
+                <label>120 KM</label>
+            </value>
+            <value>
+                <fullName>15 KM</fullName>
+                <default>false</default>
+                <label>15 KM</label>
+            </value>
+            <value>
+                <fullName>150M</fullName>
+                <default>false</default>
+                <label>150M</label>
+            </value>
+            <value>
+                <fullName>160 KM</fullName>
+                <default>false</default>
+                <label>160 KM</label>
+            </value>
+            <value>
+                <fullName>2 KM</fullName>
+                <default>false</default>
+                <label>2 KM</label>
+            </value>
+            <value>
+                <fullName>20 KM</fullName>
+                <default>false</default>
+                <label>20 KM</label>
+            </value>
+            <value>
+                <fullName>200 KM</fullName>
+                <default>false</default>
+                <label>200 KM</label>
+            </value>
+            <value>
+                <fullName>200 M</fullName>
+                <default>false</default>
+                <label>200 M</label>
+            </value>
+            <value>
+                <fullName>2000+ E</fullName>
+                <default>false</default>
+                <label>2000+ E</label>
+            </value>
+            <value>
+                <fullName>220 M</fullName>
+                <default>false</default>
+                <label>220 M</label>
+            </value>
+            <value>
+                <fullName>25-300 E</fullName>
+                <default>false</default>
+                <label>25-300 E</label>
+            </value>
+            <value>
+                <fullName>275 M</fullName>
+                <default>false</default>
+                <label>275 M</label>
+            </value>
+            <value>
+                <fullName>30 KM</fullName>
+                <default>false</default>
+                <label>30 KM</label>
+            </value>
+            <value>
+                <fullName>30 M</fullName>
+                <default>false</default>
+                <label>30 M</label>
+            </value>
+            <value>
+                <fullName>300 M</fullName>
+                <default>false</default>
+                <label>300 M</label>
+            </value>
+            <value>
+                <fullName>300-800 E</fullName>
+                <default>false</default>
+                <label>300-800 E</label>
+            </value>
+            <value>
+                <fullName>4 KM</fullName>
+                <default>false</default>
+                <label>4 KM</label>
+            </value>
+            <value>
+                <fullName>40 KM</fullName>
+                <default>false</default>
+                <label>40 KM</label>
+            </value>
+            <value>
+                <fullName>50 KM</fullName>
+                <default>false</default>
+                <label>50 KM</label>
+            </value>
+            <value>
+                <fullName>50 M</fullName>
+                <default>false</default>
+                <label>50 M</label>
+            </value>
+            <value>
+                <fullName>500 M</fullName>
+                <default>false</default>
+                <label>500 M</label>
+            </value>
+            <value>
+                <fullName>550 M</fullName>
+                <default>false</default>
+                <label>550 M</label>
+            </value>
+            <value>
+                <fullName>800-2000 E</fullName>
+                <default>false</default>
+                <label>800-2000 E</label>
+            </value>
+            <value>
+                <fullName>80KM OR LH</fullName>
+                <default>false</default>
+                <label>80KM OR LH</label>
+            </value>
+            <value>
+                <fullName>OTHER</fullName>
+                <default>false</default>
+                <label>OTHER</label>
+            </value>
+            <value>
+                <fullName>&lt;25</fullName>
+                <default>false</default>
+                <label>&lt;25</label>
+            </value>
+            <value>
+                <fullName>2000+</fullName>
+                <default>false</default>
+                <label>2000+</label>
+            </value>
+            <value>
+                <fullName>25-5300</fullName>
+                <default>false</default>
+                <label>25-5300</label>
+            </value>
+            <value>
+                <fullName>300-800</fullName>
+                <default>false</default>
+                <label>300-800</label>
+            </value>
+            <value>
+                <fullName>80 KM</fullName>
+                <default>false</default>
+                <label>80 KM</label>
+            </value>
+            <value>
+                <fullName>800-2000</fullName>
+                <default>false</default>
+                <label>800-2000</label>
+            </value>
+            <value>
+                <fullName>150 M</fullName>
+                <default>false</default>
+                <label>150 M</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

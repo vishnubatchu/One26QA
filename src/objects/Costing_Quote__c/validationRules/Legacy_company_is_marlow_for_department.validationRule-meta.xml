@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Legacy_company_is_marlow_for_department</fullName>
+    <active>true</active>
+    <description>if the user&apos;s legacy company is Marlow department cannot be null</description>
+    <errorConditionFormula>AND(  TEXT( $User.Legacy_Company__c) = &apos;Marlow&apos;,  ISBLANK( TEXT(Department__c) ) )</errorConditionFormula>
+    <errorDisplayField>Department__c</errorDisplayField>
+    <errorMessage>Department cannot be null if the user&apos;s legacy company is Marlow</errorMessage>
+</ValidationRule>

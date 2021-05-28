@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Loaner_Line_Return_Quantity_Validation</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(   NOT(ISBLANK(Shipped_Date__c))
+, Loaner_Qty__c &lt;  Total_Return_Quantity__c)</errorConditionFormula>
+    <errorMessage>Loaner Qty Should always greater or equal to  Return Quantity</errorMessage>
+</ValidationRule>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Standard_Cost__c</fullName>
+    <description>To be populated from product record via Workflow-triggered field update.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Standard Cost used for margin calc on this specific Opportunity (defaults from Product record if left blank)</inlineHelpText>
+    <label>Standard Cost</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <type>Currency</type>
+</CustomField>

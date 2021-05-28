@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Zero_Dollar_Orders</fullName>
+    <columns>ORDERS.ORDER_NUMBER</columns>
+    <columns>ORDER.PO_NUMBER</columns>
+    <columns>ORDERS.TYPE</columns>
+    <columns>ORDERS.EFFECTIVE_DATE</columns>
+    <columns>Oracle_Status__c</columns>
+    <columns>SALES.ACCOUNT.NAME</columns>
+    <columns>Loaner__c</columns>
+    <columns>Admin_Validation__c</columns>
+    <columns>Loaner_Admin_Comments__c</columns>
+    <columns>Order_Amount__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Admin_Validation__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <filters>
+        <field>ORDER.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Order.Sales_Order</value>
+    </filters>
+    <filters>
+        <field>ORDERS.TYPE</field>
+        <operation>equals</operation>
+        <value>F-SHIPMENT-SALE,F-SHIPMENT-SAMPLE/DEMO,F-FIRST-ARTICLE-SAMPLE/DEMO,F-FIRST-ARTICLE-SALE,F-SHIPMENT-SALE-QUAL,F-SHIPMENT-QUAL-SAMPLE/DEMO</value>
+    </filters>
+    <filters>
+        <field>Order_Amount__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <label>Zero Dollar Sales Orders</label>
+    <sharedTo>
+        <role>Sales_Admin</role>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Loaner_Duration__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>SVP approval needed if over 180 days or for &quot;No Return&quot; sample request.</inlineHelpText>
+    <label>Loaner Duration</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Loaner_Duration</valueSetName>
+    </valueSet>
+</CustomField>

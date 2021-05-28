@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Fixed_Firm_Quote_Amount__c</fullName>
+    <description>Fill out the quote amount for approvals</description>
+    <externalId>false</externalId>
+    <label>Highest Firm/Fixed Quote USD Amount</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Currency</type>
+</CustomField>

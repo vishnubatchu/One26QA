@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HY_require_Product_Line</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+TEXT( Segment__c ) = &quot;HighYag&quot;,
+ISBLANK(TEXT( Product_Line__c ))
+)</errorConditionFormula>
+    <errorDisplayField>Product_Line__c</errorDisplayField>
+    <errorMessage>You must select the Highyag Product Line</errorMessage>
+</ValidationRule>

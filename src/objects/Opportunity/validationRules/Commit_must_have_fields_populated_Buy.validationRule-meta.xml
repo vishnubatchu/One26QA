@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Commit_must_have_fields_populated_Buy</fullName>
+    <active>true</active>
+    <description>When FCST category commit is selected the Buy location must be populated on the account</description>
+    <errorConditionFormula>ISPICKVAL( ForecastCategoryName ,&quot;Commit&quot;) &amp;&amp;  ISBLANK( Account.Buy_Location__c )  &amp;&amp; ISPICKVAL($User.Legacy_Company__c,&apos;Marlow&apos;)</errorConditionFormula>
+    <errorMessage>The account on this opportunity, must have a Buy Location.</errorMessage>
+</ValidationRule>

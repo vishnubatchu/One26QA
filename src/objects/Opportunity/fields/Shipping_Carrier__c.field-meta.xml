@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Shipping_Carrier__c</fullName>
+    <externalId>false</externalId>
+    <label>Shipping Carrier</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>FedEx Priority 1</fullName>
+                <default>false</default>
+                <label>FedEx Priority 1</label>
+            </value>
+            <value>
+                <fullName>FedEx Priority 2</fullName>
+                <default>false</default>
+                <label>FedEx Priority 2</label>
+            </value>
+            <value>
+                <fullName>FedEx SAT First</fullName>
+                <default>false</default>
+                <label>FedEx SAT First</label>
+            </value>
+            <value>
+                <fullName>FedEx SAT Priority</fullName>
+                <default>false</default>
+                <label>FedEx SAT Priority</label>
+            </value>
+            <value>
+                <fullName>FedEx Standard</fullName>
+                <default>false</default>
+                <label>FedEx Standard</label>
+            </value>
+            <value>
+                <fullName>FedEx 2 Day AM</fullName>
+                <default>false</default>
+                <label>FedEx 2 Day AM</label>
+            </value>
+            <value>
+                <fullName>FedEx 2 Day</fullName>
+                <default>false</default>
+                <label>FedEx 2 Day</label>
+            </value>
+            <value>
+                <fullName>FedEx Express Saver</fullName>
+                <default>false</default>
+                <label>FedEx Express Saver</label>
+            </value>
+            <value>
+                <fullName>FedEx Ground</fullName>
+                <default>false</default>
+                <label>FedEx Ground</label>
+            </value>
+            <value>
+                <fullName>FedEx Intl Economy</fullName>
+                <default>false</default>
+                <label>FedEx Intl Economy</label>
+            </value>
+            <value>
+                <fullName>FedEx Intl Priority</fullName>
+                <default>false</default>
+                <label>FedEx Intl Priority</label>
+            </value>
+            <value>
+                <fullName>Hand Carry</fullName>
+                <default>false</default>
+                <label>Hand Carry</label>
+            </value>
+            <value>
+                <fullName>Freight Forwarder</fullName>
+                <default>false</default>
+                <label>Freight Forwarder</label>
+            </value>
+            <value>
+                <fullName>LTL Freight Service</fullName>
+                <default>false</default>
+                <label>LTL Freight Service</label>
+            </value>
+            <value>
+                <fullName>UPS Next Day 8:30AM</fullName>
+                <default>false</default>
+                <label>UPS Next Day 8:30AM</label>
+            </value>
+            <value>
+                <fullName>UPS Next Day Air</fullName>
+                <default>false</default>
+                <label>UPS Next Day Air</label>
+            </value>
+            <value>
+                <fullName>UPS Next Day Saver</fullName>
+                <default>false</default>
+                <label>UPS Next Day Saver</label>
+            </value>
+            <value>
+                <fullName>UPS SAT AM</fullName>
+                <default>false</default>
+                <label>UPS SAT AM</label>
+            </value>
+            <value>
+                <fullName>UPS SAT</fullName>
+                <default>false</default>
+                <label>UPS SAT</label>
+            </value>
+            <value>
+                <fullName>UPS 2 Day Air AM</fullName>
+                <default>false</default>
+                <label>UPS 2 Day Air AM</label>
+            </value>
+            <value>
+                <fullName>UPS 2 Day Air</fullName>
+                <default>false</default>
+                <label>UPS 2 Day Air</label>
+            </value>
+            <value>
+                <fullName>UPS 3 Day Select</fullName>
+                <default>false</default>
+                <label>UPS 3 Day Select</label>
+            </value>
+            <value>
+                <fullName>UPS Ground</fullName>
+                <default>false</default>
+                <label>UPS Ground</label>
+            </value>
+            <value>
+                <fullName>UPS Intl Expedited</fullName>
+                <default>false</default>
+                <label>UPS Intl Expedited</label>
+            </value>
+            <value>
+                <fullName>UPS Intl Express</fullName>
+                <default>false</default>
+                <label>UPS Intl Express</label>
+            </value>
+            <value>
+                <fullName>UPS Intl Saver</fullName>
+                <default>false</default>
+                <label>UPS Intl Saver</label>
+            </value>
+            <value>
+                <fullName>UPS Intl Standard</fullName>
+                <default>false</default>
+                <label>UPS Intl Standard</label>
+            </value>
+            <value>
+                <fullName>DHL</fullName>
+                <default>false</default>
+                <label>DHL</label>
+            </value>
+            <value>
+                <fullName>USPS</fullName>
+                <default>false</default>
+                <label>USPS</label>
+            </value>
+            <value>
+                <fullName>Returns</fullName>
+                <default>false</default>
+                <label>Returns</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

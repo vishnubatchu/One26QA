@@ -1,0 +1,381 @@
+<apex:component access="global" controller="LoanerEmailCustomComponentController" >
+    <apex:attribute name="headerId" description="LoanerHeaderRecord" type="ID"  assignTo="{!recordId}" />
+    <apex:attribute name="headerObj" description="Object Name Attribute" type="String"  assignTo="{!recordObject}" />
+    <apex:attribute name="ApprovalEmailTemaplate" description="Loaner Approaval Template" type="Boolean" default="false"/>
+    <apex:attribute name="InvalidLineItems" description="LoanerLineItemsWithOnlyInvalidLines" type="Boolean" default="false"/>
+    <!--<apex:attribute name="tempName" description="Email template name" type="String" assignTo="{!templateName}" />-->
+    <apex:attribute name="recipientName" description="Attribute for product make" type="Id"  assignTo="{!recipientId}" />
+    <apex:attribute name="displayerrormessages" description="Attribute for displaying integration messages" type="Boolean" default="false" />
+    <html>
+        <style>
+            .span_style
+            {
+            font-size: 11.0pt; 
+            font-family: "Calibri","sans-serif";    
+            }
+            
+            .MsoNormal
+            {
+            font-size: 11.0pt; 
+            font-family: "Calibri","sans-serif";    
+            }     
+            .very_small
+            {       
+            width:'70px';   padding:'.25pt .25pt .25pt .25pt';  word-wrap:break-word;   border:1px solid white;
+            }  
+            .small
+            {       
+            width:'90px';   padding:'.25pt .25pt .25pt .25pt';  word-wrap:break-word;   border:1px solid white;
+            }  
+            .medium
+            {       
+            width:'110px';  padding:'.25pt .25pt .25pt .25pt';  word-wrap:break-word;   border:1px solid white;
+            }
+            .big
+            {       
+            width:'140px';  padding:'.25pt .25pt .25pt .25pt';  word-wrap:break-word;   border:1px solid white;
+            }
+            .table_outer
+            {
+            border:2px solid #CCCCC;
+            border-collapse:collapse;   
+            }
+            .loaner_td
+            {
+            padding:'.25pt .25pt .25pt .25pt';  
+            word-wrap:break-word;   
+            border:1px solid white;
+            }
+            .loaner_small
+            {
+            padding:'.25pt .25pt .25pt .25pt';  
+            word-wrap:break-word;   
+            border:1px solid white;
+            width: 90px;
+            }
+            .loaner_td_val
+            {
+            padding:'.25pt .25pt .25pt .25pt';  
+            word-wrap:break-word;   
+            border:1px solid white;
+            width: 200px;
+            background:'#FFFFF';
+            }
+            td
+            {
+            padding: .25pt .25pt .25pt .25pt;
+            word-wrap:break-word;
+            };
+            .label_p
+            {
+            align= right ;
+            text-align: right;
+            }
+        </style> 
+        <body>
+            <apex:variable value="{!Loaner}" var="loanObj"/> 
+             <apex:variable value="{!QualSample}" var="Qual_Sample"/> 
+            <table class="table_outer" >
+                
+                <tr> <!-- bgcolor="#CCCC99" -->
+                    <th style='width: 950px; border:1px solid white;' bgcolor="#CCCC99">
+                        <!-- th  style='width: 950px; border:2px solid white;'-->
+                        <span class = "span_style" style='font-size: 14.0pt;width: 950px; background-color:#CCCC99'>Loaner Request Form</span>
+                        
+                    </th>
+                </tr>
+                <tr>
+                    <table>
+                        <tr>
+                            <td  class="loaner_td">
+                                <p class = "label_p" ><span class = "span_style" >Request Date : </span></p>
+                            </td >
+                            <td class ="loaner_td_val">
+                                <p><span class = "span_style">
+                                    <apex:outputText value=" {0,date,MM/dd/yyyy hh:mm:ss a}">
+												<apex:param value="{!loanObj.CreatedDate}"/>
+											</apex:outputText>
+                                    </span></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td  class="loaner_td">
+                                <p class = "label_p" ><span class = "span_style" >Request By : </span></p>
+                            </td >
+                            <td class ="loaner_td_val">
+                                <p><span class = "span_style">{!loanObj.createdby.name}</span></p>
+                            </td>
+                            <td  class="loaner_td">
+                                <p class = "label_p" ><span class = "span_style" >Loaner Status : </span></p>
+                            </td >
+                            <td class ="loaner_td_val">
+                                <p><span class = "span_style">{!loanObj.Status_Approval__c}</span></p>
+                            </td>       
+                        </tr>
+                        <tr>
+                            <td  class="loaner_td">
+                                <p class = "label_p" ><span class = "span_style" >Request ID : </span></p>
+                            </td >
+                            <td class ="loaner_td_val">
+                                <p><span class = "span_style">{!loanObj.Name}</span></p>
+                            </td>
+                            <td  class="loaner_td" style= 'width: 300px;'>
+                                <p class = "label_p" ><span class = "span_style" >Loaner Duration of parts being loaned in DAYS : </span></p>
+                            </td >
+                            <td class ="loaner_td_val">
+                                <p><span class = "span_style">{!IF(loanObj.Loaner_Duration_In_Days__c!=9999,loanObj.Loaner_Duration_In_Days__c,'No Return')}</span></p>
+                            </td>  
+                        
+                             
+                        </tr>
+                    </table>
+                    <br/>
+                    <table>
+                        <tr>
+                            <td  class="loaner_td">
+                                <p class = "label_p" ><span class = "span_style" >Loaner Category : </span></p>
+                            </td >
+                            <td class ="loaner_td_val">
+                                <p><span class = "span_style">{!loanObj.Loaner_Category__c}</span></p>
+                            </td>
+                            <td  class="loaner_td" rowspan = "4">
+                                <table border = "1">
+                                    <tr>
+                                        <td bgcolor="#CCCC99" class="loaner_small" colspan ="4" >
+                                            <b><p><span class = "span_style" >Sales Rep </span></p></b>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="loaner_small" >
+                                            <p><span class = "span_style" >Firm Name : </span></p>
+                                        </td>
+                                        <td class="loaner_td_val" colspan = "3">
+                                            <p><span class = "span_style" >{!loanObj.Firm_Name_Sales_rep__r.Name}</span></p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="loaner_small"> 
+                                            <p ><span class = "span_style" >A/C Mgr: </span></p>
+                                        </td>                                   
+                                        <td class="loaner_td_val" colspan = "3">
+                                            <p><span class = "span_style" >{!loanObj.AC_Mgr_Sales_rep__c}</span></p>
+                                        </td>                   
+                                    </tr>               
+                                </table>
+                            </td>
+                            <td  class="loaner_td" rowspan = "4" style= 'width: 300px;'>
+                                <table border = "1">
+                                    <tr>
+                                        <td bgcolor="#CCCC99" colspan="4" class="loaner_small" >
+                                            <b><p><span class = "span_style" >Distributor </span></p></b>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="loaner_small" >
+                                            <p><span class = "span_style" >Firm Name : </span></p>
+                                        </td>
+                                        <td class="loaner_td_val" colspan = "3">
+                                            <p><span class = "span_style" >{!loanObj.Firm_Name_Distributor__r.Name}</span></p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="loaner_small"> 
+                                            <p><span class = "span_style" >A/C Mgr: </span></p>
+                                        </td>                                   
+                                        <td class="loaner_td_val" colspan = "3">
+                                            <p><span class = "span_style" >{!loanObj.AC_Mgr_Distributor__c}</span></p>
+                                        </td>                   
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td  class="loaner_td">
+                                <p class = "label_p" ><span class = "span_style" >ECO Number : </span></p>
+                            </td >
+                            <td class ="loaner_td_val">
+                                <p><span class = "span_style">{!loanObj.ECO_Number__c}</span></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td  class="loaner_td">
+                                <p class = "label_p" ><span class = "span_style" >Opportunity Type : </span></p>
+                            </td >
+                            <td class ="loaner_td_val">
+                                <p><span class = "span_style">{!loanObj.Opportunity_Type__c}</span></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td  class="loaner_td">
+                                <p class = "label_p" ><span class = "span_style" >Opportunity# : </span></p>
+                            </td >
+                            <td class ="loaner_td_val">
+                                <p><span class = "span_style">{!loanObj.Opportunity__r.number__c}</span></p>
+                            </td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <td>
+                                <table border = "1">
+                                    <tr>
+                                        <td bgcolor="#CCCC99" colspan ="2" class="loaner_td">
+                                            <b><p><span class = "span_style" >Finisar</span></p></b>
+                                        </td>   
+                                    </tr>
+                                    <tr>
+                                        <td  class="loaner_td" style= 'width: 100px;'>
+                                            <p class = "label_p" ><span class = "span_style" >RSM : </span></p> 
+                                        </td >
+                                        <td class ="loaner_td_val">
+                                            <p><span class = "span_style">{!loanObj.RSM_PLM_Finisar__r.name}</span></p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td  class="loaner_td" style= 'width: 100px;'>
+                                            <p class = "label_p" ><span class = "span_style" >Inside Sales : </span></p>    
+                                        </td >
+                                        <td class ="loaner_td_val">
+                                            <p><span class = "span_style">{!loanObj.Inside_Sales_Finisar__r.Name}</span></p>
+                                        </td>               
+                                    </tr>
+                                    <tr>
+                                        <td  class="loaner_td" style= 'width: 100px;'>
+                                            <p class = "label_p" ><span class = "span_style" >Qual Sample? : </span></p>    
+                                        </td >
+                                        <td class ="loaner_td_val">
+                                            <p><span class = "span_style">{!Qual_Sample}</span></p>
+                                        </td>               
+                                    </tr>
+                                    <tr>
+                                        <td  class="loaner_td" style= 'width: 120px;'>
+                                            <p class = "label_p" ><span class = "span_style" >Loaner Ship From : </span></p>    
+                                        </td >
+                                        <td class ="loaner_td_val">
+                                            <p><span class = "span_style">{!loanObj.Loaner_Ship_From_Finisar__c}</span></p>
+                                        </td>               
+                                    </tr>           
+                                </table>
+                            </td>
+                            <td>
+                                <table border = "1">
+                                    <tr>
+                                        <td bgcolor="#CCCC99" colspan="4" class="loaner_td">
+                                            <b><p><span class = "span_style" >End Customer(Design-In Site)</span></p></b>
+                                        </td>   
+                                    </tr>
+                                    <tr>
+                                        <td  class="loaner_td" style= 'width: 110px;'>
+                                            <p class = "label_p" ><span class = "span_style" >Company Name:</span></p>  
+                                        </td >
+                                        <td class ="loaner_td_val">
+                                            <p><span class = "span_style">{!loanObj.Company_Name_End_Cust__r.name}</span></p>
+                                        </td>
+                                        <td  class="loaner_td" style= 'width: 110px;'>
+                                            <p class = "label_p" ><span class = "span_style" >Project Engineer:</span></p>  
+                                        </td >
+                                        <td class ="loaner_td_val">
+                                            <p><span class = "span_style">{!loanObj.Project_Engineer__c}</span></p>
+                                        </td>               
+                                    </tr>           
+                                    <tr>
+                                        <td  class="loaner_td" style= 'width: 110px;'>
+                                            <p class = "label_p" ><span class = "span_style" > Project Name:</span></p> 
+                                        </td >
+                                        <td class ="loaner_td_val">
+                                            <p><span class = "span_style">{!loanObj.Project_Name__c}</span></p>
+                                        </td>
+                                        <td  class="loaner_td" style= 'width: 130px;'>
+                                            <p class = "label_p"><span class = "span_style" >Est Production Date:</span></p>    
+                                        </td >
+                                        <td class ="loaner_td_val">
+                                            <p><span class = "span_style">
+                                                <apex:outputText value=" {0,date,MM/dd/yy}">
+												<apex:param value="{!loanObj.Est_Production_Date__c}"/>
+											</apex:outputText>
+                                                </span></p>
+                                        </td>           
+                                    </tr>           
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                    <table border = "1">
+                        <tr>
+                            <td bgcolor="#CCCC99" colspan="6" class="loaner_td">
+                                <p><span class = "span_style" ><b>Ship Loaner To</b></span></p>
+                            </td>
+                        </tr>
+                        <tr colspan ="2">
+                            <td  class="loaner_td" style= 'width: 140px;'>
+                                <p class = "label_p" ><span class = "span_style" >Company Name : </span></p>
+                            </td >
+                            <td class ="loaner_td_val" style= 'width: 300px;'>
+                                <p><span class = "span_style">{!loanObj.Company_Name_Ship_To__r.name}</span></p>
+                            </td>
+                            <td  class="loaner_td" style= 'width: 140px;'>
+                                <p class = "label_p" ><span class = "span_style" >Tel Number : </span></p>
+                            </td >
+                            <td class ="loaner_td_val">
+                                <p><span class = "span_style">{!loanObj.Tel_Number_text__c}</span></p>
+                            </td>       
+                        </tr>   
+                       <tr>
+                            <td  class="loaner_td" style= 'width: 140px;'>
+                                <p class = "label_p" ><span class = "span_style" >Contact : </span></p>
+                            </td >
+                            <td class ="loaner_td_val">
+                                <p><span class = "span_style">{!loanObj.Contact_Text__c}</span></p>
+                            </td>
+                        </tr>
+                        <tr> 
+                            <td  class="loaner_td" style= 'width: 140px;'>
+                                <p class = "label_p" ><span class = "span_style" >Address : </span></p>
+                            </td >
+                            <td class ="loaner_td_val" colspan ="5">
+                                <p><span class = "span_style">{!loanObj.Location_ship_to__c}-{!loanObj.State_ship_to__c}-{!loanObj.City_ship_to__c}-{!loanObj.Postal_Code_ship_to__c}-{!loanObj.Country_ship_to__c}</span></p>
+                            </td>
+                        </tr> 
+                        <tr>
+                            <td  class="loaner_td" style= 'width: 140px;'>
+                                <p class = "label_p" ><span class = "span_style" >Shipping Instructions  : </span></p>
+                            </td >
+                            <td class ="loaner_td_val" style= 'width: 300px;'>
+                                <p><span class = "span_style">{!loanObj.Shipping_Instructions__c}</span></p>
+                            </td>
+                            <td  class="loaner_td" style= 'width: 200px;'>
+                                <p class = "label_p" ><span class = "span_style" >New Customer/Address : </span></p>
+                            </td >
+                            <td class ="loaner_td_val">
+                                <p><span class = "span_style">{!loanObj.New_Customer_Address__c}</span></p>
+                            </td>
+                        </tr>
+                    </table>
+                </tr>
+                <tr>
+                    <td class="loaner_td" style='width: 100px; word-wrap:break-word; word-break: break-all;'>
+                        <p><span class = "span_style" ><b>Notes:</b> {!loanObj.Notes__c}</span></p>
+                    </td> 
+                 
+                </tr> 
+                <tr>
+                    <apex:outputPanel rendered="{!displayerrormessages}">
+			    <td class="loaner_td" style='width: 100px;word-wrap:break-word; word-break: break-all;'>
+                        <p><span class = "span_style" ><b>Error Message :</b>>> {!loanObj.Initial_Error_Message__c}</span></p>
+                    </td>   
+				</apex:outputPanel>
+                </tr>
+            </table>
+            <c:LoanerLinesEmailTemplate LoanerLines="{!ErrorLineItems}" rejectedHeaderStatus="{!(loanObj.Status_Approval__c=='Rejected')}" rendered="{!InvalidLineItems}"></c:LoanerLinesEmailTemplate>           
+            <c:LoanerLinesEmailTemplate LoanerLines="{!Loaner.Loaner_Lines__r}" rejectedHeaderStatus="{!(loanObj.Status_Approval__c=='Rejected')}" rendered="{!(!InvalidLineItems)}"></c:LoanerLinesEmailTemplate>
+            <br/>
+            <c:EmailApprovalCMP Loaner="{!Loaner}" lineItemsApproval="{!ApprovalEmailTemaplate}"  rendered="{!ApprovalEmailTemaplate}"> </c:EmailApprovalCMP>
+            <br/>
+            <c:OpportunityEmailCMP Opportunity="{!Loaner.Opportunity__c}" rendered="{!Loaner.Opportunity__c != null && ApprovalEmailTemaplate}"/>
+            <br/>
+         	<c:FinisarDisclaimerCMP Generaldisclaimertext="true"/>
+            
+            
+        </body>
+    </html>
+</apex:component>

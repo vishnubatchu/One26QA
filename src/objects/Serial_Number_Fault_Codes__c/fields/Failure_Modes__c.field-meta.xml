@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Failure_Modes__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <label>Failure Modes</label>
+    <referenceTo>Failure_Modes__c</referenceTo>
+    <relationshipLabel>Serial Number Fault Codes</relationshipLabel>
+    <relationshipName>Serial_Number_Fault_Codes</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

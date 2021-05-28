@@ -1,0 +1,63 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" controller ="FAFVCustomUI" access="global">    
+    <aura:attribute name="serialNoInstance" type="FA_FV_Detail__c"/>
+    <aura:attribute name="rowIndex" type="Integer" default="0"/>
+    <aura:registerEvent name="DeleteRowEvt" type="c:DeleteRowEvt"/> 
+    <aura:registerEvent name="AddRowEvt" type="c:AddNewRowEvt"/> 
+    <aura:handler name="init" value="{!this}" action="{!c.doinit}"/>
+    <aura:registerEvent name="lightningEvent" type="c:RefreshSerialNumberUI"/>
+    <aura:attribute name="ShowDel" type="boolean" default="true"/>
+    
+    
+    <tr>
+        <td>
+            <aura:if isTrue ="{!(v.serialNoInstance.Status__c != 'Complete')}">
+                <a data-value="{!v.serialNoInstance.Id}" onclick="{!c.removeRow}">
+                    <lightning:icon variant="error" iconName="utility:delete" class="slds-icon slds-icon_small" size="small" alternativeText="icon"/>
+                    <span class="slds-assistive-text">Delete Icon</span>
+                </a>
+            </aura:if>
+        </td>
+        
+        <td>
+            <force:inputField   value="{!v.serialNoInstance.Serial_Number__c}"/>
+        </td>
+        
+        <td >
+            <force:inputField  value="{!v.serialNoInstance.FA_Completion_Date__c}" />
+        </td>
+        <td>
+            <force:inputField  value="{!v.serialNoInstance.Status__c}" />
+        </td>
+        <td>
+            <force:inputField  value="{!v.serialNoInstance.Traceability_Information__c}" />
+        </td>
+        <td>
+            <force:inputField  value="{!v.serialNoInstance.Lane__c}" />
+        </td>
+        <td>
+            <force:inputField  value="{!v.serialNoInstance.OperatingTime__c}" />
+        </td>
+        <td>
+            <force:inputField  value="{!v.serialNoInstance.Component_Description__c}" />
+        </td>
+        <td>
+            <force:inputField  value="{!v.serialNoInstance.FA_FV_Notes__c}" />
+        </td>
+        <!--td>
+            <force:inputField  value="{!v.serialNoInstance.Suppliers__c}" />
+        </td>
+        <td>
+            <force:inputField  value="{!v.serialNoInstance.Vendor_Name__c}" />
+        </td>
+        <td>
+            <force:inputField  value="{!v.serialNoInstance.Relevant_Vendor_Contact__c}" />
+        </td>
+        <td>
+            <force:inputField  value="{!v.serialNoInstance.Vendor_Ship_to_addres__c}" />
+        </td>
+        
+        <td  >
+            <force:inputField  value="{!v.serialNoInstance.SLA__c}" />
+        </td-->
+    </tr>  
+</aura:component>

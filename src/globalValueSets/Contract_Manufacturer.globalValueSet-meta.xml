@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>BENCHMARK</fullName>
+        <default>false</default>
+        <label>BENCHMARK</label>
+    </customValue>
+    <customValue>
+        <fullName>CELESTICA</fullName>
+        <default>false</default>
+        <label>CELESTICA</label>
+    </customValue>
+    <customValue>
+        <fullName>FLEXTRONICS</fullName>
+        <default>false</default>
+        <label>FLEXTRONICS</label>
+    </customValue>
+    <customValue>
+        <fullName>FOXCONN</fullName>
+        <default>false</default>
+        <label>FOXCONN</label>
+    </customValue>
+    <customValue>
+        <fullName>JABIL</fullName>
+        <default>false</default>
+        <label>JABIL</label>
+    </customValue>
+    <customValue>
+        <fullName>MC ASSEMBLY</fullName>
+        <default>false</default>
+        <label>MC ASSEMBLY</label>
+    </customValue>
+    <customValue>
+        <fullName>OTHER</fullName>
+        <default>false</default>
+        <label>OTHER</label>
+    </customValue>
+    <customValue>
+        <fullName>PLEXUS</fullName>
+        <default>false</default>
+        <label>PLEXUS</label>
+    </customValue>
+    <customValue>
+        <fullName>SANMINA/SCI</fullName>
+        <default>false</default>
+        <label>SANMINA/SCI</label>
+    </customValue>
+    <customValue>
+        <fullName>VENTURE</fullName>
+        <default>false</default>
+        <label>VENTURE</label>
+    </customValue>
+    <masterLabel>Contract Manufacturer</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

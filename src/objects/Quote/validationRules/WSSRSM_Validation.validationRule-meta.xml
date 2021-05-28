@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>WSSRSM_Validation</fullName>
+    <active>true</active>
+    <errorConditionFormula>NOT(CONTAINS(PrimarySalesperson__r.UserRole.Name , &apos;WSS&apos;)) &amp;&amp;  BusinessUnit__c = &apos;WSS&apos;</errorConditionFormula>
+    <errorMessage>Primary Salesperson should be WSS user, otherwise you cannot add WSS items to the quote line.</errorMessage>
+</ValidationRule>

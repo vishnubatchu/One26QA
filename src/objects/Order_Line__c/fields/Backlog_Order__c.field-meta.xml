@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Backlog_Order__c</fullName>
+    <description>This checkbox indicates whether or not the order should be counted as &quot;Backlog&quot; (Checked) or &quot;Actual&quot; (Unchecked)</description>
+    <externalId>false</externalId>
+    <formula>isblank( Actual_Ship_Date__c )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>This checkbox indicates whether or not the order should be counted as &quot;Backlog&quot; (Checked) or &quot;Actual&quot; (Unchecked)</inlineHelpText>
+    <label>Backlog Order</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

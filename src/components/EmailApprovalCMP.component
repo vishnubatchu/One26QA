@@ -1,0 +1,18 @@
+<apex:component >
+    <apex:attribute name="lineItemsApproval" type="boolean" Description="render Approval CMP"  required="true" default="false"/>
+     <apex:attribute name="Loaner" type="Loaner__c" Description="Loaner/Extension Request Record"  required="true"/>
+        <apex:outputPanel rendered="{!lineItemsApproval}">
+        
+        <br/><br/>
+        Clicking Approve or Reject below will apply to all lines listed in this notification. If you decide to approve and reject specific lines in this notification, you must do so by logging into Salesforce. <a href="{!$Label.Approval_Lightning_page}?LId={!Loaner.Id}">Click here to login</a>
+        <br/>
+        <p class="EmailApproval"> <b>Action: </b>&nbsp;&nbsp;&nbsp;
+            <a href="mailto:{!$Label.Apex_Email_Service_Address}?subject=Loaner:{!Loaner.Name} has been forwarded for your approval by &body=Action: Approve %0AAdd Comments in between the apostrophes to append to this notification %0AComments: '' %0A%0A%0ALoaner Id : [{!Loaner.Id}] %0A%0ANOTE: PLEASE DO NOT MODIFY ACTION AND QUOTE ID PARAMETERS"><b>Approve</b></a> &nbsp;&nbsp;&nbsp;
+            <a href="mailto:{!$Label.Apex_Email_Service_Address}?subject=Loaner:{!Loaner.Name} has been forwarded for your approval by &body=Action: Reject %0AAdd Comments in between the apostrophes to append to this notification %0AComments: '' %0A%0A%0ALoaner Id : [{!Loaner.Id}] %0A%0ANOTE: PLEASE DO NOT MODIFY ACTION AND QUOTE ID PARAMETERS"><b>Reject</b></a> &nbsp;&nbsp;&nbsp;
+            <a href="mailto:{!$Label.Apex_Email_Service_Address}?subject=FW:Loaner:{!Loaner.Name} has been forwarded for your approval by &body=Action: Forward %0A%0A%0AEnter email address in between the apostrophes to forward%0A%0AForward to: ''%0AAdd Comments in between the apostrophes to append to this notification %0AComments: '' %0A%0A%0ALoaner Id : [{!Loaner.Id}] %0A%0ANOTE: PLEASE DO NOT MODIFY ACTION AND QUOTE ID PARAMETERS"><b>Reassign/Forward</b></a> &nbsp;&nbsp;&nbsp;
+        </p>
+        <br/>
+        <br/>
+    </apex:outputPanel>
+    
+</apex:component>

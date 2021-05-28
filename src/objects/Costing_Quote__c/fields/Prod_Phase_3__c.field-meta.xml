@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prod_Phase_3__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Alpha Samples = Performance Verification Units
+Beta Samples = Qualification Units</inlineHelpText>
+    <label>Prod. Phase - #3</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Alpha Samples</fullName>
+                <default>false</default>
+                <label>Alpha Samples</label>
+            </value>
+            <value>
+                <fullName>Beta Samples</fullName>
+                <default>false</default>
+                <label>Beta Samples</label>
+            </value>
+            <value>
+                <fullName>Initial Production</fullName>
+                <default>false</default>
+                <label>Initial Production</label>
+            </value>
+            <value>
+                <fullName>Mass Production</fullName>
+                <default>false</default>
+                <label>Mass Production</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AM_SubType_Required</fullName>
+    <active>true</active>
+    <description>Any time &quot;Aftermarket&quot; is selected in the Type dropdown, Sub-Type must be entered.</description>
+    <errorConditionFormula>AND( ISPICKVAL( $User.Legacy_Company__c , &apos;Corp II-VI&apos;), $RecordType.Name = &quot;Customer Account&quot;,
+ISPICKVAL( Type , &apos;Customer&apos;),
+OR( (ISPICKVAL( Business_Segment__c , &apos;UK&apos;)),(ISPICKVAL( Business_Segment__c , &apos;DEU&apos;)),(ISPICKVAL( Business_Segment__c , &apos;Italia&apos;)),(ISPICKVAL( Business_Segment__c , &apos;Benelux&apos;)),ISPICKVAL( Business_Segment__c , &apos;Suisse&apos;)
+),
+ISBLANK (TEXT( Cluster__c ))
+)</errorConditionFormula>
+    <errorDisplayField>Cluster__c</errorDisplayField>
+    <errorMessage>You must enter an Aftermarket Sub-Type</errorMessage>
+</ValidationRule>

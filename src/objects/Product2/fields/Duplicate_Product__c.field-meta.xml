@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Duplicate_Product__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Product with Duplicate Marketing P/N with Commodity Code 7000</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Product with Duplicate Marketing P/N with Commodity Code 7000</inlineHelpText>
+    <label>Duplicate Product</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

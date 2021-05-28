@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>In_Use_Fiber_Lasers__c</fullName>
+    <description>Count of In Use Fiber Lasers</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Count of In Use Fiber Lasers</inlineHelpText>
+    <label>In Use Fiber Lasers</label>
+    <summaryFilterItems>
+        <field>Equipment_Owned__c.Laser_Type__c</field>
+        <operation>equals</operation>
+        <value>Fiber</value>
+    </summaryFilterItems>
+    <summaryFilterItems>
+        <field>Equipment_Owned__c.Laser_Status__c</field>
+        <operation>equals</operation>
+        <value>In Use</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Equipment_Owned__c.Account__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

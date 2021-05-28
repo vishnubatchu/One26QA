@@ -1,0 +1,559 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Media__c</fullName>
+    <externalId>false</externalId>
+    <label>Media</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>LeadSource</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>5-Sep</fullName>
+                <default>false</default>
+                <label>5-Sep</label>
+            </value>
+            <value>
+                <fullName>AKL</fullName>
+                <default>false</default>
+                <label>AKL</label>
+            </value>
+            <value>
+                <fullName>ARTESIAN</fullName>
+                <default>false</default>
+                <label>ARTESIAN</label>
+            </value>
+            <value>
+                <fullName>BINGO</fullName>
+                <default>false</default>
+                <label>BINGO</label>
+            </value>
+            <value>
+                <fullName>Blechexpo</fullName>
+                <default>false</default>
+                <label>Blechexpo</label>
+            </value>
+            <value>
+                <fullName>BL</fullName>
+                <default>false</default>
+                <label>BL</label>
+            </value>
+            <value>
+                <fullName>Bodkin</fullName>
+                <default>false</default>
+                <label>Bodkin</label>
+            </value>
+            <value>
+                <fullName>BOX LABEL</fullName>
+                <default>false</default>
+                <label>BOX LABEL</label>
+            </value>
+            <value>
+                <fullName>Brochure</fullName>
+                <default>false</default>
+                <label>Brochure</label>
+            </value>
+            <value>
+                <fullName>CANADIAN I</fullName>
+                <default>false</default>
+                <label>CANADIAN I</label>
+            </value>
+            <value>
+                <fullName>CANADIAN M</fullName>
+                <default>false</default>
+                <label>CANADIAN M</label>
+            </value>
+            <value>
+                <fullName>CLEO</fullName>
+                <default>false</default>
+                <label>CLEO</label>
+            </value>
+            <value>
+                <fullName>CMTS</fullName>
+                <default>false</default>
+                <label>CMTS</label>
+            </value>
+            <value>
+                <fullName>COMPETITOR</fullName>
+                <default>false</default>
+                <label>COMPETITOR</label>
+            </value>
+            <value>
+                <fullName>Customer</fullName>
+                <default>false</default>
+                <label>Customer</label>
+            </value>
+            <value>
+                <fullName>Direct Mail</fullName>
+                <default>false</default>
+                <label>Direct Mail</label>
+            </value>
+            <value>
+                <fullName>EALA</fullName>
+                <default>false</default>
+                <label>EALA</label>
+            </value>
+            <value>
+                <fullName>EDA</fullName>
+                <default>false</default>
+                <label>EDA</label>
+            </value>
+            <value>
+                <fullName>EuroBLECH</fullName>
+                <default>false</default>
+                <label>EuroBLECH</label>
+            </value>
+            <value>
+                <fullName>Expolaser</fullName>
+                <default>false</default>
+                <label>Expolaser</label>
+            </value>
+            <value>
+                <fullName>FABRICATOR</fullName>
+                <default>false</default>
+                <label>FABRICATOR</label>
+            </value>
+            <value>
+                <fullName>FABTECH</fullName>
+                <default>false</default>
+                <label>FABTECH</label>
+            </value>
+            <value>
+                <fullName>Fabtech Canada</fullName>
+                <default>false</default>
+                <label>Fabtech Canada</label>
+            </value>
+            <value>
+                <fullName>Fabtech US</fullName>
+                <default>false</default>
+                <label>Fabtech US</label>
+            </value>
+            <value>
+                <fullName>FORMING &amp;</fullName>
+                <default>false</default>
+                <label>FORMING &amp;</label>
+            </value>
+            <value>
+                <fullName>Global Spec.</fullName>
+                <default>false</default>
+                <label>Global Spec.</label>
+            </value>
+            <value>
+                <fullName>Google</fullName>
+                <default>false</default>
+                <label>Google</label>
+            </value>
+            <value>
+                <fullName>Harris</fullName>
+                <default>false</default>
+                <label>Harris</label>
+            </value>
+            <value>
+                <fullName>HARRIS GUI</fullName>
+                <default>false</default>
+                <label>HARRIS GUI</label>
+            </value>
+            <value>
+                <fullName>Hoover</fullName>
+                <default>false</default>
+                <label>Hoover</label>
+            </value>
+            <value>
+                <fullName>IC</fullName>
+                <default>false</default>
+                <label>IC</label>
+            </value>
+            <value>
+                <fullName>Icaleo</fullName>
+                <default>false</default>
+                <label>Icaleo</label>
+            </value>
+            <value>
+                <fullName>IF</fullName>
+                <default>false</default>
+                <label>IF</label>
+            </value>
+            <value>
+                <fullName>II-VI Website</fullName>
+                <default>false</default>
+                <label>II-VI Website</label>
+            </value>
+            <value>
+                <fullName>IMTS</fullName>
+                <default>false</default>
+                <label>IMTS</label>
+            </value>
+            <value>
+                <fullName>India</fullName>
+                <default>false</default>
+                <label>India</label>
+            </value>
+            <value>
+                <fullName>India 2012</fullName>
+                <default>false</default>
+                <label>India 2012</label>
+            </value>
+            <value>
+                <fullName>INDIA TELE</fullName>
+                <default>false</default>
+                <label>INDIA TELE</label>
+            </value>
+            <value>
+                <fullName>IND LASER</fullName>
+                <default>false</default>
+                <label>IND LASER</label>
+            </value>
+            <value>
+                <fullName>INDUSTRIAL</fullName>
+                <default>false</default>
+                <label>INDUSTRIAL</label>
+            </value>
+            <value>
+                <fullName>Internet</fullName>
+                <default>false</default>
+                <label>Internet</label>
+            </value>
+            <value>
+                <fullName>Label</fullName>
+                <default>false</default>
+                <label>Label</label>
+            </value>
+            <value>
+                <fullName>Lamiera</fullName>
+                <default>false</default>
+                <label>Lamiera</label>
+            </value>
+            <value>
+                <fullName>Laser</fullName>
+                <default>false</default>
+                <label>Laser</label>
+            </value>
+            <value>
+                <fullName>Laser World of Photonics Munich</fullName>
+                <default>false</default>
+                <label>Laser World of Photonics Munich</label>
+            </value>
+            <value>
+                <fullName>Laser World of Photonics Shanghai</fullName>
+                <default>false</default>
+                <label>Laser World of Photonics Shanghai</label>
+            </value>
+            <value>
+                <fullName>List</fullName>
+                <default>false</default>
+                <label>List</label>
+            </value>
+            <value>
+                <fullName>MACH</fullName>
+                <default>false</default>
+                <label>MACH</label>
+            </value>
+            <value>
+                <fullName>Magazine</fullName>
+                <default>false</default>
+                <label>Magazine</label>
+            </value>
+            <value>
+                <fullName>Metapro</fullName>
+                <default>false</default>
+                <label>Metapro</label>
+            </value>
+            <value>
+                <fullName>Metavak</fullName>
+                <default>false</default>
+                <label>Metavak</label>
+            </value>
+            <value>
+                <fullName>Niche</fullName>
+                <default>false</default>
+                <label>Niche</label>
+            </value>
+            <value>
+                <fullName>OEM</fullName>
+                <default>false</default>
+                <label>OEM</label>
+            </value>
+            <value>
+                <fullName>OPTICS</fullName>
+                <default>false</default>
+                <label>OPTICS</label>
+            </value>
+            <value>
+                <fullName>Optifab</fullName>
+                <default>false</default>
+                <label>Optifab</label>
+            </value>
+            <value>
+                <fullName>OT</fullName>
+                <default>false</default>
+                <label>OT</label>
+            </value>
+            <value>
+                <fullName>Photonics West</fullName>
+                <default>false</default>
+                <label>Photonics West</label>
+            </value>
+            <value>
+                <fullName>Photonix Japan</fullName>
+                <default>false</default>
+                <label>Photonix Japan</label>
+            </value>
+            <value>
+                <fullName>RC</fullName>
+                <default>false</default>
+                <label>RC</label>
+            </value>
+            <value>
+                <fullName>Scotts Directories</fullName>
+                <default>false</default>
+                <label>Scotts Directories</label>
+            </value>
+            <value>
+                <fullName>Schweissen &amp; Schneiden</fullName>
+                <default>false</default>
+                <label>Schweissen &amp; Schneiden</label>
+            </value>
+            <value>
+                <fullName>SCT_DIRCT</fullName>
+                <default>false</default>
+                <label>SCT_DIRCT</label>
+            </value>
+            <value>
+                <fullName>SPIE DEF &amp;</fullName>
+                <default>false</default>
+                <label>SPIE DEF &amp;</label>
+            </value>
+            <value>
+                <fullName>SPIE Defense</fullName>
+                <default>false</default>
+                <label>SPIE Defense</label>
+            </value>
+            <value>
+                <fullName>Technician</fullName>
+                <default>false</default>
+                <label>Technician</label>
+            </value>
+            <value>
+                <fullName>Techni-Show</fullName>
+                <default>false</default>
+                <label>Techni-Show</label>
+            </value>
+            <value>
+                <fullName>TS</fullName>
+                <default>false</default>
+                <label>TS</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Unknown</fullName>
+                <default>false</default>
+                <label>Unknown</label>
+            </value>
+            <value>
+                <fullName>Rapid + TCT 2017</fullName>
+                <default>false</default>
+                <label>Rapid + TCT 2017</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Telemarketing</controllingFieldValue>
+            <valueName>Bodkin</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Telemarketing</controllingFieldValue>
+            <valueName>EDA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Telemarketing</controllingFieldValue>
+            <valueName>Harris</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Telemarketing</controllingFieldValue>
+            <valueName>Hoover</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Telemarketing</controllingFieldValue>
+            <valueName>India</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Telemarketing</controllingFieldValue>
+            <valueName>India 2012</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Telemarketing</controllingFieldValue>
+            <controllingFieldValue>Advertisement</controllingFieldValue>
+            <valueName>Internet</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Telemarketing</controllingFieldValue>
+            <valueName>List</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Telemarketing</controllingFieldValue>
+            <valueName>Niche</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Telemarketing</controllingFieldValue>
+            <valueName>Scotts Directories</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Telemarketing</controllingFieldValue>
+            <controllingFieldValue>Referral</controllingFieldValue>
+            <controllingFieldValue>Advertisement</controllingFieldValue>
+            <controllingFieldValue>Trade Show</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Referral</controllingFieldValue>
+            <valueName>Customer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Referral</controllingFieldValue>
+            <valueName>Label</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Referral</controllingFieldValue>
+            <valueName>OEM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Referral</controllingFieldValue>
+            <valueName>Technician</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Referral</controllingFieldValue>
+            <valueName>Unknown</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Advertisement</controllingFieldValue>
+            <valueName>Brochure</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Advertisement</controllingFieldValue>
+            <valueName>Direct Mail</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Advertisement</controllingFieldValue>
+            <valueName>Global Spec.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Advertisement</controllingFieldValue>
+            <valueName>Google</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Advertisement</controllingFieldValue>
+            <valueName>II-VI Website</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Advertisement</controllingFieldValue>
+            <valueName>Magazine</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Trade Show</controllingFieldValue>
+            <valueName>AKL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Trade Show</controllingFieldValue>
+            <valueName>Blechexpo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Trade Show</controllingFieldValue>
+            <valueName>CLEO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Trade Show</controllingFieldValue>
+            <valueName>CMTS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Trade Show</controllingFieldValue>
+            <valueName>EALA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Trade Show</controllingFieldValue>
+            <valueName>EuroBLECH</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Trade Show</controllingFieldValue>
+            <valueName>Expolaser</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Trade Show</controllingFieldValue>
+            <valueName>Fabtech Canada</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Trade Show</controllingFieldValue>
+            <valueName>Fabtech US</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Trade Show</controllingFieldValue>
+            <valueName>Icaleo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Trade Show</controllingFieldValue>
+            <valueName>IMTS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Trade Show</controllingFieldValue>
+            <valueName>Lamiera</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Trade Show</controllingFieldValue>
+            <valueName>Laser</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Trade Show</controllingFieldValue>
+            <valueName>Laser World of Photonics Munich</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Trade Show</controllingFieldValue>
+            <valueName>Laser World of Photonics Shanghai</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Trade Show</controllingFieldValue>
+            <valueName>MACH</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Trade Show</controllingFieldValue>
+            <valueName>Metapro</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Trade Show</controllingFieldValue>
+            <valueName>Metavak</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Trade Show</controllingFieldValue>
+            <valueName>Optifab</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Trade Show</controllingFieldValue>
+            <valueName>Photonics West</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Trade Show</controllingFieldValue>
+            <valueName>Photonix Japan</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Trade Show</controllingFieldValue>
+            <valueName>Schweissen &amp; Schneiden</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Trade Show</controllingFieldValue>
+            <valueName>SPIE Defense</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Trade Show</controllingFieldValue>
+            <valueName>Techni-Show</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Trade Show</controllingFieldValue>
+            <valueName>Rapid + TCT 2017</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

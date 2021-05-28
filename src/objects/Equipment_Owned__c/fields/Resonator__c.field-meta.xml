@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Resonator__c</fullName>
+    <externalId>false</externalId>
+    <label>Resonator</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>* OTHER</fullName>
+                <default>false</default>
+                <label>* OTHER</label>
+            </value>
+            <value>
+                <fullName>* UNKNOWN</fullName>
+                <default>false</default>
+                <label>* UNKNOWN</label>
+            </value>
+            <value>
+                <fullName>AMADA</fullName>
+                <default>false</default>
+                <label>AMADA</label>
+            </value>
+            <value>
+                <fullName>BODOR</fullName>
+                <default>false</default>
+                <label>BODOR</label>
+            </value>
+            <value>
+                <fullName>BYSTRONIC</fullName>
+                <default>false</default>
+                <label>BYSTRONIC</label>
+            </value>
+            <value>
+                <fullName>COHERENT</fullName>
+                <default>false</default>
+                <label>COHERENT</label>
+            </value>
+            <value>
+                <fullName>CONVERGENT ARROW</fullName>
+                <default>false</default>
+                <label>CONVERGENT ARROW</label>
+            </value>
+            <value>
+                <fullName>DATA TECH</fullName>
+                <default>false</default>
+                <label>DATA TECH</label>
+            </value>
+            <value>
+                <fullName>EL EN</fullName>
+                <default>false</default>
+                <label>EL EN</label>
+            </value>
+            <value>
+                <fullName>EPILOG</fullName>
+                <default>false</default>
+                <label>EPILOG</label>
+            </value>
+            <value>
+                <fullName>FANUC</fullName>
+                <default>false</default>
+                <label>FANUC</label>
+            </value>
+            <value>
+                <fullName>FERANTTI/LASER ECOSSE</fullName>
+                <default>false</default>
+                <label>FERANTTI/LASER ECOSSE</label>
+            </value>
+            <value>
+                <fullName>GE FANUC</fullName>
+                <default>false</default>
+                <label>GE FANUC</label>
+            </value>
+            <value>
+                <fullName>HAN KWANG</fullName>
+                <default>false</default>
+                <label>HAN KWANG</label>
+            </value>
+            <value>
+                <fullName>IPG</fullName>
+                <default>false</default>
+                <label>IPG</label>
+            </value>
+            <value>
+                <fullName>JDSU</fullName>
+                <default>false</default>
+                <label>JDSU</label>
+            </value>
+            <value>
+                <fullName>JK Laser</fullName>
+                <default>false</default>
+                <label>JK Laser</label>
+            </value>
+            <value>
+                <fullName>Laserline</fullName>
+                <default>false</default>
+                <label>Laserline</label>
+            </value>
+            <value>
+                <fullName>LASER MECH</fullName>
+                <default>false</default>
+                <label>LASER MECH</label>
+            </value>
+            <value>
+                <fullName>LMI</fullName>
+                <default>false</default>
+                <label>LMI</label>
+            </value>
+            <value>
+                <fullName>MARKEM</fullName>
+                <default>false</default>
+                <label>MARKEM</label>
+            </value>
+            <value>
+                <fullName>MAZAK</fullName>
+                <default>false</default>
+                <label>MAZAK</label>
+            </value>
+            <value>
+                <fullName>MITSUBISHI</fullName>
+                <default>false</default>
+                <label>MITSUBISHI</label>
+            </value>
+            <value>
+                <fullName>NEL</fullName>
+                <default>false</default>
+                <label>NEL</label>
+            </value>
+            <value>
+                <fullName>NO LASER</fullName>
+                <default>false</default>
+                <label>NO LASER</label>
+            </value>
+            <value>
+                <fullName>NULL</fullName>
+                <default>false</default>
+                <label>NULL</label>
+            </value>
+            <value>
+                <fullName>PANASONIC</fullName>
+                <default>false</default>
+                <label>PANASONIC</label>
+            </value>
+            <value>
+                <fullName>PRC</fullName>
+                <default>false</default>
+                <label>PRC</label>
+            </value>
+            <value>
+                <fullName>ROFIN</fullName>
+                <default>false</default>
+                <label>ROFIN</label>
+            </value>
+            <value>
+                <fullName>ROFIN SINAR</fullName>
+                <default>false</default>
+                <label>ROFIN SINAR</label>
+            </value>
+            <value>
+                <fullName>SHIBUYA</fullName>
+                <default>false</default>
+                <label>SHIBUYA</label>
+            </value>
+            <value>
+                <fullName>STX HI PRO 48</fullName>
+                <default>false</default>
+                <label>STX HI PRO 48</label>
+            </value>
+            <value>
+                <fullName>SYNRAD</fullName>
+                <default>false</default>
+                <label>SYNRAD</label>
+            </value>
+            <value>
+                <fullName>TRUMPF</fullName>
+                <default>false</default>
+                <label>TRUMPF</label>
+            </value>
+            <value>
+                <fullName>TUBO X-48</fullName>
+                <default>false</default>
+                <label>TUBO X-48</label>
+            </value>
+            <value>
+                <fullName>TURBO X-48</fullName>
+                <default>false</default>
+                <label>TURBO X-48</label>
+            </value>
+            <value>
+                <fullName>VY-TEK</fullName>
+                <default>false</default>
+                <label>VY-TEK</label>
+            </value>
+            <value>
+                <fullName>WEGMAN BAASEL</fullName>
+                <default>false</default>
+                <label>WEGMAN BAASEL</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

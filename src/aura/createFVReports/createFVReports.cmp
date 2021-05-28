@@ -1,0 +1,21 @@
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:appHostable,force:lightningQuickAction,lightning:isUrlAddressable" controller="createFAReports" access="global" >
+    
+    <aura:handler name="init" action="{!c.doInit}" value="{!this}" description="Call doInit function on component load to get picklist values"/>
+     <aura:attribute name="GenreList" type="List" default="[]" description="Genre Picklist Values"/>
+    <aura:attribute name="selectedGenreList" type="List" default="[]" description="Selected Genre Picklist Values"/>
+    <aura:attribute name="sendData" type="object"/>
+    <ltng:require styles="{!$Resource.popupCSS}" />
+    <div class="slds-m-around_xx-large">
+            <lightning:dualListbox aura:id="selectGenre"
+                                   name="Genre"
+                                   label="Select Serial Number"
+                                   sourceLabel="Available Serial Number"
+                                   selectedLabel="Selected Serial Number"
+                                   options="{!v.GenreList }"
+                                   value="{!v.selectedGenreList}"
+                                   onchange="{!c.handleGenreChange}"/>
+             <lightning:button variant="brand" label="Generate Report" onclick="{!c.generateReport}" />
+        </div>
+   
+   
+</aura:component>

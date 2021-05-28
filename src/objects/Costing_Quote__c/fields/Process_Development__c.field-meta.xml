@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Process_Development__c</fullName>
+    <externalId>false</externalId>
+    <label>Process Development</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <controllingField>Department__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>stainless</fullName>
+                <default>false</default>
+                <label>stainless</label>
+            </value>
+            <value>
+                <fullName>Post Polish</fullName>
+                <default>false</default>
+                <label>Post Polish</label>
+            </value>
+            <value>
+                <fullName>Niobium</fullName>
+                <default>false</default>
+                <label>Niobium</label>
+            </value>
+            <value>
+                <fullName>Non-standard materials</fullName>
+                <default>false</default>
+                <label>Non-standard materials</label>
+            </value>
+            <value>
+                <fullName>Micro Optics</fullName>
+                <default>false</default>
+                <label>Micro Optics</label>
+            </value>
+            <value>
+                <fullName>Plastic</fullName>
+                <default>false</default>
+                <label>Plastic</label>
+            </value>
+            <value>
+                <fullName>LIDT process</fullName>
+                <default>false</default>
+                <label>LIDT process</label>
+            </value>
+            <value>
+                <fullName>Photoresist</fullName>
+                <default>false</default>
+                <label>Photoresist</label>
+            </value>
+            <value>
+                <fullName>Pulsed Coatings</fullName>
+                <default>false</default>
+                <label>Pulsed Coatings</label>
+            </value>
+            <value>
+                <fullName>Moving stage/calibration</fullName>
+                <default>false</default>
+                <label>Moving stage/calibration</label>
+            </value>
+            <value>
+                <fullName>Near Net</fullName>
+                <default>false</default>
+                <label>Near Net</label>
+            </value>
+            <value>
+                <fullName>Better HIP/Thicker HIP</fullName>
+                <default>false</default>
+                <label>Better HIP/Thicker HIP</label>
+            </value>
+            <value>
+                <fullName>Material Specific Process</fullName>
+                <default>false</default>
+                <label>Material Specific Process</label>
+            </value>
+            <value>
+                <fullName>Fused Silica Windows</fullName>
+                <default>false</default>
+                <label>Fused Silica Windows</label>
+            </value>
+            <value>
+                <fullName>High Volume Production</fullName>
+                <default>false</default>
+                <label>High Volume Production</label>
+            </value>
+            <value>
+                <fullName>Complex Shaping and Fixturing</fullName>
+                <default>false</default>
+                <label>Complex Shaping and Fixturing</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>DT</controllingFieldValue>
+            <valueName>stainless</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DT</controllingFieldValue>
+            <valueName>Post Polish</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DT</controllingFieldValue>
+            <valueName>Niobium</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DT</controllingFieldValue>
+            <valueName>Non-standard materials</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DT</controllingFieldValue>
+            <valueName>Micro Optics</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DT</controllingFieldValue>
+            <controllingFieldValue>CTG</controllingFieldValue>
+            <controllingFieldValue>OF</controllingFieldValue>
+            <controllingFieldValue>CS</controllingFieldValue>
+            <controllingFieldValue>QA</controllingFieldValue>
+            <controllingFieldValue>CE</controllingFieldValue>
+            <controllingFieldValue>MQ</controllingFieldValue>
+            <controllingFieldValue>GSC</controllingFieldValue>
+            <controllingFieldValue>DMG</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CTG</controllingFieldValue>
+            <valueName>Plastic</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CTG</controllingFieldValue>
+            <valueName>LIDT process</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CTG</controllingFieldValue>
+            <valueName>Photoresist</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CTG</controllingFieldValue>
+            <valueName>Pulsed Coatings</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OF</controllingFieldValue>
+            <valueName>Material Specific Process</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OF</controllingFieldValue>
+            <valueName>Fused Silica Windows</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OF</controllingFieldValue>
+            <valueName>High Volume Production</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OF</controllingFieldValue>
+            <valueName>Complex Shaping and Fixturing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MQ</controllingFieldValue>
+            <valueName>Near Net</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MQ</controllingFieldValue>
+            <valueName>Better HIP/Thicker HIP</valueName>
+        </valueSettings>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

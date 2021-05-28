@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ShipTo_Customer_ValidationCheck</fullName>
+    <active>false</active>
+    <description>If Location is selected then Company Ship To should be populated</description>
+    <errorConditionFormula>AND( NOT(ISBLANK(Company_Name_Ship_To__c )), Address_ship_to__r.ParentId  &lt;&gt;  Company_Name_Ship_To__r.Id   )</errorConditionFormula>
+    <errorDisplayField>Company_Name_Ship_To__c</errorDisplayField>
+    <errorMessage>Location should be child of   Company Name Ship To.Please clear Company Name Ship To and Try to save record again</errorMessage>
+</ValidationRule>

@@ -1,0 +1,93 @@
+<!-- 
+	@ Author :Rajavardhan
+	@ Date   :April 2019
+	@ Desc	 :This component can be used to client side pagination
+-->
+
+<aura:component access="global" >
+    <!-- Attributes -->
+    <aura:attribute name="ObjectList" 				type="SObject[]" />   
+    <aura:attribute name="maxLength" 				type="integer" />   
+    <aura:attribute name="ButtonListMaster" 		type="integer[]" />    
+    <aura:attribute name="nextFiveButtonCounter" 	type="integer" />    
+    <aura:attribute name="preFiveButtonCounter" 	type="integer" default="0"/>    
+    <aura:attribute name="PageLimit" 				type="integer"/>
+    <aura:attribute name="startPoint" 				type="integer" />
+    <aura:attribute name="endPoint" 				type="integer" />    
+    <aura:attribute name="currentPage" 				type="integer" default="1"/>
+    <aura:attribute name="lastPage" 				type="integer" />    
+    <aura:attribute name="preFlag" 					type="Boolean" default="true"/>
+    <aura:attribute name="nextFlag" 				type="Boolean" default="false"/>    
+    <aura:attribute name="preFlag10" 				type="Boolean" default="true"/>
+    <aura:attribute name="nextFlag10" 				type="Boolean" default="true"/>    
+    <aura:attribute name="prev10Label" 				type="String"  default="&lt;&lt;Prev"/>    
+    <aura:attribute name="next10Label" 				type="String"  default="Next&gt;&gt;"/>    
+    <aura:attribute name="ButtonLimit" 				type="integer" />
+    <!-- Attributes -->
+ 
+    <!-- System Handlers -->
+    <aura:registerEvent  name='setStartandEndPointEvent' type='c:navigationPageEvent'/>
+    <aura:handler name="init" value="{!this}" action="{!c.doinit}"/> 
+    <aura:handler name="change" value="{!v.maxLength}" action="{!c.itemsChange}"/>
+    <!-- System Handlers -->
+
+    <!-- Mark Up -->
+     <table>
+         <tr>
+          <td>
+           {!v.currentPage} of {!v.lastPage}
+          </td>
+        <!-- -->
+        
+        <!-- Button for Previous Ten Pages [Block Start]--> 
+        <td>
+            <lightning:button aura:id="prev10id" class="slds-button slds-button--neutral slds-p-horizontal--xx-medium slds-m-right--x-small " onclick="{!c.pre10buttons}" disabled="{!v.preFlag10}">
+                <span class="slds-icon slds-icon-text-default">{! v.prev10Label} </span>   
+            </lightning:button>
+        </td>
+        <!-- Button for Previous Ten Pages [Block Ends]-->
+        
+        <!-- Button for Previous Page [Block Starts]-->
+        <td> 
+            <lightning:button aura:id="pre" class="slds-button slds-button--neutral slds-p-horizontal--xx-medium slds-m-right--x-small " onclick="{!c.prev}" disabled="{!v.preFlag}">
+                <span class="slds-icon slds-icon-text-default">
+                    <lightning:icon iconName="utility:left" class="slds-button__icon slds-button__icon--small slds-float--center" />
+                </span>
+            </lightning:button>
+        </td>
+        <!-- Button for Previous Page [Block Ends]--> 
+        
+        <!-- Dynamic Creation of Buttons with Page Number [Block Starts]-->
+       <td>
+            <aura:iteration items="{!v.ButtonListMaster}" var="s" indexVar="index">                    		
+                <aura:if isTrue="{!( s gt v.preFiveButtonCounter )}">
+                    <aura:if isTrue="{!( (  s le v.nextFiveButtonCounter ) )}">
+                        <lightning:button name="{!(s-1)}" variant="{! if (s-1 == (v.startPoint / v.PageLimit ), 'destructive','')}" label="{!s}" onclick="{!c.goPage}"/>
+                    </aura:if>
+                </aura:if>
+            </aura:iteration>
+        </td>
+        <!-- Dynamic Creation of Buttons with Page Number [Block Ends]-->
+        
+        
+        <!-- Button for Next Page [Block Starts]--> 
+     <td>
+            <lightning:button aura:id="pre" class="slds-button slds-button--neutral slds-p-horizontal--xx-medium slds-m-right--x-small " onclick="{!c.next}" disabled="{!v.nextFlag}">
+                <span class="slds-icon slds-icon-text-default">
+                    <lightning:icon iconName="utility:right" class="slds-button__icon slds-button__icon--small slds-float--center" />
+                </span>   
+            </lightning:button>            
+        </td>
+        <!-- Button for Next Page [Block Ends]--> 
+        
+        <!-- Button for Next 10 Pages [Block Starts]--> 
+       <td>
+            <lightning:button aura:id="next10id" class="slds-button slds-button--neutral slds-p-horizontal--xx-medium slds-m-right--x-small " onclick="{!c.next10buttons}" disabled="{!v.nextFlag10}">
+                <span class="slds-icon slds-icon-text-default">{!v.next10Label}
+                </span>   
+            </lightning:button>            
+        </td>
+         </tr>
+    </table>
+  
+</aura:component>

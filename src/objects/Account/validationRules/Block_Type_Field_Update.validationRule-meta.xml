@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Block_Type_Field_Update</fullName>
+    <active>true</active>
+    <description>Non-admin and non-integration users are not able to manually update the “Type” field on Account to “Customer” (this should be done via the migration/integration).</description>
+    <errorConditionFormula>AND( $Profile.Name &lt;&gt; &quot;System Administrator&quot;, $User.Id &lt;&gt;  $Label.Integration_UserId ,  ISCHANGED(Type),ISPICKVAL(Type,&quot;Customer&quot;))</errorConditionFormula>
+    <errorDisplayField>Type</errorDisplayField>
+    <errorMessage>You cannot update type to Customer. Please contact the Administrator.</errorMessage>
+</ValidationRule>

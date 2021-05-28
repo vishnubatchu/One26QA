@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Revenue__c</fullName>
+    <externalId>false</externalId>
+    <label>Revenue</label>
+    <summarizedField>Quote_Item__c.Revenue__c</summarizedField>
+    <summaryFilterItems>
+        <field>Quote_Item__c.Line_Status__c</field>
+        <operation>equals</operation>
+        <value>Approved</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Quote_Item__c.Quote__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <type>Summary</type>
+</CustomField>

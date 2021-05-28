@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_Create_In_Close_Status</fullName>
+    <active>false</active>
+    <description>Rule to prevent creation of Opps directly in a closed win status</description>
+    <errorConditionFormula>AND (
+CASE( StageName,
+&quot;Closed via PO&quot;, 1,
+&quot;Closed Won&quot;, 1,
+0) = 1,
+NOT( No_of_line_items__c &gt;0)
+)</errorConditionFormula>
+    <errorMessage>You must add parts prior to setting the stage to Closed Won or Closed via PO</errorMessage>
+</ValidationRule>

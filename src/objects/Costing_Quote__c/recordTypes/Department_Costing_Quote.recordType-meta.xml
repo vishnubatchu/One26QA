@@ -1,0 +1,1143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Department_Costing_Quote</fullName>
+    <active>true</active>
+    <label>Department Costing Quote</label>
+    <picklistValues>
+        <picklist>Assigned_To__c</picklist>
+        <values>
+            <fullName>Bill Smith</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Brad Transue</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cameron Payne</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chris Hunter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Coleman Strohm</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dan Schwarcz</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Derec Ciafre</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Domenic Michaux</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gary Benn</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gerald Fetterman</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jan Emerick</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jeff Barca</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kim Braden</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lynn Keitzer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mark Klabnik</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Matthew Snyder</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mike Skalski</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pete Brown</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rachel Sportelli</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Randy Brown</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rob Mrozek</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Stan Himelinski</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Steve Napoletan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Steve Omecinski</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Build_Location__c</picklist>
+        <values>
+            <fullName>Dallas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vietnam</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Critical_Equipment__c</picklist>
+        <values>
+            <fullName>2nd IBS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4D Interferometer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5 Axis Mill</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>B-Axis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CP Polisher</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chamber %28M needs tooling%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DLC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Development Coater</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ellipsometer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Equipment Size %28Parts too Large%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Equipment Size %28Parts too Small%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FTS 5000</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FTS-35</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FTS-70</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Free form %2F Acylinder Metrology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Free form software for MRF</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LIDT facility</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Laser Testing Resolution</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lasers at different wavelengths</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Luphos</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Metrology Testing Resolution</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MicroLam</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Micromill-Levicron</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Micromill-Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Near Net Tooling</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Preci 5 height</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Robot</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>STS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sub 150mm MRF Wheel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Y-Axis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>alignment station</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>reference surface at lambda%2F%3F</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>subnanometer roughness reference</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Current_Manufacturing_Capability__c</picklist>
+        <values>
+            <fullName>N%2FA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Current_Metrology_Set_ups__c</picklist>
+        <values>
+            <fullName>N%2FA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Current_Production_Process__c</picklist>
+        <values>
+            <fullName>N%2FA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Department__c</picklist>
+        <values>
+            <fullName>CE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CTG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DMG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GSC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MQ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OF</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>QA</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Exceptions__c</picklist>
+        <values>
+            <fullName>Absorption</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Aerospace AS 90100</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Angle Range</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Aperture</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Automotvie</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bevel tolerance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bevels too big</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bevels too small</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CT tolerance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CT too big</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CT too small</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Diameter tolerance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Diameter too big</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Diameter too small</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Documentation Request Exception</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Environmental Requirements</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Figure</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Flatness</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Flats too small</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Internal Fringe Exception</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LIDT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Material</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Measurement Process of Pwr%2FIrr</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medical</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Optical position to mechanical datum</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Parrellism</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pwr%2FIrr too low</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>QA Code System Exception</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Radius tolerance too tight</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Radius too steep</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reflection</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reflectivity%2FAbsorption</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sag tolerance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Scheduling</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Scr%2FDig too low</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Surface roughness too low</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transmission</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wavelength range</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wedge tolerance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>radius tolerance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>roughness</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Fixed_vs_Bgdt_3__c</picklist>
+        <values>
+            <fullName>Budgetary</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fixed</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Fixed_vs_Bgdt_4__c</picklist>
+        <values>
+            <fullName>Budgetary</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fixed</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Fixed_vs_Bgdt_5__c</picklist>
+        <values>
+            <fullName>Budgetary</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fixed</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Fixed_vs_Bgdt_6__c</picklist>
+        <values>
+            <fullName>Budgetary</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fixed</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Fixed_vs_Budgetary_2__c</picklist>
+        <values>
+            <fullName>Budgetary</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fixed</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Fixed_vs_Budgetary__c</picklist>
+        <values>
+            <fullName>Budgetary</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fixed</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Lead_Time__c</picklist>
+        <values>
+            <fullName>1 week</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>10 weeks</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>11 weeks</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>12 weeks</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>13 weeks</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>14 weeks</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>15 weeks</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>16 weeks</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>17 weeks</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>18 weeks</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>19 weeks</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 weeks</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>20 weeks</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>21 weeks</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>22 weeks</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>23 weeks</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>24 weeks</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>25 weeks</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>26 weeks</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>27 weeks</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>28 weeks</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>29 weeks</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3 weeks</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>30 weeks</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4 weeks</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5 weeks</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6 weeks</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7 weeks</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8 weeks</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>9 weeks</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>No_Quote_Reason__c</picklist>
+        <values>
+            <fullName>Bevel tolerance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bevels too big</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bevels too small</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CT tolerance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CT too big</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CT too small</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cannot be cleaned</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Capacity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cosmetics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cryogenic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Diameter tolerance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Diameter too big</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Diameter too small</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Diffractive Designs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Documentaiton Requirements</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Does not fit in coater</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EHS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Flats too small</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Functional Tests</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Incompatible with Tooling</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Infrared alignment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MTF Testing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Machine limitations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Material</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Measurement Process of Pwr%2FIrr</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Metallization%2Fbraze</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PPAP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Parrellism</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Plastic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pulsed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pwr%2FIrr too low</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Radius tolerance too tight</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Radius too steep</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Regulatory Requirements</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sag tolerance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Scr%2FDig too low</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Surface roughness too low</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Target Price</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UV Alignment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wavefront Testing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wavelength</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wedge tolerance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>cannot coat desired shape</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>grown near-net %28dome%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>thickness</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>thickness of MS-ZnS %2F HIP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>x-y</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Process_Development__c</picklist>
+        <values>
+            <fullName>Better HIP%2FThicker HIP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Complex Shaping and Fixturing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fused Silica Windows</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>High Volume Production</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LIDT process</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Material Specific Process</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Micro Optics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Moving stage%2Fcalibration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Near Net</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Niobium</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Non-standard materials</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Photoresist</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Plastic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Post Polish</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pulsed Coatings</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>stainless</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Prod_Phase_2__c</picklist>
+        <values>
+            <fullName>Alpha Samples</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Beta Samples</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Initial Production</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mass Production</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Prod_Phase_3__c</picklist>
+        <values>
+            <fullName>Alpha Samples</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Beta Samples</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Initial Production</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mass Production</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Prod_Phase_4__c</picklist>
+        <values>
+            <fullName>Alpha Samples</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Beta Samples</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Initial Production</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mass Production</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Prod_Phase_5__c</picklist>
+        <values>
+            <fullName>Alpha Samples</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Beta Samples</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Initial Production</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mass Production</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Prod_Phase_6__c</picklist>
+        <values>
+            <fullName>Alpha Samples</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Beta Samples</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Initial Production</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mass Production</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Production_Phase__c</picklist>
+        <values>
+            <fullName>Alpha Samples</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Beta Samples</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Initial Production</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mass Production</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Qty_Per__c</picklist>
+        <values>
+            <fullName>Month</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>One Time</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quarter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Year</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Request_Type__c</picklist>
+        <values>
+            <fullName>Information Only</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quote Request</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status__c</picklist>
+        <values>
+            <fullName>Awaiting Customer Response</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer Responded</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Process</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Open</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Transfer_to_Sing_Suz__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

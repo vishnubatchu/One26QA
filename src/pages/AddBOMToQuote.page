@@ -1,0 +1,92 @@
+<apex:page standardController="Quote_Item__c" extensions="CreateOrderedPartsForQuote">
+<script>
+  function selectAllCheckboxes(obj,receivedInputID){
+            var inputCheckBox = document.getElementsByTagName("input");                 
+            for(var i=0; i<inputCheckBox.length; i++){         
+                if(inputCheckBox[i].id.indexOf(receivedInputID)!=-1){                                    
+                    inputCheckBox[i].checked = obj.checked;
+                }
+            }
+        }        
+        function unSelectMainCheckbox(){
+            $j(".unSelectMain").attr('checked', false);  
+        }
+    </script>
+<apex:form > 
+ <apex:sectionHeader title="{!Quote_Item__c.Name}" subtitle="Components" id="SH"/>
+     <div class="bPageTitle">
+    <div class="ptBreadcrumb">&nbsp;«&nbsp;
+        <a href="/{!quoteProduct.Quote__c}">Back to Quote: {!quoteProduct.Quote__r.Name}</a>
+        </div>
+    </div>
+     <apex:pageMessages ></apex:pageMessages>
+     <apex:pageBlock id="pb" title="Available Parts" rendered="{!isRender}">     
+          <apex:pageBlockTable value="{!listOfClassBOMProdWrapper}" var="classBOMProdWrapper" id="Prodtable"> 
+          <apex:column >
+           <apex:facet name="header">
+                <apex:inputCheckbox onclick="selectAllCheckboxes(this,'inputId')" styleClass="unSelectMain" />
+            </apex:facet>
+           <apex:inputCheckbox value="{!classBOMProdWrapper.isSelected}" id="inputId" rendered="{!classBOMProdWrapper.isAdded == 'Available'}"/>
+           <apex:inputCheckbox value="{!classBOMProdWrapper.isSelected}" disabled="{!classBOMProdWrapper.isAdded == 'Added'}" rendered="{!classBOMProdWrapper.isAdded == 'Added'}"/>
+          </apex:column>
+          <apex:column value="{!classBOMProdWrapper.bomProd.Name}" headerValue="Name"/>
+          <apex:column value="{!classBOMProdWrapper.bomProd.Id}" headerValue="Name"/>
+          <apex:column value="{!classBOMProdWrapper.bomProd.BOM_Part__r.Quantity__c}" headerValue="Quantity"/>
+          <!-- <apex:column headerValue="Action">
+               <apex:commandButton value="Add" action="{!addParts}" reRender="pb">
+                  <apex:param value="{!classBOMProdWrapper.bomProd.id}" name="bomProdID" />
+               </apex:commandButton>
+            </apex:column> -->
+        </apex:pageBlockTable>
+        <apex:pageBlockButtons location="Bottom">
+            <apex:commandButton value="Add Parts" action="{!addParts}" reRender="AddedItem,pb"/>
+        </apex:pageBlockButtons>
+      </apex:pageBlock>
+   <apex:pageBlock title="Added Parts" rendered="{!isRender}" id="pb1">             
+        <apex:pageBlockTable value="{!listOfBOMParts}" var="orderedPart" id="AddedItem" title="Ordered Parts"> 
+          <apex:column headerValue="Action">
+              <apex:commandlink value="Delete" action="{!removeBOMOrderedProduct}" styleClass="btn" reRender="AddedItem,Prodtable" rendered="{!orderedPart.id != null}">
+                  <apex:param value="{!orderedPart.BOM_Product_Part__c}" name="BOMProductId"/> 
+               </apex:commandlink>           
+              <apex:commandlink value="Remove" action="{!removeBOMOrderedProduct}" styleClass="btn" reRender="AddedItem,Prodtable" rendered="{!orderedPart.id == null}">
+                  <apex:param value="{!orderedPart.BOM_Product_Part__c}" name="BOMProductId"/> 
+               </apex:commandlink> 
+            </apex:column>
+           
+          <apex:column >
+              <apex:facet name="header">
+                    <apex:commandLink value="Name" action="{!sortListByName}" rerender="pb1">
+                       <!-- <apex:param name="sortField" value="firstName" assignTo="{!sortField}"/> -->
+                    </apex:commandLink>
+               </apex:facet>
+              <apex:inputField value="{!orderedPart.Name}"/>
+          </apex:column> 
+           
+          <apex:column headerValue="English Description" >
+            <apex:inputField value="{!orderedPart.English_Description__c}"/>
+          </apex:column>
+          <apex:column headerValue="Deutch Description" >
+            <apex:inputField value="{!orderedPart.Deutch_Description__c}"/>
+          </apex:column>     
+          
+          <apex:column headerValue="Quantity" >
+            <apex:inputField style="width:40px;" value="{!orderedPart.Quantity__c}" required="true"/>
+          </apex:column>  
+                  
+           <apex:column >
+                <apex:facet name="header">
+                    <apex:commandLink value="Position" action="{!sortListByPostion}" rerender="pb1">
+                       <!-- <apex:param name="sortField" value="firstName" assignTo="{!sortField}"/> -->
+                    </apex:commandLink>
+                </apex:facet>
+                 <apex:inputField style="width:40px;" value="{!orderedPart.Position__c}" required="true"/>
+            </apex:column>    
+           
+        </apex:pageBlockTable> 
+        <apex:pageBlockButtons location="Bottom">
+            <apex:commandButton value="Save" action="{!Save}"/>
+          <apex:commandButton value="Cancel" action="{!cancel}"/>
+        </apex:pageBlockButtons>
+     </apex:pageBlock>
+ </apex:form>
+</apex:page>

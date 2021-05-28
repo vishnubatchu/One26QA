@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Approval_From__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( CreatedBy.Profile.Name = &quot;Finisar Partner Community User&quot; ,IF( Target_Price__c &lt; RSM_Min__c ,&apos;BothApprovers&apos;, IF( Target_Price__c &lt; REP_Min__c ,&apos;RSM&apos;,IF(ISNULL(RSM_Min__c)||ISNULL(REP_Min__c),&apos;BothApprovers&apos;,&apos;None&apos;))), 
+IF(ISNULL(RSM_Min__c),IF(OR(CONTAINS( CreatedBy.UserRole.Name,&apos;RSM&apos;),CONTAINS( CreatedBy.UserRole.Name,&apos;SOM&apos;)),&apos;PLM&apos;,&apos;BothApprovers&apos;), 
+IF( Target_Price__c &lt; RSM_Min__c,IF( OR(CONTAINS( CreatedBy.UserRole.Name,&apos;RSM&apos;),CONTAINS( CreatedBy.UserRole.Name,&apos;SOM&apos;)),&apos;PLM&apos;,&apos;BothApprovers&apos;), IF( OR(CONTAINS( CreatedBy.UserRole.Name,&apos;RSM&apos;),CONTAINS( CreatedBy.UserRole.Name,&apos;SOM&apos;)) ,&apos;None&apos;,&apos;RSM&apos;))))</formula>
+    <label>Approval From</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

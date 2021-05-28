@@ -1,0 +1,815 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>System__c</fullName>
+    <externalId>false</externalId>
+    <label>System</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>* OTHER</fullName>
+                <default>false</default>
+                <label>* OTHER</label>
+            </value>
+            <value>
+                <fullName>* UNKNOWN</fullName>
+                <default>false</default>
+                <label>* UNKNOWN</label>
+            </value>
+            <value>
+                <fullName>ACCURIS</fullName>
+                <default>false</default>
+                <label>ACCURIS</label>
+            </value>
+            <value>
+                <fullName>ADIGE SALA</fullName>
+                <default>false</default>
+                <label>ADIGE SALA</label>
+            </value>
+            <value>
+                <fullName>Adira</fullName>
+                <default>false</default>
+                <label>Adira</label>
+            </value>
+            <value>
+                <fullName>AMADA</fullName>
+                <default>false</default>
+                <label>AMADA</label>
+            </value>
+            <value>
+                <fullName>BAASEL</fullName>
+                <default>false</default>
+                <label>BAASEL</label>
+            </value>
+            <value>
+                <fullName>BALLIU</fullName>
+                <default>false</default>
+                <label>BALLIU</label>
+            </value>
+            <value>
+                <fullName>Baykal</fullName>
+                <default>false</default>
+                <label>Baykal</label>
+            </value>
+            <value>
+                <fullName>BEAM DYNAMICS</fullName>
+                <default>false</default>
+                <label>BEAM DYNAMICS</label>
+            </value>
+            <value>
+                <fullName>BEHRENS</fullName>
+                <default>false</default>
+                <label>BEHRENS</label>
+            </value>
+            <value>
+                <fullName>BLM Group (Adige)</fullName>
+                <default>false</default>
+                <label>BLM Group (Adige)</label>
+            </value>
+            <value>
+                <fullName>BODOR</fullName>
+                <default>false</default>
+                <label>BODOR</label>
+            </value>
+            <value>
+                <fullName>BYSTRONIC</fullName>
+                <default>false</default>
+                <label>BYSTRONIC</label>
+            </value>
+            <value>
+                <fullName>CINCINNATI</fullName>
+                <default>false</default>
+                <label>CINCINNATI</label>
+            </value>
+            <value>
+                <fullName>CNC Laser Cutting Solutions</fullName>
+                <default>false</default>
+                <label>CNC Laser Cutting Solutions</label>
+            </value>
+            <value>
+                <fullName>COHERENT</fullName>
+                <default>false</default>
+                <label>COHERENT</label>
+            </value>
+            <value>
+                <fullName>Cutlite Penta</fullName>
+                <default>false</default>
+                <label>Cutlite Penta</label>
+            </value>
+            <value>
+                <fullName>CY LASER</fullName>
+                <default>false</default>
+                <label>CY LASER</label>
+            </value>
+            <value>
+                <fullName>DAIHEN</fullName>
+                <default>false</default>
+                <label>DAIHEN</label>
+            </value>
+            <value>
+                <fullName>Danobat</fullName>
+                <default>false</default>
+                <label>Danobat</label>
+            </value>
+            <value>
+                <fullName>DATATECH</fullName>
+                <default>false</default>
+                <label>DATATECH</label>
+            </value>
+            <value>
+                <fullName>DOMINO</fullName>
+                <default>false</default>
+                <label>DOMINO</label>
+            </value>
+            <value>
+                <fullName>Durma</fullName>
+                <default>false</default>
+                <label>Durma</label>
+            </value>
+            <value>
+                <fullName>Durmazlar</fullName>
+                <default>false</default>
+                <label>Durmazlar</label>
+            </value>
+            <value>
+                <fullName>EAGLE LASERS</fullName>
+                <default>false</default>
+                <label>EAGLE LASERS</label>
+            </value>
+            <value>
+                <fullName>Eckert</fullName>
+                <default>false</default>
+                <label>Eckert</label>
+            </value>
+            <value>
+                <fullName>ELCEDE</fullName>
+                <default>false</default>
+                <label>ELCEDE</label>
+            </value>
+            <value>
+                <fullName>ELECTROX</fullName>
+                <default>false</default>
+                <label>ELECTROX</label>
+            </value>
+            <value>
+                <fullName>EL EN</fullName>
+                <default>false</default>
+                <label>EL EN</label>
+            </value>
+            <value>
+                <fullName>Enshu</fullName>
+                <default>false</default>
+                <label>Enshu</label>
+            </value>
+            <value>
+                <fullName>EPILOG</fullName>
+                <default>false</default>
+                <label>EPILOG</label>
+            </value>
+            <value>
+                <fullName>Ermaksan</fullName>
+                <default>false</default>
+                <label>Ermaksan</label>
+            </value>
+            <value>
+                <fullName>ESAB</fullName>
+                <default>false</default>
+                <label>ESAB</label>
+            </value>
+            <value>
+                <fullName>Eurolaser</fullName>
+                <default>false</default>
+                <label>Eurolaser</label>
+            </value>
+            <value>
+                <fullName>FARLEY LASERLAB</fullName>
+                <default>false</default>
+                <label>FARLEY LASERLAB</label>
+            </value>
+            <value>
+                <fullName>FASTRAK</fullName>
+                <default>false</default>
+                <label>FASTRAK</label>
+            </value>
+            <value>
+                <fullName>FAVOR LASER</fullName>
+                <default>false</default>
+                <label>FAVOR LASER</label>
+            </value>
+            <value>
+                <fullName>FERRANTI/LASER ECOSSE</fullName>
+                <default>false</default>
+                <label>FERRANTI/LASER ECOSSE</label>
+            </value>
+            <value>
+                <fullName>FIBER LASER</fullName>
+                <default>false</default>
+                <label>FIBER LASER</label>
+            </value>
+            <value>
+                <fullName>FineDevice</fullName>
+                <default>false</default>
+                <label>FineDevice</label>
+            </value>
+            <value>
+                <fullName>FINN-POWER</fullName>
+                <default>false</default>
+                <label>FINN-POWER</label>
+            </value>
+            <value>
+                <fullName>Finsomac</fullName>
+                <default>false</default>
+                <label>Finsomac</label>
+            </value>
+            <value>
+                <fullName>GAMATA</fullName>
+                <default>false</default>
+                <label>GAMATA</label>
+            </value>
+            <value>
+                <fullName>GCC</fullName>
+                <default>false</default>
+                <label>GCC</label>
+            </value>
+            <value>
+                <fullName>GE</fullName>
+                <default>false</default>
+                <label>GE</label>
+            </value>
+            <value>
+                <fullName>GERBER</fullName>
+                <default>false</default>
+                <label>GERBER</label>
+            </value>
+            <value>
+                <fullName>GRAVOTECH</fullName>
+                <default>false</default>
+                <label>GRAVOTECH</label>
+            </value>
+            <value>
+                <fullName>HAAS</fullName>
+                <default>false</default>
+                <label>HAAS</label>
+            </value>
+            <value>
+                <fullName>HACO</fullName>
+                <default>false</default>
+                <label>HACO</label>
+            </value>
+            <value>
+                <fullName>HAN&apos;S</fullName>
+                <default>false</default>
+                <label>HAN&apos;S</label>
+            </value>
+            <value>
+                <fullName>HANKWANG</fullName>
+                <default>false</default>
+                <label>HANKWANG</label>
+            </value>
+            <value>
+                <fullName>HIGHYAG</fullName>
+                <default>false</default>
+                <label>HIGHYAG</label>
+            </value>
+            <value>
+                <fullName>HITACJHI</fullName>
+                <default>false</default>
+                <label>HITACJHI</label>
+            </value>
+            <value>
+                <fullName>HUFFMAN</fullName>
+                <default>false</default>
+                <label>HUFFMAN</label>
+            </value>
+            <value>
+                <fullName>HX1290 SE</fullName>
+                <default>false</default>
+                <label>HX1290 SE</label>
+            </value>
+            <value>
+                <fullName>IPG</fullName>
+                <default>false</default>
+                <label>IPG</label>
+            </value>
+            <value>
+                <fullName>Jiang Ju JFY</fullName>
+                <default>false</default>
+                <label>Jiang Ju JFY</label>
+            </value>
+            <value>
+                <fullName>Jiang Ju Yang Li</fullName>
+                <default>false</default>
+                <label>Jiang Ju Yang Li</label>
+            </value>
+            <value>
+                <fullName>JINAN JIEMAI</fullName>
+                <default>false</default>
+                <label>JINAN JIEMAI</label>
+            </value>
+            <value>
+                <fullName>JINGFANGYUAN</fullName>
+                <default>false</default>
+                <label>JINGFANGYUAN</label>
+            </value>
+            <value>
+                <fullName>KERN</fullName>
+                <default>false</default>
+                <label>KERN</label>
+            </value>
+            <value>
+                <fullName>KERN ELECTRONICS</fullName>
+                <default>false</default>
+                <label>KERN ELECTRONICS</label>
+            </value>
+            <value>
+                <fullName>Kimla</fullName>
+                <default>false</default>
+                <label>Kimla</label>
+            </value>
+            <value>
+                <fullName>Kjellberg Schweisstechnik</fullName>
+                <default>false</default>
+                <label>Kjellberg Schweisstechnik</label>
+            </value>
+            <value>
+                <fullName>KOIKE</fullName>
+                <default>false</default>
+                <label>KOIKE</label>
+            </value>
+            <value>
+                <fullName>KOMATSU</fullName>
+                <default>false</default>
+                <label>KOMATSU</label>
+            </value>
+            <value>
+                <fullName>KOTAKI SEIKI</fullName>
+                <default>false</default>
+                <label>KOTAKI SEIKI</label>
+            </value>
+            <value>
+                <fullName>Lasercomb</fullName>
+                <default>false</default>
+                <label>Lasercomb</label>
+            </value>
+            <value>
+                <fullName>LASERCUT</fullName>
+                <default>false</default>
+                <label>LASERCUT</label>
+            </value>
+            <value>
+                <fullName>LASERDYNE</fullName>
+                <default>false</default>
+                <label>LASERDYNE</label>
+            </value>
+            <value>
+                <fullName>LASERLAB</fullName>
+                <default>false</default>
+                <label>LASERLAB</label>
+            </value>
+            <value>
+                <fullName>LASER LAB</fullName>
+                <default>false</default>
+                <label>LASER LAB</label>
+            </value>
+            <value>
+                <fullName>LASERMATE</fullName>
+                <default>false</default>
+                <label>LASERMATE</label>
+            </value>
+            <value>
+                <fullName>LASER MECH</fullName>
+                <default>false</default>
+                <label>LASER MECH</label>
+            </value>
+            <value>
+                <fullName>LCD</fullName>
+                <default>false</default>
+                <label>LCD</label>
+            </value>
+            <value>
+                <fullName>LECTRA</fullName>
+                <default>false</default>
+                <label>LECTRA</label>
+            </value>
+            <value>
+                <fullName>LIGHTSTAR</fullName>
+                <default>false</default>
+                <label>LIGHTSTAR</label>
+            </value>
+            <value>
+                <fullName>LINX DYMARK</fullName>
+                <default>false</default>
+                <label>LINX DYMARK</label>
+            </value>
+            <value>
+                <fullName>LMI</fullName>
+                <default>false</default>
+                <label>LMI</label>
+            </value>
+            <value>
+                <fullName>LOW POWER</fullName>
+                <default>false</default>
+                <label>LOW POWER</label>
+            </value>
+            <value>
+                <fullName>Lumenis</fullName>
+                <default>false</default>
+                <label>Lumenis</label>
+            </value>
+            <value>
+                <fullName>LUMONICS</fullName>
+                <default>false</default>
+                <label>LUMONICS</label>
+            </value>
+            <value>
+                <fullName>LVD</fullName>
+                <default>false</default>
+                <label>LVD</label>
+            </value>
+            <value>
+                <fullName>MACSA ID</fullName>
+                <default>false</default>
+                <label>MACSA ID</label>
+            </value>
+            <value>
+                <fullName>MARKEM</fullName>
+                <default>false</default>
+                <label>MARKEM</label>
+            </value>
+            <value>
+                <fullName>MAZAK</fullName>
+                <default>false</default>
+                <label>MAZAK</label>
+            </value>
+            <value>
+                <fullName>Messer Cutting Systems</fullName>
+                <default>false</default>
+                <label>Messer Cutting Systems</label>
+            </value>
+            <value>
+                <fullName>Microstep</fullName>
+                <default>false</default>
+                <label>Microstep</label>
+            </value>
+            <value>
+                <fullName>MITSUBISHI</fullName>
+                <default>false</default>
+                <label>MITSUBISHI</label>
+            </value>
+            <value>
+                <fullName>Miyachi</fullName>
+                <default>false</default>
+                <label>Miyachi</label>
+            </value>
+            <value>
+                <fullName>MLT</fullName>
+                <default>false</default>
+                <label>MLT</label>
+            </value>
+            <value>
+                <fullName>MURATA</fullName>
+                <default>false</default>
+                <label>MURATA</label>
+            </value>
+            <value>
+                <fullName>Muratec</fullName>
+                <default>false</default>
+                <label>Muratec</label>
+            </value>
+            <value>
+                <fullName>NANCHUAN</fullName>
+                <default>false</default>
+                <label>NANCHUAN</label>
+            </value>
+            <value>
+                <fullName>NANJING EASTEN</fullName>
+                <default>false</default>
+                <label>NANJING EASTEN</label>
+            </value>
+            <value>
+                <fullName>NEC</fullName>
+                <default>false</default>
+                <label>NEC</label>
+            </value>
+            <value>
+                <fullName>Nihon Avionics</fullName>
+                <default>false</default>
+                <label>Nihon Avionics</label>
+            </value>
+            <value>
+                <fullName>NIHON WELDING</fullName>
+                <default>false</default>
+                <label>NIHON WELDING</label>
+            </value>
+            <value>
+                <fullName>Nippon Sharyo</fullName>
+                <default>false</default>
+                <label>Nippon Sharyo</label>
+            </value>
+            <value>
+                <fullName>Nissan Tanaka</fullName>
+                <default>false</default>
+                <label>Nissan Tanaka</label>
+            </value>
+            <value>
+                <fullName>NISSHINBO</fullName>
+                <default>false</default>
+                <label>NISSHINBO</label>
+            </value>
+            <value>
+                <fullName>NO LASERS</fullName>
+                <default>false</default>
+                <label>NO LASERS</label>
+            </value>
+            <value>
+                <fullName>NTC</fullName>
+                <default>false</default>
+                <label>NTC</label>
+            </value>
+            <value>
+                <fullName>Nukon Lazar</fullName>
+                <default>false</default>
+                <label>Nukon Lazar</label>
+            </value>
+            <value>
+                <fullName>NULL</fullName>
+                <default>false</default>
+                <label>NULL</label>
+            </value>
+            <value>
+                <fullName>PANASONIC</fullName>
+                <default>false</default>
+                <label>PANASONIC</label>
+            </value>
+            <value>
+                <fullName>PENTA</fullName>
+                <default>false</default>
+                <label>PENTA</label>
+            </value>
+            <value>
+                <fullName>PENTACHUTIAN</fullName>
+                <default>false</default>
+                <label>PENTACHUTIAN</label>
+            </value>
+            <value>
+                <fullName>PHOTON</fullName>
+                <default>false</default>
+                <label>PHOTON</label>
+            </value>
+            <value>
+                <fullName>PNEUMATIC</fullName>
+                <default>false</default>
+                <label>PNEUMATIC</label>
+            </value>
+            <value>
+                <fullName>PRECITEC</fullName>
+                <default>false</default>
+                <label>PRECITEC</label>
+            </value>
+            <value>
+                <fullName>PRECO</fullName>
+                <default>false</default>
+                <label>PRECO</label>
+            </value>
+            <value>
+                <fullName>PRIMA/LASERDYNE</fullName>
+                <default>false</default>
+                <label>PRIMA/LASERDYNE</label>
+            </value>
+            <value>
+                <fullName>PRIMA_POWER</fullName>
+                <default>false</default>
+                <label>PRIMA POWER</label>
+            </value>
+            <value>
+                <fullName>Produtech</fullName>
+                <default>false</default>
+                <label>Produtech</label>
+            </value>
+            <value>
+                <fullName>QINGDAO CREAT</fullName>
+                <default>false</default>
+                <label>QINGDAO CREAT</label>
+            </value>
+            <value>
+                <fullName>RABBIT</fullName>
+                <default>false</default>
+                <label>RABBIT</label>
+            </value>
+            <value>
+                <fullName>RAYTOOL</fullName>
+                <default>false</default>
+                <label>RAYTOOL</label>
+            </value>
+            <value>
+                <fullName>REIS</fullName>
+                <default>false</default>
+                <label>REIS</label>
+            </value>
+            <value>
+                <fullName>ROFIN</fullName>
+                <default>false</default>
+                <label>ROFIN</label>
+            </value>
+            <value>
+                <fullName>ROFIN SINAR</fullName>
+                <default>false</default>
+                <label>ROFIN SINAR</label>
+            </value>
+            <value>
+                <fullName>Sahajanand Laser</fullName>
+                <default>false</default>
+                <label>Sahajanand Laser</label>
+            </value>
+            <value>
+                <fullName>Saitama Fuji</fullName>
+                <default>false</default>
+                <label>Saitama Fuji</label>
+            </value>
+            <value>
+                <fullName>SALVAGNINI</fullName>
+                <default>false</default>
+                <label>SALVAGNINI</label>
+            </value>
+            <value>
+                <fullName>SEI</fullName>
+                <default>false</default>
+                <label>SEI</label>
+            </value>
+            <value>
+                <fullName>SHENYANG PRIMA</fullName>
+                <default>false</default>
+                <label>SHENYANG PRIMA</label>
+            </value>
+            <value>
+                <fullName>SHIBUYA</fullName>
+                <default>false</default>
+                <label>SHIBUYA</label>
+            </value>
+            <value>
+                <fullName>SHI mechatronics</fullName>
+                <default>false</default>
+                <label>SHI mechatronics</label>
+            </value>
+            <value>
+                <fullName>SHINNIHON KOKI</fullName>
+                <default>false</default>
+                <label>SHINNIHON KOKI</label>
+            </value>
+            <value>
+                <fullName>Soitaab</fullName>
+                <default>false</default>
+                <label>Soitaab</label>
+            </value>
+            <value>
+                <fullName>STRIPPIT/LVD</fullName>
+                <default>false</default>
+                <label>STRIPPIT/LVD</label>
+            </value>
+            <value>
+                <fullName>SUZHOU LEAD</fullName>
+                <default>false</default>
+                <label>SUZHOU LEAD</label>
+            </value>
+            <value>
+                <fullName>SYNRAD</fullName>
+                <default>false</default>
+                <label>SYNRAD</label>
+            </value>
+            <value>
+                <fullName>TANAKA</fullName>
+                <default>false</default>
+                <label>TANAKA</label>
+            </value>
+            <value>
+                <fullName>TCI Cutting</fullName>
+                <default>false</default>
+                <label>TCI Cutting</label>
+            </value>
+            <value>
+                <fullName>Techno Coat</fullName>
+                <default>false</default>
+                <label>Techno Coat</label>
+            </value>
+            <value>
+                <fullName>Tecoi</fullName>
+                <default>false</default>
+                <label>Tecoi</label>
+            </value>
+            <value>
+                <fullName>THM</fullName>
+                <default>false</default>
+                <label>THM</label>
+            </value>
+            <value>
+                <fullName>TOSHIBA</fullName>
+                <default>false</default>
+                <label>TOSHIBA</label>
+            </value>
+            <value>
+                <fullName>TROTEC</fullName>
+                <default>false</default>
+                <label>TROTEC</label>
+            </value>
+            <value>
+                <fullName>TRUMPF</fullName>
+                <default>false</default>
+                <label>TRUMPF</label>
+            </value>
+            <value>
+                <fullName>TTM - Tube Tech Machinery</fullName>
+                <default>false</default>
+                <label>TTM - Tube Tech Machinery</label>
+            </value>
+            <value>
+                <fullName>UNITY PRIMA</fullName>
+                <default>false</default>
+                <label>UNITY PRIMA</label>
+            </value>
+            <value>
+                <fullName>UNIVERSAL</fullName>
+                <default>false</default>
+                <label>UNIVERSAL</label>
+            </value>
+            <value>
+                <fullName>VICCAM</fullName>
+                <default>false</default>
+                <label>VICCAM</label>
+            </value>
+            <value>
+                <fullName>VIDEOJET</fullName>
+                <default>false</default>
+                <label>VIDEOJET</label>
+            </value>
+            <value>
+                <fullName>VIRTEK</fullName>
+                <default>false</default>
+                <label>VIRTEK</label>
+            </value>
+            <value>
+                <fullName>Vnitep</fullName>
+                <default>false</default>
+                <label>Vnitep</label>
+            </value>
+            <value>
+                <fullName>VYTEK</fullName>
+                <default>false</default>
+                <label>VYTEK</label>
+            </value>
+            <value>
+                <fullName>WEIDERMAN</fullName>
+                <default>false</default>
+                <label>WEIDERMAN</label>
+            </value>
+            <value>
+                <fullName>WHITNEY</fullName>
+                <default>false</default>
+                <label>WHITNEY</label>
+            </value>
+            <value>
+                <fullName>WIEDEMANN</fullName>
+                <default>false</default>
+                <label>WIEDEMANN</label>
+            </value>
+            <value>
+                <fullName>Wuhan Farley</fullName>
+                <default>false</default>
+                <label>Wuhan Farley</label>
+            </value>
+            <value>
+                <fullName>Wuhan Penta</fullName>
+                <default>false</default>
+                <label>Wuhan Penta</label>
+            </value>
+            <value>
+                <fullName>XENATECH</fullName>
+                <default>false</default>
+                <label>XENATECH</label>
+            </value>
+            <value>
+                <fullName>YAG</fullName>
+                <default>false</default>
+                <label>YAG</label>
+            </value>
+            <value>
+                <fullName>YANGLI</fullName>
+                <default>false</default>
+                <label>YANGLI</label>
+            </value>
+            <value>
+                <fullName>YAWEI</fullName>
+                <default>false</default>
+                <label>YAWEI</label>
+            </value>
+            <value>
+                <fullName>ZED</fullName>
+                <default>false</default>
+                <label>ZED</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

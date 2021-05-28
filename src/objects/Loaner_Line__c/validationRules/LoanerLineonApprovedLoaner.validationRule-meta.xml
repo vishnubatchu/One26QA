@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LoanerLineonApprovedLoaner</fullName>
+    <active>true</active>
+    <description>Preventing new Loaner Line creation with Approved Loaner</description>
+    <errorConditionFormula>ISNEW() &amp;&amp; ISPICKVAL(Loaner__r.Status_Approval__c , &apos;Approved&apos;) &amp;&amp; NOT($Profile.Name =&apos;System Administrator&apos;)</errorConditionFormula>
+    <errorMessage>New Loaner Line will not be added on Approved Loaner</errorMessage>
+</ValidationRule>

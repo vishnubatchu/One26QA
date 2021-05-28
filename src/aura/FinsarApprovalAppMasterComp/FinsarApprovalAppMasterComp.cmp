@@ -1,0 +1,25 @@
+<aura:component  implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction,lightning:isUrlAddressable" access="global" >
+	<aura:attribute name="ObjType" type="String"/>
+    <aura:attribute name="ObjRec" type="String"/>
+    <aura:attribute name="QuoteId" type="String"/>
+    <aura:attribute name="LoanerId" type="String"/>
+    <aura:attribute name="LoanerExtId" type="String"/>
+     <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <aura:if isTrue="{!v.ObjType == 'QId'}">
+        <c:QuoteUIApprovalComponent QuoteId="{!v.ObjRec}"/>
+        </aura:if> 
+    <aura:if isTrue="{!v.ObjType == 'LId'}">
+        <c:LoanerUIApprovalComponent LoanerId="{!v.ObjRec}"/>
+        </aura:if> 
+     <!-- 
+    <aura:if isTrue="{!v.QuoteId != 'false'}">
+        <c:QuoteUIApprovalComponent QuoteId="{!v.QuoteId}"/>
+        </aura:if> 
+    <aura:if isTrue="{!v.LoanerId != 'false'}">
+        <c:LoanerUIApprovalComponent LoanerId="{!v.LoanerId}"/>
+        </aura:if> 
+    <aura:if isTrue="{!v.LoanerExtId != 'false'}">
+        <c:LoanerExtUIApprovalComponent LoanerExtId="{!v.LoanerExtId}"/>
+        </aura:if> -->
+</aura:component>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Standard_From_Vietnam__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Advises if the standard cost that is displayed came from -03 Vietnam in Glovia</description>
+    <externalId>false</externalId>
+    <inlineHelpText>If this box is checked the standard cost is from -03 Vietnam in Glovia</inlineHelpText>
+    <label>Standard From Vietnam</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>End_Customer__c</fullName>
+    <externalId>false</externalId>
+    <formula>FA_FV_Detail__r.Serial_Number__r.Order_Line__r.Order__r.End_Customer__c</formula>
+    <label>End Customer</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

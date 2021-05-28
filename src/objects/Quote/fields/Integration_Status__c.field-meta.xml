@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Integration_Status__c</fullName>
+    <description>Used to indicate the result of an integration on this individual record</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Used to indicate the result of an integration on this individual record</inlineHelpText>
+    <label>Integration Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Integration_Statuses</valueSetName>
+    </valueSet>
+</CustomField>

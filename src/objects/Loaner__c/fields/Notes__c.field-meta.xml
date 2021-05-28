@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Notes__c</fullName>
+    <description>&quot;if Loaner ship from is &quot;&quot;Transfer From Existing Loaner&quot;&quot;, user should enter SO number in notes, if Loaner ship from is &quot;&quot;Other&quot;&quot; user should enter Expalanation.
+if the Opportunity Type is Not &quot;New Opportunity - Misc&quot; user should Enter Expalanation&quot;</description>
+    <externalId>false</externalId>
+    <label>Notes</label>
+    <length>700</length>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>4</visibleLines>
+</CustomField>

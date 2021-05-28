@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Return_Detail__c</fullName>
+    <externalId>false</externalId>
+    <label>Return Detail</label>
+    <referenceTo>Return_Detail__c</referenceTo>
+    <relationshipLabel>Disposition/Transfer Details</relationshipLabel>
+    <relationshipName>Disposition_Transfer_Details</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

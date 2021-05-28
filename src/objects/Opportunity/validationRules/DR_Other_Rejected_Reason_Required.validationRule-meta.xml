@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DR_Other_Rejected_Reason_Required</fullName>
+    <active>true</active>
+    <description>If a DR is rejected and rejection reason is &quot;other&quot; then the Lost rejection details field becomes required</description>
+    <errorConditionFormula>Design_Registration__c = True &amp;&amp;   ISPICKVAL( Lost_Cancelled_Rejected_Reason__c  , &apos;Other&apos;) &amp;&amp;  ISBLANK( Lost_to_Details__c )</errorConditionFormula>
+    <errorDisplayField>Lost_to_Details__c</errorDisplayField>
+    <errorMessage>&apos;Lost Rejected Details&apos; cannot be blank for Other Rejection Reason</errorMessage>
+</ValidationRule>

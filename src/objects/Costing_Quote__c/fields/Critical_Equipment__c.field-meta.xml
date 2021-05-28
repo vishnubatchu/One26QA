@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Critical_Equipment__c</fullName>
+    <externalId>false</externalId>
+    <label>Critical Equipment</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <controllingField>Department__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>alignment station</fullName>
+                <default>false</default>
+                <label>alignment station</label>
+            </value>
+            <value>
+                <fullName>Development Coater</fullName>
+                <default>false</default>
+                <label>Development Coater</label>
+            </value>
+            <value>
+                <fullName>DLC</fullName>
+                <default>false</default>
+                <label>DLC</label>
+            </value>
+            <value>
+                <fullName>Ellipsometer</fullName>
+                <default>false</default>
+                <label>Ellipsometer</label>
+            </value>
+            <value>
+                <fullName>2nd IBS</fullName>
+                <default>false</default>
+                <label>2nd IBS</label>
+            </value>
+            <value>
+                <fullName>LIDT facility</fullName>
+                <default>false</default>
+                <label>LIDT facility</label>
+            </value>
+            <value>
+                <fullName>reference surface at lambda/?</fullName>
+                <default>false</default>
+                <label>reference surface at lambda/?</label>
+            </value>
+            <value>
+                <fullName>subnanometer roughness reference</fullName>
+                <default>false</default>
+                <label>subnanometer roughness reference</label>
+            </value>
+            <value>
+                <fullName>Lasers at different wavelengths</fullName>
+                <default>false</default>
+                <label>Lasers at different wavelengths</label>
+            </value>
+            <value>
+                <fullName>Chamber (M needs tooling)</fullName>
+                <default>false</default>
+                <label>Chamber (M needs tooling)</label>
+            </value>
+            <value>
+                <fullName>Near Net Tooling</fullName>
+                <default>false</default>
+                <label>Near Net Tooling</label>
+            </value>
+            <value>
+                <fullName>Sub 150mm MRF Wheel</fullName>
+                <default>false</default>
+                <label>Sub 150mm MRF Wheel</label>
+            </value>
+            <value>
+                <fullName>Free form software for MRF</fullName>
+                <default>false</default>
+                <label>Free form software for MRF</label>
+            </value>
+            <value>
+                <fullName>CP Polisher</fullName>
+                <default>false</default>
+                <label>CP Polisher</label>
+            </value>
+            <value>
+                <fullName>4D Interferometer</fullName>
+                <default>false</default>
+                <label>4D Interferometer</label>
+            </value>
+            <value>
+                <fullName>Laser Testing Resolution</fullName>
+                <default>false</default>
+                <label>Laser Testing Resolution</label>
+            </value>
+            <value>
+                <fullName>Metrology Testing Resolution</fullName>
+                <default>false</default>
+                <label>Metrology Testing Resolution</label>
+            </value>
+            <value>
+                <fullName>5 Axis Mill</fullName>
+                <default>false</default>
+                <label>5 Axis Mill</label>
+            </value>
+            <value>
+                <fullName>Free form / Acylinder Metrology</fullName>
+                <default>false</default>
+                <label>Free form / Acylinder Metrology</label>
+            </value>
+            <value>
+                <fullName>Equipment Size (Parts too Small)</fullName>
+                <default>false</default>
+                <label>Equipment Size (Parts too Small)</label>
+            </value>
+            <value>
+                <fullName>Equipment Size (Parts too Large)</fullName>
+                <default>false</default>
+                <label>Equipment Size (Parts too Large)</label>
+            </value>
+            <value>
+                <fullName>FTS-70</fullName>
+                <default>false</default>
+                <label>FTS-70</label>
+            </value>
+            <value>
+                <fullName>FTS-35</fullName>
+                <default>false</default>
+                <label>FTS-35</label>
+            </value>
+            <value>
+                <fullName>STS</fullName>
+                <default>false</default>
+                <label>STS</label>
+            </value>
+            <value>
+                <fullName>Micromill-Levicron</fullName>
+                <default>false</default>
+                <label>Micromill-Levicron</label>
+            </value>
+            <value>
+                <fullName>Micromill-Other</fullName>
+                <default>false</default>
+                <label>Micromill-Other</label>
+            </value>
+            <value>
+                <fullName>B-Axis</fullName>
+                <default>false</default>
+                <label>B-Axis</label>
+            </value>
+            <value>
+                <fullName>Robot</fullName>
+                <default>false</default>
+                <label>Robot</label>
+            </value>
+            <value>
+                <fullName>MicroLam</fullName>
+                <default>false</default>
+                <label>MicroLam</label>
+            </value>
+            <value>
+                <fullName>Preci 5 height</fullName>
+                <default>false</default>
+                <label>Preci 5 height</label>
+            </value>
+            <value>
+                <fullName>Luphos</fullName>
+                <default>false</default>
+                <label>Luphos</label>
+            </value>
+            <value>
+                <fullName>Y-Axis</fullName>
+                <default>false</default>
+                <label>Y-Axis</label>
+            </value>
+            <value>
+                <fullName>FTS 5000</fullName>
+                <default>false</default>
+                <label>FTS 5000</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>DT</controllingFieldValue>
+            <valueName>FTS-70</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DT</controllingFieldValue>
+            <valueName>FTS-35</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DT</controllingFieldValue>
+            <valueName>STS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DT</controllingFieldValue>
+            <valueName>Micromill-Levicron</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DT</controllingFieldValue>
+            <valueName>Micromill-Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DT</controllingFieldValue>
+            <valueName>B-Axis</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DT</controllingFieldValue>
+            <valueName>Robot</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DT</controllingFieldValue>
+            <valueName>MicroLam</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DT</controllingFieldValue>
+            <valueName>Preci 5 height</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DT</controllingFieldValue>
+            <valueName>Luphos</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DT</controllingFieldValue>
+            <valueName>Y-Axis</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DT</controllingFieldValue>
+            <valueName>FTS 5000</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DT</controllingFieldValue>
+            <controllingFieldValue>CTG</controllingFieldValue>
+            <controllingFieldValue>OF</controllingFieldValue>
+            <controllingFieldValue>CS</controllingFieldValue>
+            <controllingFieldValue>QA</controllingFieldValue>
+            <controllingFieldValue>CE</controllingFieldValue>
+            <controllingFieldValue>MQ</controllingFieldValue>
+            <controllingFieldValue>GSC</controllingFieldValue>
+            <controllingFieldValue>DMG</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CTG</controllingFieldValue>
+            <valueName>Development Coater</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CTG</controllingFieldValue>
+            <valueName>DLC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CTG</controllingFieldValue>
+            <valueName>Ellipsometer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CTG</controllingFieldValue>
+            <valueName>2nd IBS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CTG</controllingFieldValue>
+            <valueName>LIDT facility</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OF</controllingFieldValue>
+            <valueName>Sub 150mm MRF Wheel</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OF</controllingFieldValue>
+            <valueName>Free form software for MRF</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OF</controllingFieldValue>
+            <valueName>CP Polisher</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OF</controllingFieldValue>
+            <controllingFieldValue>QA</controllingFieldValue>
+            <valueName>4D Interferometer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OF</controllingFieldValue>
+            <valueName>5 Axis Mill</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OF</controllingFieldValue>
+            <valueName>Free form / Acylinder Metrology</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OF</controllingFieldValue>
+            <valueName>Equipment Size (Parts too Small)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OF</controllingFieldValue>
+            <valueName>Equipment Size (Parts too Large)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CS</controllingFieldValue>
+            <valueName>alignment station</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>QA</controllingFieldValue>
+            <valueName>reference surface at lambda/?</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>QA</controllingFieldValue>
+            <valueName>subnanometer roughness reference</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>QA</controllingFieldValue>
+            <valueName>Lasers at different wavelengths</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>QA</controllingFieldValue>
+            <valueName>Laser Testing Resolution</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>QA</controllingFieldValue>
+            <valueName>Metrology Testing Resolution</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MQ</controllingFieldValue>
+            <valueName>Chamber (M needs tooling)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MQ</controllingFieldValue>
+            <valueName>Near Net Tooling</valueName>
+        </valueSettings>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

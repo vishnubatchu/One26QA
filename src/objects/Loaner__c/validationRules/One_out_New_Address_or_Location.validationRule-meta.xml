@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>One_out_New_Address_or_Location</fullName>
+    <active>true</active>
+    <description>Only one field out of customer new address or location should be updated</description>
+    <errorConditionFormula>AND(
+OR(RecordType.DeveloperName =&apos;Loaner_Request&apos;,
+RecordType.DeveloperName =&apos;Loaner_Request_Read_Only&apos;),
+
+NOT(ISBLANK( TEXT(Loaner_Category__c) )),
+AND(
+        ISBLANK(New_Customer_Address__c),  
+	ISBLANK(Address_ship_to__c) 
+)
+  
+
+
+)</errorConditionFormula>
+    <errorDisplayField>New_Customer_Address__c</errorDisplayField>
+    <errorMessage>Only one field out of New Customer/Address and Location needs to be updated</errorMessage>
+</ValidationRule>

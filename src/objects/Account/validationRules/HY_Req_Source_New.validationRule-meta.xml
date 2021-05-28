@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HY_Req_Source_New</fullName>
+    <active>true</active>
+    <description>Require &quot;Account Source&quot; when creating new Account with &quot;Highyag&quot; as the Bus. Seg.</description>
+    <errorConditionFormula>AND( 
+ISNEW(),
+ISPICKVAL( $User.Legacy_Company__c , &apos;Corp II-VI&apos;),
+$RecordType.Name = &quot;Customer Account&quot;, 
+ISBLANK(TEXT( AccountSource )), 
+ISPICKVAL( Business_Segment__c ,&apos;HIGHYAG&apos;) 
+)</errorConditionFormula>
+    <errorDisplayField>AccountSource</errorDisplayField>
+    <errorMessage>You must select a Source.</errorMessage>
+</ValidationRule>

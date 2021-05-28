@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>requireAccountManagerifSalesRepFirm</fullName>
+    <active>true</active>
+    <description>require Account Manager if Sales Rep Firm Name is not blank</description>
+    <errorConditionFormula>AND( NOT(ISBLANK( Firm_Name_Sales_rep__c )),
+      ISBLANK( AC_Mgr_Sales_rep__c ) 
+,ISNULL( Loaner_Legacy_ID__c ) 
+
+)</errorConditionFormula>
+    <errorDisplayField>AC_Mgr_Sales_rep__c</errorDisplayField>
+    <errorMessage>A/C Manager to be filled if Sales Rep Firm is not blank</errorMessage>
+</ValidationRule>

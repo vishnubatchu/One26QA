@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Set_Region_Name_MIA</fullName>
+        <field>Region__c</field>
+        <literalValue>MIA</literalValue>
+        <name>Set Region Name MIA</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Region_Name_MID</fullName>
+        <field>Region__c</field>
+        <literalValue>MID</literalValue>
+        <name>Set Region Name MID</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Region_Name_MIE</fullName>
+        <field>Region__c</field>
+        <literalValue>MIE</literalValue>
+        <name>Set Region Name MIE</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Region_Name_MIJ</fullName>
+        <field>Region__c</field>
+        <literalValue>MIJ</literalValue>
+        <name>Set Region Name MIJ</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Account_Market_Hidden_w_Market</fullName>
+        <description>Update Account Market (Hidden) value w/ Market value.</description>
+        <field>Account_Market_Hidden__c</field>
+        <formula>TEXT(Market__c)</formula>
+        <name>Update Account Market (Hidden) w/ Market</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Region_House_Leads</fullName>
+        <description>Update region to &quot;House&quot; if market is 80 on leads</description>
+        <field>Region__c</field>
+        <literalValue>HOUSE (80)</literalValue>
+        <name>Update Region House Leads</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Lead%2EMarket ISCHANGED</fullName>
+        <actions>
+            <name>Update_Account_Market_Hidden_w_Market</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Created for Lead.Market to Account.Market mapping workaround.</description>
+        <formula>ISCHANGED(Market__c)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Lead%2EMarket NOT Null</fullName>
+        <actions>
+            <name>Update_Account_Market_Hidden_w_Market</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Lead.Market__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <description>Created for Lead.Market to Account.Market mapping workaround.</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Set Region MIA</fullName>
+        <actions>
+            <name>Set_Region_Name_MIA</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Sets the Region to MIA based on the Country chosen.</description>
+        <formula>AND(ISCHANGED( Country )     ,OR(Country=&quot;Australia&quot;     ,Country=&quot;New Zealand&quot;     ,Country=&quot;Bangladesh&quot;     ,Country=&quot;Brunei Darussalam&quot;     ,Country=&quot;Cambodia&quot;     ,Country=&quot;China&quot;     ,Country=&quot;India&quot;     ,Country=&quot;Indonesia&quot;     ,Country=&quot;Korea, Republic of&quot;     ,Country=&quot;Lao People&apos;s Democratic Republic&quot;     ,Country=&quot;Macao&quot;     ,Country=&quot;Malaysia&quot;     ,Country=&quot;Mongoloid&quot;     ,Country=&quot;Myanmar&quot;     ,Country=&quot;Nepal&quot;     ,Country=&quot;Pakistan&quot;     ,Country=&quot;Philippines&quot;     ,Country=&quot;Singapore&quot;     ,Country=&quot;Sri Lanka&quot;     ,Country=&quot;Thailand&quot;     ,Country=&quot;Tonga&quot;     ,Country=&quot;Viet Nam&quot;     ,Country=&quot;Qatar&quot; )  )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Set Region MID</fullName>
+        <actions>
+            <name>Set_Region_Name_MID</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Sets the Region to MID based on the Country chosen.</description>
+        <formula>AND(ISCHANGED( Display_Country__c )  ,OR(Display_Country__c=&quot;United States&quot;  ,Display_Country__c=&quot;Mexico&quot;  ,Display_Country__c=&quot;Canada&quot;  ,Display_Country__c=&quot;Virgin Islands&quot;  ,Display_Country__c=&quot;Panama&quot;  ,Display_Country__c=&quot;Honduras&quot;  ,Display_Country__c=&quot;Nicaragua&quot;  ,Display_Country__c=&quot;Ecuador&quot;  ,Display_Country__c=&quot;El Salvador&quot;  ,Display_Country__c=&quot;Costa Rica&quot;  ,Display_Country__c=&quot;Colombia&quot;  ,Display_Country__c=&quot;Belize&quot;  ,Display_Country__c=&quot;Barbados&quot;  ,Display_Country__c=&quot;Argentina&quot;  ,Display_Country__c=&quot;Brazil&quot;  ,Display_Country__c=&quot;Chile&quot;  ,Display_Country__c=&quot;Bolivia&quot;  ,Display_Country__c=&quot;Paraguay&quot;  ,Display_Country__c=&quot;Peru&quot;  ,Display_Country__c=&quot;Uruguay&quot;  ,Display_Country__c=&quot;Venezuela&quot;  )   )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Set Region MIE</fullName>
+        <actions>
+            <name>Set_Region_Name_MIE</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Sets the Region to MIE based on the Country chosen.</description>
+        <formula>AND(ISCHANGED(Display_Country__c )     ,OR(Display_Country__c=&quot;Albania&quot;     ,Display_Country__c=&quot;Algeria&quot;     ,Display_Country__c=&quot;Andorra&quot;	     ,Display_Country__c=&quot;Angola&quot;     ,Display_Country__c=&quot;Austria&quot;     ,Display_Country__c=&quot;Azerbaijan&quot;     ,Display_Country__c=&quot;Bahrain&quot;     ,Display_Country__c=&quot;Belarus&quot;     ,Display_Country__c=&quot;Belgium&quot;     ,Display_Country__c=&quot;Benin&quot;     ,Display_Country__c=&quot;Bosnia and Herzegovina&quot;     ,Display_Country__c=&quot;Botswana&quot;     ,Display_Country__c=&quot;Bulgaria&quot;     ,Display_Country__c=&quot;Burkina Faso&quot;     ,Display_Country__c=&quot;Cape Verde&quot;     ,Display_Country__c=&quot;Chad&quot;     ,Display_Country__c=&quot;Congo&quot;     ,Display_Country__c=&quot;Congo, the Democratic Republic of the&quot;     ,Display_Country__c=&quot;Croatia&quot;     ,Display_Country__c=&quot;Cyprus&quot;     ,Display_Country__c=&quot;Czech Republic&quot;     ,Display_Country__c=&quot;Denmark&quot;     ,Display_Country__c=&quot;Djibouti&quot;     ,Display_Country__c=&quot;Egypt&quot;     ,Display_Country__c=&quot;Eritrea&quot;     ,Display_Country__c=&quot;Estonia&quot;     ,Display_Country__c=&quot;Ethiopia&quot;     ,Display_Country__c=&quot;Finland&quot;     ,Display_Country__c=&quot;France&quot;     ,Display_Country__c=&quot;Georgia&quot;     ,Display_Country__c=&quot;Germany&quot;     ,Display_Country__c=&quot;Greece&quot;     ,Display_Country__c=&quot;Guinea&quot;     ,Display_Country__c=&quot;Hungary&quot;     ,Display_Country__c=&quot;Iceland&quot;     ,Display_Country__c=&quot;Ireland&quot;     ,Display_Country__c=&quot;Iraq&quot;     ,Display_Country__c=&quot;Israel&quot;     ,Display_Country__c=&quot;Italy&quot;     ,Display_Country__c=&quot;Jordan&quot;     ,Display_Country__c=&quot;Kazakhstan&quot;     ,Display_Country__c=&quot;Kenya&quot;     ,Display_Country__c=&quot;Kuwait&quot;     ,Display_Country__c=&quot;Kyrgyzstan&quot;     ,Display_Country__c=&quot;Lativa&quot;     ,Display_Country__c=&quot;Lebanon&quot;     ,Display_Country__c=&quot;Libyan Arab Jamahiriya&quot;     ,Display_Country__c=&quot;Leichtenstein&quot;     ,Display_Country__c=&quot;Lithuania&quot;     ,Display_Country__c=&quot;Montenegro&quot;     ,Display_Country__c=&quot;Morocco&quot;     ,Display_Country__c=&quot;Mozambique&quot;     ,Display_Country__c=&quot;Netherlands&quot;     ,Display_Country__c=&quot;Nigeria&quot;     ,Display_Country__c=&quot;Norway&quot;     ,Display_Country__c=&quot;Oman&quot;     ,Display_Country__c=&quot;Poland&quot;     ,Display_Country__c=&quot;Portugal&quot;     ,Display_Country__c=&quot;Romania&quot;     ,Display_Country__c=&quot;Russian Federation&quot;     ,Display_Country__c=&quot;Saudi Arabia&quot;     ,Display_Country__c=&quot;Slovakia&quot;     ,Display_Country__c=&quot;Slovenia&quot;     ,Display_Country__c=&quot;Spain&quot;     ,Display_Country__c=&quot;Sudan&quot;     ,Display_Country__c=&quot;Sweden&quot;     ,Display_Country__c=&quot;Switzerland&quot;     ,Display_Country__c=&quot;Tajikistan&quot;     ,Display_Country__c=&quot;Tanzania&quot;     ,Display_Country__c=&quot;Turkey&quot;     ,Display_Country__c=&quot;United Kingdom&quot;     ,Display_Country__c=&quot;United Arab Emirates&quot;     ,Display_Country__c=&quot;Ukraine&quot;     ,Display_Country__c=&quot;Uzbekistan&quot;     ,Display_Country__c=&quot;Zambia&quot;     ,Display_Country__c=&quot;Zimbabwe&quot;     ,Display_Country__c=&quot;Luxembourg&quot;     ,Display_Country__c=&quot;South Africa&quot;     ,Display_Country__c=&quot;Macedonia, the former Yugoslav Republic of&quot;)  )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Set Region MIJ</fullName>
+        <actions>
+            <name>Set_Region_Name_MIJ</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Sets the Region to MIJ based on the Country chosen.</description>
+        <formula>AND( ISPICKVAL( Region_Country__c , &quot;Japan&quot;))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

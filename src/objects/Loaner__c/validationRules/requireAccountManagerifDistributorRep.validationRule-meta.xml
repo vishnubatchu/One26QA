@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>requireAccountManagerifDistributorRep</fullName>
+    <active>true</active>
+    <description>requireAccountManagerif Disti Rep Firm is not blank</description>
+    <errorConditionFormula>AND( NOT(ISBLANK(   Firm_Name_Distributor__c )), 
+ISBLANK(  AC_Mgr_Distributor__c  ) ,
+ ISNULL( Loaner_Legacy_ID__c ) 
+
+
+
+)</errorConditionFormula>
+    <errorDisplayField>AC_Mgr_Distributor__c</errorDisplayField>
+    <errorMessage>require Account Manager if Distributor Rep Firm Name is not blank</errorMessage>
+</ValidationRule>

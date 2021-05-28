@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ship_To_Customer__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Ship-To Customer Name</description>
+    <externalId>false</externalId>
+    <label>Ship To Customer</label>
+    <lookupFilter>
+        <active>true</active>
+        <booleanFilter>(1 OR (2 AND 3)) AND 4</booleanFilter>
+        <errorMessage>Value does not exist or does not match any Customer</errorMessage>
+        <filterItems>
+            <field>Account.RecordType.Name</field>
+            <operation>notEqual</operation>
+            <value>Site</value>
+        </filterItems>
+        <filterItems>
+            <field>Account.ParentId</field>
+            <operation>equals</operation>
+            <valueField>$Source.AccountId</valueField>
+        </filterItems>
+        <filterItems>
+            <field>Account.RecordTypeId</field>
+            <operation>notEqual</operation>
+            <value>Site</value>
+        </filterItems>
+        <filterItems>
+            <field>Account.Status__c</field>
+            <operation>equals</operation>
+            <value>Active</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Cases / RMA Requests (Ship To Customer)</relationshipLabel>
+    <relationshipName>Cases_RMA_Requests1</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

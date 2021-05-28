@@ -1,0 +1,32 @@
+<aura:component Implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" controller="QuoteNewButtonController" access="global">
+    <aura:attribute name="QuoteInstance" type="Quote" default="{ 'sobjectType': 'Quote', 'Account__c' : null }"/>
+    <aura:attribute name="URLName" type="String" />
+    <aura:attribute name="AccountID" type="Id" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:registerEvent name="QuoteNewButtonEvent" type="c:QuoteNewButtonEvent" />
+    <div class="slds-modal__container">
+        <!-- ###### MODAL BOX HEADER Start ######-->
+        <header class="slds-modal__header">
+            <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Create Quote</h2>
+        </header>
+        <!--###### MODAL BOX BODY Part Start######-->
+        <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+            Choose Account...
+          <lightning:recordEditForm aura:id="recordEditForm" 
+                                      objectApiName="Quote" 
+     	                                 >
+                <lightning:messages />
+                <lightning:inputField  fieldName="Account__c" value="{!v.AccountID}" />
+            </lightning:recordEditForm>  
+           <!-- <force:inputField value="{!v.QuoteInstance.Account__c}"/>-->
+           <br/><br/><br/><br/>   
+        </div>
+        <br/><br/>    
+    <footer class="slds-modal__footer">
+        <lightning:button variant="brand" 
+                          label="Create"
+                          title="Create"
+                          onclick="{! c.Save }"/>
+    </footer>
+    </div>
+</aura:component>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Outbound_Order__c</fullName>
+    <description>If there is No Trouble Found (NTF), or a successful rework, an outbound RMA will need to be created in Oracle and tied to the original RMA order for traceability purposes at the line item level - Oracle will provide the link between the outbound RMA and the original RMA</description>
+    <externalId>false</externalId>
+    <label>Outbound Order</label>
+    <length>50</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

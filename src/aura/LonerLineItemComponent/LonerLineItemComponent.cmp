@@ -1,0 +1,145 @@
+<aura:component  Implements="flexipage:availableForRecordHome,force:lightningQuickActionWithoutHeader,force:hasRecordId" controller="LineItemController">
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:handler name="DeleteRowEvt" event="c:DeleteRowEvt" action="{!c.removeDeletedRow}"/>
+    <aura:attribute name="errorMessage" type ="String" default=""/>
+    <aura:attribute name="headerStatus" type ="String" />
+    <aura:attribute name="userPermission" type ="Boolean" />
+    <aura:attribute name="recErrorMessage" type ="String" default=""/>
+    <aura:handler name="AddRowEvt" event="c:AddNewRowEvt" action="{!c.addNewRow}"/>
+    <aura:attribute name="LonerLineItemList" type="Loaner_Line__c[]"/> 
+    <style>
+        .cuf-content {
+        padding: 0 0rem !important;
+        }
+        .slds-p-around--medium {
+        padding: 0rem !important;
+        }
+       
+        .slds-modal__container {
+            overflow-y: hidden !important;
+            width:1400px !important;
+            max-width:1400px !important; 
+        }
+        
+               
+    </style>
+    <div >
+        <div class="slds-col modal-header slds-modal__header">
+            <h2 class="title slds-text-heading--medium">Loaner Line Items</h2>
+        </div>
+        <div class="slds-col modal-body   slds-p-around--medium" style=" height:50rem; max-height:560px;overflow-y: auto !important">
+            
+            <div >
+                <aura:if isTrue="{!v.errorMessage != null}">
+                <label class="slds-text-align_center slds-text-color_error" >{!v.errorMessage}</label>
+                </aura:if><br/>
+                <!--<aura:if isTrue="{!v.recErrorMessage != null}">
+                <label class="slds-text-align_center slds-text-color_error" >{!v.recErrorMessage}</label>
+                </aura:if>-->
+                <table class="slds-table slds-table_bordered slds-table_cell-buffer slds-scrollable"> 
+                    <thead>
+                        <tr class="slds-text-title_caps slds-box slds-box_x-small slds-text-align_center slds-m-around_x-small">
+                            <th scope="col">
+                                 <aura:renderif isTrue ="{!or(or(v.headerStatus == 'Draft',v.headerStatus == 'Rejected'),v.headerStatus == 'Cancelled')}">
+                                <button class="slds-button slds-button_brand" style="width:110px" onclick="{!c.addNewRow}">Add LineItem</button>
+                                </aura:renderif>     
+                            </th>
+                            <th scope="col">
+                                <div style="width:110px" class="slds-truncate" title="First Name">LINE NAME</div>
+                            </th>
+                            <th scope="col">
+                                <div style="width:140px" class="slds-truncate" title="Item">Item#</div>
+                            </th>
+                            <th scope="col">
+                                <div style="width:140px" class="slds-truncate" title="matketingPN">Marketing P/N</div>
+                            </th>
+							 
+							<th scope="col">
+                                <div class="slds-truncate" title="Phone">Loaner Qty</div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-truncate" title="Last Name">Loaner Price (100-999 column price)</div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-truncate" title="Phone">Production Price (ASP)</div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-truncate" title="Phone">Est Annual Qty</div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-truncate" title="Phone">SOM(%)</div>
+                            </th>
+                            <th scope="col">
+                                <div style="width:110px" class="slds-truncate" title="Phone">SAM($)</div>
+                            </th>
+                           <th scope="col">
+                                <div class="slds-truncate" title="Phone">Line Total</div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-truncate" title="Phone">Loaner Total</div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-truncate" title="Phone">Line Status</div>
+                            </th>
+                           
+						   
+                            <th scope="col">
+                                <div class="slds-truncate" title="Phone">Serial Number</div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-truncate" title="Phone">CPN Description</div>
+                            </th>
+                            
+                            
+                             <th scope="col">
+                                <div class="slds-truncate" title="Phone">User Notes</div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-truncate" title="Phone">Part Type</div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-truncate" title="Phone">Part Type Notes</div>
+                            </th>
+                            
+                             <th scope="col">
+                                <div class="slds-truncate" title="Phone">Admin Status</div>
+                            </th>
+                            
+                            <th scope="col">
+                                <div class="slds-truncate" title="Phone">Initial Error Message</div>
+                            </th>
+                             <th scope="col">
+                                <div class="slds-truncate" title="Phone">Order Line</div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-truncate" title="Phone">Loaner Return Carrier</div>
+                            </th>
+                           <th scope="col">
+                                <div class="slds-truncate" title="Phone">Loaner Return Ship Date</div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-truncate" title="Phone">Loaner Return Tracking Number</div>
+                            </th>
+                        </tr>
+                    </thead>   
+                    <tbody>
+                        <aura:iteration items="{!v.LonerLineItemList}" var="item" indexVar="index">
+                           <c:LoneLineItemChild LineItemInstance="{!item}" rowIndex="{!index}" recordtypename="{!item.RecordType.Name}" productname="{!item.Product__r.Name}" headerLineStatus ="{!item.Loaner__r.Status_Approval__c}" userPermission ="{!v.userPermission}"/>
+                        </aura:iteration>
+                    </tbody>
+                </table>
+                <br/>
+            </div>
+        </div>
+        
+        <div class="slds-col modal-footer slds-modal__footer"> 
+            <button class="slds-button slds-button_brand" onclick="{!c.Validate}">Save And Validate</button>
+            <button class="slds-button slds-button_brand" onclick="{!c.Save}">Save And Close</button>
+            <button class="slds-button slds-button_netural" onclick="{!c.Cancel}">Cancel</button>
+            
+        </div>
+    </div>
+    <div id = "spinnerDiv">
+            <lightning:spinner variant="brand" size = "large" aura:id = "sps" class="slds-hide"/>
+        </div>
+</aura:component>

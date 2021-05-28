@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Business_Unit_Name__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(ISPICKVAL(Business_Unit__c, &quot;CC00&quot;), &quot;Components&quot;, 
+IF(ISPICKVAL(Business_Unit__c, &quot;CC10&quot;), &quot;Components&quot;, 
+IF(ISPICKVAL(Business_Unit__c, &quot;CC11&quot;), &quot;Components&quot;, 
+IF(ISPICKVAL(Business_Unit__c, &quot;CC12&quot;), &quot;Components&quot;, 
+IF(ISPICKVAL(Business_Unit__c, &quot;CC13&quot;), &quot;Components&quot;, 
+IF(ISPICKVAL(Business_Unit__c, &quot;CC14&quot;), &quot;Components&quot;, 
+IF(ISPICKVAL(Business_Unit__c, &quot;CC15&quot;), &quot;Components&quot;, 
+IF(ISPICKVAL(Business_Unit__c, &quot;CC20&quot;), &quot;Components&quot;, 
+IF(ISPICKVAL(Business_Unit__c, &quot;CC21&quot;), &quot;Components&quot;, 
+IF(ISPICKVAL(Business_Unit__c, &quot;CC22&quot;), &quot;Components&quot;, 
+IF(ISPICKVAL(Business_Unit__c, &quot;CC23&quot;), &quot;Components&quot;, 
+IF(ISPICKVAL(Business_Unit__c, &quot;CC24&quot;), &quot;Components&quot;, 
+IF(ISPICKVAL(Business_Unit__c, &quot;CC25&quot;), &quot;Components&quot;, 
+IF(ISPICKVAL(Business_Unit__c, &quot;CC30&quot;), &quot;Components&quot;, 
+IF(ISPICKVAL(Business_Unit__c, &quot;CC31&quot;), &quot;Components&quot;, 
+IF(ISPICKVAL(Business_Unit__c, &quot;CC32&quot;), &quot;Components&quot;, 
+IF(ISPICKVAL(Business_Unit__c, &quot;CC50&quot;), &quot;Components&quot;, 
+IF(ISPICKVAL(Business_Unit__c, &quot;CC51&quot;), &quot;Components&quot;,
+IF(ISPICKVAL(Business_Unit__c, &quot;CC60&quot;), &quot;Components&quot;,
+IF(ISPICKVAL(Business_Unit__c, &quot;CC61&quot;), &quot;Components&quot;,
+IF(ISPICKVAL(Business_Unit__c, &quot;CC75&quot;), &quot;Components&quot;, 
+IF(ISPICKVAL(Business_Unit__c, &quot;CC85&quot;), &quot;Components&quot;, 
+IF(ISPICKVAL(Business_Unit__c, &quot;PC60&quot;), &quot;Power&quot;,
+IF(ISPICKVAL(Business_Unit__c, &quot;PC61&quot;), &quot;Power&quot;, 
+IF(ISPICKVAL(Business_Unit__c, &quot;PC62&quot;), &quot;Power&quot;, 
+IF(ISPICKVAL(Business_Unit__c, &quot;PS60&quot;), &quot;Power&quot;, 
+IF(ISPICKVAL(Business_Unit__c, &quot;PS61&quot;), &quot;Power&quot;, 
+IF(ISPICKVAL(Business_Unit__c, &quot;PS63&quot;), &quot;Power&quot;, 
+IF(ISPICKVAL(Business_Unit__c, &quot;SY00&quot;), &quot;Systems&quot;, 
+IF(ISPICKVAL(Business_Unit__c, &quot;SY10&quot;), &quot;Systems&quot;,
+IF(ISPICKVAL(Business_Unit__c, &quot;SY20&quot;), &quot;Systems&quot;, 
+IF(ISPICKVAL(Business_Unit__c, &quot;SY30&quot;), &quot;Systems&quot;,
+IF(ISPICKVAL(Business_Unit__c, &quot;SY60&quot;), &quot;Systems&quot;,
+IF(ISPICKVAL(Business_Unit__c, &quot;SY61&quot;), &quot;Systems&quot;,
+IF(ISPICKVAL(Business_Unit__c, &quot;SY62&quot;), &quot;Systems&quot;,
+IF(ISPICKVAL(Business_Unit__c, &quot;SY63&quot;), &quot;Systems&quot;,&quot;N/A&quot;
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Business Unit Name</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

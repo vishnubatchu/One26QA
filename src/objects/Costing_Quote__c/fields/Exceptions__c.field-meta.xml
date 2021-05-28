@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Exceptions__c</fullName>
+    <externalId>false</externalId>
+    <label>Exceptions</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <controllingField>Department__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Figure</fullName>
+                <default>false</default>
+                <label>Figure</label>
+            </value>
+            <value>
+                <fullName>Reflection</fullName>
+                <default>false</default>
+                <label>Reflection</label>
+            </value>
+            <value>
+                <fullName>Absorption</fullName>
+                <default>false</default>
+                <label>Absorption</label>
+            </value>
+            <value>
+                <fullName>Flatness</fullName>
+                <default>false</default>
+                <label>Flatness</label>
+            </value>
+            <value>
+                <fullName>LIDT</fullName>
+                <default>false</default>
+                <label>LIDT</label>
+            </value>
+            <value>
+                <fullName>Aperture</fullName>
+                <default>false</default>
+                <label>Aperture</label>
+            </value>
+            <value>
+                <fullName>Wavelength range</fullName>
+                <default>false</default>
+                <label>Wavelength range</label>
+            </value>
+            <value>
+                <fullName>Angle Range</fullName>
+                <default>false</default>
+                <label>Angle Range</label>
+            </value>
+            <value>
+                <fullName>Environmental Requirements</fullName>
+                <default>false</default>
+                <label>Environmental Requirements</label>
+            </value>
+            <value>
+                <fullName>QA Code System Exception</fullName>
+                <default>false</default>
+                <label>QA Code System Exception</label>
+            </value>
+            <value>
+                <fullName>Documentation Request Exception</fullName>
+                <default>false</default>
+                <label>Documentation Request Exception</label>
+            </value>
+            <value>
+                <fullName>Internal Fringe Exception</fullName>
+                <default>false</default>
+                <label>Internal Fringe Exception</label>
+            </value>
+            <value>
+                <fullName>roughness</fullName>
+                <default>false</default>
+                <label>roughness</label>
+            </value>
+            <value>
+                <fullName>radius tolerance</fullName>
+                <default>false</default>
+                <label>radius tolerance</label>
+            </value>
+            <value>
+                <fullName>Optical position to mechanical datum</fullName>
+                <default>false</default>
+                <label>Optical position to mechanical datum</label>
+            </value>
+            <value>
+                <fullName>Reflectivity/Absorption</fullName>
+                <default>false</default>
+                <label>Reflectivity/Absorption</label>
+            </value>
+            <value>
+                <fullName>Scheduling</fullName>
+                <default>false</default>
+                <label>Scheduling</label>
+            </value>
+            <value>
+                <fullName>Automotvie</fullName>
+                <default>false</default>
+                <label>Automotvie</label>
+            </value>
+            <value>
+                <fullName>Medical</fullName>
+                <default>false</default>
+                <label>Medical</label>
+            </value>
+            <value>
+                <fullName>Aerospace AS 90100</fullName>
+                <default>false</default>
+                <label>Aerospace AS 90100</label>
+            </value>
+            <value>
+                <fullName>Pwr/Irr too low</fullName>
+                <default>false</default>
+                <label>Pwr/Irr too low</label>
+            </value>
+            <value>
+                <fullName>Diameter too small</fullName>
+                <default>false</default>
+                <label>Diameter too small</label>
+            </value>
+            <value>
+                <fullName>Diameter too big</fullName>
+                <default>false</default>
+                <label>Diameter too big</label>
+            </value>
+            <value>
+                <fullName>Diameter tolerance</fullName>
+                <default>false</default>
+                <label>Diameter tolerance</label>
+            </value>
+            <value>
+                <fullName>CT too small</fullName>
+                <default>false</default>
+                <label>CT too small</label>
+            </value>
+            <value>
+                <fullName>CT too big</fullName>
+                <default>false</default>
+                <label>CT too big</label>
+            </value>
+            <value>
+                <fullName>CT tolerance</fullName>
+                <default>false</default>
+                <label>CT tolerance</label>
+            </value>
+            <value>
+                <fullName>Bevels too small</fullName>
+                <default>false</default>
+                <label>Bevels too small</label>
+            </value>
+            <value>
+                <fullName>Bevels too big</fullName>
+                <default>false</default>
+                <label>Bevels too big</label>
+            </value>
+            <value>
+                <fullName>Bevel tolerance</fullName>
+                <default>false</default>
+                <label>Bevel tolerance</label>
+            </value>
+            <value>
+                <fullName>Material</fullName>
+                <default>false</default>
+                <label>Material</label>
+            </value>
+            <value>
+                <fullName>Surface roughness too low</fullName>
+                <default>false</default>
+                <label>Surface roughness too low</label>
+            </value>
+            <value>
+                <fullName>Scr/Dig too low</fullName>
+                <default>false</default>
+                <label>Scr/Dig too low</label>
+            </value>
+            <value>
+                <fullName>Radius tolerance too tight</fullName>
+                <default>false</default>
+                <label>Radius tolerance too tight</label>
+            </value>
+            <value>
+                <fullName>Radius too steep</fullName>
+                <default>false</default>
+                <label>Radius too steep</label>
+            </value>
+            <value>
+                <fullName>Wedge tolerance</fullName>
+                <default>false</default>
+                <label>Wedge tolerance</label>
+            </value>
+            <value>
+                <fullName>Flats too small</fullName>
+                <default>false</default>
+                <label>Flats too small</label>
+            </value>
+            <value>
+                <fullName>Parrellism</fullName>
+                <default>false</default>
+                <label>Parrellism</label>
+            </value>
+            <value>
+                <fullName>Sag tolerance</fullName>
+                <default>false</default>
+                <label>Sag tolerance</label>
+            </value>
+            <value>
+                <fullName>Measurement Process of Pwr/Irr</fullName>
+                <default>false</default>
+                <label>Measurement Process of Pwr/Irr</label>
+            </value>
+            <value>
+                <fullName>Transmission</fullName>
+                <default>false</default>
+                <label>Transmission</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>DT</controllingFieldValue>
+            <controllingFieldValue>OF</controllingFieldValue>
+            <valueName>Pwr/Irr too low</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DT</controllingFieldValue>
+            <controllingFieldValue>OF</controllingFieldValue>
+            <valueName>Diameter tolerance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DT</controllingFieldValue>
+            <controllingFieldValue>OF</controllingFieldValue>
+            <valueName>CT tolerance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DT</controllingFieldValue>
+            <controllingFieldValue>OF</controllingFieldValue>
+            <valueName>Bevel tolerance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DT</controllingFieldValue>
+            <controllingFieldValue>OF</controllingFieldValue>
+            <valueName>Surface roughness too low</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DT</controllingFieldValue>
+            <controllingFieldValue>OF</controllingFieldValue>
+            <valueName>Scr/Dig too low</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DT</controllingFieldValue>
+            <controllingFieldValue>OF</controllingFieldValue>
+            <valueName>Radius tolerance too tight</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DT</controllingFieldValue>
+            <controllingFieldValue>OF</controllingFieldValue>
+            <valueName>Wedge tolerance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DT</controllingFieldValue>
+            <controllingFieldValue>CTG</controllingFieldValue>
+            <controllingFieldValue>OF</controllingFieldValue>
+            <controllingFieldValue>CS</controllingFieldValue>
+            <controllingFieldValue>QA</controllingFieldValue>
+            <controllingFieldValue>CE</controllingFieldValue>
+            <controllingFieldValue>MQ</controllingFieldValue>
+            <controllingFieldValue>GSC</controllingFieldValue>
+            <controllingFieldValue>DMG</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CTG</controllingFieldValue>
+            <valueName>Reflection</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CTG</controllingFieldValue>
+            <valueName>Absorption</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CTG</controllingFieldValue>
+            <valueName>Flatness</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CTG</controllingFieldValue>
+            <valueName>LIDT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CTG</controllingFieldValue>
+            <valueName>Aperture</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CTG</controllingFieldValue>
+            <valueName>Wavelength range</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CTG</controllingFieldValue>
+            <valueName>Angle Range</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CTG</controllingFieldValue>
+            <valueName>Environmental Requirements</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CTG</controllingFieldValue>
+            <valueName>Transmission</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OF</controllingFieldValue>
+            <valueName>Diameter too small</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OF</controllingFieldValue>
+            <valueName>Diameter too big</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OF</controllingFieldValue>
+            <valueName>CT too small</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OF</controllingFieldValue>
+            <valueName>CT too big</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OF</controllingFieldValue>
+            <valueName>Bevels too small</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OF</controllingFieldValue>
+            <valueName>Bevels too big</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OF</controllingFieldValue>
+            <valueName>Material</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OF</controllingFieldValue>
+            <valueName>Radius too steep</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OF</controllingFieldValue>
+            <valueName>Flats too small</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OF</controllingFieldValue>
+            <valueName>Parrellism</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OF</controllingFieldValue>
+            <valueName>Sag tolerance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OF</controllingFieldValue>
+            <valueName>Measurement Process of Pwr/Irr</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>QA</controllingFieldValue>
+            <valueName>QA Code System Exception</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>QA</controllingFieldValue>
+            <valueName>Documentation Request Exception</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>QA</controllingFieldValue>
+            <valueName>Internal Fringe Exception</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>QA</controllingFieldValue>
+            <valueName>roughness</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>QA</controllingFieldValue>
+            <valueName>radius tolerance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>QA</controllingFieldValue>
+            <valueName>Optical position to mechanical datum</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>QA</controllingFieldValue>
+            <valueName>Reflectivity/Absorption</valueName>
+        </valueSettings>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

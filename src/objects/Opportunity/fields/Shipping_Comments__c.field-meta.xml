@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Shipping_Comments__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Use the following codes first, before adding additional Shipping info
+PP = Partials Permitted
+DNP = Do NOT Partial
+DNSE = Do NOT Ship Early
+PBCR = Partials By Complete Release
+ALSO LIST PAYMENT TERMS FOR ACCOUNTING / SHIPPING</inlineHelpText>
+    <label>Shipping Comments</label>
+    <length>1500</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>4</visibleLines>
+</CustomField>

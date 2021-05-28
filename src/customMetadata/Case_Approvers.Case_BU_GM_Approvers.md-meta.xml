@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Case BU GM Approvers</label>
+    <protected>false</protected>
+    <values>
+        <field>CFO_User__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Data_n_W_BU_GM__c</field>
+        <value xsi:type="xsd:string">surendar.ch@finisar.com</value>
+    </values>
+    <values>
+        <field>Optical_IC_BU_GM__c</field>
+        <value xsi:type="xsd:string">matthias.berger@finisar.com</value>
+    </values>
+    <values>
+        <field>SVP_Of_Sales__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Wavelength_BU_GM__c</field>
+        <value xsi:type="xsd:string">andrew.bartos@finisar.com</value>
+    </values>
+    <values>
+        <field>X3D_Sensing_BU_GM__c</field>
+        <value xsi:type="xsd:string">julie.eng@finisar.com</value>
+    </values>
+</CustomMetadata>

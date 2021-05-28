@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FAE__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Field to store FAE use for a FAE Case</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Select FAE User.</inlineHelpText>
+    <label>FAE</label>
+    <lookupFilter>
+        <active>true</active>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <errorMessage>Value does not exist or does not match any FAE User</errorMessage>
+        <filterItems>
+            <field>User.UserRole.Name</field>
+            <operation>startsWith</operation>
+            <value>FA E</value>
+        </filterItems>
+        <filterItems>
+            <field>User.UserRole.Name</field>
+            <operation>contains</operation>
+            <value>FAE</value>
+        </filterItems>
+        <infoMessage>Select FAE User</infoMessage>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>User</referenceTo>
+    <relationshipName>FAE_Case</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

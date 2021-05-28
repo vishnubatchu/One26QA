@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>highest_firm_fixed_quote_usd_amount</fullName>
+    <active>true</active>
+    <description>If legacy company on user = marlow, ensure that the highest firm/fixed quote usd amount is required</description>
+    <errorConditionFormula>AND( TEXT($User.Legacy_Company__c)  = &apos;Marlow&apos;,  ISBLANK( Fixed_Firm_Quote_Amount__c ))</errorConditionFormula>
+    <errorDisplayField>Fixed_Firm_Quote_Amount__c</errorDisplayField>
+    <errorMessage>highest firm/fixed quote usd amount is required for Marlow</errorMessage>
+</ValidationRule>

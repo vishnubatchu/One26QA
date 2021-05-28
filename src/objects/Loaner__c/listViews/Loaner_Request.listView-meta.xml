@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Loaner_Request</fullName>
+    <booleanFilter>1 OR 2</booleanFilter>
+    <columns>NAME</columns>
+    <columns>Company_Name_End_Cust__c</columns>
+    <columns>Company_Name_Ship_To__c</columns>
+    <columns>Opportunity_Type__c</columns>
+    <columns>RSM_PLM_Approval__c</columns>
+    <columns>VP_PLD_Finisar__c</columns>
+    <columns>Status_Approval__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RSM_PLM_Approval__c</field>
+        <operation>equals</operation>
+        <value>Michelle Ma,Janet Shen,Jeffery Huang,Shirley Lv,Mary Cheng,Ivan Xiao,Ben Yu,Jones Zeng,Michael Zeng</value>
+    </filters>
+    <filters>
+        <field>VP_PLD_Finisar__c</field>
+        <operation>equals</operation>
+        <value>Greg Hart</value>
+    </filters>
+    <label>Loaner Request</label>
+</ListView>

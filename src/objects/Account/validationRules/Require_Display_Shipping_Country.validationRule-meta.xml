@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Require_Display_Shipping_Country</fullName>
+    <active>false</active>
+    <description>Require Display Shipping Country when Account.Type = Prospect</description>
+    <errorConditionFormula>OR(
+AND(
+TEXT(Type)=&quot;Prospect&quot;,
+TEXT(Display_Shipping_Country__c)=&quot;&quot;,
+NOT($Permission.By_Pass_Validation)
+),
+AND(
+TEXT(Display_Shipping_Country__c)=&quot;&quot;, $Permission.By_Pass_Validation = false
+,OR(
+ !ISBLANK(ShippingCity),
+ !ISBLANK(ShippingState),
+ !ISBLANK(ShippingStreet),
+ !ISBLANK(ShippingCountry),
+ !ISBLANK(ShippingPostalCode)
+)
+)
+)</errorConditionFormula>
+    <errorDisplayField>Display_Shipping_Country__c</errorDisplayField>
+    <errorMessage>Please indicate a Display Shipping Country value</errorMessage>
+</ValidationRule>

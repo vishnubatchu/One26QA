@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_Key__c</fullName>
+    <caseSensitive>true</caseSensitive>
+    <description>Stores a concatenated string of Source System and Source System Id, which is an essential key used in data integration with the MDR.</description>
+    <externalId>true</externalId>
+    <label>Account Key</label>
+    <length>100</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>true</unique>
+</CustomField>

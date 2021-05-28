@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Segmantation__c</fullName>
+    <externalId>false</externalId>
+    <label>Segmentation</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Small: &lt;$100M</fullName>
+                <default>false</default>
+                <label>Small: &lt;$100M</label>
+            </value>
+            <value>
+                <fullName>Medium: $100M-$500M</fullName>
+                <default>false</default>
+                <label>Medium: $100M-$500M</label>
+            </value>
+            <value>
+                <fullName>Large: $500M-$10B</fullName>
+                <default>false</default>
+                <label>Large: $500M-$10B</label>
+            </value>
+            <value>
+                <fullName>Very Large: &gt;$10B</fullName>
+                <default>false</default>
+                <label>Very Large: &gt;$10B</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

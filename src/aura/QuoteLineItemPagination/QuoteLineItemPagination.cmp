@@ -1,0 +1,57 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" controller ="FAFVCustomUI" access="global" >
+    <aura:attribute name='quoteiteminstance' type='Quote_Item__c' />
+    <aura:attribute name="quoteItemlist" type="Quote_Item__c[]"/>
+    
+    <!--pagiation  starts required attributes to call pagination component-->
+    <aura:attribute name="maxLength" 	 type="integer" default="0" />     
+    <aura:attribute name="startPoint" 		type="integer" default="0"/>
+    <aura:attribute name="endPoint" 	   type="integer" default="10"/>
+    <aura:attribute name="PageLimit" 	   type="integer" default="10"/>
+    <aura:attribute name="ButtonLimit"    type="integer" default="10"/>    
+    <!---->
+     <aura:attribute name="recID" type="string"/> 
+    <aura:attribute name="orderIDs" type="string"/>
+    
+    
+    <aura:attribute name="Total" 				type="integer" default="0" />
+    <aura:attribute name="currentPage" 		type="integer" default="1"/>
+    <aura:attribute name="lastPage"			  type="integer" />    
+    <aura:attribute name="preFlag" 			  type="Boolean" default="true"/>
+    <aura:attribute name="nextFlag" 		 type="Boolean" default="false"/>
+    
+    <!--pagiation  ends-->
+ 
+    <!--aura:handler name='setStartandEndPointEvent' event='c:navigationPageEvent' action='{!c.setStartandEndPoint}'/-->
+  
+
+     
+        <aura:iteration items="{!v.quoteItemlist}" var="quoteitem" indexVar="index" start="{!v.startPoint}" end="{!v.endPoint}">
+     	
+         
+            <c:QuoteLineItemChild QuoteItemInstance ='{!quoteitem}' rowIndex="{!index}" LineStatus="{!quoteitem.Line_Status__c}" productname="{!quoteitem.Product__r.Name}"  />
+        
+          
+            
+        </aura:iteration>
+    
+		  			  
+        <tr>      
+          <td></td>
+             <td></td>
+            <td></td>
+              <td>
+                <aura:renderif isTrue="{!((v.quoteItemlist.length > 0) &amp;&amp; (v.PageLimit > 0 ) &amp;&amp; (v.ButtonLimit > 0 ) )  }">
+                    <c:QuoteLinePaginationChild PageLimit="{!v.PageLimit}" 
+                                                   ButtonLimit="{!v.ButtonLimit}"
+                                                   maxLength="{!v.quoteItemlist.length}"
+                                                   startPoint="{!v.startPoint}"
+                                                   endPoint="{!v.endPoint}"
+                                                   ObjectList ="{!quoteItemlist}"
+                                                   aura:id='paginationfooter'           />
+                </aura:renderif>
+                  </td>
+    </tr>    
+                 
+     
+    
+</aura:component>

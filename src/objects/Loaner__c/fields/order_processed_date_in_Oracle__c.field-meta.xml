@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>order_processed_date_in_Oracle__c</fullName>
+    <description>order processed date in Oracle</description>
+    <externalId>false</externalId>
+    <inlineHelpText>order processed date in Oracle</inlineHelpText>
+    <label>order processed date in Oracle</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

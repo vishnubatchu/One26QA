@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Laser_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Laser Type</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>CO2 - Low Power</fullName>
+                <default>false</default>
+                <label>CO2 - Low Power</label>
+            </value>
+            <value>
+                <fullName>CO2 - High Power</fullName>
+                <default>false</default>
+                <label>CO2 - High Power</label>
+            </value>
+            <value>
+                <fullName>Fiber</fullName>
+                <default>false</default>
+                <label>Fiber</label>
+            </value>
+            <value>
+                <fullName>Disk</fullName>
+                <default>false</default>
+                <label>Disk</label>
+            </value>
+            <value>
+                <fullName>Nd:YAG</fullName>
+                <default>false</default>
+                <label>Nd:YAG</label>
+            </value>
+            <value>
+                <fullName>Direct Diode</fullName>
+                <default>false</default>
+                <label>Direct Diode</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Send_an_Email_when_Prospect_Global_Parent_Account_is_created</fullName>
+        <description>Send an Email when Prospect Global Parent Account is created</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>pooja.u@ii-vi.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Prospect_Global_Parent_Account</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Lead_Source_Advertisement</fullName>
+        <field>AccountSource</field>
+        <literalValue>Advertisement</literalValue>
+        <name>Lead Source - Advertisement</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Lead_Source_Employee_Referral</fullName>
+        <field>AccountSource</field>
+        <literalValue>Employee Referral</literalValue>
+        <name>Lead Source - Employee Referral</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Lead_Source_Manufacturer_Rep</fullName>
+        <field>AccountSource</field>
+        <literalValue>Manufacturer Rep</literalValue>
+        <name>Lead Source - Manufacturer Rep</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Lead_Source_Other</fullName>
+        <field>AccountSource</field>
+        <literalValue>Other</literalValue>
+        <name>Lead Source - Other</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Lead_Source_Partner</fullName>
+        <field>AccountSource</field>
+        <literalValue>Partner</literalValue>
+        <name>Lead Source - Partner</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Lead_Source_Trade_Show</fullName>
+        <field>AccountSource</field>
+        <literalValue>Trade Show</literalValue>
+        <name>Lead Source - Trade Show</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Lead_Source_Web</fullName>
+        <field>AccountSource</field>
+        <literalValue>Web</literalValue>
+        <name>Lead Source - Web</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Lead_Source_Web_Sale</fullName>
+        <field>AccountSource</field>
+        <literalValue>Web Sale</literalValue>
+        <name>Lead Source - Web Sale</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Account_Key</fullName>
+        <description>Updates Account Key to &quot;Source System Id_Source System&quot;</description>
+        <field>Account_Key__c</field>
+        <formula>Source_System_Id__c + &quot;_&quot; + text(Source_System__c)</formula>
+        <name>Update Account Key</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Global_Parent_Unique_Key_field</fullName>
+        <field>Global_Parent_Unique_Key__c</field>
+        <formula>Name+&quot;-&quot;+&quot;Global Parent&quot;</formula>
+        <name>Update Global Parent Unique Key field</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Region_House_Account</fullName>
+        <description>Update region to &quot;House&quot; if market is 80</description>
+        <field>Region__c</field>
+        <literalValue>HOUSE (80)</literalValue>
+        <name>Update Region House Account</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Shadow_Account_Name_field</fullName>
+        <field>Shadow_Account_Name__c</field>
+        <formula>Name</formula>
+        <name>Update Shadow Account Name field</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>updates_the_Source_System_Id</fullName>
+        <description>updates the Source System Id to &quot;Source System Id_Source System&quot;</description>
+        <field>Source_System_Id__c</field>
+        <formula>Source_System_Id__c  + &quot;_&quot; + text(Source_System__c)</formula>
+        <name>updates the Source System Id</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Lead Source - Advertisement</fullName>
+        <actions>
+            <name>Lead_Source_Advertisement</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Updates the field &quot;Account Source&quot; based on the &quot;Lead Source&quot; field.</description>
+        <formula>Account_Source_TEXT__c = &quot;Advertisement&quot;</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Lead Source - Employee Referral</fullName>
+        <actions>
+            <name>Lead_Source_Employee_Referral</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.Account_Source_TEXT__c</field>
+            <operation>equals</operation>
+            <value>Employee Referral</value>
+        </criteriaItems>
+        <description>Updates the field &quot;Account Source&quot; based on the &quot;Lead Source&quot; field.</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Lead Source - Manufacturer Rep</fullName>
+        <actions>
+            <name>Lead_Source_Manufacturer_Rep</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.Account_Source_TEXT__c</field>
+            <operation>equals</operation>
+            <value>Manufacturer Rep</value>
+        </criteriaItems>
+        <description>Updates the field &quot;Account Source&quot; based on the &quot;Lead Source&quot; field.</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Lead Source - Other</fullName>
+        <actions>
+            <name>Lead_Source_Other</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.Account_Source_TEXT__c</field>
+            <operation>equals</operation>
+            <value>Other</value>
+        </criteriaItems>
+        <description>Updates the field &quot;Account Source&quot; based on the &quot;Lead Source&quot; field.</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Lead Source - Partner</fullName>
+        <actions>
+            <name>Lead_Source_Partner</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.Account_Source_TEXT__c</field>
+            <operation>equals</operation>
+            <value>Partner</value>
+        </criteriaItems>
+        <description>Updates the field &quot;Account Source&quot; based on the &quot;Lead Source&quot; field.</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Lead Source - Trade Show</fullName>
+        <actions>
+            <name>Lead_Source_Trade_Show</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.Account_Source_TEXT__c</field>
+            <operation>equals</operation>
+            <value>Trade Show</value>
+        </criteriaItems>
+        <description>Updates the field &quot;Account Source&quot; based on the &quot;Lead Source&quot; field.</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Lead Source - Web</fullName>
+        <actions>
+            <name>Lead_Source_Web</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.Account_Source_TEXT__c</field>
+            <operation>equals</operation>
+            <value>Web</value>
+        </criteriaItems>
+        <description>Updates the field &quot;Account Source&quot; based on the &quot;Lead Source&quot; field.</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Lead Source - Web Sale</fullName>
+        <actions>
+            <name>Lead_Source_Web_Sale</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.Account_Source_TEXT__c</field>
+            <operation>equals</operation>
+            <value>Web Sale</value>
+        </criteriaItems>
+        <description>Updates the field &quot;Account Source&quot; based on the &quot;Lead Source&quot; field.</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Prospect Global Parent Account Creation Email Notification</fullName>
+        <actions>
+            <name>Send_an_Email_when_Prospect_Global_Parent_Account_is_created</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>1 AND 2</booleanFilter>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Global Parent</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Type</field>
+            <operation>equals</operation>
+            <value>Prospect</value>
+        </criteriaItems>
+        <description>when an Account is created with Record Type = Global Parent and Type = Prospect,send an email notification to Sales Ops</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update Global Parent Unique Key</fullName>
+        <actions>
+            <name>Update_Global_Parent_Unique_Key_field</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Global Parent</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update Shadow Account Name</fullName>
+        <actions>
+            <name>Update_Shadow_Account_Name_field</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>OR(AND(ISNEW(),NOT(ISBLANK(Name))),AND(NOT(ISBLANK(Name)), ISCHANGED(Name)))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>update the Source System Id</fullName>
+        <actions>
+            <name>Update_Account_Key</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.Source_System_Id__c</field>
+            <operation>notEqual</operation>
+            <value>null</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Source_System__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <description>workflow rule that updates the Source System Id to &quot;Source System Id_Source System&quot;</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

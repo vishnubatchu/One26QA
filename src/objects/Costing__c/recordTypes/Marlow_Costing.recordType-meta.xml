@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Marlow_Costing</fullName>
+    <active>true</active>
+    <label>Marlow Costing</label>
+    <picklistValues>
+        <picklist>BU_Approval_Status__c</picklist>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejected</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Marekting_Status__c</picklist>
+        <values>
+            <fullName>Complete - Notify Sales</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Draft</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Overall_Status__c</picklist>
+        <values>
+            <fullName>Closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Open</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Prior_Costing_Available__c</picklist>
+        <values>
+            <fullName>NO</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>YES</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Special_Requirements__c</picklist>
+        <values>
+            <fullName>Design%2FDevelopment%2FDocumentation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>First Article</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Applicable</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Post-Award Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pre-Award Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Program Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>QNotes %28Quality Notes%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Qual Testing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Source Inspection</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status__c</picklist>
+        <values>
+            <fullName>Draft</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Submit to Marketing</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Loaner_Item_Non_Orderable_Part_Notification_Alert</fullName>
+        <description>Loaner Item Non-Orderable Part Notification Alert</description>
+        <protected>false</protected>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <recipients>
+            <field>Inside_Sales_Email_Finisar__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>Inside_Sales_Sales_Rep_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>fnsrcrm@finisar.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Loaner_Templates/Loaner_Item_Not_Shippable</template>
+    </alerts>
+    <alerts>
+        <fullName>Loaner_Item_Not_Shippable_Notification</fullName>
+        <description>Loaner Item Not Shippable Notification</description>
+        <protected>false</protected>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <recipients>
+            <recipient>Inside_Sales_FAE</recipient>
+            <type>role</type>
+        </recipients>
+        <recipients>
+            <recipient>betty.dea@finisar.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>fnsrcrm@finisar.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Loaner_Templates/Loaner_Item_Not_Shippable</template>
+    </alerts>
+    <alerts>
+        <fullName>Loaner_Line_Item_selected_OTHER_product</fullName>
+        <description>Loaner Line -Item - selected - OTHER product</description>
+        <protected>false</protected>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <recipients>
+            <field>Inside_Sales_Email_Finisar__c</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>fnsrcrm@finisar.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Loaner_Templates/Loaner_Line_Item_selected_as_OTHER</template>
+    </alerts>
+    <alerts>
+        <fullName>Loaner_Line_Part_Update_Notification_to_Betty</fullName>
+        <ccEmails>skaja@huronconsultinggroup.com</ccEmails>
+        <description>Loaner Line Part# Update Notification to Betty</description>
+        <protected>false</protected>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>fnsrcrm@finisar.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Loaner_Templates/Loaner_Line_Part_Number_Update_to_Betty</template>
+    </alerts>
+    <alerts>
+        <fullName>Loaner_Line_Return_Due_Date_Reminder_Email_Alert</fullName>
+        <description>Loaner Line Return Due Date Reminder Email Alert</description>
+        <protected>false</protected>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <recipients>
+            <field>Inside_Sales_Email_Finisar__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>Inside_Sales_Sales_Rep_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>RSM__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderAddress>fnsrcrm@finisar.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Loaner_Templates/Loaner_Return_1week_Reminder_Notifcn</template>
+    </alerts>
+    <alerts>
+        <fullName>Loaner_Line_cancelled_Notification_to_Cancel_SO</fullName>
+        <description>Loaner Line -cancelled - Notification to Cancel SO</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>betty.dea@finisar.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>fnsrcrm@finisar.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Loaner_Templates/Loaner_Line_Status_Cancelled_Alert</template>
+    </alerts>
+    <alerts>
+        <fullName>Loaner_Line_product_selected_is_generic_Notification</fullName>
+        <description>Loaner Line - product selected is generic Notification</description>
+        <protected>false</protected>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <recipients>
+            <field>Inside_Sales_Email_Finisar__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>Inside_Sales_Sales_Rep_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>fnsrcrm@finisar.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Loaner_Templates/Loaner_Line_Product_Type_Generic</template>
+    </alerts>
+    <alerts>
+        <fullName>Loaner_Return_Date_Reminder_2Week_Notfcn_Alert</fullName>
+        <description>Loaner Return Date Reminder 2Week Notfcn Alert</description>
+        <protected>false</protected>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <recipients>
+            <field>Inside_Sales_Email_Finisar__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>Inside_Sales_Sales_Rep_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>RSM__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderAddress>fnsrcrm@finisar.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Loaner_Templates/Loaner_Return_Date_2Week_Reminder_Notfcn</template>
+    </alerts>
+    <alerts>
+        <fullName>Loanerline_Part_in_Prelim_Status_Alert</fullName>
+        <description>Loanerline Part# in Prelim Status Alert</description>
+        <protected>false</protected>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <senderAddress>fnsrcrm@finisar.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Loaner_Templates/Loaner_Prelim_Part_Notification_Template</template>
+    </alerts>
+    <alerts>
+        <fullName>Part_missing_in_the_FNSR_TRCVR_SAMPLES_pricelist</fullName>
+        <description>Part# missing in the &quot;FNSR TRCVR SAMPLES&quot; pricelist</description>
+        <protected>false</protected>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <recipients>
+            <recipient>betty.dea@finisar.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>fnsrcrm@finisar.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Loaner_Templates/Loaner_Item_Part_in_Pricelist</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Change_Line_Status_to_Pending</fullName>
+        <field>Line_Status__c</field>
+        <literalValue>Approval Pending</literalValue>
+        <name>Change Line Status to Pending</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Change_Loner_Line_Status_to_Rejected</fullName>
+        <field>Line_Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Change Loner Line Status to Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Change_Record_Type_to_Read_Only</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>Loaner_Item_Read_Only</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Change Record Type to Read Only</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Change_Status_to_Rejected</fullName>
+        <field>Line_Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Change Status to Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Change_status_as_Integration_Pending</fullName>
+        <field>Integration_Status__c</field>
+        <literalValue>Integration Pending</literalValue>
+        <name>Change status as Integration Pending</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Reject_Approval_Field_status</fullName>
+        <field>Line_Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Reject Approval Field status</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>UpdateSVP_Field_Status_as_Reject</fullName>
+        <field>SVP_Approval_Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>UpdateSVP Field Status as Reject</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Inside_Sales_Finisar_Email</fullName>
+        <description>Update Inside Sales Finisar Email  Field on Loaner Line</description>
+        <field>Inside_Sales_Email_Finisar__c</field>
+        <formula>Loaner__r.Inside_Sales_Finisar__r.Email</formula>
+        <name>Update Inside Sales Finisar Email</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Inside_Sales_Sales_Rep</fullName>
+        <description>Update Inside Sales Sales Rep  on Loaner Line</description>
+        <field>Inside_Sales_Sales_Rep_Email__c</field>
+        <formula>Loaner__r.Inside_Sales_Sales_rep__r.Email</formula>
+        <name>Update Inside Sales Sales Rep</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Integration_Status_as_Pending</fullName>
+        <field>Integration_Status__c</field>
+        <literalValue>Integration Pending</literalValue>
+        <name>Update Integration Status as Pending</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Line_Status_as_Rejected</fullName>
+        <field>Line_Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Update Line Status as Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Loaner_record_Type_To_Read_Only</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>Loaner_Item_Read_Only</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Update Loaner record Type To Read Only</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_RSM_Approver_Field_to_Rejected</fullName>
+        <field>RSM_PLM_Approval_Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Update RSM Approver Field to Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_RSM_Approver_Status_To_Approved</fullName>
+        <field>RSM_PLM_Approval_Status__c</field>
+        <literalValue>Approved</literalValue>
+        <name>Update RSM Approver Status To Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_RT_To_Loaner_Extension_Read_Only</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>Extension_Item</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Update RT To Loaner Extension Read Only</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Record_Type_To_Read_Only</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>Loaner_Item_Read_Only</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Update Record Type To Read Only</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Record_to_pending_Sales_Record</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>Loaner_Item_Pending_Sales_Record_Type</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Update Record to pending Sales Record</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_SVP_field_status</fullName>
+        <field>SVP_Approval_Status__c</field>
+        <literalValue>Approved</literalValue>
+        <name>Update SVP field status</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_VP_Approval_Status_Field</fullName>
+        <field>VP_PLD_Status__c</field>
+        <literalValue>Approved</literalValue>
+        <name>Update VP Approval Status Field</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Vp_Field_Status_On_Loaners_Line_I</fullName>
+        <field>VP_PLD_Status__c</field>
+        <literalValue>Approved</literalValue>
+        <name>Update Vp Field Status On Loaners Line I</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Vp_Status_On_Line_Item_as_Rejecte</fullName>
+        <field>VP_PLD_Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Update Vp Status On Line Item as Rejecte</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_line_Status_as_Approved</fullName>
+        <field>Line_Status__c</field>
+        <literalValue>Approved</literalValue>
+        <name>Update Loaner Line Status as Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_status_to_Pending</fullName>
+        <field>RSM_PLM_Approval_Status__c</field>
+        <literalValue>Pending</literalValue>
+        <name>Update status to Pending</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>VP_Approval_Status_Field</fullName>
+        <field>VP_PLD_Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>VP Approval Status Field</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>update_Record_Type_To_Loaner_Line_Item</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>Loaner_Item</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>update Record Type To Loaner Line Item</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Loaner Item Return Reminder Workflow Rule 14Days Reminder</fullName>
+        <active>true</active>
+        <description>Sends Email When  Return Due Date is before 14 Days</description>
+        <formula>AND (    NOT(ISBLANK( Order_Line__c )),    Balance_to_be_returned__c &gt;0,    Ship_Status__c= &apos;Shipped&apos;    )</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Loaner_Return_Date_Reminder_2Week_Notfcn_Alert</name>
+                <type>Alert</type>
+            </actions>
+            <offsetFromField>Loaner_Line__c.Effective_Return_Due_Date__c</offsetFromField>
+            <timeLength>-14</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Loaner Item Return Reminder Workflow Rule 7 Days Reminder</fullName>
+        <active>true</active>
+        <description>Sends Email When  Return Due Date is before 7 Days Reminder</description>
+        <formula>AND (    NOT(ISBLANK( Order_Line__c )),    Balance_to_be_returned__c &gt;0,    Ship_Status__c= &apos;Shipped&apos;    )</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Loaner_Line_Return_Due_Date_Reminder_Email_Alert</name>
+                <type>Alert</type>
+            </actions>
+            <offsetFromField>Loaner_Line__c.Effective_Return_Due_Date__c</offsetFromField>
+            <timeLength>-7</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Update Inside Sales Finisar Email</fullName>
+        <actions>
+            <name>Update_Inside_Sales_Finisar_Email</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_Inside_Sales_Sales_Rep</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Update Inside Sales Finisar From Formula Field</description>
+        <formula>OR(   NOT(ISBLANK(Loaner__r.Inside_Sales_Finisar__c )) , NOT(ISBLANK(Loaner__r.Inside_Sales_Sales_rep__c ) )  )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update Loaner Line Status To read Only</fullName>
+        <actions>
+            <name>Update_Record_Type_To_Read_Only</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Loaner_Line__c.Line_Status__c</field>
+            <operation>equals</operation>
+            <value>Approved</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Loaner_Line__c.Initial_Error_Message_Present__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Loaner_Line__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Loaner Item,Loaner Item Read Only,Loaner Item Pending Sales Record Type</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update Record Type To Loaner line w%2Fo product</fullName>
+        <actions>
+            <name>Update_Record_to_pending_Sales_Record</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Loaner_Line__c.Initial_Error_Message_Present__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Loaner_Line__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Loaner Item,Loaner Item Read Only</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Loaner_Line__c.Line_Status__c</field>
+            <operation>equals</operation>
+            <value>Approved</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+</Workflow>

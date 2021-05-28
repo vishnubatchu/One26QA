@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_Name__c</fullName>
+    <description>used in reports</description>
+    <externalId>false</externalId>
+    <formula>IF(  ISPICKVAL( $User.UserType , &apos;PowerPartner&apos;) ,
+ BLANKVALUE( Account__r.Name , &quot;N/A&quot;) 
+
+,BLANKVALUE( Account__r.Name , &quot;N/A&quot;) )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Account Name</label>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

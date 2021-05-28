@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Legacy_Salesforce_System__c</fullName>
+    <externalId>false</externalId>
+    <label>Legacy Salesforce System</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Marlow</fullName>
+                <default>false</default>
+                <label>Marlow</label>
+            </value>
+            <value>
+                <fullName>II-VI Corp</fullName>
+                <default>false</default>
+                <label>II-VI Corp</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

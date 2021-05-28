@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>count_of_line_items_not_approved_and_pso__c</fullName>
+    <description>Count Of Line Items In Approved or Rejected State</description>
+    <externalId>false</externalId>
+    <label>Count of Line Items Not Approved And PSO</label>
+    <summaryFilterItems>
+        <field>Loaner_Line__c.Line_Status__c</field>
+        <operation>equals</operation>
+        <value>Rejected, Draft, Approval Pending, Cancelled</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Loaner_Line__c.Loaner__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

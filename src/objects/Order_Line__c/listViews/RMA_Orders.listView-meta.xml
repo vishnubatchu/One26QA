@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RMA_Orders</fullName>
+    <columns>SO_Number_Formula__c</columns>
+    <columns>NAME</columns>
+    <columns>Customer_Name__c</columns>
+    <columns>End_Customer_Name__c</columns>
+    <columns>FAFV_Status__c</columns>
+    <columns>Count_of_Serial_s__c</columns>
+    <columns>Marketing_Part__c</columns>
+    <columns>Part_Number__c</columns>
+    <columns>Ship_From_Inventory__c</columns>
+    <columns>RMA_Received_Date__c</columns>
+    <columns>RSM__c</columns>
+    <columns>Line_Priority__c</columns>
+    <columns>OWNER.FIRST_NAME</columns>
+    <columns>NoofFilesAttached__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Order_Line__c.RMA_Order_Line</value>
+    </filters>
+    <label>RMA Orders</label>
+</ListView>

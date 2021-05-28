@@ -1,0 +1,26 @@
+<apex:page standardController="Order" extensions="CreateSalesOrderInSAP"   >   
+    <apex:form id="SOForm" >
+        <apex:outputpanel id="confirmPanel" rendered="{!isConfirm}">
+         <apex:pageBlock id="confirmBlock" title="{!$Label.MessageSalesOrderCreation}" >
+            <apex:pageBlockSection >
+                    {!$Label.starthere_note}: {!$Label.MessageSalesOrderConfirmation}
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+         <apex:actionStatus id="saveStatus">
+           <apex:facet name="stop">
+               <apex:commandButton action="{!createSalesOrderInSAP}" value="Confirm" rerender="SOForm,resultsPanel,confirmPanel" status="saveStatus"/>
+           </apex:facet>
+           <apex:facet name="start">
+               <apex:commandButton value="{!$Label.ButtonProcessing}..." disabled="true" status="saveStatus"/>
+           </apex:facet>
+        </apex:actionStatus>
+        <apex:commandButton action="{!cancel}" value="{!$Label.buttoncancel}"/>    
+        </apex:outputpanel>
+        <apex:outputpanel id="resultsPanel" rendered="{! !isConfirm}">
+        <apex:pageBlock id="resultsBlock"  title="{!$Label.MessageResultsSalesOrderCreation}" >
+           <apex:pageMessages id="messages"/>
+        </apex:pageBlock>
+        <apex:commandButton action="{!cancel}" value="{!$Label.ButtonReturnToOrder}" />   
+         </apex:outputpanel>        
+    </apex:form>
+</apex:page>

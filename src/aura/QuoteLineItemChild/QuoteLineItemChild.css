@@ -1,0 +1,12 @@
+.THIS .slds-form-element__label {
+      display : none;
+      visibility : hidden;
+}
+
+.THIS.outputClass{
+color: #A9A9A9;
+}
+
+.THIS .slds-p-right_x-large{
+    padding-right: 9rem;
+}

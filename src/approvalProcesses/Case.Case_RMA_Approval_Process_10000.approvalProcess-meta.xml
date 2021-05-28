@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <allowRecall>false</allowRecall>
+    <allowedSubmitters>
+        <type>creator</type>
+    </allowedSubmitters>
+    <allowedSubmitters>
+        <type>owner</type>
+    </allowedSubmitters>
+    <approvalPageFields>
+        <field>CaseNumber</field>
+        <field>Owner</field>
+        <field>Status</field>
+        <field>Use_Original_PO_Number_s_linked_to_seri__c</field>
+        <field>Comments</field>
+        <field>Description</field>
+        <field>Reason</field>
+    </approvalPageFields>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>Update_CFO_Approved</name>
+                <type>FieldUpdate</type>
+            </action>
+            <action>
+                <name>Update_Status_Pending_RMA_Admin_Review</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>CFO_User__c</name>
+                <type>relatedUserField</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <entryCriteria>
+            <criteriaItems>
+                <field>Case.RecordType</field>
+                <operation>equals</operation>
+                <value>FAE Case</value>
+            </criteriaItems>
+        </entryCriteria>
+        <ifCriteriaNotMet>ApproveRecord</ifCriteriaNotMet>
+        <label>update Status Approved</label>
+        <name>update_Status_Approved</name>
+        <rejectionActions>
+            <action>
+                <name>Status_Rejected</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <emailTemplate>RMA_Request_Email_Templates/Approve_RMA_Request</emailTemplate>
+    <enableMobileDeviceAccess>true</enableMobileDeviceAccess>
+    <entryCriteria>
+        <booleanFilter>1 AND (2  AND 3) AND 4 AND (5 OR (6 AND 7)) AND 8</booleanFilter>
+        <criteriaItems>
+            <field>Case.RecordType</field>
+            <operation>equals</operation>
+            <value>RMA Request</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Billing_Type__c</field>
+            <operation>equals</operation>
+            <value>&quot;Return For Credit Only, No Outbound Rebill Involved&quot;,Others</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Rolled_up_Amount__c</field>
+            <operation>greaterOrEqual</operation>
+            <value>&quot;USD 10,000&quot;</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Rolled_up_Amount__c</field>
+            <operation>lessOrEqual</operation>
+            <value>&quot;USD 100,000&quot;</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.EndCustomerInbound__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Outbound_RMA_Not_Needed__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.EndCustomerOutBound__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.TotalAmountBU0010__c</field>
+            <operation>lessOrEqual</operation>
+            <value>USD 0</value>
+        </criteriaItems>
+    </entryCriteria>
+    <finalApprovalActions>
+        <action>
+            <name>Update_Status_Pending_RMA_Admin_Review</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalApprovalActions>
+    <finalApprovalRecordLock>true</finalApprovalRecordLock>
+    <finalRejectionRecordLock>false</finalRejectionRecordLock>
+    <initialSubmissionActions>
+        <action>
+            <name>Email_Notification_for_new_RMA</name>
+            <type>Alert</type>
+        </action>
+    </initialSubmissionActions>
+    <label>RMA Approval Process  &gt; 10000</label>
+    <processOrder>1</processOrder>
+    <recordEditability>AdminOrCurrentApprover</recordEditability>
+    <showApprovalHistory>true</showApprovalHistory>
+</ApprovalProcess>

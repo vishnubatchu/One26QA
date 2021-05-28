@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rejection_Reason_validation_rule</fullName>
+    <active>true</active>
+    <description>Sales Rep is able to change the Quote status to one of the last statuses and rejection reason is not populated, an error throws out</description>
+    <errorConditionFormula>AND( OR(ISPICKVAL(Status, &quot;Cancelled after Approval&quot;),ISPICKVAL(Status, &quot;Lost-Price&quot;),ISPICKVAL(Status, &quot;Inactive&quot;),ISPICKVAL(Status, &quot;Lost-Technical&quot;),ISPICKVAL(Status, &quot;Lost-Delivery&quot;),ISPICKVAL(Status, &quot;Project Cancelled&quot;)), ISPICKVAL(Rejection_Reason__c , &quot;&quot;))</errorConditionFormula>
+    <errorDisplayField>Rejection_Reason__c</errorDisplayField>
+    <errorMessage>Rejection Reason cannot be null</errorMessage>
+</ValidationRule>
