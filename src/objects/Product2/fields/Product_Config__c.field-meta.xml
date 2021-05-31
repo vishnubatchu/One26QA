@@ -251,6 +251,51 @@
                 <default>false</default>
                 <label>LASER ENTERPRISE</label>
             </value>
+            <value>
+                <fullName>ACD</fullName>
+                <default>false</default>
+                <label>ACD</label>
+            </value>
+            <value>
+                <fullName>OPDM</fullName>
+                <default>false</default>
+                <label>OPDM</label>
+            </value>
+            <value>
+                <fullName>Optics Products</fullName>
+                <default>false</default>
+                <label>Optics Products</label>
+            </value>
+            <value>
+                <fullName>IPI PRODUCTS</fullName>
+                <default>false</default>
+                <label>IPI PRODUCTS</label>
+            </value>
+            <value>
+                <fullName>NSD</fullName>
+                <default>false</default>
+                <label>NSD</label>
+            </value>
+            <value>
+                <fullName>WSS</fullName>
+                <default>false</default>
+                <label>WSS</label>
+            </value>
+            <value>
+                <fullName>SUW</fullName>
+                <default>false</default>
+                <label>SUW</label>
+            </value>
+            <value>
+                <fullName>PLD</fullName>
+                <default>false</default>
+                <label>PLD</label>
+            </value>
+            <value>
+                <fullName>HPL</fullName>
+                <default>false</default>
+                <label>HPL</label>
+            </value>
         </valueSetDefinition>
     </valueSet>
 </CustomField>

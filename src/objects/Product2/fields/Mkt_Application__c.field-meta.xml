@@ -47,14 +47,39 @@
                 <label>LAN</label>
             </value>
             <value>
+                <fullName>LAN/SAN</fullName>
+                <default>false</default>
+                <label>LAN/SAN</label>
+            </value>
+            <value>
                 <fullName>LAN-METRO</fullName>
                 <default>false</default>
                 <label>LAN-METRO</label>
             </value>
             <value>
+                <fullName>MEDICAL</fullName>
+                <default>false</default>
+                <label>MEDICAL</label>
+            </value>
+            <value>
+                <fullName>METROMWL</fullName>
+                <default>false</default>
+                <label>METROMWL</label>
+            </value>
+            <value>
+                <fullName>METROSWL</fullName>
+                <default>false</default>
+                <label>METROSWL</label>
+            </value>
+            <value>
                 <fullName>MILITARY</fullName>
                 <default>false</default>
                 <label>MILITARY</label>
+            </value>
+            <value>
+                <fullName>NT LAN/SAN</fullName>
+                <default>false</default>
+                <label>NT LAN/SAN</label>
             </value>
             <value>
                 <fullName>SAN</fullName>
@@ -77,24 +102,309 @@
                 <label>WIRELESS ONLY</label>
             </value>
             <value>
-                <fullName>METROSWL</fullName>
+                <fullName>TBD</fullName>
                 <default>false</default>
-                <label>METROSWL</label>
+                <label>TBD</label>
             </value>
             <value>
-                <fullName>NT LAN/SAN</fullName>
+                <fullName>TELECOM LASERS</fullName>
                 <default>false</default>
-                <label>NT LAN/SAN</label>
+                <label>TELECOM LASERS</label>
             </value>
             <value>
-                <fullName>LAN/SAN</fullName>
+                <fullName>Instruments</fullName>
                 <default>false</default>
-                <label>LAN/SAN</label>
+                <label>Instruments</label>
             </value>
             <value>
-                <fullName>METROMWL</fullName>
+                <fullName>OPDM-Telecom</fullName>
                 <default>false</default>
-                <label>METROMWL</label>
+                <label>OPDM-Telecom</label>
+            </value>
+            <value>
+                <fullName>Semiconductor</fullName>
+                <default>false</default>
+                <label>Semiconductor</label>
+            </value>
+            <value>
+                <fullName>FAB SERVICES</fullName>
+                <default>false</default>
+                <label>FAB SERVICES</label>
+            </value>
+            <value>
+                <fullName>UNASSIGNED</fullName>
+                <default>false</default>
+                <label>UNASSIGNED</label>
+            </value>
+            <value>
+                <fullName>Optics Mirror</fullName>
+                <default>false</default>
+                <label>Optics Mirror</label>
+            </value>
+            <value>
+                <fullName>Optics Assembly</fullName>
+                <default>false</default>
+                <label>Optics Assembly</label>
+            </value>
+            <value>
+                <fullName>Optics Crystal YAG</fullName>
+                <default>false</default>
+                <label>Optics Crystal YAG</label>
+            </value>
+            <value>
+                <fullName>Optics Wafer</fullName>
+                <default>false</default>
+                <label>Optics Wafer</label>
+            </value>
+            <value>
+                <fullName>High Port Count WSS</fullName>
+                <default>false</default>
+                <label>High Port Count WSS</label>
+            </value>
+            <value>
+                <fullName>LASER PROCESSING</fullName>
+                <default>false</default>
+                <label>LASER PROCESSING</label>
+            </value>
+            <value>
+                <fullName>Optics Etalon</fullName>
+                <default>false</default>
+                <label>Optics Etalon</label>
+            </value>
+            <value>
+                <fullName>Optics Filter</fullName>
+                <default>false</default>
+                <label>Optics Filter</label>
+            </value>
+            <value>
+                <fullName>HIGH POWER LASERS</fullName>
+                <default>false</default>
+                <label>HIGH POWER LASERS</label>
+            </value>
+            <value>
+                <fullName>COMPONENTS</fullName>
+                <default>false</default>
+                <label>COMPONENTS</label>
+            </value>
+            <value>
+                <fullName>GREEN LASER</fullName>
+                <default>false</default>
+                <label>GREEN LASER</label>
+            </value>
+            <value>
+                <fullName>DATACOM</fullName>
+                <default>false</default>
+                <label>DATACOM</label>
+            </value>
+            <value>
+                <fullName>CONSUMER ELECTRONICS</fullName>
+                <default>false</default>
+                <label>CONSUMER ELECTRONICS</label>
+            </value>
+            <value>
+                <fullName>Fiber Pigtail</fullName>
+                <default>false</default>
+                <label>Fiber Pigtail</label>
+            </value>
+            <value>
+                <fullName>Optics Window</fullName>
+                <default>false</default>
+                <label>Optics Window</label>
+            </value>
+            <value>
+                <fullName>SUBSYSTEMS</fullName>
+                <default>false</default>
+                <label>SUBSYSTEMS</label>
+            </value>
+            <value>
+                <fullName>AMPLIFIERS</fullName>
+                <default>false</default>
+                <label>AMPLIFIERS</label>
+            </value>
+            <value>
+                <fullName>Low Port Count WSS</fullName>
+                <default>false</default>
+                <label>Low Port Count WSS</label>
+            </value>
+            <value>
+                <fullName>OPDM-Z-Block</fullName>
+                <default>false</default>
+                <label>OPDM-Z-Block</label>
+            </value>
+            <value>
+                <fullName>IR SERVICES</fullName>
+                <default>false</default>
+                <label>IR SERVICES</label>
+            </value>
+            <value>
+                <fullName>SiC</fullName>
+                <default>false</default>
+                <label>SiC</label>
+            </value>
+            <value>
+                <fullName>Optics Prism</fullName>
+                <default>false</default>
+                <label>Optics Prism</label>
+            </value>
+            <value>
+                <fullName>Optics Crystal</fullName>
+                <default>false</default>
+                <label>Optics Crystal</label>
+            </value>
+            <value>
+                <fullName>Assembled Components</fullName>
+                <default>false</default>
+                <label>Assembled Components</label>
+            </value>
+            <value>
+                <fullName>WDM DEV &amp; MODULES</fullName>
+                <default>false</default>
+                <label>WDM DEV &amp; MODULES</label>
+            </value>
+            <value>
+                <fullName>Advanced Components</fullName>
+                <default>false</default>
+                <label>Advanced Components</label>
+            </value>
+            <value>
+                <fullName>IR OPTICS</fullName>
+                <default>false</default>
+                <label>IR OPTICS</label>
+            </value>
+            <value>
+                <fullName>IR ASSEMBLY</fullName>
+                <default>false</default>
+                <label>IR ASSEMBLY</label>
+            </value>
+            <value>
+                <fullName>MICRO-OPTICS</fullName>
+                <default>false</default>
+                <label>MICRO-OPTICS</label>
+            </value>
+            <value>
+                <fullName>OBSOLETE</fullName>
+                <default>false</default>
+                <label>OBSOLETE</label>
+            </value>
+            <value>
+                <fullName>OPDM-Transceiver</fullName>
+                <default>false</default>
+                <label>OPDM-Transceiver</label>
+            </value>
+            <value>
+                <fullName>ACCESSARIES</fullName>
+                <default>false</default>
+                <label>ACCESSARIES</label>
+            </value>
+            <value>
+                <fullName>PUMP LASERS</fullName>
+                <default>false</default>
+                <label>PUMP LASERS</label>
+            </value>
+            <value>
+                <fullName>Services</fullName>
+                <default>false</default>
+                <label>Services</label>
+            </value>
+            <value>
+                <fullName>PRODUCTION SUPPLIES</fullName>
+                <default>false</default>
+                <label>PRODUCTION SUPPLIES</label>
+            </value>
+            <value>
+                <fullName>SYSTEMS</fullName>
+                <default>false</default>
+                <label>SYSTEMS</label>
+            </value>
+            <value>
+                <fullName>TEMPRONICS</fullName>
+                <default>false</default>
+                <label>TEMPRONICS</label>
+            </value>
+            <value>
+                <fullName>OTHER</fullName>
+                <default>false</default>
+                <label>OTHER</label>
+            </value>
+            <value>
+                <fullName>Cylindrical Lens</fullName>
+                <default>false</default>
+                <label>Cylindrical Lens</label>
+            </value>
+            <value>
+                <fullName>Micro Lens</fullName>
+                <default>false</default>
+                <label>Micro Lens</label>
+            </value>
+            <value>
+                <fullName>Rotator</fullName>
+                <default>false</default>
+                <label>Rotator</label>
+            </value>
+            <value>
+                <fullName>Optics Others</fullName>
+                <default>false</default>
+                <label>Optics Others</label>
+            </value>
+            <value>
+                <fullName>Optics Flow Cell</fullName>
+                <default>false</default>
+                <label>Optics Flow Cell</label>
+            </value>
+            <value>
+                <fullName>Integrated Modules</fullName>
+                <default>false</default>
+                <label>Integrated Modules</label>
+            </value>
+            <value>
+                <fullName>MODULES</fullName>
+                <default>false</default>
+                <label>MODULES</label>
+            </value>
+            <value>
+                <fullName>Laser Combiner</fullName>
+                <default>false</default>
+                <label>Laser Combiner</label>
+            </value>
+            <value>
+                <fullName>Optics Waveplate</fullName>
+                <default>false</default>
+                <label>Optics Waveplate</label>
+            </value>
+            <value>
+                <fullName>Spherical lens</fullName>
+                <default>false</default>
+                <label>Spherical lens</label>
+            </value>
+            <value>
+                <fullName>Grating</fullName>
+                <default>false</default>
+                <label>Grating</label>
+            </value>
+            <value>
+                <fullName>AOM</fullName>
+                <default>false</default>
+                <label>AOM</label>
+            </value>
+            <value>
+                <fullName>FBG</fullName>
+                <default>false</default>
+                <label>FBG</label>
+            </value>
+            <value>
+                <fullName>S-Lens</fullName>
+                <default>false</default>
+                <label>S-Lens</label>
+            </value>
+            <value>
+                <fullName>IR MATERIALS</fullName>
+                <default>false</default>
+                <label>IR MATERIALS</label>
+            </value>
+            <value>
+                <fullName>SENSING</fullName>
+                <default>false</default>
+                <label>SENSING</label>
             </value>
         </valueSetDefinition>
     </valueSet>

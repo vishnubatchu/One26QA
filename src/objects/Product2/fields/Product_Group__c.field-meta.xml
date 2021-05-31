@@ -12,14 +12,19 @@
         <valueSetDefinition>
             <sorted>false</sorted>
             <value>
-                <fullName>10 GIG</fullName>
+                <fullName>&lt;10 GIG</fullName>
                 <default>false</default>
-                <label>10 GIG</label>
+                <label>&lt;10 GIG</label>
             </value>
             <value>
                 <fullName>100 GIG</fullName>
                 <default>false</default>
                 <label>100 GIG</label>
+            </value>
+            <value>
+                <fullName>10 GIG</fullName>
+                <default>false</default>
+                <label>10 GIG</label>
             </value>
             <value>
                 <fullName>16-32 GIG</fullName>
@@ -32,14 +37,14 @@
                 <label>200 GIG</label>
             </value>
             <value>
+                <fullName>25 GIG</fullName>
+                <default>false</default>
+                <label>25 GIG</label>
+            </value>
+            <value>
                 <fullName>3D SENSORS</fullName>
                 <default>false</default>
                 <label>3D SENSORS</label>
-            </value>
-            <value>
-                <fullName>40 GIG</fullName>
-                <default>false</default>
-                <label>40 GIG</label>
             </value>
             <value>
                 <fullName>400 GIG</fullName>
@@ -47,14 +52,24 @@
                 <label>400 GIG</label>
             </value>
             <value>
-                <fullName>&lt;10 GIG</fullName>
+                <fullName>40 GIG</fullName>
                 <default>false</default>
-                <label>&lt;10 GIG</label>
+                <label>40 GIG</label>
+            </value>
+            <value>
+                <fullName>800 GIG</fullName>
+                <default>false</default>
+                <label>800 GIG</label>
             </value>
             <value>
                 <fullName>ACCESSORIES</fullName>
                 <default>false</default>
                 <label>ACCESSORIES</label>
+            </value>
+            <value>
+                <fullName>ACTIVES</fullName>
+                <default>false</default>
+                <label>ACTIVES</label>
             </value>
             <value>
                 <fullName>AMPLIFIER</fullName>
@@ -97,6 +112,21 @@
                 <label>LW/SONET MODULE</label>
             </value>
             <value>
+                <fullName>LWMODULES</fullName>
+                <default>false</default>
+                <label>LWMODULES</label>
+            </value>
+            <value>
+                <fullName>NETWORK TOOLS</fullName>
+                <default>false</default>
+                <label>NETWORK TOOLS</label>
+            </value>
+            <value>
+                <fullName>OPT COMPS-CHIP</fullName>
+                <default>false</default>
+                <label>OPT COMPS-CHIP</label>
+            </value>
+            <value>
                 <fullName>OPT COMPS-OTHER</fullName>
                 <default>false</default>
                 <label>OPT COMPS-OTHER</label>
@@ -117,9 +147,9 @@
                 <label>ROADM</label>
             </value>
             <value>
-                <fullName>SW MODULES</fullName>
+                <fullName>SUB 10 GIG</fullName>
                 <default>false</default>
-                <label>SW MODULES</label>
+                <label>SUB 10 GIG</label>
             </value>
             <value>
                 <fullName>SWMODULES</fullName>
@@ -127,29 +157,1349 @@
                 <label>SWMODULES</label>
             </value>
             <value>
+                <fullName>SW MODULES</fullName>
+                <default>false</default>
+                <label>SW MODULES</label>
+            </value>
+            <value>
                 <fullName>WDMMODULES</fullName>
                 <default>false</default>
                 <label>WDMMODULES</label>
             </value>
             <value>
-                <fullName>NETWORK TOOLS</fullName>
+                <fullName>PGLP</fullName>
                 <default>false</default>
-                <label>NETWORK TOOLS</label>
+                <label>PGLP</label>
             </value>
             <value>
-                <fullName>LWMODULES</fullName>
+                <fullName>PGLHP</fullName>
                 <default>false</default>
-                <label>LWMODULES</label>
+                <label>PGLHP</label>
             </value>
             <value>
-                <fullName>ACTIVES</fullName>
+                <fullName>PGDOC</fullName>
                 <default>false</default>
-                <label>ACTIVES</label>
+                <label>PGDOC</label>
             </value>
             <value>
-                <fullName>25 GIG</fullName>
+                <fullName>G10</fullName>
                 <default>false</default>
-                <label>25 GIG</label>
+                <label>G10</label>
+            </value>
+            <value>
+                <fullName>AMAT Richmond</fullName>
+                <default>false</default>
+                <label>AMAT Richmond</label>
+            </value>
+            <value>
+                <fullName>KLA, Thru Hole</fullName>
+                <default>false</default>
+                <label>KLA, Thru Hole</label>
+            </value>
+            <value>
+                <fullName>2367</fullName>
+                <default>false</default>
+                <label>2367</label>
+            </value>
+            <value>
+                <fullName>KLA/OMD</fullName>
+                <default>false</default>
+                <label>KLA/OMD</label>
+            </value>
+            <value>
+                <fullName>KLA/450 WWC2</fullName>
+                <default>false</default>
+                <label>KLA/450 WWC2</label>
+            </value>
+            <value>
+                <fullName>KNS</fullName>
+                <default>false</default>
+                <label>KNS</label>
+            </value>
+            <value>
+                <fullName>KNS, Heater Block</fullName>
+                <default>false</default>
+                <label>KNS, Heater Block</label>
+            </value>
+            <value>
+                <fullName>0200-27100 derivativ</fullName>
+                <default>false</default>
+                <label>0200-27100 derivativ</label>
+            </value>
+            <value>
+                <fullName>Rudolph, 3% Chuck</fullName>
+                <default>false</default>
+                <label>Rudolph, 3% Chuck</label>
+            </value>
+            <value>
+                <fullName>ASML, NXE Finger Bod</fullName>
+                <default>false</default>
+                <label>ASML, NXE Finger Bod</label>
+            </value>
+            <value>
+                <fullName>KNS TCX3</fullName>
+                <default>false</default>
+                <label>KNS TCX3</label>
+            </value>
+            <value>
+                <fullName>1 pc ESC Base</fullName>
+                <default>false</default>
+                <label>1 pc ESC Base</label>
+            </value>
+            <value>
+                <fullName>TBD</fullName>
+                <default>false</default>
+                <label>TBD</label>
+            </value>
+            <value>
+                <fullName>OPTICAL MATERIALS</fullName>
+                <default>false</default>
+                <label>OPTICAL MATERIALS</label>
+            </value>
+            <value>
+                <fullName>ASML, MESA Dia</fullName>
+                <default>false</default>
+                <label>ASML, MESA Dia</label>
+            </value>
+            <value>
+                <fullName>KLA, Regera Stage</fullName>
+                <default>false</default>
+                <label>KLA, Regera Stage</label>
+            </value>
+            <value>
+                <fullName>ASML, DLC Wit</fullName>
+                <default>false</default>
+                <label>ASML, DLC Wit</label>
+            </value>
+            <value>
+                <fullName>Lam, Samples</fullName>
+                <default>false</default>
+                <label>Lam, Samples</label>
+            </value>
+            <value>
+                <fullName>CERAMIC YAG</fullName>
+                <default>false</default>
+                <label>CERAMIC YAG</label>
+            </value>
+            <value>
+                <fullName>SI</fullName>
+                <default>false</default>
+                <label>SI</label>
+            </value>
+            <value>
+                <fullName>980 PUMP CHIP ON CARRIER</fullName>
+                <default>false</default>
+                <label>980 PUMP CHIP ON CARRIER</label>
+            </value>
+            <value>
+                <fullName>OBSOLETE - PL</fullName>
+                <default>false</default>
+                <label>OBSOLETE - PL</label>
+            </value>
+            <value>
+                <fullName>others</fullName>
+                <default>false</default>
+                <label>others</label>
+            </value>
+            <value>
+                <fullName>WSDM</fullName>
+                <default>false</default>
+                <label>WSDM</label>
+            </value>
+            <value>
+                <fullName>OSTF</fullName>
+                <default>false</default>
+                <label>OSTF</label>
+            </value>
+            <value>
+                <fullName>MOA</fullName>
+                <default>false</default>
+                <label>MOA</label>
+            </value>
+            <value>
+                <fullName>Mechanical</fullName>
+                <default>false</default>
+                <label>Mechanical</label>
+            </value>
+            <value>
+                <fullName>PUMPS - 9XX/14XX</fullName>
+                <default>false</default>
+                <label>PUMPS - 9XX/14XX</label>
+            </value>
+            <value>
+                <fullName>PGLLP</fullName>
+                <default>false</default>
+                <label>PGLLP</label>
+            </value>
+            <value>
+                <fullName>I75</fullName>
+                <default>false</default>
+                <label>I75</label>
+            </value>
+            <value>
+                <fullName>OBS G10</fullName>
+                <default>false</default>
+                <label>OBS G10</label>
+            </value>
+            <value>
+                <fullName>G5.3</fullName>
+                <default>false</default>
+                <label>G5.3</label>
+            </value>
+            <value>
+                <fullName>KLA, Thru Hole Chuck</fullName>
+                <default>false</default>
+                <label>KLA, Thru Hole Chuck</label>
+            </value>
+            <value>
+                <fullName>KLA, FFC Chuck</fullName>
+                <default>false</default>
+                <label>KLA, FFC Chuck</label>
+            </value>
+            <value>
+                <fullName>KLA/WWC Panamera</fullName>
+                <default>false</default>
+                <label>KLA/WWC Panamera</label>
+            </value>
+            <value>
+                <fullName>KLA/1.2MM WFR</fullName>
+                <default>false</default>
+                <label>KLA/1.2MM WFR</label>
+            </value>
+            <value>
+                <fullName>KLA/HG SSC Rings</fullName>
+                <default>false</default>
+                <label>KLA/HG SSC Rings</label>
+            </value>
+            <value>
+                <fullName>ASMLDRY</fullName>
+                <default>false</default>
+                <label>ASMLDRY</label>
+            </value>
+            <value>
+                <fullName>KLA, FaST</fullName>
+                <default>false</default>
+                <label>KLA, FaST</label>
+            </value>
+            <value>
+                <fullName>CH53 TEST TILE</fullName>
+                <default>false</default>
+                <label>CH53 TEST TILE</label>
+            </value>
+            <value>
+                <fullName>ASML Sample</fullName>
+                <default>false</default>
+                <label>ASML Sample</label>
+            </value>
+            <value>
+                <fullName>ASML, 3DNAND</fullName>
+                <default>false</default>
+                <label>ASML, 3DNAND</label>
+            </value>
+            <value>
+                <fullName>LAM</fullName>
+                <default>false</default>
+                <label>LAM</label>
+            </value>
+            <value>
+                <fullName>ASML, MK6.6</fullName>
+                <default>false</default>
+                <label>ASML, MK6.6</label>
+            </value>
+            <value>
+                <fullName>ASML, CDIS Sample</fullName>
+                <default>false</default>
+                <label>ASML, CDIS Sample</label>
+            </value>
+            <value>
+                <fullName>ASML, MK6.Y</fullName>
+                <default>false</default>
+                <label>ASML, MK6.Y</label>
+            </value>
+            <value>
+                <fullName>UNASSIGNED</fullName>
+                <default>false</default>
+                <label>UNASSIGNED</label>
+            </value>
+            <value>
+                <fullName>MILITARY + AEROSPACE</fullName>
+                <default>false</default>
+                <label>MILITARY + AEROSPACE</label>
+            </value>
+            <value>
+                <fullName>5um OPTICS</fullName>
+                <default>false</default>
+                <label>5um OPTICS</label>
+            </value>
+            <value>
+                <fullName>ASML, 8898 CG</fullName>
+                <default>false</default>
+                <label>ASML, 8898 CG</label>
+            </value>
+            <value>
+                <fullName>ASML, Phase III</fullName>
+                <default>false</default>
+                <label>ASML, Phase III</label>
+            </value>
+            <value>
+                <fullName>UV</fullName>
+                <default>false</default>
+                <label>UV</label>
+            </value>
+            <value>
+                <fullName>TESTING</fullName>
+                <default>false</default>
+                <label>TESTING</label>
+            </value>
+            <value>
+                <fullName>N-TYPE</fullName>
+                <default>false</default>
+                <label>N-TYPE</label>
+            </value>
+            <value>
+                <fullName>Crystal Line</fullName>
+                <default>false</default>
+                <label>Crystal Line</label>
+            </value>
+            <value>
+                <fullName>M&amp;C Filter</fullName>
+                <default>false</default>
+                <label>M&amp;C Filter</label>
+            </value>
+            <value>
+                <fullName>MO MODULES (INT)</fullName>
+                <default>false</default>
+                <label>MO MODULES (INT)</label>
+            </value>
+            <value>
+                <fullName>Collimator</fullName>
+                <default>false</default>
+                <label>Collimator</label>
+            </value>
+            <value>
+                <fullName>WDM/GFF Device</fullName>
+                <default>false</default>
+                <label>WDM/GFF Device</label>
+            </value>
+            <value>
+                <fullName>Switch Devices</fullName>
+                <default>false</default>
+                <label>Switch Devices</label>
+            </value>
+            <value>
+                <fullName>ACD Amplifier</fullName>
+                <default>false</default>
+                <label>ACD Amplifier</label>
+            </value>
+            <value>
+                <fullName>WDM Module</fullName>
+                <default>false</default>
+                <label>WDM Module</label>
+            </value>
+            <value>
+                <fullName>LP OPTICS - VISIBLE</fullName>
+                <default>false</default>
+                <label>LP OPTICS - VISIBLE</label>
+            </value>
+            <value>
+                <fullName>DGP</fullName>
+                <default>false</default>
+                <label>DGP</label>
+            </value>
+            <value>
+                <fullName>Laser Accessories</fullName>
+                <default>false</default>
+                <label>Laser Accessories</label>
+            </value>
+            <value>
+                <fullName>L-BAND</fullName>
+                <default>false</default>
+                <label>L-BAND</label>
+            </value>
+            <value>
+                <fullName>Optical Prism line</fullName>
+                <default>false</default>
+                <label>Optical Prism line</label>
+            </value>
+            <value>
+                <fullName>WSS-C-NOKIA WS</fullName>
+                <default>false</default>
+                <label>WSS-C-NOKIA WS</label>
+            </value>
+            <value>
+                <fullName>PGRLSK</fullName>
+                <default>false</default>
+                <label>PGRLSK</label>
+            </value>
+            <value>
+                <fullName>PGOTHER</fullName>
+                <default>false</default>
+                <label>PGOTHER</label>
+            </value>
+            <value>
+                <fullName>PGCOL</fullName>
+                <default>false</default>
+                <label>PGCOL</label>
+            </value>
+            <value>
+                <fullName>PGOSPAR</fullName>
+                <default>false</default>
+                <label>PGOSPAR</label>
+            </value>
+            <value>
+                <fullName>PGLQP</fullName>
+                <default>false</default>
+                <label>PGLQP</label>
+            </value>
+            <value>
+                <fullName>PGPACK</fullName>
+                <default>false</default>
+                <label>PGPACK</label>
+            </value>
+            <value>
+                <fullName>Wafer Handling</fullName>
+                <default>false</default>
+                <label>Wafer Handling</label>
+            </value>
+            <value>
+                <fullName>MDN</fullName>
+                <default>false</default>
+                <label>MDN</label>
+            </value>
+            <value>
+                <fullName>Applied, Deposition</fullName>
+                <default>false</default>
+                <label>Applied, Deposition</label>
+            </value>
+            <value>
+                <fullName>66</fullName>
+                <default>false</default>
+                <label>66</label>
+            </value>
+            <value>
+                <fullName>Everything</fullName>
+                <default>false</default>
+                <label>Everything</label>
+            </value>
+            <value>
+                <fullName>ASML, EUV</fullName>
+                <default>false</default>
+                <label>ASML, EUV</label>
+            </value>
+            <value>
+                <fullName>KLA/R&amp;D</fullName>
+                <default>false</default>
+                <label>KLA/R&amp;D</label>
+            </value>
+            <value>
+                <fullName>LCD</fullName>
+                <default>false</default>
+                <label>LCD</label>
+            </value>
+            <value>
+                <fullName>Tahoe, multi-channel</fullName>
+                <default>false</default>
+                <label>Tahoe, multi-channel</label>
+            </value>
+            <value>
+                <fullName>KLA/Vac chuck 9500</fullName>
+                <default>false</default>
+                <label>KLA/Vac chuck 9500</label>
+            </value>
+            <value>
+                <fullName>AMARSHALL</fullName>
+                <default>false</default>
+                <label>AMARSHALL</label>
+            </value>
+            <value>
+                <fullName>LP OPTICS</fullName>
+                <default>false</default>
+                <label>LP OPTICS</label>
+            </value>
+            <value>
+                <fullName>HP OPTICS</fullName>
+                <default>false</default>
+                <label>HP OPTICS</label>
+            </value>
+            <value>
+                <fullName>COATING</fullName>
+                <default>false</default>
+                <label>COATING</label>
+            </value>
+            <value>
+                <fullName>Kimball, Chuck</fullName>
+                <default>false</default>
+                <label>Kimball, Chuck</label>
+            </value>
+            <value>
+                <fullName>ASML, NXE MMC35</fullName>
+                <default>false</default>
+                <label>ASML, NXE MMC35</label>
+            </value>
+            <value>
+                <fullName>FG</fullName>
+                <default>false</default>
+                <label>FG</label>
+            </value>
+            <value>
+                <fullName>BEAM GUIDING SYSTEMS</fullName>
+                <default>false</default>
+                <label>BEAM GUIDING SYSTEMS</label>
+            </value>
+            <value>
+                <fullName>LP OPTICS-1UM</fullName>
+                <default>false</default>
+                <label>LP OPTICS-1UM</label>
+            </value>
+            <value>
+                <fullName>PM/PD</fullName>
+                <default>false</default>
+                <label>PM/PD</label>
+            </value>
+            <value>
+                <fullName>Interleaver</fullName>
+                <default>false</default>
+                <label>Interleaver</label>
+            </value>
+            <value>
+                <fullName>PLC chip</fullName>
+                <default>false</default>
+                <label>PLC chip</label>
+            </value>
+            <value>
+                <fullName>Long haul</fullName>
+                <default>false</default>
+                <label>Long haul</label>
+            </value>
+            <value>
+                <fullName>Tunable Filter</fullName>
+                <default>false</default>
+                <label>Tunable Filter</label>
+            </value>
+            <value>
+                <fullName>Wafer</fullName>
+                <default>false</default>
+                <label>Wafer</label>
+            </value>
+            <value>
+                <fullName>WSS-L</fullName>
+                <default>false</default>
+                <label>WSS-L</label>
+            </value>
+            <value>
+                <fullName>TUNABLE DC</fullName>
+                <default>false</default>
+                <label>TUNABLE DC</label>
+            </value>
+            <value>
+                <fullName>PGCUT</fullName>
+                <default>false</default>
+                <label>PGCUT</label>
+            </value>
+            <value>
+                <fullName>PGLQ</fullName>
+                <default>false</default>
+                <label>PGLQ</label>
+            </value>
+            <value>
+                <fullName>Applied, SH Samples</fullName>
+                <default>false</default>
+                <label>Applied, SH Samples</label>
+            </value>
+            <value>
+                <fullName>KLA, Chucks</fullName>
+                <default>false</default>
+                <label>KLA, Chucks</label>
+            </value>
+            <value>
+                <fullName>KLA/SSC Pad</fullName>
+                <default>false</default>
+                <label>KLA/SSC Pad</label>
+            </value>
+            <value>
+                <fullName>KNS, Bond Head</fullName>
+                <default>false</default>
+                <label>KNS, Bond Head</label>
+            </value>
+            <value>
+                <fullName>Bond Nozzle/KNS</fullName>
+                <default>false</default>
+                <label>Bond Nozzle/KNS</label>
+            </value>
+            <value>
+                <fullName>KNS/Bond Nozzle</fullName>
+                <default>false</default>
+                <label>KNS/Bond Nozzle</label>
+            </value>
+            <value>
+                <fullName>ASML/Laser Qual</fullName>
+                <default>false</default>
+                <label>ASML/Laser Qual</label>
+            </value>
+            <value>
+                <fullName>Ultratech_Veeco</fullName>
+                <default>false</default>
+                <label>Ultratech_Veeco</label>
+            </value>
+            <value>
+                <fullName>KLA, Surfscan</fullName>
+                <default>false</default>
+                <label>KLA, Surfscan</label>
+            </value>
+            <value>
+                <fullName>KLA, Micron</fullName>
+                <default>false</default>
+                <label>KLA, Micron</label>
+            </value>
+            <value>
+                <fullName>ASML, MESA</fullName>
+                <default>false</default>
+                <label>ASML, MESA</label>
+            </value>
+            <value>
+                <fullName>ASML - NXE Finger Bo</fullName>
+                <default>false</default>
+                <label>ASML - NXE Finger Bo</label>
+            </value>
+            <value>
+                <fullName>DE R&amp;D</fullName>
+                <default>false</default>
+                <label>DE R&amp;D</label>
+            </value>
+            <value>
+                <fullName>IND R&amp;D</fullName>
+                <default>false</default>
+                <label>IND R&amp;D</label>
+            </value>
+            <value>
+                <fullName>ASML, 3D NAND</fullName>
+                <default>false</default>
+                <label>ASML, 3D NAND</label>
+            </value>
+            <value>
+                <fullName>AMAT ALD</fullName>
+                <default>false</default>
+                <label>AMAT ALD</label>
+            </value>
+            <value>
+                <fullName>ASML - Mk6.Y</fullName>
+                <default>false</default>
+                <label>ASML - Mk6.Y</label>
+            </value>
+            <value>
+                <fullName>EUV</fullName>
+                <default>false</default>
+                <label>EUV</label>
+            </value>
+            <value>
+                <fullName>ASML, Spotless</fullName>
+                <default>false</default>
+                <label>ASML, Spotless</label>
+            </value>
+            <value>
+                <fullName>KLA, AR Pin Chuck</fullName>
+                <default>false</default>
+                <label>KLA, AR Pin Chuck</label>
+            </value>
+            <value>
+                <fullName>AMSL, Spotless</fullName>
+                <default>false</default>
+                <label>AMSL, Spotless</label>
+            </value>
+            <value>
+                <fullName>ASML, BTR Phase III</fullName>
+                <default>false</default>
+                <label>ASML, BTR Phase III</label>
+            </value>
+            <value>
+                <fullName>FABRICATION</fullName>
+                <default>false</default>
+                <label>FABRICATION</label>
+            </value>
+            <value>
+                <fullName>COMPONENTS</fullName>
+                <default>false</default>
+                <label>COMPONENTS</label>
+            </value>
+            <value>
+                <fullName>LD BARS</fullName>
+                <default>false</default>
+                <label>LD BARS</label>
+            </value>
+            <value>
+                <fullName>DATACOM</fullName>
+                <default>false</default>
+                <label>DATACOM</label>
+            </value>
+            <value>
+                <fullName>Fiber Pigtail</fullName>
+                <default>false</default>
+                <label>Fiber Pigtail</label>
+            </value>
+            <value>
+                <fullName>M&amp;C Lens</fullName>
+                <default>false</default>
+                <label>M&amp;C Lens</label>
+            </value>
+            <value>
+                <fullName>SUBSYSTEMS</fullName>
+                <default>false</default>
+                <label>SUBSYSTEMS</label>
+            </value>
+            <value>
+                <fullName>AMPLIFIERS</fullName>
+                <default>false</default>
+                <label>AMPLIFIERS</label>
+            </value>
+            <value>
+                <fullName>Isolator</fullName>
+                <default>false</default>
+                <label>Isolator</label>
+            </value>
+            <value>
+                <fullName>Integrated Module</fullName>
+                <default>false</default>
+                <label>Integrated Module</label>
+            </value>
+            <value>
+                <fullName>Metro</fullName>
+                <default>false</default>
+                <label>Metro</label>
+            </value>
+            <value>
+                <fullName>Coherent Components</fullName>
+                <default>false</default>
+                <label>Coherent Components</label>
+            </value>
+            <value>
+                <fullName>LC</fullName>
+                <default>false</default>
+                <label>LC</label>
+            </value>
+            <value>
+                <fullName>WSS-C-Compact</fullName>
+                <default>false</default>
+                <label>WSS-C-Compact</label>
+            </value>
+            <value>
+                <fullName>WSS-C-Twin-T&amp;F</fullName>
+                <default>false</default>
+                <label>WSS-C-Twin-T&amp;F</label>
+            </value>
+            <value>
+                <fullName>FIBRE ASSEMBLY</fullName>
+                <default>false</default>
+                <label>FIBRE ASSEMBLY</label>
+            </value>
+            <value>
+                <fullName>PGROREP</fullName>
+                <default>false</default>
+                <label>PGROREP</label>
+            </value>
+            <value>
+                <fullName>AMAT, Cont Showerhea</fullName>
+                <default>false</default>
+                <label>AMAT, Cont Showerhea</label>
+            </value>
+            <value>
+                <fullName>Lam, sample</fullName>
+                <default>false</default>
+                <label>Lam, sample</label>
+            </value>
+            <value>
+                <fullName>ASML, 2041 CG</fullName>
+                <default>false</default>
+                <label>ASML, 2041 CG</label>
+            </value>
+            <value>
+                <fullName>KLA, V9 Chuck</fullName>
+                <default>false</default>
+                <label>KLA, V9 Chuck</label>
+            </value>
+            <value>
+                <fullName>KLA/SP8</fullName>
+                <default>false</default>
+                <label>KLA/SP8</label>
+            </value>
+            <value>
+                <fullName>Applied, Wrist</fullName>
+                <default>false</default>
+                <label>Applied, Wrist</label>
+            </value>
+            <value>
+                <fullName>AMAT</fullName>
+                <default>false</default>
+                <label>AMAT</label>
+            </value>
+            <value>
+                <fullName>KLA, CA</fullName>
+                <default>false</default>
+                <label>KLA, CA</label>
+            </value>
+            <value>
+                <fullName>KLA, OMD</fullName>
+                <default>false</default>
+                <label>KLA, OMD</label>
+            </value>
+            <value>
+                <fullName>IND DE</fullName>
+                <default>false</default>
+                <label>IND DE</label>
+            </value>
+            <value>
+                <fullName>LAM ESC Base</fullName>
+                <default>false</default>
+                <label>LAM ESC Base</label>
+            </value>
+            <value>
+                <fullName>XSLIDE</fullName>
+                <default>false</default>
+                <label>XSLIDE</label>
+            </value>
+            <value>
+                <fullName>EX7368</fullName>
+                <default>false</default>
+                <label>EX7368</label>
+            </value>
+            <value>
+                <fullName>ASML, MK6.4, Fat Bur</fullName>
+                <default>false</default>
+                <label>ASML, MK6.4, Fat Bur</label>
+            </value>
+            <value>
+                <fullName>KNS Heater Block</fullName>
+                <default>false</default>
+                <label>KNS Heater Block</label>
+            </value>
+            <value>
+                <fullName>ASML, Mk6.y Prgm</fullName>
+                <default>false</default>
+                <label>ASML, Mk6.y Prgm</label>
+            </value>
+            <value>
+                <fullName>MK6.6, CVD SiC BTS</fullName>
+                <default>false</default>
+                <label>MK6.6, CVD SiC BTS</label>
+            </value>
+            <value>
+                <fullName>ASML, TSC15 Wit</fullName>
+                <default>false</default>
+                <label>ASML, TSC15 Wit</label>
+            </value>
+            <value>
+                <fullName>MATERIAL PROCESSING OPTICS</fullName>
+                <default>false</default>
+                <label>MATERIAL PROCESSING OPTICS</label>
+            </value>
+            <value>
+                <fullName>LD SINGLE EMITTERS</fullName>
+                <default>false</default>
+                <label>LD SINGLE EMITTERS</label>
+            </value>
+            <value>
+                <fullName>YAG Line</fullName>
+                <default>false</default>
+                <label>YAG Line</label>
+            </value>
+            <value>
+                <fullName>Isolator Core</fullName>
+                <default>false</default>
+                <label>Isolator Core</label>
+            </value>
+            <value>
+                <fullName>VOA</fullName>
+                <default>false</default>
+                <label>VOA</label>
+            </value>
+            <value>
+                <fullName>OPTICAL MONITORING</fullName>
+                <default>false</default>
+                <label>OPTICAL MONITORING</label>
+            </value>
+            <value>
+                <fullName>Coherent Device</fullName>
+                <default>false</default>
+                <label>Coherent Device</label>
+            </value>
+            <value>
+                <fullName>FTTH</fullName>
+                <default>false</default>
+                <label>FTTH</label>
+            </value>
+            <value>
+                <fullName>WSS-C-REGULAR</fullName>
+                <default>false</default>
+                <label>WSS-C-REGULAR</label>
+            </value>
+            <value>
+                <fullName>WSS-C-Twin TFF</fullName>
+                <default>false</default>
+                <label>WSS-C-Twin TFF</label>
+            </value>
+            <value>
+                <fullName>PGOOTH</fullName>
+                <default>false</default>
+                <label>PGOOTH</label>
+            </value>
+            <value>
+                <fullName>PGBGO</fullName>
+                <default>false</default>
+                <label>PGBGO</label>
+            </value>
+            <value>
+                <fullName>PGRAW</fullName>
+                <default>false</default>
+                <label>PGRAW</label>
+            </value>
+            <value>
+                <fullName>PGTG</fullName>
+                <default>false</default>
+                <label>PGTG</label>
+            </value>
+            <value>
+                <fullName>PGCUST</fullName>
+                <default>false</default>
+                <label>PGCUST</label>
+            </value>
+            <value>
+                <fullName>PGLC</fullName>
+                <default>false</default>
+                <label>PGLC</label>
+            </value>
+            <value>
+                <fullName>PGSSERV</fullName>
+                <default>false</default>
+                <label>PGSSERV</label>
+            </value>
+            <value>
+                <fullName>Advanced Motion</fullName>
+                <default>false</default>
+                <label>Advanced Motion</label>
+            </value>
+            <value>
+                <fullName>Applied, Showerhead</fullName>
+                <default>false</default>
+                <label>Applied, Showerhead</label>
+            </value>
+            <value>
+                <fullName>BSCHULTZ</fullName>
+                <default>false</default>
+                <label>BSCHULTZ</label>
+            </value>
+            <value>
+                <fullName>G8 SLIDER</fullName>
+                <default>false</default>
+                <label>G8 SLIDER</label>
+            </value>
+            <value>
+                <fullName>G6 SLIDER</fullName>
+                <default>false</default>
+                <label>G6 SLIDER</label>
+            </value>
+            <value>
+                <fullName>G6</fullName>
+                <default>false</default>
+                <label>G6</label>
+            </value>
+            <value>
+                <fullName>KLA, Tesla</fullName>
+                <default>false</default>
+                <label>KLA, Tesla</label>
+            </value>
+            <value>
+                <fullName>KLA/8950 Chuck</fullName>
+                <default>false</default>
+                <label>KLA/8950 Chuck</label>
+            </value>
+            <value>
+                <fullName>Ultima Gen, Biomed</fullName>
+                <default>false</default>
+                <label>Ultima Gen, Biomed</label>
+            </value>
+            <value>
+                <fullName>Jeno, SEMO</fullName>
+                <default>false</default>
+                <label>Jeno, SEMO</label>
+            </value>
+            <value>
+                <fullName>CPF</fullName>
+                <default>false</default>
+                <label>CPF</label>
+            </value>
+            <value>
+                <fullName>EX7889</fullName>
+                <default>false</default>
+                <label>EX7889</label>
+            </value>
+            <value>
+                <fullName>ASML, R and D</fullName>
+                <default>false</default>
+                <label>ASML, R and D</label>
+            </value>
+            <value>
+                <fullName>EX7367</fullName>
+                <default>false</default>
+                <label>EX7367</label>
+            </value>
+            <value>
+                <fullName>ASML, BTR P1</fullName>
+                <default>false</default>
+                <label>ASML, BTR P1</label>
+            </value>
+            <value>
+                <fullName>NON EUV DIAMOND</fullName>
+                <default>false</default>
+                <label>NON EUV DIAMOND</label>
+            </value>
+            <value>
+                <fullName>DPSS</fullName>
+                <default>false</default>
+                <label>DPSS</label>
+            </value>
+            <value>
+                <fullName>Coupler</fullName>
+                <default>false</default>
+                <label>Coupler</label>
+            </value>
+            <value>
+                <fullName>Circulator</fullName>
+                <default>false</default>
+                <label>Circulator</label>
+            </value>
+            <value>
+                <fullName>G8</fullName>
+                <default>false</default>
+                <label>G8</label>
+            </value>
+            <value>
+                <fullName>ASML, CDIS Samples</fullName>
+                <default>false</default>
+                <label>ASML, CDIS Samples</label>
+            </value>
+            <value>
+                <fullName>KLA/PANAMERA</fullName>
+                <default>false</default>
+                <label>KLA/PANAMERA</label>
+            </value>
+            <value>
+                <fullName>TCX3</fullName>
+                <default>false</default>
+                <label>TCX3</label>
+            </value>
+            <value>
+                <fullName>ASML, Laser Qual</fullName>
+                <default>false</default>
+                <label>ASML, Laser Qual</label>
+            </value>
+            <value>
+                <fullName>MMC</fullName>
+                <default>false</default>
+                <label>MMC</label>
+            </value>
+            <value>
+                <fullName>Nano, Cobra</fullName>
+                <default>false</default>
+                <label>Nano, Cobra</label>
+            </value>
+            <value>
+                <fullName>Jeno - ILIAS</fullName>
+                <default>false</default>
+                <label>Jeno - ILIAS</label>
+            </value>
+            <value>
+                <fullName>Nanometrics, Chuck</fullName>
+                <default>false</default>
+                <label>Nanometrics, Chuck</label>
+            </value>
+            <value>
+                <fullName>1um OPTICS</fullName>
+                <default>false</default>
+                <label>1um OPTICS</label>
+            </value>
+            <value>
+                <fullName>PRODUCTION SUPPLIES</fullName>
+                <default>false</default>
+                <label>PRODUCTION SUPPLIES</label>
+            </value>
+            <value>
+                <fullName>ASMLk BTR Phase III</fullName>
+                <default>false</default>
+                <label>ASMLk BTR Phase III</label>
+            </value>
+            <value>
+                <fullName>Company, Project</fullName>
+                <default>false</default>
+                <label>Company, Project</label>
+            </value>
+            <value>
+                <fullName>ASML, BTR P2</fullName>
+                <default>false</default>
+                <label>ASML, BTR P2</label>
+            </value>
+            <value>
+                <fullName>OTHER</fullName>
+                <default>false</default>
+                <label>OTHER</label>
+            </value>
+            <value>
+                <fullName>SYSTEMS</fullName>
+                <default>false</default>
+                <label>SYSTEMS</label>
+            </value>
+            <value>
+                <fullName>TEMPRONICS</fullName>
+                <default>false</default>
+                <label>TEMPRONICS</label>
+            </value>
+            <value>
+                <fullName>Optics</fullName>
+                <default>false</default>
+                <label>Optics</label>
+            </value>
+            <value>
+                <fullName>M&amp;C Optical Plate</fullName>
+                <default>false</default>
+                <label>M&amp;C Optical Plate</label>
+            </value>
+            <value>
+                <fullName>Plano</fullName>
+                <default>false</default>
+                <label>Plano</label>
+            </value>
+            <value>
+                <fullName>Cylindrical Lens</fullName>
+                <default>false</default>
+                <label>Cylindrical Lens</label>
+            </value>
+            <value>
+                <fullName>Micro Lens</fullName>
+                <default>false</default>
+                <label>Micro Lens</label>
+            </value>
+            <value>
+                <fullName>Rotator</fullName>
+                <default>false</default>
+                <label>Rotator</label>
+            </value>
+            <value>
+                <fullName>AOP</fullName>
+                <default>false</default>
+                <label>AOP</label>
+            </value>
+            <value>
+                <fullName>OAP</fullName>
+                <default>false</default>
+                <label>OAP</label>
+            </value>
+            <value>
+                <fullName>FSI</fullName>
+                <default>false</default>
+                <label>FSI</label>
+            </value>
+            <value>
+                <fullName>Connector</fullName>
+                <default>false</default>
+                <label>Connector</label>
+            </value>
+            <value>
+                <fullName>TDC</fullName>
+                <default>false</default>
+                <label>TDC</label>
+            </value>
+            <value>
+                <fullName>Filter based Devices</fullName>
+                <default>false</default>
+                <label>Filter based Devices</label>
+            </value>
+            <value>
+                <fullName>WSS-C-T&amp;F</fullName>
+                <default>false</default>
+                <label>WSS-C-T&amp;F</label>
+            </value>
+            <value>
+                <fullName>WDM/GFF Components</fullName>
+                <default>false</default>
+                <label>WDM/GFF Components</label>
+            </value>
+            <value>
+                <fullName>WSS-C-Twin NOKIA WS</fullName>
+                <default>false</default>
+                <label>WSS-C-Twin NOKIA WS</label>
+            </value>
+            <value>
+                <fullName>PGFIX</fullName>
+                <default>false</default>
+                <label>PGFIX</label>
+            </value>
+            <value>
+                <fullName>PGSPAR</fullName>
+                <default>false</default>
+                <label>PGSPAR</label>
+            </value>
+            <value>
+                <fullName>PGLSQ</fullName>
+                <default>false</default>
+                <label>PGLSQ</label>
+            </value>
+            <value>
+                <fullName>Wavelength Locker</fullName>
+                <default>false</default>
+                <label>Wavelength Locker</label>
+            </value>
+            <value>
+                <fullName>S-Lens</fullName>
+                <default>false</default>
+                <label>S-Lens</label>
+            </value>
+            <value>
+                <fullName>Laser Engine</fullName>
+                <default>false</default>
+                <label>Laser Engine</label>
+            </value>
+            <value>
+                <fullName>LC Device</fullName>
+                <default>false</default>
+                <label>LC Device</label>
+            </value>
+            <value>
+                <fullName>Optical Jig line</fullName>
+                <default>false</default>
+                <label>Optical Jig line</label>
+            </value>
+            <value>
+                <fullName>KLA, 6/8 Pin</fullName>
+                <default>false</default>
+                <label>KLA, 6/8 Pin</label>
+            </value>
+            <value>
+                <fullName>KLA, AR Chuck</fullName>
+                <default>false</default>
+                <label>KLA, AR Chuck</label>
+            </value>
+            <value>
+                <fullName>KLA</fullName>
+                <default>false</default>
+                <label>KLA</label>
+            </value>
+            <value>
+                <fullName>KNS, Bond Nozzle</fullName>
+                <default>false</default>
+                <label>KNS, Bond Nozzle</label>
+            </value>
+            <value>
+                <fullName>KNS, Apama</fullName>
+                <default>false</default>
+                <label>KNS, Apama</label>
+            </value>
+            <value>
+                <fullName>Apple, Chuck</fullName>
+                <default>false</default>
+                <label>Apple, Chuck</label>
+            </value>
+            <value>
+                <fullName>Applied, Carrier</fullName>
+                <default>false</default>
+                <label>Applied, Carrier</label>
+            </value>
+            <value>
+                <fullName>KLA, Piston Chuck</fullName>
+                <default>false</default>
+                <label>KLA, Piston Chuck</label>
+            </value>
+            <value>
+                <fullName>KLA, Piston</fullName>
+                <default>false</default>
+                <label>KLA, Piston</label>
+            </value>
+            <value>
+                <fullName>ESC Base</fullName>
+                <default>false</default>
+                <label>ESC Base</label>
+            </value>
+            <value>
+                <fullName>N/A</fullName>
+                <default>false</default>
+                <label>N/A</label>
+            </value>
+            <value>
+                <fullName>ENC BAR</fullName>
+                <default>false</default>
+                <label>ENC BAR</label>
+            </value>
+            <value>
+                <fullName>DIAMOND TURNING</fullName>
+                <default>false</default>
+                <label>DIAMOND TURNING</label>
+            </value>
+            <value>
+                <fullName>SENSING</fullName>
+                <default>false</default>
+                <label>SENSING</label>
+            </value>
+            <value>
+                <fullName>Optical Waveplate</fullName>
+                <default>false</default>
+                <label>Optical Waveplate</label>
+            </value>
+            <value>
+                <fullName>Optical Etalon Line</fullName>
+                <default>false</default>
+                <label>Optical Etalon Line</label>
+            </value>
+            <value>
+                <fullName>Spherical lens</fullName>
+                <default>false</default>
+                <label>Spherical lens</label>
+            </value>
+            <value>
+                <fullName>MO MODULES (EXT)</fullName>
+                <default>false</default>
+                <label>MO MODULES (EXT)</label>
+            </value>
+            <value>
+                <fullName>Optical Assembly</fullName>
+                <default>false</default>
+                <label>Optical Assembly</label>
+            </value>
+            <value>
+                <fullName>M&amp;C Optical Assembly</fullName>
+                <default>false</default>
+                <label>M&amp;C Optical Assembly</label>
+            </value>
+            <value>
+                <fullName>AOS</fullName>
+                <default>false</default>
+                <label>AOS</label>
+            </value>
+            <value>
+                <fullName>LDM</fullName>
+                <default>false</default>
+                <label>LDM</label>
+            </value>
+            <value>
+                <fullName>FBG</fullName>
+                <default>false</default>
+                <label>FBG</label>
+            </value>
+            <value>
+                <fullName>LCoS Device</fullName>
+                <default>false</default>
+                <label>LCoS Device</label>
+            </value>
+            <value>
+                <fullName>Evaluation Kit</fullName>
+                <default>false</default>
+                <label>Evaluation Kit</label>
+            </value>
+            <value>
+                <fullName>HPL SINGLE EMITTERS</fullName>
+                <default>false</default>
+                <label>HPL SINGLE EMITTERS</label>
+            </value>
+            <value>
+                <fullName>Service</fullName>
+                <default>false</default>
+                <label>Service</label>
             </value>
         </valueSetDefinition>
     </valueSet>

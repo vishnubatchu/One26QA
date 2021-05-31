@@ -1213,7 +1213,7 @@ Thanks</stringValue>
                 <stringValue>TEXT([Case].Case_Status__c) </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_20_myRule_18_A1_7146697579</name>
+        <name>formula_20_myRule_18_A1_2064932955</name>
         <dataType>String</dataType>
         <expression>TEXT({!myVariable_current.Case_Status__c})</expression>
     </formulas>
@@ -1253,7 +1253,7 @@ ISPICKVAL({!myVariable_current.Status},&apos;Pending RMA Admin Review&apos;),
 {!myVariable_current.CFO_Approved__c} =True,
 NOT(ISPICKVAL({!$User.UserType}, &apos;PowerPartner&apos;) ))</expression>
     </formulas>
-    <interviewLabel>Case_RMA_Driver_Process-29_InterviewLabel</interviewLabel>
+    <interviewLabel>Case_RMA_Driver_Process-31_InterviewLabel</interviewLabel>
     <label>Case/RMA Driver Process</label>
     <processMetadataValues>
         <name>ObjectType</name>
@@ -1608,7 +1608,7 @@ NOT(ISPICKVAL({!$User.UserType}, &apos;PowerPartner&apos;) ))</expression>
             </processMetadataValues>
             <field>Status</field>
             <value>
-                <elementReference>formula_20_myRule_18_A1_7146697579</elementReference>
+                <elementReference>formula_20_myRule_18_A1_2064932955</elementReference>
             </value>
         </inputAssignments>
         <object>Case</object>

@@ -56,7 +56,8 @@ creates new records & map with lead, if Individual record not present in system.
             insert IndividualMap.values();
             
             for(sObject sObj: newRecords){
-                if(sObj.get('IndividualId') == null && IndividualMap.containsKey((String)sObj.get('Email'))){
+                //if(sObj.get('IndividualId') == null && IndividualMap.containsKey((String)sObj.get('Email'))){
+                if(IndividualMap.containsKey((String)sObj.get('Email'))){
                     sObject newRec; 
                     Id recId = (Id)sObj.get('Id');
                     if(recId.getSObjectType().getDescribe().getName() == 'Lead'){

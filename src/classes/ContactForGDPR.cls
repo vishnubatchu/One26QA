@@ -214,7 +214,17 @@ return null;
             }
         }
         Messaging.sendEmail(mailList);
-        
     }
     
+    public static void handleEmailChange(Map<Id, Contact> oldMap, List<Contact> newList){
+        List<Contact> emailUpdatedContacts = new List<Contact>();
+        for(contact con : newList){
+            if(con.Email != null && con.Email != oldmap.get(con.Id).Email){
+                emailUpdatedContacts.add(con);
+            }
+        }
+        if(emailUpdatedContacts != null && !emailUpdatedContacts.isEmpty()){
+            sendMailUponCreation(emailUpdatedContacts);
+        }
+    }
 }

@@ -90,6 +90,7 @@ public with sharing class WTC_FileAttachments_Controller {
         try {
             if (toInsert.size() > 0) {
                 //insert toInsert;
+                //In order to link the documents with case - begin
                	set<Id> cvIds = new set<Id>();
                 Database.SaveResult[] results = Database.insert(toInsert);
                 for(Database.SaveResult result : results){
@@ -108,7 +109,7 @@ public with sharing class WTC_FileAttachments_Controller {
                                    	LinkedEntityId = caseId));
                 }
                 insert cdLinks;
-                
+                //In order to link the documents with case - end
                 System.debug('[-] Inserted ' + toInsert.size() + ' atts');
                 toInsert = null;
                 newAttachments = null;

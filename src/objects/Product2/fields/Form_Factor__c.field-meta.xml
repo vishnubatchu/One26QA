@@ -62,6 +62,11 @@
                 <label>2X7 PIN</label>
             </value>
             <value>
+                <fullName>300 PIN</fullName>
+                <default>false</default>
+                <label>300 PIN</label>
+            </value>
+            <value>
                 <fullName>300PIN-LFF</fullName>
                 <default>false</default>
                 <label>300PIN-LFF</label>
@@ -122,6 +127,21 @@
                 <label>CFP8</label>
             </value>
             <value>
+                <fullName>Chip</fullName>
+                <default>false</default>
+                <label>Chip</label>
+            </value>
+            <value>
+                <fullName>Chip-on-Carrier</fullName>
+                <default>false</default>
+                <label>Chip-on-Carrier</label>
+            </value>
+            <value>
+                <fullName>CUSTOMENCL</fullName>
+                <default>false</default>
+                <label>CUSTOMENCL</label>
+            </value>
+            <value>
                 <fullName>CUSTOM LINECARD</fullName>
                 <default>false</default>
                 <label>CUSTOM LINECARD</label>
@@ -152,6 +172,11 @@
                 <label>LASERWIRE</label>
             </value>
             <value>
+                <fullName>OSFP</fullName>
+                <default>false</default>
+                <label>OSFP</label>
+            </value>
+            <value>
                 <fullName>OTHER</fullName>
                 <default>false</default>
                 <label>OTHER</label>
@@ -177,6 +202,11 @@
                 <label>RX-BUTTERFLY</label>
             </value>
             <value>
+                <fullName>SFF</fullName>
+                <default>false</default>
+                <label>SFF</label>
+            </value>
+            <value>
                 <fullName>SFP</fullName>
                 <default>false</default>
                 <label>SFP</label>
@@ -197,9 +227,19 @@
                 <label>WSS MODULE</label>
             </value>
             <value>
+                <fullName>WSS ONLY</fullName>
+                <default>false</default>
+                <label>WSS ONLY</label>
+            </value>
+            <value>
                 <fullName>X2</fullName>
                 <default>false</default>
                 <label>X2</label>
+            </value>
+            <value>
+                <fullName>XBI</fullName>
+                <default>false</default>
+                <label>XBI</label>
             </value>
             <value>
                 <fullName>XENPAK</fullName>
@@ -212,14 +252,14 @@
                 <label>XFP</label>
             </value>
             <value>
-                <fullName>XFP IR</fullName>
-                <default>false</default>
-                <label>XFP IR</label>
-            </value>
-            <value>
                 <fullName>XFP-E</fullName>
                 <default>false</default>
                 <label>XFP-E</label>
+            </value>
+            <value>
+                <fullName>XFP IR</fullName>
+                <default>false</default>
+                <label>XFP IR</label>
             </value>
             <value>
                 <fullName>XPAK</fullName>
@@ -227,29 +267,3574 @@
                 <label>XPAK</label>
             </value>
             <value>
-                <fullName>300 PIN</fullName>
+                <fullName>Ge</fullName>
                 <default>false</default>
-                <label>300 PIN</label>
+                <label>Ge</label>
             </value>
             <value>
-                <fullName>SFF</fullName>
+                <fullName>DIAMOND</fullName>
                 <default>false</default>
-                <label>SFF</label>
+                <label>DIAMOND</label>
             </value>
             <value>
-                <fullName>XBI</fullName>
+                <fullName>RAW MATERIAL - GLUE</fullName>
                 <default>false</default>
-                <label>XBI</label>
+                <label>RAW MATERIAL - GLUE</label>
             </value>
             <value>
-                <fullName>CUSTOMENCL</fullName>
+                <fullName>CZT</fullName>
                 <default>false</default>
-                <label>CUSTOMENCL</label>
+                <label>CZT</label>
             </value>
             <value>
-                <fullName>WSS ONLY</fullName>
+                <fullName>MO SPHERICAL</fullName>
                 <default>false</default>
-                <label>WSS ONLY</label>
+                <label>MO SPHERICAL</label>
+            </value>
+            <value>
+                <fullName>CERAMIC YAG</fullName>
+                <default>false</default>
+                <label>CERAMIC YAG</label>
+            </value>
+            <value>
+                <fullName>150mm</fullName>
+                <default>false</default>
+                <label>150mm</label>
+            </value>
+            <value>
+                <fullName>FIXED OPTICS - RSK OPTIONS</fullName>
+                <default>false</default>
+                <label>FIXED OPTICS - RSK OPTIONS</label>
+            </value>
+            <value>
+                <fullName>100mm</fullName>
+                <default>false</default>
+                <label>100mm</label>
+            </value>
+            <value>
+                <fullName>CUTTING HEADS - FSC 3</fullName>
+                <default>false</default>
+                <label>CUTTING HEADS - FSC 3</label>
+            </value>
+            <value>
+                <fullName>REMOTE PROCESSING - RLSK 2.1 OPTIONS</fullName>
+                <default>false</default>
+                <label>REMOTE PROCESSING - RLSK 2.1 OPTIONS</label>
+            </value>
+            <value>
+                <fullName>OM OPTIONS/DOCUMENTATION-GENERAL</fullName>
+                <default>false</default>
+                <label>OM OPTIONS/DOCUMENTATION-GENERAL</label>
+            </value>
+            <value>
+                <fullName>FIXED OPTICS - PDT 2.2</fullName>
+                <default>false</default>
+                <label>FIXED OPTICS - PDT 2.2</label>
+            </value>
+            <value>
+                <fullName>CUTTING HEADS - FSC 3 OPTIONS</fullName>
+                <default>false</default>
+                <label>CUTTING HEADS - FSC 3 OPTIONS</label>
+            </value>
+            <value>
+                <fullName>Two-ASM-Glue</fullName>
+                <default>false</default>
+                <label>Two-ASM-Glue</label>
+            </value>
+            <value>
+                <fullName>LSA</fullName>
+                <default>false</default>
+                <label>LSA</label>
+            </value>
+            <value>
+                <fullName>ZNS MS</fullName>
+                <default>false</default>
+                <label>ZNS MS</label>
+            </value>
+            <value>
+                <fullName>FG 980 PUMP G08 UHP</fullName>
+                <default>false</default>
+                <label>FG 980 PUMP G08 UHP</label>
+            </value>
+            <value>
+                <fullName>VOA Reflect blo</fullName>
+                <default>false</default>
+                <label>VOA Reflect blo</label>
+            </value>
+            <value>
+                <fullName>Beamsplitter plate</fullName>
+                <default>false</default>
+                <label>Beamsplitter plate</label>
+            </value>
+            <value>
+                <fullName>S-Prism-Dicing</fullName>
+                <default>false</default>
+                <label>S-Prism-Dicing</label>
+            </value>
+            <value>
+                <fullName>Laser BD</fullName>
+                <default>false</default>
+                <label>Laser BD</label>
+            </value>
+            <value>
+                <fullName>Single Cavity Etalon</fullName>
+                <default>false</default>
+                <label>Single Cavity Etalon</label>
+            </value>
+            <value>
+                <fullName>Air-Gap Etalon</fullName>
+                <default>false</default>
+                <label>Air-Gap Etalon</label>
+            </value>
+            <value>
+                <fullName>CP/UP</fullName>
+                <default>false</default>
+                <label>CP/UP</label>
+            </value>
+            <value>
+                <fullName>BBO</fullName>
+                <default>false</default>
+                <label>BBO</label>
+            </value>
+            <value>
+                <fullName>DP/CP</fullName>
+                <default>false</default>
+                <label>DP/CP</label>
+            </value>
+            <value>
+                <fullName>DP/UP</fullName>
+                <default>false</default>
+                <label>DP/UP</label>
+            </value>
+            <value>
+                <fullName>BP</fullName>
+                <default>false</default>
+                <label>BP</label>
+            </value>
+            <value>
+                <fullName>COLYV04</fullName>
+                <default>false</default>
+                <label>COLYV04</label>
+            </value>
+            <value>
+                <fullName>S-L-S/D-Mirror</fullName>
+                <default>false</default>
+                <label>S-L-S/D-Mirror</label>
+            </value>
+            <value>
+                <fullName>DP/BP</fullName>
+                <default>false</default>
+                <label>DP/BP</label>
+            </value>
+            <value>
+                <fullName>P-Filter</fullName>
+                <default>false</default>
+                <label>P-Filter</label>
+            </value>
+            <value>
+                <fullName>UP</fullName>
+                <default>false</default>
+                <label>UP</label>
+            </value>
+            <value>
+                <fullName>WDM-M 200G</fullName>
+                <default>false</default>
+                <label>WDM-M 200G</label>
+            </value>
+            <value>
+                <fullName>Interface Card</fullName>
+                <default>false</default>
+                <label>Interface Card</label>
+            </value>
+            <value>
+                <fullName>others</fullName>
+                <default>false</default>
+                <label>others</label>
+            </value>
+            <value>
+                <fullName>TFF + TAP PD MODULES</fullName>
+                <default>false</default>
+                <label>TFF + TAP PD MODULES</label>
+            </value>
+            <value>
+                <fullName>AR ceramic pigtail</fullName>
+                <default>false</default>
+                <label>AR ceramic pigtail</label>
+            </value>
+            <value>
+                <fullName>FLT-Dicing</fullName>
+                <default>false</default>
+                <label>FLT-Dicing</label>
+            </value>
+            <value>
+                <fullName>ISO Mini 2in1</fullName>
+                <default>false</default>
+                <label>ISO Mini 2in1</label>
+            </value>
+            <value>
+                <fullName>Attenuator</fullName>
+                <default>false</default>
+                <label>Attenuator</label>
+            </value>
+            <value>
+                <fullName>Rochon Polarizer</fullName>
+                <default>false</default>
+                <label>Rochon Polarizer</label>
+            </value>
+            <value>
+                <fullName>LP</fullName>
+                <default>false</default>
+                <label>LP</label>
+            </value>
+            <value>
+                <fullName>Switch 1X2U Device</fullName>
+                <default>false</default>
+                <label>Switch 1X2U Device</label>
+            </value>
+            <value>
+                <fullName>Single head FC/APC</fullName>
+                <default>false</default>
+                <label>Single head FC/APC</label>
+            </value>
+            <value>
+                <fullName>Hybrid</fullName>
+                <default>false</default>
+                <label>Hybrid</label>
+            </value>
+            <value>
+                <fullName>OSTF</fullName>
+                <default>false</default>
+                <label>OSTF</label>
+            </value>
+            <value>
+                <fullName>Telecom Filter</fullName>
+                <default>false</default>
+                <label>Telecom Filter</label>
+            </value>
+            <value>
+                <fullName>other prisms</fullName>
+                <default>false</default>
+                <label>other prisms</label>
+            </value>
+            <value>
+                <fullName>Tra Waveplate</fullName>
+                <default>false</default>
+                <label>Tra Waveplate</label>
+            </value>
+            <value>
+                <fullName>PS</fullName>
+                <default>false</default>
+                <label>PS</label>
+            </value>
+            <value>
+                <fullName>Tra Assembling</fullName>
+                <default>false</default>
+                <label>Tra Assembling</label>
+            </value>
+            <value>
+                <fullName>PBS</fullName>
+                <default>false</default>
+                <label>PBS</label>
+            </value>
+            <value>
+                <fullName>Assembly Flow Cell</fullName>
+                <default>false</default>
+                <label>Assembly Flow Cell</label>
+            </value>
+            <value>
+                <fullName>EDG</fullName>
+                <default>false</default>
+                <label>EDG</label>
+            </value>
+            <value>
+                <fullName>FIB Others</fullName>
+                <default>false</default>
+                <label>FIB Others</label>
+            </value>
+            <value>
+                <fullName>&gt;8 inch</fullName>
+                <default>false</default>
+                <label>&gt;8 inch</label>
+            </value>
+            <value>
+                <fullName>GRR Grism</fullName>
+                <default>false</default>
+                <label>GRR Grism</label>
+            </value>
+            <value>
+                <fullName>TIG Others</fullName>
+                <default>false</default>
+                <label>TIG Others</label>
+            </value>
+            <value>
+                <fullName>CNC/LS</fullName>
+                <default>false</default>
+                <label>CNC/LS</label>
+            </value>
+            <value>
+                <fullName>Polarizer (POL)</fullName>
+                <default>false</default>
+                <label>Polarizer (POL)</label>
+            </value>
+            <value>
+                <fullName>6 inch</fullName>
+                <default>false</default>
+                <label>6 inch</label>
+            </value>
+            <value>
+                <fullName>CNC/PS</fullName>
+                <default>false</default>
+                <label>CNC/PS</label>
+            </value>
+            <value>
+                <fullName>Machine Vision</fullName>
+                <default>false</default>
+                <label>Machine Vision</label>
+            </value>
+            <value>
+                <fullName>FAB SERVICES-LCoS De</fullName>
+                <default>false</default>
+                <label>FAB SERVICES-LCoS De</label>
+            </value>
+            <value>
+                <fullName>Mic Grating</fullName>
+                <default>false</default>
+                <label>Mic Grating</label>
+            </value>
+            <value>
+                <fullName>C-LENS</fullName>
+                <default>false</default>
+                <label>C-LENS</label>
+            </value>
+            <value>
+                <fullName>LN Series</fullName>
+                <default>false</default>
+                <label>LN Series</label>
+            </value>
+            <value>
+                <fullName>1 to 1 PBS</fullName>
+                <default>false</default>
+                <label>1 to 1 PBS</label>
+            </value>
+            <value>
+                <fullName>C-polarizer</fullName>
+                <default>false</default>
+                <label>C-polarizer</label>
+            </value>
+            <value>
+                <fullName>Singal Mode</fullName>
+                <default>false</default>
+                <label>Singal Mode</label>
+            </value>
+            <value>
+                <fullName>PG2600 C BAND</fullName>
+                <default>false</default>
+                <label>PG2600 C BAND</label>
+            </value>
+            <value>
+                <fullName>Mic Others</fullName>
+                <default>false</default>
+                <label>Mic Others</label>
+            </value>
+            <value>
+                <fullName>google</fullName>
+                <default>false</default>
+                <label>google</label>
+            </value>
+            <value>
+                <fullName>NANO-EDFA</fullName>
+                <default>false</default>
+                <label>NANO-EDFA</label>
+            </value>
+            <value>
+                <fullName>PG1600 - Single</fullName>
+                <default>false</default>
+                <label>PG1600 - Single</label>
+            </value>
+            <value>
+                <fullName>PG1600</fullName>
+                <default>false</default>
+                <label>PG1600</label>
+            </value>
+            <value>
+                <fullName>C12.5G-9X1 96Ch</fullName>
+                <default>false</default>
+                <label>C12.5G-9X1 96Ch</label>
+            </value>
+            <value>
+                <fullName>C50G-2X1 92Ch</fullName>
+                <default>false</default>
+                <label>C50G-2X1 92Ch</label>
+            </value>
+            <value>
+                <fullName>WSS-C100G-4X1</fullName>
+                <default>false</default>
+                <label>WSS-C100G-4X1</label>
+            </value>
+            <value>
+                <fullName>LINECARD EDFA, 88CH</fullName>
+                <default>false</default>
+                <label>LINECARD EDFA, 88CH</label>
+            </value>
+            <value>
+                <fullName>RACKMNT EDFA PORTIA</fullName>
+                <default>false</default>
+                <label>RACKMNT EDFA PORTIA</label>
+            </value>
+            <value>
+                <fullName>MODULES BMU1E</fullName>
+                <default>false</default>
+                <label>MODULES BMU1E</label>
+            </value>
+            <value>
+                <fullName>C-T-WS20-25G LC</fullName>
+                <default>false</default>
+                <label>C-T-WS20-25G LC</label>
+            </value>
+            <value>
+                <fullName>UNASSIGNED</fullName>
+                <default>false</default>
+                <label>UNASSIGNED</label>
+            </value>
+            <value>
+                <fullName>SILICON</fullName>
+                <default>false</default>
+                <label>SILICON</label>
+            </value>
+            <value>
+                <fullName>COPPER</fullName>
+                <default>false</default>
+                <label>COPPER</label>
+            </value>
+            <value>
+                <fullName>SUPPLIES</fullName>
+                <default>false</default>
+                <label>SUPPLIES</label>
+            </value>
+            <value>
+                <fullName>15-INDUSTRIAL</fullName>
+                <default>false</default>
+                <label>15-INDUSTRIAL</label>
+            </value>
+            <value>
+                <fullName>CABLES</fullName>
+                <default>false</default>
+                <label>CABLES</label>
+            </value>
+            <value>
+                <fullName>COLLIMATION - FSC 2.1</fullName>
+                <default>false</default>
+                <label>COLLIMATION - FSC 2.1</label>
+            </value>
+            <value>
+                <fullName>STEEL</fullName>
+                <default>false</default>
+                <label>STEEL</label>
+            </value>
+            <value>
+                <fullName>MISCELLANEOUS FABRICATION</fullName>
+                <default>false</default>
+                <label>MISCELLANEOUS FABRICATION</label>
+            </value>
+            <value>
+                <fullName>SL1</fullName>
+                <default>false</default>
+                <label>SL1</label>
+            </value>
+            <value>
+                <fullName>PMMAO</fullName>
+                <default>false</default>
+                <label>PMMAO</label>
+            </value>
+            <value>
+                <fullName>TESTING</fullName>
+                <default>false</default>
+                <label>TESTING</label>
+            </value>
+            <value>
+                <fullName>BEAM GUIDING OPTICS - FFK OPTIONS</fullName>
+                <default>false</default>
+                <label>BEAM GUIDING OPTICS - FFK OPTIONS</label>
+            </value>
+            <value>
+                <fullName>OM SPARES - PROTECTIVE GLASSES</fullName>
+                <default>false</default>
+                <label>OM SPARES - PROTECTIVE GLASSES</label>
+            </value>
+            <value>
+                <fullName>20-TELECOMMUNICATIONS</fullName>
+                <default>false</default>
+                <label>20-TELECOMMUNICATIONS</label>
+            </value>
+            <value>
+                <fullName>CUSTOM DESIGN HEADS</fullName>
+                <default>false</default>
+                <label>CUSTOM DESIGN HEADS</label>
+            </value>
+            <value>
+                <fullName>LLK LOW POWER</fullName>
+                <default>false</default>
+                <label>LLK LOW POWER</label>
+            </value>
+            <value>
+                <fullName>LP JOINING AND CUTTING - MICRON HEAD</fullName>
+                <default>false</default>
+                <label>LP JOINING AND CUTTING - MICRON HEAD</label>
+            </value>
+            <value>
+                <fullName>COLLIMATION</fullName>
+                <default>false</default>
+                <label>COLLIMATION</label>
+            </value>
+            <value>
+                <fullName>FOCUS HEAD</fullName>
+                <default>false</default>
+                <label>FOCUS HEAD</label>
+            </value>
+            <value>
+                <fullName>GAAS PHOTODIODES</fullName>
+                <default>false</default>
+                <label>GAAS PHOTODIODES</label>
+            </value>
+            <value>
+                <fullName>3CH/PP</fullName>
+                <default>false</default>
+                <label>3CH/PP</label>
+            </value>
+            <value>
+                <fullName>Dual-hole pigtail</fullName>
+                <default>false</default>
+                <label>Dual-hole pigtail</label>
+            </value>
+            <value>
+                <fullName>Wedge Bar</fullName>
+                <default>false</default>
+                <label>Wedge Bar</label>
+            </value>
+            <value>
+                <fullName>H-S/D-Mirror</fullName>
+                <default>false</default>
+                <label>H-S/D-Mirror</label>
+            </value>
+            <value>
+                <fullName>OTS</fullName>
+                <default>false</default>
+                <label>OTS</label>
+            </value>
+            <value>
+                <fullName>Other Window</fullName>
+                <default>false</default>
+                <label>Other Window</label>
+            </value>
+            <value>
+                <fullName>BP/PP</fullName>
+                <default>false</default>
+                <label>BP/PP</label>
+            </value>
+            <value>
+                <fullName>S-ASM-Glue</fullName>
+                <default>false</default>
+                <label>S-ASM-Glue</label>
+            </value>
+            <value>
+                <fullName>UP/BP</fullName>
+                <default>false</default>
+                <label>UP/BP</label>
+            </value>
+            <value>
+                <fullName>UP/PP</fullName>
+                <default>false</default>
+                <label>UP/PP</label>
+            </value>
+            <value>
+                <fullName>S-H-S/D-Mirror</fullName>
+                <default>false</default>
+                <label>S-H-S/D-Mirror</label>
+            </value>
+            <value>
+                <fullName>PM dual pigtail</fullName>
+                <default>false</default>
+                <label>PM dual pigtail</label>
+            </value>
+            <value>
+                <fullName>Circulator 3 Ports</fullName>
+                <default>false</default>
+                <label>Circulator 3 Ports</label>
+            </value>
+            <value>
+                <fullName>Assembly Waveplate</fullName>
+                <default>false</default>
+                <label>Assembly Waveplate</label>
+            </value>
+            <value>
+                <fullName>ISO Normal PMD</fullName>
+                <default>false</default>
+                <label>ISO Normal PMD</label>
+            </value>
+            <value>
+                <fullName>WDM-M Mini</fullName>
+                <default>false</default>
+                <label>WDM-M Mini</label>
+            </value>
+            <value>
+                <fullName>WPL</fullName>
+                <default>false</default>
+                <label>WPL</label>
+            </value>
+            <value>
+                <fullName>IPBCD</fullName>
+                <default>false</default>
+                <label>IPBCD</label>
+            </value>
+            <value>
+                <fullName>Dual heads Jumper</fullName>
+                <default>false</default>
+                <label>Dual heads Jumper</label>
+            </value>
+            <value>
+                <fullName>Coupler Tap 2×2</fullName>
+                <default>false</default>
+                <label>Coupler Tap 2×2</label>
+            </value>
+            <value>
+                <fullName>WDM-M Coupler</fullName>
+                <default>false</default>
+                <label>WDM-M Coupler</label>
+            </value>
+            <value>
+                <fullName>GRR Flat</fullName>
+                <default>false</default>
+                <label>GRR Flat</label>
+            </value>
+            <value>
+                <fullName>FLM</fullName>
+                <default>false</default>
+                <label>FLM</label>
+            </value>
+            <value>
+                <fullName>Tra Others</fullName>
+                <default>false</default>
+                <label>Tra Others</label>
+            </value>
+            <value>
+                <fullName>TFF-3prot</fullName>
+                <default>false</default>
+                <label>TFF-3prot</label>
+            </value>
+            <value>
+                <fullName>SP</fullName>
+                <default>false</default>
+                <label>SP</label>
+            </value>
+            <value>
+                <fullName>N*1</fullName>
+                <default>false</default>
+                <label>N*1</label>
+            </value>
+            <value>
+                <fullName>TDC Device</fullName>
+                <default>false</default>
+                <label>TDC Device</label>
+            </value>
+            <value>
+                <fullName>Wave locker</fullName>
+                <default>false</default>
+                <label>Wave locker</label>
+            </value>
+            <value>
+                <fullName>C50G-1X1 92Ch</fullName>
+                <default>false</default>
+                <label>C50G-1X1 92Ch</label>
+            </value>
+            <value>
+                <fullName>M&amp; T Filter</fullName>
+                <default>false</default>
+                <label>M&amp; T Filter</label>
+            </value>
+            <value>
+                <fullName>VN Clens</fullName>
+                <default>false</default>
+                <label>VN Clens</label>
+            </value>
+            <value>
+                <fullName>LINECARD EDFA, 96CH</fullName>
+                <default>false</default>
+                <label>LINECARD EDFA, 96CH</label>
+            </value>
+            <value>
+                <fullName>GRT Telecom</fullName>
+                <default>false</default>
+                <label>GRT Telecom</label>
+            </value>
+            <value>
+                <fullName>Mirror (DRM)</fullName>
+                <default>false</default>
+                <label>Mirror (DRM)</label>
+            </value>
+            <value>
+                <fullName>MEMS Switch</fullName>
+                <default>false</default>
+                <label>MEMS Switch</label>
+            </value>
+            <value>
+                <fullName>Service</fullName>
+                <default>false</default>
+                <label>Service</label>
+            </value>
+            <value>
+                <fullName>TOF</fullName>
+                <default>false</default>
+                <label>TOF</label>
+            </value>
+            <value>
+                <fullName>ISO Mini Two-stage</fullName>
+                <default>false</default>
+                <label>ISO Mini Two-stage</label>
+            </value>
+            <value>
+                <fullName>1to1 Assembly Parts</fullName>
+                <default>false</default>
+                <label>1to1 Assembly Parts</label>
+            </value>
+            <value>
+                <fullName>Tra Aspherical</fullName>
+                <default>false</default>
+                <label>Tra Aspherical</label>
+            </value>
+            <value>
+                <fullName>L-Block</fullName>
+                <default>false</default>
+                <label>L-Block</label>
+            </value>
+            <value>
+                <fullName>Crys Other Polarizer</fullName>
+                <default>false</default>
+                <label>Crys Other Polarizer</label>
+            </value>
+            <value>
+                <fullName>CP/BP/PP</fullName>
+                <default>false</default>
+                <label>CP/BP/PP</label>
+            </value>
+            <value>
+                <fullName>Other Assembly Part</fullName>
+                <default>false</default>
+                <label>Other Assembly Part</label>
+            </value>
+            <value>
+                <fullName>OTM</fullName>
+                <default>false</default>
+                <label>OTM</label>
+            </value>
+            <value>
+                <fullName>GRT Lidar</fullName>
+                <default>false</default>
+                <label>GRT Lidar</label>
+            </value>
+            <value>
+                <fullName>OTC</fullName>
+                <default>false</default>
+                <label>OTC</label>
+            </value>
+            <value>
+                <fullName>LCoS Panel</fullName>
+                <default>false</default>
+                <label>LCoS Panel</label>
+            </value>
+            <value>
+                <fullName>MgF2 window</fullName>
+                <default>false</default>
+                <label>MgF2 window</label>
+            </value>
+            <value>
+                <fullName>OES assembling</fullName>
+                <default>false</default>
+                <label>OES assembling</label>
+            </value>
+            <value>
+                <fullName>PG2600 L BAND</fullName>
+                <default>false</default>
+                <label>PG2600 L BAND</label>
+            </value>
+            <value>
+                <fullName>LINECARD iROADM32</fullName>
+                <default>false</default>
+                <label>LINECARD iROADM32</label>
+            </value>
+            <value>
+                <fullName>LINECARD EDFA, LCA</fullName>
+                <default>false</default>
+                <label>LINECARD EDFA, LCA</label>
+            </value>
+            <value>
+                <fullName>LINECARD EDRA</fullName>
+                <default>false</default>
+                <label>LINECARD EDRA</label>
+            </value>
+            <value>
+                <fullName>LDM-Blue</fullName>
+                <default>false</default>
+                <label>LDM-Blue</label>
+            </value>
+            <value>
+                <fullName>Laser</fullName>
+                <default>false</default>
+                <label>Laser</label>
+            </value>
+            <value>
+                <fullName>CL/CR</fullName>
+                <default>false</default>
+                <label>CL/CR</label>
+            </value>
+            <value>
+                <fullName>6 Series</fullName>
+                <default>false</default>
+                <label>6 Series</label>
+            </value>
+            <value>
+                <fullName>PG300</fullName>
+                <default>false</default>
+                <label>PG300</label>
+            </value>
+            <value>
+                <fullName>LSA Green</fullName>
+                <default>false</default>
+                <label>LSA Green</label>
+            </value>
+            <value>
+                <fullName>YLF Block</fullName>
+                <default>false</default>
+                <label>YLF Block</label>
+            </value>
+            <value>
+                <fullName>WSS-C12.5G-8X1</fullName>
+                <default>false</default>
+                <label>WSS-C12.5G-8X1</label>
+            </value>
+            <value>
+                <fullName>C-CP100G-4X1 48Ch</fullName>
+                <default>false</default>
+                <label>C-CP100G-4X1 48Ch</label>
+            </value>
+            <value>
+                <fullName>PURCHASED PARTS</fullName>
+                <default>false</default>
+                <label>PURCHASED PARTS</label>
+            </value>
+            <value>
+                <fullName>DGE</fullName>
+                <default>false</default>
+                <label>DGE</label>
+            </value>
+            <value>
+                <fullName>FG 980 PUMP G09 DUAL</fullName>
+                <default>false</default>
+                <label>FG 980 PUMP G09 DUAL</label>
+            </value>
+            <value>
+                <fullName>WMO Others</fullName>
+                <default>false</default>
+                <label>WMO Others</label>
+            </value>
+            <value>
+                <fullName>PUM C-Band</fullName>
+                <default>false</default>
+                <label>PUM C-Band</label>
+            </value>
+            <value>
+                <fullName>BE</fullName>
+                <default>false</default>
+                <label>BE</label>
+            </value>
+            <value>
+                <fullName>INVAR</fullName>
+                <default>false</default>
+                <label>INVAR</label>
+            </value>
+            <value>
+                <fullName>RAW MATERIAL - GENERAL OPTICS</fullName>
+                <default>false</default>
+                <label>RAW MATERIAL - GENERAL OPTICS</label>
+            </value>
+            <value>
+                <fullName>30-MEDICAL</fullName>
+                <default>false</default>
+                <label>30-MEDICAL</label>
+            </value>
+            <value>
+                <fullName>CONSUMABLES</fullName>
+                <default>false</default>
+                <label>CONSUMABLES</label>
+            </value>
+            <value>
+                <fullName>MOUNTS</fullName>
+                <default>false</default>
+                <label>MOUNTS</label>
+            </value>
+            <value>
+                <fullName>CZT AM</fullName>
+                <default>false</default>
+                <label>CZT AM</label>
+            </value>
+            <value>
+                <fullName>FIXED OPTICS - PDT OPTIONS</fullName>
+                <default>false</default>
+                <label>FIXED OPTICS - PDT OPTIONS</label>
+            </value>
+            <value>
+                <fullName>35-CONSUMER</fullName>
+                <default>false</default>
+                <label>35-CONSUMER</label>
+            </value>
+            <value>
+                <fullName>LLC KW - LLK HIGH POWER</fullName>
+                <default>false</default>
+                <label>LLC KW - LLK HIGH POWER</label>
+            </value>
+            <value>
+                <fullName>LLK AUTO-C</fullName>
+                <default>false</default>
+                <label>LLK AUTO-C</label>
+            </value>
+            <value>
+                <fullName>FIXED OPTICS - BIMO OPTIONS</fullName>
+                <default>false</default>
+                <label>FIXED OPTICS - BIMO OPTIONS</label>
+            </value>
+            <value>
+                <fullName>REMOTE PROCESSING - 2D-SCANNER</fullName>
+                <default>false</default>
+                <label>REMOTE PROCESSING - 2D-SCANNER</label>
+            </value>
+            <value>
+                <fullName>MMC - METAL MATRIX COMPOSITE</fullName>
+                <default>false</default>
+                <label>MMC - METAL MATRIX COMPOSITE</label>
+            </value>
+            <value>
+                <fullName>AM</fullName>
+                <default>false</default>
+                <label>AM</label>
+            </value>
+            <value>
+                <fullName>PNEUMATIC BEAM EXPANDER</fullName>
+                <default>false</default>
+                <label>PNEUMATIC BEAM EXPANDER</label>
+            </value>
+            <value>
+                <fullName>DUALSTAGE ENCLOSURE</fullName>
+                <default>false</default>
+                <label>DUALSTAGE ENCLOSURE</label>
+            </value>
+            <value>
+                <fullName>MM MULTI-BAR ASSEMBLIES</fullName>
+                <default>false</default>
+                <label>MM MULTI-BAR ASSEMBLIES</label>
+            </value>
+            <value>
+                <fullName>SM MOUNTED BARS</fullName>
+                <default>false</default>
+                <label>SM MOUNTED BARS</label>
+            </value>
+            <value>
+                <fullName>MM FC MODULES SF</fullName>
+                <default>false</default>
+                <label>MM FC MODULES SF</label>
+            </value>
+            <value>
+                <fullName>Prism-Dicing</fullName>
+                <default>false</default>
+                <label>Prism-Dicing</label>
+            </value>
+            <value>
+                <fullName>CR/PP</fullName>
+                <default>false</default>
+                <label>CR/PP</label>
+            </value>
+            <value>
+                <fullName>small Wedge</fullName>
+                <default>false</default>
+                <label>small Wedge</label>
+            </value>
+            <value>
+                <fullName>S-L-S/D-Window</fullName>
+                <default>false</default>
+                <label>S-L-S/D-Window</label>
+            </value>
+            <value>
+                <fullName>Rotator (PZR)</fullName>
+                <default>false</default>
+                <label>Rotator (PZR)</label>
+            </value>
+            <value>
+                <fullName>Prism</fullName>
+                <default>false</default>
+                <label>Prism</label>
+            </value>
+            <value>
+                <fullName>Right Angle Prism</fullName>
+                <default>false</default>
+                <label>Right Angle Prism</label>
+            </value>
+            <value>
+                <fullName>Half Ball</fullName>
+                <default>false</default>
+                <label>Half Ball</label>
+            </value>
+            <value>
+                <fullName>Glass Rod</fullName>
+                <default>false</default>
+                <label>Glass Rod</label>
+            </value>
+            <value>
+                <fullName>PASSIVE DEVICE</fullName>
+                <default>false</default>
+                <label>PASSIVE DEVICE</label>
+            </value>
+            <value>
+                <fullName>LINECARD EDFA, 44CH</fullName>
+                <default>false</default>
+                <label>LINECARD EDFA, 44CH</label>
+            </value>
+            <value>
+                <fullName>Single Mode Coupler</fullName>
+                <default>false</default>
+                <label>Single Mode Coupler</label>
+            </value>
+            <value>
+                <fullName>FTA</fullName>
+                <default>false</default>
+                <label>FTA</label>
+            </value>
+            <value>
+                <fullName>Polishing fiber</fullName>
+                <default>false</default>
+                <label>Polishing fiber</label>
+            </value>
+            <value>
+                <fullName>COLD</fullName>
+                <default>false</default>
+                <label>COLD</label>
+            </value>
+            <value>
+                <fullName>Small BD</fullName>
+                <default>false</default>
+                <label>Small BD</label>
+            </value>
+            <value>
+                <fullName>Two-ASM-No-Glue</fullName>
+                <default>false</default>
+                <label>Two-ASM-No-Glue</label>
+            </value>
+            <value>
+                <fullName>Core</fullName>
+                <default>false</default>
+                <label>Core</label>
+            </value>
+            <value>
+                <fullName>1toM Assembly Parts</fullName>
+                <default>false</default>
+                <label>1toM Assembly Parts</label>
+            </value>
+            <value>
+                <fullName>FIB Collimator</fullName>
+                <default>false</default>
+                <label>FIB Collimator</label>
+            </value>
+            <value>
+                <fullName>Interleaver</fullName>
+                <default>false</default>
+                <label>Interleaver</label>
+            </value>
+            <value>
+                <fullName>CUS DWDM CTL AMP</fullName>
+                <default>false</default>
+                <label>CUS DWDM CTL AMP</label>
+            </value>
+            <value>
+                <fullName>WDM-D GFF</fullName>
+                <default>false</default>
+                <label>WDM-D GFF</label>
+            </value>
+            <value>
+                <fullName>WDM-D Tap</fullName>
+                <default>false</default>
+                <label>WDM-D Tap</label>
+            </value>
+            <value>
+                <fullName>P-LN</fullName>
+                <default>false</default>
+                <label>P-LN</label>
+            </value>
+            <value>
+                <fullName>WDM-M EDGE</fullName>
+                <default>false</default>
+                <label>WDM-M EDGE</label>
+            </value>
+            <value>
+                <fullName>WDM-M 100G</fullName>
+                <default>false</default>
+                <label>WDM-M 100G</label>
+            </value>
+            <value>
+                <fullName>WDM-D 100G DWDM</fullName>
+                <default>false</default>
+                <label>WDM-D 100G DWDM</label>
+            </value>
+            <value>
+                <fullName>PBSA</fullName>
+                <default>false</default>
+                <label>PBSA</label>
+            </value>
+            <value>
+                <fullName>200G DWDM</fullName>
+                <default>false</default>
+                <label>200G DWDM</label>
+            </value>
+            <value>
+                <fullName>Switch 1X2A(m)Device</fullName>
+                <default>false</default>
+                <label>Switch 1X2A(m)Device</label>
+            </value>
+            <value>
+                <fullName>OCM 2550</fullName>
+                <default>false</default>
+                <label>OCM 2550</label>
+            </value>
+            <value>
+                <fullName>CTM 1250</fullName>
+                <default>false</default>
+                <label>CTM 1250</label>
+            </value>
+            <value>
+                <fullName>A&amp; NON-T Filter</fullName>
+                <default>false</default>
+                <label>A&amp; NON-T Filter</label>
+            </value>
+            <value>
+                <fullName>Interleaver Block</fullName>
+                <default>false</default>
+                <label>Interleaver Block</label>
+            </value>
+            <value>
+                <fullName>Filter (FLT)</fullName>
+                <default>false</default>
+                <label>Filter (FLT)</label>
+            </value>
+            <value>
+                <fullName>VOA Transmit non-blo</fullName>
+                <default>false</default>
+                <label>VOA Transmit non-blo</label>
+            </value>
+            <value>
+                <fullName>M&amp; NON-T Filter</fullName>
+                <default>false</default>
+                <label>M&amp; NON-T Filter</label>
+            </value>
+            <value>
+                <fullName>Tra Flow cell</fullName>
+                <default>false</default>
+                <label>Tra Flow cell</label>
+            </value>
+            <value>
+                <fullName>OCM 3580</fullName>
+                <default>false</default>
+                <label>OCM 3580</label>
+            </value>
+            <value>
+                <fullName>PM Unidirec mini tap</fullName>
+                <default>false</default>
+                <label>PM Unidirec mini tap</label>
+            </value>
+            <value>
+                <fullName>LDM-Red</fullName>
+                <default>false</default>
+                <label>LDM-Red</label>
+            </value>
+            <value>
+                <fullName>C-CP12.5G-2X1 96Ch</fullName>
+                <default>false</default>
+                <label>C-CP12.5G-2X1 96Ch</label>
+            </value>
+            <value>
+                <fullName>L-S/D-Window-Dicing</fullName>
+                <default>false</default>
+                <label>L-S/D-Window-Dicing</label>
+            </value>
+            <value>
+                <fullName>Tra Windows</fullName>
+                <default>false</default>
+                <label>Tra Windows</label>
+            </value>
+            <value>
+                <fullName>Tra Sapphire</fullName>
+                <default>false</default>
+                <label>Tra Sapphire</label>
+            </value>
+            <value>
+                <fullName>Tra Submount</fullName>
+                <default>false</default>
+                <label>Tra Submount</label>
+            </value>
+            <value>
+                <fullName>900um single pigtail</fullName>
+                <default>false</default>
+                <label>900um single pigtail</label>
+            </value>
+            <value>
+                <fullName>Plano YAG</fullName>
+                <default>false</default>
+                <label>Plano YAG</label>
+            </value>
+            <value>
+                <fullName>FLT</fullName>
+                <default>false</default>
+                <label>FLT</label>
+            </value>
+            <value>
+                <fullName>WMO Assembling</fullName>
+                <default>false</default>
+                <label>WMO Assembling</label>
+            </value>
+            <value>
+                <fullName>Lens</fullName>
+                <default>false</default>
+                <label>Lens</label>
+            </value>
+            <value>
+                <fullName>Switch 1X8 Module</fullName>
+                <default>false</default>
+                <label>Switch 1X8 Module</label>
+            </value>
+            <value>
+                <fullName>2000 Series</fullName>
+                <default>false</default>
+                <label>2000 Series</label>
+            </value>
+            <value>
+                <fullName>Chirp</fullName>
+                <default>false</default>
+                <label>Chirp</label>
+            </value>
+            <value>
+                <fullName>INS MP</fullName>
+                <default>false</default>
+                <label>INS MP</label>
+            </value>
+            <value>
+                <fullName>Eyesafe</fullName>
+                <default>false</default>
+                <label>Eyesafe</label>
+            </value>
+            <value>
+                <fullName>LC TOF</fullName>
+                <default>false</default>
+                <label>LC TOF</label>
+            </value>
+            <value>
+                <fullName>Modulator</fullName>
+                <default>false</default>
+                <label>Modulator</label>
+            </value>
+            <value>
+                <fullName>Green</fullName>
+                <default>false</default>
+                <label>Green</label>
+            </value>
+            <value>
+                <fullName>7*1</fullName>
+                <default>false</default>
+                <label>7*1</label>
+            </value>
+            <value>
+                <fullName>LINECARD iROADM9</fullName>
+                <default>false</default>
+                <label>LINECARD iROADM9</label>
+            </value>
+            <value>
+                <fullName>OTDR</fullName>
+                <default>false</default>
+                <label>OTDR</label>
+            </value>
+            <value>
+                <fullName>CP/BP/PP/UP</fullName>
+                <default>false</default>
+                <label>CP/BP/PP/UP</label>
+            </value>
+            <value>
+                <fullName>Mic Waveplate</fullName>
+                <default>false</default>
+                <label>Mic Waveplate</label>
+            </value>
+            <value>
+                <fullName>PG3000</fullName>
+                <default>false</default>
+                <label>PG3000</label>
+            </value>
+            <value>
+                <fullName>OTDR + OCM + SW</fullName>
+                <default>false</default>
+                <label>OTDR + OCM + SW</label>
+            </value>
+            <value>
+                <fullName>LINECARD ROADM 1X2</fullName>
+                <default>false</default>
+                <label>LINECARD ROADM 1X2</label>
+            </value>
+            <value>
+                <fullName>L12.5G-9X1 96Ch</fullName>
+                <default>false</default>
+                <label>L12.5G-9X1 96Ch</label>
+            </value>
+            <value>
+                <fullName>YVO4PL</fullName>
+                <default>false</default>
+                <label>YVO4PL</label>
+            </value>
+            <value>
+                <fullName>9000 Series</fullName>
+                <default>false</default>
+                <label>9000 Series</label>
+            </value>
+            <value>
+                <fullName>CTM 1450</fullName>
+                <default>false</default>
+                <label>CTM 1450</label>
+            </value>
+            <value>
+                <fullName>9 Series</fullName>
+                <default>false</default>
+                <label>9 Series</label>
+            </value>
+            <value>
+                <fullName>C-T&amp;F12.5G-8X1 96Ch</fullName>
+                <default>false</default>
+                <label>C-T&amp;F12.5G-8X1 96Ch</label>
+            </value>
+            <value>
+                <fullName>VIS</fullName>
+                <default>false</default>
+                <label>VIS</label>
+            </value>
+            <value>
+                <fullName>C100G-1X1 48Ch</fullName>
+                <default>false</default>
+                <label>C100G-1X1 48Ch</label>
+            </value>
+            <value>
+                <fullName>PR-1 to 1 WGP</fullName>
+                <default>false</default>
+                <label>PR-1 to 1 WGP</label>
+            </value>
+            <value>
+                <fullName>PR-1 to 1 MSP</fullName>
+                <default>false</default>
+                <label>PR-1 to 1 MSP</label>
+            </value>
+            <value>
+                <fullName>980 SUBMARINE PUMP</fullName>
+                <default>false</default>
+                <label>980 SUBMARINE PUMP</label>
+            </value>
+            <value>
+                <fullName>RACK-MOUNTS</fullName>
+                <default>false</default>
+                <label>RACK-MOUNTS</label>
+            </value>
+            <value>
+                <fullName>MM UNCOOLED MODULE</fullName>
+                <default>false</default>
+                <label>MM UNCOOLED MODULE</label>
+            </value>
+            <value>
+                <fullName>RACKMOUNT OPM LEGACY</fullName>
+                <default>false</default>
+                <label>RACKMOUNT OPM LEGACY</label>
+            </value>
+            <value>
+                <fullName>MODULES BMU3E/4E</fullName>
+                <default>false</default>
+                <label>MODULES BMU3E/4E</label>
+            </value>
+            <value>
+                <fullName>C-WS09-50G</fullName>
+                <default>false</default>
+                <label>C-WS09-50G</label>
+            </value>
+            <value>
+                <fullName>TOD+</fullName>
+                <default>false</default>
+                <label>TOD+</label>
+            </value>
+            <value>
+                <fullName>ZnSe</fullName>
+                <default>false</default>
+                <label>ZnSe</label>
+            </value>
+            <value>
+                <fullName>CDS</fullName>
+                <default>false</default>
+                <label>CDS</label>
+            </value>
+            <value>
+                <fullName>MOLY</fullName>
+                <default>false</default>
+                <label>MOLY</label>
+            </value>
+            <value>
+                <fullName>25-AUTOMOTIVE</fullName>
+                <default>false</default>
+                <label>25-AUTOMOTIVE</label>
+            </value>
+            <value>
+                <fullName>COMPONENTS</fullName>
+                <default>false</default>
+                <label>COMPONENTS</label>
+            </value>
+            <value>
+                <fullName>ACCESSORIES</fullName>
+                <default>false</default>
+                <label>ACCESSORIES</label>
+            </value>
+            <value>
+                <fullName>MISCELLANEOUS SERVICES</fullName>
+                <default>false</default>
+                <label>MISCELLANEOUS SERVICES</label>
+            </value>
+            <value>
+                <fullName>LLC REPAIRS - LLK</fullName>
+                <default>false</default>
+                <label>LLC REPAIRS - LLK</label>
+            </value>
+            <value>
+                <fullName>CUTTING HEADS - FSC 2.1</fullName>
+                <default>false</default>
+                <label>CUTTING HEADS - FSC 2.1</label>
+            </value>
+            <value>
+                <fullName>LLK Q PIGTAILS</fullName>
+                <default>false</default>
+                <label>LLK Q PIGTAILS</label>
+            </value>
+            <value>
+                <fullName>REMOTE PROCESSING - 2D-SCANNER OPTIONS</fullName>
+                <default>false</default>
+                <label>REMOTE PROCESSING - 2D-SCANNER OPTIONS</label>
+            </value>
+            <value>
+                <fullName>COLLIMATION MODULE</fullName>
+                <default>false</default>
+                <label>COLLIMATION MODULE</label>
+            </value>
+            <value>
+                <fullName>PBI</fullName>
+                <default>false</default>
+                <label>PBI</label>
+            </value>
+            <value>
+                <fullName>RAW MATERIAL - Z-PARTS</fullName>
+                <default>false</default>
+                <label>RAW MATERIAL - Z-PARTS</label>
+            </value>
+            <value>
+                <fullName>WPZ</fullName>
+                <default>false</default>
+                <label>WPZ</label>
+            </value>
+            <value>
+                <fullName>FM</fullName>
+                <default>false</default>
+                <label>FM</label>
+            </value>
+            <value>
+                <fullName>ADJUSTABLE FOCUS</fullName>
+                <default>false</default>
+                <label>ADJUSTABLE FOCUS</label>
+            </value>
+            <value>
+                <fullName>REFLECTIVE BEAM EXPANDER</fullName>
+                <default>false</default>
+                <label>REFLECTIVE BEAM EXPANDER</label>
+            </value>
+            <value>
+                <fullName>CSC</fullName>
+                <default>false</default>
+                <label>CSC</label>
+            </value>
+            <value>
+                <fullName>FIRELIGHT</fullName>
+                <default>false</default>
+                <label>FIRELIGHT</label>
+            </value>
+            <value>
+                <fullName>UNCOOLED 980 PUMP</fullName>
+                <default>false</default>
+                <label>UNCOOLED 980 PUMP</label>
+            </value>
+            <value>
+                <fullName>MM CHIP BARE BAR</fullName>
+                <default>false</default>
+                <label>MM CHIP BARE BAR</label>
+            </value>
+            <value>
+                <fullName>MM MOUNT BAR ACTIVE COOLED</fullName>
+                <default>false</default>
+                <label>MM MOUNT BAR ACTIVE COOLED</label>
+            </value>
+            <value>
+                <fullName>MM FC MODULES BMU16E</fullName>
+                <default>false</default>
+                <label>MM FC MODULES BMU16E</label>
+            </value>
+            <value>
+                <fullName>L-S/D-Mirror</fullName>
+                <default>false</default>
+                <label>L-S/D-Mirror</label>
+            </value>
+            <value>
+                <fullName>H-S/D-Window</fullName>
+                <default>false</default>
+                <label>H-S/D-Window</label>
+            </value>
+            <value>
+                <fullName>Lens－tile polish</fullName>
+                <default>false</default>
+                <label>Lens－tile polish</label>
+            </value>
+            <value>
+                <fullName>Lens－asphalt polish</fullName>
+                <default>false</default>
+                <label>Lens－asphalt polish</label>
+            </value>
+            <value>
+                <fullName>T-Window</fullName>
+                <default>false</default>
+                <label>T-Window</label>
+            </value>
+            <value>
+                <fullName>GLC</fullName>
+                <default>false</default>
+                <label>GLC</label>
+            </value>
+            <value>
+                <fullName>PD Tap array</fullName>
+                <default>false</default>
+                <label>PD Tap array</label>
+            </value>
+            <value>
+                <fullName>Coupler WDM 1×2</fullName>
+                <default>false</default>
+                <label>Coupler WDM 1×2</label>
+            </value>
+            <value>
+                <fullName>other  crystal</fullName>
+                <default>false</default>
+                <label>other  crystal</label>
+            </value>
+            <value>
+                <fullName>Glan Polarizer</fullName>
+                <default>false</default>
+                <label>Glan Polarizer</label>
+            </value>
+            <value>
+                <fullName>WDM-D EDGE SP</fullName>
+                <default>false</default>
+                <label>WDM-D EDGE SP</label>
+            </value>
+            <value>
+                <fullName>WDM-D EDGE LP</fullName>
+                <default>false</default>
+                <label>WDM-D EDGE LP</label>
+            </value>
+            <value>
+                <fullName>PLC</fullName>
+                <default>false</default>
+                <label>PLC</label>
+            </value>
+            <value>
+                <fullName>Tra Filters</fullName>
+                <default>false</default>
+                <label>Tra Filters</label>
+            </value>
+            <value>
+                <fullName>V&amp; T Filter</fullName>
+                <default>false</default>
+                <label>V&amp; T Filter</label>
+            </value>
+            <value>
+                <fullName>OCM 2580</fullName>
+                <default>false</default>
+                <label>OCM 2580</label>
+            </value>
+            <value>
+                <fullName>GRT Medical</fullName>
+                <default>false</default>
+                <label>GRT Medical</label>
+            </value>
+            <value>
+                <fullName>HR ceramic pigtail</fullName>
+                <default>false</default>
+                <label>HR ceramic pigtail</label>
+            </value>
+            <value>
+                <fullName>Switch 2X2U Device</fullName>
+                <default>false</default>
+                <label>Switch 2X2U Device</label>
+            </value>
+            <value>
+                <fullName>BP/PP/UP</fullName>
+                <default>false</default>
+                <label>BP/PP/UP</label>
+            </value>
+            <value>
+                <fullName>CUS SINGL CH GAIN BK</fullName>
+                <default>false</default>
+                <label>CUS SINGL CH GAIN BK</label>
+            </value>
+            <value>
+                <fullName>Irregular Prism(MSP)</fullName>
+                <default>false</default>
+                <label>Irregular Prism(MSP)</label>
+            </value>
+            <value>
+                <fullName>Consumer Filter</fullName>
+                <default>false</default>
+                <label>Consumer Filter</label>
+            </value>
+            <value>
+                <fullName>Mic GTMS</fullName>
+                <default>false</default>
+                <label>Mic GTMS</label>
+            </value>
+            <value>
+                <fullName>CTM 1370</fullName>
+                <default>false</default>
+                <label>CTM 1370</label>
+            </value>
+            <value>
+                <fullName>Si 2 Cavity Etalon</fullName>
+                <default>false</default>
+                <label>Si 2 Cavity Etalon</label>
+            </value>
+            <value>
+                <fullName>Connector Fixture</fullName>
+                <default>false</default>
+                <label>Connector Fixture</label>
+            </value>
+            <value>
+                <fullName>Laser Chip</fullName>
+                <default>false</default>
+                <label>Laser Chip</label>
+            </value>
+            <value>
+                <fullName>Windows</fullName>
+                <default>false</default>
+                <label>Windows</label>
+            </value>
+            <value>
+                <fullName>GRR Concave</fullName>
+                <default>false</default>
+                <label>GRR Concave</label>
+            </value>
+            <value>
+                <fullName>LBO</fullName>
+                <default>false</default>
+                <label>LBO</label>
+            </value>
+            <value>
+                <fullName>Custom Gain Block</fullName>
+                <default>false</default>
+                <label>Custom Gain Block</label>
+            </value>
+            <value>
+                <fullName>ISO Mini PMD</fullName>
+                <default>false</default>
+                <label>ISO Mini PMD</label>
+            </value>
+            <value>
+                <fullName>GDL</fullName>
+                <default>false</default>
+                <label>GDL</label>
+            </value>
+            <value>
+                <fullName>&lt;8 inch</fullName>
+                <default>false</default>
+                <label>&lt;8 inch</label>
+            </value>
+            <value>
+                <fullName>C-T&amp;F12.5G-4X1 96Ch</fullName>
+                <default>false</default>
+                <label>C-T&amp;F12.5G-4X1 96Ch</label>
+            </value>
+            <value>
+                <fullName>C100G-4X1 48Ch</fullName>
+                <default>false</default>
+                <label>C100G-4X1 48Ch</label>
+            </value>
+            <value>
+                <fullName>Mechanical Others</fullName>
+                <default>false</default>
+                <label>Mechanical Others</label>
+            </value>
+            <value>
+                <fullName>VOA Reflect non-blo</fullName>
+                <default>false</default>
+                <label>VOA Reflect non-blo</label>
+            </value>
+            <value>
+                <fullName>Single head LC/UPC</fullName>
+                <default>false</default>
+                <label>Single head LC/UPC</label>
+            </value>
+            <value>
+                <fullName>High Power</fullName>
+                <default>false</default>
+                <label>High Power</label>
+            </value>
+            <value>
+                <fullName>other etalon</fullName>
+                <default>false</default>
+                <label>other etalon</label>
+            </value>
+            <value>
+                <fullName>V-Filter</fullName>
+                <default>false</default>
+                <label>V-Filter</label>
+            </value>
+            <value>
+                <fullName>LN</fullName>
+                <default>false</default>
+                <label>LN</label>
+            </value>
+            <value>
+                <fullName>Eva Kit 30pin</fullName>
+                <default>false</default>
+                <label>Eva Kit 30pin</label>
+            </value>
+            <value>
+                <fullName>Reflector</fullName>
+                <default>false</default>
+                <label>Reflector</label>
+            </value>
+            <value>
+                <fullName>PUM Others</fullName>
+                <default>false</default>
+                <label>PUM Others</label>
+            </value>
+            <value>
+                <fullName>Switch 1X4 Device</fullName>
+                <default>false</default>
+                <label>Switch 1X4 Device</label>
+            </value>
+            <value>
+                <fullName>PG2800</fullName>
+                <default>false</default>
+                <label>PG2800</label>
+            </value>
+            <value>
+                <fullName>ISO Normal 2in1</fullName>
+                <default>false</default>
+                <label>ISO Normal 2in1</label>
+            </value>
+            <value>
+                <fullName>3*1</fullName>
+                <default>false</default>
+                <label>3*1</label>
+            </value>
+            <value>
+                <fullName>C12.5G-4X1 96Ch</fullName>
+                <default>false</default>
+                <label>C12.5G-4X1 96Ch</label>
+            </value>
+            <value>
+                <fullName>PG1800</fullName>
+                <default>false</default>
+                <label>PG1800</label>
+            </value>
+            <value>
+                <fullName>LDCM-Blue</fullName>
+                <default>false</default>
+                <label>LDCM-Blue</label>
+            </value>
+            <value>
+                <fullName>C50G-8X1 92Ch</fullName>
+                <default>false</default>
+                <label>C50G-8X1 92Ch</label>
+            </value>
+            <value>
+                <fullName>Blue</fullName>
+                <default>false</default>
+                <label>Blue</label>
+            </value>
+            <value>
+                <fullName>LSA Red</fullName>
+                <default>false</default>
+                <label>LSA Red</label>
+            </value>
+            <value>
+                <fullName>LSA Blue</fullName>
+                <default>false</default>
+                <label>LSA Blue</label>
+            </value>
+            <value>
+                <fullName>FG 980 PUMP G08EL</fullName>
+                <default>false</default>
+                <label>FG 980 PUMP G08EL</label>
+            </value>
+            <value>
+                <fullName>SUBMARINE PIN</fullName>
+                <default>false</default>
+                <label>SUBMARINE PIN</label>
+            </value>
+            <value>
+                <fullName>FIBRE ASSEMBLY DUAL</fullName>
+                <default>false</default>
+                <label>FIBRE ASSEMBLY DUAL</label>
+            </value>
+            <value>
+                <fullName>FG 980 PUMP G08EL DL</fullName>
+                <default>false</default>
+                <label>FG 980 PUMP G08EL DL</label>
+            </value>
+            <value>
+                <fullName>GT3 EDFA</fullName>
+                <default>false</default>
+                <label>GT3 EDFA</label>
+            </value>
+            <value>
+                <fullName>G3 EDFA</fullName>
+                <default>false</default>
+                <label>G3 EDFA</label>
+            </value>
+            <value>
+                <fullName>NPI Others</fullName>
+                <default>false</default>
+                <label>NPI Others</label>
+            </value>
+            <value>
+                <fullName>GAAS</fullName>
+                <default>false</default>
+                <label>GAAS</label>
+            </value>
+            <value>
+                <fullName>SAPHIRE</fullName>
+                <default>false</default>
+                <label>SAPHIRE</label>
+            </value>
+            <value>
+                <fullName>ZnS</fullName>
+                <default>false</default>
+                <label>ZnS</label>
+            </value>
+            <value>
+                <fullName>CaF2</fullName>
+                <default>false</default>
+                <label>CaF2</label>
+            </value>
+            <value>
+                <fullName>SPARES</fullName>
+                <default>false</default>
+                <label>SPARES</label>
+            </value>
+            <value>
+                <fullName>THERMADITE</fullName>
+                <default>false</default>
+                <label>THERMADITE</label>
+            </value>
+            <value>
+                <fullName>FJB BOX</fullName>
+                <default>false</default>
+                <label>FJB BOX</label>
+            </value>
+            <value>
+                <fullName>MOUNT</fullName>
+                <default>false</default>
+                <label>MOUNT</label>
+            </value>
+            <value>
+                <fullName>FIBERMATE</fullName>
+                <default>false</default>
+                <label>FIBERMATE</label>
+            </value>
+            <value>
+                <fullName>NOZZLES</fullName>
+                <default>false</default>
+                <label>NOZZLES</label>
+            </value>
+            <value>
+                <fullName>BRASS</fullName>
+                <default>false</default>
+                <label>BRASS</label>
+            </value>
+            <value>
+                <fullName>SL2</fullName>
+                <default>false</default>
+                <label>SL2</label>
+            </value>
+            <value>
+                <fullName>CPM</fullName>
+                <default>false</default>
+                <label>CPM</label>
+            </value>
+            <value>
+                <fullName>TRADE GOODS - MERCHANDISE</fullName>
+                <default>false</default>
+                <label>TRADE GOODS - MERCHANDISE</label>
+            </value>
+            <value>
+                <fullName>60-POWER GENERATION</fullName>
+                <default>false</default>
+                <label>60-POWER GENERATION</label>
+            </value>
+            <value>
+                <fullName>BEAM GUIDING OPTICS - FFK</fullName>
+                <default>false</default>
+                <label>BEAM GUIDING OPTICS - FFK</label>
+            </value>
+            <value>
+                <fullName>REMOTE PROCESSING - RLSK 2.1</fullName>
+                <default>false</default>
+                <label>REMOTE PROCESSING - RLSK 2.1</label>
+            </value>
+            <value>
+                <fullName>COLLIMATION - MZ COLLI 3.0</fullName>
+                <default>false</default>
+                <label>COLLIMATION - MZ COLLI 3.0</label>
+            </value>
+            <value>
+                <fullName>KG-5</fullName>
+                <default>false</default>
+                <label>KG-5</label>
+            </value>
+            <value>
+                <fullName>3&quot;</fullName>
+                <default>false</default>
+                <label>3&quot;</label>
+            </value>
+            <value>
+                <fullName>MM FIBER-COUPLED BARS</fullName>
+                <default>false</default>
+                <label>MM FIBER-COUPLED BARS</label>
+            </value>
+            <value>
+                <fullName>ZEISS CALIBRATION BOX</fullName>
+                <default>false</default>
+                <label>ZEISS CALIBRATION BOX</label>
+            </value>
+            <value>
+                <fullName>EOM BASE</fullName>
+                <default>false</default>
+                <label>EOM BASE</label>
+            </value>
+            <value>
+                <fullName>CSM</fullName>
+                <default>false</default>
+                <label>CSM</label>
+            </value>
+            <value>
+                <fullName>PERISCOPE</fullName>
+                <default>false</default>
+                <label>PERISCOPE</label>
+            </value>
+            <value>
+                <fullName>MM MOUNT BAR PASS COOLED</fullName>
+                <default>false</default>
+                <label>MM MOUNT BAR PASS COOLED</label>
+            </value>
+            <value>
+                <fullName>FG 980 PUMP G07</fullName>
+                <default>false</default>
+                <label>FG 980 PUMP G07</label>
+            </value>
+            <value>
+                <fullName>CL/PP</fullName>
+                <default>false</default>
+                <label>CL/PP</label>
+            </value>
+            <value>
+                <fullName>CL</fullName>
+                <default>false</default>
+                <label>CL</label>
+            </value>
+            <value>
+                <fullName>250um dual pigtail</fullName>
+                <default>false</default>
+                <label>250um dual pigtail</label>
+            </value>
+            <value>
+                <fullName>Others Plates</fullName>
+                <default>false</default>
+                <label>Others Plates</label>
+            </value>
+            <value>
+                <fullName>Large Wedge</fullName>
+                <default>false</default>
+                <label>Large Wedge</label>
+            </value>
+            <value>
+                <fullName>CP</fullName>
+                <default>false</default>
+                <label>CP</label>
+            </value>
+            <value>
+                <fullName>KTP</fullName>
+                <default>false</default>
+                <label>KTP</label>
+            </value>
+            <value>
+                <fullName>K2 Products</fullName>
+                <default>false</default>
+                <label>K2 Products</label>
+            </value>
+            <value>
+                <fullName>1 to 1 W/M/F</fullName>
+                <default>false</default>
+                <label>1 to 1 W/M/F</label>
+            </value>
+            <value>
+                <fullName>LN Plate</fullName>
+                <default>false</default>
+                <label>LN Plate</label>
+            </value>
+            <value>
+                <fullName>DP/PP</fullName>
+                <default>false</default>
+                <label>DP/PP</label>
+            </value>
+            <value>
+                <fullName>Beamsplitter (BSP)</fullName>
+                <default>false</default>
+                <label>Beamsplitter (BSP)</label>
+            </value>
+            <value>
+                <fullName>C12.5G-2X1 96Ch</fullName>
+                <default>false</default>
+                <label>C12.5G-2X1 96Ch</label>
+            </value>
+            <value>
+                <fullName>WSS-C50G-4X1</fullName>
+                <default>false</default>
+                <label>WSS-C50G-4X1</label>
+            </value>
+            <value>
+                <fullName>C50G-4X1 92Ch</fullName>
+                <default>false</default>
+                <label>C50G-4X1 92Ch</label>
+            </value>
+            <value>
+                <fullName>WSS-C50G-8X1</fullName>
+                <default>false</default>
+                <label>WSS-C50G-8X1</label>
+            </value>
+            <value>
+                <fullName>LDCM-UV</fullName>
+                <default>false</default>
+                <label>LDCM-UV</label>
+            </value>
+            <value>
+                <fullName>PG1600D - Single</fullName>
+                <default>false</default>
+                <label>PG1600D - Single</label>
+            </value>
+            <value>
+                <fullName>Cable</fullName>
+                <default>false</default>
+                <label>Cable</label>
+            </value>
+            <value>
+                <fullName>LDM-IR</fullName>
+                <default>false</default>
+                <label>LDM-IR</label>
+            </value>
+            <value>
+                <fullName>C100G-9X1 48Ch</fullName>
+                <default>false</default>
+                <label>C100G-9X1 48Ch</label>
+            </value>
+            <value>
+                <fullName>WSS-C100G-9X1</fullName>
+                <default>false</default>
+                <label>WSS-C100G-9X1</label>
+            </value>
+            <value>
+                <fullName>C-CP100G-2X1 48Ch</fullName>
+                <default>false</default>
+                <label>C-CP100G-2X1 48Ch</label>
+            </value>
+            <value>
+                <fullName>CPO</fullName>
+                <default>false</default>
+                <label>CPO</label>
+            </value>
+            <value>
+                <fullName>FG 980 PUMP G08 DUAL</fullName>
+                <default>false</default>
+                <label>FG 980 PUMP G08 DUAL</label>
+            </value>
+            <value>
+                <fullName>Multi-fiber pigtal</fullName>
+                <default>false</default>
+                <label>Multi-fiber pigtal</label>
+            </value>
+            <value>
+                <fullName>1 Drill Flow Cell</fullName>
+                <default>false</default>
+                <label>1 Drill Flow Cell</label>
+            </value>
+            <value>
+                <fullName>TeO2</fullName>
+                <default>false</default>
+                <label>TeO2</label>
+            </value>
+            <value>
+                <fullName>Quartz crystal</fullName>
+                <default>false</default>
+                <label>Quartz crystal</label>
+            </value>
+            <value>
+                <fullName>WDM-M Special</fullName>
+                <default>false</default>
+                <label>WDM-M Special</label>
+            </value>
+            <value>
+                <fullName>Box</fullName>
+                <default>false</default>
+                <label>Box</label>
+            </value>
+            <value>
+                <fullName>CTM 1270</fullName>
+                <default>false</default>
+                <label>CTM 1270</label>
+            </value>
+            <value>
+                <fullName>Mirror</fullName>
+                <default>false</default>
+                <label>Mirror</label>
+            </value>
+            <value>
+                <fullName>Circulator Module</fullName>
+                <default>false</default>
+                <label>Circulator Module</label>
+            </value>
+            <value>
+                <fullName>WSDM Module</fullName>
+                <default>false</default>
+                <label>WSDM Module</label>
+            </value>
+            <value>
+                <fullName>A&amp;T Filter</fullName>
+                <default>false</default>
+                <label>A&amp;T Filter</label>
+            </value>
+            <value>
+                <fullName>POWERBALANCED MOD</fullName>
+                <default>false</default>
+                <label>POWERBALANCED MOD</label>
+            </value>
+            <value>
+                <fullName>YLF crystal</fullName>
+                <default>false</default>
+                <label>YLF crystal</label>
+            </value>
+            <value>
+                <fullName>Solid etalon</fullName>
+                <default>false</default>
+                <label>Solid etalon</label>
+            </value>
+            <value>
+                <fullName>S-ASM-No-Glue</fullName>
+                <default>false</default>
+                <label>S-ASM-No-Glue</label>
+            </value>
+            <value>
+                <fullName>GT4 EDFA</fullName>
+                <default>false</default>
+                <label>GT4 EDFA</label>
+            </value>
+            <value>
+                <fullName>PM single pigtail</fullName>
+                <default>false</default>
+                <label>PM single pigtail</label>
+            </value>
+            <value>
+                <fullName>AOM</fullName>
+                <default>false</default>
+                <label>AOM</label>
+            </value>
+            <value>
+                <fullName>HP</fullName>
+                <default>false</default>
+                <label>HP</label>
+            </value>
+            <value>
+                <fullName>4 inch</fullName>
+                <default>false</default>
+                <label>4 inch</label>
+            </value>
+            <value>
+                <fullName>Photodetector mini</fullName>
+                <default>false</default>
+                <label>Photodetector mini</label>
+            </value>
+            <value>
+                <fullName>WMO Windows</fullName>
+                <default>false</default>
+                <label>WMO Windows</label>
+            </value>
+            <value>
+                <fullName>LDCM-Red</fullName>
+                <default>false</default>
+                <label>LDCM-Red</label>
+            </value>
+            <value>
+                <fullName>Driver</fullName>
+                <default>false</default>
+                <label>Driver</label>
+            </value>
+            <value>
+                <fullName>Raman Amplifier</fullName>
+                <default>false</default>
+                <label>Raman Amplifier</label>
+            </value>
+            <value>
+                <fullName>CONS_Other</fullName>
+                <default>false</default>
+                <label>CONS_Other</label>
+            </value>
+            <value>
+                <fullName>Coupler Tap 1×4</fullName>
+                <default>false</default>
+                <label>Coupler Tap 1×4</label>
+            </value>
+            <value>
+                <fullName>INS Spectrogragh</fullName>
+                <default>false</default>
+                <label>INS Spectrogragh</label>
+            </value>
+            <value>
+                <fullName>COLU</fullName>
+                <default>false</default>
+                <label>COLU</label>
+            </value>
+            <value>
+                <fullName>COLM</fullName>
+                <default>false</default>
+                <label>COLM</label>
+            </value>
+            <value>
+                <fullName>Achromatic Waveplate</fullName>
+                <default>false</default>
+                <label>Achromatic Waveplate</label>
+            </value>
+            <value>
+                <fullName>Photodetector</fullName>
+                <default>false</default>
+                <label>Photodetector</label>
+            </value>
+            <value>
+                <fullName>WDM-D CWDM</fullName>
+                <default>false</default>
+                <label>WDM-D CWDM</label>
+            </value>
+            <value>
+                <fullName>WDM-D BANDPASS</fullName>
+                <default>false</default>
+                <label>WDM-D BANDPASS</label>
+            </value>
+            <value>
+                <fullName>CTM 1050</fullName>
+                <default>false</default>
+                <label>CTM 1050</label>
+            </value>
+            <value>
+                <fullName>LENS F-theta</fullName>
+                <default>false</default>
+                <label>LENS F-theta</label>
+            </value>
+            <value>
+                <fullName>INS UV</fullName>
+                <default>false</default>
+                <label>INS UV</label>
+            </value>
+            <value>
+                <fullName>INS Others</fullName>
+                <default>false</default>
+                <label>INS Others</label>
+            </value>
+            <value>
+                <fullName>Mic Windows</fullName>
+                <default>false</default>
+                <label>Mic Windows</label>
+            </value>
+            <value>
+                <fullName>Big Mushroom Ball</fullName>
+                <default>false</default>
+                <label>Big Mushroom Ball</label>
+            </value>
+            <value>
+                <fullName>C-Block</fullName>
+                <default>false</default>
+                <label>C-Block</label>
+            </value>
+            <value>
+                <fullName>AUTO Radar Filter</fullName>
+                <default>false</default>
+                <label>AUTO Radar Filter</label>
+            </value>
+            <value>
+                <fullName>8 inch</fullName>
+                <default>false</default>
+                <label>8 inch</label>
+            </value>
+            <value>
+                <fullName>Double convex lens</fullName>
+                <default>false</default>
+                <label>Double convex lens</label>
+            </value>
+            <value>
+                <fullName>MGL</fullName>
+                <default>false</default>
+                <label>MGL</label>
+            </value>
+            <value>
+                <fullName>8 Series</fullName>
+                <default>false</default>
+                <label>8 Series</label>
+            </value>
+            <value>
+                <fullName>3000 Series</fullName>
+                <default>false</default>
+                <label>3000 Series</label>
+            </value>
+            <value>
+                <fullName>LN wafer</fullName>
+                <default>false</default>
+                <label>LN wafer</label>
+            </value>
+            <value>
+                <fullName>GRR Others</fullName>
+                <default>false</default>
+                <label>GRR Others</label>
+            </value>
+            <value>
+                <fullName>MM</fullName>
+                <default>false</default>
+                <label>MM</label>
+            </value>
+            <value>
+                <fullName>OTA</fullName>
+                <default>false</default>
+                <label>OTA</label>
+            </value>
+            <value>
+                <fullName>Other Block</fullName>
+                <default>false</default>
+                <label>Other Block</label>
+            </value>
+            <value>
+                <fullName>VOA Module</fullName>
+                <default>false</default>
+                <label>VOA Module</label>
+            </value>
+            <value>
+                <fullName>AOM AOQS</fullName>
+                <default>false</default>
+                <label>AOM AOQS</label>
+            </value>
+            <value>
+                <fullName>WMO Fiber</fullName>
+                <default>false</default>
+                <label>WMO Fiber</label>
+            </value>
+            <value>
+                <fullName>PM Tap</fullName>
+                <default>false</default>
+                <label>PM Tap</label>
+            </value>
+            <value>
+                <fullName>7 Series</fullName>
+                <default>false</default>
+                <label>7 Series</label>
+            </value>
+            <value>
+                <fullName>Mic Filters</fullName>
+                <default>false</default>
+                <label>Mic Filters</label>
+            </value>
+            <value>
+                <fullName>OTSA</fullName>
+                <default>false</default>
+                <label>OTSA</label>
+            </value>
+            <value>
+                <fullName>MA Series</fullName>
+                <default>false</default>
+                <label>MA Series</label>
+            </value>
+            <value>
+                <fullName>WSS-C12.5G</fullName>
+                <default>false</default>
+                <label>WSS-C12.5G</label>
+            </value>
+            <value>
+                <fullName>WSS-L-12.5G 2x1</fullName>
+                <default>false</default>
+                <label>WSS-L-12.5G 2x1</label>
+            </value>
+            <value>
+                <fullName>WSS-L-12.5G 9x1</fullName>
+                <default>false</default>
+                <label>WSS-L-12.5G 9x1</label>
+            </value>
+            <value>
+                <fullName>WSS-C50G-2X1</fullName>
+                <default>false</default>
+                <label>WSS-C50G-2X1</label>
+            </value>
+            <value>
+                <fullName>GL_FIN</fullName>
+                <default>false</default>
+                <label>GL_FIN</label>
+            </value>
+            <value>
+                <fullName>RACKMNT EDFA LEGACY</fullName>
+                <default>false</default>
+                <label>RACKMNT EDFA LEGACY</label>
+            </value>
+            <value>
+                <fullName>Malvasia Module</fullName>
+                <default>false</default>
+                <label>Malvasia Module</label>
+            </value>
+            <value>
+                <fullName>FG 980 PUMP G09</fullName>
+                <default>false</default>
+                <label>FG 980 PUMP G09</label>
+            </value>
+            <value>
+                <fullName>OPM</fullName>
+                <default>false</default>
+                <label>OPM</label>
+            </value>
+            <value>
+                <fullName>FG 980 PUMP ULE</fullName>
+                <default>false</default>
+                <label>FG 980 PUMP ULE</label>
+            </value>
+            <value>
+                <fullName>3300 12 ETALON TDC</fullName>
+                <default>false</default>
+                <label>3300 12 ETALON TDC</label>
+            </value>
+            <value>
+                <fullName>UNCLD 980 PUMP DUAL</fullName>
+                <default>false</default>
+                <label>UNCLD 980 PUMP DUAL</label>
+            </value>
+            <value>
+                <fullName>LINECARD EDFA, PORTI</fullName>
+                <default>false</default>
+                <label>LINECARD EDFA, PORTI</label>
+            </value>
+            <value>
+                <fullName>RACKMOUNT EDFA PORTI</fullName>
+                <default>false</default>
+                <label>RACKMOUNT EDFA PORTI</label>
+            </value>
+            <value>
+                <fullName>PR-1 to more WGP</fullName>
+                <default>false</default>
+                <label>PR-1 to more WGP</label>
+            </value>
+            <value>
+                <fullName>PBC Block</fullName>
+                <default>false</default>
+                <label>PBC Block</label>
+            </value>
+            <value>
+                <fullName>CDTE AM</fullName>
+                <default>false</default>
+                <label>CDTE AM</label>
+            </value>
+            <value>
+                <fullName>SILICON CARBIDE</fullName>
+                <default>false</default>
+                <label>SILICON CARBIDE</label>
+            </value>
+            <value>
+                <fullName>STAINLESS</fullName>
+                <default>false</default>
+                <label>STAINLESS</label>
+            </value>
+            <value>
+                <fullName>Indium Wire</fullName>
+                <default>false</default>
+                <label>Indium Wire</label>
+            </value>
+            <value>
+                <fullName>ZEONEX</fullName>
+                <default>false</default>
+                <label>ZEONEX</label>
+            </value>
+            <value>
+                <fullName>SL3</fullName>
+                <default>false</default>
+                <label>SL3</label>
+            </value>
+            <value>
+                <fullName>PROMOTION</fullName>
+                <default>false</default>
+                <label>PROMOTION</label>
+            </value>
+            <value>
+                <fullName>ACRYLIC</fullName>
+                <default>false</default>
+                <label>ACRYLIC</label>
+            </value>
+            <value>
+                <fullName>FIXED OPTICS - PDT-B OPTIONS</fullName>
+                <default>false</default>
+                <label>FIXED OPTICS - PDT-B OPTIONS</label>
+            </value>
+            <value>
+                <fullName>CUTTING HEADS - FSC 2.1 OPTIONS</fullName>
+                <default>false</default>
+                <label>CUTTING HEADS - FSC 2.1 OPTIONS</label>
+            </value>
+            <value>
+                <fullName>OTHER PARTS</fullName>
+                <default>false</default>
+                <label>OTHER PARTS</label>
+            </value>
+            <value>
+                <fullName>INAS</fullName>
+                <default>false</default>
+                <label>INAS</label>
+            </value>
+            <value>
+                <fullName>BIMO</fullName>
+                <default>false</default>
+                <label>BIMO</label>
+            </value>
+            <value>
+                <fullName>FOCUS MODULE</fullName>
+                <default>false</default>
+                <label>FOCUS MODULE</label>
+            </value>
+            <value>
+                <fullName>MM FC LD MODULES  BMU3E/4E</fullName>
+                <default>false</default>
+                <label>MM FC LD MODULES  BMU3E/4E</label>
+            </value>
+            <value>
+                <fullName>FG 980 PUMP G06</fullName>
+                <default>false</default>
+                <label>FG 980 PUMP G06</label>
+            </value>
+            <value>
+                <fullName>Other Prism</fullName>
+                <default>false</default>
+                <label>Other Prism</label>
+            </value>
+            <value>
+                <fullName>S-H-S/D-Window</fullName>
+                <default>false</default>
+                <label>S-H-S/D-Window</label>
+            </value>
+            <value>
+                <fullName>1 to more TWP</fullName>
+                <default>false</default>
+                <label>1 to more TWP</label>
+            </value>
+            <value>
+                <fullName>2+ Cavity Etalon</fullName>
+                <default>false</default>
+                <label>2+ Cavity Etalon</label>
+            </value>
+            <value>
+                <fullName>LN Wedge</fullName>
+                <default>false</default>
+                <label>LN Wedge</label>
+            </value>
+            <value>
+                <fullName>250um single pigtail</fullName>
+                <default>false</default>
+                <label>250um single pigtail</label>
+            </value>
+            <value>
+                <fullName>Uncoating pigtail</fullName>
+                <default>false</default>
+                <label>Uncoating pigtail</label>
+            </value>
+            <value>
+                <fullName>L-S/D-Mirror-Dicing</fullName>
+                <default>false</default>
+                <label>L-S/D-Mirror-Dicing</label>
+            </value>
+            <value>
+                <fullName>CP/BP</fullName>
+                <default>false</default>
+                <label>CP/BP</label>
+            </value>
+            <value>
+                <fullName>Tra Mirrors</fullName>
+                <default>false</default>
+                <label>Tra Mirrors</label>
+            </value>
+            <value>
+                <fullName>CP/PP</fullName>
+                <default>false</default>
+                <label>CP/PP</label>
+            </value>
+            <value>
+                <fullName>Tra Prism</fullName>
+                <default>false</default>
+                <label>Tra Prism</label>
+            </value>
+            <value>
+                <fullName>1 to more LWP</fullName>
+                <default>false</default>
+                <label>1 to more LWP</label>
+            </value>
+            <value>
+                <fullName>1 to 1 LWP</fullName>
+                <default>false</default>
+                <label>1 to 1 LWP</label>
+            </value>
+            <value>
+                <fullName>OBSOLETE - PG</fullName>
+                <default>false</default>
+                <label>OBSOLETE - PG</label>
+            </value>
+            <value>
+                <fullName>COLS</fullName>
+                <default>false</default>
+                <label>COLS</label>
+            </value>
+            <value>
+                <fullName>PBS+Waveplate</fullName>
+                <default>false</default>
+                <label>PBS+Waveplate</label>
+            </value>
+            <value>
+                <fullName>wollaston Polarizer</fullName>
+                <default>false</default>
+                <label>wollaston Polarizer</label>
+            </value>
+            <value>
+                <fullName>Waveplate with Mount</fullName>
+                <default>false</default>
+                <label>Waveplate with Mount</label>
+            </value>
+            <value>
+                <fullName>WDM-M CWDM</fullName>
+                <default>false</default>
+                <label>WDM-M CWDM</label>
+            </value>
+            <value>
+                <fullName>N+1*1</fullName>
+                <default>false</default>
+                <label>N+1*1</label>
+            </value>
+            <value>
+                <fullName>Micro objective</fullName>
+                <default>false</default>
+                <label>Micro objective</label>
+            </value>
+            <value>
+                <fullName>100G DWDM</fullName>
+                <default>false</default>
+                <label>100G DWDM</label>
+            </value>
+            <value>
+                <fullName>Drill Etalon</fullName>
+                <default>false</default>
+                <label>Drill Etalon</label>
+            </value>
+            <value>
+                <fullName>Si 1 Cavity Etalon</fullName>
+                <default>false</default>
+                <label>Si 1 Cavity Etalon</label>
+            </value>
+            <value>
+                <fullName>LINECARD SWITCH</fullName>
+                <default>false</default>
+                <label>LINECARD SWITCH</label>
+            </value>
+            <value>
+                <fullName>NPGC</fullName>
+                <default>false</default>
+                <label>NPGC</label>
+            </value>
+            <value>
+                <fullName>LDM-Green</fullName>
+                <default>false</default>
+                <label>LDM-Green</label>
+            </value>
+            <value>
+                <fullName>ISO Mini DUAL</fullName>
+                <default>false</default>
+                <label>ISO Mini DUAL</label>
+            </value>
+            <value>
+                <fullName>Mic Mirrors</fullName>
+                <default>false</default>
+                <label>Mic Mirrors</label>
+            </value>
+            <value>
+                <fullName>C50G-9X1 92Ch</fullName>
+                <default>false</default>
+                <label>C50G-9X1 92Ch</label>
+            </value>
+            <value>
+                <fullName>C-T-6.25G-2X20</fullName>
+                <default>false</default>
+                <label>C-T-6.25G-2X20</label>
+            </value>
+            <value>
+                <fullName>PGP</fullName>
+                <default>false</default>
+                <label>PGP</label>
+            </value>
+            <value>
+                <fullName>PUM Receptacle</fullName>
+                <default>false</default>
+                <label>PUM Receptacle</label>
+            </value>
+            <value>
+                <fullName>A Series</fullName>
+                <default>false</default>
+                <label>A Series</label>
+            </value>
+            <value>
+                <fullName>QOMO-Blue</fullName>
+                <default>false</default>
+                <label>QOMO-Blue</label>
+            </value>
+            <value>
+                <fullName>Other Mlens</fullName>
+                <default>false</default>
+                <label>Other Mlens</label>
+            </value>
+            <value>
+                <fullName>W Others</fullName>
+                <default>false</default>
+                <label>W Others</label>
+            </value>
+            <value>
+                <fullName>TIG Jaguar</fullName>
+                <default>false</default>
+                <label>TIG Jaguar</label>
+            </value>
+            <value>
+                <fullName>Mic Lens</fullName>
+                <default>false</default>
+                <label>Mic Lens</label>
+            </value>
+            <value>
+                <fullName>Switch 1X2V Device</fullName>
+                <default>false</default>
+                <label>Switch 1X2V Device</label>
+            </value>
+            <value>
+                <fullName>Drv</fullName>
+                <default>false</default>
+                <label>Drv</label>
+            </value>
+            <value>
+                <fullName>Mic Spacer</fullName>
+                <default>false</default>
+                <label>Mic Spacer</label>
+            </value>
+            <value>
+                <fullName>RLAS-785</fullName>
+                <default>false</default>
+                <label>RLAS-785</label>
+            </value>
+            <value>
+                <fullName>PM</fullName>
+                <default>false</default>
+                <label>PM</label>
+            </value>
+            <value>
+                <fullName>3CH</fullName>
+                <default>false</default>
+                <label>3CH</label>
+            </value>
+            <value>
+                <fullName>LINECARD iROADM20</fullName>
+                <default>false</default>
+                <label>LINECARD iROADM20</label>
+            </value>
+            <value>
+                <fullName>OPTICAL LINE SUBSYST</fullName>
+                <default>false</default>
+                <label>OPTICAL LINE SUBSYST</label>
+            </value>
+            <value>
+                <fullName>Si- Etalon</fullName>
+                <default>false</default>
+                <label>Si- Etalon</label>
+            </value>
+            <value>
+                <fullName>Gain Block</fullName>
+                <default>false</default>
+                <label>Gain Block</label>
+            </value>
+            <value>
+                <fullName>C100G-8X1 48Ch</fullName>
+                <default>false</default>
+                <label>C100G-8X1 48Ch</label>
+            </value>
+            <value>
+                <fullName>635/1060WDM</fullName>
+                <default>false</default>
+                <label>635/1060WDM</label>
+            </value>
+            <value>
+                <fullName>WSS-C50G-9X1</fullName>
+                <default>false</default>
+                <label>WSS-C50G-9X1</label>
+            </value>
+            <value>
+                <fullName>L12.5G-2X1 96Ch</fullName>
+                <default>false</default>
+                <label>L12.5G-2X1 96Ch</label>
+            </value>
+            <value>
+                <fullName>L12.5G-4X1 96Ch</fullName>
+                <default>false</default>
+                <label>L12.5G-4X1 96Ch</label>
+            </value>
+            <value>
+                <fullName>WSS-L-12.5G 4x1</fullName>
+                <default>false</default>
+                <label>WSS-L-12.5G 4x1</label>
+            </value>
+            <value>
+                <fullName>CFP-AMP</fullName>
+                <default>false</default>
+                <label>CFP-AMP</label>
+            </value>
+            <value>
+                <fullName>C-T&amp;F12.5G-4X1 ASN</fullName>
+                <default>false</default>
+                <label>C-T&amp;F12.5G-4X1 ASN</label>
+            </value>
+            <value>
+                <fullName>WSS-C100G-1X1</fullName>
+                <default>false</default>
+                <label>WSS-C100G-1X1</label>
+            </value>
+            <value>
+                <fullName>C-CP50G-2X1 96Ch</fullName>
+                <default>false</default>
+                <label>C-CP50G-2X1 96Ch</label>
+            </value>
+            <value>
+                <fullName>C100G-2X1 48Ch</fullName>
+                <default>false</default>
+                <label>C100G-2X1 48Ch</label>
+            </value>
+            <value>
+                <fullName>PR-KT</fullName>
+                <default>false</default>
+                <label>PR-KT</label>
+            </value>
+            <value>
+                <fullName>UNCLD 980 PUMP G08EL</fullName>
+                <default>false</default>
+                <label>UNCLD 980 PUMP G08EL</label>
+            </value>
+            <value>
+                <fullName>LINECARD EDFA PORTIA</fullName>
+                <default>false</default>
+                <label>LINECARD EDFA PORTIA</label>
+            </value>
+            <value>
+                <fullName>polarizer plate</fullName>
+                <default>false</default>
+                <label>polarizer plate</label>
+            </value>
+            <value>
+                <fullName>C-T-WS20-25G MPO</fullName>
+                <default>false</default>
+                <label>C-T-WS20-25G MPO</label>
+            </value>
+            <value>
+                <fullName>FG 14xx PUMP</fullName>
+                <default>false</default>
+                <label>FG 14xx PUMP</label>
+            </value>
+            <value>
+                <fullName>1 to more PBS</fullName>
+                <default>false</default>
+                <label>1 to more PBS</label>
+            </value>
+            <value>
+                <fullName>PR-1 to more RAP</fullName>
+                <default>false</default>
+                <label>PR-1 to more RAP</label>
+            </value>
+            <value>
+                <fullName>PUM Splicing</fullName>
+                <default>false</default>
+                <label>PUM Splicing</label>
+            </value>
+            <value>
+                <fullName>Fiber Array-Aoguang</fullName>
+                <default>false</default>
+                <label>Fiber Array-Aoguang</label>
+            </value>
+            <value>
+                <fullName>FUSED SILICA</fullName>
+                <default>false</default>
+                <label>FUSED SILICA</label>
+            </value>
+            <value>
+                <fullName>CDTE</fullName>
+                <default>false</default>
+                <label>CDTE</label>
+            </value>
+            <value>
+                <fullName>PRODUCTION SUPPLIES</fullName>
+                <default>false</default>
+                <label>PRODUCTION SUPPLIES</label>
+            </value>
+            <value>
+                <fullName>YAG</fullName>
+                <default>false</default>
+                <label>YAG</label>
+            </value>
+            <value>
+                <fullName>RAW MATERIAL - E-MODULE/DEVICES</fullName>
+                <default>false</default>
+                <label>RAW MATERIAL - E-MODULE/DEVICES</label>
+            </value>
+            <value>
+                <fullName>RAW MATERIAL - ASSEMBLY</fullName>
+                <default>false</default>
+                <label>RAW MATERIAL - ASSEMBLY</label>
+            </value>
+            <value>
+                <fullName>LLC RAW MATERIALS/SPARES - LLK-Z-PARTS</fullName>
+                <default>false</default>
+                <label>LLC RAW MATERIALS/SPARES - LLK-Z-PARTS</label>
+            </value>
+            <value>
+                <fullName>FIBERLIGHT</fullName>
+                <default>false</default>
+                <label>FIBERLIGHT</label>
+            </value>
+            <value>
+                <fullName>MO REPAIRTS - OM</fullName>
+                <default>false</default>
+                <label>MO REPAIRTS - OM</label>
+            </value>
+            <value>
+                <fullName>LLK Q</fullName>
+                <default>false</default>
+                <label>LLK Q</label>
+            </value>
+            <value>
+                <fullName>FIXED OPTICS - BIMO</fullName>
+                <default>false</default>
+                <label>FIXED OPTICS - BIMO</label>
+            </value>
+            <value>
+                <fullName>REMOTE PROCESSING PDT 2.2 OPTIONS</fullName>
+                <default>false</default>
+                <label>REMOTE PROCESSING PDT 2.2 OPTIONS</label>
+            </value>
+            <value>
+                <fullName>FIXED OPTICS - PDT</fullName>
+                <default>false</default>
+                <label>FIXED OPTICS - PDT</label>
+            </value>
+            <value>
+                <fullName>REMOTE PROCESSING - RLSK</fullName>
+                <default>false</default>
+                <label>REMOTE PROCESSING - RLSK</label>
+            </value>
+            <value>
+                <fullName>MM FC LD MODULES BMU3E/4E</fullName>
+                <default>false</default>
+                <label>MM FC LD MODULES BMU3E/4E</label>
+            </value>
+            <value>
+                <fullName>VCSEL CHIPS + ARRAYS</fullName>
+                <default>false</default>
+                <label>VCSEL CHIPS + ARRAYS</label>
+            </value>
+            <value>
+                <fullName>MM FC MODULES  BMU1E</fullName>
+                <default>false</default>
+                <label>MM FC MODULES  BMU1E</label>
+            </value>
+            <value>
+                <fullName>FG 980 PUMP G09 UHP</fullName>
+                <default>false</default>
+                <label>FG 980 PUMP G09 UHP</label>
+            </value>
+            <value>
+                <fullName>SM FC MODULES SEEDS</fullName>
+                <default>false</default>
+                <label>SM FC MODULES SEEDS</label>
+            </value>
+            <value>
+                <fullName>MM CHIP ON SUBMOUNTS</fullName>
+                <default>false</default>
+                <label>MM CHIP ON SUBMOUNTS</label>
+            </value>
+            <value>
+                <fullName>MICRO PUMP</fullName>
+                <default>false</default>
+                <label>MICRO PUMP</label>
+            </value>
+            <value>
+                <fullName>MM BARE BARS</fullName>
+                <default>false</default>
+                <label>MM BARE BARS</label>
+            </value>
+            <value>
+                <fullName>MM FIBER-COUPLED MINIBARS</fullName>
+                <default>false</default>
+                <label>MM FIBER-COUPLED MINIBARS</label>
+            </value>
+            <value>
+                <fullName>MM CHIP ON C-MOUNTS</fullName>
+                <default>false</default>
+                <label>MM CHIP ON C-MOUNTS</label>
+            </value>
+            <value>
+                <fullName>Nd:YAG</fullName>
+                <default>false</default>
+                <label>Nd:YAG</label>
+            </value>
+            <value>
+                <fullName>MGL-Dicing</fullName>
+                <default>false</default>
+                <label>MGL-Dicing</label>
+            </value>
+            <value>
+                <fullName>1 to more W/M/F</fullName>
+                <default>false</default>
+                <label>1 to more W/M/F</label>
+            </value>
+            <value>
+                <fullName>S-Prism</fullName>
+                <default>false</default>
+                <label>S-Prism</label>
+            </value>
+            <value>
+                <fullName>L-S/D-Window</fullName>
+                <default>false</default>
+                <label>L-S/D-Window</label>
+            </value>
+            <value>
+                <fullName>Dual or Multi DWP</fullName>
+                <default>false</default>
+                <label>Dual or Multi DWP</label>
+            </value>
+            <value>
+                <fullName>Cone-Prism</fullName>
+                <default>false</default>
+                <label>Cone-Prism</label>
+            </value>
+            <value>
+                <fullName>Radius YAG</fullName>
+                <default>false</default>
+                <label>Radius YAG</label>
+            </value>
+            <value>
+                <fullName>Nd:YVO4</fullName>
+                <default>false</default>
+                <label>Nd:YVO4</label>
+            </value>
+            <value>
+                <fullName>ISO Dual stage</fullName>
+                <default>false</default>
+                <label>ISO Dual stage</label>
+            </value>
+            <value>
+                <fullName>1 Flow Cell</fullName>
+                <default>false</default>
+                <label>1 Flow Cell</label>
+            </value>
+            <value>
+                <fullName>FSI</fullName>
+                <default>false</default>
+                <label>FSI</label>
+            </value>
+            <value>
+                <fullName>YLF Rod</fullName>
+                <default>false</default>
+                <label>YLF Rod</label>
+            </value>
+            <value>
+                <fullName>Big BD</fullName>
+                <default>false</default>
+                <label>Big BD</label>
+            </value>
+            <value>
+                <fullName>Bonding crystal</fullName>
+                <default>false</default>
+                <label>Bonding crystal</label>
+            </value>
+            <value>
+                <fullName>CP/BP/UP</fullName>
+                <default>false</default>
+                <label>CP/BP/UP</label>
+            </value>
+            <value>
+                <fullName>PM Mini tap</fullName>
+                <default>false</default>
+                <label>PM Mini tap</label>
+            </value>
+            <value>
+                <fullName>Coupler Tap 1×2</fullName>
+                <default>false</default>
+                <label>Coupler Tap 1×2</label>
+            </value>
+            <value>
+                <fullName>CUS SINGL CH CTL AM</fullName>
+                <default>false</default>
+                <label>CUS SINGL CH CTL AM</label>
+            </value>
+            <value>
+                <fullName>Data Center</fullName>
+                <default>false</default>
+                <label>Data Center</label>
+            </value>
+            <value>
+                <fullName>Single head FC/UPC</fullName>
+                <default>false</default>
+                <label>Single head FC/UPC</label>
+            </value>
+            <value>
+                <fullName>Dual Wavelength Lock</fullName>
+                <default>false</default>
+                <label>Dual Wavelength Lock</label>
+            </value>
+            <value>
+                <fullName>PBC</fullName>
+                <default>false</default>
+                <label>PBC</label>
+            </value>
+            <value>
+                <fullName>TGG</fullName>
+                <default>false</default>
+                <label>TGG</label>
+            </value>
+            <value>
+                <fullName>Mic ETOF</fullName>
+                <default>false</default>
+                <label>Mic ETOF</label>
+            </value>
+            <value>
+                <fullName>WDM-D 200G DWDM</fullName>
+                <default>false</default>
+                <label>WDM-D 200G DWDM</label>
+            </value>
+            <value>
+                <fullName>Cr:YAG</fullName>
+                <default>false</default>
+                <label>Cr:YAG</label>
+            </value>
+            <value>
+                <fullName>CTM 4050</fullName>
+                <default>false</default>
+                <label>CTM 4050</label>
+            </value>
+            <value>
+                <fullName>TIG Tiger</fullName>
+                <default>false</default>
+                <label>TIG Tiger</label>
+            </value>
+            <value>
+                <fullName>CNC/HP</fullName>
+                <default>false</default>
+                <label>CNC/HP</label>
+            </value>
+            <value>
+                <fullName>GRT Grism</fullName>
+                <default>false</default>
+                <label>GRT Grism</label>
+            </value>
+            <value>
+                <fullName>FLL</fullName>
+                <default>false</default>
+                <label>FLL</label>
+            </value>
+            <value>
+                <fullName>Red</fullName>
+                <default>false</default>
+                <label>Red</label>
+            </value>
+            <value>
+                <fullName>Rotator</fullName>
+                <default>false</default>
+                <label>Rotator</label>
+            </value>
+            <value>
+                <fullName>2CH/PP</fullName>
+                <default>false</default>
+                <label>2CH/PP</label>
+            </value>
+            <value>
+                <fullName>Unnormal jumper</fullName>
+                <default>false</default>
+                <label>Unnormal jumper</label>
+            </value>
+            <value>
+                <fullName>Tra Femtos</fullName>
+                <default>false</default>
+                <label>Tra Femtos</label>
+            </value>
+            <value>
+                <fullName>12 inch</fullName>
+                <default>false</default>
+                <label>12 inch</label>
+            </value>
+            <value>
+                <fullName>C-CP12.5G-4X1 96Ch</fullName>
+                <default>false</default>
+                <label>C-CP12.5G-4X1 96Ch</label>
+            </value>
+            <value>
+                <fullName>PM Unidirec tap</fullName>
+                <default>false</default>
+                <label>PM Unidirec tap</label>
+            </value>
+            <value>
+                <fullName>QOMO-Red</fullName>
+                <default>false</default>
+                <label>QOMO-Red</label>
+            </value>
+            <value>
+                <fullName>CNC</fullName>
+                <default>false</default>
+                <label>CNC</label>
+            </value>
+            <value>
+                <fullName>GRT Others</fullName>
+                <default>false</default>
+                <label>GRT Others</label>
+            </value>
+            <value>
+                <fullName>SM</fullName>
+                <default>false</default>
+                <label>SM</label>
+            </value>
+            <value>
+                <fullName>Switch 1X4 Module</fullName>
+                <default>false</default>
+                <label>Switch 1X4 Module</label>
+            </value>
+            <value>
+                <fullName>Low Power</fullName>
+                <default>false</default>
+                <label>Low Power</label>
+            </value>
+            <value>
+                <fullName>Module</fullName>
+                <default>false</default>
+                <label>Module</label>
+            </value>
+            <value>
+                <fullName>QOMO-Green</fullName>
+                <default>false</default>
+                <label>QOMO-Green</label>
+            </value>
+            <value>
+                <fullName>Powell Lens</fullName>
+                <default>false</default>
+                <label>Powell Lens</label>
+            </value>
+            <value>
+                <fullName>Glass</fullName>
+                <default>false</default>
+                <label>Glass</label>
+            </value>
+            <value>
+                <fullName>C-T-T&amp;F50G-1X9 96Ch</fullName>
+                <default>false</default>
+                <label>C-T-T&amp;F50G-1X9 96Ch</label>
+            </value>
+            <value>
+                <fullName>Mechanics</fullName>
+                <default>false</default>
+                <label>Mechanics</label>
+            </value>
+            <value>
+                <fullName>1064 Series</fullName>
+                <default>false</default>
+                <label>1064 Series</label>
+            </value>
+            <value>
+                <fullName>Connector</fullName>
+                <default>false</default>
+                <label>Connector</label>
+            </value>
+            <value>
+                <fullName>CTM EVAL</fullName>
+                <default>false</default>
+                <label>CTM EVAL</label>
+            </value>
+            <value>
+                <fullName>RACKMOUNT EDFA OASIS</fullName>
+                <default>false</default>
+                <label>RACKMOUNT EDFA OASIS</label>
+            </value>
+            <value>
+                <fullName>PG1600P - Single</fullName>
+                <default>false</default>
+                <label>PG1600P - Single</label>
+            </value>
+            <value>
+                <fullName>LINECARD ROADM 1X4</fullName>
+                <default>false</default>
+                <label>LINECARD ROADM 1X4</label>
+            </value>
+            <value>
+                <fullName>UNCOOLED MICRO PUMP</fullName>
+                <default>false</default>
+                <label>UNCOOLED MICRO PUMP</label>
+            </value>
+            <value>
+                <fullName>RACKMOUNT EDFA LEGAC</fullName>
+                <default>false</default>
+                <label>RACKMOUNT EDFA LEGAC</label>
+            </value>
+            <value>
+                <fullName>PR-1 to 1 RAP</fullName>
+                <default>false</default>
+                <label>PR-1 to 1 RAP</label>
+            </value>
+            <value>
+                <fullName>980 SUBMARINE ASSY</fullName>
+                <default>false</default>
+                <label>980 SUBMARINE ASSY</label>
+            </value>
+            <value>
+                <fullName>C-WS09-6.25G</fullName>
+                <default>false</default>
+                <label>C-WS09-6.25G</label>
+            </value>
+            <value>
+                <fullName>MODULES BMU16E/22E</fullName>
+                <default>false</default>
+                <label>MODULES BMU16E/22E</label>
+            </value>
+            <value>
+                <fullName>PR-1 to more MSP</fullName>
+                <default>false</default>
+                <label>PR-1 to more MSP</label>
+            </value>
+            <value>
+                <fullName>3200 16 ETALON TDC</fullName>
+                <default>false</default>
+                <label>3200 16 ETALON TDC</label>
+            </value>
+            <value>
+                <fullName>MODULES BMU8E/10E</fullName>
+                <default>false</default>
+                <label>MODULES BMU8E/10E</label>
+            </value>
+            <value>
+                <fullName>PR-1 to more BSP</fullName>
+                <default>false</default>
+                <label>PR-1 to more BSP</label>
+            </value>
+            <value>
+                <fullName>ALUMINUM</fullName>
+                <default>false</default>
+                <label>ALUMINUM</label>
+            </value>
+            <value>
+                <fullName>BK7</fullName>
+                <default>false</default>
+                <label>BK7</label>
+            </value>
+            <value>
+                <fullName>IRG-24</fullName>
+                <default>false</default>
+                <label>IRG-24</label>
+            </value>
+            <value>
+                <fullName>RAW MATERIAL - PURCHASED PARTS</fullName>
+                <default>false</default>
+                <label>RAW MATERIAL - PURCHASED PARTS</label>
+            </value>
+            <value>
+                <fullName>CUTTING HEADS - FSC OPTIONS</fullName>
+                <default>false</default>
+                <label>CUTTING HEADS - FSC OPTIONS</label>
+            </value>
+            <value>
+                <fullName>WPM</fullName>
+                <default>false</default>
+                <label>WPM</label>
+            </value>
+            <value>
+                <fullName>REMOTE PROCESSING - RLSK OPTIONS</fullName>
+                <default>false</default>
+                <label>REMOTE PROCESSING - RLSK OPTIONS</label>
+            </value>
+            <value>
+                <fullName>OM OPTIONS/DOCUMENTATION-ASSEMBLY</fullName>
+                <default>false</default>
+                <label>OM OPTIONS/DOCUMENTATION-ASSEMBLY</label>
+            </value>
+            <value>
+                <fullName>10-DSP</fullName>
+                <default>false</default>
+                <label>10-DSP</label>
+            </value>
+            <value>
+                <fullName>OM SPARES - Z-PARTS</fullName>
+                <default>false</default>
+                <label>OM SPARES - Z-PARTS</label>
+            </value>
+            <value>
+                <fullName>FIXED OPTICS - RSK</fullName>
+                <default>false</default>
+                <label>FIXED OPTICS - RSK</label>
+            </value>
+            <value>
+                <fullName>CUTTING HEADS - FSC</fullName>
+                <default>false</default>
+                <label>CUTTING HEADS - FSC</label>
+            </value>
+            <value>
+                <fullName>PEEK</fullName>
+                <default>false</default>
+                <label>PEEK</label>
+            </value>
+            <value>
+                <fullName>BOROFLOAT-33</fullName>
+                <default>false</default>
+                <label>BOROFLOAT-33</label>
+            </value>
+            <value>
+                <fullName>FIXED FOCUS</fullName>
+                <default>false</default>
+                <label>FIXED FOCUS</label>
+            </value>
+            <value>
+                <fullName>FIBERFLEX</fullName>
+                <default>false</default>
+                <label>FIBERFLEX</label>
+            </value>
+            <value>
+                <fullName>SERVICE - TRAINING</fullName>
+                <default>false</default>
+                <label>SERVICE - TRAINING</label>
+            </value>
+            <value>
+                <fullName>MM FC MODULES BMU22E</fullName>
+                <default>false</default>
+                <label>MM FC MODULES BMU22E</label>
+            </value>
+            <value>
+                <fullName>FG 980 PUMP G08</fullName>
+                <default>false</default>
+                <label>FG 980 PUMP G08</label>
+            </value>
+            <value>
+                <fullName>1 to 1 TWP</fullName>
+                <default>false</default>
+                <label>1 to 1 TWP</label>
+            </value>
+            <value>
+                <fullName>PP</fullName>
+                <default>false</default>
+                <label>PP</label>
+            </value>
+            <value>
+                <fullName>Silicon FA</fullName>
+                <default>false</default>
+                <label>Silicon FA</label>
+            </value>
+            <value>
+                <fullName>FLL-Dicing</fullName>
+                <default>false</default>
+                <label>FLL-Dicing</label>
+            </value>
+            <value>
+                <fullName>DP</fullName>
+                <default>false</default>
+                <label>DP</label>
+            </value>
+            <value>
+                <fullName>Si Mirror</fullName>
+                <default>false</default>
+                <label>Si Mirror</label>
+            </value>
+            <value>
+                <fullName>S-L-S/D-Window-Dic</fullName>
+                <default>false</default>
+                <label>S-L-S/D-Window-Dic</label>
+            </value>
+            <value>
+                <fullName>Ball</fullName>
+                <default>false</default>
+                <label>Ball</label>
+            </value>
+            <value>
+                <fullName>Small Mushroom Ball</fullName>
+                <default>false</default>
+                <label>Small Mushroom Ball</label>
+            </value>
+            <value>
+                <fullName>PXL</fullName>
+                <default>false</default>
+                <label>PXL</label>
+            </value>
+            <value>
+                <fullName>PG1000</fullName>
+                <default>false</default>
+                <label>PG1000</label>
+            </value>
+            <value>
+                <fullName>PASSIVE MODULE</fullName>
+                <default>false</default>
+                <label>PASSIVE MODULE</label>
+            </value>
+            <value>
+                <fullName>980/1550WDM</fullName>
+                <default>false</default>
+                <label>980/1550WDM</label>
+            </value>
+            <value>
+                <fullName>FLM-Dicing</fullName>
+                <default>false</default>
+                <label>FLM-Dicing</label>
+            </value>
+            <value>
+                <fullName>LENS Others</fullName>
+                <default>false</default>
+                <label>LENS Others</label>
+            </value>
+            <value>
+                <fullName>FIB ZPS</fullName>
+                <default>false</default>
+                <label>FIB ZPS</label>
+            </value>
+            <value>
+                <fullName>Tra PBS</fullName>
+                <default>false</default>
+                <label>Tra PBS</label>
+            </value>
+            <value>
+                <fullName>Switch 1X1U Device</fullName>
+                <default>false</default>
+                <label>Switch 1X1U Device</label>
+            </value>
+            <value>
+                <fullName>EDFA Amplifier</fullName>
+                <default>false</default>
+                <label>EDFA Amplifier</label>
             </value>
         </valueSetDefinition>
     </valueSet>
