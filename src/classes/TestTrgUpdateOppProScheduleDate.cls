@@ -1,15 +1,19 @@
 @IsTest(Seealldata=true)
 public class TestTrgUpdateOppProScheduleDate{
     private static testmethod void trgUpdateOppProScheduleDateTest(){
-        Account acc = new Account();
-        acc.name='Test Account';
+        Account globalParentAcc=new Account(Name='Global Parent',Display_Shipping_Country__c ='United States', Display_Billing_Country__c = 'United States',ShippingCity = 'New York', ShippingCountry ='US',RecordTypeId=Schema.SObjectType.Account.getRecordTypeInfosByName().get('Global Parent').getRecordTypeId());
+            insert globalParentAcc;
+         Account acc = new Account(name='Account ',ParentId=globalParentAcc.Id,Display_Shipping_Country__c ='United States',  Display_Billing_Country__c = 'United States',
+                                  billingcity='New York', billingcountry='US',ShippingCity = 'New York', ShippingCountry ='US',Status__c='Active',Type='Customer',RecordTypeId = Schema.SObjectType.Account.getRecordTypeInfosByName().get('Top Level Account').getRecordTypeId());
+        
         insert acc;
         
-        Pricebook2 standardPB = [SELECT Id, Name FROM PriceBook2 Limit 1];
         
+         Pricebook2 customPB = new Pricebook2(Name='Custom Pricebook', isActive=true);
+        insert customPB;
         opportunity opp = new opportunity();
         opp.Name='Test';
-        opp.Pricebook2ID = standardPB.Id ;
+        opp.Pricebook2ID = customPB.Id ;
         opp.CloseDate=date.today().addDays(5);
         opp.AccountId=acc.id;
         opp.StageName='Closed Won';
@@ -29,7 +33,7 @@ public class TestTrgUpdateOppProScheduleDate{
         
         PricebookEntry pe = new PricebookEntry();
         pe.Product2Id = p.Id;
-        pe.Pricebook2Id = standardPB.Id;
+        pe.Pricebook2Id = customPB.Id;
         pe.UnitPrice = 1000;
         pe.IsActive = true;
         insert pe;
@@ -40,20 +44,7 @@ public class TestTrgUpdateOppProScheduleDate{
         oli.Quantity = 1;
         oli.UnitPrice = 1000;
         insert oli; 
-          OpportunityLineItem oli2 = new OpportunityLineItem();
-        oli2.OpportunityId = opp.Id;
-        oli2.PricebookEntryId = pe.Id;
-        oli2.Quantity = 3;
-        oli2.UnitPrice = 10000;
-        insert oli2; 
-         OpportunityLineItem oli3 = new OpportunityLineItem();
-        oli3.OpportunityId = opp.Id;
-        oli3.PricebookEntryId = pe.Id;
-        oli3.Quantity = 3;
-        oli3.UnitPrice = 10000;
-        insert oli3; 
-        
-        update oli;  
+         
         
     }
 }

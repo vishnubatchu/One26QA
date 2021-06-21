@@ -5,7 +5,8 @@
     <!--lightning:navigation aura:id="navService"/-->
     <!--aura:attribute name="myBool" type="Boolean" default="true"/-->
     <!--aura:handler name="change" value="{!v.myBool}" action="{!c.handleClick}"/-->
-   <!--Added by Surendar -->
-    <lightning:workspaceAPI aura:id="workspace" />
-     
+    <!--Added by Surendar -->
+    <div class="slds-hidden">
+        <lightning:workspaceAPI aura:id="workspace" />
+    </div>
 </aura:component>

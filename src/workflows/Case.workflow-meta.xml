@@ -13,11 +13,11 @@
     </alerts>
     <alerts>
         <fullName>AMD_WebToCase_Internal_Initial_Email</fullName>
-        <ccEmails>Gary.Ruland@II-VI.com</ccEmails>
-        <ccEmails>Tom.Wessel@II-VI.com</ccEmails>
-        <ccEmails>Michael.VanDromme@II-VI.com</ccEmails>
-        <ccEmails>Ping.Wu@II-VI.com</ccEmails>
-        <ccEmails>Jeffrey.Emerson@II-VI.com</ccEmails>
+        <ccEmails>Gary.Ruland@II-VI.com.test</ccEmails>
+        <ccEmails>Tom.Wessel@II-VI.com.test</ccEmails>
+        <ccEmails>Michael.VanDromme@II-VI.com.test</ccEmails>
+        <ccEmails>Ping.Wu@II-VI.com.test</ccEmails>
+        <ccEmails>Jeffrey.Emerson@II-VI.com.test</ccEmails>
         <description>AMD WebToCase Internal Initial Email</description>
         <protected>false</protected>
         <recipients>
@@ -51,8 +51,8 @@
     </alerts>
     <alerts>
         <fullName>HY_Emergency_Internal_Email</fullName>
-        <ccEmails>Tilo.Phillips@II-VI.com</ccEmails>
-        <ccEmails>matthias.kuehnel@ii-vi.com</ccEmails>
+        <ccEmails>Tilo.Phillips@II-VI.com.test</ccEmails>
+        <ccEmails>matthias.kuehnel@ii-vi.com.test</ccEmails>
         <description>HY Emergency Internal Email</description>
         <protected>false</protected>
         <recipients>
@@ -304,11 +304,17 @@
             <name>AMD_WebToCase_Internal_Initial_Email</name>
             <type>Alert</type>
         </actions>
-        <active>false</active>
+        <active>true</active>
+        <booleanFilter>1 OR 2</booleanFilter>
         <criteriaItems>
             <field>Case.RecordTypeId</field>
             <operation>equals</operation>
             <value>AdvMat</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>AdvMat Unconfirmed</value>
         </criteriaItems>
         <triggerType>onCreateOnly</triggerType>
     </rules>

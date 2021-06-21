@@ -1,4 +1,4 @@
-public class AccountTriggerHelper {
+public without sharing class AccountTriggerHelper {
     public static Boolean isAccountupdate = false;
     public static Boolean isRecursive =true;
     public static void afterInsert(List<Account> newAccounts){
@@ -26,7 +26,7 @@ public class AccountTriggerHelper {
                } 
         }
         if(!newAccountIds.isEmpty())
-          //  ContactForGDPR.updateAccountContact(newAccountIds);
+            ContactForGDPR.updateAccountContact(newAccountIds);
         if(!parentAccIds.isEmpty())
             calculateARAmountRollup(parentAccIds);
     }
@@ -133,33 +133,37 @@ insert att;*/
         }
     }
     
-    
-    
-    /* This method checks if the Account Name for accounts where Record Type = Global Parent is unique,
-     * else throws an error message  
+    /*
+     * Created by : Pooja U
+     * Date : 24th May 2021
+     * Description: When Account(with 'Global Parent' recordtype) owner changes,this method queries all sub accounts associated to GlobalParentAccount
+     *  and populates Global_Parent_Previous_Owner__c field 
      */
-    /*public static void chckGlblPrntAccDplct(List<Account> newAccounts){
-        set<String> newAccountNameSet = new set<String>();
-        for(Account newAccount : newAccounts){
-            newAccountNameSet.add(newAccount.Name);
-        }      
-        List<Account> existingAccounts = [SELECT Id,Name FROM Account WHERE Name IN :newAccountNameSet and RecordType.Name='Global Parent'];
-
-        if(existingAccounts!=null && !existingAccounts.isEmpty()){
-            Map<String,Id> existingAccountNameMap=new Map<String,Id>();
-          
-            for(Account eachExistingAccount : existingAccounts){
-                existingAccountNameMap.put(eachExistingAccount.Name,eachExistingAccount.Id);
+    public static void updateGlblPrntPrevOwner(List<Account> newAccounts,Map<Id, Account> oldAccountMap){
+        List<Account> globalPreviousOwnerAccLst=new List<Account>();
+        Set<Id> globalParentAccIdSet=new Set<Id>();
+        for(Account eachAcc:newAccounts){
+            if(eachAcc.RecordTypeId == Schema.SObjectType.Account.getRecordTypeInfosByName().get('Global Parent').getRecordTypeId() && oldAccountMap.get(eachAcc.Id).OwnerId!=eachAcc.OwnerId){
+                Account globalParentAcc=new Account();
+                globalParentAcc.Id=eachAcc.Id;
+                globalParentAcc.Global_Parent_Previous_Owner__c=oldAccountMap.get(eachAcc.Id).OwnerId;
+                globalParentAccIdSet.add(eachAcc.Id);
+                globalPreviousOwnerAccLst.add(globalParentAcc);
             }
-            for(Account eachNewAccount : newAccounts){
-                if(existingAccountNameMap.containsKey(eachNewAccount.Name) && eachNewAccount.RecordTypeId==
-                   Schema.SObjectType.Account.getRecordTypeInfosByName().get('Global Parent').getRecordTypeId()){
-                    eachNewAccount.addError('There is an existing account with this name.');
-                }
-            	
-        	} 
-            
         }
-    }*/
-
+        if(!globalParentAccIdSet.isEmpty()){
+            List<Account> subAccountList=[Select Id,Name,Global_Ultimate_Parent__c from Account where Global_Ultimate_Parent__c IN: globalParentAccIdSet];
+            for(Account eachSubAcc:subAccountList){
+                if(globalParentAccIdSet.contains(eachSubAcc.Global_Ultimate_Parent__c)){
+                    Account subAccount=new Account();
+                    subAccount.Id=eachSubAcc.Id;
+                    subAccount.Global_Parent_Previous_Owner__c=oldAccountMap.get(eachSubAcc.Global_Ultimate_Parent__c).OwnerId;
+                    globalPreviousOwnerAccLst.add(subAccount);
+                }
+            }
+            if(!globalPreviousOwnerAccLst.isEmpty()){
+                update globalPreviousOwnerAccLst;
+            }
+        }
+    }
 }

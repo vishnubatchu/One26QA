@@ -3,6 +3,14 @@
     <fullName>AdvMat</fullName>
     <isActive>true</isActive>
     <values>
+        <fullName>Approved by RMA Admin</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Awaiting CFO Approval</fullName>
+        <default>false</default>
+    </values>
+    <values>
         <fullName>Closed</fullName>
         <default>false</default>
     </values>
@@ -13,5 +21,17 @@
     <values>
         <fullName>Open</fullName>
         <default>true</default>
+    </values>
+    <values>
+        <fullName>Pending</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Pending RMA Admin Review</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Rejected</fullName>
+        <default>false</default>
     </values>
 </BusinessProcess>

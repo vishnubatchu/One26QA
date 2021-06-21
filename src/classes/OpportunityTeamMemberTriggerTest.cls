@@ -9,7 +9,8 @@ private class OpportunityTeamMemberTriggerTest {
                             LocaleSidKey='en_US', ProfileId = p.Id, 
                             TimeZoneSidKey='America/Los_Angeles', UserName='rsmstandarduser@testorg.com', UserRoleId = uRole.Id);
         system.runAs(rsm){
-            Id pricebookId = Test.getStandardPricebookId();
+      Pricebook2 customPB = new Pricebook2(Name='Custom Pricebook', isActive=true);
+        insert customPB;
             Opportunity opt = new Opportunity();
             opt.Name = 'Test Opportunity';
             opt.CloseDate = Date.today().addDays(30);
@@ -17,21 +18,21 @@ private class OpportunityTeamMemberTriggerTest {
             opt.Project_Name__c = 'Test Project';
             opt.Type = 'Replacement';
             opt.RSM__c = rsm.Id;
-            opt.Pricebook2Id = pricebookId;
+            opt.Pricebook2Id = customPB.id;
             insert opt;
             Product2 prd = new Product2();
-            prd.Name = '1277796';
+            prd.Name = '1277';
             prd.IsActive = true;
             prd.Marketing_P_N__c = '10WSCN08LFL';
             prd.Status__c = 'Loaner';
-            prd.ProductCode = '1277796';
+            prd.ProductCode = '1277';
             prd.Product_Family__c = 'WSS-DWP50';
             prd.BU_Code__c = '0040';
             prd.ExternalId__c = '10WSCN08LFL';
             insert prd;
-            
+         
             PricebookEntry pbEntry = new PricebookEntry(
-                Pricebook2Id = pricebookId,
+                Pricebook2Id = customPB.id,
                 Product2Id = prd.Id,
                 UnitPrice = 100.00,
                 IsActive = true

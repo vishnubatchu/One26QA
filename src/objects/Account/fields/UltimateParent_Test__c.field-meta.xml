@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>UltimateParent_Test__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( LEN( Parent.Name )&lt; 1 , HYPERLINK(&quot;/&quot;&amp;Global_Ultimate_Parent__r.Id, Global_Ultimate_Parent__r.Name ,&quot;_Parent&quot;) , IF( LEN( Parent.Parent.Name )&lt; 1 , HYPERLINK(&quot;/&quot;&amp;Parent.Global_Ultimate_Parent__r.Id,Parent.Global_Ultimate_Parent__r.Name ,&quot;_Parent&quot;) ,  IF( LEN( Parent.Parent.Parent.Name )&lt; 1 , HYPERLINK(&quot;/&quot;&amp;Parent.Parent.Global_Ultimate_Parent__r.Id,Parent.Parent.Global_Ultimate_Parent__r.Name ,&quot;_Parent&quot;) ,IF( LEN( Parent.Parent.Parent.Parent.Name )&lt; 1 , HYPERLINK(&quot;/&quot;&amp;Parent.Parent.Parent.Global_Ultimate_Parent__r.Id,Parent.Parent.Parent.Global_Ultimate_Parent__r.Name ,&quot;_Parent&quot;) ,IF( LEN( Parent.Parent.Parent.Parent.Parent.Name )&lt; 1 , HYPERLINK(&quot;/&quot;&amp;Parent.Parent.Parent.Parent.Global_Ultimate_Parent__r.Id,Parent.Parent.Parent.Parent.Global_Ultimate_Parent__r.Name ,&quot;_Parent&quot;) ,IF( LEN( Parent.Parent.Parent.Parent.Parent.Parent.Name )&lt; 1 , HYPERLINK(&quot;/&quot;&amp;Parent.Parent.Parent.Parent.Parent.Global_Ultimate_Parent__r.Id,Parent.Parent.Parent.Parent.Parent.Global_Ultimate_Parent__r.Name ,&quot;_Parent&quot;) ,&apos;&apos;))) ) ) )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>UltimateParent Test</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

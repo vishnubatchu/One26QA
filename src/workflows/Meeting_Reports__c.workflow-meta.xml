@@ -5,8 +5,7 @@
         <description>Market 60 Call Reports</description>
         <protected>false</protected>
         <recipients>
-            <recipient>susmithra.murugan@ii-vi.com</recipient>
-            <type>user</type>
+            <type>accountOwner</type>
         </recipients>
         <senderType>CurrentUser</senderType>
         <template>unfiled$public/New_Call_Report</template>
@@ -16,8 +15,7 @@
         <description>Submit Call Report</description>
         <protected>false</protected>
         <recipients>
-            <recipient>susmithra.murugan@ii-vi.com</recipient>
-            <type>user</type>
+            <type>accountOwner</type>
         </recipients>
         <senderType>CurrentUser</senderType>
         <template>unfiled$public/New_Call_Report</template>
@@ -27,8 +25,7 @@
         <description>Submit Call Report MIE</description>
         <protected>false</protected>
         <recipients>
-            <recipient>susmithra.murugan@ii-vi.com</recipient>
-            <type>user</type>
+            <type>accountOwner</type>
         </recipients>
         <senderType>CurrentUser</senderType>
         <template>unfiled$public/New_Call_Report</template>
@@ -38,8 +35,7 @@
         <description>Submit Call Report - Competitor</description>
         <protected>false</protected>
         <recipients>
-            <recipient>susmithra.murugan@ii-vi.com</recipient>
-            <type>user</type>
+            <type>accountOwner</type>
         </recipients>
         <senderType>CurrentUser</senderType>
         <template>unfiled$public/New_Call_Report_Competitor</template>
@@ -62,7 +58,7 @@
             <value>Customer</value>
         </criteriaItems>
         <criteriaItems>
-            <field>Account.Region__c</field>
+            <field>Account.Glovia_Region__c</field>
             <operation>notEqual</operation>
             <value>MIE</value>
         </criteriaItems>
@@ -137,7 +133,7 @@
             <value>Customer</value>
         </criteriaItems>
         <criteriaItems>
-            <field>Account.Region__c</field>
+            <field>Account.Glovia_Region__c</field>
             <operation>equals</operation>
             <value>MIE</value>
         </criteriaItems>

@@ -15,8 +15,8 @@ public with sharing class WTC_Case_Controller {
 
         System.debug('[-] Case name: ' + theCase.Subject);
 
-        //Id recordTypeId = [SELECT Id FROM RecordType WHERE Name = 'AdvMat Unconfirmed' AND SobjectType = 'Case' LIMIT 1].Id;
-        //theCase.RecordTypeId = recordTypeId;
+        Id recordTypeId = [SELECT Id FROM RecordType WHERE Name = 'AdvMat Unconfirmed' AND SobjectType = 'Case' LIMIT 1].Id;
+        theCase.RecordTypeId = recordTypeId;
         theCase.Origin = 'Web';
 
         try {

@@ -38,8 +38,12 @@ public with sharing class LightningSelfRegisterControllerTest {
  /* Verifies SelfRegistration flow with an accounId that is created within the test */
  @IsTest
  static void testSelfRegisterWithCreatedAccount() {
-  Account acc = new Account(name = 'test acc');
-  insert acc;
+        Account globalParentAcc=new Account(Name='Global Parent Test Acc2',ShippingCity = 'New York',Display_Shipping_Country__c ='United States',   Display_Billing_Country__c = 'United States', ShippingCountry ='US',RecordTypeId=Schema.SObjectType.Account.getRecordTypeInfosByName().get('Global Parent').getRecordTypeId()	);
+      insert globalParentAcc;
+        List<Account> accountsList = new List<Account>();
+        Account acc = new Account(name='AccountTopLevelTest', Display_Shipping_Country__c ='United States',   Display_Billing_Country__c = 'United States',
+                                   Status__c='Active',Type='Customer',ShippingCity = 'New York', ShippingCountry ='US',ParentId = globalParentAcc.Id,RecordTypeId = Schema.SObjectType.Account.getRecordTypeInfosByName().get('Top Level Account').getRecordTypeId());
+        insert acc;
   List < Account > accounts = [SELECT Id FROM Account LIMIT 1];
   System.assert(!accounts.isEmpty(), 'There must be at least one account in this environment!');
   String accountId = accounts[0].Id;

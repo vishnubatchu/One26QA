@@ -1,11 +1,13 @@
 @isTest
 public class CaseApprovalEmailServicehandlerTest {
     @testsetup static void testData(){
-        Account acc = new Account(name='Account ', Shippingcity='Hyderabad', Shippingcountry='India',
+        Account globalParentAcc=new Account(Name='Global Parent Test Acc',Display_Shipping_Country__c ='United States',   Display_Billing_Country__c = 'United States',ShippingCity = 'New York', ShippingCountry ='US',RecordTypeId=getRecordTypeIdByName('Global Parent'));
+        insert globalParentAcc;
+        Account acc = new Account(name='Account1 ', Shippingcity='Hyderabad',Display_Shipping_Country__c ='United States',   Display_Billing_Country__c = 'United States', Shippingcountry='US',ParentId=globalParentAcc.Id,
                                   billingcity='New York', billingcountry='USA',Status__c='Active',Type='Customer',RecordTypeId = Schema.SObjectType.Account.getRecordTypeInfosByName().get('Top Level Account').getRecordTypeId());
         insert acc;
-       Account siteacc = new Account(name='AccountSite ', 
-                                      shippingcity='New York',Site_Use_Code__c='SHIP_TO',Site_Use_Status__c='Active',parentId=acc.id, shippingcountry='USA',Status__c='Active',Type='Customer',RecordTypeId = Schema.SObjectType.Account.getRecordTypeInfosByName().get('Site').getRecordTypeId());
+       Account siteacc = new Account(name='AccountSite ', Display_Shipping_Country__c ='United States',   Display_Billing_Country__c = 'United States',
+                                      shippingcity='New York',Site_Use_Code__c='SHIP_TO',Site_Use_Status__c='Active',parentId=acc.id, shippingcountry='US',Status__c='Active',Type='Customer',RecordTypeId = Schema.SObjectType.Account.getRecordTypeInfosByName().get('Site').getRecordTypeId());
         insert siteacc;
         Profile p = [SELECT Id FROM Profile WHERE Name = 'System Administrator' LIMIT 1];
         String roleId =[select Id from UserRole where Name='CFO' LIMIT 1].Id;
@@ -27,10 +29,9 @@ public class CaseApprovalEmailServicehandlerTest {
             insert u2;insert u3;insert u4;insert u5;
         }
         u.VP__c = u3.Id;
+        u.email = 'kurt.adzema@finisar.com';
         u.SVP__c = u5.Id;
-       
         update u;
-        
         case case1 = new case(Finisar_Sales_Manager__c = u1.Id,Customer_Name__c=acc.id,CFO_User__c =u.id,Wavelength_BU_GM__c=u2.Id,SVP_of_Sales__c=u5.Id,X3DSensing_BU_GM__c=u2.Id,Data_n_W_BU_GM__c=u2.Id,OpticalIC_BU_GM__c=u2.Id ,Billing_Type__c ='Return For Credit Only, No Outbound Rebill Involved',Status ='Open', 
                               Ship_To_Customer__c=acc.id, Ship_To_Address__c =siteacc.id,Outbound_RMA_PO__c='456543',Requested_Service__c='Failure Analysis',CustomerRef_RMANo__c='345654',RecordTypeId = Schema.SObjectType.Case.getRecordTypeInfosByName().get('RMA Request').getRecordTypeId(),EndCustomerInbound__c = 'ec');
         insert case1;
@@ -38,22 +39,20 @@ public class CaseApprovalEmailServicehandlerTest {
         IF(Approval.isLocked(case1.id)) {
             Approval.unlock(case1.Id);
         }
-        Approval.ProcessSubmitRequest req1 = new Approval.ProcessSubmitRequest();
+  Approval.ProcessSubmitRequest req1 = new Approval.ProcessSubmitRequest();
         req1.setComments('Submitting request for approval.');
         req1.setObjectId(case1.Id);
-        Approval.ProcessResult result = Approval.process(req1);
+        req1.setSubmitterId(u.id);
+        Approval.ProcessResult result = Approval.process(req1); 
     }
      static testmethod void caseApprovalReminder2() { 
-        //Test.startTest();
         Case cs1 =[select id from case limit 1];
         Profile p = [SELECT Id FROM Profile WHERE Name = 'System Administrator' LIMIT 1];
         String roleId =[select Id from UserRole where Name='CFO' LIMIT 1].Id;
         user u = [select id,UserRoleId,profileid,vp__c,svp__c,email from user where lastname='adas' and isActive=true LIMIT 1];
-    
-        string arprv1  = 'Action:Approve';
+         string arprv1  = 'Action:Approve';
         sendInboundEmail(u,cs1,arprv1);  
          System.debug('test executed');
-        //Test.stopTest();
     }
     static testmethod void caseApprovalReminder() { 
         Test.startTest();
@@ -61,7 +60,6 @@ public class CaseApprovalEmailServicehandlerTest {
         Profile p = [SELECT Id FROM Profile WHERE Name = 'System Administrator' LIMIT 1];
         String roleId =[select Id from UserRole where Name='CFO' LIMIT 1].Id;
         user u = [select id,UserRoleId,profileid,vp__c,svp__c,email from user where lastname='adas' and isActive=true LIMIT 1];
-    
         string arprv  = 'Action: Reject';
         sendInboundEmail(u,cs1,arprv);      
         Test.stopTest();
@@ -82,10 +80,8 @@ public class CaseApprovalEmailServicehandlerTest {
         body = body+'Case Id : ['+quoteObj.id+']' ;
         System.debug('body'+body);
         email.plainTextBody =body;
-        //test.startTest();
         CaseApprovalEmailServicehandler approvalEmailObj =    New CaseApprovalEmailServicehandler();
         approvalEmailObj.handleInboundEmail(email, env);
-        //test.stopTest();
     }
     
     public static User createTestUser(Id roleId, Id profID, String fName, String lName) {
@@ -111,5 +107,9 @@ public class CaseApprovalEmailServicehandlerTest {
      static testmethod void cancelRMARequest(){
          Case cs1 =[select id from case where CustomerRef_RMANo__c ='345654' limit 1];
          RmaRequestCancellation.cancelRmaRequest(New List<Id>{cs1.Id});
+    }
+    
+    static Id getRecordTypeIdByName(String recordTypeName){
+       return [Select Id from RecordType where Name=:recordTypeName].Id;
     }
 }

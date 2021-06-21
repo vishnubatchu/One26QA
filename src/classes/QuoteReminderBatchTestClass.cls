@@ -3,12 +3,15 @@ public class QuoteReminderBatchTestClass {
 		
     @isTest   	
     static void sendQuoteReminderEmail(){
-         Account acc = new Account(name='Account2', 
+        Account globalParentAcc=new Account(Name='Global Parent Test Acc',Display_Shipping_Country__c ='United States',   Display_Billing_Country__c = 'United States',ShippingCity = 'New York', ShippingCountry ='US',RecordTypeId=Schema.SObjectType.Account.getRecordTypeInfosByName().get('Global Parent').getRecordTypeId());
+        insert globalParentAcc;
+        Account acc = new Account(name='Account ',Display_Shipping_Country__c ='United States',   Display_Billing_Country__c = 'United States', parentId=globalParentAcc.id,ShippingCity = 'New York', ShippingCountry ='US',
                                   billingcity='New York', billingcountry='USA',Status__c='Active',Type='Customer',RecordTypeId = Schema.SObjectType.Account.getRecordTypeInfosByName().get('Top Level Account').getRecordTypeId());
         
         insert acc;
         
-        Account acc1 = new Account(name='Account test2',Party_Number__c ='1234',AccountNumber='12345',Status__c='Active',Type='Partner',Legacy_Id__c ='T1234',RecordTypeId = Schema.SObjectType.Account.getRecordTypeInfosByName().get('Distributor/Rep Account').getRecordTypeId());
+        Account acc1 = new Account(name='Account test2',Display_Shipping_Country__c ='United States',   Display_Billing_Country__c = 'United States', parentId=globalParentAcc.id,ShippingCity = 'New York', ShippingCountry ='US',
+                                  billingcity='Illionis', billingcountry='USA',Status__c='Active',Type='Distributor',RecordTypeId = Schema.SObjectType.Account.getRecordTypeInfosByName().get('External Account').getRecordTypeId());
         
         insert acc1;
         system.debug('acc1=='+acc1);
@@ -25,19 +28,21 @@ public class QuoteReminderBatchTestClass {
         insert prod;
         Account acountObj = [select id ,recordtypeid,recordtype.name,status__c,type from account where name='Account test2' limit 1];
         System.debug('acountObj'+acountObj);
-        
-        Quote qrec = new Quote(Name ='test1',Status='Draft',PrimarySalesperson__c =u.id,Type_of_Pricing__c='Dist Quote',ExpirationDate = System.today()+1,
+          Opportunity opp = New Opportunity(Name = acc.Name+' Opp',RSM__c = u.id,Project_Name__c = 'test',
+                                          StageName = 'Open - Discussion', AccountId = acc.Id, CloseDate = date.today().addDays(365));
+        insert opp;
+        Quote qrec = new Quote(Name ='test1',Status='Draft',OpportunityId =opp.id,PrimarySalesperson__c =u.id,Type_of_Pricing__c='Dist Quote',ExpirationDate = System.today()+1,
                                Account__c=acc.id,sales_channel__c=acc1.Id);
         system.debug('qrec----'+qrec);
         insert qrec;
         system.debug('qrec1----'+qrec);
         
         List<Quote_Item__c> qList = new List<Quote_Item__c>();
-        Quote_Item__c qLine1 = new Quote_Item__c(Quote__c= qrec.id,Product__c=prod.id,Quantity__c=23,Disti_Resale_Price__c=5600.05,Target_Price__c=4564.77,Line_Status__c='Draft');
+        Quote_Item__c qLine1 = new Quote_Item__c(Quote__c= qrec.id,PLM_Approver__c = u.id ,Product__c=prod.id,Quantity__c=23,Disti_Resale_Price__c=5600.05,Target_Price__c=4564.77,Line_Status__c='Draft');
         //insert qLine1;
         qList.add(qLine1);
         
-        Quote_Item__c qLine2 = new Quote_Item__c(Quote__c= qrec.id,Product__c=prod.id,Quantity__c=23,Disti_Resale_Price__c=5600.05,Target_Price__c=4564.77,Line_Status__c='Draft', PLM_Approver__c = plmUser.id);
+        Quote_Item__c qLine2 = new Quote_Item__c(Quote__c= qrec.id ,Product__c=prod.id,Quantity__c=23,Disti_Resale_Price__c=5600.05,Target_Price__c=4564.77,Line_Status__c='Draft', PLM_Approver__c = plmUser.id);
         Quote_Item__c qLine3 = new Quote_Item__c(Quote__c= qrec.id,Product__c=prod.id,Quantity__c=25,Disti_Resale_Price__c=5600.05,Target_Price__c=4564.77,Line_Status__c='Draft', PLM_Approver__c = plmUser.id);
         Quote_Item__c qLine4 = new Quote_Item__c(Quote__c= qrec.id,Product__c=prod.id,Quantity__c=26,Disti_Resale_Price__c=5600.05,Target_Price__c=4564.77,Line_Status__c='Draft', PLM_Approver__c = plmUser.id);
         Quote_Item__c qLine5 = new Quote_Item__c(Quote__c= qrec.id,Product__c=prod.id,Quantity__c=25,Disti_Resale_Price__c=5600.05,Target_Price__c=4564.77,Line_Status__c='Draft', PLM_Approver__c = plmUser.id);
@@ -51,6 +56,7 @@ public class QuoteReminderBatchTestClass {
             Approval.ProcessSubmitRequest req1 = new Approval.ProcessSubmitRequest();
                         req1.setComments('Submitting request for approval.');
                         req1.setObjectId(qLin.Id);
+                        req1.setNextApproverIds(new Id[] {qLin.PLM_Approver__c});
                         requests.add(req1);
         }
         Approval.process(requests);

@@ -24,7 +24,6 @@ public class OpportunityTeamMemberHelper {
         Map<String, List<String>> rsmTeamAccMap = new Map<String, List<String>>();
         List<OpportunityTeamMember> members = new List<OpportunityTeamMember>();
         for(Opportunity opp : opps){
-            system.debug('opp.Business_Unit__c '+opp.Business_Unit__c);
             //skiping FNSR WSS opportunities
             if(opp.Business_Unit__c != '0040'){
                 rsmIds.add(opp.RSM__c);
@@ -68,21 +67,25 @@ public class OpportunityTeamMemberHelper {
                                   if(rsmTeamAccMap.containsKey(rsmMap.get(opp.RSM__c)) && 
                                      accountName.containsIgnoreCase(accMap.get(rsmMap.get(opp.RSM__c)))){
                                          for(String email : rsmTeamAccMap.get(rsmMap.get(opp.RSM__c))){
+                                             if(emailUIdMap.get(email) != null){
                                              OpportunityTeamMember member = new OpportunityTeamMember();
                                              member.OpportunityId = opp.Id;
                                              member.UserId = emailUIdMap.get(email);
                                              member.OpportunityAccessLevel = 'All';
                                              member.TeamMemberRole = 'Team Member';
                                              members.add(member);
+                                             }
                                          }
                                      } else if(rsmTeamMap.containsKey(rsmMap.get(opp.RSM__c))){
                                          for(String email : rsmTeamMap.get(rsmMap.get(opp.RSM__c))){
+                                                if(emailUIdMap.get(email) != null){
                                              OpportunityTeamMember member = new OpportunityTeamMember();
                                              member.OpportunityId = opp.Id;
                                              member.UserId = emailUIdMap.get(email);
                                              member.OpportunityAccessLevel = 'All';
                                              member.TeamMemberRole = 'Team Member';
                                              members.add(member);
+                                                }
                                          }
                                      }
                               }

@@ -1,8 +1,8 @@
 @isTest(seeAllData = false)
 private class CreateOrderedPartsForOrderTest {
-@testSetup static void data() {
-          Pricebook2 pb2  = new pricebook2(name='Legacy Marlow Products', CurrencyIsoCode  = 'USD',IsActive  = true);
-   insert pb2;
+    @testSetup static void data() {
+        Pricebook2 pb2  = new pricebook2(name='Legacy Marlow Products', CurrencyIsoCode  = 'USD',IsActive  = true);
+        insert pb2;
         List<Account> acc = TestDataFactory.createAccounts(1);
         List<Opportunity> opp = TestDataFactory.createOpportunity(1, acc[0].Id);
         List<Product2> prd = TestDataFactory.createProducts('2', 2, false);

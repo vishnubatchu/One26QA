@@ -3,10 +3,12 @@ public class ContactForGDPRTest {
     
     static testmethod void contactForGDPRtest() { 
         
-        Account acc = new Account(name='Account ', 
+               Account globalParentAcc=new Account(Name='Global Parent Test Acc',RecordTypeId=Schema.SObjectType.Account.getRecordTypeInfosByName().get('Global Parent').getRecordTypeId());
+        insert globalParentAcc;
+        Account acc = new Account(name='Account ',ParentId=globalParentAcc.Id,
                 billingcity='New York', billingcountry='USA',Status__c='Active',Type='Customer',RecordTypeId = Schema.SObjectType.Account.getRecordTypeInfosByName().get('Top Level Account').getRecordTypeId());
         insert acc;
-        Account acc1 = new Account(ParentId = acc.Id,name='Account1 ', 
+        Account acc1 = new Account(ParentId = globalParentAcc.Id,name='Account1 ', 
                 billingcity='New York test', billingcountry='USA',Status__c='Active',Type='Party',RecordTypeId = Schema.SObjectType.Account.getRecordTypeInfosByName().get('Top Level Account').getRecordTypeId());
         
         insert acc1;
@@ -21,13 +23,13 @@ public class ContactForGDPRTest {
         Test.startTest();
         List<Contact> conlist = new List<Contact>(); 
         
-        Contact c = new Contact(FirstName = 'Test',LastName = 'Contact',AccountId = acc.Id,MailingCountry='United States',Email='rest@vv.com');
-        Contact c4 = new Contact(FirstName = 'Test',LastName = 'Contact',AccountId = acc.Id,MailingCountry='CHINA',Email='rest@vv.com');
-        Contact c1 = new Contact(FirstName = 'Test1',LastName = 'Contact',AccountId = acc1.Id,MailingCountry='CANADA',Email='rest@vv.com');
-        Contact c5 = new Contact(FirstName = 'Test1',LastName = 'Contact',AccountId = acc2.Id,MailingCountry='CANADA',Email='rest@vv.com');
-        Contact c6 = new Contact(FirstName = 'Test1',LastName = 'Contact',AccountId = acc.Id,MailingCountry='CANADA',Email='rest@vv.com');
-        Contact c2 = new Contact(FirstName = 'Test2',LastName = 'Contact',AccountId = acc1.Id,MailingCountry='SINGAPORE',Email='rest@vv.com');
-        Contact c3 = new Contact(FirstName = 'Test3',LastName = 'Contact',AccountId = acc.Id,MailingCountry='SINGAPORE',Email='rest@vv.com');
+         Contact c = new Contact(FirstName = 'Test',LastName = 'Contact',Display_Mailing_Country__c='United States',AccountId = acc.Id,MailingCountry='United States',Email='rest@vv.com');
+        Contact c4 = new Contact(FirstName = 'Test',LastName = 'Contact',Display_Mailing_Country__c='China',AccountId = acc.Id,MailingCountry='CHINA',Email='rest@vv.com');
+        Contact c1 = new Contact(FirstName = 'Test1',LastName = 'Contact',Display_Mailing_Country__c='Canada',AccountId = acc1.Id,MailingCountry='CANADA',Email='rest@vv.com');
+        Contact c5 = new Contact(FirstName = 'Test1',LastName = 'Contact',Display_Mailing_Country__c='Canada',AccountId = acc2.Id,MailingCountry='CANADA',Email='rest@vv.com');
+        Contact c6 = new Contact(FirstName = 'Test1',LastName = 'Contact',Display_Mailing_Country__c='Canada',AccountId = acc.Id,MailingCountry='CANADA',Email='rest@vv.com');
+        Contact c2 = new Contact(FirstName = 'Test2',LastName = 'Contact',Display_Mailing_Country__c='Singapore',AccountId = acc1.Id,MailingCountry='SINGAPORE',Email='rest@vv.com');
+        Contact c3 = new Contact(FirstName = 'Test3',LastName = 'Contact',Display_Mailing_Country__c='Singapore',AccountId = acc.Id,MailingCountry='SINGAPORE',Email='rest@vv.com');
         conlist.add(c); 
         conlist.add(c1);
         conlist.add(c2);

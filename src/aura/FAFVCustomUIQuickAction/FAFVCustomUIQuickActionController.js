@@ -4,6 +4,7 @@
         // var pgref = component.get('v.pageReference');
         let workspaceAPI = component.find("workspace");
         let recId = component.get('v.recordId');
+        let tabId ;
         if($A.util.isEmpty(recId) ){
             recId = component.get("v.pageReference").state.c__recordId;
             workspaceAPI.getFocusedTabInfo().then(function(response) {
@@ -14,6 +15,7 @@
         // Added by surendar
 	//var workspaceAPI1 = component.find("workspace");        
         //  console.log('recordId'+component.get('v.recordId'));
+        
         workspaceAPI.openTab({
             url: '/lightning/r/Order_Line__c/'+recId+'/view',
             focus: true
@@ -21,11 +23,28 @@
             workspaceAPI.openSubtab({
                 parentTabId: response,
                 url: '/lightning/cmp/c__FAFVCustomUI?c__recID='+recId,
-                focus: true
+                focus: true,
+                customTitle : 'customTitle'
             });
+           // workspaceAPI.getFocusedTabInfo().then(function(response) {
+           // workspaceAPI.isSubtab({
+           //console.log('response',response);
+             //   tabId: response.tabId
+            //})
+            //});
+            console.log('tabId'+tabId);
+            console.log('test');
+          /*  workspaceAPI.getFocusedSubtabInfo().then(function(response) {
+            var focusedTabId = response.tabId;
+                console.log('focusedTabId'+focusedTabId);
+            workspaceAPI.setTabLabel({
+                tabId: focusedTabId,
+                label: "Focused Tab"
+            });
+        })*/
         })
         .catch(function(error) {
-            console.log(error);
+            console.log('error '+error);
         });
         //  console.log('pgref 1 '+pgref);
         //console.log('pgref 1 '+pgref.state);

@@ -187,6 +187,7 @@
         <searchResultsAdditionalFields>QUOTE.EXPIRATIONDATE</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>QUOTE.SUBTOTAL</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>QUOTE.TOTALPRICE</searchResultsAdditionalFields>
+        <searchResultsCustomButtons>New_Quote</searchResultsCustomButtons>
     </searchLayouts>
     <sharingModel>Private</sharingModel>
 </CustomObject>

@@ -29,7 +29,7 @@ public with sharing class SalesOrderUtilClassNew {
     }
     
     public static list<Order_Line__c>  getOrderProducts(String sOrderId) {
-        String sQuery = 'SELECT Product2.Name, '+getObjectFields('Order_Line__c') +' FROM Order_Line__c WHERE OrderId =: sOrderId ORDER BY Order_Product_Sequence_Number__c ASC';
+        String sQuery = 'SELECT Part_Number__r.Name, '+getObjectFields('Order_Line__c') +' FROM Order_Line__c WHERE Order__c =: sOrderId ORDER BY Order_Product_Sequence_Number__c ASC';
         sQuery = String.escapeSingleQuotes(sQuery);
         list<Order_Line__c> listOrderProduct = Database.query(sQuery);
         return listOrderProduct;

@@ -35,6 +35,7 @@ public class LineItemController {
     @AuraEnabled
     public static Boolean getUserPermission(){ 
         Boolean hasPermission = FeatureManagement.checkPermission('Loaner_Line_Permission');
+        system.debug('hasPermission----'+hasPermission);
         return hasPermission;
     }
     
@@ -48,7 +49,7 @@ public class LineItemController {
         List<Id> ProductIds = new List<Id>();
         for(Loaner_Line__c line : ListLineItem){
             //ProductIds.add(line.Product__c);//20200805_ramprakash: Commented to fix the product selection issue
-            ProductIds.add(line.Product__r.Id);//20200805_ramprakash: Added to fix the product selection issue
+            ProductIds.add(line.Product__c);//20200805_ramprakash: Added to fix the product selection issue
         }
         system.debug('ProductIds'+ProductIds);
         for(Product2 prd : [SELECT Id, BU_Code__c, Product_Family__c 
@@ -66,7 +67,10 @@ public class LineItemController {
             loanerWrapper.errorMessage = 'WSS & Non-WSS Items cannot be added on the same Loaner Request.';
             return loanerWrapper;
         }
+        system.debug('wssProducts@@' + wssProducts);
+         system.debug('Role.oducts@@' + [ SELECT id, RSM_PLM_Finisar__c,Project_Name__c FROM Loaner__c WHERE Id = : recordId]);
         String rsmRole = [SELECT id, RSM_PLM_Finisar__r.UserRole.Name FROM Loaner__c WHERE Id = : recordId].RSM_PLM_Finisar__r.UserRole.Name;
+        system.debug('rsmrole@@' + rsmRole);
         if(!rsmRole.contains('WSS') && !wssProducts.isEmpty()){
             loanerWrapper.errorMessage = 'Header RSM should be WSS User';
             return loanerWrapper;
@@ -142,23 +146,8 @@ public class LineItemController {
     @AuraEnabled
     public static String validateRecords(String recordId){
         sobject loanerObj = RecordApprovalDao.getHeaderRecord(recordId);
-        for(String fieldName : CommonConstants.LoanerRequiredFields){
-            If(loanerObj.get(fieldName)==Null){
-                String LoanerOpportunityType =(String) loanerObj.get('Opportunity_Type__c');
-                if(fieldName.equalsIgnoreCase('Opportunity__c') && LoanerOpportunityType.equalsIgnoreCase('New Opportunity'))
-                {
-                    String fieldlabel = Schema.getGlobalDescribe().get('Loaner__c').getDescribe().fields.getMap().get(fieldName).getDescribe().getLabel();
-                    return ' Required Field '+fieldlabel+ ' Must be Filled As Opportunity Type is ' +loanerObj.get('Opportunity_Type__c');
-                }
-                else if(!fieldName.equalsIgnoreCase('Opportunity__c'))
-                { 
-                    String fieldlabel = Schema.getGlobalDescribe().get('Loaner__c').getDescribe().fields.getMap().get(fieldName).getDescribe().getLabel();
-                    return ' Required Field '+fieldlabel+ ' Must be Filled';
-                }
-            }
-        }
-        
-        if(loanerObj.getSObjects('Loaner_Lines__r')!=Null){
+          system.debug('loanerObj@@@ ' + loanerObj.getSObjects('Loaner_Lines__r'));
+          if(loanerObj.getSObjects('Loaner_Lines__r')!=Null){
             for(sobject sobj:loanerObj.getSObjects('Loaner_Lines__r')){
                 For(String fieldName :CommonConstants.LoanerLineRequiredFields){
                     system.debug('fieldName====='+fieldName);
@@ -171,12 +160,6 @@ public class LineItemController {
                 }
             }
         }
-        return '';
-    }
-    
-    @AuraEnabled
-    public static String validateRecordsONSaveAndClose(String recordId){
-        sobject loanerObj = RecordApprovalDao.getHeaderRecord(recordId);
         for(String fieldName : CommonConstants.LoanerRequiredFields){
             If(loanerObj.get(fieldName)==Null){
                 String LoanerOpportunityType =(String) loanerObj.get('Opportunity_Type__c');
@@ -192,7 +175,15 @@ public class LineItemController {
                 }
             }
         }
-        
+      
+      
+        return '';
+    }
+    
+    @AuraEnabled
+    public static String validateRecordsONSaveAndClose(String recordId){
+        sobject loanerObj = RecordApprovalDao.getHeaderRecord(recordId);
+          
         if(loanerObj.getSObjects('Loaner_Lines__r')!=Null){
             for(sobject sobj:loanerObj.getSObjects('Loaner_Lines__r')){
                 For(String fieldName :CommonConstants.LoanerLineRequiredFields){
@@ -206,6 +197,22 @@ public class LineItemController {
                 }
             }
         }
+        for(String fieldName : CommonConstants.LoanerRequiredFields){
+            If(loanerObj.get(fieldName)==Null){
+                String LoanerOpportunityType =(String) loanerObj.get('Opportunity_Type__c');
+                if(fieldName.equalsIgnoreCase('Opportunity__c') && LoanerOpportunityType.equalsIgnoreCase('New Opportunity'))
+                {
+                    String fieldlabel = Schema.getGlobalDescribe().get('Loaner__c').getDescribe().fields.getMap().get(fieldName).getDescribe().getLabel();
+                    return ' Required Field '+fieldlabel+ ' Must be Filled As Opportunity Type is ' +loanerObj.get('Opportunity_Type__c');
+                }
+                else if(!fieldName.equalsIgnoreCase('Opportunity__c'))
+                { 
+                    String fieldlabel = Schema.getGlobalDescribe().get('Loaner__c').getDescribe().fields.getMap().get(fieldName).getDescribe().getLabel();
+                    return ' Required Field '+fieldlabel+ ' Must be Filled';
+                }
+            }
+        }
+      
         return '';
     }
     public class WrapperClass {

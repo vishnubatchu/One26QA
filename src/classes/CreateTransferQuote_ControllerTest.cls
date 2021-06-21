@@ -2,19 +2,11 @@
 private class CreateTransferQuote_ControllerTest {
     @isTest
     static void testcreateTransferQuotes(){
-        Test.loadData(Pricebook2.sObjectType, 'PriceListTestdata');
-        List<Account> acc     = TestDataFactory.createAccounts(2);
-        acc[1].RecordTypeId = Schema.SObjectType.Account.getRecordTypeInfosByDeveloperName().get('Global_Parent').getRecordTypeId();
-        update acc[1];
-        acc[0].Status__c      = 'Active';
-        acc[0].RecordTypeId  = Schema.SObjectType.Account.getRecordTypeInfosByDeveloperName().get('Party_Account').getRecordTypeId();
-        acc[0].ParentId     = acc[1].Id;
-update acc[0];
-    system.debug('price book '+[Select id,Name from Pricebook2]);
-        system.debug('standard '+ Test.getStandardPricebookId());
+        Test.loadData(Pricebook2.sObjectType, 'PriceListTestdata');        
+        List<Account> acc     = TestDataFactory.createAccounts(1);
         List<Opportunity> opp = TestDataFactory.createOpportunity(1, acc[0].Id);
         List<Product2> prd = TestDataFactory.createProducts('2', 2, false);
-        List<Pricebook2> pricel = [Select Id from Pricebook2 Where Name = 'Laser Part List' AND CurrencyIsoCode = 'USD'];
+        List<Pricebook2> pricel = [Select Id from Pricebook2 Where Name = 'Legacy Marlow Products' AND CurrencyIsoCode = 'USD'];
         system.debug('pricel '+pricel);
         opp[0].Pricebook2Id = pricel[0].Id;
         opp[0].CurrencyIsoCode = 'USD';

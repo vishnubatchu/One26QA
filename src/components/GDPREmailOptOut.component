@@ -3,21 +3,21 @@
      <apex:attribute name="recordEmail" description="contactRecordEmail" type="String" required="required" assignTo="{!contactEmail}" />
     <div>
         <p>
-           Thank you for your interest in Finisar.   This email is to let you know that we have uploaded your business contact information to our Salesforce CRM system.   We will process this information in accordance with our privacy policy located at: <a href="https://www.finisar.com/privacy"> https://www.finisar.com/privacy </a> which includes details on what we do with this information, with whom we share it, and how you can exercise your rights under applicable data privacy laws with respect to this information.   In addition, we will be sending you email communications regarding Finisar promotions, offers, products and services to the email address you provided. You can unsubscribe from such marketing emails at any time by emailing Finisar at <a href="DataPrivacy@finisar.com"> DataPrivacy@finisar.com </a> or clicking the unsubscribe button if available on the email.
+           Thank you for your interest in II-VI Incorporated (“II-VI”). II-VI takes privacy seriously. This email is to let you know that we have uploaded your business contact information to our Salesforce CRM system.   We will process this information in accordance with our privacy policy located at: <a href="https://ii-vi.com/privacy/"> https://ii-vi.com/privacy/ </a> which includes details on what we do with this information, with whom we share it, and how you can exercise your rights under applicable data privacy laws with respect to this information. In addition, we will be sending you email communications regarding Finisar promotions, offers, products and services to the email address you provided. You can unsubscribe from such marketing emails at any time by emailing our Privacy Office at <a href="privacy@ii-vi.com"> privacy@ii-vi.com </a> or by clicking the “unsubscribe” button if available on the email.
         </p>
         <br/>
         <p>
-           If you have any questions or concerns about Finisar’s policies,  or wish to exercise any rights with respect to your information, please contact Finisar at DataPrivacy@finisar.com. In addition, for information on Salesforce and its data security and privacy policy, please go to <a href="https://www.salesforce.com/company/privacy/">https://www.salesforce.com/company/privacy/</a>.  
+           If you have any questions or concerns about II-VI’s policies, or wish to exercise any rights with respect to your information, please contact our Privacy Office at <a href="privacy@ii-vi.com">privacy@ii-vi.com</a>.  
         </p>
         <br/>
         <p>
-            <a href="mailto:{!$Label.GDPR_Email_Address}?subject=RE:Opt-Out Contact &cc={!$Label.dataservice};{!recordEmail}&body=Opt Out %0A%0A For Finisar Use Only: [{!recordId}]"> Click here</a> if you do not wish to receive email communications regarding Finisar promotions, offers, products and services.
+            <a href="mailto:{!$Label.GDPR_Email_Address}?subject=RE:Opt-Out Contact &cc={!$Label.dataservice};{!recordEmail}&body=Opt Out %0A%0A For Finisar Use Only: [{!recordId}]"> Click here</a> if you do not wish to receive email communications regarding II-VI’s promotions, offers, products and services.
         </p>
         <br/>
-        <p>
+        <!--p>
             <c:FinisarDisclaimerCMP GDPRDisclamertext="true"/><br/><br/>
             For Finisar Use Only: [{!recordId}]
-        </p>
+        </p-->
         
     </div>
 </apex:component>

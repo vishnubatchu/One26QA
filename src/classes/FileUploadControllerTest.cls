@@ -8,12 +8,15 @@ public class FileUploadControllerTest {
           System.runAs ( new User(Id = UserInfo.getUserId()) ) {
              insert u;
         }
-         Account acc = new Account(name='Account ', 
-                                  billingcity='New York', billingcountry='USA',Status__c='Active',Type='Customer',RecordTypeId = Schema.SObjectType.Account.getRecordTypeInfosByName().get('Top Level Account').getRecordTypeId());
+         Account globalParentAcc=new Account(Name='Global Parent Test Acc',Display_Shipping_Country__c ='United States',   Display_Billing_Country__c = 'United States',ShippingCity = 'New York', ShippingCountry ='US',RecordTypeId=Schema.SObjectType.Account.getRecordTypeInfosByDeveloperName().get('Global_Parent').getRecordTypeId());
+        insert globalParentAcc;
+        
+         Account acc = new Account(name='Account ', Display_Shipping_Country__c ='United States',   Display_Billing_Country__c = 'United States',
+                                  billingcity='New York',ShippingCity = 'New York', ShippingCountry ='US',ParentId = globalParentAcc.Id, Global_Ultimate_Parent__c=globalParentAcc.Id,billingcountry='USA',Status__c='Active',Type='Customer',RecordTypeId = Schema.SObjectType.Account.getRecordTypeInfosByName().get('Top Level Account').getRecordTypeId());
         
         insert acc;
-        Account acc1 = new Account(ParentId = acc.Id,name='Account1 ', Legacy_Id__c='1234',ShippingCity = 'Test',ShippingCountry ='Test1',ShippingState ='Test3',ShippingPostalCode ='63572',ShippingStreet = 'Test4',
-                billingcity='New York test',Site_Use_Code__c = 'SHIP_TO',Site_Use_Status__c= 'Active', billingcountry='USA',Status__c='Active',Type='Reseller',RecordTypeId = Schema.SObjectType.Account.getRecordTypeInfosByName().get('Site').getRecordTypeId());
+        Account acc1 = new Account(ParentId = acc.Id,name='Account1 ',Display_Shipping_Country__c ='United States',   Display_Billing_Country__c = 'United States', Legacy_Id__c='1234',ShippingCity = 'Test',ShippingCountry ='US',ShippingState ='NE',ShippingPostalCode ='63572',ShippingStreet = 'Test4',
+                billingcity='New York test',Site_Use_Code__c = 'SHIP_TO',Site_Use_Status__c= 'Active', billingcountry='US',Status__c='Active',Type='Reseller',RecordTypeId = Schema.SObjectType.Account.getRecordTypeInfosByName().get('Site').getRecordTypeId());
         
         insert acc1;
          case cs = new Case(Found_By__c='Customer', 

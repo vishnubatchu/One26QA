@@ -3,7 +3,7 @@ public with sharing class CreateSalesOrderInSAP {
     Apexpages.Standardcontroller stdController;
     public WebserviceClassSalesOrder.HTTPS_Port httpPort { get;set; }
     public Order orderObject ;
-    //String sEndpoint = 'http://72.22.21.85:50200/XISOAPAdapter/MessageServlet?senderParty=&senderService=BS_SFDC&receiverParty=&receiverService=&interface=SI_SALES_SFDC_OUT&interfaceNamespace=http://ii-vi.com/sales/sfdc/ecc/salesorder';
+    //String sEndpoint = 'http://8.34.95.17:8104/XISOAPAdapter/MessageServlet?senderParty=&senderService=BS_SFDC&receiverParty=&receiverService=&interface=SI_SALES_SFDC_OUT&interfaceNamespace=http://ii-vi.com/sales/sfdc/ecc/salesorder';
     public boolean isConfirm {get;set;}
     
     public CreateSalesOrderInSAP() {
@@ -156,14 +156,14 @@ public with sharing class CreateSalesOrderInSAP {
 if(charge.invoiceit_s__Job_Rate_Plan__r.invoiceit_s__Job_Product__r.invoiceit_s__Product_Code__c != null) {
 itemElement.PRODUCTID = charge.invoiceit_s__Job_Rate_Plan__r.invoiceit_s__Job_Product__r.invoiceit_s__Product_Code__c;  
 }*/
-                if(charge.Customer_Part_Number__c != null) {
-                    itemElement.PRODUCTID = charge.Customer_Part_Number__c;  
+                if(charge.Part_Number__c != null) {
+                    itemElement.PRODUCTID = charge.Part_Number__r.Name;  
                 }
                 if(charge.Quantity__c != null) {
                     itemElement.QUANTITY = String.valueOf(charge.Quantity__c); 
                 }
-                if(charge.TotalPrice__c != null) {
-                    itemElement.UNITPRICE = String.valueOf(charge.TotalPrice__c);  
+                if(charge.Unit_Selling_Price__c  != null) {
+                    itemElement.UNITPRICE = String.valueOf(charge.Unit_Selling_Price__c);  
                 }
                 // if the request date is null, then assign the delivery date/ service activation date
                 if(charge.Request_Date__c != null){
@@ -185,7 +185,6 @@ itemElement.PRODUCTID = charge.invoiceit_s__Job_Rate_Plan__r.invoiceit_s__Job_Pr
                 if(charge.Free_of_Charge__c != null) {
                     itemElement.FREEOFCHARGEITEM =  String.valueOf(charge.Free_of_Charge__c);   
                 }
-                
                 // adding the order item to the list and assigning to the orderelement object
                 listItemElement.add(itemElement);
             }
@@ -533,8 +532,8 @@ itemElement.PRODUCTID = charge.invoiceit_s__Job_Rate_Plan__r.invoiceit_s__Job_Pr
         
         for(Order_Line__c charge : listOrderRatePlanCharges) {
             sRequestXML = sRequestXML + '<ITEM>' ;
-            if(charge.Customer_Part_Number__c != null) {
-                sRequestXML = sRequestXML + '<PRODUCTID>'+charge.Customer_Part_Number__c+'</PRODUCTID>' ;    
+            if(charge.Part_Number__c != null) {
+                sRequestXML = sRequestXML + '<PRODUCTID>'+charge.Part_Number__r.Name+'</PRODUCTID>' ;    
             }
             else {
                 sRequestXML = sRequestXML + '<PRODUCTID/>';
@@ -547,11 +546,11 @@ itemElement.PRODUCTID = charge.invoiceit_s__Job_Rate_Plan__r.invoiceit_s__Job_Pr
                 sRequestXML = sRequestXML + '<QUANTITY/>';
             }
             
-            if(charge.TotalPrice__c != null) {
-                sRequestXML = sRequestXML + '<TOTALPRICE>'+String.valueOf(charge.TotalPrice__c)+'</TOTALPRICE>' ;    
+            if(charge.Unit_Selling_Price__c != null) {
+                sRequestXML = sRequestXML + '<UNITPRICE>'+String.valueOf(charge.Unit_Selling_Price__c)+'</UNITPRICE>' ;    
             }
             else {
-                sRequestXML = sRequestXML + '<TOTALPRICE/>';
+                sRequestXML = sRequestXML + '<UNITPRICE/>';
             }
             
             if(charge.Request_Date__c != null){

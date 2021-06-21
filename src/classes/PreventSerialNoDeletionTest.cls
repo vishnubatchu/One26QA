@@ -2,7 +2,9 @@
 private class PreventSerialNoDeletionTest {
 	
     static testmethod void testPreventSnDel(){
-       Account acc = new Account(name='Account', 
+           Account globalParentAcc=new Account(Name='Global Parent Test Acc',Display_Shipping_Country__c ='United States',   Display_Billing_Country__c = 'United States',ShippingCity = 'New York', ShippingCountry ='US',RecordTypeId=Schema.SObjectType.Account.getRecordTypeInfosByName().get('Global Parent').getRecordTypeId());
+        insert globalParentAcc;
+       Account acc = new Account(name='Account',Display_Shipping_Country__c ='United States',   Display_Billing_Country__c = 'United States', parentId=globalParentAcc.id,ShippingCity = 'New York', ShippingCountry ='US',
                                   billingcity='New York', billingcountry='USA',Legacy_Id__c='1234',Status__c='Active',Type='Partner',RecordTypeId = Schema.SObjectType.Account.getRecordTypeInfosByName().get('Top Level Account').getRecordTypeId());
         insert acc;
          Contact conObj = New Contact(lastname='TEst Contact',AccountId=acc.Id);

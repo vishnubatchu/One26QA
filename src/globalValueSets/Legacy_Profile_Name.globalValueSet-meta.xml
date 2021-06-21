@@ -90,6 +90,56 @@
         <default>false</default>
         <label>User Profile 7 - IT/Support</label>
     </customValue>
+    <customValue>
+        <fullName>Standard-Japan</fullName>
+        <default>false</default>
+        <label>Standard-Japan</label>
+    </customValue>
+    <customValue>
+        <fullName>Standard-Accounting</fullName>
+        <default>false</default>
+        <label>Standard-Accounting</label>
+    </customValue>
+    <customValue>
+        <fullName>Standard-AdvMat</fullName>
+        <default>false</default>
+        <label>Standard-AdvMat</label>
+    </customValue>
+    <customValue>
+        <fullName>Standard-Epiworks</fullName>
+        <default>false</default>
+        <label>Standard-Epiworks</label>
+    </customValue>
+    <customValue>
+        <fullName>Standard-Taiwan</fullName>
+        <default>false</default>
+        <label>Standard-Taiwan</label>
+    </customValue>
+    <customValue>
+        <fullName>Standard-US Marketing</fullName>
+        <default>false</default>
+        <label>Standard-US Marketing</label>
+    </customValue>
+    <customValue>
+        <fullName>Suzhou-Admin</fullName>
+        <default>false</default>
+        <label>Suzhou-Admin</label>
+    </customValue>
+    <customValue>
+        <fullName>Telemarketing</fullName>
+        <default>false</default>
+        <label>Telemarketing</label>
+    </customValue>
+    <customValue>
+        <fullName>Telemarketing - Quote</fullName>
+        <default>false</default>
+        <label>Telemarketing - Quote</label>
+    </customValue>
+    <customValue>
+        <fullName>Warranty</fullName>
+        <default>false</default>
+        <label>Warranty</label>
+    </customValue>
     <masterLabel>Legacy Profile Name</masterLabel>
     <sorted>false</sorted>
 </GlobalValueSet>

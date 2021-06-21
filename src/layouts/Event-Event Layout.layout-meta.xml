@@ -58,6 +58,10 @@
                 <behavior>Edit</behavior>
                 <field>Est_Completion_Date__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Event_Salesforce_Legacy_Id__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>

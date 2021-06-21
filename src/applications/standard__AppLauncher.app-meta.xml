@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <defaultLandingTab>standard-AppLauncher</defaultLandingTab>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <tabs>standard-AppLauncher</tabs>
+    <tabs>Meeting_Reports__c</tabs>
+    <tabs>OrderRatePlan__c</tabs>
+    <tabs>QuoteRatePlan__c</tabs>
+    <tabs>OpportunityRatePlan__c</tabs>
+    <tabs>Quote_Item__c</tabs>
+    <tabs>Costing__c</tabs>
+    <tabs>Costing_Quote__c</tabs>
+    <tabs>Equipment_Owned__c</tabs>
+    <tabs>BOM_Parts__c</tabs>
+    <tabs>icrt__Guide_Milestone__c</tabs>
+    <tabs>BOM_Product_Part__c</tabs>
+</CustomApplication>

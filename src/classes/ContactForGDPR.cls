@@ -122,8 +122,7 @@ return null;
             }
             for(Contact c:conlist) {
                 if(individualMap.containsKey(c.Email) &&
-                   individualMap.get(c.Email) != null &&
-                   individualMap.get(c.Email).ConsentDate__c == null){
+                   individualMap.get(c.Email) != null ){
                        String contactCreatorEmail = idToContactCreatorMap.get(c.createdbyId);
                        Messaging.SingleEmailMessage mail = new Messaging.SingleEmailMessage();
                        mail.setTemplateId(et.id);
@@ -138,7 +137,7 @@ return null;
                    }
             }
             if(mailList != null && !mailList.isEmpty())
-                Messaging.sendEmail(mailList);
+                Messaging.sendEmail(mailList, false);
             if(updateIndividual != null && !updateIndividual.isEmpty()){
                 update updateIndividual;
             }
@@ -151,7 +150,7 @@ return null;
     {
         Map<Id,List<Contact>> accountContactMap = new Map<Id,List<Contact>>();
         List<Contact> contactlist = new List<Contact>();
-        List<Account> acclist = [select id,(Select id,AccountId,Account.Type,Party_Account__c,GDPR_Country__c,Marketing_Communication_Opt_Out__c 
+        List<Account> acclist = [select id,(Select id,AccountId,Display_Mailing_Country__c,Account.Type,Party_Account__c,GDPR_Country__c,Marketing_Communication_Opt_Out__c 
                                             from contacts) 
                                  from account
                                  where id IN:accountId];
@@ -190,41 +189,68 @@ return null;
         for(User u :userList){
             idToContactCreatorMap.put(u.id,u.Email);
         }
+        Map<String, Individual> individualMap = new Map<String, Individual>();
+        List<Individual> updateIndividual = new List<Individual>();
+        for(Individual ind : [SELECT Id, ConsentDate__c,Email__c FROM Individual 
+                              WHERE Email__c IN : idToContactEmailMap.values()]){
+                                  individualMap.put(ind.Email__c, ind);
+                              }
         System.debug('idToContactCreatorMap'+idToContactCreatorMap);
         for(Contact c:conlist) {
             system.debug('c==='+c+'owner==='+c.CreatedBy.email);
             //String contactCreatorEmail = idToContactCreatorMap.get(c.createdbyId);
             String contactCreatorEmail = idToContactEmailMap.get(c.id);
             System.debug('contactCreatorEmail---'+contactCreatorEmail);
-            if(c.MailingCountry != null && c.Email != null && Label.Contact_Email_Trigger_Condition.equalsIgnoreCase('True')){
-                Messaging.SingleEmailMessage mail = new Messaging.SingleEmailMessage();
-                if(c.Marketing_Communication_Opt_Out__c == true){
-                    mail.setTemplateId(etforOptIn.id);
-                }else if(c.Marketing_Communication_Opt_Out__c == false){
-                    mail.setTemplateId(etforOptOut.id);
-                }
-                mail.setToAddresses(New List <String> {contactCreatorEmail});
-                mail.setWhatId(c.Id);
-                mail.setTargetObjectId(c.CreatedById);
-                mail.setSaveAsActivity(false);
-                mail.setOrgWideEmailAddressId(owea.get(0).Id);
-                mail.setBccAddresses(new String[] {Label.dataservice,Label.GDPR_Email_Service_Address});
-                System.debug('mail==='+mail);
-                mailList.add(mail);
-            }
+            System.debug('individualMap---'+individualMap);
+            System.debug('c.Email---'+c.Email);
+            //system.debug('individualMap.get(c.Email).ConsentDate__c == null'+individualMap.get(c.Email).ConsentDate__c == null);
+            if(c.Display_Mailing_Country__c != null && c.Email != null &&
+               Label.Contact_Email_Trigger_Condition.equalsIgnoreCase('True') &&
+               individualMap.containsKey(c.Email) &&
+               individualMap.get(c.Email).ConsentDate__c == null){
+                   system.debug('in ');
+                   Messaging.SingleEmailMessage mail = new Messaging.SingleEmailMessage();
+                   if(c.Marketing_Communication_Opt_Out__c == true){
+                       mail.setTemplateId(etforOptIn.id);
+                   }else if(c.Marketing_Communication_Opt_Out__c == false){
+                       mail.setTemplateId(etforOptOut.id);
+                   }
+                   mail.setToAddresses(New List <String> {contactCreatorEmail});
+                   mail.setWhatId(c.Id);
+                   mail.setTargetObjectId(c.CreatedById);
+                   mail.setSaveAsActivity(false);
+                   mail.setOrgWideEmailAddressId(owea.get(0).Id);
+                  // mail.setBccAddresses(new String[] {Label.dataservice,Label.GDPR_Email_Service_Address});
+                   System.debug('mail==='+mail);
+                   mailList.add(mail);
+                   individualMap.get(c.Email).ConsentDate__c = DateTime.now();
+                   updateIndividual.add(individualMap.get(c.Email));
+               }
         }
-        Messaging.sendEmail(mailList);
+        if(mailList != null && !mailList.isEmpty()){
+            Messaging.sendEmail(mailList, false);
+        }
+        if(updateIndividual!= null && !updateIndividual.isEmpty()){
+            update updateIndividual;
+        }
     }
     
-    public static void handleEmailChange(Map<Id, Contact> oldMap, List<Contact> newList){
+    public static void handleEmailChange(Map<Id, Contact> oldMap, Map<Id, Contact> newMap){
         List<Contact> emailUpdatedContacts = new List<Contact>();
-        for(contact con : newList){
+        List<Contact> newIndiContacts = new List<Contact>();
+        for(contact con : newMap.values()){
             if(con.Email != null && con.Email != oldmap.get(con.Id).Email){
                 emailUpdatedContacts.add(con);
             }
         }
-        if(emailUpdatedContacts != null && !emailUpdatedContacts.isEmpty()){
-            sendMailUponCreation(emailUpdatedContacts);
+        for(Contact con : [SELECT id, Individual.Email__c, individualId, Email 
+                           FROM Contact WHERE Id IN : emailUpdatedContacts]){
+                               if(con.Email != con.Individual.Email__c)
+                                   newIndiContacts.add(newMap.get(con.Id));
+                           }
+        if(newIndiContacts != null && !newIndiContacts.isEmpty()){
+            IndividualRecordHelper.createNewIndividual(newIndiContacts);
+            sendMailUponCreation(newIndiContacts);
         }
     }
 }

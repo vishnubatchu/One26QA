@@ -1,20 +1,15 @@
 @isTest
 public class TestDataUtilityClass {
-    
-    
     public static void preparetestData(){
         createUsers();
         List<Account> acclist=  createAccounts();
         User rsmuser =[select id From User where Name like '%RSM User 1%'];
         createOpportunity();
         Loaner__c loaner = createLoanersandLoanerLines(rsmuser);
-        
         createReturnDetail(loaner);
         createRMAorCases(acclist);
         createFAFVData();
     }
-    
-    
     public static void createUsers()
     {
         Profile salesUserProfile = [SELECT Id FROM Profile WHERE Name = 'Sales Profile' LIMIT 1];
@@ -40,7 +35,7 @@ public class TestDataUtilityClass {
         createTestUser(insdieuserrole.Id,usrProfile.Id, 'Inside User','Inside User');
         System.runAs ( new User(Id = UserInfo.getUserId()) ) {
             User salesAdmin=[select Id From User where Name like 'RSM User 1%' Limit 1];
-            PermissionSet permissionset = [select Id From PermissionSet where Name= 'Sales_Admin_Profile_Permission_Set'];
+            PermissionSet permissionset = [select Id From PermissionSet where Label like 'Sales Admin Profile Permission Set%' limit 1 ];
             PermissionSetAssignment permset=new PermissionSetAssignment(AssigneeId = salesAdmin.Id,PermissionSetId = permissionset.Id); 
             insert permset;
         }
@@ -74,24 +69,24 @@ public class TestDataUtilityClass {
     }
     public static List<Account> createAccounts()
     {
+        Account globalParentAcc=new Account(Name='Global Parent Test Acc',Display_Shipping_Country__c ='United States',   Display_Billing_Country__c = 'United States',ShippingCity = 'New York', ShippingCountry ='US',RecordTypeId=Schema.SObjectType.Account.getRecordTypeInfosByName().get('Global Parent').getRecordTypeId()	);
+        insert globalParentAcc;
         List<Account> accountsList = new List<Account>();
-        Account acc1 = new Account(name='AccountTopLevelTest', 
-                                   Status__c='Active',Type='Customer',RecordTypeId = Schema.SObjectType.Account.getRecordTypeInfosByName().get('Top Level Account').getRecordTypeId());
-        insert acc1;
+        Account acc1 = new Account(name='AccountTopLevelTest', Display_Shipping_Country__c ='United States',   Display_Billing_Country__c = 'United States',
+                                   Status__c='Active',Type='Customer',ShippingCity = 'New York', ShippingCountry ='US',ParentId = globalParentAcc.Id,RecordTypeId = Schema.SObjectType.Account.getRecordTypeInfosByName().get('Top Level Account').getRecordTypeId());
         accountsList.add(acc1);
-        Account acc2 = new Account(name='AccountCustomer1 ', 
-                                   ParentId=acc1.Id,Status__c='Active',Type='Customer',RecordTypeId = Schema.SObjectType.Account.getRecordTypeInfosByName().get('Customer Account').getRecordTypeId());
-        insert acc2;
+        Account acc2 = new Account(name='AccountCustomer1 ', Display_Shipping_Country__c ='United States',   Display_Billing_Country__c = 'United States',
+                                   ParentId=globalParentAcc.Id,Status__c='Active',ShippingCity = 'New York', ShippingCountry ='US',Type='Customer',RecordTypeId = Schema.SObjectType.Account.getRecordTypeInfosByName().get('Customer Account').getRecordTypeId());
         accountsList.add(acc2);
-        Account siteacc = new Account(name='AccountSite ', 
-                                      shippingcity='New York',Site_Use_Code__c='SHIP_TO',Site_Use_Status__c='Active',parentId=acc2.id, shippingcountry='USA',Status__c='Active',Type='Customer',RecordTypeId = Schema.SObjectType.Account.getRecordTypeInfosByName().get('Site').getRecordTypeId(),
+        Account siteacc = new Account(name='AccountSite ', Display_Shipping_Country__c ='United States',   Display_Billing_Country__c = 'United States',
+                                      shippingcity='New York',Site_Use_Code__c='SHIP_TO',Site_Use_Status__c='Active',parentId=globalParentAcc.id, shippingcountry='US',Status__c='Active',Type='Customer',RecordTypeId = Schema.SObjectType.Account.getRecordTypeInfosByName().get('Site').getRecordTypeId(),
                                       Org_ID__c= '2');
-        insert siteacc;
         accountsList.add(siteacc);
+        insert accountsList;
         return accountsList;
         
     }
-    public static void createOpportunity()
+    public static string createOpportunity()
     {
         UserRole rsmrole = [select Id From UserRole where Name like 'RSM%' Limit 1];
         User RSMUser = [select Id From User where UserRoleId =:rsmrole.Id Limit 1];
@@ -105,9 +100,9 @@ public class TestDataUtilityClass {
         opty.CloseDate = System.today() + 60 ;
         opty.RSM__c =RSMUser.Id;
         insert opty;
-        
-        Opportunity opty2= new Opportunity(Name='Test Oppty 2');
+        Opportunity opty2= new Opportunity();
         Account accounttest2 =[select Id From Account where Name ='AccountTopLevelTest'];
+        opty2.name = 'TestOppty2';
         opty2.AccountId = accounttest2.Id;
         opty2.Project_Name__c ='test project';
         opty2.StageName ='Open - Discussion';
@@ -116,13 +111,13 @@ public class TestDataUtilityClass {
         opty2.NextStep = 'Test';
         opty2.RSM__c =RSMUser.Id;
         insert opty2;
-        
-        
-        
+        return '';  
     }
     public static Loaner__c createLoanersandLoanerLines(User rsmuser)
     {
         Loaner__c loaner = new Loaner__c();
+        list<Loaner__c> loanerList = new list<Loaner__c>();
+        list<Loaner_Line__c> lianerLineList = new list<Loaner_Line__c>();
         //UserRole insdieuserrole = [Select Id from UserRole Where DeveloperName ='Inside_Sales_FAE'];
         //Profile usrProfile = [SELECT Id from Profile where Name ='System Administrator'];
         User insideUser = [Select Id from user where Name Like '%Inside User%' limit 1];
@@ -131,53 +126,42 @@ public class TestDataUtilityClass {
         Account acctop =[select Id From Account where Name ='AccountTopLevelTest'];
         Account acc =[select Id From Account where Name ='AccountCustomer1'];
         Account Site =[select Id From Account where Name='AccountSite'];
-        Opportunity Opp =[select Id From Opportunity where Name='Test Oppty 2'];
-        
+        system.debug('opp@@@ '+ [select Id From Opportunity limit 1 ]);
+        Opportunity Opp =[select Id From Opportunity limit 1 ];
         Loaner_Line__c loanerLine = new Loaner_Line__c();
-        loaner = new Loaner__c(RecordTypeId = Schema.SObjectType.Loaner__c.getRecordTypeInfosByName().get('Loaner Request').getRecordTypeId(), Company_Name_Ship_To__c = acc.Id,Company_Name_End_Cust__c = acctop.Id,Project_Engineer__c='Test',Project_Name__c = 'Test',Est_Production_Date__c = Date.Today(),
+        loaner = new Loaner__c(RecordTypeId = Schema.SObjectType.Loaner__c.getRecordTypeInfosByName().get('Loaner Request').getRecordTypeId(),Company_Name_End_Cust__c = acctop.Id,Project_Engineer__c='Test',Project_Name__c = 'Test',Est_Production_Date__c = Date.Today(),
                                RSM_PLM_Finisar__c=rsmuser.Id,Address_ship_to__c=Site.Id, Opportunity_Type__c='New Opportunity', Loaner_Duration__c='180',Loaner_Ship_From_Finisar__c = 'Factory Stock', Status_Approval__c ='Pending Sales Order',Inside_Sales_Sales_rep__c = UserInfo.getUserId(),Opportunity__c=Opp.Id,Inside_Sales_Finisar__c = insideUser.Id);
-        insert loaner;
-        
-        loanerLine= new Loaner_Line__c(Loaner__c = loaner.Id,RecordTypeId = Schema.SObjectType.Loaner_Line__c.getRecordTypeInfosByName().get('Loaner Item').getRecordTypeId(), Loaner_Price_100_999_column_price__c=10,
-                                       Manual_Update__c=true,Manual_Shipped_Date__c=System.today(),Loaner_Qty__c=5,   Line_Status__c='Approved',Product__c=prod.Id,Est_Annual_Qty__c = 5,SOM__c = 5);
-        insert loanerLine;
-        Loaner_Line__c loanerLine2= new Loaner_Line__c(Loaner__c = loaner.Id,RecordTypeId = Schema.SObjectType.Loaner_Line__c.getRecordTypeInfosByName().get('Loaner Item').getRecordTypeId(), Loaner_Price_100_999_column_price__c =10,
-                                                       Manual_Update__c=true,Manual_Shipped_Date__c=System.today(),     Loaner_Qty__c=5, Line_Status__c='Approved',Product__c=prod.Id,Est_Annual_Qty__c = 5,SOM__c = 5);
-        insert loanerLine2;
-        
-        
-        
-        
-        Loaner__c loaner2 = new Loaner__c(RecordTypeId = Schema.SObjectType.Loaner__c.getRecordTypeInfosByName().get('Loaner Request').getRecordTypeId(), Company_Name_Ship_To__c = acc.Id,Company_Name_End_Cust__c = acctop.Id,Project_Engineer__c='Test',Project_Name__c = 'Test2Invaliddata',Opportunity__c =Opp.Id
+        loanerList.add(loaner);
+        Loaner__c loaner2 = new Loaner__c(RecordTypeId = Schema.SObjectType.Loaner__c.getRecordTypeInfosByName().get('Loaner Request').getRecordTypeId(),Company_Name_End_Cust__c = acctop.Id,Project_Engineer__c='Test',Project_Name__c = 'Test2Invaliddata',Opportunity__c =Opp.Id
                                           ,RSM_PLM_Finisar__c=rsmuser.Id,Address_ship_to__c=Site.Id, Opportunity_Type__c='New Opportunity', Loaner_Duration__c='180',Loaner_Ship_From_Finisar__c = 'Factory Stock', Status_Approval__c ='Draft',Inside_Sales_Sales_rep__c = UserInfo.getUserId(),Inside_Sales_Finisar__c = insideUser.Id);
-        insert loaner2;
-        
-        Loaner_Line__c loanerLine1= new Loaner_Line__c(Loaner__c = loaner2.Id,RecordTypeId = Schema.SObjectType.Loaner_Line__c.getRecordTypeInfosByName().get('Loaner Item').getRecordTypeId(), Loaner_Price_100_999_column_price__c=10,
-                                                       Line_Status__c='Draft',Product__c=prod.Id,Loaner_Qty__c =null,Est_Annual_Qty__c=null);
-        insert loanerLine1;
-        
-        
-        Loaner__c loaner3 = new Loaner__c(RecordTypeId = Schema.SObjectType.Loaner__c.getRecordTypeInfosByName().get('Loaner Request').getRecordTypeId(), Company_Name_Ship_To__c = acc.Id,Company_Name_End_Cust__c = acctop.Id,Project_Engineer__c='Test',Project_Name__c = 'Test2OpportunityTest',Est_Production_Date__c =Date.today(),
+        loanerList.add(loaner2);
+        Loaner__c loaner3 = new Loaner__c(RecordTypeId = Schema.SObjectType.Loaner__c.getRecordTypeInfosByName().get('Loaner Request').getRecordTypeId(),Company_Name_End_Cust__c = acctop.Id,Project_Engineer__c='Test',Project_Name__c = 'Test2OpportunityTest',Est_Production_Date__c =Date.today(),
                                           RSM_PLM_Finisar__c=rsmuser.Id,Address_ship_to__c=Site.Id, Opportunity_Type__c='New Opportunity', Loaner_Duration__c='180',Loaner_Ship_From_Finisar__c = 'Factory Stock', Status_Approval__c ='Draft',Inside_Sales_Sales_rep__c = UserInfo.getUserId(),Inside_Sales_Finisar__c = insideUser.Id);
-        insert loaner3;
-        
-        Loaner_Line__c loaner3line1= new Loaner_Line__c(Loaner__c = loaner3.Id,RecordTypeId = Schema.SObjectType.Loaner_Line__c.getRecordTypeInfosByName().get('Loaner Item').getRecordTypeId(), Loaner_Price_100_999_column_price__c=10,
-                                                        Line_Status__c='Draft',Product__c=prod.Id,Loaner_Qty__c =null,Est_Annual_Qty__c=null);
-        insert loaner3line1;
-        
-        
-        Loaner__c loanerrecord = new Loaner__c(RecordTypeId = Schema.SObjectType.Loaner__c.getRecordTypeInfosByName().get('Loaner Request').getRecordTypeId(), Company_Name_Ship_To__c = acc.Id,Company_Name_End_Cust__c = acctop.Id,Project_Engineer__c='Test',Project_Name__c = 'Test',Est_Production_Date__c = Date.Today(),
+        loanerList.add(loaner3);           
+        Loaner__c loanerrecord = new Loaner__c(RecordTypeId = Schema.SObjectType.Loaner__c.getRecordTypeInfosByName().get('Loaner Request').getRecordTypeId(),Company_Name_End_Cust__c = acctop.Id,Project_Engineer__c='Test',Project_Name__c = 'Test',Est_Production_Date__c = Date.Today(),
                                                RSM_PLM_Finisar__c =rsmuser.Id ,RSM_PLM_Approval__c=rsmuser.Id,Address_ship_to__c=Site.Id, Opportunity_Type__c='New Opportunity - < 100K SAM', Loaner_Duration__c='180',Loaner_Ship_From_Finisar__c = 'Factory Stock', Status_Approval__c ='Draft',Inside_Sales_Sales_rep__c = UserInfo.getUserId(),Inside_Sales_Finisar__c = insideUser.Id);
-        insert loanerrecord;
-        Loaner_Line__c loanerrecordLine= new Loaner_Line__c(Loaner__c = loanerrecord.Id,RecordTypeId = Schema.SObjectType.Loaner_Line__c.getRecordTypeInfosByName().get('Loaner Item').getRecordTypeId(), Loaner_Price_100_999_column_price__c=10,
+        loanerList.add(loanerrecord);  
+        insert loanerList;
+        Loaner_Line__c loanerLine2= new Loaner_Line__c(Loaner__c = loanerList[0].Id,RecordTypeId = Schema.SObjectType.Loaner_Line__c.getRecordTypeInfosByName().get('Loaner Item').getRecordTypeId(), Loaner_Price_100_999_column_price__c =10,
+                                                       Manual_Update__c=true,Manual_Shipped_Date__c=System.today(),     Loaner_Qty__c=5, Line_Status__c='Approved',Product__c=prod.Id,Est_Annual_Qty__c = 5,SOM__c = 5);
+        lianerLineList.add(loanerLine2);
+        loanerLine= new Loaner_Line__c(Loaner__c = loanerList[0].Id,RecordTypeId = Schema.SObjectType.Loaner_Line__c.getRecordTypeInfosByName().get('Loaner Item').getRecordTypeId(), Loaner_Price_100_999_column_price__c=10,
+                                       Manual_Update__c=true,Manual_Shipped_Date__c=System.today(),Loaner_Qty__c=5,   Line_Status__c='Approved',Product__c=prod.Id,Est_Annual_Qty__c = 5,SOM__c = 5);
+        lianerLineList.add(loanerLine);
+        Loaner_Line__c loanerLine1= new Loaner_Line__c(Loaner__c = loanerList[1].Id,RecordTypeId = Schema.SObjectType.Loaner_Line__c.getRecordTypeInfosByName().get('Loaner Item').getRecordTypeId(), Loaner_Price_100_999_column_price__c=10,
+                                                       Line_Status__c='Draft',Product__c=prod.Id,Loaner_Qty__c =null,Est_Annual_Qty__c=null);
+        lianerLineList.add(loanerLine1);
+        Loaner_Line__c loaner3line1= new Loaner_Line__c(Loaner__c = loanerList[2].Id,RecordTypeId = Schema.SObjectType.Loaner_Line__c.getRecordTypeInfosByName().get('Loaner Item').getRecordTypeId(), Loaner_Price_100_999_column_price__c=10,
+                                                        Line_Status__c='Draft',Product__c=prod.Id,Loaner_Qty__c =null,Est_Annual_Qty__c=null);
+        lianerLineList.add(loaner3line1);
+        Loaner_Line__c loanerrecordLine= new Loaner_Line__c(Loaner__c = loanerList[3].Id,RecordTypeId = Schema.SObjectType.Loaner_Line__c.getRecordTypeInfosByName().get('Loaner Item').getRecordTypeId(), Loaner_Price_100_999_column_price__c=10,
                                                             Line_Status__c='Draft',Product__c=prod.Id,Loaner_Qty__c =2,Est_Annual_Qty__c=null);
-        
-        insert loanerrecordLine;
+        lianerLineList.add(loanerrecordLine);
+        insert lianerLineList;
         return loaner;
     }
     public static void createRMAorCases(List<Account> accountlist)
     {
-        
         String FAErole = [select Id From UserRole where Name like 'FA E%' Limit 1].Id;
         User FAEUser = [select Id  From User where Name like '%FAEUser 1%'];
         Account acc =[select Id From Account where Name ='AccountCustomer1'];
@@ -191,9 +175,6 @@ public class TestDataUtilityClass {
         caserec.Ship_To_Address__c=Site.Id;
         insert caserec;
         Case RMArequest = new Case();
-        
-        
-        
     }
     public static void createReturnDetail(Loaner__c loaner)
         

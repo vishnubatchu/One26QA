@@ -16,7 +16,7 @@
     </values>
     <values>
         <field>SVP_Of_Sales__c</field>
-        <value xsi:nil="true"/>
+        <value xsi:type="xsd:string">mark.callahan@ii-vi.com.invalid.invalid</value>
     </values>
     <values>
         <field>Wavelength_BU_GM__c</field>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Require_Display_Billing_Shipping_Country</fullName>
-    <active>false</active>
+    <active>true</active>
     <description>If any Billing Address field != null, then Display Billing Country is required.</description>
     <errorConditionFormula>AND(
 TEXT(Display_Billing_Country__c)=&quot;&quot;,

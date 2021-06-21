@@ -115,7 +115,7 @@
     <fieldUpdates>
         <fullName>Update_Region_House_Account</fullName>
         <description>Update region to &quot;House&quot; if market is 80</description>
-        <field>Region__c</field>
+        <field>Glovia_Region__c</field>
         <literalValue>HOUSE (80)</literalValue>
         <name>Update Region House Account</name>
         <notifyAssignee>false</notifyAssignee>

@@ -1,2 +1,6 @@
-.THIS{
+.THIS .slds-textarea {
+    height:30px !important;
+}
+.THIS .textareacs {
+    height:30px !important;
 }

@@ -29,7 +29,8 @@
             <force:inputField  value="{!v.serialNoInstance.Status__c}" />
         </td>
         <td>
-            <force:inputField  value="{!v.serialNoInstance.Traceability_Information__c}" />
+            <!--force:inputField  value="{!v.serialNoInstance.Traceability_Information__c}" /-->
+            <lightning:textarea value="{!v.serialNoInstance.Traceability_Information__c}" class="textareacs"/>
         </td>
         <td>
             <force:inputField  value="{!v.serialNoInstance.Lane__c}" />
@@ -38,10 +39,12 @@
             <force:inputField  value="{!v.serialNoInstance.OperatingTime__c}" />
         </td>
         <td>
-            <force:inputField  value="{!v.serialNoInstance.Component_Description__c}" />
+            <!--force:inputField  value="{!v.serialNoInstance.Component_Description__c}" /-->
+            <lightning:input value="{!v.serialNoInstance.Component_Description__c}" />
         </td>
         <td>
-            <force:inputField  value="{!v.serialNoInstance.FA_FV_Notes__c}" />
+            <!--force:inputField  value="{!v.serialNoInstance.FA_FV_Notes__c}" /-->
+            <lightning:input value="{!v.serialNoInstance.FA_FV_Notes__c}" />	
         </td>
         <!--td>
             <force:inputField  value="{!v.serialNoInstance.Suppliers__c}" />

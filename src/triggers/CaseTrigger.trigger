@@ -4,7 +4,7 @@ trigger CaseTrigger on Case (before insert) {
     // This is done via trigger to avoid exposing Contact access perms to Guest Site user
     User u = [SELECT Id FROM User WHERE UserName LIKE '%custom_web_to_case@%' LIMIT 1];
     Id a = [SELECT Id FROM RecordType WHERE Name = 'AdvMat' LIMIT 1].Id;
-    //Id b = [SELECT Id FROM RecordType WHERE Name = 'AdvMat Unconfirmed' LIMIT 1].Id;
+    Id b = [SELECT Id FROM RecordType WHERE Name = 'AdvMat Unconfirmed' LIMIT 1].Id;
 
     Set<String> contactEmails = new Set<String>();
     for (Case c : Trigger.new) {
@@ -20,8 +20,8 @@ trigger CaseTrigger on Case (before insert) {
     }
 
     for (Case c : Trigger.new) {
-       // if ((c.RecordTypeId == a || c.RecordTypeId == b) && (c.SuppliedEmail != null) && (c.OwnerId == u.Id)) {
-            if ((c.RecordTypeId == a) && (c.SuppliedEmail != null) && (c.OwnerId == u.Id)) {
+        if ((c.RecordTypeId == a || c.RecordTypeId == b) && (c.SuppliedEmail != null) && (c.OwnerId == u.Id)) {
+            //if ((c.RecordTypeId == a) && (c.SuppliedEmail != null) && (c.OwnerId == u.Id)) {
             if (mapEmailToContactId.keySet().contains(c.SuppliedEmail)) {
                 c.ContactId = mapEmailToContactId.get(c.SuppliedEmail);
             }

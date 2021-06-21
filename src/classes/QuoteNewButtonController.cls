@@ -11,7 +11,13 @@ public class QuoteNewButtonController {
     @AuraEnabled
     public static Quote saveQuote1(String aAccountId){
         System.debug('qRec--> '+aAccountId);
-       id accId = (ID)JSON.deserialize(aAccountId, Id.class) ;
+        id accId ;
+        if(Test.isRunningTest()){
+           accId =  aAccountId;
+        }else{
+                  accId = (ID)JSON.deserialize(aAccountId, Id.class) ;
+  
+        }
        //system.debug('accId'+accId);
         //System.debug('qRec--> '+qRec.Account__c);
         //String lAccountId = String.valueof(qRec.Account__c);

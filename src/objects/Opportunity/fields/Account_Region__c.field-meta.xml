@@ -2,7 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Account_Region__c</fullName>
     <externalId>false</externalId>
-    <formula>TEXT(Account.Region__c)</formula>
+    <formula>TEXT(Account.Glovia_Region__c)</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
     <label>Account Region</label>
     <required>false</required>

@@ -1,11 +1,8 @@
 CurrencyIsoCode,Description,IsActive,IsStandard,Name
-USD,All commercial IR Products,TRUE,FALSE,Laser Part List
-USD,Parts for Suzhou Users,TRUE,FALSE,Suzhou Price Book
-USD,Contains Some IR and all ITAR Parts,TRUE,FALSE,Military
-USD,High Yag Products,TRUE,FALSE,High Yag
-USD,Singapore Part List for Segment 17,TRUE,FALSE,Singapore Part List
-USD,"Contains ALL available Parts, including ITAR",TRUE,TRUE,Standard Price Book
-USD,Mcubed price list with segment 30,TRUE,FALSE,Mcubed Part List
-USD,AMD Price list with segment 13,TRUE,FALSE,AMD Part List
-USD,ECOC price list with segment 83,TRUE,FALSE,ECOC Part List
-USD,,TRUE,FALSE,Epi Works
+USD,,TRUE,FALSE,Legacy Finisar Products
+USD,,TRUE,FALSE,Legacy Photonics Products
+USD,,TRUE,FALSE,Legacy Marlow Products
+USD,,TRUE,FALSE,Legacy II-VI Products
+USD,,TRUE,FALSE,Legacy II-VI Military Products
+USD,,TRUE,FALSE,Legacy II-VI Epiworks Products
+USD,"Contains ALL available Parts",TRUE,TRUE,Standard Price Book

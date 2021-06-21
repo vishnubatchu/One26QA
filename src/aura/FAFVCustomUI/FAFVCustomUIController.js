@@ -3,6 +3,19 @@
         var myPageRef = component.get("v.pageReference");
         var recids = myPageRef.state.c__recID;
         var action = component.get("c.getSONumber");
+        var workspaceAPI = component.find("workspace");
+        workspaceAPI.getFocusedTabInfo().then(function(response) {
+            var focusedTabId = response.tabId;
+            workspaceAPI.setTabLabel({
+                tabId: focusedTabId,
+                label: "FAFV"
+            });
+            workspaceAPI.setTabIcon({
+                tabId: focusedTabId,
+                icon: "action:new_task",
+                iconAlt: "FAFV"
+            });
+        });
         action.setParams({"orderlineId": recids});
         action.setCallback(this, function(response) {
             var state = response.getState();

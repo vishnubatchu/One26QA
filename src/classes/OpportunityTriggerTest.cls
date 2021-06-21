@@ -1,13 +1,20 @@
 @isTest(seeAllData = false)
 private class OpportunityTriggerTest {
     @testSetup static void methodName() {
-        Test.loadData(Pricebook2.sObjectType, 'PriceListTestdata');
+         List<Pricebook2> priceBookList = new List<Pricebook2>();
+        priceBookList.add(new Pricebook2(Name = 'Legacy Finisar Products', IsActive=true));
+        priceBookList.add(new Pricebook2(Name = 'Legacy Photonics Products', IsActive=true));
+        priceBookList.add(new Pricebook2(Name = 'Legacy Marlow Products', IsActive=true));
+        priceBookList.add(new Pricebook2(Name = 'Legacy II-VI Products', IsActive=true));
+        priceBookList.add(new Pricebook2(Name = 'Legacy II-VI Military Products',IsActive=true));
+        priceBookList.add(new Pricebook2(Name = 'Legacy II-VI Epiworks Products',IsActive=true));
+        insert priceBookList;
         List<Account> acc = TestDataFactory.createAccounts(1);
         system.debug('price book '+[Select id,Name from Pricebook2]);
         system.debug('standard '+ Test.getStandardPricebookId());
         List<Opportunity> opp = TestDataFactory.createOpportunity(1, acc[0].Id);
         List<Product2> prd = TestDataFactory.createProducts('2', 2, false);
-        List<Pricebook2> pricel = [Select Id from Pricebook2 Where Name = 'Laser Part List' AND CurrencyIsoCode = 'USD'];
+        List<Pricebook2> pricel = [Select Id from Pricebook2 Where Name = 'Legacy Marlow Products' AND CurrencyIsoCode = 'USD'];
         system.debug('pricel '+pricel);
         opp[0].Pricebook2Id = pricel[0].Id;
         opp[0].CurrencyIsoCode = 'USD';

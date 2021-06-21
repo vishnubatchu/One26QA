@@ -2,10 +2,13 @@
     <aura:attribute name="recID" type= "String" />
     <aura:attribute name = "soNumber" type = "String"/>
     <aura:handler name="init" action="{!c.doInit}" value="{!this}" description="Call doInit function on component load to get picklist values"/>
-    <lightning:workspaceAPI aura:id="workspace"/>
-    <aura:html tag="style">
-    </aura:html>
-    <div class="slds-grid slds-grid_vertical slds-size_1-of-1 slds-p-around--xx-small" style="background-color :#223f68 ;margin-top:-4%;">
+    <div class="slds-hidden">
+    <lightning:workspaceAPI aura:id="workspace" />
+    </div>
+    
+    <!--aura:html tag="style">
+    </aura:html-->
+    <div class="slds-grid slds-grid_vertical slds-size_1-of-1 slds-p-around--xx-small" style="background-color :#223f68;margin-top:-4%;">
         <div class="slds-col--padded slds-size_1-of-1  slds-m-bottom--x-small">
            <div class="slds-grid slds-size_3-of-3">
             <div class="slds-size_1-of-3 slds-text-align_left">  

@@ -10,7 +10,7 @@
         <processMetadataValues>
             <name>textJson</name>
             <value>
-                <stringValue>{&quot;mentions&quot;:[],&quot;message&quot;:&quot;The following RMA Billing approval request has been awaiting for review with RMA Admin. \n\nDetails: \n\nRMA Id: {![Case].CaseNumber} \nRMA Billing Type: {![Case].Billing_Type__c}\nAmount: {![Case].Rolled_up_Amount__c} \nRequstor Name: {![Case].CreatedBy.LastName} + {![Case].CreatedBy.FirstName}\nFinisar Sales Manager: {![Case].Finisar_Sales_Manager__r.LastName} + {![Case].Finisar_Sales_Manager__r.FirstName}\nEnd Customer: {![Case].Customer_Name__r.Name}\n\nThanks\n&quot;}</stringValue>
+                <stringValue>{&quot;mentions&quot;:[],&quot;message&quot;:&quot;The following RMA Billing approval request has been awaiting for review with RMA Admin. \n\nDetails: \n\nRMA Id: {![Case].CaseNumber} \nRMA Billing Type: {![Case].Billing_Type__c}\nAmount: {![Case].Rolled_up_Amount__c} \nRequstor Name: {![Case].CreatedBy.LastName} + {![Case].CreatedBy.FirstName}\nFinisar Sales Manager: {![Case].Finisar_Sales_Manager__r.LastName} + {![Case].Finisar_Sales_Manager__r.FirstName}\nEnd Customer: {![Case].Customer_Name__r.Name}\n\nThanks&quot;}</stringValue>
             </value>
         </processMetadataValues>
         <name>myRule_1_A1</name>
@@ -21,60 +21,6 @@
         <actionType>chatterPost</actionType>
         <connector>
             <targetReference>myDecision2</targetReference>
-        </connector>
-        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
-        <inputParameters>
-            <name>text</name>
-            <value>
-                <stringValue>The following RMA Billing approval request has been awaiting for review with RMA Admin. 
-
-Details: 
-
-RMA Id: {!myVariable_current.CaseNumber} 
-RMA Billing Type: {!myVariable_current.Billing_Type__c}
-Amount: {!myVariable_current.Rolled_up_Amount__c} 
-Requstor Name: {!myVariable_current.CreatedBy.LastName} + {!myVariable_current.CreatedBy.FirstName}
-Finisar Sales Manager: {!myVariable_current.Finisar_Sales_Manager__r.LastName} + {!myVariable_current.Finisar_Sales_Manager__r.FirstName}
-End Customer: {!myVariable_current.Customer_Name__r.Name}
-
-Thanks
-</stringValue>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>type</name>
-            <value>
-                <stringValue>GROUP</stringValue>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>subjectNameOrId</name>
-            <value>
-                <stringValue>0F92f0000000cXGCAY</stringValue>
-            </value>
-        </inputParameters>
-    </actionCalls>
-    <actionCalls>
-        <processMetadataValues>
-            <name>postTarget</name>
-            <value>
-                <stringValue>RMA Admin Group</stringValue>
-            </value>
-        </processMetadataValues>
-        <processMetadataValues>
-            <name>textJson</name>
-            <value>
-                <stringValue>{&quot;mentions&quot;:[],&quot;message&quot;:&quot;The following RMA Billing approval request has been awaiting for review with RMA Admin. \n\nDetails: \n\nRMA Id: {![Case].CaseNumber} \nRMA Billing Type: {![Case].Billing_Type__c}\nAmount: {![Case].Rolled_up_Amount__c} \nRequstor Name: {![Case].CreatedBy.LastName} + {![Case].CreatedBy.FirstName}\nFinisar Sales Manager: {![Case].Finisar_Sales_Manager__r.LastName} + {![Case].Finisar_Sales_Manager__r.FirstName}\nEnd Customer: {![Case].Customer_Name__r.Name}\n\nThanks&quot;}</stringValue>
-            </value>
-        </processMetadataValues>
-        <name>myRule_3_A1</name>
-        <label>RMA Approval Alert</label>
-        <locationX>300</locationX>
-        <locationY>200</locationY>
-        <actionName>chatterPost</actionName>
-        <actionType>chatterPost</actionType>
-        <connector>
-            <targetReference>myDecision4</targetReference>
         </connector>
         <flowTransactionModel>CurrentTransaction</flowTransactionModel>
         <inputParameters>
@@ -103,7 +49,123 @@ Thanks</stringValue>
         <inputParameters>
             <name>subjectNameOrId</name>
             <value>
-                <stringValue>0F92f0000000cXGCAY</stringValue>
+                <stringValue>0F91N000000g1tkSAA</stringValue>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <processMetadataValues>
+            <name>ActionCallType</name>
+            <value>
+                <stringValue>flow</stringValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>flowSelection</name>
+            <value>
+                <stringValue>Update RMA Request (Case Approvers)</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>myRule_22_A1</name>
+        <label>Update Case Approvers Lookups</label>
+        <locationX>2200</locationX>
+        <locationY>200</locationY>
+        <actionName>Update_RMA_Request_Case_Approvers</actionName>
+        <actionType>flow</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>var_case_record</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>maxOccurs</name>
+                <value>
+                    <numberValue>1.0</numberValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>objectType</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Reference</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>var_case_record</name>
+            <value>
+                <elementReference>myVariable_current.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <processMetadataValues>
+            <name>postTarget</name>
+            <value>
+                <stringValue>RMA Admin Group</stringValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>textJson</name>
+            <value>
+                <stringValue>{&quot;mentions&quot;:[],&quot;message&quot;:&quot;The following RMA Billing approval request has been Approved By CFO . \n\nDetails: \n\nRMA Id: {![Case].CaseNumber} \nRMA Billing Type: {![Case].Billing_Type__c}\nAmount: {![Case].Rolled_up_Amount__c} \nRequstor Name: {![Case].CreatedBy.LastName} + {![Case].CreatedBy.FirstName}\nFinisar Sales Manager: {![Case].Finisar_Sales_Manager__r.LastName} + {![Case].Finisar_Sales_Manager__r.FirstName}\nEnd Customer: {![Case].Customer_Name__r.Name}\n\nThanks&quot;}</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>myRule_3_A1</name>
+        <label>RMA Approval Alert</label>
+        <locationX>300</locationX>
+        <locationY>200</locationY>
+        <actionName>chatterPost</actionName>
+        <actionType>chatterPost</actionType>
+        <connector>
+            <targetReference>myDecision4</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>text</name>
+            <value>
+                <stringValue>The following RMA Billing approval request has been Approved By CFO . 
+
+Details: 
+
+RMA Id: {!myVariable_current.CaseNumber} 
+RMA Billing Type: {!myVariable_current.Billing_Type__c}
+Amount: {!myVariable_current.Rolled_up_Amount__c} 
+Requstor Name: {!myVariable_current.CreatedBy.LastName} + {!myVariable_current.CreatedBy.FirstName}
+Finisar Sales Manager: {!myVariable_current.Finisar_Sales_Manager__r.LastName} + {!myVariable_current.Finisar_Sales_Manager__r.FirstName}
+End Customer: {!myVariable_current.Customer_Name__r.Name}
+
+Thanks</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>type</name>
+            <value>
+                <stringValue>GROUP</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>subjectNameOrId</name>
+            <value>
+                <stringValue>0F91N000000g1tkSAA</stringValue>
             </value>
         </inputParameters>
     </actionCalls>
@@ -684,6 +746,9 @@ Thanks</stringValue>
         <label>myDecision17</label>
         <locationX>50</locationX>
         <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>myDecision21</targetReference>
+        </defaultConnector>
         <defaultConnectorLabel>default</defaultConnectorLabel>
         <rules>
             <name>myRule_18</name>
@@ -791,6 +856,280 @@ Thanks</stringValue>
         <processMetadataValues>
             <name>index</name>
             <value>
+                <numberValue>8.0</numberValue>
+            </value>
+        </processMetadataValues>
+        <name>myDecision21</name>
+        <label>myDecision21</label>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>default</defaultConnectorLabel>
+        <rules>
+            <name>myRule_22</name>
+            <conditionLogic>1 AND (2 OR 3 OR 4 OR 5 OR 6 OR 7)</conditionLogic>
+            <conditions>
+                <processMetadataValues>
+                    <name>inputDataType</name>
+                    <value>
+                        <stringValue>String</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>leftHandSideType</name>
+                    <value>
+                        <stringValue>String</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>operatorDataType</name>
+                    <value>
+                        <stringValue>String</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>rightHandSideType</name>
+                    <value>
+                        <stringValue>String</stringValue>
+                    </value>
+                </processMetadataValues>
+                <leftValueReference>myVariable_current.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>RMA_Request</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <processMetadataValues>
+                    <name>inputDataType</name>
+                    <value>
+                        <stringValue>Boolean</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>leftHandSideReferenceTo</name>
+                    <value>
+                        <stringValue>User</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>leftHandSideType</name>
+                    <value>
+                        <stringValue>ID</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>operatorDataType</name>
+                    <value>
+                        <stringValue>String</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>rightHandSideType</name>
+                    <value>
+                        <stringValue>Boolean</stringValue>
+                    </value>
+                </processMetadataValues>
+                <leftValueReference>myVariable_current.CFO_User__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <processMetadataValues>
+                    <name>inputDataType</name>
+                    <value>
+                        <stringValue>Boolean</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>leftHandSideReferenceTo</name>
+                    <value>
+                        <stringValue>User</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>leftHandSideType</name>
+                    <value>
+                        <stringValue>ID</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>operatorDataType</name>
+                    <value>
+                        <stringValue>String</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>rightHandSideType</name>
+                    <value>
+                        <stringValue>Boolean</stringValue>
+                    </value>
+                </processMetadataValues>
+                <leftValueReference>myVariable_current.Data_n_W_BU_GM__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <processMetadataValues>
+                    <name>inputDataType</name>
+                    <value>
+                        <stringValue>Boolean</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>leftHandSideReferenceTo</name>
+                    <value>
+                        <stringValue>User</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>leftHandSideType</name>
+                    <value>
+                        <stringValue>ID</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>operatorDataType</name>
+                    <value>
+                        <stringValue>String</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>rightHandSideType</name>
+                    <value>
+                        <stringValue>Boolean</stringValue>
+                    </value>
+                </processMetadataValues>
+                <leftValueReference>myVariable_current.OpticalIC_BU_GM__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <processMetadataValues>
+                    <name>inputDataType</name>
+                    <value>
+                        <stringValue>Boolean</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>leftHandSideReferenceTo</name>
+                    <value>
+                        <stringValue>User</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>leftHandSideType</name>
+                    <value>
+                        <stringValue>ID</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>operatorDataType</name>
+                    <value>
+                        <stringValue>String</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>rightHandSideType</name>
+                    <value>
+                        <stringValue>Boolean</stringValue>
+                    </value>
+                </processMetadataValues>
+                <leftValueReference>myVariable_current.Wavelength_BU_GM__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <processMetadataValues>
+                    <name>inputDataType</name>
+                    <value>
+                        <stringValue>Boolean</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>leftHandSideReferenceTo</name>
+                    <value>
+                        <stringValue>User</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>leftHandSideType</name>
+                    <value>
+                        <stringValue>ID</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>operatorDataType</name>
+                    <value>
+                        <stringValue>String</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>rightHandSideType</name>
+                    <value>
+                        <stringValue>Boolean</stringValue>
+                    </value>
+                </processMetadataValues>
+                <leftValueReference>myVariable_current.SVP_of_Sales__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <processMetadataValues>
+                    <name>inputDataType</name>
+                    <value>
+                        <stringValue>Boolean</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>leftHandSideReferenceTo</name>
+                    <value>
+                        <stringValue>User</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>leftHandSideType</name>
+                    <value>
+                        <stringValue>ID</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>operatorDataType</name>
+                    <value>
+                        <stringValue>String</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>rightHandSideType</name>
+                    <value>
+                        <stringValue>Boolean</stringValue>
+                    </value>
+                </processMetadataValues>
+                <leftValueReference>myVariable_current.X3DSensing_BU_GM__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myRule_22_A1</targetReference>
+            </connector>
+            <label>UPDATE APPROVER -USER Lookups</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <processMetadataValues>
+            <name>index</name>
+            <value>
                 <numberValue>2.0</numberValue>
             </value>
         </processMetadataValues>
@@ -804,7 +1143,7 @@ Thanks</stringValue>
         <defaultConnectorLabel>default</defaultConnectorLabel>
         <rules>
             <name>myRule_5</name>
-            <conditionLogic>(1 AND 2 AND 3 AND (4 OR 5))</conditionLogic>
+            <conditionLogic>1 AND 2 AND 3 AND (4 OR 5)</conditionLogic>
             <conditions>
                 <processMetadataValues>
                     <name>inputDataType</name>
@@ -1210,12 +1549,12 @@ Thanks</stringValue>
         <processMetadataValues>
             <name>originalFormula</name>
             <value>
-                <stringValue>TEXT([Case].Case_Status__c) </stringValue>
+                <stringValue>Text([Case].Case_Status__c )</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_20_myRule_18_A1_2064932955</name>
+        <name>formula_20_myRule_18_A1_7776012208</name>
         <dataType>String</dataType>
-        <expression>TEXT({!myVariable_current.Case_Status__c})</expression>
+        <expression>Text({!myVariable_current.Case_Status__c} )</expression>
     </formulas>
     <formulas>
         <processMetadataValues>
@@ -1253,7 +1592,7 @@ ISPICKVAL({!myVariable_current.Status},&apos;Pending RMA Admin Review&apos;),
 {!myVariable_current.CFO_Approved__c} =True,
 NOT(ISPICKVAL({!$User.UserType}, &apos;PowerPartner&apos;) ))</expression>
     </formulas>
-    <interviewLabel>Case_RMA_Driver_Process-31_InterviewLabel</interviewLabel>
+    <interviewLabel>Case_RMA_Driver_Process-34_InterviewLabel</interviewLabel>
     <label>Case/RMA Driver Process</label>
     <processMetadataValues>
         <name>ObjectType</name>
@@ -1608,7 +1947,7 @@ NOT(ISPICKVAL({!$User.UserType}, &apos;PowerPartner&apos;) ))</expression>
             </processMetadataValues>
             <field>Status</field>
             <value>
-                <elementReference>formula_20_myRule_18_A1_2064932955</elementReference>
+                <elementReference>formula_20_myRule_18_A1_7776012208</elementReference>
             </value>
         </inputAssignments>
         <object>Case</object>

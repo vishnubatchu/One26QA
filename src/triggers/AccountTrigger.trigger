@@ -7,14 +7,7 @@ trigger AccountTrigger on Account (after insert,after update,before insert,befor
             AccountTriggerHelper.afterUpdate(Trigger.oldMap, Trigger.newMap);
             AccountTriggerHelper.updateOrderLines(trigger.new, trigger.oldMap);
             //AccountTriggerHelper.updateSharing(trigger.newMap, trigger.oldMap);
-            
+            AccountTriggerHelper.updateGlblPrntPrevOwner(trigger.new, trigger.oldMap);
         } 
-    }/*else if(Trigger.isBefore){
-        if(Trigger.isInsert){
-            AccountTriggerHelper.chckGlblPrntAccDplct(Trigger.New);
-        }else if(Trigger.isUpdate){
-           // AccountTriggerHelper.chckGlblPrntAccDplct(Trigger.New);
-        }
-        
-    }*/
+    }
 }

@@ -1,12 +1,14 @@
 @isTest(seeAllData = false)
 private class PartnerAccountGroupCreationBatchTest {
     testMethod static void testbatch(){
-        List<Account> accList = TestDataUtilityClass.createAccounts();
+       // List<Account> accList = TestDataUtilityClass.createAccounts();
+          Account Parentacc=new Account(Name='Global Parent Test Acc',Display_Shipping_Country__c ='United States',   Display_Billing_Country__c = 'United States',ShippingCity = 'New York', ShippingCountry ='US',RecordTypeId=Schema.SObjectType.Account.getRecordTypeInfosByName().get('Global Parent').getRecordTypeId());
+        insert Parentacc;
         List<Account> acList = new List<Account>();
         for(Integer i=0; i<10; i++){
-            Account acc1 = new Account(name='AccountTopLevelTest'+i, 
+            Account acc1 = new Account(name='AccountTopLevelTest'+i, Display_Shipping_Country__c ='United States',   Display_Billing_Country__c = 'United States',
                                        Status__c='Active',
-                                       Type='Customer',
+                                       Type='Customer',parentId=Parentacc.id,ShippingCity = 'New York', ShippingCountry ='US',
                                        RecordTypeId = Schema.SObjectType.Account.getRecordTypeInfosByName().get('Top Level Account').getRecordTypeId(),
                                        Legacy_Id__c = 'TestLega'+i );
             acList.add(acc1);

@@ -15,17 +15,18 @@ description : updates lead marketing communication details using metadata .
     public static void updatemarketingCommunication(List<Lead> newLeads){
         Set<String> countries = new Set<String>();
         for(lead ld : NewLeads){
-            countries.add(ld.Display_ISO_Country__c);
+            if(ld.Display_ISO_Country__c != null)
+                countries.add(ld.Display_ISO_Country__c);
         }
-        system.debug('countries'+countries);
         Map<String, Map<String, String>> gdprCountryCatMap = ContactForGDPR.getEmailCategory(countries);
-        system.debug('gdprCountryCatMap'+gdprCountryCatMap);
         for(Lead ld : NewLeads){
-            String countryOption = gdprCountryCatMap.get(ld.Display_ISO_Country__c.toupperCase()).get('CUSTOMER');
-            if(countryOption == 'OPT IN'){
-                ld.Marketing_Communication_Opt_Out__c = true;
-            }else{
-                ld.Marketing_Communication_Opt_Out__c = false;
+            if(ld.Display_ISO_Country__c != null && gdprCountryCatMap.containsKey(ld.Display_ISO_Country__c)){
+                String countryOption = gdprCountryCatMap.get(ld.Display_ISO_Country__c.toupperCase()).get('CUSTOMER');
+                if(countryOption == 'OPT IN'){
+                    ld.Marketing_Communication_Opt_Out__c = true;
+                }else{
+                    ld.Marketing_Communication_Opt_Out__c = false;
+                }
             }
         }
     }
@@ -43,8 +44,8 @@ description : Sending emails to Leads with email opt IN/OUT.
         Map<String, Individual> individualMap = new Map<String, Individual>();
         List<Individual> updateIndividual = new List<Individual>();
         List<Messaging.SingleEmailMessage> mailList = new List<Messaging.SingleEmailMessage>();
-        EmailTemplate etforOptIn = [SELECT Id FROM EmailTemplate WHERE DeveloperName = 'Lead_Email_OptIn'];
-        EmailTemplate etforOptOut = [SELECT Id FROM EmailTemplate WHERE DeveloperName = 'Lead_Email_OptOut'];
+        EmailTemplate etforOptIn = [SELECT Id FROM EmailTemplate WHERE DeveloperName = 'Contact_Email_OptIn'];
+        EmailTemplate etforOptOut = [SELECT Id FROM EmailTemplate WHERE DeveloperName = 'Contact_Email_OptOut'];
         OrgWideEmailAddress[] owea = [select Id,Address from OrgWideEmailAddress where DisplayName = 'FinisarCRM']; 
         for(Lead ld:leadList){
             creatorId.add(ld.CreatedById);
@@ -82,7 +83,7 @@ description : Sending emails to Leads with email opt IN/OUT.
                }
         }
         if(mailList != null && !mailList.isEmpty())
-            Messaging.sendEmail(mailList);
+            Messaging.sendEmail(mailList, false);
         if(updateIndividual != null && !updateIndividual.isEmpty()){
             update updateIndividual;
         }
@@ -99,7 +100,7 @@ description : Sending emails to lead created user when lead deleted.
             set<id> creatorId = new set<id>();
             Map<Id,String> idToLeadCreatorMap = new Map<Id,String>();
             List<Messaging.SingleEmailMessage> mailList = new List<Messaging.SingleEmailMessage>();
-            EmailTemplate et = [SELECT Id FROM EmailTemplate WHERE DeveloperName = 'Lead_Deletion_Templete'];
+            EmailTemplate et = [SELECT Id FROM EmailTemplate WHERE DeveloperName = 'Contact_Deletion_Templete'];
             OrgWideEmailAddress[] owea = [select Id,Address from OrgWideEmailAddress where DisplayName = 'FinisarCRM'];
             for(Lead ld :leadlist){
                 creatorId.add(ld.CreatedById);

@@ -5,9 +5,11 @@ public class TestDataFactory {
     } **/
     public static List<Account> createAccounts(Integer count){
         //createCountrycodes();
+        Account globalParentAcc=new Account(Name='Global Parent Test Acc',Display_Shipping_Country__c ='United States',   Display_Billing_Country__c = 'United States',ShippingCity = 'New York', ShippingCountry ='US',RecordTypeId=Schema.SObjectType.Account.getRecordTypeInfosByName().get('Global Parent').getRecordTypeId());
+            insert globalParentAcc;
         List<Account> accList = new List<Account>();
         for(Integer i = 0; i< count; i++){
-            accList.add(new Account(Name = 'Test Account '+i, Business_Segment__c = 'CORP',
+            accList.add(new Account(ParentId=globalParentAcc.Id,Display_Billing_Country__c = 'United States',RecordTypeId=getRecordTypeIdByName('Customer Account'),Name = 'Test Account '+i, Business_Segment__c = 'CORP',
                                    ShippingCity = 'city', ShippingCountry = 'US', CurrencyIsoCode = 'USD', Display_Shipping_Country__c = 'American Samoa'));
         }
         if(accList != null && !accList.isEmpty()){
@@ -77,6 +79,19 @@ public class TestDataFactory {
         }
         return oItems;
     }
+    
+    public static List<OrderItem> createOrderItems(String orderId, String prdid,  String pbId, Integer n){
+        List<OrderItem> oItems = new List<OrderItem>();
+        for(Integer i = 0; i<n; i++){
+            oItems.add(new orderItem(OrderId = orderId, Product2Id = prdId, UnitPrice = 10,
+                                    Quantity = 10, PricebookEntryId = pbid));
+        }
+        if(oItems != null && !oItems.isEmpty()){
+            insert oItems;
+        }
+        return oItems;
+    }
+    
   /**  public static void createOrderRatePlan(String lineId, Integer sequesnceNo, Decimal unitPrice){
         OrderRatePlan__c plan = new OrderRatePlan__c(LeadTime__c = '2 weeks', OrderProduct__c = lineId,
                                                     SalesPrice__c = unitPrice, SequenceNumber__c = sequesnceNo);
@@ -108,5 +123,9 @@ public class TestDataFactory {
         QuoteRatePlan__c plan = new QuoteRatePlan__c(QuoteLineItem__c = lineId, SalesPrice__c = salesPrice,
                                                     SequenceNumber__c = seqNo, LeadTime__c = '2 Weeks');
         insert plan;
+    }
+    
+    static Id getRecordTypeIdByName(String recordTypeName){
+       return [Select Id from RecordType where Name=:recordTypeName].Id;
     }
 }

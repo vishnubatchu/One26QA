@@ -4,8 +4,8 @@
     <assignments>
         <name>ReferenceRecordObject</name>
         <label>ReferenceRecordObject</label>
-        <locationX>466</locationX>
-        <locationY>445</locationY>
+        <locationX>834</locationX>
+        <locationY>525</locationY>
         <assignmentItems>
             <assignToReference>var_Final_Sobject</assignToReference>
             <operator>Assign</operator>
@@ -14,14 +14,14 @@
             </value>
         </assignmentItems>
         <connector>
-            <targetReference>itrate_Over_Custom_metaData_Record</targetReference>
+            <targetReference>Update_Product_Return_Request</targetReference>
         </connector>
     </assignments>
     <decisions>
         <name>checkPartNumber</name>
         <label>checkPartNumber</label>
-        <locationX>989</locationX>
-        <locationY>6</locationY>
+        <locationX>1129</locationX>
+        <locationY>50</locationY>
         <defaultConnector>
             <targetReference>When_Product_group_is_same_or_empty</targetReference>
         </defaultConnector>
@@ -37,312 +37,41 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>checkwhichpartnumberstartswith</targetReference>
+                <targetReference>checkPartNumberwithMtd</targetReference>
             </connector>
             <label>if PartNumber is not null</label>
         </rules>
     </decisions>
     <decisions>
-        <name>checkwhichpartnumberstartswith</name>
-        <label>checkwhichpartnumberstartswith</label>
-        <locationX>1318</locationX>
-        <locationY>148</locationY>
+        <name>checkPartNumberwithMtd</name>
+        <label>checkPartNumberwithMtd</label>
+        <locationX>1628</locationX>
+        <locationY>93</locationY>
         <defaultConnector>
             <targetReference>itrate_Over_Custom_metaData_Record</targetReference>
         </defaultConnector>
-        <defaultConnectorLabel>[Default Outcome]</defaultConnectorLabel>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
-            <name>startswith_FCCG110SD</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>var_returnRequestObj.Part_Number__c</leftValueReference>
-                <operator>StartsWith</operator>
-                <rightValue>
-                    <stringValue>FCCG110SD</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>var_product_partnumber</leftValueReference>
-                <operator>StartsWith</operator>
-                <rightValue>
-                    <stringValue>FCCG110SD</stringValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>ReferenceRecordObject</targetReference>
-            </connector>
-            <label>startswith FCCG110SD</label>
-        </rules>
-        <rules>
-            <name>startswith_FTEN211</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>var_returnRequestObj.Part_Number__c</leftValueReference>
-                <operator>StartsWith</operator>
-                <rightValue>
-                    <stringValue>FTEN211</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>var_product_partnumber</leftValueReference>
-                <operator>StartsWith</operator>
-                <rightValue>
-                    <stringValue>FTEN211</stringValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>ReferenceRecordObject</targetReference>
-            </connector>
-            <label>startswith FTEN211</label>
-        </rules>
-        <rules>
-            <name>starts_with_FTLQ7181</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>var_returnRequestObj.Part_Number__c</leftValueReference>
-                <operator>StartsWith</operator>
-                <rightValue>
-                    <stringValue>FTLQ7181</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>var_product_partnumber</leftValueReference>
-                <operator>StartsWith</operator>
-                <rightValue>
-                    <stringValue>FTLQ7181</stringValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>ReferenceRecordObject</targetReference>
-            </connector>
-            <label>starts with FTLQ7181</label>
-        </rules>
-        <rules>
-            <name>starts_with_FTLQ8181</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>var_returnRequestObj.Part_Number__c</leftValueReference>
-                <operator>StartsWith</operator>
-                <rightValue>
-                    <stringValue>FTLQ8181</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>var_product_partnumber</leftValueReference>
-                <operator>StartsWith</operator>
-                <rightValue>
-                    <stringValue>FTLQ8181</stringValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>ReferenceRecordObject</targetReference>
-            </connector>
-            <label>starts with FTLQ8181</label>
-        </rules>
-        <rules>
-            <name>starts_with_FTGN2</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>var_returnRequestObj.Part_Number__c</leftValueReference>
-                <operator>StartsWith</operator>
-                <rightValue>
-                    <stringValue>FTGN2</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>var_product_partnumber</leftValueReference>
-                <operator>StartsWith</operator>
-                <rightValue>
-                    <stringValue>FTGN2</stringValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>ReferenceRecordObject</targetReference>
-            </connector>
-            <label>starts with FTGN2</label>
-        </rules>
-        <rules>
-            <name>starts_with_FTLC1141</name>
+            <name>haspart</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
                 <leftValueReference>var_product_partnumber</leftValueReference>
                 <operator>StartsWith</operator>
                 <rightValue>
-                    <stringValue>FTLC1141</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>var_returnRequestObj.Part_Number__c</leftValueReference>
-                <operator>StartsWith</operator>
-                <rightValue>
-                    <stringValue>FTLC1141</stringValue>
+                    <elementReference>var_returnRequestObj.Part_Number__c</elementReference>
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>ReferenceRecordObject</targetReference>
+                <targetReference>When_Product_group_is_same_or_empty</targetReference>
             </connector>
-            <label>starts with FTLC1141</label>
-        </rules>
-        <rules>
-            <name>starts_with_FTLC1181</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>var_product_partnumber</leftValueReference>
-                <operator>StartsWith</operator>
-                <rightValue>
-                    <stringValue>FTLC1181</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>var_returnRequestObj.Part_Number__c</leftValueReference>
-                <operator>StartsWith</operator>
-                <rightValue>
-                    <stringValue>FTLC1181</stringValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>ReferenceRecordObject</targetReference>
-            </connector>
-            <label>starts with FTLC1181</label>
-        </rules>
-        <rules>
-            <name>starts_with_FTLC8221</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>var_returnRequestObj.Part_Number__c</leftValueReference>
-                <operator>StartsWith</operator>
-                <rightValue>
-                    <stringValue>FTLC8221</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>var_product_partnumber</leftValueReference>
-                <operator>StartsWith</operator>
-                <rightValue>
-                    <stringValue>FTLC8221</stringValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>ReferenceRecordObject</targetReference>
-            </connector>
-            <label>starts with FTLC8221</label>
-        </rules>
-        <rules>
-            <name>starts_with_FTLC9141</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>var_product_partnumber</leftValueReference>
-                <operator>StartsWith</operator>
-                <rightValue>
-                    <stringValue>FTLC9141</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>var_returnRequestObj.Part_Number__c</leftValueReference>
-                <operator>StartsWith</operator>
-                <rightValue>
-                    <stringValue>FTLC9141</stringValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>ReferenceRecordObject</targetReference>
-            </connector>
-            <label>starts with FTLC9141</label>
-        </rules>
-        <rules>
-            <name>starts_with_FTLD1</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>var_product_partnumber</leftValueReference>
-                <operator>StartsWith</operator>
-                <rightValue>
-                    <stringValue>FTLD1</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>var_returnRequestObj.Part_Number__c</leftValueReference>
-                <operator>StartsWith</operator>
-                <rightValue>
-                    <stringValue>FTLD1</stringValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>ReferenceRecordObject</targetReference>
-            </connector>
-            <label>starts with FTLD1</label>
-        </rules>
-        <rules>
-            <name>starts_with_FRXD02SL1</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>var_product_partnumber</leftValueReference>
-                <operator>StartsWith</operator>
-                <rightValue>
-                    <stringValue>FRXD02SL1</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>var_returnRequestObj.Part_Number__c</leftValueReference>
-                <operator>StartsWith</operator>
-                <rightValue>
-                    <stringValue>FRXD02SL1</stringValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>ReferenceRecordObject</targetReference>
-            </connector>
-            <label>starts with FRXD02SL1</label>
-        </rules>
-        <rules>
-            <name>starts_with_FTXD02SL1</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>var_product_partnumber</leftValueReference>
-                <operator>StartsWith</operator>
-                <rightValue>
-                    <stringValue>FTXD02SL1</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>var_returnRequestObj.Part_Number__c</leftValueReference>
-                <operator>StartsWith</operator>
-                <rightValue>
-                    <stringValue>FTXD02SL1</stringValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>ReferenceRecordObject</targetReference>
-            </connector>
-            <label>starts with FTXD02SL1</label>
-        </rules>
-        <rules>
-            <name>starts_with_FTEN221</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>var_returnRequestObj.Part_Number__c</leftValueReference>
-                <operator>StartsWith</operator>
-                <rightValue>
-                    <stringValue>FTEN221</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>var_product_partnumber</leftValueReference>
-                <operator>StartsWith</operator>
-                <rightValue>
-                    <stringValue>FTEN221</stringValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>ReferenceRecordObject</targetReference>
-            </connector>
-            <label>starts with FTEN221</label>
+            <label>haspart</label>
         </rules>
     </decisions>
     <decisions>
         <name>Product_Configuration_Check</name>
         <label>Product Configuration Check</label>
-        <locationX>792</locationX>
-        <locationY>557</locationY>
+        <locationX>1160</locationX>
+        <locationY>637</locationY>
         <defaultConnector>
             <targetReference>itrate_Over_Custom_metaData_Record</targetReference>
         </defaultConnector>
@@ -373,8 +102,8 @@
     <decisions>
         <name>Product_Form_Factor_Check</name>
         <label>Product Form Factor Check</label>
-        <locationX>802</locationX>
-        <locationY>421</locationY>
+        <locationX>1170</locationX>
+        <locationY>501</locationY>
         <defaultConnector>
             <targetReference>itrate_Over_Custom_metaData_Record</targetReference>
         </defaultConnector>
@@ -405,8 +134,8 @@
     <decisions>
         <name>ProductFamilyCheck</name>
         <label>ProductFamilyCheck</label>
-        <locationX>880</locationX>
-        <locationY>276</locationY>
+        <locationX>1404</locationX>
+        <locationY>430</locationY>
         <defaultConnector>
             <targetReference>itrate_Over_Custom_metaData_Record</targetReference>
         </defaultConnector>
@@ -437,8 +166,8 @@
     <decisions>
         <name>When_Product_group_is_same_or_empty</name>
         <label>When Product group is same or empty</label>
-        <locationX>916</locationX>
-        <locationY>154</locationY>
+        <locationX>1452</locationX>
+        <locationY>271</locationY>
         <defaultConnector>
             <targetReference>itrate_Over_Custom_metaData_Record</targetReference>
         </defaultConnector>
@@ -466,34 +195,38 @@
             <label>productGroup matches</label>
         </rules>
     </decisions>
-    <formulas>
-        <name>Test</name>
-        <dataType>String</dataType>
-        <expression>SUBSTITUTE({!product2Id},&apos;a&apos;,&apos;fdfdf&apos;)</expression>
-    </formulas>
     <interviewLabel>{!product2Id}</interviewLabel>
     <label>Update Return Request On Product</label>
     <loops>
         <name>itrate_Over_Custom_metaData_Record</name>
         <label>itrate Over Custom metaData Record</label>
-        <locationX>466</locationX>
-        <locationY>43</locationY>
+        <locationX>834</locationX>
+        <locationY>123</locationY>
         <assignNextValueToReference>var_returnRequestObj</assignNextValueToReference>
         <collectionReference>var_metaData_output</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
             <targetReference>checkPartNumber</targetReference>
         </nextValueConnector>
-        <noMoreValuesConnector>
-            <targetReference>Update_Product_Return_Request</targetReference>
-        </noMoreValuesConnector>
     </loops>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
     <processType>AutoLaunchedFlow</processType>
     <recordLookups>
         <name>Fetch_from_Return_Request_Matrix</name>
         <label>Fetch from Return Request Matrix</label>
-        <locationX>200</locationX>
-        <locationY>38</locationY>
+        <locationX>568</locationX>
+        <locationY>118</locationY>
         <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>itrate_Over_Custom_metaData_Record</targetReference>
@@ -516,8 +249,8 @@
     <recordLookups>
         <name>get_Product_Record</name>
         <label>get Product Record</label>
-        <locationX>22</locationX>
-        <locationY>31</locationY>
+        <locationX>390</locationX>
+        <locationY>111</locationY>
         <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Fetch_from_Return_Request_Matrix</targetReference>
@@ -555,8 +288,8 @@
     <recordUpdates>
         <name>Update_Product_Return_Request</name>
         <label>Update Product</label>
-        <locationX>304</locationX>
-        <locationY>290</locationY>
+        <locationX>672</locationX>
+        <locationY>370</locationY>
         <filterLogic>and</filterLogic>
         <filters>
             <field>Id</field>
@@ -565,12 +298,6 @@
                 <elementReference>product2Id</elementReference>
             </value>
         </filters>
-        <inputAssignments>
-            <field>A_C__c</field>
-            <value>
-                <elementReference>var_Final_Sobject.A_C__c</elementReference>
-            </value>
-        </inputAssignments>
         <inputAssignments>
             <field>Location__c</field>
             <value>
@@ -585,7 +312,13 @@
         </inputAssignments>
         <object>Product2</object>
     </recordUpdates>
-    <startElementReference>get_Product_Record</startElementReference>
+    <start>
+        <locationX>50</locationX>
+        <locationY>130</locationY>
+        <connector>
+            <targetReference>get_Product_Record</targetReference>
+        </connector>
+    </start>
     <status>Active</status>
     <variables>
         <name>product2Id</name>

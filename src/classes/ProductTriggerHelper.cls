@@ -181,7 +181,7 @@ public class ProductTriggerHelper {
                 standardPriceBookId = [SELECT Id FROM Pricebook2 WHERE isStandard = true LIMIT 1].Id;
             }
 
-        
+
         List<String> pricebookNameList=new List<String>();
         pricebookNameList.add('Legacy Finisar Products');
         pricebookNameList.add('Legacy Photonics Products');

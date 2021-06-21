@@ -17,15 +17,5 @@
     <columns>PRODUCT2.CREATED_DATE</columns>
     <columns>Duplicate_Product__c</columns>
     <filterScope>Everything</filterScope>
-    <filters>
-        <field>PRODUCT2.LAST_UPDATE</field>
-        <operation>greaterThan</operation>
-        <value>10/28/2020 12:00 AM</value>
-    </filters>
-    <filters>
-        <field>Status__c</field>
-        <operation>notEqual</operation>
-        <value>Pilot</value>
-    </filters>
     <label>All Products</label>
 </ListView>

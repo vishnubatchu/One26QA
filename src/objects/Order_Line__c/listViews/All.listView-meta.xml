@@ -7,6 +7,7 @@
     <columns>Oracle_Order_Line_Status__c</columns>
     <columns>Actual_Ship_Date__c</columns>
     <columns>Customer_Name__c</columns>
+    <columns>FAFV_Status__c</columns>
     <columns>Quantity__c</columns>
     <columns>OWNER.ALIAS</columns>
     <filterScope>Everything</filterScope>

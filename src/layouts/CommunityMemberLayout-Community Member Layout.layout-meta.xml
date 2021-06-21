@@ -26,6 +26,10 @@
                 <behavior>Edit</behavior>
                 <field>DataVisibility__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Profile_Name__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>

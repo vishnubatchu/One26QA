@@ -45,7 +45,7 @@ private class ProductTrigger_Test {
         
     }
     
-    @isTest static void TestUpdateProductSharingOnInsert() {
+    @isTest static void testUpdateProductSharingOnInsert() {
         List<Product2> prdList=[Select Id from Product2];
         List<PriceBookEntry> pbList=[SELECT Id FROM PricebookEntry 
                                                       WHERE Product2Id IN : prdList];
@@ -54,7 +54,7 @@ private class ProductTrigger_Test {
         System.assertEquals(expectedPbEntryCount, pbList.size());
     }
     
-        @isTest static void TestUpdateProductSharingOnUSMOChange() {
+        @isTest static void testUpdateProductSharingOnUSMOChange() {
         Product2 prd=[Select Id from Product2 where Name='Test Product 6'];
         prd.Usmo__c=true;
         update  prd;   
@@ -66,7 +66,7 @@ private class ProductTrigger_Test {
                              pbList.size());
     }
     
-    @isTest static void TestUpdateProductSharingOnSgmntNmbrChange() {
+    @isTest static void testUpdateProductSharingOnSgmntNmbrChange() {
         List<String> nameList=new List<String>{'Test Product 4','Test Product 5'};
         List<Product2> prdList=[Select Id from Product2 where Name IN : nameList];
         prdList[0].Usmo__c=false;

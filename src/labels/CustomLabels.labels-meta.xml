@@ -117,7 +117,7 @@
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>Endpoint</shortDescription>
-        <value>http://72.22.21.90:8104/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BS_SFDC_QAS&amp;receiverParty=&amp;receiverService=&amp;interface=SI_SALES_SFDC_OUT&amp;interfaceNamespace=http://ii-vi.com/sales/sfdc/ecc/salesorder</value>
+        <value>http://8.34.95.17:8104/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BS_SFDC&amp;receiverParty=&amp;receiverService=&amp;interface=SI_SALES_SFDC_OUT&amp;interfaceNamespace=http://ii-vi.com/sales/sfdc/ecc/salesorder</value>
     </labels>
     <labels>
         <fullName>Extension_Lines_Fields</fullName>
@@ -147,6 +147,13 @@
         <protected>false</protected>
         <shortDescription>GDPR Email Service Address</shortDescription>
         <value>finisar_gdpr_email_services@w-nj5uln1g520ehhcystrytqr95esukh6xtyxtu7gr0o59mu44l.1n-1bq3tuaw.na78.apex.salesforce.com</value>
+    </labels>
+    <labels>
+        <fullName>Global_Parent_Owner_Account_Update_Batch_Notification_EmaildId</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Global Parent Owner/Account Update Batch Notification EmaildId</shortDescription>
+        <value>pu@hcg.com</value>
     </labels>
     <labels>
         <fullName>INVALID_FILE_ROW_SIZE_DOESNT_MATCH</fullName>
@@ -435,6 +442,26 @@ c. Add Special Instruction: &quot;Issue these loaner returns to:</value>
         <value>Please contact Derek Lou &lt;derek.lou@ii-vi.com&gt; for loaner return instruction.</value>
     </labels>
     <labels>
+        <fullName>Return_Instructions_GGhisl</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Return Instructions GGhisl</shortDescription>
+        <value>Return loaner to Loaner Originator: Rep or RSM or Disti.  No RMA needed.  Loaner Originator should take pictures to prove physical receipt and email pictures along with loaner return details to Betty Dea &lt;betty.dea@ii-vi.com&gt; and cc the RSM who approved the Loaner.</value>
+    </labels>
+    <labels>
+        <fullName>Return_Instructions_YLee</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Return Instructions YLee</shortDescription>
+        <value>&quot;Return this loaner to YT Lee at Korea office. No RMA needed.
+* Mark SO number clearly on top of each part or bag or tray.
+Email YoungTae Lee &lt;YoungTae.Lee@ii-vi.com&gt; and cc the RSM who approved the Loaner with loaner and shipment details upon shipment.
+Attn.: YT Lee
+2F, 225-15, Pangyoyeok-ro, Bundang-gu, 
+Seongnam-si, Gyeonggi-do, 13494, Korea
+Tel: 010-5220-6153&quot;</value>
+    </labels>
+    <labels>
         <fullName>Return_Instructions_betty</fullName>
         <language>en_US</language>
         <protected>false</protected>
@@ -460,6 +487,14 @@ Tel: 18696132795
 *Mark SO number clearly on top of each part or bag or tray*</value>
     </labels>
     <labels>
+        <fullName>Return_Instructions_end</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Return Instructions end</shortDescription>
+        <value>d. Click Outbound RMA NOT Needed box.
+Then email Betty Dea &lt;betty.dea@ii-vi.com&gt; the RMA Number when available.</value>
+    </labels>
+    <labels>
         <fullName>Return_Instructions_greg</fullName>
         <language>en_US</language>
         <protected>false</protected>
@@ -479,6 +514,13 @@ Fremont, CA 94538
         <protected>false</protected>
         <shortDescription>Return Instructions greg1</shortDescription>
         <value>Return this loaner to Rep location.  Rep should take pictures to prove physical receipt and email pictures along with loaner return details to Betty Dea &lt;betty.dea@ii-vi.com&gt; and cc the RSM who approved the Loaner.</value>
+    </labels>
+    <labels>
+        <fullName>Return_Instructions_ysaka</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Return Instructions ysaka</shortDescription>
+        <value>Return this loaner to Disti location.  No RMA needed.  Disti should take pictures to prove physical receipt and email pictures along with loaner return details to Betty Dea &lt;betty.dea@ii-vi.com&gt; and cc the RSM who approved the Loaner.</value>
     </labels>
     <labels>
         <fullName>Roles_allowed_for_cancellation_after_RMA_Admin_Approval</fullName>

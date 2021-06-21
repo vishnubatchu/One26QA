@@ -491,17 +491,17 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Region_Country__c</field>
+            <field>Glovia_Region_Country__c</field>
             <table>Account</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Region_State__c</field>
+            <field>Glovia_Region_State__c</field>
             <table>Account</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Region__c</field>
+            <field>Glovia_Region__c</field>
             <table>Account</table>
         </columns>
         <columns>

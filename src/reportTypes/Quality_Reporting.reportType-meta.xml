@@ -1146,6 +1146,41 @@
             <field>Description__c</field>
             <table>Order.RMA_Lines__r</table>
         </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Count_of_lines_with_CA_Status__c</field>
+            <table>Order.RMA_Lines__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Count_of_lines_with_Disposition_Status__c</field>
+            <table>Order.RMA_Lines__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Count_of_lines_with_OL_Status__c</field>
+            <table>Order.RMA_Lines__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Count_of_lines_with_other_Status__c</field>
+            <table>Order.RMA_Lines__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Count_of_lines_with_Closed_Status__c</field>
+            <table>Order.RMA_Lines__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Count_of_lines_with_Hold_Status__c</field>
+            <table>Order.RMA_Lines__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Count_of_lines_with_Open_Status__c</field>
+            <table>Order.RMA_Lines__r</table>
+        </columns>
         <masterLabel>Order Lines</masterLabel>
     </sections>
     <sections>

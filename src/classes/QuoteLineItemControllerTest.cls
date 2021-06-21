@@ -2,13 +2,15 @@
 public class QuoteLineItemControllerTest {
     @isTest
     static void createQuoteLine(){
-        Account acc = new Account(name='Account ', 
+           Account globalParentAcc=new Account(Name='Global Parent Test Acc',Display_Shipping_Country__c ='United States',   Display_Billing_Country__c = 'United States',ShippingCity = 'New York', ShippingCountry ='US',RecordTypeId=Schema.SObjectType.Account.getRecordTypeInfosByName().get('Global Parent').getRecordTypeId());
+        insert globalParentAcc;
+        Account acc = new Account(name='Account ',Display_Shipping_Country__c ='United States',   Display_Billing_Country__c = 'United States', parentId=globalParentAcc.id,ShippingCity = 'New York', ShippingCountry ='US',
                                   billingcity='New York', billingcountry='USA',Status__c='Active',Type='Customer',RecordTypeId = Schema.SObjectType.Account.getRecordTypeInfosByName().get('Top Level Account').getRecordTypeId());
         
         insert acc;
         
-        Account acc1 = new Account(name='Account test', 
-                                  billingcity='Illionis', billingcountry='USA',Status__c='Active',Type='Distributor',RecordTypeId = Schema.SObjectType.Account.getRecordTypeInfosByName().get('Distributor/Rep Account').getRecordTypeId());
+        Account acc1 = new Account(name='Account test',Display_Shipping_Country__c ='United States',   Display_Billing_Country__c = 'United States', parentId=globalParentAcc.id,ShippingCity = 'New York', ShippingCountry ='US',
+                                  billingcity='Illionis', billingcountry='USA',Status__c='Active',Type='Distributor',RecordTypeId = Schema.SObjectType.Account.getRecordTypeInfosByName().get('External Account').getRecordTypeId());
         
         insert acc1;
         system.debug('acc1=='+acc1);
@@ -18,12 +20,19 @@ public class QuoteLineItemControllerTest {
         System.runAs ( new User(Id = UserInfo.getUserId()) ) {
              insert u;
         }
-        
-        Product2 prod = new Product2(IsActive = true,Status__c = 'Active',Name = 'Test Product',ExternalId__c = '12534', ProductCode = 'Test Product Code',Marketing_P_N__c = 'Test PN');
+                String roleId2 =[select Id,name from UserRole where Name='Marketing Admin WSS' LIMIT 1].Id;
+          User u2 = createTestUser(roleId2,p.Id,'Test','Case');
+        System.runAs ( new User(Id = UserInfo.getUserId()) ) {
+             insert u2;
+        }
+         Opportunity opp = New Opportunity(Name = acc.Name+' Opp',RSM__c = u.id,Project_Name__c = 'test',
+                                          StageName = 'Open - Discussion', AccountId = acc.Id, CloseDate = date.today().addDays(365));
+        insert opp;
+        Product2 prod = new Product2(IsActive = true,Status__c = 'Active',BU_Code__c = '0040',Name = 'Test Product',ExternalId__c = '12534', ProductCode = 'Test Product Code',Marketing_P_N__c = 'Test PN');
         insert prod;
         
         
-        Quote qrec = new Quote(Name ='test',Status='Draft',PrimarySalesperson__c =u.id,Type_of_Pricing__c='Fixed - One Time Order',ExpirationDate = System.today()+1,
+        Quote qrec = new Quote(Name ='test',Status='Draft',OpportunityId =opp.id,PrimarySalesperson__c =u2.id,Type_of_Pricing__c='Fixed - One Time Order',ExpirationDate = System.today()+1,
                                Account__c=acc.id);
         insert qrec;
         system.debug('qrec==='+qrec);
@@ -31,7 +40,8 @@ public class QuoteLineItemControllerTest {
         Quote_Item__c qLine1 = new Quote_Item__c(Quote__c= qrec.id,Product__c=prod.id,Quantity__c=23,Target_Price__c=4564.77,Line_Status__c='Draft');
         insert qLine1;
         qList.add(qLine1);
-        
+          list<id> qtList = new list<id>();
+          qtList.add(qLine1.id);
         Quote_Item__c qLine2 = new Quote_Item__c(Quote__c= qrec.id,Product__c=prod.id,Quantity__c=23,Target_Price__c=4564.77,Line_Status__c='Draft');
         Quote_Item__c qLine3 = new Quote_Item__c(Quote__c= qrec.id,Product__c=prod.id,Quantity__c=25,Target_Price__c=4564.77,Line_Status__c='Draft');
         Quote_Item__c qLine4 = new Quote_Item__c(Quote__c= qrec.id,Product__c=prod.id,Quantity__c=26,Target_Price__c=4564.77,Line_Status__c='Draft');
@@ -42,6 +52,7 @@ public class QuoteLineItemControllerTest {
         qList.add(qLine5);
         String s = JSON.serialize(qList);
         Test.startTest();
+        QuoteLineItemController.updatePLM(qtList);
         QuoteLineItemController.getQuoteLineItem(qrec.id);
         //QuoteLineItemController.saveQuoteLineItem(s,qrec.id);
         //QuoteLineItemController.getLineStatus(qLine1.id);
@@ -73,12 +84,15 @@ public class QuoteLineItemControllerTest {
   @isTest
     static void createQuoteLine2(){  
         
-        Account acc = new Account(name='Account2', 
+            Account globalParentAcc=new Account(Name='Global Parent Test Acc2',Display_Shipping_Country__c ='United States',   Display_Billing_Country__c = 'United States',ShippingCity = 'New York', ShippingCountry ='US',RecordTypeId=Schema.SObjectType.Account.getRecordTypeInfosByName().get('Global Parent').getRecordTypeId());
+        insert globalParentAcc;
+        Account acc = new Account(name='Account ',Display_Shipping_Country__c ='United States',   Display_Billing_Country__c = 'United States', parentId=globalParentAcc.id,ShippingCity = 'New York', ShippingCountry ='US',
                                   billingcity='New York', billingcountry='USA',Status__c='Active',Type='Customer',RecordTypeId = Schema.SObjectType.Account.getRecordTypeInfosByName().get('Top Level Account').getRecordTypeId());
         
         insert acc;
         
-        Account acc1 = new Account(name='Account test2',Party_Number__c ='1234',AccountNumber='12345',Status__c='Active',Type='Partner',Legacy_Id__c ='T1234',RecordTypeId = Schema.SObjectType.Account.getRecordTypeInfosByName().get('Distributor/Rep Account').getRecordTypeId());
+        Account acc1 = new Account(name='Account test2',Display_Shipping_Country__c ='United States',   Display_Billing_Country__c = 'United States', parentId=globalParentAcc.id,ShippingCity = 'New York', ShippingCountry ='US',
+                                  billingcity='Illionis', billingcountry='USA',Status__c='Active',Type='Distributor',RecordTypeId = Schema.SObjectType.Account.getRecordTypeInfosByName().get('Top Level Account').getRecordTypeId());
         
         insert acc1;
         system.debug('acc1=='+acc1);
@@ -88,23 +102,29 @@ public class QuoteLineItemControllerTest {
         System.runAs ( new User(Id = UserInfo.getUserId()) ) {
              insert u;
         }
-        
-        Product2 prod = new Product2(IsActive = true,Status__c = 'Active',Name = 'Test Product',ExternalId__c = '12534', ProductCode = 'Test Product Code',Marketing_P_N__c = 'Test PN');
+                   String roleId2 =[select Id,name from UserRole where Name='Marketing Admin WSS' LIMIT 1].Id;
+          User u2 = createTestUser(roleId2,p.Id,'Test','Case');
+        System.runAs ( new User(Id = UserInfo.getUserId()) ) {
+             insert u2;
+        }
+         Opportunity opp = New Opportunity(Name = acc.Name+' Opp',RSM__c = u.id,Project_Name__c = 'test',
+                                          StageName = 'Open - Discussion', AccountId = acc.Id, CloseDate = date.today().addDays(365));
+        insert opp;
+        Product2 prod = new Product2(IsActive = true,Status__c = 'Active',BU_Code__c = '0040',Name = 'Test Product',ExternalId__c = '12534', ProductCode = 'Test Product Code',Marketing_P_N__c = 'Test PN');
         insert prod;
         Account acountObj = [select id ,recordtypeid,recordtype.name,status__c,type from account where name='Account test2' limit 1];
         System.debug('acountObj'+acountObj);
         
-        Quote qrec = new Quote(Name ='test1',Status='Draft',PrimarySalesperson__c =u.id,Type_of_Pricing__c='Dist Quote',ExpirationDate = System.today()+1,
+        Quote qrec = new Quote(Name ='test1',OpportunityId =opp.id,Status='Draft',PrimarySalesperson__c =u2.id,Type_of_Pricing__c='Dist Quote',ExpirationDate = System.today()+1,
                                Account__c=acc.id,sales_channel__c=acc1.Id);
-        system.debug('qrec----'+qrec);
+        system.debug('qrec----'+acc1.Type + 'status ' + acc1.Status__c);
         insert qrec;
-        system.debug('qrec1----'+qrec);
-        
         List<Quote_Item__c> qList = new List<Quote_Item__c>();
         Quote_Item__c qLine1 = new Quote_Item__c(Quote__c= qrec.id,Product__c=prod.id,Quantity__c=23,Disti_Resale_Price__c=5600.05,Target_Price__c=4564.77,Line_Status__c='Draft');
         insert qLine1;
         qList.add(qLine1);
-        
+        list<id> qtList = new list<id>();
+        qtList.add(qLine1.id);
         Quote_Item__c qLine2 = new Quote_Item__c(Quote__c= qrec.id,Product__c=prod.id,Quantity__c=23,Disti_Resale_Price__c=5600.05,Target_Price__c=4564.77,Line_Status__c='Draft');
         Quote_Item__c qLine3 = new Quote_Item__c(Quote__c= qrec.id,Product__c=prod.id,Quantity__c=25,Disti_Resale_Price__c=5600.05,Target_Price__c=4564.77,Line_Status__c='Draft');
         Quote_Item__c qLine4 = new Quote_Item__c(Quote__c= qrec.id,Product__c=prod.id,Quantity__c=26,Disti_Resale_Price__c=5600.05,Target_Price__c=4564.77,Line_Status__c='Draft');
@@ -113,8 +133,10 @@ public class QuoteLineItemControllerTest {
         qList.add(qLine3);
         qList.add(qLine4);
         qList.add(qLine5);
+     
         String s = JSON.serialize(qList);
         Test.startTest();
+        QuoteLineItemController.updatePLM(qtList);
         QuoteLineItemController.getQuoteLineItem(qrec.id);
         QuoteLineItemController.saveQuoteLineItem(qList,qrec.id);
         //QuoteLineItemController.getLineStatus(qLine1.id);

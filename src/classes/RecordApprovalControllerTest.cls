@@ -12,15 +12,19 @@ private class RecordApprovalControllerTest{
                                Email='standarduser@testorg.com',EmailEncodingKey='UTF-8',  LanguageLocaleKey='en_US', 
                                LocaleSidKey='en_US',TimeZoneSidKey='America/Los_Angeles', UserName='testuser@finisar.com');
         system.runAs(sysAdm){
-            Account acc = new Account(name='Account ', 
-                                      billingcity='New York', billingcountry='USA',Status__c='Active',Type='Customer',RecordTypeId = Schema.SObjectType.Account.getRecordTypeInfosByName().get('Top Level Account').getRecordTypeId());
-            insert acc;
-            Account acc1 = new Account(ParentId = acc.Id,name='Account1 ', 
-                                       billingcity='New York test', billingcountry='USA',Status__c='Active',Type='Customer',RecordTypeId = Schema.SObjectType.Account.getRecordTypeInfosByName().get('Top Level Account').getRecordTypeId());
-            
-            insert acc1;
-            Account acc4 = new Account(name='Testing11/123',ParentId=acc.Id, Party_Number__c ='203956',
-                                       AccountNumber ='1234',shippingcity='Raipur',shippingcountry='India',
+            Account globalParentAcc=new Account(Name='Global Parent Test Acc',Display_Shipping_Country__c ='United States',   Display_Billing_Country__c = 'United States',ShippingCity = 'New York', ShippingCountry ='US',RecordTypeId=Schema.SObjectType.Account.getRecordTypeInfosByName().get('Global Parent').getRecordTypeId());
+        insert globalParentAcc;
+        Account acc = new Account(name='Account122', Display_Shipping_Country__c ='United States',   Display_Billing_Country__c = 'United States',parentId=globalParentAcc.id,ShippingCity = 'New York', ShippingCountry ='US',
+                                  billingcity='New York', billingcountry='USA',Status__c='Active',Type='Customer',RecordTypeId = Schema.SObjectType.Account.getRecordTypeInfosByName().get('Top Level Account').getRecordTypeId());
+        
+        insert acc;
+        
+        Account acc1 = new Account(name='Account test2',Display_Shipping_Country__c ='United States',   Display_Billing_Country__c = 'United States', parentId=acc.id,ShippingCity = 'New York', ShippingCountry ='US',
+                                  billingcity='Illionis', billingcountry='USA',Status__c='Active',Type='Distributor',RecordTypeId = Schema.SObjectType.Account.getRecordTypeInfosByName().get('External Account').getRecordTypeId());
+        
+        insert acc1;
+            Account acc4 = new Account(name='Testing11/123',ParentId=acc.Id, Party_Number__c ='203956',Display_Shipping_Country__c ='United States',   Display_Billing_Country__c = 'United States',
+                                       AccountNumber ='1234',shippingcity='Raipur',shippingcountry='US',
                                        Status__c='Active',Type='Customer',Credit_Limit__c=2.00,Oracle_Party_Id__c='8989',
                                        Oracle_Account_Id__c='7865',RecordTypeId = Schema.SObjectType.Account.getRecordTypeInfosByName().get('Site').getRecordTypeId(),
                                        Legacy_Id__c ='eoqw321413242134122',Site_Use_Code__c='SHIP_TO',Org_ID__c= '2', Site_Use_Status__c='Active');
@@ -111,7 +115,7 @@ private class RecordApprovalControllerTest{
     static testmethod void contactForGDPRtest() { 
         Test.startTest();
         List<Contact> conlist = new List<Contact>(); 
-        Account acc = [SELECT Id from Account Limit 1];
+        Account acc = [SELECT Id from Account where name = 'Account122' Limit 1];
         Contact c = new Contact(FirstName = 'Test',LastName = 'Contact',AccountId = acc.Id);
         Contact c1 = new Contact(FirstName = 'Test1',LastName = 'Contact',AccountId = acc.Id);
         Contact c2 = new Contact(FirstName = 'Test2',LastName = 'Contact',AccountId = acc.Id);

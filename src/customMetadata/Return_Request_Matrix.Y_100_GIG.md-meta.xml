@@ -32,7 +32,7 @@
     </values>
     <values>
         <field>Product_Group__c</field>
-        <value xsi:type="xsd:string">100 GIG</value>
+        <value xsi:nil="true"/>
     </values>
     <values>
         <field>Return_Instructions__c</field>

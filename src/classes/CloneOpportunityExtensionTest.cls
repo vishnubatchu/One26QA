@@ -7,7 +7,7 @@ private class CloneOpportunityExtensionTest {
         system.debug('standard '+ Test.getStandardPricebookId());
         List<Opportunity> opp = TestDataFactory.createOpportunity(1, acc[0].Id);
         List<Product2> prd = TestDataFactory.createProducts('2', 2, false);
-        List<Pricebook2> pricel = [Select Id from Pricebook2 Where Name = 'Laser Part List' AND CurrencyIsoCode = 'USD'];
+        List<Pricebook2> pricel = [Select Id from Pricebook2 Where Name = 'Legacy Marlow Products' AND CurrencyIsoCode = 'USD'];
         system.debug('pricel '+pricel);
         opp[0].Pricebook2Id = pricel[0].Id;
         opp[0].CurrencyIsoCode = 'USD';

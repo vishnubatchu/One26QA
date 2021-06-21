@@ -40,6 +40,11 @@
         <default>false</default>
         <label>Unidentified</label>
     </customValue>
+    <customValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </customValue>
     <masterLabel>Group Level Region</masterLabel>
     <sorted>false</sorted>
 </GlobalValueSet>

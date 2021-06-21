@@ -28,13 +28,144 @@
         </values>
     </picklistValues>
     <picklistValues>
+        <picklist>Source_System__c</picklist>
+        <values>
+            <fullName>ATLaS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DBA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Duzon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Glovia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IFS-CHINA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IFS-US</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inxsys</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jingsuan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>K2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MRDC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mapics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NetSuite</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OEDNRE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Oracle-EBS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PACC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PMD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pointman</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ProMan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ProMan-CMG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ProMan-PPG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ProMan-RD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SAP-CHINA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SAP-US</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SSRS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SiCRnD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>proALPHA</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
         <picklist>Status</picklist>
+        <values>
+            <fullName>Activated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cancelled</fullName>
+            <default>false</default>
+        </values>
         <values>
             <fullName>Completed</fullName>
             <default>false</default>
         </values>
         <values>
+            <fullName>Delivered</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Draft</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Progress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sync Complete</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sync Error</fullName>
             <default>false</default>
         </values>
     </picklistValues>

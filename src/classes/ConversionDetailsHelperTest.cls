@@ -9,8 +9,7 @@ private class ConversionDetailsHelperTest {
     }
     static testmethod void performNegativetestScenarios()
     {
-        Test.startTest();
-        Conversion_Details__c cd= new Conversion_Details__c();
+           Conversion_Details__c cd= new Conversion_Details__c();
         cd.Conversion_Date__c=System.today() + 10;
         
         Loaner__c loaner = [select Id From Loaner__c where Project_Name__c ='Test' Limit 1];
@@ -20,6 +19,7 @@ private class ConversionDetailsHelperTest {
         cd.Disposition_Transfer_Detail__c = dtdetail.Id;
         cd.Conversion_Qty__c =6;
         
+        Test.startTest();
         try{
             insert cd;
             
@@ -49,14 +49,15 @@ private class ConversionDetailsHelperTest {
     
     static testmethod void performPostiveTestScenarios()
     {
-        Test.startTest();
-        
-        Conversion_Details__c cd= new Conversion_Details__c();
+           Conversion_Details__c cd= new Conversion_Details__c();
         cd.Conversion_Date__c=System.today() + 10;
         
         Loaner__c loaner = [select Id From Loaner__c where Project_Name__c ='Test' Limit 1];
         Loaner_Line__c loanerline = [select Id From Loaner_Line__c where Loaner__c =:loaner.Id Limit 1];
         Return_Detail__c returnDet = [select Id From Return_Detail__c where Loaner_Line__c =:loanerline.Id Limit 1];
+        Test.startTest();
+        
+     
         Disposition_Transfer_Details__c dtdetail = [select Id From Disposition_Transfer_Details__c where Return_Detail__c =:returnDet.Id];
         cd.Disposition_Transfer_Detail__c = dtdetail.Id;
         cd.Conversion_Qty__c =5;

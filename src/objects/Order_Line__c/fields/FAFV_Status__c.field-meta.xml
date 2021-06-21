@@ -3,11 +3,16 @@
     <fullName>FAFV_Status__c</fullName>
     <externalId>false</externalId>
     <formula>IF( Count_of_Serial_s__c &gt; 0, 
+		IF(Count_of_lines_with_Open_Status__c &gt; 0, &apos;Open&apos;,
 		 IF( Count_of_lines_with_Received_Status__c &gt;0 , &apos;Received&apos;, 
 			IF( Count_of_lines_with_FV_Status__c &gt;0 ,&apos;Failure Verification&apos;, 
 			   IF( Count_of_lines_with_FA_Status__c &gt; 0 , &apos;Failure Analysis&apos;,
 				  IF( Count_of_lines_with_2nd_FA_Status__c &gt;0 ,&apos;2nd Failure Analysis&apos;,
-				  IF(Count_of_Completed_Serial_s__c =  Count_of_Serial_s__c, &apos;Closed&apos;, &apos;Open&apos;))))), &quot;Closed - No S/Ns&quot;)</formula>
+				  IF(Count_of_lines_with_CA_Status__c &gt; 0 , &apos;Corrective Action&apos;,
+				  IF(Count_of_lines_with_Disposition_Status__c &gt; 0, &apos;Disposition&apos;,
+				  IF(Count_of_lines_with_OL_Status__c&gt;0,&apos;Outbound Logistics&apos;, 
+				IF(Count_of_lines_with_other_Status__c &gt; 0, &apos;Others&apos;,
+				IF(Count_of_lines_with_Hold_Status__c&gt;0, &apos;Hold&apos;,IF(Count_of_Completed_Serial_s__c = Count_of_Serial_s__c, &apos;Closed&apos;, &apos;Open&apos;) )))))))))), &quot;Closed - No S/Ns&quot;)</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
     <label>Order Line FV/FA Status</label>
     <required>false</required>

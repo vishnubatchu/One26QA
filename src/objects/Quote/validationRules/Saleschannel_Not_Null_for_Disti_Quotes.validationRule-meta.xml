@@ -2,7 +2,7 @@
 <ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Saleschannel_Not_Null_for_Disti_Quotes</fullName>
     <active>true</active>
-    <errorConditionFormula>AND( Sales_Channel__c = &apos;&apos;, ISPICKVAL( Type_of_Pricing__c , &apos;Dist Quote&apos;) )</errorConditionFormula>
+    <errorConditionFormula>AND( Sales_Channel__c = &apos;&apos;, ISPICKVAL( Type_of_Pricing__c , &apos;Dist Quote&apos;), TEXT($User.Legacy_Company__c) = &quot;Finisar&quot;)</errorConditionFormula>
     <errorDisplayField>Sales_Channel__c</errorDisplayField>
     <errorMessage>Saleschannel is required when Quote type if Dist Quote</errorMessage>
 </ValidationRule>

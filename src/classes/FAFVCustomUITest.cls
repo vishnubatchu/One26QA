@@ -2,8 +2,9 @@
 public class FAFVCustomUITest {
  @isTest
     public static void getFAFVDetail(){
-        
-        Account acc = new Account(name='Account ', 
+        Account globalParentAcc=new Account(Name='Global Parent Test Acc',Display_Shipping_Country__c ='United States',   Display_Billing_Country__c = 'United States',ShippingCity = 'New York', ShippingCountry ='US',RecordTypeId=Schema.SObjectType.Account.getRecordTypeInfosByName().get('Global Parent').getRecordTypeId());
+        insert globalParentAcc;
+        Account acc = new Account(name='Account ',ParentId=globalParentAcc.Id,ShippingCity = 'New York', ShippingCountry ='US',Display_Shipping_Country__c ='United States',   Display_Billing_Country__c = 'United States',
                                   billingcity='New York', billingcountry='USA',Status__c='Active',Type='Customer',RecordTypeId = Schema.SObjectType.Account.getRecordTypeInfosByName().get('Top Level Account').getRecordTypeId());
         
         insert acc;

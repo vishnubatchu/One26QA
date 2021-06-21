@@ -1,0 +1,6 @@
+<apex:page standardController="Quote">
+    <apex:form >
+    <apex:inputField value="{!quote.Name}"/>
+        <apex:commandButton action="{!save}"/>
+    </apex:form>
+</apex:page>
