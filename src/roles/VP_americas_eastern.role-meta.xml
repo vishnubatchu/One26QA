@@ -5,6 +5,6 @@
     <description>VP of AMERICAS - EASTERN</description>
     <mayForecastManagerShare>false</mayForecastManagerShare>
     <name>VP of AMERICAS - EASTERN</name>
-    <opportunityAccessLevel>None</opportunityAccessLevel>
+    <opportunityAccessLevel>Read</opportunityAccessLevel>
     <parentRole>Inside_Sales_FAE</parentRole>
 </Role>

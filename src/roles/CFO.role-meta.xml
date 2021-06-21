@@ -4,6 +4,6 @@
     <contactAccessLevel>Edit</contactAccessLevel>
     <mayForecastManagerShare>false</mayForecastManagerShare>
     <name>CFO</name>
-    <opportunityAccessLevel>None</opportunityAccessLevel>
+    <opportunityAccessLevel>Read</opportunityAccessLevel>
     <parentRole>Admin</parentRole>
 </Role>

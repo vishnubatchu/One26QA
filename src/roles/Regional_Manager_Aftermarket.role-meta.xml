@@ -6,4 +6,5 @@
     <mayForecastManagerShare>false</mayForecastManagerShare>
     <name>Regional Manager - Aftermarket</name>
     <opportunityAccessLevel>Edit</opportunityAccessLevel>
+    <parentRole>Regional_Manager_Domestic_Military</parentRole>
 </Role>

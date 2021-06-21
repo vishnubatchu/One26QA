@@ -6,4 +6,5 @@
     <mayForecastManagerShare>false</mayForecastManagerShare>
     <name>Admin</name>
     <opportunityAccessLevel>Edit</opportunityAccessLevel>
+    <parentRole>Legacy_Finisar</parentRole>
 </Role>

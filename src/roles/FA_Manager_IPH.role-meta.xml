@@ -5,6 +5,6 @@
     <description>FA Manager IPH</description>
     <mayForecastManagerShare>false</mayForecastManagerShare>
     <name>FA Manager IPH</name>
-    <opportunityAccessLevel>None</opportunityAccessLevel>
+    <opportunityAccessLevel>Read</opportunityAccessLevel>
     <parentRole>Quality_Admin</parentRole>
 </Role>

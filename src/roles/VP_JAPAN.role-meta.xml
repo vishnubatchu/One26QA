@@ -5,6 +5,6 @@
     <description>VP of JAPAN</description>
     <mayForecastManagerShare>false</mayForecastManagerShare>
     <name>VP of JAPAN</name>
-    <opportunityAccessLevel>None</opportunityAccessLevel>
+    <opportunityAccessLevel>Read</opportunityAccessLevel>
     <parentRole>Inside_Sales_FAE</parentRole>
 </Role>

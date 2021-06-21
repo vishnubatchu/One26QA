@@ -5,6 +5,6 @@
     <description>SOM of EMEA</description>
     <mayForecastManagerShare>false</mayForecastManagerShare>
     <name>SOM of EMEA</name>
-    <opportunityAccessLevel>None</opportunityAccessLevel>
+    <opportunityAccessLevel>Read</opportunityAccessLevel>
     <parentRole>RSM_EMEA</parentRole>
 </Role>

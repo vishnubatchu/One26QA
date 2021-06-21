@@ -6,4 +6,5 @@
     <mayForecastManagerShare>false</mayForecastManagerShare>
     <name>Highyag Sales Assistance, EMEA</name>
     <opportunityAccessLevel>Edit</opportunityAccessLevel>
+    <parentRole>Head_of_Sales_Highyag</parentRole>
 </Role>

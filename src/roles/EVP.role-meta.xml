@@ -5,6 +5,6 @@
     <description>EVP</description>
     <mayForecastManagerShare>false</mayForecastManagerShare>
     <name>EVP</name>
-    <opportunityAccessLevel>None</opportunityAccessLevel>
+    <opportunityAccessLevel>Read</opportunityAccessLevel>
     <parentRole>Sales_Admin</parentRole>
 </Role>

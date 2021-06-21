@@ -6,4 +6,5 @@
     <mayForecastManagerShare>false</mayForecastManagerShare>
     <name>Director Sales &amp; Mktg</name>
     <opportunityAccessLevel>Edit</opportunityAccessLevel>
+    <parentRole>Legacy_Corp_II_VI</parentRole>
 </Role>

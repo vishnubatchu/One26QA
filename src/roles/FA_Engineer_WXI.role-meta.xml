@@ -5,6 +5,6 @@
     <description>FA Engineer WXI</description>
     <mayForecastManagerShare>false</mayForecastManagerShare>
     <name>FA Engineer WXI</name>
-    <opportunityAccessLevel>None</opportunityAccessLevel>
+    <opportunityAccessLevel>Read</opportunityAccessLevel>
     <parentRole>FA_Manager_WXI</parentRole>
 </Role>

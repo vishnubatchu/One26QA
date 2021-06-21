@@ -6,4 +6,5 @@
     <mayForecastManagerShare>false</mayForecastManagerShare>
     <name>Warranty User</name>
     <opportunityAccessLevel>Edit</opportunityAccessLevel>
+    <parentRole>Legacy_Corp_II_VI</parentRole>
 </Role>

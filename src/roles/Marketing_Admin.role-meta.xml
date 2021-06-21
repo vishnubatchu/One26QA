@@ -5,6 +5,6 @@
     <description>Marketing Admin</description>
     <mayForecastManagerShare>false</mayForecastManagerShare>
     <name>Marketing Admin</name>
-    <opportunityAccessLevel>None</opportunityAccessLevel>
+    <opportunityAccessLevel>Read</opportunityAccessLevel>
     <parentRole>Admin</parentRole>
 </Role>

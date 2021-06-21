@@ -5,6 +5,6 @@
     <description>Inside Sales/FAE</description>
     <mayForecastManagerShare>false</mayForecastManagerShare>
     <name>Inside Sales/FAE</name>
-    <opportunityAccessLevel>None</opportunityAccessLevel>
+    <opportunityAccessLevel>Read</opportunityAccessLevel>
     <parentRole>TSS_Admin</parentRole>
 </Role>

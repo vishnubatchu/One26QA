@@ -6,4 +6,5 @@
     <mayForecastManagerShare>false</mayForecastManagerShare>
     <name>Sales Rep/Engineer - Military &amp; Domestic</name>
     <opportunityAccessLevel>Edit</opportunityAccessLevel>
+    <parentRole>Regional_Manager_Domestic_Military</parentRole>
 </Role>

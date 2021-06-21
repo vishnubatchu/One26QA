@@ -6,4 +6,5 @@
     <mayForecastManagerShare>false</mayForecastManagerShare>
     <name>GM</name>
     <opportunityAccessLevel>Read</opportunityAccessLevel>
+    <parentRole>Legacy_Marlow</parentRole>
 </Role>

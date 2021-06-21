@@ -6,4 +6,5 @@
     <mayForecastManagerShare>false</mayForecastManagerShare>
     <name>Sales Rep/Engineer - West</name>
     <opportunityAccessLevel>Edit</opportunityAccessLevel>
+    <parentRole>Territory_Manager_West</parentRole>
 </Role>

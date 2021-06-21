@@ -5,4 +5,5 @@
     <mayForecastManagerShare>false</mayForecastManagerShare>
     <name>Epiworks Sales Rep</name>
     <opportunityAccessLevel>Edit</opportunityAccessLevel>
+    <parentRole>Epiworks_Management</parentRole>
 </Role>

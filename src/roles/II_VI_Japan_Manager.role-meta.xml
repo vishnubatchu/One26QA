@@ -6,5 +6,5 @@
     <mayForecastManagerShare>false</mayForecastManagerShare>
     <name>II-VI Japan Manager</name>
     <opportunityAccessLevel>Edit</opportunityAccessLevel>
-    <parentRole>Regional_Manager_Asia</parentRole>
+    <parentRole>II_VI_Japan_President</parentRole>
 </Role>

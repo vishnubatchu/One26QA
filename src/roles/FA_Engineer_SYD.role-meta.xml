@@ -5,6 +5,6 @@
     <description>FA Engineer SYD</description>
     <mayForecastManagerShare>false</mayForecastManagerShare>
     <name>FA Engineer SYD</name>
-    <opportunityAccessLevel>None</opportunityAccessLevel>
+    <opportunityAccessLevel>Read</opportunityAccessLevel>
     <parentRole>FA_Manager_SYD</parentRole>
 </Role>

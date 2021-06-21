@@ -5,6 +5,6 @@
     <description>PLD</description>
     <mayForecastManagerShare>false</mayForecastManagerShare>
     <name>PLD</name>
-    <opportunityAccessLevel>None</opportunityAccessLevel>
+    <opportunityAccessLevel>Read</opportunityAccessLevel>
     <parentRole>Marketing_Admin</parentRole>
 </Role>

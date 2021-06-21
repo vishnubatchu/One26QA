@@ -5,6 +5,6 @@
     <description>FA Manager WXI</description>
     <mayForecastManagerShare>false</mayForecastManagerShare>
     <name>FA Manager WXI</name>
-    <opportunityAccessLevel>None</opportunityAccessLevel>
+    <opportunityAccessLevel>Read</opportunityAccessLevel>
     <parentRole>Quality_Admin</parentRole>
 </Role>

@@ -5,6 +5,6 @@
     <description>FA Manager SYD</description>
     <mayForecastManagerShare>false</mayForecastManagerShare>
     <name>FA Manager SYD</name>
-    <opportunityAccessLevel>None</opportunityAccessLevel>
+    <opportunityAccessLevel>Read</opportunityAccessLevel>
     <parentRole>Quality_Admin</parentRole>
 </Role>

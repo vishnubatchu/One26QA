@@ -5,6 +5,6 @@
     <description>PLM</description>
     <mayForecastManagerShare>false</mayForecastManagerShare>
     <name>PLM</name>
-    <opportunityAccessLevel>None</opportunityAccessLevel>
+    <opportunityAccessLevel>Read</opportunityAccessLevel>
     <parentRole>PLD</parentRole>
 </Role>

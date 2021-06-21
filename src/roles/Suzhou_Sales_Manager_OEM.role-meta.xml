@@ -6,5 +6,5 @@
     <mayForecastManagerShare>false</mayForecastManagerShare>
     <name>Suzhou Sales Manager (OEM)</name>
     <opportunityAccessLevel>Edit</opportunityAccessLevel>
-    <parentRole>Asia_Regional_Sales_Director</parentRole>
+    <parentRole>Suzhou_General_Sales_Manager</parentRole>
 </Role>

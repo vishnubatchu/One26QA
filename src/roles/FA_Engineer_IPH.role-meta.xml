@@ -5,6 +5,6 @@
     <description>FA Engineer IPH</description>
     <mayForecastManagerShare>false</mayForecastManagerShare>
     <name>FA Engineer IPH</name>
-    <opportunityAccessLevel>None</opportunityAccessLevel>
+    <opportunityAccessLevel>Read</opportunityAccessLevel>
     <parentRole>FA_Manager_IPH</parentRole>
 </Role>

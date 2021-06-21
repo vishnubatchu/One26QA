@@ -5,6 +5,6 @@
     <description>RSM of AMERICAS - EASTERN</description>
     <mayForecastManagerShare>false</mayForecastManagerShare>
     <name>RSM of AMERICAS - EASTERN</name>
-    <opportunityAccessLevel>None</opportunityAccessLevel>
+    <opportunityAccessLevel>Read</opportunityAccessLevel>
     <parentRole>VP_americas_eastern</parentRole>
 </Role>

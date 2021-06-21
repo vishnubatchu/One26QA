@@ -22,7 +22,7 @@
         </sharedTo>
         <criteriaItems>
             <field>RecordTypeId</field>
-            <operation>equals</operation>
+            <operation>notEqual</operation>
             <value>Master Costing Quote</value>
         </criteriaItems>
     </sharingCriteriaRules>

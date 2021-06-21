@@ -18,6 +18,76 @@
                 <default>false</default>
                 <label>HighYag</label>
             </value>
+            <value>
+                <fullName>Aftermarket</fullName>
+                <default>false</default>
+                <label>Aftermarket</label>
+            </value>
+            <value>
+                <fullName>OEM - Low Power</fullName>
+                <default>false</default>
+                <label>OEM - Low Power</label>
+            </value>
+            <value>
+                <fullName>OEM - High Power</fullName>
+                <default>false</default>
+                <label>OEM - High Power</label>
+            </value>
+            <value>
+                <fullName>Military</fullName>
+                <default>false</default>
+                <label>Military</label>
+            </value>
+            <value>
+                <fullName>Material</fullName>
+                <default>false</default>
+                <label>Material</label>
+            </value>
+            <value>
+                <fullName>VLOC</fullName>
+                <default>false</default>
+                <label>VLOC</label>
+            </value>
+            <value>
+                <fullName>Photop</fullName>
+                <default>false</default>
+                <label>Photop</label>
+            </value>
+            <value>
+                <fullName>Marlow</fullName>
+                <default>false</default>
+                <label>Marlow</label>
+            </value>
+            <value>
+                <fullName>AdvMat</fullName>
+                <default>false</default>
+                <label>AdvMat</label>
+            </value>
+            <value>
+                <fullName>Laser Enterprise</fullName>
+                <default>false</default>
+                <label>Laser Enterprise</label>
+            </value>
+            <value>
+                <fullName>Other &amp; University</fullName>
+                <default>false</default>
+                <label>Other &amp; University</label>
+            </value>
+            <value>
+                <fullName>Suwtech</fullName>
+                <default>false</default>
+                <label>Suwtech</label>
+            </value>
+            <value>
+                <fullName>M Cubed</fullName>
+                <default>false</default>
+                <label>M Cubed</label>
+            </value>
+            <value>
+                <fullName>Epiworks</fullName>
+                <default>false</default>
+                <label>Epiworks</label>
+            </value>
         </valueSetDefinition>
     </valueSet>
 </CustomField>

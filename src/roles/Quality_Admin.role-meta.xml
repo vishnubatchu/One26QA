@@ -5,6 +5,6 @@
     <description>Quality Admin</description>
     <mayForecastManagerShare>false</mayForecastManagerShare>
     <name>Quality Admin</name>
-    <opportunityAccessLevel>None</opportunityAccessLevel>
+    <opportunityAccessLevel>Read</opportunityAccessLevel>
     <parentRole>Admin</parentRole>
 </Role>

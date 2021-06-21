@@ -2,8 +2,8 @@
 <CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
     <actionOverrides>
         <actionName>View</actionName>
-        <comment>Action override updated by Lightning App Builder during activation.</comment>
-        <content>Account_Record_Page1</content>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>One_II_VI_Standard_Accounts_Lightning_Page</content>
         <formFactor>Small</formFactor>
         <skipRecordTypeSelect>false</skipRecordTypeSelect>
         <type>Flexipage</type>
@@ -11,8 +11,8 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
-        <comment>Action override updated by Lightning App Builder during activation.</comment>
-        <content>Account_Record_Page1</content>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>One_II_VI_Standard_Accounts_Lightning_Page</content>
         <formFactor>Large</formFactor>
         <skipRecordTypeSelect>false</skipRecordTypeSelect>
         <type>Flexipage</type>
@@ -39,7 +39,7 @@
     <actionOverrides>
         <actionName>View</actionName>
         <comment>Action override created by Lightning App Builder during activation.</comment>
-        <content>Order_Record_Page1</content>
+        <content>Order_Record_Page2</content>
         <formFactor>Small</formFactor>
         <skipRecordTypeSelect>false</skipRecordTypeSelect>
         <type>Flexipage</type>
@@ -48,7 +48,7 @@
     <actionOverrides>
         <actionName>View</actionName>
         <comment>Action override created by Lightning App Builder during activation.</comment>
-        <content>Order_Record_Page1</content>
+        <content>Order_Record_Page2</content>
         <formFactor>Large</formFactor>
         <skipRecordTypeSelect>false</skipRecordTypeSelect>
         <type>Flexipage</type>
@@ -56,9 +56,9 @@
     </actionOverrides>
     <brand>
         <headerColor>#0070D2</headerColor>
-        <logo>IIVIincorporated</logo>
+        <logo>download</logo>
         <logoVersion>1</logoVersion>
-        <shouldOverrideOrgTheme>true</shouldOverrideOrgTheme>
+        <shouldOverrideOrgTheme>false</shouldOverrideOrgTheme>
     </brand>
     <formFactors>Small</formFactors>
     <formFactors>Large</formFactors>
@@ -385,7 +385,6 @@
         <profile>Admin</profile>
     </profileActionOverrides>
     <tabs>standard-home</tabs>
-    <tabs>standard-Lead</tabs>
     <tabs>standard-Account</tabs>
     <tabs>standard-Contact</tabs>
     <tabs>standard-Opportunity</tabs>
@@ -396,16 +395,13 @@
     <tabs>standard-Case</tabs>
     <tabs>standard-report</tabs>
     <tabs>standard-Dashboard</tabs>
-    <tabs>OrderRatePlan__c</tabs>
-    <tabs>QuoteRatePlan__c</tabs>
-    <tabs>OpportunityRatePlan__c</tabs>
-    <tabs>Quote_Item__c</tabs>
     <tabs>Costing__c</tabs>
     <tabs>Costing_Quote__c</tabs>
+    <tabs>Quote_Item__c</tabs>
     <tabs>Equipment_Owned__c</tabs>
     <tabs>BOM_Parts__c</tabs>
-    <tabs>icrt__Guide_Milestone__c</tabs>
     <tabs>BOM_Product_Part__c</tabs>
+    <tabs>OpportunityRatePlan__c</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>One_II_VI_Sales_App_UtilityBar</utilityBar>
 </CustomApplication>
