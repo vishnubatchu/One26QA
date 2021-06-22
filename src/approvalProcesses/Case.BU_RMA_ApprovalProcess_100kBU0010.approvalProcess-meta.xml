@@ -320,7 +320,7 @@
         </action>
     </initialSubmissionActions>
     <label>BU - RMA Approval Process &gt; 100000</label>
-    <processOrder>6</processOrder>
+    <processOrder>7</processOrder>
     <recordEditability>AdminOrCurrentApprover</recordEditability>
     <showApprovalHistory>true</showApprovalHistory>
 </ApprovalProcess>

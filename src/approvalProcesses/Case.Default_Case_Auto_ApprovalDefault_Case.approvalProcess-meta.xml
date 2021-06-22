@@ -49,7 +49,7 @@
         </action>
     </initialSubmissionActions>
     <label>Default Case Auto ApprovalDefault Case</label>
-    <processOrder>7</processOrder>
+    <processOrder>8</processOrder>
     <recordEditability>AdminOnly</recordEditability>
     <showApprovalHistory>true</showApprovalHistory>
 </ApprovalProcess>

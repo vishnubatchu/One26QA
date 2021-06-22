@@ -1,0 +1,2800 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Comcast_Case</fullName>
+    <active>true</active>
+    <businessProcess>Case</businessProcess>
+    <description>Comcast case</description>
+    <label>Comcast Case</label>
+    <picklistValues>
+        <picklist>Assigned_RMA_Admin__c</picklist>
+        <values>
+            <fullName>June Ng Siong Yi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lim Ming Fhong</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mengya Yuan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rachel Lucero</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Santhi Nada Raja</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Billing_Type__c</picklist>
+        <values>
+            <fullName>Credit Inbound and rebill Outbound %28 Both Inbound %26 Outbound POs Must Show Same Amount and Quantity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Others</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Return For Credit Only%2C No Outbound Rebill Involved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Zero Dollar Inbound and Outbound %28 No Dollar Amount Involved%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Business_Unit__c</picklist>
+        <values>
+            <fullName>3D Sensing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Data Networking</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Optical Interconnect</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unspecified</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WSS</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Case_Status__c</picklist>
+        <values>
+            <fullName>Closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>On Hold</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Open</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Disposition__c</picklist>
+        <values>
+            <fullName>Hardware</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Software</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Failure_Location__c</picklist>
+        <values>
+            <fullName>Dead on Arrival</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fail at customer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Field failure %2F Fail at end-customer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sample %2F Demo %2FLoaner</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Fault_Location__c</picklist>
+        <values>
+            <fullName>Design</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Factory</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Laser%2FVCSEL failure</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales%2FCustomer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Supplier</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Testing</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Found_By__c</picklist>
+        <values>
+            <fullName>Customer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Finisar FAE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Finisar PE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Finisar Quality</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Finisar R%26D</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Grade__c</picklist>
+        <values>
+            <fullName>Development</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mechanical</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prime</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Integration_Status__c</picklist>
+        <values>
+            <fullName>Error</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Integration Pending</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Success</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Issue_with__c</picklist>
+        <values>
+            <fullName>300 pin-DEMUX</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>300 pin-Jitter Filter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>300 pin-MUX</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>300 pin-Rx DTV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>300 pin-TEC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>300 pin-connector</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>300 pin-fibers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>300 pin-modulator</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>300 pin-phase adjust</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>300 pin-tunability</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APS Timing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Berlin ICR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Berlin Photodetector</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bit Errors</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CDR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Components</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Documentation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EEPROM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EEPROM%2FFW change</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Electrical</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Eval Boards</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FEC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fiber</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fibre Channel Std</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Firmware</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GUI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gbit Ethernet Std</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>General Xcvr%2FXpndr</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HROCM- Electronics%2FCommunications</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HROCM-Development%2FQualification%2FApplication</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HROCM-Mechanical</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HROCM-Optical</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HROCM-Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I2C</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IC-CDRLDPA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IC-Dallas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IC-FCC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IC-FCC2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IC-FCC3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IC-FCC4 SmartLDPA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IC-LDPA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IC-MSP430</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IC-Omega LD%2FPA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ICC-iCDR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Initialization</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Interoperability</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Link Budget</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MDIO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mechanical</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>N%2FA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NVR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Power Up Init Time</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pre-emphasis%2FGain settings</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RS-232 back door</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RX APD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RX PIN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RX TIA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rate Select</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reliability</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SONET Standard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Signal Integrity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TX Back Facet Monitor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TX CML</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TX DFB</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TX Fabry-Perot</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TX VCSEL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WSS-Development%2FQualification%2FApplication</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WSS-Electronics%2FCommunications</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WSS-Mechanical</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WSS-Optical</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WSS-Other</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Origin</picklist>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Phone</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Part_Type__c</picklist>
+        <values>
+            <fullName>Generic Part</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Poly__c</picklist>
+        <values>
+            <fullName>4H</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6H</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Priority</picklist>
+        <values>
+            <fullName>High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Line Down</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Moderate</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Product_Family__c</picklist>
+        <values>
+            <fullName>00 PREFORM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>01 IWT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>02 DRY WT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>04 CHUCKS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>06 C %26 C</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>07 ASML FINGERS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>08 ASML MISC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1-Fiber Collimator</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>10 STAGES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>10G-300ER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>10G-300IR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>10G-300LR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>10G-300SR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>10G-300VSR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>12 PUCKS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>13 SENSOR FRAMES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>15 LMB%27S</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>16 DRS MIRROR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2-Fiber Collimator</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>200GAUI-4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>40G-DPSK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>40G-DQPSK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>40G-NRZ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>40G-ODB</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>90deg Hybrid</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>980 SUBMARINE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-Lens</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ACCESSORIES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ACD Amplifier</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ALL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ALLOTH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ALLOTHE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ALLOTHR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ALLOYS METALS COMPOUNDS GASES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ALSTOM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ANALOG-NR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ANALOG-RES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ANDRITZ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AOM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APGDE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APPLIED</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AREVA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ARMOR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ARMY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ASHLND</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ASML</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>B-Lens</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BEAM COMBINER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BEAM CONVERTER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BEAM EXPANDER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BEAMSPLITTERS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BIDI P2P</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BIDI PON</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BLANKS-EXTERNAL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BLANKS-INTERNAL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BOULE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BOULES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BUS DOCTOR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Beam Displacer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Block</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>C-CP100G-2X1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>C-CP100G-4X1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>C-CP12%2E5G-2X1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>C-CP12%2E5G-4X1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>C-CP50G-2X1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>C-T%26F12%2E5G-4X1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>C-T%26F12%2E5G-8X1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>C-T-6%2E25G-2X20</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>C-T-T%26F50G-1X9</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>C-T-WS20-25G</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>C-WS09-50G</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>C100G-1X1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>C100G-2X1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>C100G-4X1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>C100G-8X1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>C100G-9X1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>C12%2E5G-2X1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>C12%2E5G-4X1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>C12%2E5G-9X1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>C50G-1X1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>C50G-2X1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>C50G-4X1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>C50G-8X1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>C50G-9X1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CABLE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CALDERA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CANON</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CATV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CATV-FTTH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CATV-XMOD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CATV1310PR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CATV1310ST</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CATV1550ND</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CATV1550QM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CAUI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CAUI-4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CC00</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CC10</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CC11</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CC12</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CC13</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CC14</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CC15</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CC20</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CC21</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CC22</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CC23</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CC24</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CC25</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CC30</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CC31</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CC32</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CC50</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CC51</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CC60</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CC61</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CC75</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CC85</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CDAUI-8</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CERESIS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CHUCKS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CKTPK-4D</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CKTPK-8D</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CKTPK-CCM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CKTPK-OLA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>COAT ONLY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>COHEREN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>COHERENT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>COLLIMATOR MODULES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CONSUMABLES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>COOLED FG 14xx PUMPS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>COOLED FG 980 PUMPS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>COPPER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CPF</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CRATE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CTA - CLIMATHERM COMMERICAL COOLER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CTEG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CTM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CUSTOM HEAD DESIGNS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CUTTING</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CWDM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CYLINDER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ceramic pigtail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Circulator</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Circulator Module</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cladding Pumped AMP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Connector</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Corning</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Crystal Assembly</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Custom Collimator</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>D-C Filter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DE IND</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DE R%26D</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DE SUPP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DEEP SP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DEIND</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DEVELOPMENT KITS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DEVWIP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DFAS-IN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DGE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DIAMOND TURN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DIAMOND TURN %2B COAT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DPBL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DPGL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DPIR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DPQL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DPQLM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DUPONT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DVC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DWDM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DWDM CONTROLLED AMP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DWDM GAIN BLOCKS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DXC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Driver</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dual Wavelength Lock</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EDFA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EDGE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EIM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ELECTRO-OPTIC MODULATOR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ENCODER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ES-VOA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ESAPI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EVA KIT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EVALCARD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EYMAQ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Etalon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FAB SERVICES-LCoS De</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FABRICATION</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FC LD BARS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FIB</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FIBRE ASSEMBLY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FILTERS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FOCUS MODULES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FPL MM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FPL PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FPL SM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FSI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Faraday Latching</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Faraday Unlatching</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fiber Laser FBG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GCELL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GDL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GDLM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GFF Device</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GTX</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GUIDEBA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>General pigtail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Glass rod</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gra R</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gra T</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HELIKIT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HELSEAT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HITACHI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HPD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HPL MM FC MODULES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HYBRID EDFA-RAMAN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hybrid</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>II-VI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IND</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IND DE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>INS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>INSERTS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>INTEG FILTER MODULES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>INTERLEAVER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IPBCD%2C PBC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ITT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ITT PRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Integrated Module</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Interleaver module</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Isolator Core</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JOINING</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KLA-TEN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KNS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KTCHUCK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KULICKE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>L12%2E5G-2X1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>L12%2E5G-4X1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>L12%2E5G-9X1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LAM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LASER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LASER CRYSTAL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LASER LIGHT CABLES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LBNL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LCC - SKELETON COMPLIANT TAB COOLER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LCoS Panel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LD CHIPS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LD STACKS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LDM-HE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LDM-LE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LED</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LENS%26INS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LENSES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LINE CARD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LINECARD EDFA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LLC OPTIONS%2FSPARES%2FDOCUMENTATION</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LOOPER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LOW POWER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LSWR ADPTR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LTC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LWDFB</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LWFP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lan-WDM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lens</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M- Assembly</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M- Ball</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M- Biomedical Filter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M- Consumer Filter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M- Industrial Filter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M- Mirror%28DRM%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M- Mushroom Ball</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M- Plano Convex Lens</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M- Prism</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M- Telecom Fliter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M- Window</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M-AUTO Radar Filter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M-Lens</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MATERIAL PROCESSING HEADS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MCC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MEMS Switch</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MIRRORS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MISC DE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MISCELLANEOUS SERVICES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MITSUBI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MM FC LD MODULES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MM VCSEL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MMC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MONO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MULTI MODE PUMP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mechanical</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mechanical Switch</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mechanics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mic O</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Micro lens assembly</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Micro-lens</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mini Size Collimator</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mini Size Isolator</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NC STAT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NC UNIV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NCSU</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ND-C Filter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NEG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NEW PART BLANK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NEWPORT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NIKON</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NIPPON</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NOKIA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NOZZLES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NRE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Narrow Linewidth Las</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>None</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Normal Size Isolator</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>O%27FALLO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>O%27GARA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>O-Air Space Etalon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>O-Flowcell</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>O-L Assembly</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>O-Optical Assembly</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>O-Solid Etalon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>O-Waveplate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>O-Window</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OA%2FMONO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OARMOR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OBSOLETE - PF</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OCM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OLS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OPM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OPT ENGINE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OPT INSTRU</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OPTIC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OPTICAL CHANNEL MONITOR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ORNL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OSTF module</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OTDR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OTHER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OTHER OPERATING MATERIALS%2FSERVICE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OTHER RAW MATERIAL%2FSPARES%2FTRADEGOODS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OTHRAMR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OTHRARM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OUTPUT COUPLER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OUTPUT MIRROR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OVER-DIMENSION BLANKS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Optical Monitoring</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Optics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other Crystal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>P-ASM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>P-Mirror</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>P-Prism</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>P-Window</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PARTIAL REFLECTOR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PASSIVE COMP %26 MODUL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PASSIVES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PBE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PBSA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PCKT MAKER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PENN UN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PFBGO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PFCUS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PFCUT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PFJOIN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PFLLC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PFLPH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PFOTHER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PFOTHOTH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PFOVERH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PFREP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PGP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PL - PORCHLESS ROHS TEC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PLC chip</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>POLARIZER ANALYZER ATTENUATOR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>POWER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PPG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PR-Jig</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PR-Mirror</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PR-Prism</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PRISMS %2B RHOMBS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PROBES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PRODUCTION SUPPLIES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PUCKS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PUMA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PVC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PXC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pump Combiner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pump Laser FBG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>QM-AC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>QM-CC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>QM-CT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>QM-GC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>QM-NC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>QOMO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>QSFP%2B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>QSFP28</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RACKMOUNT EDFA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RACKMOUNT OPM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RAMAN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RAW MAT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RAW MATERIAL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RAWMAT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RAYETHO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RAYTHEO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RBG Comb</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RC - ROHS COMPLIANT-DT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>REAR MIRRORS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>REFLECTIVE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>REPAIR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RESILIC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>REUTER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>REV-MIL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>REVMIL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>REWORK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RF</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RIO TIN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ROADM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ROLLS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ROLLS R</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reflector</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SA-Lens</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SAMPLE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SAMSUNG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SAPI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SB-Lens</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SBIR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SCAN LENSES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SEMI FINISHED</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SFP%2B LR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SFP%2B LRM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SFP%2B SR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SFP%2B TUNABLE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SHEET STOCK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SINGLE CHA CTRLD AMP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SINGLE CHA GAIN BLK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SLIP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SM FC LD MODULES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SM VCSEL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SMTY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SOFTWARE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SP-C - SPECIAL COOLER DESIGN%28COMP%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ST - THERMOELECTRIC ASMBLYS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>STRIP%2C DIAMOND TURN %2B COAT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>STRUCTURED LIGHT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>STURTEV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SW</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SWITCH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SY00</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SY10</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SY20</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SY30</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SY60</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SY63</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sensor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Signal Combiner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Spliter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Switch Crystal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>T-VOA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TAPS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TDC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TDC Device</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TEL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TENCATE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TEST</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TESTING</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>THERMAL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>THG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>THIN FILM POLARIZERS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TIGER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TIME OF FLIGHT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TOF</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TOOLING</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TR - TRITON ICE ROHS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TRAINING</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TRANSMISSIVE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TRSIL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TRSILIC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TTC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TURN %2B POLISH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tap Coupler</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tap Filter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tra O</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tunable Filter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UNASSIGNED</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UNCOOLED 980 PUMPS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UV Scanner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>V-filter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VCSEL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VIETNAM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VN Clens</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VRM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WAVEPLATES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WDM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WDM Components</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WDM Coupler</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WDM Device</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WDM Module</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WEAR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WINDOWS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WITNESS SAMPLE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WMO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WSDM Module</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WSS-DLP2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WSS-DSP1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WSS-DUAL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WSS-DWP100</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WSS-DWP50</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WSS-EWP50</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WSS-L-12%2E5G</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WSS-OCM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WSS-OIG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WSS-SLP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wafer Others</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wavelength Locker</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>XAUI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>XAUI ER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>XAUI LR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>XAUI LRM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>XAUI SR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>XAUI ZR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>XAUI-IFFO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>XCL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>XFP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>XFP IR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>XFP LR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>XFP SR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>XFP TUNABLE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>XFP-E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>XFP-RFTX</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>XGIG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>XLAUI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>XLT - EXTENDED LIFE TEC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>YAG rod</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>YLF block</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>YLF rod</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>YVO4 wedge</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ZEISS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>fiber assembling</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>others</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Reason</picklist>
+        <values>
+            <fullName>Complex functionality</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Existing problem</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Instructions not clear</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New problem</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>User didn%27t attend training</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Requested_Service__c</picklist>
+        <values>
+            <fullName>Failure Analysis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Failure Verification Only</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Loaner Return</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rework %2F Upgrade %28No FA%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Size__c</picklist>
+        <values>
+            <fullName>2%22 %2850mm%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3%22 %2875mm%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4%22 %28100mm%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6%22 %28150mm%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Feature Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Problem</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Question</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

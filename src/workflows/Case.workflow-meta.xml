@@ -28,6 +28,38 @@
         <template>AMD_Web_to_Case_Templates/AMD_WebtoCase_Internal_Initial_Response</template>
     </alerts>
     <alerts>
+        <fullName>Comcast_Escalation_Alert</fullName>
+        <description>Comcast Escalation Alert</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>DefaultWorkflowUser</senderType>
+        <template>Comcast_Emails/PCC_Escalation_E_mail</template>
+    </alerts>
+    <alerts>
+        <fullName>Comcast_clouser_notification_for_HW_failure</fullName>
+        <description>Comcast clouser notification for HW failure</description>
+        <protected>false</protected>
+        <recipients>
+            <field>SuppliedEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderType>DefaultWorkflowUser</senderType>
+        <template>Comcast_Emails/Closure_E_mail_HW_Failure</template>
+    </alerts>
+    <alerts>
+        <fullName>Comcast_clouser_notification_for_SW_failure</fullName>
+        <description>Comcast clouser notification for SW failure</description>
+        <protected>false</protected>
+        <recipients>
+            <field>SuppliedEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderType>DefaultWorkflowUser</senderType>
+        <template>Comcast_Emails/Closure_E_mail_SW_Failure</template>
+    </alerts>
+    <alerts>
         <fullName>Email_Notification_for_new_RMA</fullName>
         <description>Email Notification for RMA Submission</description>
         <protected>false</protected>
@@ -74,6 +106,18 @@
         </recipients>
         <senderType>CurrentUser</senderType>
         <template>RMA_Request_Email_Templates/RMA_request_creation_notification</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_Approval_notification</fullName>
+        <description>Send Approval notification</description>
+        <protected>false</protected>
+        <recipients>
+            <field>SuppliedEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>fnsrcrm@finisar.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>RMA_Request_Email_Templates/Case_Approved_notification</template>
     </alerts>
     <alerts>
         <fullName>Send_Email_For_Approval_to_CFO</fullName>
@@ -201,6 +245,18 @@
         <senderType>OrgWideEmailAddress</senderType>
         <template>RMA_Request_Email_Templates/RMA_Request_Approval_Email_Reminder</template>
     </alerts>
+    <alerts>
+        <fullName>Send_cancel_Notification</fullName>
+        <description>Send cancel Notification</description>
+        <protected>false</protected>
+        <recipients>
+            <field>SuppliedEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>fnsrcrm@finisar.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>RMA_Request_Email_Templates/Case_Cancelled_notification</template>
+    </alerts>
     <fieldUpdates>
         <fullName>Case_Update_AdvMat_Record_Type</fullName>
         <description>Sets the case record type to AdvMat</description>
@@ -242,6 +298,16 @@
         <operation>Literal</operation>
         <protected>false</protected>
         <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>UpdateStatustoApproved</fullName>
+        <field>Status</field>
+        <literalValue>Approved</literalValue>
+        <name>UpdateStatustoApproved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
     </fieldUpdates>
     <fieldUpdates>
         <fullName>Update_Awating_CFO_Reminder_Date</fullName>

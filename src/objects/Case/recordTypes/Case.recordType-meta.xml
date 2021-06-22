@@ -86,6 +86,21 @@
         </values>
     </picklistValues>
     <picklistValues>
+        <picklist>Disposition__c</picklist>
+        <values>
+            <fullName>Hardware</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Software</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
         <picklist>Failure_Location__c</picklist>
         <values>
             <fullName>Dead on Arrival</fullName>
