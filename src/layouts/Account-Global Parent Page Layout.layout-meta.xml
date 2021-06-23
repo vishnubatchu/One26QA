@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Layout xmlns="http://soap.sforce.com/2006/04/metadata">
-    <excludeButtons>DataDotComAccountInsights</excludeButtons>
-    <excludeButtons>DataDotComClean</excludeButtons>
-    <excludeButtons>DataDotComCompanyHierarchy</excludeButtons>
     <excludeButtons>Submit</excludeButtons>
     <layoutSections>
         <customLabel>true</customLabel>
@@ -34,14 +31,6 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>BillingAddress</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>ShippingAddress</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
                 <field>Legacy_Salesforce_System__c</field>
             </layoutItems>
             <layoutItems>
@@ -54,15 +43,7 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Display_Shipping_Country__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
                 <field>Phone</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Global_Parent_Updated__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
@@ -73,6 +54,10 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>OwnerId</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Global_Parent_Updated__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
@@ -109,6 +94,33 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Website</field>
+            </layoutItems>
+        </layoutColumns>
+        <style>TwoColumnsLeftToRight</style>
+    </layoutSections>
+    <layoutSections>
+        <customLabel>true</customLabel>
+        <detailHeading>true</detailHeading>
+        <editHeading>true</editHeading>
+        <label>Address</label>
+        <layoutColumns>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Display_Billing_Country__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>BillingAddress</field>
+            </layoutItems>
+        </layoutColumns>
+        <layoutColumns>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Display_Shipping_Country__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>ShippingAddress</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>
@@ -158,17 +170,12 @@
     <platformActionList>
         <actionListContext>Record</actionListContext>
         <platformActionListItems>
-            <actionName>NewTask</actionName>
+            <actionName>NewContact</actionName>
             <actionType>QuickAction</actionType>
             <sortOrder>0</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
-            <actionName>AccountHierarchy</actionName>
-            <actionType>StandardButton</actionType>
-            <sortOrder>21</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
-            <actionName>Account.Create_Opportunity</actionName>
+            <actionName>NewTask</actionName>
             <actionType>QuickAction</actionType>
             <sortOrder>1</sortOrder>
         </platformActionListItems>
@@ -198,142 +205,145 @@
             <sortOrder>6</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
-            <actionName>NewContact</actionName>
+            <actionName>FeedItem.PollPost</actionName>
             <actionType>QuickAction</actionType>
             <sortOrder>7</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
-            <actionName>FeedItem.PollPost</actionName>
+            <actionName>NewGroup</actionName>
             <actionType>QuickAction</actionType>
             <sortOrder>8</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
-            <actionName>NewGroup</actionName>
+            <actionName>FeedItem.ContentNote</actionName>
             <actionType>QuickAction</actionType>
             <sortOrder>9</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
-            <actionName>FeedItem.ContentNote</actionName>
-            <actionType>QuickAction</actionType>
-            <sortOrder>10</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
             <actionName>Delete</actionName>
             <actionType>StandardButton</actionType>
-            <sortOrder>11</sortOrder>
+            <sortOrder>10</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
             <actionName>IsotopeSubscription</actionName>
             <actionType>StandardButton</actionType>
-            <sortOrder>12</sortOrder>
+            <sortOrder>11</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
             <actionName>Submit</actionName>
             <actionType>StandardButton</actionType>
-            <sortOrder>13</sortOrder>
+            <sortOrder>12</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
             <actionName>ChangeOwnerOne</actionName>
             <actionType>StandardButton</actionType>
-            <sortOrder>14</sortOrder>
+            <sortOrder>13</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
             <actionName>EnableAsPartner</actionName>
             <actionType>StandardButton</actionType>
-            <sortOrder>15</sortOrder>
+            <sortOrder>14</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
             <actionName>Share</actionName>
             <actionType>StandardButton</actionType>
-            <sortOrder>16</sortOrder>
+            <sortOrder>15</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
             <actionName>DisableCustomerPortalAccount</actionName>
             <actionType>StandardButton</actionType>
-            <sortOrder>17</sortOrder>
+            <sortOrder>16</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
             <actionName>IncludeOffline</actionName>
             <actionType>StandardButton</actionType>
-            <sortOrder>18</sortOrder>
+            <sortOrder>17</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
             <actionName>Edit</actionName>
             <actionType>StandardButton</actionType>
-            <sortOrder>19</sortOrder>
+            <sortOrder>18</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
             <actionName>DisablePartnerPortalAccount</actionName>
             <actionType>StandardButton</actionType>
+            <sortOrder>19</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>AccountHierarchy</actionName>
+            <actionType>StandardButton</actionType>
             <sortOrder>20</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
-            <actionName>XClean</actionName>
-            <actionType>StandardButton</actionType>
-            <sortOrder>23</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
-            <actionName>PartnerScorecard</actionName>
-            <actionType>StandardButton</actionType>
-            <sortOrder>24</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
             <actionName>ChangeRecordType</actionName>
             <actionType>StandardButton</actionType>
+            <sortOrder>21</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>XClean</actionName>
+            <actionType>StandardButton</actionType>
             <sortOrder>22</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>PartnerScorecard</actionName>
+            <actionType>StandardButton</actionType>
+            <sortOrder>23</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
             <actionName>CreateSurveyInvitation</actionName>
             <actionType>StandardButton</actionType>
-            <sortOrder>25</sortOrder>
+            <sortOrder>24</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
             <actionName>JigsawSearch</actionName>
             <actionType>StandardButton</actionType>
-            <sortOrder>26</sortOrder>
+            <sortOrder>25</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
             <actionName>PrintableView</actionName>
             <actionType>StandardButton</actionType>
-            <sortOrder>27</sortOrder>
+            <sortOrder>26</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
             <actionName>CreateCallList</actionName>
             <actionType>StandardButton</actionType>
-            <sortOrder>28</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
-            <actionName>AccountAddToCampaign</actionName>
-            <actionType>StandardButton</actionType>
-            <sortOrder>29</sortOrder>
+            <sortOrder>27</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
             <actionName>CallHighlightAction</actionName>
             <actionType>ProductivityAction</actionType>
-            <sortOrder>30</sortOrder>
+            <sortOrder>29</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>AccountAddToCampaign</actionName>
+            <actionType>StandardButton</actionType>
+            <sortOrder>28</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
             <actionName>SmsHighlightAction</actionName>
             <actionType>ProductivityAction</actionType>
-            <sortOrder>31</sortOrder>
+            <sortOrder>30</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
             <actionName>EmailHighlightAction</actionName>
             <actionType>ProductivityAction</actionType>
-            <sortOrder>32</sortOrder>
+            <sortOrder>31</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
             <actionName>WebsiteHighlightAction</actionName>
             <actionType>ProductivityAction</actionType>
-            <sortOrder>33</sortOrder>
+            <sortOrder>32</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
             <actionName>SendEmail</actionName>
             <actionType>QuickAction</actionType>
-            <sortOrder>34</sortOrder>
+            <sortOrder>33</sortOrder>
         </platformActionListItems>
     </platformActionList>
     <quickActionList>
+        <quickActionListItems>
+            <quickActionName>NewContact</quickActionName>
+        </quickActionListItems>
         <quickActionListItems>
             <quickActionName>FeedItem.TextPost</quickActionName>
         </quickActionListItems>
@@ -414,6 +424,24 @@
         <fields>ACCOUNT.NAME</fields>
         <fields>OPPORTUNITY.CLOSE_DATE</fields>
         <relatedList>Opportunity.End_Customer__c</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>QUOTE.NAME</fields>
+        <fields>Account__c</fields>
+        <fields>QUOTE.QUOTENUMBER</fields>
+        <fields>OPPORTUNITY.NAME</fields>
+        <fields>QUOTE.EXPIRATIONDATE</fields>
+        <fields>QUOTE.SUBTOTAL</fields>
+        <fields>QUOTE.TOTALPRICE</fields>
+        <relatedList>Quote.Global_Ultimate_Account__c</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>ORDERS.ORDER_NUMBER</fields>
+        <fields>ORDER.PO_NUMBER</fields>
+        <fields>SALES.ACCOUNT.NAME</fields>
+        <fields>ORDERS.STATUS</fields>
+        <fields>Revenue__c</fields>
+        <relatedList>Order.Global_Ultimate_Account__c</relatedList>
     </relatedLists>
     <relatedObjects>ParentId</relatedObjects>
     <showEmailCheckbox>false</showEmailCheckbox>

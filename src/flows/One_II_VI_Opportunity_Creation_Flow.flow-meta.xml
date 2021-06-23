@@ -572,15 +572,15 @@
             </value>
         </inputAssignments>
         <inputAssignments>
-            <field>Project_Name__c</field>
+            <field>RecordTypeId</field>
             <value>
-                <stringValue>test</stringValue>
+                <elementReference>Opportunity_Record_Type</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
             <field>StageName</field>
             <value>
-                <elementReference>Opportunity_Stage</elementReference>
+                <stringValue>Qualifying</stringValue>
             </value>
         </inputAssignments>
         <object>Opportunity</object>
@@ -797,6 +797,13 @@
                         </conditions>
                     </visibilityRule>
                 </fields>
+                <fields>
+                    <name>Create_Opportunity</name>
+                    <dataType>Boolean</dataType>
+                    <fieldText>Create Opportunity?</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <isRequired>true</isRequired>
+                </fields>
                 <inputParameters>
                     <name>width</name>
                     <value>
@@ -905,18 +912,18 @@
                 <name>Initial_Creation_Screen_Section4_Column1</name>
                 <fieldType>Region</fieldType>
                 <fields>
+                    <name>Opportunity_Record_Type</name>
+                    <choiceReferences>OpportunityRecordType</choiceReferences>
+                    <dataType>String</dataType>
+                    <fieldText>Opportunity Record Type</fieldText>
+                    <fieldType>DropdownBox</fieldType>
+                    <isRequired>false</isRequired>
+                </fields>
+                <fields>
                     <name>Opportunity_Name</name>
                     <dataType>String</dataType>
                     <fieldText>Opportunity Name</fieldText>
                     <fieldType>InputField</fieldType>
-                    <isRequired>true</isRequired>
-                </fields>
-                <fields>
-                    <name>Opportunity_Stage</name>
-                    <choiceReferences>OpportunityStages</choiceReferences>
-                    <dataType>String</dataType>
-                    <fieldText>Opportunity Stage</fieldText>
-                    <fieldType>DropdownBox</fieldType>
                     <isRequired>true</isRequired>
                 </fields>
                 <inputParameters>
@@ -954,6 +961,16 @@
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
+            <visibilityRule>
+                <conditionLogic>and</conditionLogic>
+                <conditions>
+                    <leftValueReference>Create_Opportunity</leftValueReference>
+                    <operator>EqualTo</operator>
+                    <rightValue>
+                        <booleanValue>true</booleanValue>
+                    </rightValue>
+                </conditions>
+            </visibilityRule>
         </fields>
         <showFooter>true</showFooter>
         <showHeader>true</showHeader>
@@ -981,7 +998,7 @@
             <targetReference>getRecT</targetReference>
         </connector>
     </start>
-    <status>Draft</status>
+    <status>Active</status>
     <variables>
         <name>recordId</name>
         <dataType>String</dataType>

@@ -2386,9 +2386,9 @@
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
+        <editable>true</editable>
         <field>Costing_Quote__c.Request_Type__c</field>
-        <readable>false</readable>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
@@ -5867,6 +5867,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Order.MDR_Key__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Order.Name</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -6668,6 +6673,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Order_Line__c.Lot_Number__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Order_Line__c.MDR_Key__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>

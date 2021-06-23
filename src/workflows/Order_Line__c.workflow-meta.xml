@@ -30,4 +30,25 @@
         <protected>false</protected>
         <reevaluateOnChange>false</reevaluateOnChange>
     </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_MDR_Key_OrderLine</fullName>
+        <field>MDR_Key__c</field>
+        <formula>TEXT( Source_System__c ) + &quot;_&quot;+ Source_System_Id__c</formula>
+        <name>Update MDR Key OrderLine</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Update MDR Key</fullName>
+        <actions>
+            <name>Update_MDR_Key_OrderLine</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Update MDR key on order line with source system and source system id</description>
+        <formula>AND(OR(ISCHANGED( Source_System__c) ,ISCHANGED( Source_System_Id__c ), ISNEW()),NOT(ISBLANK(TEXT(Source_System__c) )),NOT(ISBLANK(Source_System_Id__c )))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
 </Workflow>

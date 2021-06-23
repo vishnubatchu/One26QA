@@ -7047,6 +7047,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Order.MDR_Key__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Order.Name</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -7849,6 +7854,11 @@
         <editable>false</editable>
         <field>Order_Line__c.Lot_Number__c</field>
         <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Order_Line__c.MDR_Key__c</field>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
