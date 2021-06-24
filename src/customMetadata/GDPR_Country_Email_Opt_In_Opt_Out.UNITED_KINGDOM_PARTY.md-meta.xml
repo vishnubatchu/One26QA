@@ -12,6 +12,6 @@
     </values>
     <values>
         <field>Email__c</field>
-        <value xsi:type="xsd:string">OPT IN</value>
+        <value xsi:type="xsd:string">OPT OUT</value>
     </values>
 </CustomMetadata>

@@ -1633,47 +1633,11 @@
     <picklistValues>
         <picklist>Market_Segment__c</picklist>
         <values>
-            <fullName>Consumer</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Datacom</fullName>
-            <default>false</default>
-        </values>
-        <values>
             <fullName>Industrial</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>Medical</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Military%2FAerospace</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Other</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Security%2FSurveillance</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Telecom</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Test %26 Measurement</fullName>
-            <default>false</default>
-        </values>
-        <values>
             <fullName>Transportation</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Video%2FBroadcast</fullName>
             <default>false</default>
         </values>
     </picklistValues>

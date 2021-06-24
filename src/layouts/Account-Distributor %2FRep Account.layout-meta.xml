@@ -163,7 +163,7 @@
         <layoutColumns>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Customer_Industry__c</field>
+                <field>Customer_Industry_Deprecated__c</field>
             </layoutItems>
         </layoutColumns>
         <style>OneColumn</style>

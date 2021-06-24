@@ -14,5 +14,6 @@ OR(
 !ISBLANK(OtherPostalCode)
 )
 )</errorConditionFormula>
+    <errorDisplayField>Display_Other_Country__c</errorDisplayField>
     <errorMessage>Please indicate a Display Other Country</errorMessage>
 </ValidationRule>

@@ -34,6 +34,22 @@
         </connector>
     </assignments>
     <assignments>
+        <name>assignGlobalAccount</name>
+        <label>assignGlobalAccount</label>
+        <locationX>1821</locationX>
+        <locationY>543</locationY>
+        <assignmentItems>
+            <assignToReference>varGlobalAccountId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>getGlobalAccounts.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>CreateCustomerAccount</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
         <name>AssignGlobalParentID</name>
         <label>AssignGlobalParentID</label>
         <locationX>873</locationX>
@@ -138,7 +154,7 @@
                 </rightValue>
             </conditions>
             <conditions>
-                <leftValueReference>Account_Name</leftValueReference>
+                <leftValueReference>Global_Parent_Account</leftValueReference>
                 <operator>IsNull</operator>
                 <rightValue>
                     <booleanValue>false</booleanValue>
@@ -184,14 +200,39 @@
                 </rightValue>
             </conditions>
             <conditions>
-                <leftValueReference>Account_Name</leftValueReference>
+                <leftValueReference>Global_Parent_Account</leftValueReference>
                 <operator>IsNull</operator>
                 <rightValue>
                     <booleanValue>false</booleanValue>
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Create_Global_Account</targetReference>
+                <targetReference>getGlobalAccounts</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Found</name>
+        <label>Found?</label>
+        <locationX>1511</locationX>
+        <locationY>380</locationY>
+        <defaultConnector>
+            <targetReference>Create_Global_Account</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>YesFoundGlobalAccount</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>getGlobalAccounts</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>GlobalParentExists</targetReference>
             </connector>
             <label>Yes</label>
         </rules>
@@ -314,6 +355,14 @@
         <picklistObject>Account</picklistObject>
     </dynamicChoiceSets>
     <dynamicChoiceSets>
+        <name>CustomerQualReq</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>Qual_Required__c</picklistField>
+        <picklistObject>Opportunity</picklistObject>
+    </dynamicChoiceSets>
+    <dynamicChoiceSets>
         <name>OpportunityRecordType</name>
         <dataType>String</dataType>
         <displayField>Name</displayField>
@@ -349,8 +398,23 @@
         <dataType>Boolean</dataType>
         <expression>IF(LEFT({!recordId},3)=&quot;001&quot;, True, False)</expression>
     </formulas>
+    <formulas>
+        <name>DefaultOpptyRT</name>
+        <dataType>String</dataType>
+        <expression>IF(
+TEXT({!$User.Legacy_Company__c})=&quot;Finisar&quot;, &quot;Standard Part (Customizable)&quot;, 
+IF(
+TEXT({!$User.Legacy_Company__c})=&quot;Marlow&quot;, &quot;Custom Part&quot;, 
+&quot;Standard Part (Customizable)&quot;
+))</expression>
+    </formulas>
+    <formulas>
+        <name>GlobalParentKeySearch</name>
+        <dataType>String</dataType>
+        <expression>{!Global_Parent_Account}+&quot;-Global Parent&quot;</expression>
+    </formulas>
     <interviewLabel>One II-VI Opportunity Creation Flow {!$Flow.CurrentDateTime}</interviewLabel>
-    <label>One II-VI Opportunity Creation Flow</label>
+    <label>Prospect Account Creation</label>
     <loops>
         <name>LoopRecT</name>
         <label>LoopRecT</label>
@@ -387,8 +451,8 @@
     <recordCreates>
         <name>Create_Customer_Account1</name>
         <label>Create Customer Account</label>
-        <locationX>1800</locationX>
-        <locationY>298</locationY>
+        <locationX>1900</locationX>
+        <locationY>303</locationY>
         <assignRecordIdToReference>varCustomerAccountId</assignRecordIdToReference>
         <connector>
             <targetReference>CreateOpportunity</targetReference>
@@ -470,8 +534,8 @@
     <recordCreates>
         <name>Create_Global_Account</name>
         <label>Create Global Account</label>
-        <locationX>1593</locationX>
-        <locationY>288</locationY>
+        <locationX>1707</locationX>
+        <locationY>369</locationY>
         <assignRecordIdToReference>varGlobalAccountId</assignRecordIdToReference>
         <connector>
             <targetReference>CreateCustomerAccount</targetReference>
@@ -527,7 +591,7 @@
         <inputAssignments>
             <field>Name</field>
             <value>
-                <elementReference>Account_Name</elementReference>
+                <elementReference>Global_Parent_Account</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -566,9 +630,27 @@
             </value>
         </inputAssignments>
         <inputAssignments>
+            <field>Global_Ultimate_Account__c</field>
+            <value>
+                <elementReference>varGlobalAccountId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
             <field>Name</field>
             <value>
                 <elementReference>Opportunity_Name</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Project_Name__c</field>
+            <value>
+                <elementReference>Project_Name</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Qual_Required__c</field>
+            <value>
+                <elementReference>Customer_Qual_Req_d</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -607,6 +689,34 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <recordLookups>
+        <name>getGlobalAccounts</name>
+        <label>getGlobalAccounts</label>
+        <locationX>1520</locationX>
+        <locationY>227</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Found</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Global_Parent_Unique_Key__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>GlobalParentKeySearch</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>RecordTypeId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>varGlobalAccountRecTId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Account</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
         <name>getRecT</name>
         <label>getRecT</label>
         <locationX>517</locationX>
@@ -634,6 +744,26 @@
         <object>RecordType</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
+    <runInMode>SystemModeWithoutSharing</runInMode>
+    <screens>
+        <name>GlobalParentExists</name>
+        <label>GlobalParentExists</label>
+        <locationX>1515</locationX>
+        <locationY>545</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>assignGlobalAccount</targetReference>
+        </connector>
+        <fields>
+            <name>ExistsMessage</name>
+            <fieldText>&lt;p&gt;It looks like a global parent account already exist with that name. We&apos;ll be creating the Customer Account and Opportunity and related these records to the &lt;a href=&quot;/{!getGlobalAccounts.Id}&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;existing global parent account record&lt;/a&gt;. Click Next to proceed.&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
     <screens>
         <name>Initial_Creation_Screen</name>
         <label>Initial Creation Screen</label>
@@ -667,12 +797,12 @@
                 <name>Initial_Creation_Screen_Section1_Column1</name>
                 <fieldType>Region</fieldType>
                 <fields>
-                    <name>Account_Name</name>
+                    <name>Global_Parent_Account</name>
                     <dataType>String</dataType>
                     <defaultValue>
                         <elementReference>getAccount.Name</elementReference>
                     </defaultValue>
-                    <fieldText>Account Name</fieldText>
+                    <fieldText>Global Parent Account</fieldText>
                     <fieldType>InputField</fieldType>
                     <isRequired>true</isRequired>
                 </fields>
@@ -680,6 +810,9 @@
                     <name>Display_Shipping_Country</name>
                     <choiceReferences>countries</choiceReferences>
                     <dataType>String</dataType>
+                    <defaultValue>
+                        <stringValue>United States</stringValue>
+                    </defaultValue>
                     <fieldText>Display Shipping Country</fieldText>
                     <fieldType>DropdownBox</fieldType>
                     <isRequired>true</isRequired>
@@ -688,9 +821,12 @@
                     <name>Display_Billing_Country</name>
                     <choiceReferences>countries</choiceReferences>
                     <dataType>String</dataType>
+                    <defaultValue>
+                        <stringValue>United States</stringValue>
+                    </defaultValue>
                     <fieldText>Display Billing Country</fieldText>
                     <fieldType>DropdownBox</fieldType>
-                    <isRequired>true</isRequired>
+                    <isRequired>false</isRequired>
                 </fields>
                 <fields>
                     <name>GlobalBillingAddress</name>
@@ -765,6 +901,9 @@
                 <fields>
                     <name>Customer_Top_Level_Account_Name</name>
                     <dataType>String</dataType>
+                    <defaultValue>
+                        <elementReference>getAccount.Name</elementReference>
+                    </defaultValue>
                     <fieldText>Customer/Top Level Account Name</fieldText>
                     <fieldType>InputField</fieldType>
                     <isRequired>true</isRequired>
@@ -915,6 +1054,9 @@
                     <name>Opportunity_Record_Type</name>
                     <choiceReferences>OpportunityRecordType</choiceReferences>
                     <dataType>String</dataType>
+                    <defaultValue>
+                        <elementReference>DefaultOpptyRT</elementReference>
+                    </defaultValue>
                     <fieldText>Opportunity Record Type</fieldText>
                     <fieldType>DropdownBox</fieldType>
                     <isRequired>false</isRequired>
@@ -925,6 +1067,14 @@
                     <fieldText>Opportunity Name</fieldText>
                     <fieldType>InputField</fieldType>
                     <isRequired>true</isRequired>
+                </fields>
+                <fields>
+                    <name>Customer_Qual_Req_d</name>
+                    <choiceReferences>CustomerQualReq</choiceReferences>
+                    <dataType>String</dataType>
+                    <fieldText>Customer Qual Req&apos;d?</fieldText>
+                    <fieldType>DropdownBox</fieldType>
+                    <isRequired>false</isRequired>
                 </fields>
                 <inputParameters>
                     <name>width</name>
@@ -951,6 +1101,13 @@
                     <fieldText>Close Date</fieldText>
                     <fieldType>InputField</fieldType>
                     <isRequired>true</isRequired>
+                </fields>
+                <fields>
+                    <name>Project_Name</name>
+                    <dataType>String</dataType>
+                    <fieldText>Project Name</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <isRequired>false</isRequired>
                 </fields>
                 <inputParameters>
                     <name>width</name>
@@ -985,7 +1142,7 @@
         <allowPause>true</allowPause>
         <fields>
             <name>SuccessMessage</name>
-            <fieldText>&lt;p&gt;Records successfully created!&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Global Account Record: &lt;a href=&quot;/{!varGlobalAccountId}&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;{!Account_Name}&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Customer/Top Level Account Record: &lt;a href=&quot;/{!varCustomerAccountId}&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;{!Customer_Top_Level_Account_Name}&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Opportunity Record: &lt;a href=&quot;/{!varOpportunityId}&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;{!Opportunity_Name}&lt;/a&gt;&lt;/p&gt;</fieldText>
+            <fieldText>&lt;p&gt;Records successfully created!&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Global Account Record: &lt;a href=&quot;/{!varGlobalAccountId}&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;{!Global_Parent_Account}&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Customer/Top Level Account Record: &lt;a href=&quot;/{!varCustomerAccountId}&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;{!Customer_Top_Level_Account_Name}&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Opportunity Record: &lt;a href=&quot;/{!varOpportunityId}&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;{!Opportunity_Name}&lt;/a&gt;&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <showFooter>true</showFooter>

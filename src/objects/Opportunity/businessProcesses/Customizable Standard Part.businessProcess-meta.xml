@@ -31,10 +31,6 @@
         <default>false</default>
     </values>
     <values>
-        <fullName>Qualifying</fullName>
-        <default>false</default>
-    </values>
-    <values>
         <fullName>Quoting</fullName>
         <default>false</default>
     </values>

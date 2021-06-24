@@ -1188,6 +1188,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Account.Customer_Industry_Deprecated__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Account.Customer_Industry__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -1592,7 +1597,7 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
+        <editable>false</editable>
         <field>Account.Salesforce_Legacy_Id__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -13275,11 +13280,11 @@
         <recordType>Costing_Quote__c.Master_Costing_Quote</recordType>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>Costing__c-Costing Layout</layout>
+        <layout>Costing__c-Corp II-VI Costing Layout</layout>
+        <recordType>Costing__c.Corp_II_VI_Costing</recordType>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Costing__c-Costing Layout</layout>
-        <recordType>Costing__c.Corp_II_VI_Costing</recordType>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Costing__c-Marlow Costing Layout</layout>
