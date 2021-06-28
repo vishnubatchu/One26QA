@@ -2700,6 +2700,16 @@
         <default>false</default>
         <label>MIRRORS</label>
     </customValue>
+    <customValue>
+        <fullName>XMF-R</fullName>
+        <default>false</default>
+        <label>XMF-R</label>
+    </customValue>
+    <customValue>
+        <fullName>XMF-H</fullName>
+        <default>false</default>
+        <label>XMF-H</label>
+    </customValue>
     <masterLabel>Product Family</masterLabel>
     <sorted>false</sorted>
 </GlobalValueSet>

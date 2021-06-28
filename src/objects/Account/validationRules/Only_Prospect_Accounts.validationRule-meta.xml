@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Only_Prospect_Accounts</fullName>
+    <active>true</active>
+    <description>only prospect accounts can be created</description>
+    <errorConditionFormula>AND(
+ISNEW(),
+TEXT(Type)=&quot;PRospect&quot;,
+NOT( $Permission.By_Pass_Validation)
+)</errorConditionFormula>
+    <errorDisplayField>Type</errorDisplayField>
+    <errorMessage>You can only create Customer Accounts</errorMessage>
+</ValidationRule>

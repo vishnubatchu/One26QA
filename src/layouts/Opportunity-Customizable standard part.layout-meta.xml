@@ -247,6 +247,10 @@
                 <behavior>Edit</behavior>
                 <field>Project_Name__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Marlow_Product_BU__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>

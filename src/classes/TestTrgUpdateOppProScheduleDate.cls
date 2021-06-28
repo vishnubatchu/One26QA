@@ -17,7 +17,7 @@ public class TestTrgUpdateOppProScheduleDate{
         opp.CloseDate=date.today().addDays(5);
         opp.AccountId=acc.id;
         opp.StageName='Closed Won';
-        opp.Business_Unit__c = 'Power';
+        opp.Marlow_Product_BU__c = 'Power';
         opp.Qual_Required__c ='Yes';
         opp.Project_Name__c   = 'Test'; 
         insert opp;

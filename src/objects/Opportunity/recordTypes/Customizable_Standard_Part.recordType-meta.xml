@@ -3,7 +3,7 @@
     <fullName>Customizable_Standard_Part</fullName>
     <active>true</active>
     <businessProcess>Customizable Standard Part</businessProcess>
-    <label>Customizable Standard Part</label>
+    <label>Standard Part (Customizable)</label>
     <picklistValues>
         <picklist>Application__c</picklist>
         <values>
@@ -1677,6 +1677,25 @@
         </values>
         <values>
             <fullName>80 - Contracts</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Marlow_Product_BU__c</picklist>
+        <values>
+            <fullName>Components</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>N%2FA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Power</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Systems</fullName>
             <default>false</default>
         </values>
     </picklistValues>

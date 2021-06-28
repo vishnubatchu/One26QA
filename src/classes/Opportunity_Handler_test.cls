@@ -49,7 +49,7 @@ public class Opportunity_Handler_test  {
             o.CloseDate=myDate;
             o.stagename='Prospect';
             o.CurrencyIsoCode='USD';
-            o.Business_Unit__c='Components';
+            o.Marlow_Product_BU__c='Components';
             o.Market__c='30 - Medical';
             o.ITAR__c='NO';
             o.REACH__c='NO';

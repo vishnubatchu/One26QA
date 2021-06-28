@@ -6,8 +6,11 @@ private class OrderRatePlanControllerTest {
         priceBookList.add(new Pricebook2(Name = 'Legacy Finisar Products', IsActive=true));
         priceBookList.add(new Pricebook2(Name = 'Legacy Photonics Products', IsActive=true));
         priceBookList.add(new Pricebook2(Name = 'Legacy Marlow Products', IsActive=true));
+        priceBookList.add(new Pricebook2(Name = 'Legacy II-VI Products', IsActive=true));
+        priceBookList.add(new Pricebook2(Name = 'Legacy II-VI Military Products',IsActive=true));
         priceBookList.add(new Pricebook2(Name = 'Legacy II-VI Epiworks Products',IsActive=true));
         insert priceBookList; 
+
         List<Account> acc = TestDataFactory.createAccounts(1);
         system.debug('price book '+[Select id,Name from Pricebook2]);
         system.debug('standard '+ Test.getStandardPricebookId());

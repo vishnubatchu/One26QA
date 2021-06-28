@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Full_Name_Required</fullName>
+    <active>true</active>
+    <description>First Name and Last Name required</description>
+    <errorConditionFormula>OR
+(ISBLANK( LastName  ),
+
+ISBLANK(FirstName ),
+ $Permission.By_Pass_Validation =False
+)</errorConditionFormula>
+    <errorDisplayField>FirstName</errorDisplayField>
+    <errorMessage>Both first name and last night should be populated</errorMessage>
+</ValidationRule>

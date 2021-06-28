@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Close_Opportunity</fullName>
+    <active>true</active>
+    <description>To Close won an opportunity, parent account must be of customer type</description>
+    <errorConditionFormula>AND(
+ISCHANGED(StageName),
+TEXT(StageName)=&quot;Closed Won&quot;,
+NOT( TEXT(Account.Type)=&quot;Customer&quot;),
+OR(
+RecordType.DeveloperName =&quot;Customizable_Standard_Part&quot;,
+RecordType.DeveloperName =&quot;Custom_Part&quot;
+)
+)</errorConditionFormula>
+    <errorMessage>To Close Won this opportunity, the parent account must be of Customer  for the Type field</errorMessage>
+</ValidationRule>

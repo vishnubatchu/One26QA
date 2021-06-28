@@ -47,6 +47,10 @@
             <type>Alert</type>
         </action>
         <action>
+            <name>Update_Case_Owner</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
             <name>UpdateStatustoApproved</name>
             <type>FieldUpdate</type>
         </action>

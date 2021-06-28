@@ -2117,11 +2117,6 @@
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
-        <field>Case.CustomerID__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
         <editable>false</editable>
         <field>Case.CustomerRef_RMANo__c</field>
         <readable>false</readable>
@@ -2509,11 +2504,6 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Case.Salesforce_Legacy_Id__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Case.SerialNumber__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -6208,6 +6198,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Opportunity.Marlow_Product_BU__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Opportunity.Media__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -8824,12 +8819,12 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Product2.Source_System_Id__c</field>
-        <readable>false</readable>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
         <field>Product2.Source_System__c</field>
-        <readable>false</readable>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
@@ -13160,6 +13155,10 @@
         <recordType>Case.AdvMat_Unconfirmed</recordType>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>Case-Comcast Layout</layout>
+        <recordType>Case.Comcast_Case</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>Case-HY</layout>
         <recordType>Case.HY</recordType>
     </layoutAssignments>
@@ -13237,6 +13236,18 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>OpportunityRatePlan__c-Opportunity Rate Plan Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Order-PoS Layout</layout>
+        <recordType>Order.PoS_Order</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Order-PoS Layout</layout>
+        <recordType>Order.RMA_Order</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Order-PoS Layout</layout>
+        <recordType>Order.Sales_Order</recordType>
     </layoutAssignments>
     <layoutAssignments>
         <layout>OrderRatePlan__c-Order Rate Plan Layout</layout>

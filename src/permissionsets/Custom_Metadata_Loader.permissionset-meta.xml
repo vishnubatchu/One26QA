@@ -1096,11 +1096,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>Case.CustomerID__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
         <field>Case.CustomerRef_RMANo__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -1487,11 +1482,6 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Case.Salesforce_Legacy_Id__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Case.SerialNumber__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -5092,6 +5082,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Opportunity.Marketing_PN__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Opportunity.Marlow_Product_BU__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>

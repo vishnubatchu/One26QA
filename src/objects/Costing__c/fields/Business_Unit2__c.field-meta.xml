@@ -2,7 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Business_Unit2__c</fullName>
     <externalId>false</externalId>
-    <formula>Opportunity__r.Business_Unit__c</formula>
+    <formula>TEXT(Opportunity__r.Marlow_Product_BU__c)</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
     <label>Business Unit</label>
     <required>false</required>

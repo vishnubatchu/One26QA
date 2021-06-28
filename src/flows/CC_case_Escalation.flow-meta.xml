@@ -4,7 +4,7 @@
         <name>sendNotification</name>
         <label>sendNotification</label>
         <locationX>176</locationX>
-        <locationY>278</locationY>
+        <locationY>398</locationY>
         <actionName>Case.Comcast_Escalation_Alert</actionName>
         <actionType>emailAlert</actionType>
         <connector>
@@ -14,7 +14,7 @@
         <inputParameters>
             <name>SObjectRowId</name>
             <value>
-                <elementReference>caseId</elementReference>
+                <elementReference>GetCase.Id</elementReference>
             </value>
         </inputParameters>
     </actionCalls>
@@ -23,7 +23,7 @@
         <name>Escalatecase</name>
         <label>Escalatecase</label>
         <locationX>176</locationX>
-        <locationY>398</locationY>
+        <locationY>518</locationY>
         <assignmentItems>
             <assignToReference>GetCase.IsEscalated</assignToReference>
             <operator>Assign</operator>
@@ -63,14 +63,14 @@
         <locationY>158</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
-            <targetReference>sendNotification</targetReference>
+            <targetReference>screen</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
             <field>Id</field>
             <operator>EqualTo</operator>
             <value>
-                <elementReference>caseId</elementReference>
+                <elementReference>recordId</elementReference>
             </value>
         </filters>
         <getFirstRecordOnly>true</getFirstRecordOnly>
@@ -81,9 +81,47 @@
         <name>Updatecase</name>
         <label>Updatecase</label>
         <locationX>176</locationX>
-        <locationY>518</locationY>
+        <locationY>638</locationY>
+        <connector>
+            <targetReference>ShowFinalMessage</targetReference>
+        </connector>
         <inputReference>GetCase</inputReference>
     </recordUpdates>
+    <screens>
+        <name>screen</name>
+        <label>screen</label>
+        <locationX>176</locationX>
+        <locationY>278</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>sendNotification</targetReference>
+        </connector>
+        <fields>
+            <name>ShowcaseDetails</name>
+            <fieldText>&lt;p&gt;Please find Case Details&lt;/p&gt;&lt;p&gt;Case Number : {!GetCase.CaseNumber}&lt;/p&gt;&lt;p&gt;Please click on next to escalate case to onwer.&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>ShowFinalMessage</name>
+        <label>ShowFinalMessage</label>
+        <locationX>176</locationX>
+        <locationY>758</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>FinalMessage</name>
+            <fieldText>&lt;p&gt;Case Number# {!GetCase.CaseNumber} is escalated to Owner.&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
     <start>
         <locationX>50</locationX>
         <locationY>0</locationY>
@@ -94,6 +132,13 @@
     <status>Draft</status>
     <variables>
         <name>caseId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>recordId</name>
         <dataType>String</dataType>
         <isCollection>false</isCollection>
         <isInput>true</isInput>

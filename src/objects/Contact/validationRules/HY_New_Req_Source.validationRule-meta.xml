@@ -5,7 +5,8 @@
     <errorConditionFormula>AND( 
 ISNEW(), 
 ISBLANK(TEXT( LeadSource )), 
-ISPICKVAL( Account.Business_Segment__c ,&apos;HIGHYAG&apos;) 
+ISPICKVAL( Account.Business_Segment__c ,&apos;HIGHYAG&apos;),
+ISPICKVAL( $User.Legacy_Company__c, &quot;Corp II-VI&quot;)
 )</errorConditionFormula>
     <errorDisplayField>LeadSource</errorDisplayField>
     <errorMessage>You must select a Lead Source</errorMessage>

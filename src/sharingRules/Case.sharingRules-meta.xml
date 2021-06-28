@@ -1,3 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata"/>
-
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Advanced_Materials</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Advanced Materials</label>
+        <sharedTo>
+            <role>Advanced_Materials</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>AdvMat Unconfirmed,AdvMat</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>ComcastCase_Sharing</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>ComcastCase Sharing</label>
+        <sharedTo>
+            <portalRole>COMCASTCABLEPartnerUser</portalRole>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Comcast Case</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingOwnerRules>
+        <fullName>Aftermarket</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Aftermarket</label>
+        <sharedTo>
+            <role>Regional_Manager_Aftermarket</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>Director_of_Sales_Marketing</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

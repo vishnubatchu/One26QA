@@ -236,4 +236,8 @@
         <name>MobileAdmin_iOS</name>
         <type>ConnectedApp</type>
     </appMenuItems>
+    <appMenuItems>
+        <name>CamcasrPartner</name>
+        <type>Network</type>
+    </appMenuItems>
 </AppMenu>

@@ -6,7 +6,8 @@
 ISNEW(), 
 ISPICKVAL( LeadSource , &apos;Trade Show&apos;), 
 ISPICKVAL( Account.Business_Segment__c ,&apos;HIGHYAG&apos;),
-ISBLANK (TEXT( Media__c ))
+ISBLANK (TEXT( Media__c )),
+ISPICKVAL( $User.Legacy_Company__c, &quot;Corp II-VI&quot;)
 )</errorConditionFormula>
     <errorDisplayField>Media__c</errorDisplayField>
     <errorMessage>You must select a Trade Show</errorMessage>

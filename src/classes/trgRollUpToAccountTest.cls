@@ -20,7 +20,7 @@
             opp.amount=100;
         opp.Project_Name__c = 'Test';
          opp.Qual_Required__c = 'Yes';
-        opp.Business_Unit__c = 'Power';
+        opp.Marlow_Product_BU__c = 'Power';
             insert opp;
             
             opportunity opp1 = opp.clone();

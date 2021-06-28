@@ -11,11 +11,11 @@
     <columns>ACCOUNT.ADDRESS1_ZIP</columns>
     <columns>CORE.USERS.FIRST_NAME</columns>
     <columns>CORE.USERS.LAST_NAME</columns>
-    <filterScope>Mine</filterScope>
+    <filterScope>Everything</filterScope>
     <filters>
         <field>ACCOUNT.TYPE</field>
         <operation>notEqual</operation>
-        <value>Party</value>
+        <value>Party,Party-Only Account</value>
     </filters>
     <filters>
         <field>ACCOUNT.RECORDTYPE</field>

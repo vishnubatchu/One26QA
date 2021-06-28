@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Shipping_Country_Required</fullName>
-    <active>false</active>
-    <errorConditionFormula>ShippingCountry = &quot;&quot;</errorConditionFormula>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ShippingCountry = &quot;&quot;,
+ISPICKVAL($User.Legacy_Company__c, &quot;Corp II-VI&quot;)
+)</errorConditionFormula>
     <errorDisplayField>ShippingCountry</errorDisplayField>
     <errorMessage>You must enter a valid 2 digit ISO code for the Shipping Country.</errorMessage>
 </ValidationRule>

@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <AssignmentRules xmlns="http://soap.sforce.com/2006/04/metadata">
     <assignmentRule>
-        <fullName>Camcast</fullName>
-        <active>false</active>
-    </assignmentRule>
-    <assignmentRule>
         <fullName>Comcast</fullName>
         <active>true</active>
         <ruleEntry>
-            <assignedTo>Comcast_FAE</assignedTo>
-            <assignedToType>Queue</assignedToType>
+            <assignedTo>bryan_johnston@comcast.com</assignedTo>
+            <assignedToType>User</assignedToType>
             <criteriaItems>
                 <field>Case.Origin</field>
                 <operation>equals</operation>

@@ -28,7 +28,7 @@ public class OpportunityProductHandler {
             
             List<Opportunity> Result = new List<Opportunity>();
     
-            Result = [SELECT id,Business_Unit__c,(select id,OpportunityId ,Business_Unit_Name__c,TotalPrice,createddate from OpportunityLineItems  where OpportunityId  in: ids order by TotalPrice,createddate) from opportunity where id in:ids ];       
+            Result = [SELECT id,Marlow_Product_BU__c,(select id,OpportunityId ,Business_Unit_Name__c,TotalPrice,createddate from OpportunityLineItems  where OpportunityId  in: ids order by TotalPrice,createddate) from opportunity where id in:ids ];       
             
             map<string,string> finalmap = new map<string,string>();
             for(opportunity o : Result){
@@ -113,7 +113,7 @@ public class OpportunityProductHandler {
             list<opportunity> oppToUpdate = new list<opportunity>();
             for(opportunity o : Result){
                 if(finalmap.containsKey(o.id)){
-                    o.Business_Unit__c=finalmap.get(o.id);
+                    o.Marlow_Product_BU__c=finalmap.get(o.id);
                     oppToUpdate.add(o);
                 }
             }

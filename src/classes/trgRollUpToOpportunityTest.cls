@@ -17,7 +17,7 @@
             opp.AccountId =acc.id;
             opp.StageName ='Closed Won';
             opp.Qual_Required__c = 'Yes';
-            opp.Business_Unit__c = 'Power';
+            opp.Marlow_Product_BU__c = 'Power';
             opp.Project_Name__c  = 'Test';
             insert opp;
             System.AssertEquals(opp.Pricebook2ID,customPB.Id);
