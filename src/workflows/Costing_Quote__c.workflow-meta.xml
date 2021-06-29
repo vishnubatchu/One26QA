@@ -301,7 +301,7 @@
         <fullName>Costing_Quote_Name</fullName>
         <description>Append the Dept. on the end of the Costing name for the Costing Quote Name</description>
         <field>Name</field>
-        <formula>Name + &quot;-&quot; + TEXT(Department__c)</formula>
+        <formula>Costing_Request__r.Name + &quot;-&quot; + TEXT(Department__c)</formula>
         <name>Costing Quote Name</name>
         <notifyAssignee>false</notifyAssignee>
         <operation>Formula</operation>

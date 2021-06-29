@@ -4,7 +4,7 @@
     <externalId>false</externalId>
     <inlineHelpText>Requested cost completion date</inlineHelpText>
     <label>Cost Completion Date</label>
-    <required>true</required>
+    <required>false</required>
     <trackFeedHistory>true</trackFeedHistory>
     <trackHistory>false</trackHistory>
     <trackTrending>false</trackTrending>

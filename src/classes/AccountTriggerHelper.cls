@@ -147,6 +147,7 @@ insert att;*/
                 Account globalParentAcc=new Account();
                 globalParentAcc.Id=eachAcc.Id;
                 globalParentAcc.Global_Parent_Previous_Owner__c=oldAccountMap.get(eachAcc.Id).OwnerId;
+                globalParentAcc.Global_Ultimate_Parent_Owner_Change_Date__c=System.now();	
                 globalParentAccIdSet.add(eachAcc.Id);
                 globalPreviousOwnerAccLst.add(globalParentAcc);
             }

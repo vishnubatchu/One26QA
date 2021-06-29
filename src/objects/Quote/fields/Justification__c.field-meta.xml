@@ -6,6 +6,6 @@
     <label>Justification</label>
     <length>32768</length>
     <trackFeedHistory>false</trackFeedHistory>
-    <type>LongTextArea</type>
-    <visibleLines>3</visibleLines>
+    <type>Html</type>
+    <visibleLines>10</visibleLines>
 </CustomField>

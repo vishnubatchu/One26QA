@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Marlow_Product_BU_cannot_be_null</fullName>
+    <active>true</active>
+    <description>Marlow Product BU cannot be null for Marlow User</description>
+    <errorConditionFormula>AND(ISPICKVAL( $User.Legacy_Company__c , &apos;Marlow&apos;),ISPICKVAL(  Marlow_Product_BU__c , &quot;&quot;))</errorConditionFormula>
+    <errorDisplayField>Marlow_Product_BU__c</errorDisplayField>
+    <errorMessage>Marlow Product BU cannot be null.</errorMessage>
+</ValidationRule>

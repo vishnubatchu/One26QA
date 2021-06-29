@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Marlow_Required_Fields</fullName>
+    <active>true</active>
+    <description>Marlow users are required to populate costing completion date and special requirements</description>
+    <errorConditionFormula>AND( 
+ISBLANK(Cost_Completion_Date__c),
+ISBLANK(Special_Requirements__c),
+TEXT($User.Legacy_Company__c) = &quot;Marlow&quot;
+)</errorConditionFormula>
+    <errorMessage>Please populate Cost Completion Date and Special Requirement fields</errorMessage>
+</ValidationRule>

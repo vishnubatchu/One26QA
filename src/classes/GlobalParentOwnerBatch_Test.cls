@@ -1,7 +1,7 @@
 @isTest
-public class GlobalParentOwnerBatch_Test {
+private class GlobalParentOwnerBatch_Test {
     @testSetup static void setup() {
-        Profile salesUserProfile = [SELECT Id FROM Profile WHERE Name = 'Sales Profile' LIMIT 1];
+        Profile salesUserProfile = [SELECT Id FROM Profile WHERE Name = 'Sales Profile Clone' LIMIT 1];
         //UserRole faeRole = [SELECT Id FROM UserRole WHERE Name LIKE  '%FAE%' LIMIT 1];
         User usr = [Select id from User where Id = :UserInfo.getUserId()];
         List<User>  testUserList=new List<User>();
@@ -9,7 +9,7 @@ public class GlobalParentOwnerBatch_Test {
         {
             UserRole usrRoleRec=new UserRole(Name= 'FAE'); 
             insert usrRoleRec; 
-
+            
             for(Integer i=0;i<2;i++){
                 String orgId = userInfo.getOrganizationId();
                 String dateString = String.valueof(Datetime.now()).replace(' ','').replace(':','').replace('-','');
@@ -28,26 +28,31 @@ public class GlobalParentOwnerBatch_Test {
                                           isActive = True,
                                           UserRoleId = usrRoleRec.Id));  
             }
+            testUserList.add(new User(LastName='Usrlast1111',ProfileId=[SELECT Id from Profile where Name ='System Administrator'].Id,alias ='trsysy',Legacy_Company__c ='Finisar',
+                                      Email='standarduser1@testorg.com',EmailEncodingKey='UTF-8',  LanguageLocaleKey='en_US', 
+                                      LocaleSidKey='en_US',TimeZoneSidKey='America/Los_Angeles', UserName='testuser1@finisar.com'));
             insert testUserList;
+            PermissionSet ps = [SELECT Id FROM PermissionSet WHERE Name = 'Change_Account_Ownership'];
+            insert new PermissionSetAssignment(AssigneeId = testUserList[2].id, PermissionSetId = ps.Id);
         }
         List<Account> globalParentAccList=new List<Account>();  
         globalParentAccList.add(new Account(Name='Global Parent Test Acc',Display_Shipping_Country__c ='United States',   Display_Billing_Country__c = 'United States',ShippingCity = 'New York', ShippingCountry ='US',RecordTypeId=Schema.SObjectType.Account.getRecordTypeInfosByName().get('Global Parent').getRecordTypeId(),OwnerId=testUserList[0].Id));
-        globalParentAccList.add(new Account(Name='Global Parent Test Acc1',Display_Shipping_Country__c ='United States',   Display_Billing_Country__c = 'United States',ShippingCity = 'New York', ShippingCountry ='US',RecordTypeId=Schema.SObjectType.Account.getRecordTypeInfosByName().get('Global Parent').getRecordTypeId()));
+        globalParentAccList.add(new Account(Name='Global Parent Test Acc1',Display_Shipping_Country__c ='United States',   Display_Billing_Country__c = 'United States',ShippingCity = 'New York', ShippingCountry ='US',RecordTypeId=Schema.SObjectType.Account.getRecordTypeInfosByName().get('Global Parent').getRecordTypeId(),OwnerId=testUserList[1].Id));
         insert globalParentAccList;  
         List<Account> accList=new List<Account>(); 
         for(Integer i=1;i<=6;i++){
             accList.add(new Account(Name='Test Acc '+i,Display_Shipping_Country__c ='United States',   Display_Billing_Country__c = 'United States',RecordTypeId=Schema.SObjectType.Account.getRecordTypeInfosByName().get('Customer Account').getRecordTypeId(),ShippingCity = 'New York', ShippingCountry ='US',
-                                    Global_Ultimate_Parent__c=globalParentAccList[0].Id,Status__c='Active'));
+                                    Global_Ultimate_Parent__c=globalParentAccList[0].Id,Status__c='Active',Type='Customer'));
         }  
         accList.add(new Account(Name='Site Test Acc',RecordTypeId=Schema.SObjectType.Account.getRecordTypeInfosByName().get('Site').getRecordTypeId(),Display_Shipping_Country__c ='United States',   Display_Billing_Country__c = 'United States',
                                 Global_Ultimate_Parent__c=globalParentAccList[0].Id,Site_Use_Code__c='SHIP_TO',Status__c='Active',
-                                Site_Use_Status__c='Active',shippingcity='New York',shippingcountry='US',Type='Customer',
+                                Site_Use_Status__c='Active',shippingcity='New York',shippingcountry='US',Type='Site',
                                 Org_ID__c= '2'));
         insert accList;
         List<Contact> contactList=new List<Contact>();
         Integer index=1;
         for(Integer i=0;i<accList.size()-1;i++){
-            contactList.add(new Contact(LastName='Test Contact '+index,AccountId=accList[i].Id));
+            contactList.add(new Contact(FirstName='Test ',LastName='Contact '+index,AccountId=accList[i].Id));
             index++;
         }  
         insert contactList;
@@ -66,7 +71,6 @@ public class GlobalParentOwnerBatch_Test {
             index++;
         }
         insert quoteList;
-        System.debug('After quoteList insert-->'+Limits.getQueries());
         List<Order> orderList=new List<Order>();
         index=1;
         for(Opportunity eachOpp:oppList){
@@ -95,10 +99,13 @@ Ship_To_Address__c=accList[6].Id,Ship_To_Customer__c=accList[i].Id));*/
     }
     
     @isTest static void testGlobalParentOwnerBatch() {
+        User sysAdmin=[Select Id from User where userName='testuser1@finisar.com'];
         User testUser=[Select Id from User where lastName='User 2'];
         Account globalParentAcc=[Select Id from Account where Name='Global Parent Test Acc'];
         globalParentAcc.OwnerId=testUser.Id;
-        update globalParentAcc;
+        System.runAs(sysAdmin){
+            update globalParentAcc;
+        }
         Test.startTest();
         GlobalParentOwner_Batch batchObj = new GlobalParentOwner_Batch();
         DataBase.executeBatch(batchObj);
@@ -110,11 +117,33 @@ Ship_To_Address__c=accList[6].Id,Ship_To_Customer__c=accList[i].Id));*/
         System.assertEquals(cntctList.size(),cntctShrList.size());
     }
     
+    @isTest static void testGlobalParentAccountChange() {
+        Account globalParentAcc=[Select Id,OwnerId from Account where Name='Global Parent Test Acc'];
+        Account globalParentAcc1=[Select Id,OwnerId from Account where Name='Global Parent Test Acc1'];
+        List<Account> accList=[Select Id from Account where RecordType.Name='Customer Account'];
+        for(Account eachAcc:accList){
+            eachAcc.Changed_Global_Parent_Old_Owner__c=globalParentAcc.OwnerId;
+            eachAcc.Global_Ultimate_Parent__c=globalParentAcc1.Id;
+        }
+        update accList;
+        Test.startTest();
+        GlobalParentOwnerBatch_Helper.deleteAndInsertShareRecords(accList, false);
+        Test.stopTest();
+        List<Contact> cntctList=[Select Id from Contact];
+        List<ContactShare> cntctShrList=[Select Id from ContactShare where UserOrGroupId=:globalParentAcc1.OwnerId and ContactAccessLevel='Read'
+                                         and RowCause='Manual' and ContactId in: cntctList];
+        
+        System.assertEquals(cntctList.size(),cntctShrList.size());
+    }
+    
     @isTest static void testGlobalParentOwnerBatchScheduler() {
+        User sysAdmin=[Select Id from User where userName='testuser1@finisar.com'];
         User testUser=[Select Id from User where lastName='User 2'];
         Account globalParentAcc=[Select Id from Account where Name='Global Parent Test Acc'];
         globalParentAcc.OwnerId=testUser.Id;
-        update globalParentAcc;
+        System.runAs(sysAdmin){
+            update globalParentAcc;
+        }
         Test.startTest();
         GlobalParentOwnerBatch_Scheduler schObj = new GlobalParentOwnerBatch_Scheduler();
         Date today=System.today();
@@ -123,6 +152,26 @@ Ship_To_Address__c=accList[6].Id,Ship_To_Customer__c=accList[i].Id));*/
         CronTrigger ct = [SELECT Id, CronExpression, TimesTriggered, NextFireTime FROM CronTrigger WHERE id = :jobId];
         System.assertEquals(CRON_EXP, ct.CronExpression);
         System.assertEquals(0, ct.TimesTriggered);
+        Test.stopTest();
+    }
+    
+     @isTest static void testDoSubListHelperMethod() {
+        Test.startTest();
+        List<Order> orderList=[Select Id from Order];
+        List<List<Sobject>> sObjectList=new List<List<Sobject>>();
+        GlobalParentOwnerBatch_Helper.doSubList(orderList,2,sObjectList);
+        System.assertEquals(3,sObjectList.size());
+        Test.stopTest();
+    }
+    
+      @isTest static void testSendEmailHelperMethod() {
+        Test.startTest();
+        string csvHeader = 'Record Id,Object Name,Operation, Error \n';
+    	string mainContent = csvHeader;
+		string errStr = '12345,OrderShare,Delete,Test Error occured\n';
+        mainContent += errStr;
+        GlobalParentOwnerBatch_Helper.sendEmail(mainContent);
+        System.assertEquals(1, Limits.getEmailInvocations());
         Test.stopTest();
     }
     

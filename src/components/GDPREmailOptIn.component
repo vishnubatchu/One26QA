@@ -12,7 +12,7 @@ You can unsubscribe from such marketing emails at any time by emailing our Priva
         </p>
         <br/>
         <p>
-            <a href="mailto:{!$Label.GDPR_Email_Address}?subject=RE:Opt-In Contact &cc={!$Label.dataservice};{!recordEmail}&body=Opt-In %0A%0A For Finisar Use Only: [{!recordId}]"> Click here</a> to receive email communications regarding II-VI’s promotions, offers, products and services.
+            <a href="mailto:{!$Label.GDPR_Email_Address}?subject=RE:Opt-In Contact {!recordEmail}&body=Opt-In %0A%0A For Finisar Use Only: [{!recordId}]"> Click here</a> to receive email communications regarding II-VI’s promotions, offers, products and services.
         </p>
         <br/>
         <!--p>

@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Standard_Tasks</fullName>
+    <active>true</active>
+    <label>Standard Tasks</label>
+    <picklistValues>
+        <picklist>Action_Code__c</picklist>
+        <values>
+            <fullName>Accounting Alert</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Accounting Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer Visit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Exhibition Visit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fax</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Generate Coating %26 DT Policy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Generate Customer Worksheet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Generate MSDS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Generate Purchase Order</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Generate standard fax</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Generate terms and conditions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Notes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Out Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Proactive Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Proactive Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Promotional Items Sent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Request for Quote</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Request from Saxonburg</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Send a letter</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Priority</picklist>
+        <values>
+            <fullName>High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Normal</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Requirement_Type__c</picklist>
+        <values>
+            <fullName>Administration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Engineering</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Failure Analysis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Manufacturing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mergers%2FAcquisitions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Process</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Purchasing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quality</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Supplier</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Technology</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Result__c</picklist>
+        <values>
+            <fullName>Call customer back</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Check-in</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Complete</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Disposal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Expedite</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Left message</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Literature</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lost Order No Stock</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lost Order Price</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lost Order Specs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Meeting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Answer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Message Left</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Order</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Received</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Request for quote</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rework</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rings Busy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sent quote</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trip report</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Voice mail left</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Warranty</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status</picklist>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Progress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Open</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Pending Customer Input</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending II-VI Response</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Subject</picklist>
+        <values>
+            <fullName>Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Send Letter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Send Quote</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Meeting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

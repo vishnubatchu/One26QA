@@ -1,7 +1,12 @@
+/**
+* Created by : Akhilesh
+* Date : 2nd June 2021
+* Description: This test class is for "UpdateGlobalParentLookupsBatch" and UpdateGlobalParentLookupsBatchHelper  
+*/
 @isTest
 public class UpdateGlobalParentLookupsBatchTest {
   @testSetup static void setup() {
-        Profile salesUserProfile = [SELECT Id FROM Profile WHERE Name = 'Sales Profile' LIMIT 1];
+        Profile salesUserProfile = [SELECT Id FROM Profile WHERE Name = 'Sales Profile Clone' LIMIT 1];
         List<User>  testUserList=new List<User>();
         for(Integer i=0;i<2;i++){
             String orgId = userInfo.getOrganizationId();
@@ -27,84 +32,45 @@ public class UpdateGlobalParentLookupsBatchTest {
         insert globalParentAcc;
       list<Account> accInsertList = new list<Account>();
       map<string,Account> accInsertMap = new map<string,Account>();
-        Account siteAcc1=new Account(Name='Site Test Acc1',Display_Shipping_Country__c ='United States', Display_Billing_Country__c = 'United States',RecordTypeId= Schema.SObjectType.Account.getRecordTypeInfosByDeveloperName().get('Site').getRecordTypeId(),
+   
+        Account siteAcc1=new Account(Name='Site Test Acc1',Display_Shipping_Country__c ='United States', Display_Billing_Country__c = 'United States',RecordTypeId= Schema.SObjectType.Account.getRecordTypeInfosByDeveloperName().get('Account').getRecordTypeId(),
                                      Global_Ultimate_Parent__c=globalParentAcc.Id,Site_Use_Code__c='SHIP_TO',Status__c='Active',
                                      Site_Use_Status__c='Active',shippingcity='New York',shippingcountry='USA',Type='Customer',
-                                     Org_ID__c= '2');
-         accInsertList.add(siteAcc1);
-        Account siteAcc=new Account(Name='Site Test Acc',Display_Shipping_Country__c ='United States', Display_Billing_Country__c = 'United States',RecordTypeId= Schema.SObjectType.Account.getRecordTypeInfosByDeveloperName().get('Site').getRecordTypeId(),
-                                    Global_Ultimate_Parent__c=globalParentAcc.Id,Site_Use_Code__c='SHIP_TO',Status__c='Active',
-                                    Site_Use_Status__c='Active',ParentId=globalParentAcc.id,shippingcity='New York',shippingcountry='USA',Type='Customer',
-                                    Org_ID__c= '2');
-        accInsertList.add(siteAcc);
-        Account child1 = new Account(Name='child1',ShippingCountry = 'US',Display_Shipping_Country__c ='United States', Display_Billing_Country__c = 'United States',RecordTypeId= Schema.SObjectType.Account.getRecordTypeInfosByDeveloperName().get('Account').getRecordTypeId(),
-                                     ParentId = globalParentAcc.Id,Status__c='Active'); 
-        accInsertList.add(child1);
-        Account child2 = new Account(Name='child2',ShippingCountry = 'US',Display_Shipping_Country__c ='United States', Display_Billing_Country__c = 'United States',RecordTypeId= Schema.SObjectType.Account.getRecordTypeInfosByDeveloperName().get('Account').getRecordTypeId(),
-                                     ParentId = globalParentAcc.Id,Status__c='Active');  
-        accInsertList.add(child2);
-        Account child3 = new Account(Name='child2',ShippingCountry = 'US',Display_Shipping_Country__c ='United States', Display_Billing_Country__c = 'United States',RecordTypeId= Schema.SObjectType.Account.getRecordTypeInfosByDeveloperName().get('Account').getRecordTypeId(),
-                                     ParentId = globalParentAcc.Id,Status__c='Active');  
-        accInsertList.add(child3);
-        Account child4 = new Account(Name='child4',ShippingCountry = 'US',Display_Shipping_Country__c ='United States', Display_Billing_Country__c = 'United States',RecordTypeId= Schema.SObjectType.Account.getRecordTypeInfosByDeveloperName().get('Account').getRecordTypeId(),
-                                     ParentId = globalParentAcc.Id,Status__c='Active');  
-        accInsertList.add(child4);
-      insert accInsertList;
-        
-        List<Account> accList=new List<Account>(); 
-        accList.add(new Account(Name='TestAcc1',ShippingCountry = 'US',Display_Shipping_Country__c ='United States', Display_Billing_Country__c = 'United States',RecordTypeId= Schema.SObjectType.Account.getRecordTypeInfosByDeveloperName().get('Account').getRecordTypeId(),
-                                ParentId = accInsertList[0].id,Status__c='Active'));
-        accList.add(new Account(Name='TestAcc2',ShippingCountry = 'US',Display_Shipping_Country__c ='United States', Display_Billing_Country__c = 'United States',RecordTypeId= Schema.SObjectType.Account.getRecordTypeInfosByDeveloperName().get('Account').getRecordTypeId(),
-                                ParentId = accInsertList[1].id,Status__c='Active'));
-        accList.add(new Account(Name='TestAcc3',ShippingCountry = 'US',Display_Shipping_Country__c ='United States', Display_Billing_Country__c = 'United States',RecordTypeId= Schema.SObjectType.Account.getRecordTypeInfosByDeveloperName().get('Account').getRecordTypeId(),
-                                ParentId = accInsertList[2].id,Status__c='Active'));
-        accList.add(new Account(Name='TestAcc4',ShippingCountry = 'US',Display_Shipping_Country__c ='United States', Display_Billing_Country__c = 'United States',RecordTypeId= Schema.SObjectType.Account.getRecordTypeInfosByDeveloperName().get('Account').getRecordTypeId(),
-                                ParentId = accInsertList[3].Id,Status__c='Active'));
-        accList.add(new Account(Name='TestAcc5',ShippingCountry = 'US',Display_Shipping_Country__c ='United States', Display_Billing_Country__c = 'United States',RecordTypeId= Schema.SObjectType.Account.getRecordTypeInfosByDeveloperName().get('Account').getRecordTypeId(),
-                                ParentId = accInsertList[4].Id,Status__c='Active'));
-        accList.add(new Account(Name='TestAcc6',ShippingCountry = 'US',Display_Shipping_Country__c ='United States', Display_Billing_Country__c = 'United States',RecordTypeId= Schema.SObjectType.Account.getRecordTypeInfosByDeveloperName().get('Account').getRecordTypeId(),
-                                ParentId = accInsertList[5].Id,Status__c='Active'));
-        insert accList;
+                                     Org_ID__c= '2',OwnerId=testUserList[0].Id );
+      
+         insert siteAcc1;
+ 
+
         
         List<Contact> contactList=new List<Contact>();
-        Integer index=1;
-        for(Account eachAcc:accList){
-            contactList.add(new Contact(LastName='Test Contact '+index,AccountId=eachAcc.Id));
-            index++;
+        for(integer i = 0 ; i < 10 ; i ++){
+            contactList.add(new Contact(LastName='Test Contact '+i,FirstName = 'test',AccountId=siteAcc1.Id));
         }  
         insert contactList;
-        
-        List<Opportunity> oppList=new List<Opportunity>();
-        index=1;
-        for(Account eachAcc:accList){
-            oppList.add(new Opportunity(CloseDate=System.today(),AccountId=eachAcc.Id,ForecastCategoryName='Pipeline',
-                                        Name='Test Opp '+index,StageName='Qualifying',Project_Name__c='Test',RecordTypeId= Schema.SObjectType.Opportunity.getRecordTypeInfosByDeveloperName().get('Aftermarket').getRecordTypeId()));
-            index++;
+       
+       List<Opportunity> oppList=new List<Opportunity>();
+        for(integer i = 0 ; i < 5; i ++){
+            oppList.add(new Opportunity(CloseDate=System.today(),AccountId=siteAcc1.Id,ForecastCategoryName='Pipeline',
+                                        Name='Test Opp '+i,StageName='Qualifying',Project_Name__c='Test',RecordTypeId= Schema.SObjectType.Opportunity.getRecordTypeInfosByDeveloperName().get('Aftermarket').getRecordTypeId()));
         } 
         insert oppList;
         
         List<Quote> quoteList=new List<Quote>();
-        index=1;
-        for(Opportunity eachOpp:oppList){
-            quoteList.add(new Quote(OpportunityId=eachOpp.Id,Account__c=eachOpp.AccountId,Name='Test Quote '+index));
-            index++;
+        for(integer i = 0 ; i < 5 ; i ++){
+            quoteList.add(new Quote(OpportunityId=oppList[i].Id,Account__c=oppList[i].AccountId,Name='Test Quote '+i));
         }
         insert quoteList;
         
         List<Order> orderList=new List<Order>();
-        index=1;
-        for(Opportunity eachOpp:oppList){
-            orderList.add(new Order(Legacy_Id__c='12345'+index,OpportunityId=eachOpp.Id,AccountId=eachOpp.AccountId,Name='Test Quote '+index,
+        for(integer i = 0 ; i < 5 ; i ++){
+            orderList.add(new Order(Legacy_Id__c='12345'+i,OpportunityId=oppList[i].Id,AccountId=oppList[i].AccountId,Name='Test order '+i,
                                     EffectiveDate=System.today(),Status='Draft'));
-            index++;
         }
         insert orderList;
         
         List<Order_Line__c> orderLineList=new List<Order_Line__c>();
-        //index=1;
-        for(Order eachOrder:orderList){
-            orderLineList.add(new Order_Line__c(Order__c=eachOrder.Id,Customer_Name__c=eachOrder.AccountId));
-            //index++;
+        for(integer i = 0 ; i < 2 ; i ++){
+            orderLineList.add(new Order_Line__c(Order__c=orderList[i].Id,Customer_Name__c=orderList[i].AccountId));
         }
         insert orderLineList;
         
@@ -114,28 +80,31 @@ public class UpdateGlobalParentLookupsBatchTest {
         list<Opportunity> oppList=[Select Id from Opportunity ];
         list<Order> orderList=[Select Id from Order ];
         list<Quote> quoteList=[Select Id from Quote ];
-        list<Opportunity> listOpp = new list<Opportunity>();
-        list<order> listOrd = new list<order>();
-        list<quote> listQt = new list<quote>();
+        list<sobject> finalUpdateList = new list<sobject>();
         for(Opportunity op : oppList){
             op.Global_Ultimate_Account__c = null;
-            listOpp.add(op);
+            finalUpdateList.add(op);
         }
          for(Order ord : orderList){
             ord.Global_Ultimate_Account__c = null;
-            listOrd.add(ord);
+            finalUpdateList.add(ord);
         }
          for(Quote qt : quoteList){
             qt.Global_Ultimate_Account__c = null;
-            listQt.add(qt);
+            finalUpdateList.add(qt);
         }
-        update listOpp;
-        update listOrd;
-        update listQt;
+        update finalUpdateList;
+        List<sObject> scope = new List<sObject>();
+        scope.addAll([select id,Global_Ultimate_Account__c, Account.Global_Ultimate_Parent__c,Account.Global_Ultimate_Parent__r.OwnerId,Account.Changed_Global_Parent_Old_Owner__c,AccountId  from Order where id in : finalUpdateList]);
+        scope.addAll([select id,Global_Ultimate_Account__c,Account.Global_Ultimate_Parent__c,Account.Global_Ultimate_Parent__r.OwnerId,Account.Changed_Global_Parent_Old_Owner__c,AccountId  from Opportunity where id in : finalUpdateList ]);
+        scope.addAll([select id,Global_Ultimate_Account__c,Account.Global_Ultimate_Parent__c,Account.Global_Ultimate_Parent__r.OwnerId,Account.Changed_Global_Parent_Old_Owner__c,AccountId from Quote  where id in : finalUpdateList  ]);
         Test.startTest();
         UpdateGlobalParentLookupsBatch batchObj = new UpdateGlobalParentLookupsBatch();
-        DataBase.executeBatch(batchObj);
+        batchObj.execute(null,scope);
+       DataBase.executeBatch(batchObj);
         Test.stopTest();
+        list<opportunity> oplist = [select id,Global_Ultimate_Account__c,Account.Global_Ultimate_Parent__c,Account.Global_Ultimate_Parent__r.OwnerId,Account.Changed_Global_Parent_Old_Owner__c,AccountId  from Opportunity where Global_Ultimate_Account__c = null ];
+        System.assertEquals(oplist.size(),0);
        
     }
 }

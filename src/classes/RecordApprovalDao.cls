@@ -106,8 +106,8 @@ public class RecordApprovalDao {
         if (sObjName.equalsIgnoreCase('Quote')) {
             Quote quoteObj = [SELECT Id, Name,RecordTypeId, (Select Id, Line_Status__c,Approval_From__c,RSM_Approver__c, 
                                                              PLM_Approver__c, Name from Quote_Items__r where  id in :lineItemIds And 
-                                							(RSM_Approver__c =: userID or PLM_Approver__c =: userID)) 
-                              								FROM Quote where id =: recordId];
+                                                            (RSM_Approver__c =: userID or PLM_Approver__c =: userID)) 
+                                                            FROM Quote where id =: recordId];
             return quoteObj.Quote_Items__r;
         } else {
             User u = getUserVPSVPDetails(New Set < id > { userID }).get(0);
@@ -137,7 +137,7 @@ public class RecordApprovalDao {
                              AND Line_Status__c in:CommonConstants.approvalPendingSet) FROM Quote where id =: recordId];
             return quoteObj.Quote_Items__r;
         } else {
- 			Loaner__c loanerObj = [SELECT Id, RSM_PLM_Finisar__c, RSM_PLM_Approval__c ,VP_PLD_Finisar__c, Name, 
+            Loaner__c loanerObj = [SELECT Id, RSM_PLM_Finisar__c, RSM_PLM_Approval__c ,VP_PLD_Finisar__c, Name, 
                                  (Select Id,Line_Number__c,Part_Number__c,Marketing_P_N__c,Loaner_Qty__c,
                                   Loaner_Price_100_999_column_price__c,Production_Price_ASP__c,Est_Annual_Qty__c,SOM__c,
                                   Loaner_Total__c,Line_Status__c, RSM__c, VP__c, SVP__c, Name,CreatedById from Loaner_Lines__r

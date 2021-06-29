@@ -20,8 +20,8 @@
     <decisions>
         <name>Check_if_Account_and_it_s_Global_Ultimate_parent_are_not_null</name>
         <label>Check if Account and it&apos;s Global Ultimate parent are not null</label>
-        <locationX>616</locationX>
-        <locationY>434</locationY>
+        <locationX>736</locationX>
+        <locationY>443</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>Account_and_it_s_Global_Ultimate_parent_are_not_null</name>
@@ -88,6 +88,28 @@
                 <targetReference>Check_if_Account_and_it_s_Global_Ultimate_parent_are_not_null</targetReference>
             </connector>
             <label>Owner is changed</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_if_order_comes_from_integration</name>
+        <label>Check if order comes from integration</label>
+        <locationX>446</locationX>
+        <locationY>268</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Order_not_from_integration</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Integration_Flag__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Check_whether_record_is_created_or_updated</targetReference>
+            </connector>
+            <label>Order not from integration</label>
         </rules>
     </decisions>
     <decisions>
@@ -173,8 +195,8 @@
     <decisions>
         <name>Check_whether_record_is_created_or_updated</name>
         <label>Check whether record is created or updated</label>
-        <locationX>494</locationX>
-        <locationY>311</locationY>
+        <locationX>626</locationX>
+        <locationY>312</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>Record_is_created</name>
@@ -318,10 +340,10 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <start>
-        <locationX>50</locationX>
-        <locationY>234</locationY>
+        <locationX>82</locationX>
+        <locationY>179</locationY>
         <connector>
-            <targetReference>Check_whether_record_is_created_or_updated</targetReference>
+            <targetReference>Check_if_order_comes_from_integration</targetReference>
         </connector>
         <object>Order</object>
         <recordTriggerType>CreateAndUpdate</recordTriggerType>

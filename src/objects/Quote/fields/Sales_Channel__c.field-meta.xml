@@ -5,7 +5,7 @@
     <externalId>false</externalId>
     <label>Sales Channel</label>
     <lookupFilter>
-        <active>false</active>
+        <active>true</active>
         <filterItems>
             <field>Account.Type</field>
             <operation>equals</operation>

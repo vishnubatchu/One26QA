@@ -5,8 +5,9 @@
     <description>only prospect accounts can be created</description>
     <errorConditionFormula>AND(
 ISNEW(),
-TEXT(Type)=&quot;PRospect&quot;,
-NOT( $Permission.By_Pass_Validation)
+TEXT(Type)=&quot;Prospect&quot;,
+NOT( $Permission.By_Pass_Validation),
+$Profile.Name &lt;&gt; &quot;System Administrator&quot;
 )</errorConditionFormula>
     <errorDisplayField>Type</errorDisplayField>
     <errorMessage>You can only create Customer Accounts</errorMessage>

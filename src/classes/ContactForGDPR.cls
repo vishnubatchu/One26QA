@@ -43,9 +43,13 @@ c.GDPR_Country__c = c.MailingCountry.toupperCase();
             }else {
                 contactCategory = accountType;
             }
+            system.debug('gdprCountryCatMap'+gdprCountryCatMap);
+            system.debug('c.Display_Mailing_Country__c'+c.Display_Mailing_Country__c);
             if(c.Display_Mailing_Country__c != null && contactCategory !=null ){
-                category = gdprCountryCatMap.get(c.Display_Mailing_Country__c.toupperCase()).get(contactCategory);
+                system.debug('In if');
+                category = gdprCountryCatMap.get(c.Display_Mailing_Country__c.toupperCase()).get(contactCategory.toupperCase());
             }
+            system.debug('category'+category);
             if(c.Party_Account__c == true && category == 'OPT IN') {
                 c.Marketing_Communication_Opt_Out__c = true;
             }else if(c.Party_Account__c == true && category == 'OPT OUT') {
@@ -210,9 +214,9 @@ return null;
                individualMap.get(c.Email).ConsentDate__c == null){
                    system.debug('in ');
                    Messaging.SingleEmailMessage mail = new Messaging.SingleEmailMessage();
-                   if(c.Marketing_Communication_Opt_Out__c == true){
+                   if(!c.Marketing_Communication_Opt_Out__c){
                        mail.setTemplateId(etforOptIn.id);
-                   }else if(c.Marketing_Communication_Opt_Out__c == false){
+                   }else if(c.Marketing_Communication_Opt_Out__c){
                        mail.setTemplateId(etforOptOut.id);
                    }
                    mail.setToAddresses(New List <String> {contactCreatorEmail});

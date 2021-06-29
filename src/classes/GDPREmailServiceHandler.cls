@@ -65,9 +65,9 @@ global class GDPREmailServiceHandler implements Messaging.InboundEmailHandler {
             Contact conObj = New Contact();
             conObj.id = contactId;
             if(email.subject.containsIgnoreCase('Opt-In')){
-                conObj.Marketing_Communication_Opt_Out__c = false;
+                conObj.Marketing_Communication_Opt_Out__c = true;
             }else if(email.subject.containsIgnoreCase('Opt-Out')){
-                 conObj.Marketing_Communication_Opt_Out__c = true;
+                 conObj.Marketing_Communication_Opt_Out__c = false;
             }
             
             contactList.add(conObj);

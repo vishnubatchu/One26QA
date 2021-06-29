@@ -1585,6 +1585,16 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Account.Global_Ultimate_Account_Change_Date__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Account.Global_Ultimate_Parent_Owner_Change_Date__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Account.Global_Ultimate_Parent__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -1827,6 +1837,21 @@
         <editable>false</editable>
         <field>Account.Rating</field>
         <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Account.Region_Country__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Account.Region_State__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Account.Region__c</field>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
@@ -3760,6 +3785,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Costing__c.Cost_Completion_Date__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Costing__c.Costing_Number__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -3851,6 +3881,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Costing__c.Salesforce_Legacy_Id__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Costing__c.Special_Requirements__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -7035,6 +7070,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Order.Batch_Flag__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Order.BillToContactId</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -7162,6 +7202,11 @@
         <editable>false</editable>
         <field>Order.Header_Hold_Name__c</field>
         <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Order.Integration_Flag__c</field>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
@@ -7497,6 +7542,11 @@
         <editable>false</editable>
         <field>Order_Line__c.Backlog_Quantity__c</field>
         <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Order_Line__c.Batch_Flag__c</field>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
@@ -7891,6 +7941,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Order_Line__c.II_VI_DE_Long_Description__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Order_Line__c.Integration_Flag__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>

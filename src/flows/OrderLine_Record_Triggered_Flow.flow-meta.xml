@@ -91,6 +91,28 @@
         </rules>
     </decisions>
     <decisions>
+        <name>Check_if_orderline_comes_from_integration</name>
+        <label>Check if orderline comes from integration</label>
+        <locationX>396</locationX>
+        <locationY>298</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>OrderLine_not_from_integration</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Integration_Flag__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Check_whether_record_is_created_or_updated</targetReference>
+            </connector>
+            <label>OrderLine not from integration</label>
+        </rules>
+    </decisions>
+    <decisions>
         <name>Check_if_queried_OrderLineShare_list_is_empty</name>
         <label>Check if queried OrderLineShare list is empty</label>
         <locationX>1535</locationX>
@@ -173,8 +195,8 @@
     <decisions>
         <name>Check_whether_record_is_created_or_updated</name>
         <label>Check whether record is created or updated</label>
-        <locationX>477</locationX>
-        <locationY>389</locationY>
+        <locationX>515</locationX>
+        <locationY>410</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>Record_is_created</name>
@@ -321,7 +343,7 @@
         <locationX>50</locationX>
         <locationY>338</locationY>
         <connector>
-            <targetReference>Check_whether_record_is_created_or_updated</targetReference>
+            <targetReference>Check_if_orderline_comes_from_integration</targetReference>
         </connector>
         <object>Order_Line__c</object>
         <recordTriggerType>CreateAndUpdate</recordTriggerType>

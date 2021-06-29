@@ -3,12 +3,7 @@
     <fullName>Full_Name_Required</fullName>
     <active>true</active>
     <description>First Name and Last Name required</description>
-    <errorConditionFormula>OR
-(ISBLANK( LastName  ),
-
-ISBLANK(FirstName ),
- $Permission.By_Pass_Validation =False
-)</errorConditionFormula>
+    <errorConditionFormula>AND(OR(ISBLANK(LastName),ISBLANK(FirstName)),$Permission.By_Pass_Validation =False,$Profile.Name &lt;&gt; &quot;System Administrator&quot;)</errorConditionFormula>
     <errorDisplayField>FirstName</errorDisplayField>
-    <errorMessage>Both first name and last night should be populated</errorMessage>
+    <errorMessage>Both first name and last name should be populated</errorMessage>
 </ValidationRule>

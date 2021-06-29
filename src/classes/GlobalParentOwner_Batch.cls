@@ -14,9 +14,7 @@ public class GlobalParentOwner_Batch implements Database.Batchable<sObject>,Data
     //This method queries all Accounts for which Global Parent Owner are changed i.e.,Global_Parent_Previous_Owner__c!=null
     public Database.QueryLocator start(Database.BatchableContext bc) {
         // collect the batches of records or objects to be passed to execute
-        System.debug('start(Database.BatchableContext) - start');
         String accountQueryStr='Select Id,Global_Parent_Previous_Owner__c,Global_Ultimate_Parent__r.OwnerId from Account where Global_Parent_Previous_Owner__c!=null';
-        System.debug('start(Database.BatchableContext) - end');
         return Database.getQueryLocator(accountQueryStr);
     }
     
@@ -24,13 +22,10 @@ public class GlobalParentOwner_Batch implements Database.Batchable<sObject>,Data
      * Opportunities, Quotes, Orders, Order Lines and Cases. Also deletes share records for the previous owner of the Global Parent.
      */
     public void execute(Database.BatchableContext bc, List<Account> accountList){
-        System.debug('execute(Database.BatchableContext,List<Account>) - start');
-        System.debug('accountList==> '+accountList.size());
         // process each batch of records
         if(accountList!=null && !accountList.isEmpty()){
             accountListToUpdate.addAll(accountList);
             List<GlobalParentOwnerBatch_Helper.CustomError> errorList=GlobalParentOwnerBatch_Helper.deleteAndInsertShareRecords(accountList,true);
-            //system.debug(errorList);
             if(errorList!=null && !errorList.isEmpty()){
                 finalErrorList.addAll(errorList);
                 for(GlobalParentOwnerBatch_Helper.CustomError eachError:errorList){
@@ -39,7 +34,6 @@ public class GlobalParentOwner_Batch implements Database.Batchable<sObject>,Data
                 }
             }
         }
-        System.debug('execute(Database.BatchableContext,List<Account>) - end');
     }
     
     /*This method sends failed record details to configured emailId if any and 
@@ -54,7 +48,15 @@ public class GlobalParentOwner_Batch implements Database.Batchable<sObject>,Data
             for(Account eachAcc:accountListToUpdate){
                 eachAcc.Global_Parent_Previous_Owner__c=null;
             }
-            update accountListToUpdate;
+            List<List<Sobject>> accTobeUpdtdInChunks=new List<List<Sobject>>();
+            if(accountListToUpdate.size()>10000){
+                GlobalParentOwnerBatch_Helper.doSubList(accountListToUpdate, 10000, accTobeUpdtdInChunks);
+            }else{
+                accTobeUpdtdInChunks.add(accountListToUpdate);
+            }
+            for(List<Sobject> eachChunk:accTobeUpdtdInChunks){
+            	update eachChunk;
+            }
         }
     }
     

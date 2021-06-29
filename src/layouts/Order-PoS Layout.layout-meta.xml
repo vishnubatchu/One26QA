@@ -74,6 +74,10 @@
                 <behavior>Edit</behavior>
                 <field>Order_Amount__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>OwnerId</field>
+            </layoutItems>
         </layoutColumns>
         <style>TwoColumnsTopToBottom</style>
     </layoutSections>
@@ -251,7 +255,6 @@
     </quickActionList>
     <relatedLists>
         <excludeButtons>MassChangeOwner</excludeButtons>
-        <excludeButtons>New</excludeButtons>
         <fields>NAME</fields>
         <fields>Part_Number__c</fields>
         <fields>Marketing_Part__c</fields>
