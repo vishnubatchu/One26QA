@@ -6,7 +6,7 @@
 OR(
 ISPICKVAL(Status,&apos;Draft&apos;),
 ISPICKVAL(Status,&apos;&apos;)
-)</errorConditionFormula>
+)  &amp;&amp;  $Label.OneTimeBatchDeactivation  = &apos;False&apos;</errorConditionFormula>
     <errorDisplayField>Pricing_Effective_Start_Date__c</errorDisplayField>
     <errorMessage>Pricing start date can not be before then today!</errorMessage>
 </ValidationRule>

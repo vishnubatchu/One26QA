@@ -588,4 +588,11 @@ Fremont, CA 94538
         <shortDescription>starthere_note</shortDescription>
         <value>NOTE</value>
     </labels>
+    <labels>
+        <fullName>OneTimeBatchDeactivation</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OneTimeBatchDeactivation</shortDescription>
+        <value>False</value>
+    </labels>
 </CustomLabels>

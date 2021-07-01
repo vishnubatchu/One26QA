@@ -256,6 +256,8 @@ public with sharing class WTC_Test {
         c.FirstName = 'test';
         c.LastName = 'test';
         c.Email = 'test@test.com';
+        c.MailingCountry='United States';
+        c.Display_Mailing_Country__c='United States';
         insert c;
 
         Case cc = new Case();

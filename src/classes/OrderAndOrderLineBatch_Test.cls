@@ -31,8 +31,8 @@ private class OrderAndOrderLineBatch_Test {
                                       Email='standarduser1@testorg.com',EmailEncodingKey='UTF-8',  LanguageLocaleKey='en_US', 
                                       LocaleSidKey='en_US',TimeZoneSidKey='America/Los_Angeles', UserName='testuser1@finisar.com'));
             insert testUserList;
-            PermissionSet ps = [SELECT Id FROM PermissionSet WHERE Name = 'Change_Account_Ownership'];
-            insert new PermissionSetAssignment(AssigneeId = testUserList[2].id, PermissionSetId = ps.Id);
+            //PermissionSet ps = [SELECT Id FROM PermissionSet WHERE Name = 'Change_Account_Ownership'];
+            //insert new PermissionSetAssignment(AssigneeId = testUserList[2].id, PermissionSetId = ps.Id);
         }
         List<Account> globalParentAccList=new List<Account>();  
         globalParentAccList.add(new Account(Name='Global Parent Test Acc',Display_Shipping_Country__c ='United States',   Display_Billing_Country__c = 'United States',ShippingCity = 'New York', ShippingCountry ='US',RecordTypeId=Schema.SObjectType.Account.getRecordTypeInfosByName().get('Global Parent').getRecordTypeId(),OwnerId=testUserList[0].Id));
@@ -41,7 +41,7 @@ private class OrderAndOrderLineBatch_Test {
         List<Account> accList=new List<Account>(); 
         for(Integer i=1;i<=6;i++){
             accList.add(new Account(Name='Test Acc '+i,Display_Shipping_Country__c ='United States',   Display_Billing_Country__c = 'United States',RecordTypeId=Schema.SObjectType.Account.getRecordTypeInfosByName().get('Customer Account').getRecordTypeId(),ShippingCity = 'New York', ShippingCountry ='US',
-                                    Global_Ultimate_Parent__c=globalParentAccList[0].Id,Status__c='Active',Type='Customer'));
+                                    ParentId=globalParentAccList[0].Id,Global_Ultimate_Parent__c=globalParentAccList[0].Id,Status__c='Active',Type='Customer'));
         }  
         insert accList;
         Integer index=1;

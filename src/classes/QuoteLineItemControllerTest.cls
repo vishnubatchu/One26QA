@@ -92,7 +92,7 @@ public class QuoteLineItemControllerTest {
         insert acc;
         
         Account acc1 = new Account(name='Account test2',Display_Shipping_Country__c ='United States',   Display_Billing_Country__c = 'United States', parentId=globalParentAcc.id,ShippingCity = 'New York', ShippingCountry ='US',
-                                  billingcity='Illionis', billingcountry='USA',Status__c='Active',Type='Distributor',RecordTypeId = Schema.SObjectType.Account.getRecordTypeInfosByName().get('Top Level Account').getRecordTypeId());
+                                  billingcity='Illionis', billingcountry='USA',Status__c='Active',Type='Partner',RecordTypeId = Schema.SObjectType.Account.getRecordTypeInfosByName().get('Top Level Account').getRecordTypeId());
         
         insert acc1;
         system.debug('acc1=='+acc1);

@@ -3,10 +3,6 @@
     <fullName>Aftermarket</fullName>
     <isActive>true</isActive>
     <values>
-        <fullName>Closed Lost</fullName>
-        <default>false</default>
-    </values>
-    <values>
         <fullName>Closed Won</fullName>
         <default>false</default>
     </values>

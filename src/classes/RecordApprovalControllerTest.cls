@@ -116,10 +116,10 @@ private class RecordApprovalControllerTest{
         Test.startTest();
         List<Contact> conlist = new List<Contact>(); 
         Account acc = [SELECT Id from Account where name = 'Account122' Limit 1];
-        Contact c = new Contact(FirstName = 'Test',LastName = 'Contact',AccountId = acc.Id);
-        Contact c1 = new Contact(FirstName = 'Test1',LastName = 'Contact',AccountId = acc.Id);
-        Contact c2 = new Contact(FirstName = 'Test2',LastName = 'Contact',AccountId = acc.Id);
-        Contact c3 = new Contact(FirstName = 'Test3',LastName = 'Contact',AccountId = acc.Id);
+        Contact c = new Contact(FirstName = 'Test',LastName = 'Contact',AccountId = acc.Id,MailingCountry='United States',Display_Mailing_Country__c='United States');
+        Contact c1 = new Contact(FirstName = 'Test1',LastName = 'Contact',AccountId = acc.Id,MailingCountry='United States',Display_Mailing_Country__c='United States');
+        Contact c2 = new Contact(FirstName = 'Test2',LastName = 'Contact',AccountId = acc.Id,MailingCountry='United States',Display_Mailing_Country__c='United States');
+        Contact c3 = new Contact(FirstName = 'Test3',LastName = 'Contact',AccountId = acc.Id,MailingCountry='United States',Display_Mailing_Country__c='United States');
         conlist.add(c); 
         conlist.add(c1);
         conlist.add(c2);

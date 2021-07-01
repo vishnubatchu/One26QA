@@ -61,6 +61,10 @@
                 <behavior>Edit</behavior>
                 <field>English_Rich_Text_Description__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>OrderProduct__c</field>
+            </layoutItems>
         </layoutColumns>
         <style>TwoColumnsTopToBottom</style>
     </layoutSections>

@@ -697,6 +697,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Account.UltimateParent__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Account.VAT_Number__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -2404,6 +2409,11 @@
         <editable>true</editable>
         <field>Costing_Quote__c.Qty_Range_6__c</field>
         <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Costing_Quote__c.Quantity__c</field>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>

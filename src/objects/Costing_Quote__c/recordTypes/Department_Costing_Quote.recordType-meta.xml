@@ -74,6 +74,10 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Nick Esola</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Pete Brown</fullName>
             <default>false</default>
         </values>

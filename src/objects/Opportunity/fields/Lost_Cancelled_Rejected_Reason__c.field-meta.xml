@@ -183,6 +183,23 @@
             </value>
         </valueSetDefinition>
         <valueSettings>
+            <controllingFieldValue>Cust Engineering Qualifying</controllingFieldValue>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <controllingFieldValue>Quoting</controllingFieldValue>
+            <controllingFieldValue>Validating</controllingFieldValue>
+            <controllingFieldValue>Closed Won</controllingFieldValue>
+            <valueName>Project Cancelled by Customer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cust Engineering Qualifying</controllingFieldValue>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <controllingFieldValue>Quoting</controllingFieldValue>
+            <controllingFieldValue>Final Negotiating</controllingFieldValue>
+            <controllingFieldValue>Initiating Purchase</controllingFieldValue>
+            <controllingFieldValue>Discovery</controllingFieldValue>
+            <valueName>Customer demand changed</valueName>
+        </valueSettings>
+        <valueSettings>
             <controllingFieldValue>Closed Lost</controllingFieldValue>
             <valueName>Price Request Only</valueName>
         </valueSettings>
@@ -192,6 +209,7 @@
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <controllingFieldValue>Closed Won</controllingFieldValue>
             <valueName>Uncompetitive Pricing</valueName>
         </valueSettings>
         <valueSettings>
@@ -212,10 +230,6 @@
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Closed Lost</controllingFieldValue>
-            <valueName>Project Cancelled by Customer</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Closed Lost</controllingFieldValue>
             <valueName>Project lost by customer</valueName>
         </valueSettings>
         <valueSettings>
@@ -225,10 +239,6 @@
         <valueSettings>
             <controllingFieldValue>Closed Lost</controllingFieldValue>
             <valueName>No evidence of active support of customer ??</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Closed Lost</controllingFieldValue>
-            <valueName>Customer demand changed</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Closed Lost</controllingFieldValue>

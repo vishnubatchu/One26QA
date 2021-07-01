@@ -7,7 +7,7 @@ private class PreventSerialNoDeletionTest {
        Account acc = new Account(name='Account',Display_Shipping_Country__c ='United States',   Display_Billing_Country__c = 'United States', parentId=globalParentAcc.id,ShippingCity = 'New York', ShippingCountry ='US',
                                   billingcity='New York', billingcountry='USA',Legacy_Id__c='1234',Status__c='Active',Type='Partner',RecordTypeId = Schema.SObjectType.Account.getRecordTypeInfosByName().get('Top Level Account').getRecordTypeId());
         insert acc;
-         Contact conObj = New Contact(lastname='TEst Contact',AccountId=acc.Id);
+         Contact conObj = New Contact(lastname='TEst Contact',AccountId=acc.Id,MailingCountry='United States',Display_Mailing_Country__c='United States');
         Insert conObj;
         Profile p = [SELECT Id FROM Profile WHERE Name = 'Sales Admin Profile' LIMIT 1];
         String roleId =[select Id,name from UserRole where Name='RSM of AMERICAS - WESTERN' LIMIT 1].Id;

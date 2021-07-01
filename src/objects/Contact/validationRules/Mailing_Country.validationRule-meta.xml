@@ -3,8 +3,8 @@
     <fullName>Mailing_Country</fullName>
     <active>true</active>
     <errorConditionFormula>AND(
+
 TEXT( Display_Mailing_Country__c )=&quot;&quot;,
-NOT($Permission.By_Pass_Validation),
 
 
 OR(

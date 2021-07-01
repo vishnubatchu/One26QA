@@ -4,7 +4,7 @@
     <active>true</active>
     <description>User cannot create a quote without the Opportunity field actually being populated, if the legacy company field does not equal to Finisar</description>
     <errorConditionFormula>AND(TEXT( $User.Legacy_Company__c )!= &quot;Finisar&quot;, ISBLANK( OpportunityId),
-NOT( $Permission.By_Pass_Validation )
+NOT( $Permission.By_Pass_Validation ),$Profile.Name &lt;&gt; &quot;System Administrator&quot;
 )</errorConditionFormula>
     <errorMessage>You must attach this quote to a related Opportunity</errorMessage>
 </ValidationRule>

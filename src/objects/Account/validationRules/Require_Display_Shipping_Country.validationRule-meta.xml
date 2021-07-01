@@ -7,10 +7,12 @@
 AND(
 TEXT(Type)=&quot;Prospect&quot;,
 TEXT(Display_Shipping_Country__c)=&quot;&quot;,
-NOT($Permission.By_Pass_Validation)
+NOT($Permission.By_Pass_Validation),
+$Profile.Name &lt;&gt; &quot;System Administrator&quot;
 ),
 AND(
-TEXT(Display_Shipping_Country__c)=&quot;&quot;, $Permission.By_Pass_Validation = false
+TEXT(Display_Shipping_Country__c)=&quot;&quot;, $Permission.By_Pass_Validation = false,
+$Profile.Name &lt;&gt; &quot;System Administrator&quot;
 ,OR(
  !ISBLANK(ShippingCity),
  !ISBLANK(ShippingState),

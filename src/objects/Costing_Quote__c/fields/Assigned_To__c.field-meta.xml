@@ -133,6 +133,11 @@
                 <default>false</default>
                 <label>Kim Braden</label>
             </value>
+            <value>
+                <fullName>Nick Esola</fullName>
+                <default>false</default>
+                <label>Nick Esola</label>
+            </value>
         </valueSetDefinition>
         <valueSettings>
             <controllingFieldValue>DT</controllingFieldValue>

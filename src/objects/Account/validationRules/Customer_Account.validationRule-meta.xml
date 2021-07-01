@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Customer_Account</fullName>
-    <active>false</active>
+    <active>true</active>
     <description>If Account Record Type = Customer Account AND Source System != “Oracle-EBS”
 
 Parent Account lookup cannot be null
 
 The Record Type of the Account in the Parent Account lookup must equal “Global Parent”</description>
     <errorConditionFormula>AND(
-AND(  RecordType.DeveloperName =&apos;Account&apos;, NOT(ISPICKVAL(Source_System__c ,&apos;Oracle-EBS&apos;))
+AND(  RecordType.DeveloperName =&apos;Account&apos;,
+NOT(ISPICKVAL(Source_System__c ,&apos;Oracle-EBS&apos;))
 ),
 OR(ISBLANK(ParentId), AND(NOT(ISBLANK(ParentId)),NOT( Parent.RecordType.DeveloperName =&apos;Global_Parent&apos;))
 )

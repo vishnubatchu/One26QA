@@ -3,9 +3,9 @@ public class QuoteNewButtonControllerTest {
     @isTest
     static void createQuote(){ 
          PageReference pageRef = Page.QuoteNewButtonPage;
-        Account globalParentAcc=new Account(Name='Global Parent Test Acc',Display_Shipping_Country__c ='United States',   Display_Billing_Country__c = 'United States',RecordTypeId=Schema.SObjectType.Account.getRecordTypeInfosByDeveloperName().get('Global_Parent').getRecordTypeId()	);
+        Account globalParentAcc=new Account(Name='Global Parent Test Acc',Display_Shipping_Country__c ='United States',   Display_Billing_Country__c = 'United States',ShippingCity = 'New York', ShippingCountry ='US',RecordTypeId=Schema.SObjectType.Account.getRecordTypeInfosByDeveloperName().get('Global_Parent').getRecordTypeId()	);
         insert globalParentAcc;
-        Account acc = new Account(name='Account ', Display_Shipping_Country__c ='United States',   Display_Billing_Country__c = 'United States',
+        Account acc = new Account(name='Account ', Display_Shipping_Country__c ='United States',   Display_Billing_Country__c = 'United States',ShippingCity = 'New York', ShippingCountry ='US',
                                   billingcity='New York', ParentId =globalParentAcc.id, billingcountry='USA',Status__c='Active',Type='Customer',RecordTypeId = Schema.SObjectType.Account.getRecordTypeInfosByName().get('Top Level Account').getRecordTypeId());
         
         insert acc;
@@ -16,7 +16,7 @@ public class QuoteNewButtonControllerTest {
              insert u;
         }
         Opportunity opp = new Opportunity(Name='Test',AccountId=acc.id,Project_Name__c='Test',StageName='Open - Discussion',Type='New',CloseDate=System.today(),
-                                        Next_12_Months_Revenue__c=10, Market_Segment__c='Consumer',Region__c='JAPAN',RSM__c=u.id,NextStep='test',Next_Action_Due_Date__c=System.today()+2);
+                                        Next_12_Months_Revenue__c=10,Region__c='JAPAN',RSM__c=u.id,NextStep='test',Next_Action_Due_Date__c=System.today()+2);
         insert opp;
         
         Quote qrec = new Quote(Account__c=acc.id);

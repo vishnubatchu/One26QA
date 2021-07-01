@@ -1,19 +1,18 @@
 public class createIndividulforOldRecordsBatch implements Database.Batchable <sObject>,Database.Stateful {
     public String query;
     public Boolean stopBatch = false;
-    public string contactId ;
     public createIndividulforOldRecordsBatch(String nxtQuery, Boolean runBatch){
         if(nxtQuery != null){
             query = nxtQuery;
             stopBatch = runBatch;
         } else {
-            contactId = '0032f00000W8vV5AAJ';
-            //query = 'SELECT Id, Email, IndividualId,Display_ISO_Country__c, FristName, LastName FROM Contact WHERE IndividualId = null';
+            query = 'SELECT Id, Email, IndividualId,Display_Mailing_Country__c, Name FROM Contact WHERE IndividualId = null';
            //  query = 'SELECT Id, Email, IndividualId FROM Contact WHERE id = :contactId';
         }
     }
     public Database.QueryLocator  start(Database.BatchableContext BC)
     {
+        system.debug('query'+query);
         return Database.getQueryLocator(query);
     }
     public void execute(Database.BatchableContext BC,List<sObject> scope)

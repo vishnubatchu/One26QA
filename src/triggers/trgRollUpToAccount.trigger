@@ -1,5 +1,5 @@
 trigger trgRollUpToAccount on Opportunity (after insert, after update, after delete) {
-    
+    if(Label.OneTimeBatchDeactivation  == 'False'){
     Set<String> ids = new Set<String>();
     if(trigger.IsInsert)
         for(Opportunity o : trigger.New){
@@ -14,7 +14,6 @@ trigger trgRollUpToAccount on Opportunity (after insert, after update, after del
             ids.add(o.AccountId);
         }
     }      
-    
     if(trigger.IsDelete)
         for(Opportunity o : system.trigger.old){
             ids.add(o.AccountId);
@@ -43,7 +42,6 @@ trigger trgRollUpToAccount on Opportunity (after insert, after update, after del
                 }
             }
         } 
-        
         for(string s : myMap1.keyset()){
             if(myMap2.containsKey(myMap1.get(s))){
                 set<string> str = myMap2.get(myMap1.get(s));
@@ -105,7 +103,6 @@ trigger trgRollUpToAccount on Opportunity (after insert, after update, after del
         else{
             finalmap.put(o.id,'');
         }
-        
     }
     list<Account> accToUpdate = new list<Account>();
     for(Account o : Result){
@@ -114,7 +111,6 @@ trigger trgRollUpToAccount on Opportunity (after insert, after update, after del
             accToUpdate.add(o);
         }
     }
-    
     if(accToUpdate.size() > 0)  Update accToUpdate;
-    
+    }  
 }

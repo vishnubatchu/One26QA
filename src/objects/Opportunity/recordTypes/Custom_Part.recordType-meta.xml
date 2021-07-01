@@ -2579,6 +2579,25 @@
         </values>
     </picklistValues>
     <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Existing Business - Follow-on</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Existing Business - Replacement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Business - Existing Customer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Business - New Customer</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
         <picklist>VAR_SI__c</picklist>
         <values>
             <fullName>9 to 5 computer</fullName>

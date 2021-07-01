@@ -29,7 +29,7 @@ public class AccessTriggersTest {
             
             insert acc1;
             
-            Contact cntct=new Contact(LastName='Test Contact',Email='test@gmail.com');
+            Contact cntct=new Contact(FirstName='Test',LastName='Contact',Email='test@gmail.com',MailingCountry='United States',Display_Mailing_Country__c='United States');
             insert cntct;
             
             Loaner__c loaner = new Loaner__c(RecordTypeId = Schema.SObjectType.Loaner__c.getRecordTypeInfosByName().get('Loaner Request').getRecordTypeId(), Company_Name_Ship_To__c = acc.Id,Company_Name_End_Cust__c = acc.Id,Project_Engineer__c='Test',Project_Name__c = 'Test',Est_Production_Date__c = Date.Today(),Address_ship_to__c = acc1.Id,

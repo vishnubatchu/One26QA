@@ -5,7 +5,7 @@
     <errorConditionFormula>AND(
 TEXT(Display_ISO_Country__c)=&quot;&quot;,
 NOT($Permission.By_Pass_Validation),
-
+$Profile.Name &lt;&gt; &quot;System Administrator&quot;,
 OR(
 !ISBLANK(City),
 !ISBLANK(State),

@@ -34,17 +34,14 @@ public class UpdateGlobalParentLookupsBatchTest {
       map<string,Account> accInsertMap = new map<string,Account>();
    
         Account siteAcc1=new Account(Name='Site Test Acc1',Display_Shipping_Country__c ='United States', Display_Billing_Country__c = 'United States',RecordTypeId= Schema.SObjectType.Account.getRecordTypeInfosByDeveloperName().get('Account').getRecordTypeId(),
-                                     Global_Ultimate_Parent__c=globalParentAcc.Id,Site_Use_Code__c='SHIP_TO',Status__c='Active',
+                                     Global_Ultimate_Parent__c=globalParentAcc.Id,ParentId = globalParentAcc.Id,Site_Use_Code__c='SHIP_TO',Status__c='Active',
                                      Site_Use_Status__c='Active',shippingcity='New York',shippingcountry='USA',Type='Customer',
                                      Org_ID__c= '2',OwnerId=testUserList[0].Id );
       
          insert siteAcc1;
- 
-
-        
         List<Contact> contactList=new List<Contact>();
         for(integer i = 0 ; i < 10 ; i ++){
-            contactList.add(new Contact(LastName='Test Contact '+i,FirstName = 'test',AccountId=siteAcc1.Id));
+            contactList.add(new Contact(LastName='Test Contact '+i,FirstName = 'test',AccountId=siteAcc1.Id,Display_Mailing_Country__c='United States',MailingCountry='United States'));
         }  
         insert contactList;
        

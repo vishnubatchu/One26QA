@@ -15,14 +15,14 @@ public class CancelRMACaseTest{
         
         insert acc1;
         Account shiptocustomer = new Account(name='AccountCustomer1 ',EC__c = 'test',Display_Shipping_Country__c ='United States',  Display_Billing_Country__c = 'United States',
-                                   ParentId=acc1.Id,Status__c='Active',ShippingCity = 'New York', ShippingCountry ='US',Type='Customer',RecordTypeId = Schema.SObjectType.Account.getRecordTypeInfosByName().get('Customer Account').getRecordTypeId());
+                                   Source_System__c ='Oracle-EBS',ParentId=acc1.Id,Status__c='Active',ShippingCity = 'New York', ShippingCountry ='US',Type='Customer',RecordTypeId = Schema.SObjectType.Account.getRecordTypeInfosByName().get('Customer Account').getRecordTypeId());
         insert shiptocustomer;
          Account siteacc = new Account(name='AccountSite ',Display_Shipping_Country__c ='United States',  Display_Billing_Country__c = 'United States',
                                       ShippingCity = 'New York',Site_Use_Code__c='SHIP_TO',Site_Use_Status__c='Active',parentId=shiptocustomer.id, shippingcountry='US',Status__c='Active',Type='Site',RecordTypeId = Schema.SObjectType.Account.getRecordTypeInfosByName().get('Site').getRecordTypeId());
         insert siteacc;
         Profile p = [SELECT Id FROM Profile WHERE Name = 'System Administrator' LIMIT 1];
         String roleId =[select Id from UserRole where Name='RSM of AMERICAS - WESTERN' LIMIT 1].Id;
-        User u = createTestUser(roleId,p.Id,'Test','Case');
+        User u = createTestUser(roleId,p.Id,'Mark','Robinson');
         System.runAs ( new User(Id = UserInfo.getUserId()) ) {
              insert u;
         }
@@ -66,7 +66,7 @@ public class CancelRMACaseTest{
         insert acc;
         
  		Account shiptocustomer = new Account(name='AccountCustomer1 ', Display_Billing_Country__c = 'United States',Display_Shipping_Country__c ='United States', 
-                                   ParentId=acc.Id,ShippingCity = 'New York', ShippingCountry ='US',Status__c='Active',Type='Customer',RecordTypeId = Schema.SObjectType.Account.getRecordTypeInfosByName().get('Customer Account').getRecordTypeId());
+                                   Source_System__c ='Oracle-EBS',ParentId=acc.Id,ShippingCity = 'New York', ShippingCountry ='US',Status__c='Active',Type='Customer',RecordTypeId = Schema.SObjectType.Account.getRecordTypeInfosByName().get('Customer Account').getRecordTypeId());
         insert shiptocustomer;
          Account siteacc = new Account(name='AccountSite ',EC__c = 'test',Display_Shipping_Country__c ='United States', Display_Billing_Country__c = 'United States',
                                       shippingcity='New York',Site_Use_Code__c='SHIP_TO',Site_Use_Status__c='Active',parentId=shiptocustomer.id, shippingcountry='USA',Status__c='Active',Type='Site',RecordTypeId = Schema.SObjectType.Account.getRecordTypeInfosByName().get('Site').getRecordTypeId());
@@ -74,7 +74,7 @@ public class CancelRMACaseTest{
    
         Profile p = [SELECT Id FROM Profile WHERE Name = 'System Administrator' LIMIT 1];
         String roleId =[select Id from UserRole where Name='RSM of AMERICAS - WESTERN' LIMIT 1].Id;
-        User u = createTestUser(roleId,p.Id,'Test','Case');
+        User u = createTestUser(roleId,p.Id,'Mark','Robinson');
         System.runAs ( new User(Id = UserInfo.getUserId()) ) {
              insert u;
         }

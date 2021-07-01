@@ -16,7 +16,7 @@ private class PartnerAccountGroupCreationBatchTest {
         insert acList;
         List<Contact> conList = new List<Contact>();
         for(Account acc :acList){
-            contact con = new contact(LastName = acc.Name, accountId= acc.Id, Email ='testcon@test.com');
+            contact con = new contact(LastName = acc.Name, accountId= acc.Id, Email ='testcon@test.com',MailingCountry='United States',Display_Mailing_Country__c='United States');
             conList.add(con);
         }
         insert conList;
