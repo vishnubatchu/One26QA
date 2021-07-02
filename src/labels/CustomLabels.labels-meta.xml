@@ -380,6 +380,13 @@
         <value>100</value>
     </labels>
     <labels>
+        <fullName>OneTimeBatchDeactivation</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OneTimeBatchDeactivation</shortDescription>
+        <value>False</value>
+    </labels>
+    <labels>
         <fullName>PASSWORD</fullName>
         <categories>SAP</categories>
         <language>en_US</language>
@@ -587,12 +594,5 @@ Fremont, CA 94538
         <protected>false</protected>
         <shortDescription>starthere_note</shortDescription>
         <value>NOTE</value>
-    </labels>
-    <labels>
-        <fullName>OneTimeBatchDeactivation</fullName>
-        <language>en_US</language>
-        <protected>false</protected>
-        <shortDescription>OneTimeBatchDeactivation</shortDescription>
-        <value>False</value>
     </labels>
 </CustomLabels>

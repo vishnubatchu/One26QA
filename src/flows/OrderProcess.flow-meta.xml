@@ -41,7 +41,7 @@
 &quot; &quot;) </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_2_myRule_1_A1_5982401892</name>
+        <name>formula_2_myRule_1_A1_0943564361</name>
         <dataType>String</dataType>
         <expression>CASE(TEXT({!myVariable_current.Owner:User.Legacy_Profile_Name__c})  , 
 &quot;Standard-Singapore&quot;, &quot;3200&quot;, 
@@ -54,14 +54,14 @@
         <processMetadataValues>
             <name>originalFormula</name>
             <value>
-                <stringValue> AND(ISNEW(), NOT(ISBLANK([Order].AccountId ))  ) ||  AND( NOT(ISBLANK([Order].AccountId )), ISCHANGED([Order].AccountId ) )</stringValue>
+                <stringValue> AND(ISNEW(), NOT(ISBLANK([Order].AccountId ))  ) ||  AND( NOT(ISBLANK([Order].AccountId )), ISCHANGED([Order].AccountId ) ) &amp;&amp; [Order].Integration_Flag__c </stringValue>
             </value>
         </processMetadataValues>
         <name>formula_myRule_1</name>
         <dataType>Boolean</dataType>
-        <expression> AND(ISNEW(), NOT(ISBLANK({!myVariable_current.AccountId} ))  ) ||  AND( NOT(ISBLANK({!myVariable_current.AccountId} )), ISCHANGED({!myVariable_current.AccountId} ) )</expression>
+        <expression> AND(ISNEW(), NOT(ISBLANK({!myVariable_current.AccountId} ))  ) ||  AND( NOT(ISBLANK({!myVariable_current.AccountId} )), ISCHANGED({!myVariable_current.AccountId} ) ) &amp;&amp; {!myVariable_current.Integration_Flag__c}</expression>
     </formulas>
-    <interviewLabel>OrderProcess-3_InterviewLabel</interviewLabel>
+    <interviewLabel>OrderProcess-4_InterviewLabel</interviewLabel>
     <label>OrderProcess</label>
     <processMetadataValues>
         <name>ObjectType</name>
@@ -272,7 +272,7 @@
             </processMetadataValues>
             <field>SAP_Sales_Org_ID__c</field>
             <value>
-                <elementReference>formula_2_myRule_1_A1_5982401892</elementReference>
+                <elementReference>formula_2_myRule_1_A1_0943564361</elementReference>
             </value>
         </inputAssignments>
         <object>Order</object>

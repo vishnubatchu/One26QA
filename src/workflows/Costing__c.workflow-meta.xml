@@ -5,12 +5,7 @@
         <description>Costing Request Updated by BU Director</description>
         <protected>false</protected>
         <recipients>
-            <recipient>pooja.u@ii-vi.com</recipient>
-            <type>user</type>
-        </recipients>
-        <recipients>
-            <recipient>yashasvi.agrawal@ii-vi.com</recipient>
-            <type>user</type>
+            <type>creator</type>
         </recipients>
         <senderType>CurrentUser</senderType>
         <template>unfiled$public/Costing_Request_Updated_by_Business_Unit_Director</template>

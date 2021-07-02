@@ -129,12 +129,6 @@
     </approvalStep>
     <emailTemplate>unfiled$public/Costing_Request_Review</emailTemplate>
     <enableMobileDeviceAccess>false</enableMobileDeviceAccess>
-    <entryCriteria>
-        <criteriaItems>
-            <field>Costing__c.Business_Unit2__c</field>
-            <operation>notEqual</operation>
-        </criteriaItems>
-    </entryCriteria>
     <finalApprovalActions>
         <action>
             <name>Costing_Request_Updated_by_BU_Director</name>

@@ -163,7 +163,12 @@
     <pluralLabel>Costing</pluralLabel>
     <recordTypeTrackFeedHistory>false</recordTypeTrackFeedHistory>
     <recordTypeTrackHistory>false</recordTypeTrackHistory>
-    <searchLayouts></searchLayouts>
+    <searchLayouts>
+        <searchResultsAdditionalFields>Account_Name__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Costing_Number__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Market_AGC__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>OpportunityNumber__c</searchResultsAdditionalFields>
+    </searchLayouts>
     <sharingModel>ControlledByParent</sharingModel>
     <visibility>Public</visibility>
 </CustomObject>

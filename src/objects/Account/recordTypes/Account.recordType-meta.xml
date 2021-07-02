@@ -472,10 +472,6 @@
             <fullName>Other</fullName>
             <default>false</default>
         </values>
-        <values>
-            <fullName>Unidentified</fullName>
-            <default>false</default>
-        </values>
     </picklistValues>
     <picklistValues>
         <picklist>Display_Billing_Country__c</picklist>
@@ -3771,10 +3767,6 @@
         </values>
         <values>
             <fullName>Korea</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Unidentified</fullName>
             <default>false</default>
         </values>
     </picklistValues>

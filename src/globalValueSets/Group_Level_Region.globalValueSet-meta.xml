@@ -36,14 +36,15 @@
         <label>Korea</label>
     </customValue>
     <customValue>
-        <fullName>Unidentified</fullName>
-        <default>false</default>
-        <label>Unidentified</label>
-    </customValue>
-    <customValue>
         <fullName>Other</fullName>
         <default>false</default>
         <label>Other</label>
+    </customValue>
+    <customValue>
+        <fullName>Unidentified</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Unidentified</label>
     </customValue>
     <masterLabel>Group Level Region</masterLabel>
     <sorted>false</sorted>

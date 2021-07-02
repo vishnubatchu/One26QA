@@ -1006,6 +1006,10 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>UpdateSubAccountGlobalUltimateParent</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>UserTriggerHelper</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -9430,6 +9434,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Quote.Opportunity_Number__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Quote.Opportunity_Type__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>

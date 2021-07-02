@@ -528,7 +528,15 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Inactive</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Lost-Delivery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lost-Price</fullName>
             <default>false</default>
         </values>
         <values>

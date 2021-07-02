@@ -54,15 +54,20 @@ public class UpdateGlobalUltimateParentBatch implements Database.Batchable <sObj
                         Messaging.EmailFileAttachment csvAttc = new Messaging.EmailFileAttachment();
                         csvAttc.setFileName(csvname);
                         csvAttc.setBody(Blob.valueOf(finalCsv));
-                        list<string> toAddresses = new list<string>();
-                        Profile sys_adm_profile = [SELECT Id FROM Profile WHERE Name = 'System Administrator'];
-                        for(user u : [SELECT id, Email FROM User WHERE ProfileId =:sys_adm_profile.Id]){
-                           toAddresses.add(u.Email); 
-                        }
+                        List<String> toEmailIdList=new List<String>();
+        String toEmailIdStr=System.Label.Global_Parent_Owner_Account_Update_Batch_Notification_EmaildId;
+        if(toEmailIdStr!=null && toEmailIdStr.trim()!=''){
+            if(toEmailIdStr.contains(',')){
+                toEmailIdList=toEmailIdStr.split(',');
+            }else{
+                toEmailIdList.add(toEmailIdStr);
+            }
+        }
+        String[] toAddresses = toEmailIdList; 
                         String subject ='Account Update Error:';    
                         Messaging.SingleEmailMessage email =new Messaging.SingleEmailMessage();
                         email.setSubject(subject);
-                        email.setToAddresses(toAddresses );
+                        email.setToAddresses(toEmailIdList );
                         email.setPlainTextBody('PFA error file attached.');
                         email.setFileAttachments(new Messaging.EmailFileAttachment[]{csvAttc});
                         try{

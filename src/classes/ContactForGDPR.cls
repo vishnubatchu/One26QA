@@ -45,7 +45,7 @@ c.GDPR_Country__c = c.MailingCountry.toupperCase();
             }
             system.debug('gdprCountryCatMap'+gdprCountryCatMap);
             system.debug('c.Display_Mailing_Country__c'+c.Display_Mailing_Country__c);
-            if(c.Display_Mailing_Country__c != null && contactCategory !=null ){
+            if(c.Display_Mailing_Country__c != null && String.isNotBlank(contactCategory) ){
                 system.debug('In if');
                 category = gdprCountryCatMap.get(c.Display_Mailing_Country__c.toupperCase()).get(contactCategory.toupperCase());
             }

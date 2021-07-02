@@ -70,6 +70,10 @@
                 <behavior>Readonly</behavior>
                 <field>No_of_line_items__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Opportunity_Type__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>

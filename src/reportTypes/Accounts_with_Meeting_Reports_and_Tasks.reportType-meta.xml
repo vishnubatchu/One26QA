@@ -766,11 +766,6 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>rh2__testCurrency__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
             <field>Delivery_Terms__c</field>
             <table>Account</table>
         </columns>

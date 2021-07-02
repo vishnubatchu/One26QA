@@ -586,6 +586,11 @@
             <field>Grand_Total__c</field>
             <table>Quote</table>
         </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Opportunity_Type__c</field>
+            <table>Quote</table>
+        </columns>
         <masterLabel>Quotes</masterLabel>
     </sections>
 </ReportType>

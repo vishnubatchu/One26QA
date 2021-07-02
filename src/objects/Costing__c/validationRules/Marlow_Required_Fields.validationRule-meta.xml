@@ -4,7 +4,6 @@
     <active>true</active>
     <description>Marlow users are required to populate costing completion date and special requirements</description>
     <errorConditionFormula>AND( 
-ISBLANK(Cost_Completion_Date__c),
 ISBLANK(Special_Requirements__c),
 TEXT($User.Legacy_Company__c) = &quot;Marlow&quot;
 )</errorConditionFormula>
