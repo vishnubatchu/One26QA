@@ -761,6 +761,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Account.oneTimeBatchFlag__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Account.rh2__testCurrency__c</field>
         <readable>false</readable>
     </fieldPermissions>

@@ -12,10 +12,7 @@ public class UpdateGlobalParentLookupsBatch implements Database.Batchable <sObje
     public Iterable<Sobject>  start(Database.BatchableContext BC)
     {
         List<sObject> scope = new List<sObject>();
-        scope.addAll([select id,Global_Ultimate_Account__c, Account.Global_Ultimate_Parent__c,Account.Global_Ultimate_Parent__r.OwnerId,Account.Changed_Global_Parent_Old_Owner__c,AccountId  from Order where Global_Ultimate_Account__c = null and AccountId != null and Account.Global_Ultimate_Parent__c != null]);
-        scope.addAll([select id,Global_Ultimate_Account__c,Account.Global_Ultimate_Parent__c,Account.Global_Ultimate_Parent__r.OwnerId,Account.Changed_Global_Parent_Old_Owner__c,AccountId  from Opportunity where Global_Ultimate_Account__c = null and AccountId != null and  Account.Global_Ultimate_Parent__c != null ]);
-        scope.addAll([select id,Global_Ultimate_Account__c,Account.Global_Ultimate_Parent__c,Account.Global_Ultimate_Parent__r.OwnerId,Account.Changed_Global_Parent_Old_Owner__c,AccountId from Quote  where Global_Ultimate_Account__c = null and AccountId != null and Account.Global_Ultimate_Parent__c != null  ]);
-        return scope;
+         return new updateGlobalParentCustomIterable();
     }
     // Execute method : update Global_Ultimate_Account__c field with parent Acccount Global_Ultimate_Account__c field value 
     public void execute(Database.BatchableContext BC,List<sObject> scope)
@@ -46,28 +43,23 @@ public class UpdateGlobalParentLookupsBatch implements Database.Batchable <sObje
                 }
             }
         }
-        if(finalUpdateList.size() > 0 && finalUpdateList != null ){
-            list<list<Sobject>> soblistOfList = new list<list<Sobject>>();
-            if(finalUpdateList.size()>10000 || Test.isRunningTest()){
-                soblistOfList.addAll(UpdateGlobalParentLookupsBatchHelper.doSubList(finalUpdateList));
-            } else{
-                soblistOfList.add(finalUpdateList);
-            }
-            if(!soblistOfList.isEmpty()){
-                
-                for(list<Sobject> sl : soblistOfList){
-                    system.debug('sl@@@ =' + sl);
-                    Database.SaveResult[] srList = Database.update(sl, True); 
-                }
-            }
-        }
+                         Database.SaveResult[] srList = Database.update(finalUpdateList, false); 
+        set<Account> accSet = new set<Account>();
+        accSet.addAll(acSharing);
+list<Account> updateOnetimebatchFlag = new list<Account>();
         if(acSharing != null && acSharing.size() > 0){
-            UpdateGlobalParentLookupsBatchHelper.deleteAndInsertShareRecords(acSharing); 
+            //UpdateGlobalParentLookupsBatchHelper.deleteAndInsertShareRecords(acSharing); 
+            for(Account ac : accSet){
+                ac.oneTimeBatchFlag__c = True;
+                updateOnetimebatchFlag.add(ac);
+            }
+            Database.SaveResult[] acs = Database.update(updateOnetimebatchFlag, false); 
         }
     }
     
     public void finish(Database.BatchableContext BC) {
-        
+        InsertSharedRecordOneTimeBatch ex = new InsertSharedRecordOneTimeBatch();
+database.executeBatch(ex,200);
         
     }
 }

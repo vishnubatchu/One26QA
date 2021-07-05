@@ -15,7 +15,6 @@ public class GlobalParentOwnerBatch_Helper {
                 if(shareRecordsMap!=null && !shareRecordsMap.isEmpty()){
                     List<Sobject> listOfShareRecTobeDeleted=new List<Sobject>();
                     List<Sobject> listOfShareRecTobeInserted=new List<Sobject>();
-                    Integer chunkSize=10000;
                     if(shareRecordsMap.containsKey('deleteList') && shareRecordsMap.get('deleteList')!=null
                        && !shareRecordsMap.get('deleteList').isEmpty()){
                            listOfShareRecTobeDeleted.addAll(shareRecordsMap.get('deleteList'));
@@ -25,15 +24,8 @@ public class GlobalParentOwnerBatch_Helper {
                            listOfShareRecTobeInserted.addAll(shareRecordsMap.get('insertList'));
                        }
                     if(!listOfShareRecTobeDeleted.isEmpty()){
-                        List<List<Sobject>> shareRecTobeDltdInChunks=new List<List<Sobject>>();
-                        if(listOfShareRecTobeDeleted.size()>chunkSize){
-                            doSubList(listOfShareRecTobeDeleted, chunkSize, shareRecTobeDltdInChunks);
-                        }else{
-                            shareRecTobeDltdInChunks.add(listOfShareRecTobeDeleted);
-                        }
-                        for(List<Sobject> eachChunk:shareRecTobeDltdInChunks){
                             // Delete the records
-                            Database.DeleteResult[] drList = Database.delete(eachChunk, false);
+                            Database.DeleteResult[] drList = Database.delete(listOfShareRecTobeDeleted, false);
                             Integer lstIndex=0;
                             // Iterate through each returned result
                             for(Database.DeleteResult dr : drList) {
@@ -43,21 +35,13 @@ public class GlobalParentOwnerBatch_Helper {
                                     for(Database.Error err : dr.getErrors()) {
                                         message+= err.getMessage();
                                     }
-                                    errorList.add(new CustomError(eachChunk[lstIndex].Id,eachChunk[lstIndex].Id.getSObjectType().getDescribe().getName(),'Delete',message));
+                                    errorList.add(new CustomError(listOfShareRecTobeDeleted[lstIndex].Id,listOfShareRecTobeDeleted[lstIndex].Id.getSObjectType().getDescribe().getName(),'Delete',message));
                                 }
                                 lstIndex++;
                             }
-                        }
                     }
                     if(!listOfShareRecTobeInserted.isEmpty()){
-                        List<List<Sobject>> shareRecTobeInsrtdInChunks=new List<List<Sobject>>();
-                        if(listOfShareRecTobeInserted.size()>chunkSize){
-                            doSubList(listOfShareRecTobeInserted, chunkSize, shareRecTobeInsrtdInChunks);
-                        }else{
-                            shareRecTobeInsrtdInChunks.add(listOfShareRecTobeInserted);
-                        }
-                        for(List<Sobject> eachChunk:shareRecTobeInsrtdInChunks){
-                            Database.SaveResult[] srList = Database.insert(eachChunk, false);
+                            Database.SaveResult[] srList = Database.insert(listOfShareRecTobeInserted, false);
                             // Iterate through each returned result
                             for (Database.SaveResult sr : srList) {
                                 if (!sr.isSuccess()) {
@@ -66,14 +50,13 @@ public class GlobalParentOwnerBatch_Helper {
                                     for(Database.Error err : sr.getErrors()) {
                                         message+= err.getMessage();
                                     }
-                                    errorList.add(new CustomError('','','Insert',message));
+                                    errorList.add(new CustomError('','ShareObj','Insert',message));
                                 }
                             }
-                        }
                     }
                 }
             }catch(Exception excpn){
-                errorList.add(new CustomError('','','','Exception occured==>'+excpn.getMessage()));
+                errorList.add(new CustomError('','','','Exception occured in deleteAndInsertShareRecords()==>At line:'+excpn.getLineNumber()+',Message:'+excpn.getMessage()));
             }
         }
         return errorList;
@@ -348,29 +331,9 @@ public class GlobalParentOwnerBatch_Helper {
         Messaging.sendEmail(new Messaging.SingleEmailMessage[] { mail });
     }
     
-    //This method creates sublist of a list based on chunksize
-    public static void doSubList(List<Sobject> recordList,Integer subListSize,List<List<Sobject>> returnList)
-    {
-        Integer recordListSize=recordList.size();
-        if(recordList!=null && !recordList.isEmpty() && subListSize>0)
-        {
-            Integer noOfSubList = recordListSize / subListSize;
-            
-            if (math.mod(recordListSize,subListSize) > 0) 
-            {
-                noOfSubList++;
-            }
-            for (Integer i = 0; i < noOfSubList; i++) 
-            {
-                List<Sobject> subRecordList = new List<Sobject>();
-                for (Integer j = 0; (j < subListSize) && (subListSize * i + j < recordListSize); j++)
-                {
-                    subRecordList.add(recordList.get((subListSize * i) + j));
-                }
-                returnList.add(subRecordList);		
-                
-            }			
-        }
+    //This method sends email with attachment if batch fails to process any records 
+    public static CustomError getCustomErrorObj(String id,String objectName,String operation,String message){
+        return new CustomError(id,objectName,operation,message);
     }
     
     public class CustomError

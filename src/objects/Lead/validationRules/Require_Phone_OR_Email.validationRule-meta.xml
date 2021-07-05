@@ -6,6 +6,6 @@
     <errorConditionFormula>ISBLANK( Phone )  &amp;&amp;  ISBLANK( Email ) &amp;&amp; OR(OR(CreatedById  &lt;&gt; &quot;005C0000003VWml&quot;,
 NOT(ISPICKVAL(LeadSource,&quot;&quot;))),
 (CreatedById  &lt;&gt; &quot;005C0000003VWml&quot; &amp;&amp;
-NOT(ISPICKVAL(LeadSource,&quot;&quot;))))</errorConditionFormula>
+NOT(ISPICKVAL(LeadSource,&quot;&quot;)))) &amp;&amp; NOT( $Profile.Name =&quot;System Administrator&quot;)</errorConditionFormula>
     <errorMessage>Phone or Email must be entered to save.</errorMessage>
 </ValidationRule>

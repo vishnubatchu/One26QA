@@ -15,7 +15,6 @@ public class OrderAndOrderLineBatch_Helper {
                 if(orderupdateAndShareRecordsMap!=null && !orderupdateAndShareRecordsMap.isEmpty()){
                     List<Sobject> orderListTobeUpdated=new List<Sobject>();
                     List<Sobject> listOfShareRecTobeInserted=new List<Sobject>();
-                    Integer chunkSize=10000;
                     if(orderupdateAndShareRecordsMap.containsKey('updateList') && orderupdateAndShareRecordsMap.get('updateList')!=null
                        && !orderupdateAndShareRecordsMap.get('updateList').isEmpty()){
                            orderListTobeUpdated.addAll(orderupdateAndShareRecordsMap.get('updateList'));
@@ -25,15 +24,8 @@ public class OrderAndOrderLineBatch_Helper {
                            listOfShareRecTobeInserted.addAll(orderupdateAndShareRecordsMap.get('insertList'));
                        }
                     if(!orderListTobeUpdated.isEmpty()){
-                        List<List<Sobject>> orderRecTobeUpdtdInChunks=new List<List<Sobject>>();
-                        if(orderListTobeUpdated.size()>chunkSize){
-                            doSubList(orderListTobeUpdated, chunkSize, orderRecTobeUpdtdInChunks);
-                        }else{
-                            orderRecTobeUpdtdInChunks.add(orderListTobeUpdated);
-                        }
-                        for(List<Sobject> eachChunk:orderRecTobeUpdtdInChunks){
-                            // Delete the records
-                            Database.SaveResult[] srList = Database.update(eachChunk, false);
+                            // Update the records
+                            Database.SaveResult[] srList = Database.update(orderListTobeUpdated, false);
                             Integer lstIndex=0;
                             // Iterate through each returned result
                             for(Database.SaveResult sr : srList) {
@@ -43,21 +35,14 @@ public class OrderAndOrderLineBatch_Helper {
                                     for(Database.Error err : sr.getErrors()) {
                                         message+= err.getMessage();
                                     }
-                                    errorList.add(new CustomError(eachChunk[lstIndex].Id,'Order','Update',message));
+                                    errorList.add(new CustomError(orderListTobeUpdated[lstIndex].Id,'Order','Update',message));
                                 }
                                 lstIndex++;
                             }
-                        }
+
                     }
                     if(!listOfShareRecTobeInserted.isEmpty()){
-                        List<List<Sobject>> shareRecTobeInsrtdInChunks=new List<List<Sobject>>();
-                        if(listOfShareRecTobeInserted.size()>chunkSize){
-                            doSubList(listOfShareRecTobeInserted, chunkSize, shareRecTobeInsrtdInChunks);
-                        }else{
-                            shareRecTobeInsrtdInChunks.add(listOfShareRecTobeInserted);
-                        }
-                        for(List<Sobject> eachChunk:shareRecTobeInsrtdInChunks){
-                            Database.SaveResult[] srList = Database.insert(eachChunk, false);
+                            Database.SaveResult[] srList = Database.insert(listOfShareRecTobeInserted, false);
                             // Iterate through each returned result
                             for (Database.SaveResult sr : srList) {
                                 if (!sr.isSuccess()) {
@@ -66,14 +51,14 @@ public class OrderAndOrderLineBatch_Helper {
                                     for(Database.Error err : sr.getErrors()) {
                                         message+= err.getMessage();
                                     }
-                                    errorList.add(new CustomError('','','Insert',message));
+                                    errorList.add(new CustomError('','OrderShare/Order_Line__Share','Insert',message));
                                 }
                             }
-                        }
+
                     }
                 }
             }catch(Exception excpn){
-                errorList.add(new CustomError('','','','Exception occured==>'+excpn.getMessage()));
+                errorList.add(new CustomError('','','','Exception occured in updateOrderAndInsertShareRecords()==>At line:'+excpn.getLineNumber()+',Message:'+excpn.getMessage()));
             }
         }
         return errorList;
@@ -184,29 +169,9 @@ public class OrderAndOrderLineBatch_Helper {
         Messaging.sendEmail(new Messaging.SingleEmailMessage[] { mail });
     }
     
-    //This method creates sublist of a list based on chunksize
-    public static void doSubList(List<Sobject> recordList,Integer subListSize,List<List<Sobject>> returnList)
-    {
-        Integer recordListSize=recordList.size();
-        if(recordList!=null && !recordList.isEmpty() && subListSize>0)
-        {
-            Integer noOfSubList = recordListSize / subListSize;
-            
-            if (math.mod(recordListSize,subListSize) > 0) 
-            {
-                noOfSubList++;
-            }
-            for (Integer i = 0; i < noOfSubList; i++) 
-            {
-                List<Sobject> subRecordList = new List<Sobject>();
-                for (Integer j = 0; (j < subListSize) && (subListSize * i + j < recordListSize); j++)
-                {
-                    subRecordList.add(recordList.get((subListSize * i) + j));
-                }
-                returnList.add(subRecordList);		
-                
-            }			
-        }
+	//This method sends email with attachment if batch fails to process any records 
+    public static CustomError getCustomErrorObj(String id,String objectName,String operation,String message){
+        return new CustomError(id,objectName,operation,message);
     }
     
     public class CustomError
