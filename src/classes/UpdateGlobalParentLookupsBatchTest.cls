@@ -6,7 +6,7 @@
 @isTest
 public class UpdateGlobalParentLookupsBatchTest {
   @testSetup static void setup() {
-        Profile salesUserProfile = [SELECT Id FROM Profile WHERE Name = 'Sales Profile Clone' LIMIT 1];
+        Profile salesUserProfile = [SELECT Id FROM Profile WHERE Name = 'One II-VI Sales Rep' LIMIT 1];
         List<User>  testUserList=new List<User>();
         for(Integer i=0;i<2;i++){
             String orgId = userInfo.getOrganizationId();
@@ -99,6 +99,14 @@ public class UpdateGlobalParentLookupsBatchTest {
         UpdateGlobalParentLookupsBatch batchObj = new UpdateGlobalParentLookupsBatch();
         batchObj.execute(null,scope);
        DataBase.executeBatch(batchObj);
+          UpdateGlobalUltimateParentBatchScheduler scbatchObj = new UpdateGlobalUltimateParentBatchScheduler();
+       // DataBase.executeBatch(batchObj,200);
+          Date today=System.today();
+        String CRON_EXP ='0 0 0 '+today.day()+' '+today.month()+' ? *'; 
+        String jobId = System.schedule('Schedule to update Account Name',CRON_EXP,scbatchObj);
+        CronTrigger ct = [SELECT Id, CronExpression, TimesTriggered, NextFireTime FROM CronTrigger WHERE id = :jobId];
+        System.assertEquals(CRON_EXP, ct.CronExpression);
+        System.assertEquals(0, ct.TimesTriggered);
         Test.stopTest();
         list<opportunity> oplist = [select id,Global_Ultimate_Account__c,Account.Global_Ultimate_Parent__c,Account.Global_Ultimate_Parent__r.OwnerId,Account.Changed_Global_Parent_Old_Owner__c,AccountId  from Opportunity where Global_Ultimate_Account__c = null ];
         System.assertEquals(oplist.size(),0);

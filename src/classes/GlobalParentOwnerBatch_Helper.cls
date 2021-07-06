@@ -97,11 +97,10 @@ public class GlobalParentOwnerBatch_Helper {
         if(accountList!=null && !accountList.isEmpty()){
             List<Sobject> cntctShrListTobeInsrtd=new List<ContactShare>();
             List<Sobject> cntctShrListTobeDltd=new List<ContactShare>();
-            List<Contact> contactList=[Select Id,Account.Global_Parent_Previous_Owner__c,Account.Changed_Global_Parent_Old_Owner__c,Account.Global_Ultimate_Parent__r.OwnerId,OwnerId,(Select Id,ContactId,UserOrGroupId  from Shares where RowCause='Manual' 
-                                                                                                                                                                                       and ContactAccessLevel='Read' and UserOrGroupId IN :previousOwnerIdSet) 
-                                       from Contact 
-                                       where AccountId IN: accountList];
-            for(Contact eachCon:contactList){
+            for(Contact eachCon:[Select Id,Account.Global_Parent_Previous_Owner__c,Account.Changed_Global_Parent_Old_Owner__c,Account.Global_Ultimate_Parent__r.OwnerId,OwnerId,
+                                 (Select Id,ContactId,UserOrGroupId  from Shares where RowCause='Manual' and ContactAccessLevel='Read' and UserOrGroupId IN :previousOwnerIdSet) 
+                                 from Contact 
+                                 where AccountId IN: accountList]){
                 Id prevOwnerId=(isOwnerChange==true?eachCon.Account.Global_Parent_Previous_Owner__c:
                                 eachCon.Account.Changed_Global_Parent_Old_Owner__c);
                 if(eachCon.Shares!=null){
@@ -128,11 +127,10 @@ public class GlobalParentOwnerBatch_Helper {
         if(accountList!=null && !accountList.isEmpty()){
             List<Sobject> oppShrListTobeInsrtd=new List<OpportunityShare>();
             List<Sobject> oppShrListTobeDltd=new List<OpportunityShare>();
-            List<Opportunity> oppList=[Select Id,Account.Global_Parent_Previous_Owner__c,Account.Changed_Global_Parent_Old_Owner__c,Account.Global_Ultimate_Parent__r.OwnerId,OwnerId,(Select Id,OpportunityId,UserOrGroupId from Shares where RowCause='Manual' 
-                                                                                                                                                                                       and OpportunityAccessLevel='Read' and UserOrGroupId IN :previousOwnerIdSet) 
-                                       from Opportunity 
-                                       where AccountId IN: accountList];
-            for(Opportunity eachOpp:oppList){
+            for(Opportunity eachOpp:[Select Id,Account.Global_Parent_Previous_Owner__c,Account.Changed_Global_Parent_Old_Owner__c,Account.Global_Ultimate_Parent__r.OwnerId,OwnerId,
+                                     (Select Id,OpportunityId,UserOrGroupId from Shares where RowCause='Manual' and OpportunityAccessLevel='Read' and UserOrGroupId IN :previousOwnerIdSet) 
+                                     from Opportunity 
+                                     where AccountId IN: accountList]){
                 Id prevOwnerId=(isOwnerChange==true?eachOpp.Account.Global_Parent_Previous_Owner__c:
                                 eachOpp.Account.Changed_Global_Parent_Old_Owner__c);
                 if(eachOpp.Shares!=null){
@@ -159,11 +157,10 @@ public class GlobalParentOwnerBatch_Helper {
         if(accountList!=null && !accountList.isEmpty()){
             List<Sobject> quoteShrListTobeInsrtd=new List<QuoteShare>();
             List<Sobject> quoteShrListTobeDltd=new List<QuoteShare>();
-            List<Quote> quoteList=[Select Id,Account__r.Global_Parent_Previous_Owner__c,Account__r.Changed_Global_Parent_Old_Owner__c,Account__r.Global_Ultimate_Parent__r.OwnerId,OwnerId,(Select Id,ParentId,UserOrGroupId from Shares where RowCause='Manual' 
-                                                                                                                                                                                            and AccessLevel='Read' and UserOrGroupId IN :previousOwnerIdSet) 
-                                   from Quote 
-                                   where Account__c IN: accountList];
-            for(Quote eachQuote:quoteList){
+            for(Quote eachQuote:[Select Id,Account__r.Global_Parent_Previous_Owner__c,Account__r.Changed_Global_Parent_Old_Owner__c,Account__r.Global_Ultimate_Parent__r.OwnerId,OwnerId,
+                                 (Select Id,ParentId,UserOrGroupId from Shares where RowCause='Manual' and AccessLevel='Read' and UserOrGroupId IN :previousOwnerIdSet) 
+                                 from Quote 
+                                 where Account__c IN: accountList]){
                 Id prevOwnerId=(isOwnerChange==true?eachQuote.Account__r.Global_Parent_Previous_Owner__c:
                                 eachQuote.Account__r.Changed_Global_Parent_Old_Owner__c);
                 if(eachQuote.Shares!=null){
@@ -190,11 +187,10 @@ public class GlobalParentOwnerBatch_Helper {
         if(accountList!=null && !accountList.isEmpty()){
             List<Sobject> orderShrListTobeInsrtd=new List<OrderShare>();
             List<Sobject> orderShrListTobeDltd=new List<OrderShare>();
-            List<Order> orderList=[Select Id,Account.Global_Parent_Previous_Owner__c,Account.Changed_Global_Parent_Old_Owner__c,Account.Global_Ultimate_Parent__r.OwnerId,OwnerId,(Select Id,OrderId,UserOrGroupId from Shares where RowCause='Manual' 
-                                                                                                                                                                                   and OrderAccessLevel='Read' and UserOrGroupId IN :previousOwnerIdSet) 
-                                   from Order 
-                                   where AccountId IN: accountList];
-            for(Order eachOrder:orderList){
+            for(Order eachOrder:[Select Id,Account.Global_Parent_Previous_Owner__c,Account.Changed_Global_Parent_Old_Owner__c,Account.Global_Ultimate_Parent__r.OwnerId,OwnerId,
+                                 (Select Id,OrderId,UserOrGroupId from Shares where RowCause='Manual' and OrderAccessLevel='Read' and UserOrGroupId IN :previousOwnerIdSet) 
+                                 from Order 
+                                 where AccountId IN: accountList]){
                 Id prevOwnerId=(isOwnerChange==true?eachOrder.Account.Global_Parent_Previous_Owner__c:
                                 eachOrder.Account.Changed_Global_Parent_Old_Owner__c);
                 if(eachOrder.Shares!=null){
@@ -221,14 +217,10 @@ public class GlobalParentOwnerBatch_Helper {
         if(accountList!=null && !accountList.isEmpty()){
             List<Sobject> orderLineShrListTobeInsrtd=new List<Order_Line__Share>();
             List<Sobject> orderLineShrListTobeDltd=new List<Order_Line__Share>();
-            List<Order_Line__c> orderLineList=[Select Id,Order__r.Account.Global_Parent_Previous_Owner__c,Order__r.Account.Changed_Global_Parent_Old_Owner__c,Order__r.Account.Global_Ultimate_Parent__r.OwnerId,Customer_Name__r.Global_Parent_Previous_Owner__c,Customer_Name__r.Changed_Global_Parent_Old_Owner__c,Customer_Name__r.Global_Ultimate_Parent__r.OwnerId,OwnerId
-                                               ,(Select Id,ParentId,UserOrGroupId from Shares where RowCause='Manual' and AccessLevel='Read' and UserOrGroupId IN :previousOwnerIdSet) 
-                                               from Order_Line__c 
-                                               where Order__r.AccountId IN: accountList];
-                                               //where Customer_Name__c IN: accountList];
-            for(Order_Line__c eachOrderLine:orderLineList){
-                /*Id prevOwnerId=(isOwnerChange==true?eachOrderLine.Customer_Name__r.Global_Parent_Previous_Owner__c:
-                                eachOrderLine.Customer_Name__r.Changed_Global_Parent_Old_Owner__c);*/
+            for(Order_Line__c eachOrderLine:[Select Id,Order__r.Account.Global_Parent_Previous_Owner__c,Order__r.Account.Changed_Global_Parent_Old_Owner__c,Order__r.Account.Global_Ultimate_Parent__r.OwnerId,OwnerId,
+                                             (Select Id,ParentId,UserOrGroupId from Shares where RowCause='Manual' and AccessLevel='Read' and UserOrGroupId IN :previousOwnerIdSet) 
+                                             from Order_Line__c 
+                                             where Order__r.AccountId IN: accountList]){
                 Id prevOwnerId=(isOwnerChange==true?eachOrderLine.Order__r.Account.Global_Parent_Previous_Owner__c:
                                 eachOrderLine.Order__r.Account.Changed_Global_Parent_Old_Owner__c);
                 if(eachOrderLine.Shares!=null){
@@ -238,7 +230,6 @@ public class GlobalParentOwnerBatch_Helper {
                         }  
                     }
                 }
-                //if(eachOrderLine.OwnerId!=eachOrderLine.Customer_Name__r.Global_Ultimate_Parent__r.OwnerId){
                 if(eachOrderLine.Order__r.Account.Global_Ultimate_Parent__r.OwnerId!=null && 
                    eachOrderLine.OwnerId!=eachOrderLine.Order__r.Account.Global_Ultimate_Parent__r.OwnerId){
                     orderLineShrListTobeInsrtd.add(new Order_Line__Share(ParentId=eachOrderLine.Id,UserOrGroupId=eachOrderLine.Order__r.Account.Global_Ultimate_Parent__r.OwnerId,
@@ -257,11 +248,10 @@ public class GlobalParentOwnerBatch_Helper {
         if(accountList!=null && !accountList.isEmpty()){
             List<Sobject> caseShrListTobeInsrtd=new List<CaseShare>();
             List<Sobject> caseShrListTobeDltd=new List<CaseShare>();
-            List<Case> caseList=[Select Id,Account.Global_Parent_Previous_Owner__c,Account.Changed_Global_Parent_Old_Owner__c,Account.Global_Ultimate_Parent__r.OwnerId,OwnerId,(Select Id,CaseId,UserOrGroupId from Shares where RowCause='Manual' 
-                                                                                                                                                                                 and CaseAccessLevel='Read' and UserOrGroupId IN :previousOwnerIdSet) 
-                                 from Case 
-                                 where AccountId IN: accountList];
-            for(Case eachCase:caseList){
+            for(Case eachCase:[Select Id,Account.Global_Parent_Previous_Owner__c,Account.Changed_Global_Parent_Old_Owner__c,Account.Global_Ultimate_Parent__r.OwnerId,OwnerId,
+                               (Select Id,CaseId,UserOrGroupId from Shares where RowCause='Manual' and CaseAccessLevel='Read' and UserOrGroupId IN :previousOwnerIdSet) 
+                               from Case 
+                               where AccountId IN: accountList]){
                 Id prevOwnerId=(isOwnerChange==true?eachCase.Account.Global_Parent_Previous_Owner__c:
                                 eachCase.Account.Changed_Global_Parent_Old_Owner__c);
                 if(eachCase.Shares!=null){
@@ -306,43 +296,13 @@ public class GlobalParentOwnerBatch_Helper {
         }
     }
     
-    //This method sends email with attachment if batch fails to process any records 
-    public static void sendEmail(String csvContent){
-        Messaging.EmailFileAttachment csvAttcmnt = new Messaging.EmailFileAttachment ();
-        blob csvBlob = Blob.valueOf (csvContent);
-        string csvname= 'ErrorList.csv';
-        csvAttcmnt.setFileName (csvname);
-        csvAttcmnt.setBody (csvBlob);
-        Messaging.SingleEmailMessage mail = new Messaging.SingleEmailMessage();
-        List<String> toEmailIdList=new List<String>();
-        String toEmailIdStr=System.Label.Global_Parent_Owner_Account_Update_Batch_Notification_EmaildId;
-        if(toEmailIdStr!=null && toEmailIdStr.trim()!=''){
-            if(toEmailIdStr.contains(',')){
-                toEmailIdList=toEmailIdStr.split(',');
-            }else{
-                toEmailIdList.add(toEmailIdStr);
-            }
-        }
-        String[] toAddresses = toEmailIdList; 
-        mail.setToAddresses(toAddresses);
-        mail.setSubject('GlobalParentOwner_Batch Failed');
-        mail.setPlainTextBody('PFA error file attached.');
-        mail.setFileAttachments (new Messaging.EmailFileAttachment []{csvAttcmnt});
-        Messaging.sendEmail(new Messaging.SingleEmailMessage[] { mail });
-    }
-    
-    //This method sends email with attachment if batch fails to process any records 
-    public static CustomError getCustomErrorObj(String id,String objectName,String operation,String message){
-        return new CustomError(id,objectName,operation,message);
-    }
-    
     public class CustomError
     {
         public String id{get;set;}
         public String objectName{get;set;}
         public String operation{get;set;}
         public String message{get;set;}
-        CustomError(String id,String objectName,String operation,String message){
+       	public CustomError(String id,String objectName,String operation,String message){
             this.id=id;
             this.objectName=objectName;
             this.operation=operation;

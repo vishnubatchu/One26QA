@@ -3,16 +3,16 @@ public class ContactForGDPRTest {
     
     static testmethod void contactForGDPRtest() { 
         
-               Account globalParentAcc=new Account(Name='Global Parent Test Acc',RecordTypeId=Schema.SObjectType.Account.getRecordTypeInfosByName().get('Global Parent').getRecordTypeId());
+        Account globalParentAcc=new Account(Name='Global Parent Test Acc',RecordTypeId=Schema.SObjectType.Account.getRecordTypeInfosByName().get('Global Parent').getRecordTypeId(),Display_Billing_Country__c = 'United States',ShippingCity = 'New York', ShippingCountry ='US');
         insert globalParentAcc;
         Account acc = new Account(name='Account ',ParentId=globalParentAcc.Id,
-                billingcity='New York', billingcountry='USA',Status__c='Active',Type='Customer',RecordTypeId = Schema.SObjectType.Account.getRecordTypeInfosByName().get('Top Level Account').getRecordTypeId());
+                billingcity='New York', billingcountry='USA',Status__c='Active',Type='Customer',RecordTypeId = Schema.SObjectType.Account.getRecordTypeInfosByName().get('Top Level Account').getRecordTypeId(),Display_Billing_Country__c = 'United States',ShippingCity = 'New York', ShippingCountry ='US');
         insert acc;
         Account acc1 = new Account(ParentId = globalParentAcc.Id,name='Account1 ', 
-                billingcity='New York test', billingcountry='USA',Status__c='Active',Type='Party',RecordTypeId = Schema.SObjectType.Account.getRecordTypeInfosByName().get('Top Level Account').getRecordTypeId());
+                billingcity='New York test', billingcountry='USA',Status__c='Active',Type='Party',RecordTypeId = Schema.SObjectType.Account.getRecordTypeInfosByName().get('Top Level Account').getRecordTypeId(),Display_Billing_Country__c = 'United States',ShippingCity = 'New York', ShippingCountry ='US');
         
         insert acc1;
-        Account acc2 = new Account(name='Account3',shippingcity='Raipur',shippingcountry='India',Status__c='Active',Type='Distributor',RecordTypeId = Schema.SObjectType.Account.getRecordTypeInfosByName().get('Customer Account').getRecordTypeId(),Legacy_Id__c ='eoqw3214132421341');
+        Account acc2 = new Account(ParentId = globalParentAcc.Id,name='Account3',shippingcity='Raipur',shippingcountry='India',Status__c='Active',Type='Distributor',RecordTypeId = Schema.SObjectType.Account.getRecordTypeInfosByName().get('Customer Account').getRecordTypeId(),Legacy_Id__c ='eoqw3214132421341');
 
         
         insert acc2;

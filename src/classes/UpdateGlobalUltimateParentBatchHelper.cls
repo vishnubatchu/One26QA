@@ -36,7 +36,9 @@ public class UpdateGlobalUltimateParentBatchHelper {
         
         
         // Quote update List Creation 
-        for(Quote Qt : [select id,Account__c,Account__r.Global_Ultimate_Parent__c,Global_Ultimate_Account__c  from Quote Where Account__c In:accountList ]){
+        for(Quote Qt : [select id,Account__c,Account__r.Global_Ultimate_Parent__c,Global_Ultimate_Account__c  
+                        from Quote 
+                        Where Account__c In:accountList ]){
             Qt.Global_Ultimate_Account__c = Qt.Account__r.Global_Ultimate_Parent__c;
             finalUpdateList.add(Qt); 
         }

@@ -595,4 +595,11 @@ Fremont, CA 94538
         <shortDescription>starthere_note</shortDescription>
         <value>NOTE</value>
     </labels>
+    <labels>
+        <fullName>IsOneTimeBatch</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>IsOneTimeBatch</shortDescription>
+        <value>True</value>
+    </labels>
 </CustomLabels>

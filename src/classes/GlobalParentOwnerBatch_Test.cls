@@ -1,7 +1,7 @@
 @isTest
 private class GlobalParentOwnerBatch_Test {
     @testSetup static void setup() {
-        Profile salesUserProfile = [SELECT Id FROM Profile WHERE Name = 'Sales Profile Clone' LIMIT 1];
+        Profile salesUserProfile = [SELECT Id FROM Profile WHERE Name = 'One II-VI Sales Rep' LIMIT 1];
         //UserRole faeRole = [SELECT Id FROM UserRole WHERE Name LIKE  '%FAE%' LIMIT 1];
         User usr = [Select id from User where Id = :UserInfo.getUserId()];
         List<User>  testUserList=new List<User>();
@@ -154,25 +154,5 @@ Ship_To_Address__c=accList[6].Id,Ship_To_Customer__c=accList[i].Id));*/
         System.assertEquals(0, ct.TimesTriggered);
         Test.stopTest();
     }
-    
-     @isTest static void testDoSubListHelperMethod() {
-        Test.startTest();
-        List<Order> orderList=[Select Id from Order];
-        List<List<Sobject>> sObjectList=new List<List<Sobject>>();
-        GlobalParentOwnerBatch_Helper.doSubList(orderList,2,sObjectList);
-        System.assertEquals(3,sObjectList.size());
-        Test.stopTest();
-    }
-    
-      @isTest static void testSendEmailHelperMethod() {
-        Test.startTest();
-        string csvHeader = 'Record Id,Object Name,Operation, Error \n';
-    	string mainContent = csvHeader;
-		string errStr = '12345,OrderShare,Delete,Test Error occured\n';
-        mainContent += errStr;
-        GlobalParentOwnerBatch_Helper.sendEmail(mainContent);
-        System.assertEquals(1, Limits.getEmailInvocations());
-        Test.stopTest();
-    }
-    
+        
 }

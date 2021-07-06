@@ -7,7 +7,7 @@ private class AccountTrigger_Test {
             testUserList.add(new User(LastName='Usrlast1111',ProfileId=[SELECT Id from Profile where Name ='System Administrator'].Id,alias ='trsysy',Legacy_Company__c ='Finisar',
                                       Email='standarduser12@testorg.com',EmailEncodingKey='UTF-8',  LanguageLocaleKey='en_US', 
                                       LocaleSidKey='en_US',TimeZoneSidKey='America/Los_Angeles', UserName='testuser12@finisar.com'));
-            testUserList.add(new User(LastName='Usrlast11111',ProfileId=[SELECT Id from Profile where Name ='Sales Profile Clone'].Id,alias ='salespro',Legacy_Company__c ='Finisar',
+            testUserList.add(new User(LastName='Usrlast11111',ProfileId=[SELECT Id from Profile where Name ='One II-VI Sales Rep'].Id,alias ='salespro',Legacy_Company__c ='Finisar',
                                       Email='salesuser123@testorg.com',EmailEncodingKey='UTF-8',  LanguageLocaleKey='en_US', 
                                       LocaleSidKey='en_US',TimeZoneSidKey='America/Los_Angeles', UserName='testsalesuser1@finisar.com'));
             insert testUserList;

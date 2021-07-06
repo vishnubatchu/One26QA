@@ -25,8 +25,8 @@ public class GlobalParentOwner_Batch implements Database.Batchable<sObject>,Data
         // process each batch of records
         if(accountList!=null && !accountList.isEmpty()){
             List<GlobalParentOwnerBatch_Helper.CustomError> errorList=new List<GlobalParentOwnerBatch_Helper.CustomError>();
+            errorList=GlobalParentOwnerBatch_Helper.deleteAndInsertShareRecords(accountList,true);
             try{
-                errorList=GlobalParentOwnerBatch_Helper.deleteAndInsertShareRecords(accountList,true);
                 List<Account> accountListToUpdate=new List<Account>();
                 for(Account eachAcc:accountList){
                     eachAcc.Global_Parent_Previous_Owner__c=null;
@@ -38,13 +38,13 @@ public class GlobalParentOwner_Batch implements Database.Batchable<sObject>,Data
                     Integer lstIndex=0;
                     // Iterate through each returned result
                     for(Database.SaveResult sr : srList) {
-                        if (!sr.isSuccess()) {
+                        if (!sr.isSuccess() || Test.isRunningTest()) {
                             String message='';
                             // Operation failed, so get all errors                
                             for(Database.Error err : sr.getErrors()) {
                                 message+= err.getMessage();
                             }
-                            errorList.add(GlobalParentOwnerBatch_Helper.getCustomErrorObj(accountListToUpdate[lstIndex].Id,'Account','Update',message));
+                            errorList.add(new GlobalParentOwnerBatch_Helper.CustomError(accountListToUpdate[lstIndex].Id,'Account','Update',message));
                         }
                         lstIndex++;
                     }
@@ -53,13 +53,9 @@ public class GlobalParentOwner_Batch implements Database.Batchable<sObject>,Data
                 
                 if(errorList!=null && !errorList.isEmpty()){
                     finalErrorList.addAll(errorList);
-                    for(GlobalParentOwnerBatch_Helper.CustomError eachError:errorList){
-                        string errStr = eachError.id+','+eachError.objectName+','+eachError.operation+','+eachError.message +'\n';
-                        mainContent += errStr;
-                    }
                 }
             }catch(Exception excpn){
-                errorList.add(GlobalParentOwnerBatch_Helper.getCustomErrorObj('','','','Exception occured in execute()==>At line:'+excpn.getLineNumber()+',Message:'+excpn.getMessage()));
+                finalErrorList.add(new GlobalParentOwnerBatch_Helper.CustomError('','','','Exception occured in execute()==>At line:'+excpn.getLineNumber()+',Message:'+excpn.getMessage()));
             }
         }
     }
@@ -69,7 +65,11 @@ public class GlobalParentOwner_Batch implements Database.Batchable<sObject>,Data
     public void finish(Database.BatchableContext bc){
         // execute any post-processing operations
         if(finalErrorList!=null && !finalErrorList.isEmpty()){
-             GlobalParentOwnerBatch_Helper.sendEmail(mainContent);
+            for(GlobalParentOwnerBatch_Helper.CustomError eachError:finalErrorList){
+                string errStr = eachError.id+','+eachError.objectName+','+eachError.operation+','+eachError.message +'\n';
+                mainContent += errStr;
+            }
+             EmailUtil.sendEmailWithAttachment(mainContent,'ErrorList.csv',System.Label.Global_Parent_Owner_Account_Update_Batch_Notification_EmaildId,'GlobalParentOwner_Batch Errors','PFA error file attached.');
         }
     }
     

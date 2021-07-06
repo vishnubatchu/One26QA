@@ -24,50 +24,12 @@ public class OrderAndOrderLine_Batch implements Database.Batchable<sObject>,Data
     public void execute(Database.BatchableContext bc, List<Order> orderList){
         // process each batch of records
         if(orderList!=null && !orderList.isEmpty()){
-            List<OrderAndOrderLineBatch_Helper.CustomError> errorList=new List<OrderAndOrderLineBatch_Helper.CustomError>();
-            try{
-                List<Order_Line__c> orderLineList=[Select Id,Order__c,Order__r.AccountId,Order__r.Account.Global_Ultimate_Parent__r.OwnerId,OwnerId 
-                                                   from Order_Line__c 
-                                                   where Integration_Flag__c=true and Batch_Flag__c=false and Order__c IN : orderList];
-                errorList=OrderAndOrderLineBatch_Helper.updateOrderAndInsertShareRecords(orderList,orderLineList);
-                //Sets "Batch_Flag__c" so that the same order/orderline record will not be pickup by batch again
-                List<Sobject> ordrAndOrdrLineLstTobeUpdtd=new List<Sobject>();
-                for(Order eachOrder:orderList){
-                    eachOrder.Batch_Flag__c=true;
-                    ordrAndOrdrLineLstTobeUpdtd.add(eachOrder);
-                }
-                for(Order_Line__c eachOrderLine:orderLineList){
-                    eachOrderLine.Batch_Flag__c=true;
-                    ordrAndOrdrLineLstTobeUpdtd.add(eachOrderLine);
-                }
-                if(!ordrAndOrdrLineLstTobeUpdtd.isEmpty()){
-                    // Update the records
-                    Database.SaveResult[] srList = Database.update(ordrAndOrdrLineLstTobeUpdtd, false);
-                    Integer lstIndex=0;
-                    // Iterate through each returned result
-                    for(Database.SaveResult sr : srList) {
-                        if (!sr.isSuccess()) {
-                            String message='';
-                            // Operation failed, so get all errors                
-                            for(Database.Error err : sr.getErrors()) {
-                                message+= err.getMessage();
-                            }
-                            errorList.add(OrderAndOrderLineBatch_Helper.getCustomErrorObj(ordrAndOrdrLineLstTobeUpdtd[lstIndex].Id,'Order','Update',message));
-                        }
-                        lstIndex++;
-                    }
-                    
-                }
-                
-                if(errorList!=null && !errorList.isEmpty()){
-                    finalErrorList.addAll(errorList);
-                    for(OrderAndOrderLineBatch_Helper.CustomError eachError:errorList){
-                        string errStr = eachError.id+','+eachError.objectName+','+eachError.operation+','+eachError.message +'\n';
-                        mainContent += errStr;
-                    }
-                }
-            }catch(Exception excpn){
-                errorList.add(OrderAndOrderLineBatch_Helper.getCustomErrorObj('','','','Exception occured in execute()==>At line:'+excpn.getLineNumber()+',Message:'+excpn.getMessage()));
+            List<Order_Line__c> orderLineList=[Select Id,Order__c,Order__r.AccountId,Order__r.Account.Global_Ultimate_Parent__r.OwnerId,OwnerId 
+                                               from Order_Line__c 
+                                               where Integration_Flag__c=true and Batch_Flag__c=false and Order__c IN : orderList];
+            List<OrderAndOrderLineBatch_Helper.CustomError> errorList=OrderAndOrderLineBatch_Helper.updateOrderAndInsertShareRecords(orderList,orderLineList);
+            if(errorList!=null && !errorList.isEmpty()){
+                finalErrorList.addAll(errorList);
             }
         }
         
@@ -78,7 +40,11 @@ public class OrderAndOrderLine_Batch implements Database.Batchable<sObject>,Data
     public void finish(Database.BatchableContext bc){
         // execute any post-processing operations
         if(finalErrorList!=null && !finalErrorList.isEmpty()){
-            OrderAndOrderLineBatch_Helper.sendEmail(mainContent);
+            for(OrderAndOrderLineBatch_Helper.CustomError eachError:finalErrorList){
+                string errStr = eachError.id+','+eachError.objectName+','+eachError.operation+','+eachError.message +'\n';
+                mainContent += errStr;
+            }
+            EmailUtil.sendEmailWithAttachment(mainContent,'ErrorList.csv',System.Label.Global_Parent_Owner_Account_Update_Batch_Notification_EmaildId,'OrderAndOrderLine_Batch Errors','PFA error file attached.');
         }
     }
 }

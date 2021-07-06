@@ -10,7 +10,7 @@ trigger AccountTrigger on Account (after insert,after update,before insert,befor
                     updateAccList.add(ac);
             }
             if(updateAccList != null && updateAccList.size()> 0)
-                       UpdateSubAccountGlobalUltimateParent.updateSubAccount(Trigger.new);
+                       UpdateSubAccountGlobalUltimateParent.updateSubAccount(updateAccList);
 
             AccountTriggerHelper.afterUpdate(Trigger.oldMap, Trigger.newMap);
             AccountTriggerHelper.updateOrderLines(trigger.new, trigger.oldMap);

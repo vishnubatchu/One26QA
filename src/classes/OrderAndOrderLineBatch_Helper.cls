@@ -6,26 +6,28 @@
 */
 public class OrderAndOrderLineBatch_Helper {
     
-    //This method updates order and insert order and orderline share records
+    /*This method updates order and insert order and orderline share records
+    *Also Sets "Batch_Flag__c" on order/orderline records
+	*/
     public static List<CustomError> updateOrderAndInsertShareRecords(List<Order> orderList,List<Order_Line__c>orderLineList){
         List<CustomError> errorList=new List<CustomError>();
         if((orderList!=null && !orderList.isEmpty()) || (orderLineList!=null && !orderLineList.isEmpty())){
             try{
                 Map<String,List<SObject>> orderupdateAndShareRecordsMap=getRcrdsTobeUpdatedOrInserted(orderList,orderLineList);
                 if(orderupdateAndShareRecordsMap!=null && !orderupdateAndShareRecordsMap.isEmpty()){
-                    List<Sobject> orderListTobeUpdated=new List<Sobject>();
+                    List<Sobject> listOfRecordsTobeUpdated=new List<Sobject>();
                     List<Sobject> listOfShareRecTobeInserted=new List<Sobject>();
                     if(orderupdateAndShareRecordsMap.containsKey('updateList') && orderupdateAndShareRecordsMap.get('updateList')!=null
                        && !orderupdateAndShareRecordsMap.get('updateList').isEmpty()){
-                           orderListTobeUpdated.addAll(orderupdateAndShareRecordsMap.get('updateList'));
+                           listOfRecordsTobeUpdated.addAll(orderupdateAndShareRecordsMap.get('updateList'));
                        }
                     if(orderupdateAndShareRecordsMap.containsKey('insertList') && orderupdateAndShareRecordsMap.get('insertList')!=null
                        && !orderupdateAndShareRecordsMap.get('insertList').isEmpty()){
                            listOfShareRecTobeInserted.addAll(orderupdateAndShareRecordsMap.get('insertList'));
                        }
-                    if(!orderListTobeUpdated.isEmpty()){
+                    if(!listOfRecordsTobeUpdated.isEmpty()){
                             // Update the records
-                            Database.SaveResult[] srList = Database.update(orderListTobeUpdated, false);
+                            Database.SaveResult[] srList = Database.update(listOfRecordsTobeUpdated, false);
                             Integer lstIndex=0;
                             // Iterate through each returned result
                             for(Database.SaveResult sr : srList) {
@@ -35,7 +37,7 @@ public class OrderAndOrderLineBatch_Helper {
                                     for(Database.Error err : sr.getErrors()) {
                                         message+= err.getMessage();
                                     }
-                                    errorList.add(new CustomError(orderListTobeUpdated[lstIndex].Id,'Order','Update',message));
+                                    errorList.add(new CustomError(listOfRecordsTobeUpdated[lstIndex].Id,listOfRecordsTobeUpdated[lstIndex].Id.getSObjectType().getDescribe().getName(),'Update',message));
                                 }
                                 lstIndex++;
                             }
@@ -85,16 +87,18 @@ public class OrderAndOrderLineBatch_Helper {
             List<Order> orderListTobeUpdated=new List<Order>();
             List<Sobject> orderShrListTobeInsrtd=new List<Sobject>();
             for(Order eachOrder:orderList){
+                Order orderRecTobeUpdated=new Order();
                 if(eachOrder.AccountId!=null && eachOrder.Account.Global_Ultimate_Parent__c!=null){
-                    Order orderRecTobeUpdated=new Order();
                     orderRecTobeUpdated.Id=eachOrder.Id;
                     orderRecTobeUpdated.Global_Ultimate_Account__c=eachOrder.Account.Global_Ultimate_Parent__c;
-                    orderListTobeUpdated.add(orderRecTobeUpdated);
                     if(eachOrder.OwnerId!=eachOrder.Account.Global_Ultimate_Parent__r.OwnerId){
                         orderShrListTobeInsrtd.add(new OrderShare(OrderId=eachOrder.Id,UserOrGroupId=eachOrder.Account.Global_Ultimate_Parent__r.OwnerId,
                                                                   RowCause='Manual',OrderAccessLevel='Read'));
                     }
                 }
+                //Sets "Batch_Flag__c"
+                orderRecTobeUpdated.Batch_Flag__c=true;
+                orderListTobeUpdated.add(orderRecTobeUpdated);
             }
             orderAndShareRecordsMap.put('updateList',orderListTobeUpdated);
             orderAndShareRecordsMap.put('insertList',orderShrListTobeInsrtd);
@@ -102,10 +106,11 @@ public class OrderAndOrderLineBatch_Helper {
         return orderAndShareRecordsMap;
     }
     
-    //This method get order line share records to be inserted
+    //This method get order line share records to be inserted and batchFlagOrderLineUpdateList
     public static Map<String,List<Sobject>> getOrderLineShareRecords(List<Order_Line__c> orderLineList){
         Map<String,List<Sobject>> orderLineShareRecordsMap=new Map<String,List<Sobject>>();
         if(orderLineList!=null && !orderLineList.isEmpty()){
+            List<Order_Line__c> batchFlagUpdateList=new List<Order_Line__c>();
             List<Sobject> orderLineShrListTobeInsrtd=new List<Sobject>();
             for(Order_Line__c eachOrderLine:orderLineList){
                 if(eachOrderLine.Order__c!=null && 
@@ -114,7 +119,11 @@ public class OrderAndOrderLineBatch_Helper {
                        orderLineShrListTobeInsrtd.add(new Order_Line__Share(ParentId=eachOrderLine.Id,UserOrGroupId=eachOrderLine.Order__r.Account.Global_Ultimate_Parent__r.OwnerId,
                                                                             RowCause='Manual',AccessLevel='Read'));
                    }
+                //Sets "Batch_Flag__c"
+                eachOrderLine.Batch_Flag__c=true;
+                batchFlagUpdateList.add(eachOrderLine);
             }
+            orderLineShareRecordsMap.put('updateList',batchFlagUpdateList);
             orderLineShareRecordsMap.put('insertList',orderLineShrListTobeInsrtd);
         }
         return orderLineShareRecordsMap;
@@ -142,36 +151,6 @@ public class OrderAndOrderLineBatch_Helper {
             finalReturnMap.put('updateList',recordsToBeUpdated);
             finalReturnMap.put('insertList',shareRecordsToBeInserted);
         }
-    }
-    
-    //This method sends email with attachment if batch fails to process any records 
-    public static void sendEmail(String csvContent){
-        Messaging.EmailFileAttachment csvAttcmnt = new Messaging.EmailFileAttachment ();
-        blob csvBlob = Blob.valueOf (csvContent);
-        string csvname= 'ErrorList.csv';
-        csvAttcmnt.setFileName (csvname);
-        csvAttcmnt.setBody (csvBlob);
-        Messaging.SingleEmailMessage mail = new Messaging.SingleEmailMessage();
-        List<String> toEmailIdList=new List<String>();
-        String toEmailIdStr=System.Label.Global_Parent_Owner_Account_Update_Batch_Notification_EmaildId;
-        if(toEmailIdStr!=null && toEmailIdStr.trim()!=''){
-            if(toEmailIdStr.contains(',')){
-                toEmailIdList=toEmailIdStr.split(',');
-            }else{
-                toEmailIdList.add(toEmailIdStr);
-            }
-        }
-        String[] toAddresses = toEmailIdList; 
-        mail.setToAddresses(toAddresses);
-        mail.setSubject('OrderAndOrderLine_Batch Failed');
-        mail.setPlainTextBody('PFA error file attached.');
-        mail.setFileAttachments (new Messaging.EmailFileAttachment []{csvAttcmnt});
-        Messaging.sendEmail(new Messaging.SingleEmailMessage[] { mail });
-    }
-    
-	//This method sends email with attachment if batch fails to process any records 
-    public static CustomError getCustomErrorObj(String id,String objectName,String operation,String message){
-        return new CustomError(id,objectName,operation,message);
     }
     
     public class CustomError

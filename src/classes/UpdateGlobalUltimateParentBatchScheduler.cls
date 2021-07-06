@@ -1,7 +1,7 @@
 global class UpdateGlobalUltimateParentBatchScheduler implements Schedulable{
     global void execute(SchedulableContext sc) 
     {
-            UpdateGlobalUltimateParentBatch batchObj = new UpdateGlobalUltimateParentBatch();
+            UpdateGlobalParentLookupsBatch batchObj = new UpdateGlobalParentLookupsBatch();
             Database.executeBatch(batchObj);
     }
 }
