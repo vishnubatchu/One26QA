@@ -1,7 +1,7 @@
 /**
 * Created by : Akhilesh
 * Date : 2nd June 2021
-* Description: This test class is for "UpdateGlobalParentLookupsBatch" and UpdateGlobalParentLookupsBatchHelper  
+* Description: This test class is for "UpdateGlobalParentLookupsBatch" and InsertSharedRecordOneTimeBatch  
 */
 @isTest
 public class UpdateGlobalParentLookupsBatchTest {
@@ -28,8 +28,10 @@ public class UpdateGlobalParentLookupsBatchTest {
         }
         insert testUserList;
         
-        Account globalParentAcc=new Account(Name='Global Parent Test Acc',ShippingCountry = 'US',Display_Shipping_Country__c ='United States', Display_Billing_Country__c = 'United States',RecordTypeId=Schema.SObjectType.Account.getRecordTypeInfosByDeveloperName().get('Global_Parent').getRecordTypeId(),OwnerId=testUserList[0].Id 	);
+        Account globalParentAcc=new Account(Name='Global Parent Test Acc3',ShippingCountry = 'US',Display_Shipping_Country__c ='United States', Display_Billing_Country__c = 'United States',RecordTypeId=Schema.SObjectType.Account.getRecordTypeInfosByDeveloperName().get('Global_Parent').getRecordTypeId(),OwnerId=testUserList[0].Id 	);
         insert globalParentAcc;
+      Account globalParentAcc2=new Account(Name='Global Parent Test Acc4',ShippingCountry = 'US',Display_Shipping_Country__c ='United States', Display_Billing_Country__c = 'United States',RecordTypeId=Schema.SObjectType.Account.getRecordTypeInfosByDeveloperName().get('Global_Parent').getRecordTypeId(),OwnerId=testUserList[0].Id 	);
+        insert globalParentAcc2;
       list<Account> accInsertList = new list<Account>();
       map<string,Account> accInsertMap = new map<string,Account>();
    
@@ -39,16 +41,18 @@ public class UpdateGlobalParentLookupsBatchTest {
                                      Org_ID__c= '2',OwnerId=testUserList[0].Id );
       
          insert siteAcc1;
+      siteAcc1.Global_Ultimate_Parent__c = globalParentAcc2.id;
+      update siteAcc1;
         List<Contact> contactList=new List<Contact>();
         for(integer i = 0 ; i < 10 ; i ++){
-            contactList.add(new Contact(LastName='Test Contact '+i,FirstName = 'test',AccountId=siteAcc1.Id,Display_Mailing_Country__c='United States',MailingCountry='United States'));
+            contactList.add(new Contact(LastName='Test Contact1 '+i,FirstName = 'test',AccountId=siteAcc1.Id,Display_Mailing_Country__c='United States',MailingCountry='United States'));
         }  
         insert contactList;
        
        List<Opportunity> oppList=new List<Opportunity>();
         for(integer i = 0 ; i < 5; i ++){
             oppList.add(new Opportunity(CloseDate=System.today(),AccountId=siteAcc1.Id,ForecastCategoryName='Pipeline',
-                                        Name='Test Opp '+i,StageName='Qualifying',Project_Name__c='Test',RecordTypeId= Schema.SObjectType.Opportunity.getRecordTypeInfosByDeveloperName().get('Aftermarket').getRecordTypeId()));
+                                        Name='Test Opp1 '+i,StageName='Qualifying',Project_Name__c='Test',RecordTypeId= Schema.SObjectType.Opportunity.getRecordTypeInfosByDeveloperName().get('Aftermarket').getRecordTypeId()));
         } 
         insert oppList;
         
@@ -60,7 +64,7 @@ public class UpdateGlobalParentLookupsBatchTest {
         
         List<Order> orderList=new List<Order>();
         for(integer i = 0 ; i < 5 ; i ++){
-            orderList.add(new Order(Legacy_Id__c='12345'+i,OpportunityId=oppList[i].Id,AccountId=oppList[i].AccountId,Name='Test order '+i,
+            orderList.add(new Order(Legacy_Id__c='12345'+i,OpportunityId=oppList[i].Id,AccountId=oppList[i].AccountId,Name='Test order1 '+i,
                                     EffectiveDate=System.today(),Status='Draft'));
         }
         insert orderList;
@@ -99,17 +103,24 @@ public class UpdateGlobalParentLookupsBatchTest {
         UpdateGlobalParentLookupsBatch batchObj = new UpdateGlobalParentLookupsBatch();
         batchObj.execute(null,scope);
        DataBase.executeBatch(batchObj);
-          UpdateGlobalUltimateParentBatchScheduler scbatchObj = new UpdateGlobalUltimateParentBatchScheduler();
-       // DataBase.executeBatch(batchObj,200);
-          Date today=System.today();
+      
+       
+    }
+        //This method tests the batch scheduler
+    @isTest static void UpdateGlobalParentLookupsBatchScheduler() {
+       Account parent = [select id , name from Account where name = 'Global Parent Test Acc3'];
+        Account child = [select id , name,Global_Ultimate_Parent__c from Account where name = 'Global Parent Test Acc4'];
+        child.Global_Ultimate_Parent__c = parent.id ;
+        update child;
+        Test.startTest();
+        UpdateGlobalParentLookupsBatch schObj = new UpdateGlobalParentLookupsBatch();
+        Date today=System.today();
         String CRON_EXP ='0 0 0 '+today.day()+' '+today.month()+' ? *'; 
-        String jobId = System.schedule('Schedule to update Account Name',CRON_EXP,scbatchObj);
+        String jobId = System.schedule('Schedule to update global parent',CRON_EXP,schObj);
+        Test.stopTest();
         CronTrigger ct = [SELECT Id, CronExpression, TimesTriggered, NextFireTime FROM CronTrigger WHERE id = :jobId];
         System.assertEquals(CRON_EXP, ct.CronExpression);
         System.assertEquals(0, ct.TimesTriggered);
-        Test.stopTest();
-        list<opportunity> oplist = [select id,Global_Ultimate_Account__c,Account.Global_Ultimate_Parent__c,Account.Global_Ultimate_Parent__r.OwnerId,Account.Changed_Global_Parent_Old_Owner__c,AccountId  from Opportunity where Global_Ultimate_Account__c = null ];
-        System.assertEquals(oplist.size(),0);
-       
+        
     }
 }

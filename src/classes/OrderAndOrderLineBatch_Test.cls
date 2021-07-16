@@ -1,6 +1,12 @@
+/*
+* Created by : Pooja U
+* Date : 23rd June 2021
+* Description: Test class for OrderAndOrderLine_Batch & OrderAndOrderLineBatch_Helper classes   
+*/
 @isTest
 private class OrderAndOrderLineBatch_Test {
-	 @testSetup static void setup() {
+    //This method creates test records once and which will be accessible for every test method in the test class
+    @testSetup static void setup() {
         Profile salesUserProfile = [SELECT Id FROM Profile WHERE Name = 'One II-VI Sales Rep' LIMIT 1];
         User usr = [Select id from User where Id = :UserInfo.getUserId()];
         List<User>  testUserList=new List<User>();
@@ -67,6 +73,7 @@ private class OrderAndOrderLineBatch_Test {
         insert orderLineList;
     }
     
+    //This method tests the OrderAndOrderLineBatch functionality 
     @isTest static void testOrderAndOrderLineBatch() {
         User testUser=[Select Id from User where lastName='User 1'];
         Test.startTest();
@@ -76,21 +83,23 @@ private class OrderAndOrderLineBatch_Test {
         List<Order> orderList=[Select Id from Order where Integration_Flag__c=true and Global_Ultimate_Account__c!=null];
         List<Order_Line__c> orderLineList=[Select Id from Order_Line__c where Integration_Flag__c=true];
         List<Order_Line__Share> orderLineShrList=[Select Id from Order_Line__Share where UserOrGroupId=:testUser.Id and AccessLevel='Read'
-                                         and RowCause='Manual' and ParentId in: orderLineList];
+                                                  and RowCause='Manual' and ParentId in: orderLineList];
         
         System.assertEquals(6,orderList.size());
         System.assertEquals(orderLineList.size(),orderLineShrList.size());
     }
     
-     @isTest static void testOrderAndOrderLineBatchScheduler() {
+    //This method tests the batch scheduler
+    @isTest static void testOrderAndOrderLineBatchScheduler() {
         Test.startTest();
-        OrderAndOrderLineBatch_Scheduler schObj = new OrderAndOrderLineBatch_Scheduler();
+        OrderAndOrderLine_Batch schObj = new OrderAndOrderLine_Batch();
         Date today=System.today();
         String CRON_EXP ='0 0 0 '+today.day()+' '+today.month()+' ? *'; 
         String jobId = System.schedule('Schedule to update Account Name',CRON_EXP,schObj);
+        Test.stopTest();
         CronTrigger ct = [SELECT Id, CronExpression, TimesTriggered, NextFireTime FROM CronTrigger WHERE id = :jobId];
         System.assertEquals(CRON_EXP, ct.CronExpression);
         System.assertEquals(0, ct.TimesTriggered);
-        Test.stopTest();
+        
     }
 }

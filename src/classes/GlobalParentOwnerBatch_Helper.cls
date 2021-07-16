@@ -97,7 +97,7 @@ public class GlobalParentOwnerBatch_Helper {
         if(accountList!=null && !accountList.isEmpty()){
             List<Sobject> cntctShrListTobeInsrtd=new List<ContactShare>();
             List<Sobject> cntctShrListTobeDltd=new List<ContactShare>();
-            for(Contact eachCon:[Select Id,Account.Global_Parent_Previous_Owner__c,Account.Changed_Global_Parent_Old_Owner__c,Account.Global_Ultimate_Parent__r.OwnerId,OwnerId,
+            for(Contact eachCon:[Select Id,Account.RecordType.Name,Account.OwnerId,Account.Global_Parent_Previous_Owner__c,Account.Changed_Global_Parent_Old_Owner__c,Account.Global_Ultimate_Parent__r.OwnerId,OwnerId,
                                  (Select Id,ContactId,UserOrGroupId  from Shares where RowCause='Manual' and ContactAccessLevel='Read' and UserOrGroupId IN :previousOwnerIdSet) 
                                  from Contact 
                                  where AccountId IN: accountList]){
@@ -110,8 +110,9 @@ public class GlobalParentOwnerBatch_Helper {
                         }  
                     }
                 }
-                if(eachCon.OwnerId!=eachCon.Account.Global_Ultimate_Parent__r.OwnerId){
-                    cntctShrListTobeInsrtd.add(new ContactShare(ContactId=eachCon.Id,UserOrGroupId=eachCon.Account.Global_Ultimate_Parent__r.OwnerId,
+                Id newOwnerId=(eachCon.Account.RecordType.Name=='Global Parent')?eachCon.Account.OwnerId:eachCon.Account.Global_Ultimate_Parent__r.OwnerId;                     
+                if(eachCon.OwnerId!=newOwnerId){
+                    cntctShrListTobeInsrtd.add(new ContactShare(ContactId=eachCon.Id,UserOrGroupId=newOwnerId,
                                                                 RowCause='Manual',ContactAccessLevel='Read'));
                 }
             }

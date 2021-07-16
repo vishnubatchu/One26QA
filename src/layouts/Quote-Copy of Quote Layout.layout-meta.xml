@@ -27,7 +27,7 @@
                 <field>Status</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Required</behavior>
                 <field>PrimarySalesperson__c</field>
             </layoutItems>
             <layoutItems>

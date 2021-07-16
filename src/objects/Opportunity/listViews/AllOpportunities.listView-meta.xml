@@ -3,6 +3,7 @@
     <fullName>AllOpportunities</fullName>
     <columns>Number__c</columns>
     <columns>OPPORTUNITY.NAME</columns>
+    <columns>OPPORTUNITY.LAST_UPDATE</columns>
     <columns>ACCOUNT.NAME</columns>
     <columns>OPPORTUNITY.AMOUNT</columns>
     <columns>OPPORTUNITY.CLOSE_DATE</columns>
@@ -15,7 +16,6 @@
     <columns>CORE.USERS.FIRST_NAME</columns>
     <columns>PO_Number__c</columns>
     <columns>OPPORTUNITY.RECORDTYPE</columns>
-    <columns>Open_Won_or_Lost__c</columns>
     <filterScope>Everything</filterScope>
     <label>All Opportunities</label>
 </ListView>

@@ -17,5 +17,5 @@
     <protected>false</protected>
     <showsLocation>false</showsLocation>
     <showsStatus>false</showsStatus>
-    <url>https://na1.salesforce.com/00O30000006uPPp?pv0={!Account.Name}&amp;pv1={!Account.Name}</url>
+    <url>/00O2f000000VGo7?pv0={!Account.Name}&amp;pv1={!Account.Name}</url>
 </WebLink>

@@ -1,5 +1,11 @@
+/*
+     * Created by : Pooja U
+     * Date : 26th May 2021
+     * Description: Test class for GlobalParentOwnerBatch & GlobalParentOwnerBatch_Helper classes
+     */
 @isTest
 private class GlobalParentOwnerBatch_Test {
+    //This method creates test records once and which will be accessible for every test method in the test class 
     @testSetup static void setup() {
         Profile salesUserProfile = [SELECT Id FROM Profile WHERE Name = 'One II-VI Sales Rep' LIMIT 1];
         //UserRole faeRole = [SELECT Id FROM UserRole WHERE Name LIKE  '%FAE%' LIMIT 1];
@@ -98,6 +104,7 @@ Ship_To_Address__c=accList[6].Id,Ship_To_Customer__c=accList[i].Id));*/
         insert caseList;
     }
     
+    //This method tests the batch functionality on Global Parent Account Owner change
     @isTest static void testGlobalParentOwnerBatch() {
         User sysAdmin=[Select Id from User where userName='testuser1@finisar.com'];
         User testUser=[Select Id from User where lastName='User 2'];
@@ -117,6 +124,7 @@ Ship_To_Address__c=accList[6].Id,Ship_To_Customer__c=accList[i].Id));*/
         System.assertEquals(cntctList.size(),cntctShrList.size());
     }
     
+    //This method tests the batch functionality on Global Parent Account change
     @isTest static void testGlobalParentAccountChange() {
         Account globalParentAcc=[Select Id,OwnerId from Account where Name='Global Parent Test Acc'];
         Account globalParentAcc1=[Select Id,OwnerId from Account where Name='Global Parent Test Acc1'];
@@ -136,6 +144,7 @@ Ship_To_Address__c=accList[6].Id,Ship_To_Customer__c=accList[i].Id));*/
         System.assertEquals(cntctList.size(),cntctShrList.size());
     }
     
+    //This method tests the batch scheduler
     @isTest static void testGlobalParentOwnerBatchScheduler() {
         User sysAdmin=[Select Id from User where userName='testuser1@finisar.com'];
         User testUser=[Select Id from User where lastName='User 2'];
@@ -145,14 +154,15 @@ Ship_To_Address__c=accList[6].Id,Ship_To_Customer__c=accList[i].Id));*/
             update globalParentAcc;
         }
         Test.startTest();
-        GlobalParentOwnerBatch_Scheduler schObj = new GlobalParentOwnerBatch_Scheduler();
+        GlobalParentOwner_Batch schObj = new GlobalParentOwner_Batch();
         Date today=System.today();
         String CRON_EXP ='0 0 0 '+today.day()+' '+today.month()+' ? *'; 
         String jobId = System.schedule('Schedule to update Account Name',CRON_EXP,schObj);
+        Test.stopTest();
         CronTrigger ct = [SELECT Id, CronExpression, TimesTriggered, NextFireTime FROM CronTrigger WHERE id = :jobId];
         System.assertEquals(CRON_EXP, ct.CronExpression);
         System.assertEquals(0, ct.TimesTriggered);
-        Test.stopTest();
+        
     }
         
 }

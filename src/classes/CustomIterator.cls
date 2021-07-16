@@ -1,3 +1,8 @@
+/**
+* Created by : Akhilesh
+* Date : 2nd June 2021
+* Description: This is custom iteretor for InsertSharedRecordIterable and updateGlobalParentCustomIterable 
+*/
 public class CustomIterator 
   implements Iterator<sObject>{ 
  

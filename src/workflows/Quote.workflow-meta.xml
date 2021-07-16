@@ -50,7 +50,7 @@
             <type>creator</type>
         </recipients>
         <recipients>
-            <field>Owner_Email__c</field>
+            <field>OwnerEmail__c</field>
             <type>email</type>
         </recipients>
         <senderType>CurrentUser</senderType>
@@ -176,7 +176,10 @@
     <fieldUpdates>
         <fullName>Update_Name_Field</fullName>
         <field>Name</field>
-        <formula>Account__r.Name +&apos;-Quote&apos;</formula>
+        <formula>IF(
+TEXT($User.Legacy_Company__c) = &quot;Finisar&quot;, Account__r.Name +&apos;-Quote&apos;,
+ Opportunity.Name + &quot;-Quote&quot;
+)</formula>
         <name>Update Name Field</name>
         <notifyAssignee>false</notifyAssignee>
         <operation>Formula</operation>

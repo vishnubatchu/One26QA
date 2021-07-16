@@ -5,7 +5,7 @@
      * Opportunities, Quotes, Orders, Order Lines and Cases. And deletes share records for the previous owner of the Global Parent 
      * from all Private records within the global hierarchy.
      */
-public class GlobalParentOwner_Batch implements Database.Batchable<sObject>,Database.Stateful{
+public class GlobalParentOwner_Batch implements Database.Batchable<sObject>,Database.Stateful,Schedulable{
     List<GlobalParentOwnerBatch_Helper.CustomError> finalErrorList=new List<GlobalParentOwnerBatch_Helper.CustomError>();
 	string csvHeader = 'Record Id,Object Name,Operation, Error \n';
     string mainContent = csvHeader;
@@ -73,4 +73,10 @@ public class GlobalParentOwner_Batch implements Database.Batchable<sObject>,Data
         }
     }
     
+    //This method schedules the batch to run everyday
+    public void execute(SchedulableContext sc) 
+    {
+            GlobalParentOwner_Batch batchObj = new GlobalParentOwner_Batch();
+            Database.executeBatch(batchObj);
+    }
 }

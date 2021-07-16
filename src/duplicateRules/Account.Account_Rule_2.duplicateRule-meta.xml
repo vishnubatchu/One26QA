@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <DuplicateRule xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-    <actionOnInsert>Block</actionOnInsert>
-    <actionOnUpdate>Block</actionOnUpdate>
-    <alertText>The Account you are attempting to create or edit may already be in the system. Check the Accounts listed below for the one you are trying to create or edit. If you don’t see any, please email Amanda Toups (Amanda.Toups@II-VI.com) for assistance.</alertText>
+    <actionOnInsert>Allow</actionOnInsert>
+    <actionOnUpdate>Allow</actionOnUpdate>
+    <alertText xsi:nil="true"/>
     <description>Uses matching rule: &quot;Account Rule #2&quot;.</description>
     <duplicateRuleFilter>
         <booleanFilter xsi:nil="true"/>
@@ -21,6 +21,8 @@
     </duplicateRuleMatchRules>
     <isActive>true</isActive>
     <masterLabel>Account Rule #2</masterLabel>
+    <operationsOnInsert>Report</operationsOnInsert>
+    <operationsOnUpdate>Report</operationsOnUpdate>
     <securityOption>BypassSharingRules</securityOption>
     <sortOrder>2</sortOrder>
 </DuplicateRule>

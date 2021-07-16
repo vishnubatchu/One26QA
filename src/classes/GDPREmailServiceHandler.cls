@@ -50,13 +50,13 @@ global class GDPREmailServiceHandler implements Messaging.InboundEmailHandler {
         }
         IF(!outbound && contactID!=Null) {
             system.debug('Inside Inbound==');
-            system.debug('Email_CC__c==='+email.ccAddresses);
+            //system.debug('Email_CC__c==='+email.ccAddresses);
             GDPR_Notification__c gdprNotificationObj = New GDPR_Notification__c();
             gdprNotificationObj.Email_Body__c = email.plainTextBody;
             gdprNotificationObj.Email_BCC__c = Label.GDPR_Email_Service_Address;
             gdprNotificationObj.Email_Subject__c = email.subject;
             gdprNotificationObj.Email_Type__c = 'Inbound';
-            gdprNotificationObj.Email_CC__c = String.join(email.ccAddresses,',');
+           // gdprNotificationObj.Email_CC__c = String.join(email.ccAddresses,',');
             gdprNotificationObj.Email_To__c = headerDetails.get('To');
             gdprNotificationObj.Contact__c =contactId;
             gdprNotificationObj.Email_Date__c = System.now();

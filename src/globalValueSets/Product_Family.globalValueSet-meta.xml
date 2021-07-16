@@ -2626,11 +2626,6 @@
         <label>Driver</label>
     </customValue>
     <customValue>
-        <fullName>M- Ball</fullName>
-        <default>false</default>
-        <label>M- Ball</label>
-    </customValue>
-    <customValue>
         <fullName>UV Scanner</fullName>
         <default>false</default>
         <label>UV Scanner</label>
@@ -2639,11 +2634,6 @@
         <fullName>C50G-1X1</fullName>
         <default>false</default>
         <label>C50G-1X1</label>
-    </customValue>
-    <customValue>
-        <fullName>UNCOOLED 980 PUMPS</fullName>
-        <default>false</default>
-        <label>UNCOOLED 980 PUMPS</label>
     </customValue>
     <customValue>
         <fullName>Fiber Laser FBG</fullName>
@@ -2656,14 +2646,39 @@
         <label>OBSOLETE - PF</label>
     </customValue>
     <customValue>
-        <fullName>C50G-2X1</fullName>
-        <default>false</default>
-        <label>C50G-2X1</label>
-    </customValue>
-    <customValue>
         <fullName>C-CP100G-4X1</fullName>
         <default>false</default>
         <label>C-CP100G-4X1</label>
+    </customValue>
+    <customValue>
+        <fullName>CC61</fullName>
+        <default>false</default>
+        <label>CC61</label>
+    </customValue>
+    <customValue>
+        <fullName>XMF-R</fullName>
+        <default>false</default>
+        <label>XMF-R</label>
+    </customValue>
+    <customValue>
+        <fullName>XMF-H</fullName>
+        <default>false</default>
+        <label>XMF-H</label>
+    </customValue>
+    <customValue>
+        <fullName>M- Ball</fullName>
+        <default>false</default>
+        <label>M- Ball</label>
+    </customValue>
+    <customValue>
+        <fullName>UNCOOLED 980 PUMPS</fullName>
+        <default>false</default>
+        <label>UNCOOLED 980 PUMPS</label>
+    </customValue>
+    <customValue>
+        <fullName>C50G-2X1</fullName>
+        <default>false</default>
+        <label>C50G-2X1</label>
     </customValue>
     <customValue>
         <fullName>PR-Jig</fullName>
@@ -2691,24 +2706,189 @@
         <label>CC60</label>
     </customValue>
     <customValue>
-        <fullName>CC61</fullName>
-        <default>false</default>
-        <label>CC61</label>
-    </customValue>
-    <customValue>
         <fullName>MIRRORS</fullName>
         <default>false</default>
         <label>MIRRORS</label>
     </customValue>
     <customValue>
-        <fullName>XMF-R</fullName>
+        <fullName>03 REPAIRS</fullName>
         <default>false</default>
-        <label>XMF-R</label>
+        <label>03 REPAIRS</label>
     </customValue>
     <customValue>
-        <fullName>XMF-H</fullName>
+        <fullName>PC61</fullName>
         <default>false</default>
-        <label>XMF-H</label>
+        <label>PC61</label>
+    </customValue>
+    <customValue>
+        <fullName>SY61</fullName>
+        <default>false</default>
+        <label>SY61</label>
+    </customValue>
+    <customValue>
+        <fullName>CC62</fullName>
+        <default>false</default>
+        <label>CC62</label>
+    </customValue>
+    <customValue>
+        <fullName>STRIP + RECOAT</fullName>
+        <default>false</default>
+        <label>STRIP + RECOAT</label>
+    </customValue>
+    <customValue>
+        <fullName>DETECTOR</fullName>
+        <default>false</default>
+        <label>DETECTOR</label>
+    </customValue>
+    <customValue>
+        <fullName>G08</fullName>
+        <default>false</default>
+        <label>G08</label>
+    </customValue>
+    <customValue>
+        <fullName>OM OPTIONS/SPARES/DOCUMENTATION</fullName>
+        <default>false</default>
+        <label>OM OPTIONS/SPARES/DOCUMENTATION</label>
+    </customValue>
+    <customValue>
+        <fullName>BEAM GUIDING OPTICS</fullName>
+        <default>false</default>
+        <label>BEAM GUIDING OPTICS</label>
+    </customValue>
+    <customValue>
+        <fullName>NL - ROHS COMPLIANT-MI</fullName>
+        <default>false</default>
+        <label>NL - ROHS COMPLIANT-MI</label>
+    </customValue>
+    <customValue>
+        <fullName>PHOTODIODES</fullName>
+        <default>false</default>
+        <label>PHOTODIODES</label>
+    </customValue>
+    <customValue>
+        <fullName>MM + SM LD BARS</fullName>
+        <default>false</default>
+        <label>MM + SM LD BARS</label>
+    </customValue>
+    <customValue>
+        <fullName>11 450 TESLA</fullName>
+        <default>false</default>
+        <label>11 450 TESLA</label>
+    </customValue>
+    <customValue>
+        <fullName>14 COLLECTOR MIRROR</fullName>
+        <default>false</default>
+        <label>14 COLLECTOR MIRROR</label>
+    </customValue>
+    <customValue>
+        <fullName>17 Mtr Hsg</fullName>
+        <default>false</default>
+        <label>17 Mtr Hsg</label>
+    </customValue>
+    <customValue>
+        <fullName>BILLET</fullName>
+        <default>false</default>
+        <label>BILLET</label>
+    </customValue>
+    <customValue>
+        <fullName>KLA</fullName>
+        <default>false</default>
+        <label>KLA</label>
+    </customValue>
+    <customValue>
+        <fullName>MIRROR</fullName>
+        <default>false</default>
+        <label>MIRROR</label>
+    </customValue>
+    <customValue>
+        <fullName>MITSUI</fullName>
+        <default>false</default>
+        <label>MITSUI</label>
+    </customValue>
+    <customValue>
+        <fullName>OTS</fullName>
+        <default>false</default>
+        <label>OTS</label>
+    </customValue>
+    <customValue>
+        <fullName>PANADYN</fullName>
+        <default>false</default>
+        <label>PANADYN</label>
+    </customValue>
+    <customValue>
+        <fullName>PFMOOTH</fullName>
+        <default>false</default>
+        <label>PFMOOTH</label>
+    </customValue>
+    <customValue>
+        <fullName>PFSERV</fullName>
+        <default>false</default>
+        <label>PFSERV</label>
+    </customValue>
+    <customValue>
+        <fullName>R&amp;D</fullName>
+        <default>false</default>
+        <label>R&amp;D</label>
+    </customValue>
+    <customValue>
+        <fullName>SHENZEN</fullName>
+        <default>false</default>
+        <label>SHENZEN</label>
+    </customValue>
+    <customValue>
+        <fullName>SY62</fullName>
+        <default>false</default>
+        <label>SY62</label>
+    </customValue>
+    <customValue>
+        <fullName>TPG</fullName>
+        <default>false</default>
+        <label>TPG</label>
+    </customValue>
+    <customValue>
+        <fullName>T-SFP28</fullName>
+        <default>false</default>
+        <label>T-SFP28</label>
+    </customValue>
+    <customValue>
+        <fullName>WSS-DLP1</fullName>
+        <default>false</default>
+        <label>WSS-DLP1</label>
+    </customValue>
+    <customValue>
+        <fullName>WSS-DLP3</fullName>
+        <default>false</default>
+        <label>WSS-DLP3</label>
+    </customValue>
+    <customValue>
+        <fullName>WSS-DLP4</fullName>
+        <default>false</default>
+        <label>WSS-DLP4</label>
+    </customValue>
+    <customValue>
+        <fullName>WSS-DSP2</fullName>
+        <default>false</default>
+        <label>WSS-DSP2</label>
+    </customValue>
+    <customValue>
+        <fullName>WSS-DSP3</fullName>
+        <default>false</default>
+        <label>WSS-DSP3</label>
+    </customValue>
+    <customValue>
+        <fullName>WSS-QLP1</fullName>
+        <default>false</default>
+        <label>WSS-QLP1</label>
+    </customValue>
+    <customValue>
+        <fullName>CFP2-DCO</fullName>
+        <default>false</default>
+        <label>CFP2-DCO</label>
+    </customValue>
+    <customValue>
+        <fullName>DESUPP</fullName>
+        <default>false</default>
+        <label>DESUPP</label>
     </customValue>
     <masterLabel>Product Family</masterLabel>
     <sorted>false</sorted>

@@ -3,7 +3,7 @@
     <fullName>Salesforce_Legacy_Id__c</fullName>
     <externalId>true</externalId>
     <label>Salesforce Legacy Id</label>
-    <length>30</length>
+    <length>200</length>
     <required>false</required>
     <trackHistory>false</trackHistory>
     <type>Text</type>

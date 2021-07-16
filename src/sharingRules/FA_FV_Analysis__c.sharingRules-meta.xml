@@ -14,4 +14,17 @@
             <value>.</value>
         </criteriaItems>
     </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>WSS_Quality_admin_Sharing</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>WSS Quality admin Sharing</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>Quality_Admin_WSS</roleAndSubordinatesInternal>
+        </sharedTo>
+        <criteriaItems>
+            <field>OwnerId</field>
+            <operation>notEqual</operation>
+            <value>null</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
 </SharingRules>

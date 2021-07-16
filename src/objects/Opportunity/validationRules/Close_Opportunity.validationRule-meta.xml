@@ -4,13 +4,19 @@
     <active>true</active>
     <description>To Close won an opportunity, parent account must be of customer type</description>
     <errorConditionFormula>AND(
-ISCHANGED(StageName),
+OR(
+ISCHANGED(AccountId),
+ISCHANGED(StageName)
+),
 TEXT(StageName)=&quot;Closed Won&quot;,
-NOT( TEXT(Account.Type)=&quot;Customer&quot;),
+OR(
+ISBLANK(Account.Source_System_Id__c),
+TEXT(Account.Status__c)!=&quot;Active&quot;
+),
 OR(
 RecordType.DeveloperName =&quot;Customizable_Standard_Part&quot;,
 RecordType.DeveloperName =&quot;Custom_Part&quot;
 )
 )</errorConditionFormula>
-    <errorMessage>To Close Won this opportunity, the parent account must be of Customer  for the Type field</errorMessage>
+    <errorMessage>To Close Won this opportunity, the parent account must be active and have a source system Id</errorMessage>
 </ValidationRule>

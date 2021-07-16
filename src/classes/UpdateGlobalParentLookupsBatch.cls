@@ -8,7 +8,7 @@
 * Quote.Global_Ultimate_Account__c, and Order.Global_Ultimate_Account__c to reflect the Account’s Global_Ultimate_Parent__c
 * when IsOneTimeBatch custom label value True then it will run for one time activity and when value is fall it will run for daily schedule
 */
-public class UpdateGlobalParentLookupsBatch implements Database.Batchable <sObject>,Database.Stateful{ 
+public class UpdateGlobalParentLookupsBatch implements Database.Batchable <sObject>,Database.Stateful,Schedulable{ 
     public Database.SaveResult[] finalsaveResult ; 
     List<GlobalParentOwnerBatch_Helper.CustomError> errorList= new List<GlobalParentOwnerBatch_Helper.CustomError>();
     string csvHeader = 'Record Id,Object Name,Operation, Error \n';
@@ -24,6 +24,7 @@ public class UpdateGlobalParentLookupsBatch implements Database.Batchable <sObje
     {
         list<Account> acSharing = new list<Account>();
         list<sobject> finalUpdateList = new list<sObject>();
+        set<sobject> updateSet = new set<sObject>();
         for(sObject obj : scope)
         {
             switch on obj
@@ -31,23 +32,24 @@ public class UpdateGlobalParentLookupsBatch implements Database.Batchable <sObje
                 when Opportunity opp
                 {
                     opp.Global_Ultimate_Account__c = opp.Account.Global_Ultimate_Parent__c ;
-                    finalUpdateList.add(opp);
+                    updateSet.add(opp);
                     acSharing.add(opp.Account);
                 }
                 when Order ord
                 {
                     ord.Global_Ultimate_Account__c = ord.Account.Global_Ultimate_Parent__c ;
-                    finalUpdateList.add(ord);
+                    updateSet.add(ord);
                     acSharing.add(ord.Account);
                 }
                 when Quote qt
                 {
                     qt.Global_Ultimate_Account__c = qt.Account.Global_Ultimate_Parent__c ;
-                    finalUpdateList.add(qt);
+                    updateSet.add(qt);
                     acSharing.add(qt.Account);
                 }
             }
         }
+        finalUpdateList.addAll(updateSet);
         Database.SaveResult[] srList = Database.update(finalUpdateList, false); 
         for (Database.SaveResult sr : srList) {
             if (!sr.isSuccess()) {
@@ -68,14 +70,12 @@ public class UpdateGlobalParentLookupsBatch implements Database.Batchable <sObje
                 errorList.addAll(GlobalParentOwnerBatch_Helper.deleteAndInsertShareRecords(acSharing,false));
             }
             for(Account ac : accSet){
-                if(System.Label.IsOneTimeBatch  == 'True'){
                     ac.Global_Parent_Updated__c = false;
                     ac.Changed_Global_Parent_Old_Owner__c = null;
-                }
-                ac.oneTimeBatchFlag__c = True;
                 updateOnetimebatchFlag.add(ac);
             }
             Database.SaveResult[] acs = Database.update(updateOnetimebatchFlag, false); 
+              
         }
     }
     public void finish(Database.BatchableContext BC) {
@@ -84,12 +84,19 @@ public class UpdateGlobalParentLookupsBatch implements Database.Batchable <sObje
                 string errStr = eachError.id+','+eachError.objectName+','+eachError.operation+','+eachError.message +'\n';
                 mainContent += errStr;
             }
-            EmailUtil.sendEmailWithAttachment(mainContent,'ErrorList.csv',System.Label.Global_Parent_Owner_Account_Update_Batch_Notification_EmaildId,'GlobalParentOwner_Batch Errors','PFA error file attached.');
+            EmailUtil.sendEmailWithAttachment(mainContent,'ErrorList.csv',System.Label.Global_Parent_Owner_Account_Update_Batch_Notification_EmaildId,'UpdateGlobalParentLookupsBatch Errors','PFA error file attached.');
         }  
         // calling "InsertSharedRecordOneTimeBatch" batch for inserting share record            
         if(System.Label.IsOneTimeBatch  == 'True'){
             InsertSharedRecordOneTimeBatch ex = new InsertSharedRecordOneTimeBatch();
             database.executeBatch(ex,200);
         }
+    }
+    
+     //This method schedules the batch to run everyday
+    public void execute(SchedulableContext sc) 
+    {
+            UpdateGlobalParentLookupsBatch batchObj = new UpdateGlobalParentLookupsBatch();
+            Database.executeBatch(batchObj);
     }
 }

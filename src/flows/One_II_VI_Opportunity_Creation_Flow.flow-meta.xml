@@ -2,9 +2,333 @@
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <apiVersion>52.0</apiVersion>
     <assignments>
+        <name>Assign</name>
+        <label>Assign</label>
+        <locationX>1904</locationX>
+        <locationY>191</locationY>
+        <assignmentItems>
+            <assignToReference>rvarCustomerAccount.Name</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Customer_Top_Level_Account_Name</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>rvarCustomerAccount.Group_Level_Region__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Region</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>rvarCustomerAccount.Display_Billing_Country__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Display_Billing_Country</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>rvarCustomerAccount.Display_Shipping_Country__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Display_Shipping_Country</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>rvarCustomerAccount.BillingStreet</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>GlobalBillingAddress.street</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>rvarCustomerAccount.BillingCity</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>GlobalBillingAddress.city</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>rvarCustomerAccount.BillingState</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>GlobalBillingAddress.province</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>rvarCustomerAccount.BillingPostalCode</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>GlobalBillingAddress.postalCode</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>rvarCustomerAccount.BillingCountry</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>GlobalBillingAddress.country</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>rvarGlobalAccount.BillingStreet</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>GlobalBillingAddress.street</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>rvarGlobalAccount.BillingState</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>GlobalBillingAddress.province</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>rvarGlobalAccount.BillingCity</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>GlobalBillingAddress.city</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>rvarGlobalAccount.BillingPostalCode</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>GlobalBillingAddress.postalCode</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>rvarGlobalAccount.BillingCountry</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>GlobalBillingAddress.country</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>rvarGlobalAccount.Name</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Global_Parent_Account_0</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>rvarGlobalAccount.RecordTypeId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>varGlobalAccountRecTId</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>rvarGlobalAccount.Group_Level_Region__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Region</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>rvarOpportunity.RecordTypeId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Opportunity_Record_Type</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>rvarOpportunity.Name</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Opportunity_Name</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>rvarOpportunity.CloseDate</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Close_Date</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>rvarOpportunity.Amount</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Opportunity_Amount</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>rvarOpportunity.ITAR__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>ITAR_picklist</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>rvarOpportunity.REACH__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>REACH_Picklist</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>rvarOpportunity.Project_Name__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Project_Name</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>rvarOpportunity.Sales_Type__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Sales_Type</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>rvarOpportunity.CurrencyIsoCode</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Currency_Selector</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>rvarOpportunity.Marlow_Product_BU__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Marlow_BU</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>createCustomer</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Create_Customer</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>CreateOppty</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Create_Opportunity</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>rvarOpportunity.Qual_Required__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Customer_Qual_Req</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>rvarOpportunity.StageName</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>OpportunityStage</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>rvarGlobalAccount.Display_Billing_Country__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Display_Billing_Country</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>rvarGlobalAccount.Display_Shipping_Country__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Display_Shipping_Country</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>rvarGlobalAccount.Type</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Prospect</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>rvarCustomerAccount.ShippingStreet</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>GlobalShippingAddress.street</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>rvarCustomerAccount.ShippingState</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>GlobalShippingAddress.province</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>rvarCustomerAccount.ShippingCity</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>GlobalShippingAddress.city</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>rvarCustomerAccount.ShippingCountry</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>GlobalShippingAddress.country</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>rvarCustomerAccount.ShippingPostalCode</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>GlobalShippingAddress.postalCode</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>getGlobalAccounts.ShippingStreet</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>GlobalShippingAddress.street</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>getGlobalAccounts.ShippingCity</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>GlobalShippingAddress.city</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>getGlobalAccounts.ShippingState</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>GlobalShippingAddress.province</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>getGlobalAccounts.ShippingPostalCode</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>GlobalShippingAddress.postalCode</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>getGlobalAccounts.ShippingCountry</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>GlobalShippingAddress.country</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>rvarCustomerAccount.RecordTypeId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>AccountRecordType</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>CreateGlobalAccount</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
         <name>AssignAccountId</name>
         <label>AssignAccountId</label>
-        <locationX>2638</locationX>
+        <locationX>2944</locationX>
         <locationY>320</locationY>
         <assignmentItems>
             <assignToReference>rvarOpportunity.AccountId</assignToReference>
@@ -27,8 +351,8 @@
     <assignments>
         <name>AssignAccountInformation</name>
         <label>AssignAccountInformation</label>
-        <locationX>967</locationX>
-        <locationY>476</locationY>
+        <locationX>1504</locationX>
+        <locationY>417</locationY>
         <assignmentItems>
             <assignToReference>varCustomerAccountId</assignToReference>
             <operator>Assign</operator>
@@ -44,14 +368,14 @@
             </value>
         </assignmentItems>
         <connector>
-            <targetReference>WhichLegacyOrg</targetReference>
+            <targetReference>Initial_Creation_Screen</targetReference>
         </connector>
     </assignments>
     <assignments>
         <name>AssignAccountInformation_0</name>
         <label>AssignAccountInformation</label>
-        <locationX>1231</locationX>
-        <locationY>554</locationY>
+        <locationX>1676</locationX>
+        <locationY>552</locationY>
         <assignmentItems>
             <assignToReference>varGlobalAccountId</assignToReference>
             <operator>Assign</operator>
@@ -67,13 +391,13 @@
             </value>
         </assignmentItems>
         <connector>
-            <targetReference>WhichLegacyOrg</targetReference>
+            <targetReference>Initial_Creation_Screen</targetReference>
         </connector>
     </assignments>
     <assignments>
         <name>assignGlobalAccount</name>
         <label>assignGlobalAccount</label>
-        <locationX>2243</locationX>
+        <locationX>2549</locationX>
         <locationY>668</locationY>
         <assignmentItems>
             <assignToReference>varGlobalAccountId</assignToReference>
@@ -103,7 +427,7 @@
     <assignments>
         <name>assignGlobalAccount_0</name>
         <label>assignGlobalAccount</label>
-        <locationX>2124</locationX>
+        <locationX>2430</locationX>
         <locationY>334</locationY>
         <assignmentItems>
             <assignToReference>varGlobalAccountId</assignToReference>
@@ -133,8 +457,8 @@
     <assignments>
         <name>assignGlobalAccount_0_0</name>
         <label>assignGlobalAccount</label>
-        <locationX>2128</locationX>
-        <locationY>223</locationY>
+        <locationX>2251</locationX>
+        <locationY>9</locationY>
         <assignmentItems>
             <assignToReference>varGlobalAccountId</assignToReference>
             <operator>Assign</operator>
@@ -163,7 +487,7 @@
     <assignments>
         <name>AssignGlobalParentID</name>
         <label>AssignGlobalParentID</label>
-        <locationX>872</locationX>
+        <locationX>1178</locationX>
         <locationY>348</locationY>
         <assignmentItems>
             <assignToReference>varGlobalAccountRecTId</assignToReference>
@@ -177,10 +501,10 @@
         </connector>
     </assignments>
     <assignments>
-        <name>assignOpptyId</name>
-        <label>assignOpptyId</label>
-        <locationX>2764</locationX>
-        <locationY>304</locationY>
+        <name>AssignOpportunityId</name>
+        <label>AssignOpportunityId</label>
+        <locationX>3067</locationX>
+        <locationY>311</locationY>
         <assignmentItems>
             <assignToReference>varOpportunityId</assignToReference>
             <operator>Assign</operator>
@@ -195,8 +519,8 @@
     <assignments>
         <name>AssignStandardOpptyRectId</name>
         <label>AssignStandardOpptyRectId</label>
-        <locationX>680</locationX>
-        <locationY>520</locationY>
+        <locationX>1148</locationX>
+        <locationY>502</locationY>
         <assignmentItems>
             <assignToReference>varStandardOpportunityId</assignToReference>
             <operator>Assign</operator>
@@ -209,9 +533,41 @@
         </connector>
     </assignments>
     <assignments>
+        <name>AssignTopLevelAccountRecTId</name>
+        <label>AssignTopLevelAccountRecTId</label>
+        <locationX>857</locationX>
+        <locationY>517</locationY>
+        <assignmentItems>
+            <assignToReference>varTopLevelAccountRecordTypeId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>LoopRecT.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>LoopRecT</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>AssignTopLevelAccountRecTId_0</name>
+        <label>AssignTopLevelAccountRecTId</label>
+        <locationX>981</locationX>
+        <locationY>516</locationY>
+        <assignmentItems>
+            <assignToReference>varAftermarketRecTId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>LoopRecT.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>LoopRecT</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
         <name>AssignVarCustomer</name>
         <label>AssignVarCustomer</label>
-        <locationX>2513</locationX>
+        <locationX>2819</locationX>
         <locationY>295</locationY>
         <assignmentItems>
             <assignToReference>varCustomerAccountId</assignToReference>
@@ -225,214 +581,9 @@
         </connector>
     </assignments>
     <assignments>
-        <name>C26_Assign</name>
-        <label>C26 Assign</label>
-        <locationX>1651</locationX>
-        <locationY>50</locationY>
-        <assignmentItems>
-            <assignToReference>rvarCustomerAccount.Name</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>C26Customer_Top_Level_Account_Name</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>rvarCustomerAccount.Group_Level_Region__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>C26Region</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>rvarCustomerAccount.Display_Billing_Country__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>C26Display_Billing_Country</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>rvarCustomerAccount.Display_Shipping_Country__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>C26Display_Shipping_Country</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>rvarCustomerAccount.BillingStreet</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>C26GlobalBillingAddress.street</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>rvarCustomerAccount.BillingCity</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>C26GlobalBillingAddress.city</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>rvarCustomerAccount.BillingState</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>C26GlobalBillingAddress.province</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>rvarCustomerAccount.BillingPostalCode</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>C26GlobalBillingAddress.postalCode</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>rvarCustomerAccount.RecordTypeId</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>C26Which_Type_of_Account_To_Create</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>rvarCustomerAccount.BillingCountry</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>C26GlobalBillingAddress.country</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>rvarGlobalAccount.BillingStreet</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>C26GlobalBillingAddress.street</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>rvarGlobalAccount.BillingState</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>C26GlobalBillingAddress.street</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>rvarGlobalAccount.BillingCity</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>C26GlobalBillingAddress.city</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>rvarGlobalAccount.BillingPostalCode</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>C26GlobalBillingAddress.postalCode</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>rvarGlobalAccount.BillingCountry</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>C26GlobalBillingAddress.country</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>rvarGlobalAccount.Name</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>C26Global_Parent_Account</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>rvarGlobalAccount.RecordTypeId</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>varGlobalAccountRecTId</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>rvarCustomerAccount.Business_Segment__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>C26Business_Segment</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>rvarGlobalAccount.Group_Level_Region__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>C26Region</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>rvarOpportunity.RecordTypeId</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>C26Opportunity_Record_Type</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>rvarOpportunity.Name</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>C26Opportunity_Name</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>rvarOpportunity.CloseDate</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>C26Close_Date</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>rvarOpportunity.Amount</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>C26Opportunity_Amount</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>rvarOpportunity.CurrencyIsoCode</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>C26Opportunity_Currency</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>CreateOppty</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>c26Create_Opportunity</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>createCustomer</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>C26Create_Customer_Top_Level_Account</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>rvarOpportunity.StageName</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <stringValue>Validating</stringValue>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>rvarCustomerAccount.Type</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <stringValue>Prospect</stringValue>
-            </value>
-        </assignmentItems>
-        <connector>
-            <targetReference>CreateGlobalAccount</targetReference>
-        </connector>
-    </assignments>
-    <assignments>
         <name>CustomerAccountRecTId</name>
         <label>AssignCustomerAccountRecTId</label>
-        <locationX>467</locationX>
+        <locationX>773</locationX>
         <locationY>346</locationY>
         <assignmentItems>
             <assignToReference>varCustomerAccountRecordTypeID</assignToReference>
@@ -443,437 +594,6 @@
         </assignmentItems>
         <connector>
             <targetReference>LoopRecT</targetReference>
-        </connector>
-    </assignments>
-    <assignments>
-        <name>Finisar_Assign</name>
-        <label>Finisar Assign</label>
-        <locationX>1645</locationX>
-        <locationY>190</locationY>
-        <assignmentItems>
-            <assignToReference>rvarCustomerAccount.Name</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>FinCustomer_Top_Level_Account_Name</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>rvarCustomerAccount.Group_Level_Region__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>FinRegion</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>rvarCustomerAccount.Display_Billing_Country__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>FinDisplay_Billing_Country</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>rvarCustomerAccount.Display_Shipping_Country__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>FinDisplay_Shipping_Country</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>rvarCustomerAccount.BillingStreet</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>FinGlobalBillingAddress.street</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>rvarCustomerAccount.BillingCity</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>C26GlobalBillingAddress.city</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>rvarCustomerAccount.BillingState</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>FinGlobalBillingAddress.province</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>rvarCustomerAccount.BillingPostalCode</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>FinGlobalBillingAddress.postalCode</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>rvarCustomerAccount.RecordTypeId</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>FinWhich_Type_of_Account_To_Create</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>rvarCustomerAccount.BillingCountry</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>FinGlobalBillingAddress.country</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>rvarGlobalAccount.BillingStreet</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>FinGlobalBillingAddress.street</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>rvarGlobalAccount.BillingState</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>FinGlobalBillingAddress.province</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>rvarGlobalAccount.BillingCity</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>FinGlobalBillingAddress.city</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>rvarGlobalAccount.BillingPostalCode</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>FinGlobalBillingAddress.postalCode</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>rvarGlobalAccount.BillingCountry</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>FinGlobalBillingAddress.country</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>rvarGlobalAccount.Name</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>FinGlobal_Parent_Account_0</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>rvarGlobalAccount.RecordTypeId</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>varGlobalAccountRecTId</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>rvarGlobalAccount.Group_Level_Region__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>FinRegion</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>rvarOpportunity.RecordTypeId</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>FinOpportunity_Record_Type</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>rvarOpportunity.Name</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>FinOpportunity_Name</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>rvarOpportunity.CloseDate</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>FinClose_Date</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>rvarOpportunity.Amount</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>FinOpportunity_Amount</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>rvarOpportunity.CurrencyIsoCode</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>FinOpportunity_Currency</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>CreateOppty</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>FinCreate_Opportunity</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>createCustomer</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>FinCreate_Customer_Top_Level_Account_0</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>rvarOpportunity.StageName</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <stringValue>Validating</stringValue>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>rvarCustomerAccount.Type</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <stringValue>Prospect</stringValue>
-            </value>
-        </assignmentItems>
-        <connector>
-            <targetReference>CreateGlobalAccount</targetReference>
-        </connector>
-    </assignments>
-    <assignments>
-        <name>Marlow_Assign</name>
-        <label>Marlow Assign</label>
-        <locationX>1646</locationX>
-        <locationY>355</locationY>
-        <assignmentItems>
-            <assignToReference>rvarCustomerAccount.Name</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>MarCustomer_Top_Level_Account_Name</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>rvarCustomerAccount.Group_Level_Region__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>MarRegion</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>rvarCustomerAccount.Display_Billing_Country__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>MarDisplay_Billing_Country</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>rvarCustomerAccount.Display_Shipping_Country__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>MarDisplay_Shipping_Country</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>rvarCustomerAccount.BillingStreet</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>MarGlobalBillingAddress_0_0.street</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>rvarCustomerAccount.BillingCity</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>MarGlobalBillingAddress_0_0.city</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>rvarCustomerAccount.BillingState</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>MarGlobalBillingAddress_0_0.province</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>rvarCustomerAccount.BillingPostalCode</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>MarGlobalBillingAddress_0_0.postalCode</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>rvarCustomerAccount.RecordTypeId</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>MarWhich_Type_of_Account_To_Create</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>rvarCustomerAccount.BillingCountry</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>MarGlobalBillingAddress_0_0.country</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>rvarGlobalAccount.BillingStreet</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>MarGlobalBillingAddress_0_0.street</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>rvarGlobalAccount.BillingState</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>MarGlobalBillingAddress_0_0.province</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>rvarGlobalAccount.BillingCity</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>MarGlobalBillingAddress_0_0.city</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>rvarGlobalAccount.BillingPostalCode</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>MarGlobalBillingAddress_0_0.postalCode</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>rvarGlobalAccount.BillingCountry</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>MarGlobalBillingAddress_0_0.country</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>rvarGlobalAccount.Name</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>MarGlobal_Parent_Account</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>rvarGlobalAccount.RecordTypeId</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>varGlobalAccountRecTId</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>rvarGlobalAccount.Group_Level_Region__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>MarRegion</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>rvarOpportunity.RecordTypeId</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>MarOpportunity_Record_Type</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>rvarOpportunity.Name</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>MarOpportunity_Name</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>rvarOpportunity.CloseDate</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>MarClose_Date</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>rvarOpportunity.Amount</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>MarOpportunity_Amount</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>rvarOpportunity.ITAR__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>MarITAR_picklist</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>rvarOpportunity.REACH__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>MarREACH_Picklist</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>rvarOpportunity.Project_Name__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>MarProject_Name</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>rvarOpportunity.Sales_Type__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>MarSales_Type</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>rvarOpportunity.CurrencyIsoCode</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>MarCurrency_Selector</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>createCustomer</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>MarlCreate_Customer_Top_Level_Account</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>CreateOppty</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>MarCreate_Opportunity</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>rvarOpportunity.Qual_Required__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>MarCustomer_Qual_Req_d</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>rvarOpportunity.StageName</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <stringValue>Validating</stringValue>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>rvarCustomerAccount.Type</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <stringValue>Prospect</stringValue>
-            </value>
-        </assignmentItems>
-        <connector>
-            <targetReference>CreateGlobalAccount</targetReference>
         </connector>
     </assignments>
     <choices>
@@ -887,7 +607,7 @@
     <decisions>
         <name>AccountRecT</name>
         <label>AccountRecT</label>
-        <locationX>1060</locationX>
+        <locationX>1366</locationX>
         <locationY>554</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
@@ -938,7 +658,7 @@
     <decisions>
         <name>Create_Opportunity_Yes</name>
         <label>Create Opportunity</label>
-        <locationX>2506</locationX>
+        <locationX>2812</locationX>
         <locationY>181</locationY>
         <defaultConnector>
             <targetReference>Success_Screen</targetReference>
@@ -977,15 +697,15 @@
     <decisions>
         <name>CreateCustomerAccount</name>
         <label>Create Customer Account?</label>
-        <locationX>2330</locationX>
-        <locationY>180</locationY>
+        <locationX>2637</locationX>
+        <locationY>185</locationY>
         <defaultConnector>
             <targetReference>Create_Opportunity_Yes</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>YesCreateCustomerAccount</name>
-            <conditionLogic>and</conditionLogic>
+            <conditionLogic>1 AND 2 AND 3 AND 4</conditionLogic>
             <conditions>
                 <leftValueReference>varGlobalAccountId</leftValueReference>
                 <operator>IsNull</operator>
@@ -1023,8 +743,8 @@
     <decisions>
         <name>CreateGlobalAccount</name>
         <label>CreateGlobalAccount?</label>
-        <locationX>1939</locationX>
-        <locationY>193</locationY>
+        <locationX>2244</locationX>
+        <locationY>192</locationY>
         <defaultConnector>
             <targetReference>CreateCustomerAccount</targetReference>
         </defaultConnector>
@@ -1084,7 +804,7 @@
     <decisions>
         <name>Found</name>
         <label>Found?</label>
-        <locationX>1933</locationX>
+        <locationX>2239</locationX>
         <locationY>504</locationY>
         <defaultConnector>
             <targetReference>Create_Global_Account</targetReference>
@@ -1109,10 +829,10 @@
     <decisions>
         <name>varIDPopulated</name>
         <label>varIDPopulated?</label>
-        <locationX>1057</locationX>
+        <locationX>1363</locationX>
         <locationY>184</locationY>
         <defaultConnector>
-            <targetReference>WhichLegacyOrg</targetReference>
+            <targetReference>Initial_Creation_Screen</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
@@ -1132,65 +852,10 @@
         </rules>
     </decisions>
     <decisions>
-        <name>WhichLegacyOrg</name>
-        <label>WhichLegacyOrg</label>
-        <locationX>1223</locationX>
-        <locationY>179</locationY>
-        <defaultConnector>
-            <targetReference>Finisar_Initial_Creation_Screen</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
-        <rules>
-            <name>Legacy_Corp_II_VI</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>$User.Legacy_Company__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>Corp II-VI</stringValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>Corp_II_VI_Initial_Creation_Screen</targetReference>
-            </connector>
-            <label>Legacy Corp II-VI</label>
-        </rules>
-        <rules>
-            <name>Legacy_Finisar</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>$User.Legacy_Company__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>Finisar</stringValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>Finisar_Initial_Creation_Screen</targetReference>
-            </connector>
-            <label>Legacy Finisar</label>
-        </rules>
-        <rules>
-            <name>Legacy_Marlow</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>$User.Legacy_Company__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>Marlow</stringValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>Marlow_Initial_Creation_Screen</targetReference>
-            </connector>
-            <label>Legacy Marlow</label>
-        </rules>
-    </decisions>
-    <decisions>
         <name>WhichRecT</name>
         <label>WhichRecT</label>
-        <locationX>663</locationX>
-        <locationY>344</locationY>
+        <locationX>969</locationX>
+        <locationY>345</locationY>
         <defaultConnector>
             <targetReference>LoopRecT</targetReference>
         </defaultConnector>
@@ -1240,14 +905,44 @@
             </connector>
             <label>OpportunityRecTPlaceHolder</label>
         </rules>
+        <rules>
+            <name>Top_Level</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>LoopRecT.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Party_Account</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>AssignTopLevelAccountRecTId</targetReference>
+            </connector>
+            <label>Top Level</label>
+        </rules>
+        <rules>
+            <name>Aftermarket</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>LoopRecT.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Aftermarket</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>AssignTopLevelAccountRecTId_0</targetReference>
+            </connector>
+            <label>Aftermarket</label>
+        </rules>
     </decisions>
     <dynamicChoiceSets>
         <name>AccountRecordTypes</name>
         <dataType>String</dataType>
         <displayField>Name</displayField>
-        <filterLogic>1 AND (2 OR 3)</filterLogic>
+        <filterLogic>or</filterLogic>
         <filters>
-            <field>SobjectType</field>
+            <field>DeveloperName</field>
             <operator>EqualTo</operator>
             <value>
                 <stringValue>Account</stringValue>
@@ -1258,13 +953,6 @@
             <operator>EqualTo</operator>
             <value>
                 <stringValue>Party_Account</stringValue>
-            </value>
-        </filters>
-        <filters>
-            <field>DeveloperName</field>
-            <operator>EqualTo</operator>
-            <value>
-                <stringValue>Account</stringValue>
             </value>
         </filters>
         <object>RecordType</object>
@@ -1389,6 +1077,18 @@
         <expression>IF(LEFT({!recordId},3)=&quot;001&quot;, True, False)</expression>
     </formulas>
     <formulas>
+        <name>AccountRecordType</name>
+        <dataType>String</dataType>
+        <expression>IF(
+ISBLANK({!Create_Top_Level_or_Customer}),
+{!varCustomerAccountRecordTypeID},
+IF(
+{!Create_Top_Level_or_Customer} = &quot;Customer Account&quot;, 
+{!varCustomerAccountRecordTypeID},
+{!varTopLevelAccountRecordTypeId}
+))</expression>
+    </formulas>
+    <formulas>
         <name>DefaultOpptyRT</name>
         <dataType>String</dataType>
         <expression>IF(
@@ -1399,16 +1099,42 @@ TEXT({!$User.Legacy_Company__c})=&quot;Marlow&quot;, &quot;Custom Part&quot;,
 ))</expression>
     </formulas>
     <formulas>
+        <name>ForAccountDisplayBilling</name>
+        <dataType>String</dataType>
+        <expression>IF({!getAccount.RecordType.DeveloperName}=&quot;Global_Parent&quot;, TEXT({!getAccount.Display_Billing_Country__c}),
+IF(AND({!getAccount.RecordType.DeveloperName}!=&quot;Global_Parent&quot;, NOT(ISBLANK({!getAccount.ParentId}))), TEXT({!getAccount.Parent.Display_Billing_Country__c}), &quot;&quot;
+))</expression>
+    </formulas>
+    <formulas>
+        <name>ForAccountDisplayShipping</name>
+        <dataType>String</dataType>
+        <expression>IF({!getAccount.RecordType.DeveloperName}=&quot;Global_Parent&quot;, TEXT({!getAccount.Display_Shipping_Country__c}),
+IF(AND({!getAccount.RecordType.DeveloperName}!=&quot;Global_Parent&quot;, NOT(ISBLANK({!getAccount.ParentId}))), TEXT({!getAccount.Parent.Display_Shipping_Country__c}), &quot;&quot;
+))</expression>
+    </formulas>
+    <formulas>
+        <name>ForAccountGroupLevelRegion</name>
+        <dataType>String</dataType>
+        <expression>IF({!getAccount.RecordType.DeveloperName}=&quot;Global_Parent&quot;, TEXT({!getAccount.Group_Level_Region__c}),
+IF(AND({!getAccount.RecordType.DeveloperName}!=&quot;Global_Parent&quot;, NOT(ISBLANK({!getAccount.ParentId}))), TEXT({!getAccount.Parent.Group_Level_Region__c}), &quot;&quot;
+))</expression>
+    </formulas>
+    <formulas>
         <name>GlobalParentKeySearch</name>
         <dataType>String</dataType>
         <expression>{!rvarGlobalAccount.Name}+&quot;-Global Parent&quot;</expression>
+    </formulas>
+    <formulas>
+        <name>OpportunityStage</name>
+        <dataType>String</dataType>
+        <expression>IF({!Opportunity_Record_Type}=&quot;Aftermarket&quot;, &quot;Qualifying&quot;, &quot;Validating&quot;)</expression>
     </formulas>
     <interviewLabel>One II-VI Opportunity Creation Flow {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Prospect Account Creation</label>
     <loops>
         <name>LoopRecT</name>
         <label>LoopRecT</label>
-        <locationX>672</locationX>
+        <locationX>978</locationX>
         <locationY>179</locationY>
         <collectionReference>getRecT</collectionReference>
         <iterationOrder>Asc</iterationOrder>
@@ -1441,8 +1167,8 @@ TEXT({!$User.Legacy_Company__c})=&quot;Marlow&quot;, &quot;Custom Part&quot;,
     <recordCreates>
         <name>Create_Customer_Account1</name>
         <label>Create Customer Account</label>
-        <locationX>2463</locationX>
-        <locationY>458</locationY>
+        <locationX>2723</locationX>
+        <locationY>435</locationY>
         <connector>
             <targetReference>AssignVarCustomer</targetReference>
         </connector>
@@ -1451,7 +1177,7 @@ TEXT({!$User.Legacy_Company__c})=&quot;Marlow&quot;, &quot;Custom Part&quot;,
     <recordCreates>
         <name>Create_Global_Account</name>
         <label>Create Global Account</label>
-        <locationX>2128</locationX>
+        <locationX>2434</locationX>
         <locationY>494</locationY>
         <connector>
             <targetReference>assignGlobalAccount_0</targetReference>
@@ -1461,17 +1187,17 @@ TEXT({!$User.Legacy_Company__c})=&quot;Marlow&quot;, &quot;Custom Part&quot;,
     <recordCreates>
         <name>CreateOpportunity</name>
         <label>CreateOpportunity</label>
-        <locationX>2756</locationX>
+        <locationX>3062</locationX>
         <locationY>413</locationY>
         <connector>
-            <targetReference>assignOpptyId</targetReference>
+            <targetReference>AssignOpportunityId</targetReference>
         </connector>
         <inputReference>rvarOpportunity</inputReference>
     </recordCreates>
     <recordLookups>
         <name>getAccount</name>
         <label>getAccount</label>
-        <locationX>1068</locationX>
+        <locationX>1374</locationX>
         <locationY>374</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -1492,7 +1218,7 @@ TEXT({!$User.Legacy_Company__c})=&quot;Marlow&quot;, &quot;Custom Part&quot;,
     <recordLookups>
         <name>getGlobalAccounts</name>
         <label>getGlobalAccounts</label>
-        <locationX>1943</locationX>
+        <locationX>2249</locationX>
         <locationY>373</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -1520,7 +1246,7 @@ TEXT({!$User.Legacy_Company__c})=&quot;Marlow&quot;, &quot;Custom Part&quot;,
     <recordLookups>
         <name>getRecT</name>
         <label>getRecT</label>
-        <locationX>517</locationX>
+        <locationX>823</locationX>
         <locationY>171</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -1545,762 +1271,32 @@ TEXT({!$User.Legacy_Company__c})=&quot;Marlow&quot;, &quot;Custom Part&quot;,
         <object>RecordType</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
+    <recordLookups>
+        <name>GetUser</name>
+        <label>GetUser</label>
+        <locationX>524</locationX>
+        <locationY>171</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>getRecT</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$User.Id</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>User</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
     <runInMode>SystemModeWithoutSharing</runInMode>
-    <screens>
-        <name>Corp_II_VI_Initial_Creation_Screen</name>
-        <label>Corp II-VI Initial Creation Screen</label>
-        <locationX>1475</locationX>
-        <locationY>50</locationY>
-        <allowBack>true</allowBack>
-        <allowFinish>true</allowFinish>
-        <allowPause>true</allowPause>
-        <connector>
-            <targetReference>C26_Assign</targetReference>
-        </connector>
-        <fields>
-            <name>GreetMessageEntry</name>
-            <fieldText>&lt;p&gt;&lt;b&gt;Now Creating Opportunity For This Account: {!getAccount.Name}&lt;/b&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
-            <visibilityRule>
-                <conditionLogic>and</conditionLogic>
-                <conditions>
-                    <leftValueReference>AccountId</leftValueReference>
-                    <operator>EqualTo</operator>
-                    <rightValue>
-                        <booleanValue>true</booleanValue>
-                    </rightValue>
-                </conditions>
-            </visibilityRule>
-        </fields>
-        <fields>
-            <name>Corp_II_VI_Initial_Creation_Screen_Section1</name>
-            <fieldType>RegionContainer</fieldType>
-            <fields>
-                <name>Corp_II_VI_Initial_Creation_Screen_Section1_Column1</name>
-                <fieldType>Region</fieldType>
-                <fields>
-                    <name>C26Global_Parent_Account</name>
-                    <dataType>String</dataType>
-                    <defaultValue>
-                        <elementReference>getAccount.Name</elementReference>
-                    </defaultValue>
-                    <fieldText>Global Parent Account</fieldText>
-                    <fieldType>InputField</fieldType>
-                    <isRequired>true</isRequired>
-                </fields>
-                <fields>
-                    <name>C26Display_Shipping_Country</name>
-                    <choiceReferences>countries</choiceReferences>
-                    <dataType>String</dataType>
-                    <fieldText>Display Shipping Country</fieldText>
-                    <fieldType>DropdownBox</fieldType>
-                    <isRequired>true</isRequired>
-                </fields>
-                <fields>
-                    <name>C26Display_Billing_Country</name>
-                    <choiceReferences>countries</choiceReferences>
-                    <dataType>String</dataType>
-                    <fieldText>Display Billing Country</fieldText>
-                    <fieldType>DropdownBox</fieldType>
-                    <isRequired>false</isRequired>
-                </fields>
-                <fields>
-                    <name>C26GlobalBillingAddress</name>
-                    <extensionName>flowruntime:address</extensionName>
-                    <fieldType>ComponentInstance</fieldType>
-                    <inputParameters>
-                        <name>addressLabel</name>
-                        <value>
-                            <stringValue>Global Billing Address</stringValue>
-                        </value>
-                    </inputParameters>
-                    <inputParameters>
-                        <name>city</name>
-                        <value>
-                            <elementReference>getAccount.BillingCity</elementReference>
-                        </value>
-                    </inputParameters>
-                    <inputParameters>
-                        <name>country</name>
-                        <value>
-                            <elementReference>getAccount.BillingCountry</elementReference>
-                        </value>
-                    </inputParameters>
-                    <inputParameters>
-                        <name>postalCode</name>
-                        <value>
-                            <elementReference>getAccount.BillingPostalCode</elementReference>
-                        </value>
-                    </inputParameters>
-                    <inputParameters>
-                        <name>province</name>
-                        <value>
-                            <elementReference>getAccount.BillingState</elementReference>
-                        </value>
-                    </inputParameters>
-                    <inputParameters>
-                        <name>street</name>
-                        <value>
-                            <elementReference>getAccount.BillingStreet</elementReference>
-                        </value>
-                    </inputParameters>
-                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
-                    <isRequired>true</isRequired>
-                    <storeOutputAutomatically>true</storeOutputAutomatically>
-                </fields>
-                <inputParameters>
-                    <name>width</name>
-                    <value>
-                        <stringValue>6</stringValue>
-                    </value>
-                </inputParameters>
-                <isRequired>false</isRequired>
-            </fields>
-            <fields>
-                <name>Corp_II_VI_Initial_Creation_Screen_Section1_Column2</name>
-                <fieldType>Region</fieldType>
-                <fields>
-                    <name>C26Region</name>
-                    <choiceReferences>RegionPicklist</choiceReferences>
-                    <dataType>String</dataType>
-                    <fieldText>Region</fieldText>
-                    <fieldType>DropdownBox</fieldType>
-                    <isRequired>true</isRequired>
-                </fields>
-                <fields>
-                    <name>C26Create_Customer_Top_Level_Account</name>
-                    <dataType>Boolean</dataType>
-                    <fieldText>Create Customer/Top Level Account?</fieldText>
-                    <fieldType>InputField</fieldType>
-                    <isRequired>true</isRequired>
-                </fields>
-                <fields>
-                    <name>C26Customer_Top_Level_Account_Name</name>
-                    <dataType>String</dataType>
-                    <defaultValue>
-                        <elementReference>getAccount.Name</elementReference>
-                    </defaultValue>
-                    <fieldText>Customer/Top Level Account Name</fieldText>
-                    <fieldType>InputField</fieldType>
-                    <isRequired>true</isRequired>
-                    <visibilityRule>
-                        <conditionLogic>and</conditionLogic>
-                        <conditions>
-                            <leftValueReference>C26Create_Customer_Top_Level_Account</leftValueReference>
-                            <operator>EqualTo</operator>
-                            <rightValue>
-                                <booleanValue>true</booleanValue>
-                            </rightValue>
-                        </conditions>
-                    </visibilityRule>
-                </fields>
-                <fields>
-                    <name>C26Business_Segment</name>
-                    <choiceReferences>BusinessSegment</choiceReferences>
-                    <dataType>String</dataType>
-                    <fieldText>Business Segment</fieldText>
-                    <fieldType>DropdownBox</fieldType>
-                    <isRequired>true</isRequired>
-                    <visibilityRule>
-                        <conditionLogic>and</conditionLogic>
-                        <conditions>
-                            <leftValueReference>C26Create_Customer_Top_Level_Account</leftValueReference>
-                            <operator>EqualTo</operator>
-                            <rightValue>
-                                <booleanValue>true</booleanValue>
-                            </rightValue>
-                        </conditions>
-                    </visibilityRule>
-                </fields>
-                <fields>
-                    <name>C26Which_Type_of_Account_To_Create</name>
-                    <choiceReferences>AccountRecordTypes</choiceReferences>
-                    <dataType>String</dataType>
-                    <fieldText>Which Type of Account To Create?</fieldText>
-                    <fieldType>DropdownBox</fieldType>
-                    <isRequired>true</isRequired>
-                    <visibilityRule>
-                        <conditionLogic>and</conditionLogic>
-                        <conditions>
-                            <leftValueReference>C26Create_Customer_Top_Level_Account</leftValueReference>
-                            <operator>EqualTo</operator>
-                            <rightValue>
-                                <booleanValue>true</booleanValue>
-                            </rightValue>
-                        </conditions>
-                    </visibilityRule>
-                </fields>
-                <fields>
-                    <name>c26Create_Opportunity</name>
-                    <dataType>Boolean</dataType>
-                    <fieldText>Create Opportunity?</fieldText>
-                    <fieldType>InputField</fieldType>
-                    <isRequired>true</isRequired>
-                </fields>
-                <inputParameters>
-                    <name>width</name>
-                    <value>
-                        <stringValue>6</stringValue>
-                    </value>
-                </inputParameters>
-                <isRequired>false</isRequired>
-            </fields>
-            <isRequired>false</isRequired>
-            <visibilityRule>
-                <conditionLogic>(1 OR 3) AND 2</conditionLogic>
-                <conditions>
-                    <leftValueReference>varGlobalAccountId</leftValueReference>
-                    <operator>IsNull</operator>
-                    <rightValue>
-                        <booleanValue>false</booleanValue>
-                    </rightValue>
-                </conditions>
-                <conditions>
-                    <leftValueReference>varCustomerAccountId</leftValueReference>
-                    <operator>IsNull</operator>
-                    <rightValue>
-                        <booleanValue>true</booleanValue>
-                    </rightValue>
-                </conditions>
-                <conditions>
-                    <leftValueReference>varGlobalAccountId</leftValueReference>
-                    <operator>IsNull</operator>
-                    <rightValue>
-                        <booleanValue>true</booleanValue>
-                    </rightValue>
-                </conditions>
-            </visibilityRule>
-        </fields>
-        <fields>
-            <name>Corp_II_VI_Initial_Creation_Screen_Section2</name>
-            <fieldType>RegionContainer</fieldType>
-            <fields>
-                <name>Corp_II_VI_Initial_Creation_Screen_Section2_Column1</name>
-                <fieldType>Region</fieldType>
-                <inputParameters>
-                    <name>width</name>
-                    <value>
-                        <stringValue>6</stringValue>
-                    </value>
-                </inputParameters>
-                <isRequired>false</isRequired>
-            </fields>
-            <fields>
-                <name>Corp_II_VI_Initial_Creation_Screen_Section2_Column2</name>
-                <fieldType>Region</fieldType>
-                <inputParameters>
-                    <name>width</name>
-                    <value>
-                        <stringValue>6</stringValue>
-                    </value>
-                </inputParameters>
-                <isRequired>false</isRequired>
-            </fields>
-            <isRequired>false</isRequired>
-            <visibilityRule>
-                <conditionLogic>and</conditionLogic>
-                <conditions>
-                    <leftValueReference>varCustomerAccountId</leftValueReference>
-                    <operator>IsNull</operator>
-                    <rightValue>
-                        <booleanValue>true</booleanValue>
-                    </rightValue>
-                </conditions>
-                <conditions>
-                    <leftValueReference>varGlobalAccountId</leftValueReference>
-                    <operator>IsNull</operator>
-                    <rightValue>
-                        <booleanValue>false</booleanValue>
-                    </rightValue>
-                </conditions>
-                <conditions>
-                    <leftValueReference>C26Create_Customer_Top_Level_Account</leftValueReference>
-                    <operator>EqualTo</operator>
-                    <rightValue>
-                        <booleanValue>true</booleanValue>
-                    </rightValue>
-                </conditions>
-            </visibilityRule>
-        </fields>
-        <fields>
-            <name>Corp_II_VI_Initial_Creation_Screen_Section3</name>
-            <fieldType>RegionContainer</fieldType>
-            <fields>
-                <name>Corp_II_VI_Initial_Creation_Screen_Section3_Column1</name>
-                <fieldType>Region</fieldType>
-                <inputParameters>
-                    <name>width</name>
-                    <value>
-                        <stringValue>12</stringValue>
-                    </value>
-                </inputParameters>
-                <isRequired>false</isRequired>
-            </fields>
-            <isRequired>false</isRequired>
-        </fields>
-        <fields>
-            <name>Corp_II_VI_Initial_Creation_Screen_Section4</name>
-            <fieldType>RegionContainer</fieldType>
-            <fields>
-                <name>Corp_II_VI_Initial_Creation_Screen_Section4_Column1</name>
-                <fieldType>Region</fieldType>
-                <fields>
-                    <name>C26Opportunity_Record_Type</name>
-                    <choiceReferences>OpportunityRecordType</choiceReferences>
-                    <dataType>String</dataType>
-                    <defaultValue>
-                        <elementReference>DefaultOpptyRT</elementReference>
-                    </defaultValue>
-                    <fieldText>Opportunity Record Type</fieldText>
-                    <fieldType>DropdownBox</fieldType>
-                    <isRequired>true</isRequired>
-                </fields>
-                <fields>
-                    <name>C26Opportunity_Currency</name>
-                    <choiceReferences>CurrencyV2</choiceReferences>
-                    <dataType>String</dataType>
-                    <fieldText>Opportunity Currency</fieldText>
-                    <fieldType>DropdownBox</fieldType>
-                    <isRequired>true</isRequired>
-                </fields>
-                <fields>
-                    <name>C26Close_Date</name>
-                    <dataType>Date</dataType>
-                    <fieldText>Close Date</fieldText>
-                    <fieldType>InputField</fieldType>
-                    <isRequired>true</isRequired>
-                </fields>
-                <inputParameters>
-                    <name>width</name>
-                    <value>
-                        <stringValue>6</stringValue>
-                    </value>
-                </inputParameters>
-                <isRequired>false</isRequired>
-            </fields>
-            <fields>
-                <name>Corp_II_VI_Initial_Creation_Screen_Section4_Column2</name>
-                <fieldType>Region</fieldType>
-                <fields>
-                    <name>C26Opportunity_Name</name>
-                    <dataType>String</dataType>
-                    <fieldText>Opportunity Name</fieldText>
-                    <fieldType>InputField</fieldType>
-                    <isRequired>true</isRequired>
-                </fields>
-                <fields>
-                    <name>C26Opportunity_Amount</name>
-                    <dataType>Number</dataType>
-                    <fieldText>Opportunity Amount</fieldText>
-                    <fieldType>InputField</fieldType>
-                    <isRequired>true</isRequired>
-                    <scale>0</scale>
-                </fields>
-                <inputParameters>
-                    <name>width</name>
-                    <value>
-                        <stringValue>6</stringValue>
-                    </value>
-                </inputParameters>
-                <isRequired>false</isRequired>
-            </fields>
-            <isRequired>false</isRequired>
-            <visibilityRule>
-                <conditionLogic>or</conditionLogic>
-                <conditions>
-                    <leftValueReference>varCustomerAccountId</leftValueReference>
-                    <operator>IsNull</operator>
-                    <rightValue>
-                        <booleanValue>false</booleanValue>
-                    </rightValue>
-                </conditions>
-                <conditions>
-                    <leftValueReference>c26Create_Opportunity</leftValueReference>
-                    <operator>EqualTo</operator>
-                    <rightValue>
-                        <booleanValue>true</booleanValue>
-                    </rightValue>
-                </conditions>
-            </visibilityRule>
-        </fields>
-        <showFooter>true</showFooter>
-        <showHeader>true</showHeader>
-    </screens>
-    <screens>
-        <name>Finisar_Initial_Creation_Screen</name>
-        <label>Finisar Initial Creation Screen</label>
-        <locationX>1481</locationX>
-        <locationY>191</locationY>
-        <allowBack>true</allowBack>
-        <allowFinish>true</allowFinish>
-        <allowPause>true</allowPause>
-        <connector>
-            <targetReference>Finisar_Assign</targetReference>
-        </connector>
-        <fields>
-            <name>GreetMessageEntry_0</name>
-            <fieldText>&lt;p&gt;&lt;b&gt;Now Creating Opportunity For This Account: {!getAccount.Name}&lt;/b&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
-            <visibilityRule>
-                <conditionLogic>and</conditionLogic>
-                <conditions>
-                    <leftValueReference>AccountId</leftValueReference>
-                    <operator>EqualTo</operator>
-                    <rightValue>
-                        <booleanValue>true</booleanValue>
-                    </rightValue>
-                </conditions>
-            </visibilityRule>
-        </fields>
-        <fields>
-            <name>Finisar_Initial_Creation_Screen_Section1</name>
-            <fieldType>RegionContainer</fieldType>
-            <fields>
-                <name>Finisar_Initial_Creation_Screen_Section1_Column1</name>
-                <fieldType>Region</fieldType>
-                <fields>
-                    <name>FinGlobal_Parent_Account_0</name>
-                    <dataType>String</dataType>
-                    <defaultValue>
-                        <elementReference>getAccount.Name</elementReference>
-                    </defaultValue>
-                    <fieldText>Global Parent Account</fieldText>
-                    <fieldType>InputField</fieldType>
-                    <isRequired>true</isRequired>
-                </fields>
-                <fields>
-                    <name>FinDisplay_Shipping_Country</name>
-                    <choiceReferences>countries</choiceReferences>
-                    <dataType>String</dataType>
-                    <defaultValue>
-                        <elementReference>None</elementReference>
-                    </defaultValue>
-                    <fieldText>Display Shipping Country</fieldText>
-                    <fieldType>DropdownBox</fieldType>
-                    <isRequired>true</isRequired>
-                </fields>
-                <fields>
-                    <name>FinDisplay_Billing_Country</name>
-                    <choiceReferences>countries</choiceReferences>
-                    <dataType>String</dataType>
-                    <defaultValue>
-                        <elementReference>None</elementReference>
-                    </defaultValue>
-                    <fieldText>Display Billing Country</fieldText>
-                    <fieldType>DropdownBox</fieldType>
-                    <isRequired>false</isRequired>
-                </fields>
-                <fields>
-                    <name>FinGlobalBillingAddress</name>
-                    <extensionName>flowruntime:address</extensionName>
-                    <fieldType>ComponentInstance</fieldType>
-                    <inputParameters>
-                        <name>addressLabel</name>
-                        <value>
-                            <stringValue>Global Billing Address</stringValue>
-                        </value>
-                    </inputParameters>
-                    <inputParameters>
-                        <name>city</name>
-                        <value>
-                            <elementReference>getAccount.BillingCity</elementReference>
-                        </value>
-                    </inputParameters>
-                    <inputParameters>
-                        <name>country</name>
-                        <value>
-                            <elementReference>getAccount.BillingCountry</elementReference>
-                        </value>
-                    </inputParameters>
-                    <inputParameters>
-                        <name>postalCode</name>
-                        <value>
-                            <elementReference>getAccount.BillingPostalCode</elementReference>
-                        </value>
-                    </inputParameters>
-                    <inputParameters>
-                        <name>province</name>
-                        <value>
-                            <elementReference>getAccount.BillingState</elementReference>
-                        </value>
-                    </inputParameters>
-                    <inputParameters>
-                        <name>street</name>
-                        <value>
-                            <elementReference>getAccount.BillingStreet</elementReference>
-                        </value>
-                    </inputParameters>
-                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
-                    <isRequired>true</isRequired>
-                    <storeOutputAutomatically>true</storeOutputAutomatically>
-                </fields>
-                <inputParameters>
-                    <name>width</name>
-                    <value>
-                        <stringValue>6</stringValue>
-                    </value>
-                </inputParameters>
-                <isRequired>false</isRequired>
-            </fields>
-            <fields>
-                <name>Finisar_Initial_Creation_Screen_Section1_Column2</name>
-                <fieldType>Region</fieldType>
-                <fields>
-                    <name>FinRegion</name>
-                    <choiceReferences>RegionPicklist</choiceReferences>
-                    <dataType>String</dataType>
-                    <fieldText>Region</fieldText>
-                    <fieldType>DropdownBox</fieldType>
-                    <isRequired>true</isRequired>
-                </fields>
-                <fields>
-                    <name>FinCreate_Customer_Top_Level_Account_0</name>
-                    <dataType>Boolean</dataType>
-                    <fieldText>Create Customer/Top Level Account?</fieldText>
-                    <fieldType>InputField</fieldType>
-                    <isRequired>true</isRequired>
-                </fields>
-                <fields>
-                    <name>FinCustomer_Top_Level_Account_Name</name>
-                    <dataType>String</dataType>
-                    <defaultValue>
-                        <elementReference>getAccount.Name</elementReference>
-                    </defaultValue>
-                    <fieldText>Customer/Top Level Account Name</fieldText>
-                    <fieldType>InputField</fieldType>
-                    <isRequired>true</isRequired>
-                    <visibilityRule>
-                        <conditionLogic>and</conditionLogic>
-                        <conditions>
-                            <leftValueReference>FinCreate_Customer_Top_Level_Account_0</leftValueReference>
-                            <operator>EqualTo</operator>
-                            <rightValue>
-                                <booleanValue>true</booleanValue>
-                            </rightValue>
-                        </conditions>
-                    </visibilityRule>
-                </fields>
-                <fields>
-                    <name>FinWhich_Type_of_Account_To_Create</name>
-                    <choiceReferences>AccountRecordTypes</choiceReferences>
-                    <dataType>String</dataType>
-                    <fieldText>Which Type of Account To Create?</fieldText>
-                    <fieldType>DropdownBox</fieldType>
-                    <isRequired>true</isRequired>
-                    <visibilityRule>
-                        <conditionLogic>and</conditionLogic>
-                        <conditions>
-                            <leftValueReference>FinCreate_Customer_Top_Level_Account_0</leftValueReference>
-                            <operator>EqualTo</operator>
-                            <rightValue>
-                                <booleanValue>true</booleanValue>
-                            </rightValue>
-                        </conditions>
-                    </visibilityRule>
-                </fields>
-                <fields>
-                    <name>FinCreate_Opportunity</name>
-                    <dataType>Boolean</dataType>
-                    <fieldText>Create Opportunity?</fieldText>
-                    <fieldType>InputField</fieldType>
-                    <isRequired>true</isRequired>
-                </fields>
-                <inputParameters>
-                    <name>width</name>
-                    <value>
-                        <stringValue>6</stringValue>
-                    </value>
-                </inputParameters>
-                <isRequired>false</isRequired>
-            </fields>
-            <isRequired>false</isRequired>
-            <visibilityRule>
-                <conditionLogic>(1 OR 3) AND 2</conditionLogic>
-                <conditions>
-                    <leftValueReference>varGlobalAccountId</leftValueReference>
-                    <operator>IsNull</operator>
-                    <rightValue>
-                        <booleanValue>false</booleanValue>
-                    </rightValue>
-                </conditions>
-                <conditions>
-                    <leftValueReference>varCustomerAccountId</leftValueReference>
-                    <operator>IsNull</operator>
-                    <rightValue>
-                        <booleanValue>true</booleanValue>
-                    </rightValue>
-                </conditions>
-                <conditions>
-                    <leftValueReference>varGlobalAccountId</leftValueReference>
-                    <operator>IsNull</operator>
-                    <rightValue>
-                        <booleanValue>true</booleanValue>
-                    </rightValue>
-                </conditions>
-            </visibilityRule>
-        </fields>
-        <fields>
-            <name>Finisar_Initial_Creation_Screen_Section2</name>
-            <fieldType>RegionContainer</fieldType>
-            <fields>
-                <name>Finisar_Initial_Creation_Screen_Section2_Column1</name>
-                <fieldType>Region</fieldType>
-                <inputParameters>
-                    <name>width</name>
-                    <value>
-                        <stringValue>6</stringValue>
-                    </value>
-                </inputParameters>
-                <isRequired>false</isRequired>
-            </fields>
-            <fields>
-                <name>Finisar_Initial_Creation_Screen_Section2_Column2</name>
-                <fieldType>Region</fieldType>
-                <inputParameters>
-                    <name>width</name>
-                    <value>
-                        <stringValue>6</stringValue>
-                    </value>
-                </inputParameters>
-                <isRequired>false</isRequired>
-            </fields>
-            <isRequired>false</isRequired>
-            <visibilityRule>
-                <conditionLogic>and</conditionLogic>
-                <conditions>
-                    <leftValueReference>varCustomerAccountId</leftValueReference>
-                    <operator>IsNull</operator>
-                    <rightValue>
-                        <booleanValue>true</booleanValue>
-                    </rightValue>
-                </conditions>
-                <conditions>
-                    <leftValueReference>varGlobalAccountId</leftValueReference>
-                    <operator>IsNull</operator>
-                    <rightValue>
-                        <booleanValue>false</booleanValue>
-                    </rightValue>
-                </conditions>
-                <conditions>
-                    <leftValueReference>C26Create_Customer_Top_Level_Account</leftValueReference>
-                    <operator>EqualTo</operator>
-                    <rightValue>
-                        <booleanValue>true</booleanValue>
-                    </rightValue>
-                </conditions>
-            </visibilityRule>
-        </fields>
-        <fields>
-            <name>Finisar_Initial_Creation_Screen_Section3</name>
-            <fieldType>RegionContainer</fieldType>
-            <fields>
-                <name>Finisar_Initial_Creation_Screen_Section3_Column1</name>
-                <fieldType>Region</fieldType>
-                <inputParameters>
-                    <name>width</name>
-                    <value>
-                        <stringValue>12</stringValue>
-                    </value>
-                </inputParameters>
-                <isRequired>false</isRequired>
-            </fields>
-            <isRequired>false</isRequired>
-        </fields>
-        <fields>
-            <name>Finisar_Initial_Creation_Screen_Section4</name>
-            <fieldType>RegionContainer</fieldType>
-            <fields>
-                <name>Finisar_Initial_Creation_Screen_Section4_Column1</name>
-                <fieldType>Region</fieldType>
-                <fields>
-                    <name>FinOpportunity_Record_Type</name>
-                    <choiceReferences>OpportunityRecordType</choiceReferences>
-                    <dataType>String</dataType>
-                    <defaultValue>
-                        <elementReference>DefaultOpptyRT</elementReference>
-                    </defaultValue>
-                    <fieldText>Opportunity Record Type</fieldText>
-                    <fieldType>DropdownBox</fieldType>
-                    <isRequired>true</isRequired>
-                </fields>
-                <fields>
-                    <name>FinOpportunity_Currency</name>
-                    <choiceReferences>Currency</choiceReferences>
-                    <dataType>String</dataType>
-                    <defaultValue>
-                        <stringValue>USD</stringValue>
-                    </defaultValue>
-                    <fieldText>Opportunity Currency</fieldText>
-                    <fieldType>DropdownBox</fieldType>
-                    <isRequired>true</isRequired>
-                </fields>
-                <fields>
-                    <name>FinClose_Date</name>
-                    <dataType>Date</dataType>
-                    <fieldText>Close Date</fieldText>
-                    <fieldType>InputField</fieldType>
-                    <isRequired>true</isRequired>
-                </fields>
-                <inputParameters>
-                    <name>width</name>
-                    <value>
-                        <stringValue>6</stringValue>
-                    </value>
-                </inputParameters>
-                <isRequired>false</isRequired>
-            </fields>
-            <fields>
-                <name>Finisar_Initial_Creation_Screen_Section4_Column2</name>
-                <fieldType>Region</fieldType>
-                <fields>
-                    <name>FinOpportunity_Name</name>
-                    <dataType>String</dataType>
-                    <fieldText>Opportunity Name</fieldText>
-                    <fieldType>InputField</fieldType>
-                    <isRequired>true</isRequired>
-                </fields>
-                <fields>
-                    <name>FinOpportunity_Amount</name>
-                    <dataType>Number</dataType>
-                    <fieldText>Opportunity Amount</fieldText>
-                    <fieldType>InputField</fieldType>
-                    <isRequired>true</isRequired>
-                    <scale>0</scale>
-                </fields>
-                <inputParameters>
-                    <name>width</name>
-                    <value>
-                        <stringValue>6</stringValue>
-                    </value>
-                </inputParameters>
-                <isRequired>false</isRequired>
-            </fields>
-            <isRequired>false</isRequired>
-            <visibilityRule>
-                <conditionLogic>or</conditionLogic>
-                <conditions>
-                    <leftValueReference>FinCreate_Opportunity</leftValueReference>
-                    <operator>EqualTo</operator>
-                    <rightValue>
-                        <booleanValue>true</booleanValue>
-                    </rightValue>
-                </conditions>
-                <conditions>
-                    <leftValueReference>varCustomerAccountId</leftValueReference>
-                    <operator>IsNull</operator>
-                    <rightValue>
-                        <booleanValue>false</booleanValue>
-                    </rightValue>
-                </conditions>
-            </visibilityRule>
-        </fields>
-        <showFooter>true</showFooter>
-        <showHeader>true</showHeader>
-    </screens>
     <screens>
         <name>GlobalParentExists</name>
         <label>GlobalParentExists</label>
-        <locationX>1938</locationX>
+        <locationX>2244</locationX>
         <locationY>669</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
@@ -2317,18 +1313,18 @@ TEXT({!$User.Legacy_Company__c})=&quot;Marlow&quot;, &quot;Custom Part&quot;,
         <showHeader>true</showHeader>
     </screens>
     <screens>
-        <name>Marlow_Initial_Creation_Screen</name>
-        <label>Marlow Initial Creation Screen</label>
-        <locationX>1482</locationX>
-        <locationY>356</locationY>
+        <name>Initial_Creation_Screen</name>
+        <label>Initial Creation Screen</label>
+        <locationX>1668</locationX>
+        <locationY>193</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
         <connector>
-            <targetReference>Marlow_Assign</targetReference>
+            <targetReference>Assign</targetReference>
         </connector>
         <fields>
-            <name>GreetMessageEntry_0_0</name>
+            <name>GreetMessageEntry_0_0_0</name>
             <fieldText>&lt;p&gt;&lt;b&gt;Now Creating Opportunity For This Account: {!getAccount.Name}&lt;/b&gt;&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
             <visibilityRule>
@@ -2343,13 +1339,13 @@ TEXT({!$User.Legacy_Company__c})=&quot;Marlow&quot;, &quot;Custom Part&quot;,
             </visibilityRule>
         </fields>
         <fields>
-            <name>Marlow_Initial_Creation_Screen_Section1</name>
+            <name>Initial_Creation_Screen_Section1</name>
             <fieldType>RegionContainer</fieldType>
             <fields>
-                <name>Marlow_Initial_Creation_Screen_Section1_Column1</name>
+                <name>Initial_Creation_Screen_Section1_Column1</name>
                 <fieldType>Region</fieldType>
                 <fields>
-                    <name>MarGlobal_Parent_Account</name>
+                    <name>Global_Parent_Account_0</name>
                     <dataType>String</dataType>
                     <defaultValue>
                         <elementReference>getAccount.Name</elementReference>
@@ -2359,23 +1355,18 @@ TEXT({!$User.Legacy_Company__c})=&quot;Marlow&quot;, &quot;Custom Part&quot;,
                     <isRequired>true</isRequired>
                 </fields>
                 <fields>
-                    <name>MarDisplay_Shipping_Country</name>
+                    <name>Display_Billing_Country</name>
                     <choiceReferences>countries</choiceReferences>
                     <dataType>String</dataType>
-                    <fieldText>Display Shipping Country</fieldText>
-                    <fieldType>DropdownBox</fieldType>
-                    <isRequired>true</isRequired>
-                </fields>
-                <fields>
-                    <name>MarDisplay_Billing_Country</name>
-                    <choiceReferences>countries</choiceReferences>
-                    <dataType>String</dataType>
+                    <defaultValue>
+                        <elementReference>ForAccountDisplayBilling</elementReference>
+                    </defaultValue>
                     <fieldText>Display Billing Country</fieldText>
                     <fieldType>DropdownBox</fieldType>
                     <isRequired>false</isRequired>
                 </fields>
                 <fields>
-                    <name>MarGlobalBillingAddress_0_0</name>
+                    <name>GlobalBillingAddress</name>
                     <extensionName>flowruntime:address</extensionName>
                     <fieldType>ComponentInstance</fieldType>
                     <inputParameters>
@@ -2417,6 +1408,114 @@ TEXT({!$User.Legacy_Company__c})=&quot;Marlow&quot;, &quot;Custom Part&quot;,
                     <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
                     <isRequired>true</isRequired>
                     <storeOutputAutomatically>true</storeOutputAutomatically>
+                    <visibilityRule>
+                        <conditionLogic>and</conditionLogic>
+                        <conditions>
+                            <leftValueReference>Display_Billing_Country</leftValueReference>
+                            <operator>IsNull</operator>
+                            <rightValue>
+                                <booleanValue>false</booleanValue>
+                            </rightValue>
+                        </conditions>
+                    </visibilityRule>
+                </fields>
+                <fields>
+                    <name>Create_Customer</name>
+                    <dataType>Boolean</dataType>
+                    <fieldText>Create Customer?</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <isRequired>true</isRequired>
+                </fields>
+                <fields>
+                    <name>Create_Top_Level_or_Customer</name>
+                    <choiceReferences>AccountRecordTypes</choiceReferences>
+                    <dataType>String</dataType>
+                    <fieldText>Create Top Level or Customer?</fieldText>
+                    <fieldType>DropdownBox</fieldType>
+                    <isRequired>false</isRequired>
+                    <visibilityRule>
+                        <conditionLogic>(1 OR 2 OR 3) AND 4</conditionLogic>
+                        <conditions>
+                            <leftValueReference>GetUser.Email</leftValueReference>
+                            <operator>EqualTo</operator>
+                            <rightValue>
+                                <stringValue>betty.dea@ii-vi.com</stringValue>
+                            </rightValue>
+                        </conditions>
+                        <conditions>
+                            <leftValueReference>GetUser.Email</leftValueReference>
+                            <operator>EqualTo</operator>
+                            <rightValue>
+                                <stringValue>layyean.goh@ii-vi.com</stringValue>
+                            </rightValue>
+                        </conditions>
+                        <conditions>
+                            <leftValueReference>GetUser.Profile.Name</leftValueReference>
+                            <operator>EqualTo</operator>
+                            <rightValue>
+                                <stringValue>System Administrator</stringValue>
+                            </rightValue>
+                        </conditions>
+                        <conditions>
+                            <leftValueReference>Create_Customer</leftValueReference>
+                            <operator>EqualTo</operator>
+                            <rightValue>
+                                <booleanValue>true</booleanValue>
+                            </rightValue>
+                        </conditions>
+                    </visibilityRule>
+                </fields>
+                <fields>
+                    <name>Business_Segment</name>
+                    <choiceReferences>BusinessSegment</choiceReferences>
+                    <dataType>String</dataType>
+                    <fieldText>Business Segment</fieldText>
+                    <fieldType>DropdownBox</fieldType>
+                    <isRequired>true</isRequired>
+                    <visibilityRule>
+                        <conditionLogic>and</conditionLogic>
+                        <conditions>
+                            <leftValueReference>GetUser.Legacy_Company__c</leftValueReference>
+                            <operator>EqualTo</operator>
+                            <rightValue>
+                                <stringValue>Corp II-VI</stringValue>
+                            </rightValue>
+                        </conditions>
+                        <conditions>
+                            <leftValueReference>Create_Customer</leftValueReference>
+                            <operator>EqualTo</operator>
+                            <rightValue>
+                                <booleanValue>true</booleanValue>
+                            </rightValue>
+                        </conditions>
+                    </visibilityRule>
+                </fields>
+                <fields>
+                    <name>Customer_Top_Level_Account_Name</name>
+                    <dataType>String</dataType>
+                    <defaultValue>
+                        <elementReference>getAccount.Name</elementReference>
+                    </defaultValue>
+                    <fieldText>Customer/Top Level Account Name</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <isRequired>true</isRequired>
+                    <visibilityRule>
+                        <conditionLogic>or</conditionLogic>
+                        <conditions>
+                            <leftValueReference>Create_Customer</leftValueReference>
+                            <operator>EqualTo</operator>
+                            <rightValue>
+                                <booleanValue>true</booleanValue>
+                            </rightValue>
+                        </conditions>
+                        <conditions>
+                            <leftValueReference>Create_Top_Level_or_Customer</leftValueReference>
+                            <operator>IsNull</operator>
+                            <rightValue>
+                                <booleanValue>false</booleanValue>
+                            </rightValue>
+                        </conditions>
+                    </visibilityRule>
                 </fields>
                 <inputParameters>
                     <name>width</name>
@@ -2427,63 +1526,86 @@ TEXT({!$User.Legacy_Company__c})=&quot;Marlow&quot;, &quot;Custom Part&quot;,
                 <isRequired>false</isRequired>
             </fields>
             <fields>
-                <name>Marlow_Initial_Creation_Screen_Section1_Column2</name>
+                <name>Initial_Creation_Screen_Section1_Column2</name>
                 <fieldType>Region</fieldType>
                 <fields>
-                    <name>MarRegion</name>
+                    <name>Region</name>
                     <choiceReferences>RegionPicklist</choiceReferences>
                     <dataType>String</dataType>
-                    <fieldText>Region</fieldText>
+                    <defaultValue>
+                        <elementReference>ForAccountGroupLevelRegion</elementReference>
+                    </defaultValue>
+                    <fieldText>Group Level Region</fieldText>
                     <fieldType>DropdownBox</fieldType>
                     <isRequired>true</isRequired>
                 </fields>
                 <fields>
-                    <name>MarlCreate_Customer_Top_Level_Account</name>
-                    <dataType>Boolean</dataType>
-                    <fieldText>Create Customer/Top Level Account?</fieldText>
-                    <fieldType>InputField</fieldType>
+                    <name>Display_Shipping_Country</name>
+                    <choiceReferences>countries</choiceReferences>
+                    <dataType>String</dataType>
+                    <defaultValue>
+                        <elementReference>ForAccountDisplayShipping</elementReference>
+                    </defaultValue>
+                    <fieldText>Display Shipping Country</fieldText>
+                    <fieldType>DropdownBox</fieldType>
                     <isRequired>true</isRequired>
                 </fields>
                 <fields>
-                    <name>MarCustomer_Top_Level_Account_Name</name>
-                    <dataType>String</dataType>
-                    <defaultValue>
-                        <elementReference>getAccount.Name</elementReference>
-                    </defaultValue>
-                    <fieldText>Customer/Top Level Account Name</fieldText>
-                    <fieldType>InputField</fieldType>
+                    <name>GlobalShippingAddress</name>
+                    <extensionName>flowruntime:address</extensionName>
+                    <fieldType>ComponentInstance</fieldType>
+                    <inputParameters>
+                        <name>addressLabel</name>
+                        <value>
+                            <stringValue>Global Shipping Address</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>city</name>
+                        <value>
+                            <elementReference>getAccount.ShippingCity</elementReference>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>country</name>
+                        <value>
+                            <elementReference>getAccount.ShippingCountry</elementReference>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>postalCode</name>
+                        <value>
+                            <elementReference>getAccount.ShippingPostalCode</elementReference>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>province</name>
+                        <value>
+                            <elementReference>getAccount.ShippingState</elementReference>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>street</name>
+                        <value>
+                            <elementReference>getAccount.ShippingStreet</elementReference>
+                        </value>
+                    </inputParameters>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
                     <isRequired>true</isRequired>
+                    <storeOutputAutomatically>true</storeOutputAutomatically>
                     <visibilityRule>
                         <conditionLogic>and</conditionLogic>
                         <conditions>
-                            <leftValueReference>MarlCreate_Customer_Top_Level_Account</leftValueReference>
-                            <operator>EqualTo</operator>
+                            <leftValueReference>Display_Shipping_Country</leftValueReference>
+                            <operator>IsNull</operator>
                             <rightValue>
-                                <booleanValue>true</booleanValue>
+                                <booleanValue>false</booleanValue>
                             </rightValue>
                         </conditions>
                     </visibilityRule>
                 </fields>
                 <fields>
-                    <name>MarWhich_Type_of_Account_To_Create</name>
-                    <choiceReferences>AccountRecordTypes</choiceReferences>
-                    <dataType>String</dataType>
-                    <fieldText>Which Type of Account To Create?</fieldText>
-                    <fieldType>DropdownBox</fieldType>
-                    <isRequired>true</isRequired>
-                    <visibilityRule>
-                        <conditionLogic>or</conditionLogic>
-                        <conditions>
-                            <leftValueReference>MarlCreate_Customer_Top_Level_Account</leftValueReference>
-                            <operator>EqualTo</operator>
-                            <rightValue>
-                                <booleanValue>true</booleanValue>
-                            </rightValue>
-                        </conditions>
-                    </visibilityRule>
-                </fields>
-                <fields>
-                    <name>MarCreate_Opportunity</name>
+                    <name>Create_Opportunity</name>
                     <dataType>Boolean</dataType>
                     <fieldText>Create Opportunity?</fieldText>
                     <fieldType>InputField</fieldType>
@@ -2524,61 +1646,10 @@ TEXT({!$User.Legacy_Company__c})=&quot;Marlow&quot;, &quot;Custom Part&quot;,
             </visibilityRule>
         </fields>
         <fields>
-            <name>Marlow_Initial_Creation_Screen_Section2</name>
+            <name>Initial_Creation_Screen_Section2</name>
             <fieldType>RegionContainer</fieldType>
             <fields>
-                <name>Marlow_Initial_Creation_Screen_Section2_Column1</name>
-                <fieldType>Region</fieldType>
-                <inputParameters>
-                    <name>width</name>
-                    <value>
-                        <stringValue>6</stringValue>
-                    </value>
-                </inputParameters>
-                <isRequired>false</isRequired>
-            </fields>
-            <fields>
-                <name>Marlow_Initial_Creation_Screen_Section2_Column2</name>
-                <fieldType>Region</fieldType>
-                <inputParameters>
-                    <name>width</name>
-                    <value>
-                        <stringValue>6</stringValue>
-                    </value>
-                </inputParameters>
-                <isRequired>false</isRequired>
-            </fields>
-            <isRequired>false</isRequired>
-            <visibilityRule>
-                <conditionLogic>and</conditionLogic>
-                <conditions>
-                    <leftValueReference>varCustomerAccountId</leftValueReference>
-                    <operator>IsNull</operator>
-                    <rightValue>
-                        <booleanValue>true</booleanValue>
-                    </rightValue>
-                </conditions>
-                <conditions>
-                    <leftValueReference>varGlobalAccountId</leftValueReference>
-                    <operator>IsNull</operator>
-                    <rightValue>
-                        <booleanValue>false</booleanValue>
-                    </rightValue>
-                </conditions>
-                <conditions>
-                    <leftValueReference>C26Create_Customer_Top_Level_Account</leftValueReference>
-                    <operator>EqualTo</operator>
-                    <rightValue>
-                        <booleanValue>true</booleanValue>
-                    </rightValue>
-                </conditions>
-            </visibilityRule>
-        </fields>
-        <fields>
-            <name>Marlow_Initial_Creation_Screen_Section3</name>
-            <fieldType>RegionContainer</fieldType>
-            <fields>
-                <name>Marlow_Initial_Creation_Screen_Section3_Column1</name>
+                <name>Initial_Creation_Screen_Section2_Column1</name>
                 <fieldType>Region</fieldType>
                 <inputParameters>
                     <name>width</name>
@@ -2591,13 +1662,13 @@ TEXT({!$User.Legacy_Company__c})=&quot;Marlow&quot;, &quot;Custom Part&quot;,
             <isRequired>false</isRequired>
         </fields>
         <fields>
-            <name>Marlow_Initial_Creation_Screen_Section4</name>
+            <name>Initial_Creation_Screen_Section3</name>
             <fieldType>RegionContainer</fieldType>
             <fields>
-                <name>Marlow_Initial_Creation_Screen_Section4_Column1</name>
+                <name>Initial_Creation_Screen_Section3_Column1</name>
                 <fieldType>Region</fieldType>
                 <fields>
-                    <name>MarOpportunity_Record_Type</name>
+                    <name>Opportunity_Record_Type</name>
                     <choiceReferences>OpportunityRecordType</choiceReferences>
                     <dataType>String</dataType>
                     <defaultValue>
@@ -2608,7 +1679,7 @@ TEXT({!$User.Legacy_Company__c})=&quot;Marlow&quot;, &quot;Custom Part&quot;,
                     <isRequired>true</isRequired>
                 </fields>
                 <fields>
-                    <name>MarCurrency_Selector</name>
+                    <name>Currency_Selector</name>
                     <choiceReferences>CurrencyV2</choiceReferences>
                     <dataType>String</dataType>
                     <defaultValue>
@@ -2619,35 +1690,10 @@ TEXT({!$User.Legacy_Company__c})=&quot;Marlow&quot;, &quot;Custom Part&quot;,
                     <isRequired>true</isRequired>
                 </fields>
                 <fields>
-                    <name>MarCustomer_Qual_Req_d</name>
-                    <choiceReferences>CustomerQualReq</choiceReferences>
-                    <dataType>String</dataType>
-                    <fieldText>Customer Qual Req&apos;d?</fieldText>
-                    <fieldType>DropdownBox</fieldType>
-                    <isRequired>true</isRequired>
-                </fields>
-                <fields>
-                    <name>MarMarlow_BU</name>
-                    <choiceReferences>MarlowBU</choiceReferences>
-                    <dataType>String</dataType>
-                    <fieldText>Marlow BU</fieldText>
-                    <fieldType>DropdownBox</fieldType>
-                    <isRequired>true</isRequired>
-                </fields>
-                <fields>
-                    <name>MarSales_Type</name>
-                    <choiceReferences>SalesType</choiceReferences>
-                    <dataType>String</dataType>
-                    <fieldText>Sales Type</fieldText>
-                    <fieldType>DropdownBox</fieldType>
-                    <isRequired>true</isRequired>
-                </fields>
-                <fields>
-                    <name>MarREACH_Picklist</name>
-                    <choiceReferences>REACH</choiceReferences>
-                    <dataType>String</dataType>
-                    <fieldText>REACH</fieldText>
-                    <fieldType>DropdownBox</fieldType>
+                    <name>Close_Date</name>
+                    <dataType>Date</dataType>
+                    <fieldText>Close Date</fieldText>
+                    <fieldType>InputField</fieldType>
                     <isRequired>true</isRequired>
                 </fields>
                 <inputParameters>
@@ -2659,39 +1705,83 @@ TEXT({!$User.Legacy_Company__c})=&quot;Marlow&quot;, &quot;Custom Part&quot;,
                 <isRequired>false</isRequired>
             </fields>
             <fields>
-                <name>Marlow_Initial_Creation_Screen_Section4_Column2</name>
+                <name>Initial_Creation_Screen_Section3_Column2</name>
                 <fieldType>Region</fieldType>
                 <fields>
-                    <name>MarOpportunity_Name</name>
+                    <name>Opportunity_Name</name>
                     <dataType>String</dataType>
                     <fieldText>Opportunity Name</fieldText>
                     <fieldType>InputField</fieldType>
                     <isRequired>true</isRequired>
                 </fields>
                 <fields>
-                    <name>MarOpportunity_Amount</name>
+                    <name>Opportunity_Amount</name>
                     <dataType>Number</dataType>
                     <fieldText>Opportunity Amount</fieldText>
                     <fieldType>InputField</fieldType>
                     <isRequired>true</isRequired>
                     <scale>0</scale>
+                    <visibilityRule>
+                        <conditionLogic>and</conditionLogic>
+                        <conditions>
+                            <leftValueReference>Opportunity_Record_Type</leftValueReference>
+                            <operator>NotEqualTo</operator>
+                            <rightValue>
+                                <elementReference>varAftermarketRecTId</elementReference>
+                            </rightValue>
+                        </conditions>
+                    </visibilityRule>
                 </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
+            <visibilityRule>
+                <conditionLogic>or</conditionLogic>
+                <conditions>
+                    <leftValueReference>varCustomerAccountId</leftValueReference>
+                    <operator>IsNull</operator>
+                    <rightValue>
+                        <booleanValue>false</booleanValue>
+                    </rightValue>
+                </conditions>
+                <conditions>
+                    <leftValueReference>Create_Opportunity</leftValueReference>
+                    <operator>EqualTo</operator>
+                    <rightValue>
+                        <booleanValue>true</booleanValue>
+                    </rightValue>
+                </conditions>
+            </visibilityRule>
+        </fields>
+        <fields>
+            <name>Initial_Creation_Screen_Section4</name>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>Initial_Creation_Screen_Section4_Column1</name>
+                <fieldType>Region</fieldType>
                 <fields>
-                    <name>MarClose_Date</name>
-                    <dataType>Date</dataType>
-                    <fieldText>Close Date</fieldText>
-                    <fieldType>InputField</fieldType>
+                    <name>Customer_Qual_Req</name>
+                    <choiceReferences>CustomerQualReq</choiceReferences>
+                    <dataType>String</dataType>
+                    <fieldText>Customer Qual Req&apos;d?</fieldText>
+                    <fieldType>DropdownBox</fieldType>
                     <isRequired>true</isRequired>
                 </fields>
                 <fields>
-                    <name>MarProject_Name</name>
+                    <name>Project_Name</name>
                     <dataType>String</dataType>
                     <fieldText>Project Name</fieldText>
                     <fieldType>InputField</fieldType>
                     <isRequired>true</isRequired>
                 </fields>
                 <fields>
-                    <name>MarITAR_picklist</name>
+                    <name>ITAR_picklist</name>
                     <choiceReferences>ITAR</choiceReferences>
                     <dataType>String</dataType>
                     <fieldText>ITAR</fieldText>
@@ -2706,21 +1796,49 @@ TEXT({!$User.Legacy_Company__c})=&quot;Marlow&quot;, &quot;Custom Part&quot;,
                 </inputParameters>
                 <isRequired>false</isRequired>
             </fields>
+            <fields>
+                <name>Initial_Creation_Screen_Section4_Column2</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>Marlow_BU</name>
+                    <choiceReferences>MarlowBU</choiceReferences>
+                    <dataType>String</dataType>
+                    <fieldText>Marlow BU</fieldText>
+                    <fieldType>DropdownBox</fieldType>
+                    <isRequired>true</isRequired>
+                </fields>
+                <fields>
+                    <name>REACH_Picklist</name>
+                    <choiceReferences>REACH</choiceReferences>
+                    <dataType>String</dataType>
+                    <fieldText>REACH</fieldText>
+                    <fieldType>DropdownBox</fieldType>
+                    <isRequired>true</isRequired>
+                </fields>
+                <fields>
+                    <name>Sales_Type</name>
+                    <choiceReferences>SalesType</choiceReferences>
+                    <dataType>String</dataType>
+                    <fieldText>Sales Type</fieldText>
+                    <fieldType>DropdownBox</fieldType>
+                    <isRequired>true</isRequired>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
             <isRequired>false</isRequired>
             <visibilityRule>
-                <conditionLogic>or</conditionLogic>
+                <conditionLogic>and</conditionLogic>
                 <conditions>
-                    <leftValueReference>MarCreate_Opportunity</leftValueReference>
+                    <leftValueReference>GetUser.Legacy_Company__c</leftValueReference>
                     <operator>EqualTo</operator>
                     <rightValue>
-                        <booleanValue>true</booleanValue>
-                    </rightValue>
-                </conditions>
-                <conditions>
-                    <leftValueReference>varCustomerAccountId</leftValueReference>
-                    <operator>IsNull</operator>
-                    <rightValue>
-                        <booleanValue>false</booleanValue>
+                        <stringValue>Marlow</stringValue>
                     </rightValue>
                 </conditions>
             </visibilityRule>
@@ -2731,7 +1849,7 @@ TEXT({!$User.Legacy_Company__c})=&quot;Marlow&quot;, &quot;Custom Part&quot;,
     <screens>
         <name>Success_Screen</name>
         <label>Success Screen</label>
-        <locationX>2755</locationX>
+        <locationX>3061</locationX>
         <locationY>179</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
@@ -2746,9 +1864,9 @@ TEXT({!$User.Legacy_Company__c})=&quot;Marlow&quot;, &quot;Custom Part&quot;,
     </screens>
     <start>
         <locationX>50</locationX>
-        <locationY>151</locationY>
+        <locationY>152</locationY>
         <connector>
-            <targetReference>getRecT</targetReference>
+            <targetReference>GetUser</targetReference>
         </connector>
     </start>
     <status>Active</status>
@@ -2798,6 +1916,13 @@ TEXT({!$User.Legacy_Company__c})=&quot;Marlow&quot;, &quot;Custom Part&quot;,
         <objectType>Opportunity</objectType>
     </variables>
     <variables>
+        <name>varAftermarketRecTId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
         <name>varCustomerAccountId</name>
         <dataType>String</dataType>
         <isCollection>false</isCollection>
@@ -2834,6 +1959,13 @@ TEXT({!$User.Legacy_Company__c})=&quot;Marlow&quot;, &quot;Custom Part&quot;,
     </variables>
     <variables>
         <name>varStandardOpportunityId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>varTopLevelAccountRecordTypeId</name>
         <dataType>String</dataType>
         <isCollection>false</isCollection>
         <isInput>false</isInput>

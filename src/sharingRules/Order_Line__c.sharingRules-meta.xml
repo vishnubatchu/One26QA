@@ -53,6 +53,19 @@
         </criteriaItems>
     </sharingCriteriaRules>
     <sharingCriteriaRules>
+        <fullName>Sharing_to_Common_access</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Sharing to Common access</label>
+        <sharedTo>
+            <group>Common_Order_access_Group</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>CreatedById</field>
+            <operation>notEqual</operation>
+            <value>null</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
         <fullName>WSSlineSharing</fullName>
         <accessLevel>Edit</accessLevel>
         <label>WSSlineSharing</label>
@@ -61,6 +74,19 @@
         </sharedTo>
         <criteriaItems>
             <field>Parent_WareHouse__c</field>
+            <operation>equals</operation>
+            <value>SYD</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Wsssharing</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Wsssharing</label>
+        <sharedTo>
+            <group>WSSQualityGroup</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Ship_From_Inventory__c</field>
             <operation>equals</operation>
             <value>SYD</value>
         </criteriaItems>

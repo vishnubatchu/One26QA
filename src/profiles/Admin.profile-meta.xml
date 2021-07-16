@@ -462,6 +462,10 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>InsertSharedRecordIterable</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>InsertSharedRecordOneTimeBatch</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -1070,10 +1074,6 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>inshertSHaredRecordIterable</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
         <apexClass>ordersBatch</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -1503,6 +1503,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Account.Legacy_Id__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.Legacy_Salesforce_Org__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -3062,6 +3067,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Contact.Legacy_Salesforce_Org__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Contact.MailingAddress</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -3462,6 +3472,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Costing_Quote__c.Legacy_Salesforce_Org__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Costing_Quote__c.MOQ__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -3658,6 +3673,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Costing__c.Internal_Cost_Project_No__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Costing__c.Legacy_Salesforce_Org__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -3973,6 +3993,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Event.IsVisibleInSelfService</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Event.Legacy_Salesforce_Org__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -4843,6 +4868,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Lead.Lead_Source_Text__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Lead.Legacy_Salesforce_Org__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -5912,6 +5942,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Meeting_Reports__c.Legacy_Salesforce_Org__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Meeting_Reports__c.Location__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -6272,6 +6307,16 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Opportunity.Legacy_Salesforce_Org__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Opportunity.Legacy__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Opportunity.Lost_Cancelled_Rejected_Reason__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -6383,6 +6428,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Opportunity.Opportunity_Number__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Opportunity.Order_Created__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -7143,6 +7193,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Order.Legacy_Salesforce_Id__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Order.Legacy_Salesforce_Org__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -8751,6 +8806,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>Product2.Hierarchy_Division__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>Product2.II_VI_DE_Long_Description__c</field>
         <readable>true</readable>
@@ -8793,6 +8853,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Product2.Legacy_Part_No__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Product2.Legacy_Salesforce_Org__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -9402,6 +9467,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Quote.Legacy_Salesforce_Org__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Quote.Link_to_Quote_on_Server__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -9477,7 +9547,7 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>Quote.Owner_Email__c</field>
+        <field>Quote.OwnerEmail__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -11203,6 +11273,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Task.IsVisibleInSelfService</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Task.Legacy_Salesforce_Org__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -12950,6 +13025,10 @@
     </flowAccesses>
     <flowAccesses>
         <enabled>false</enabled>
+        <flow>Close_CC_Case</flow>
+    </flowAccesses>
+    <flowAccesses>
+        <enabled>false</enabled>
         <flow>Comcast_Case_process</flow>
     </flowAccesses>
     <flowAccesses>
@@ -12975,6 +13054,10 @@
     <flowAccesses>
         <enabled>false</enabled>
         <flow>CreateCostingQuote</flow>
+    </flowAccesses>
+    <flowAccesses>
+        <enabled>false</enabled>
+        <flow>Create_Order</flow>
     </flowAccesses>
     <flowAccesses>
         <enabled>false</enabled>
@@ -13047,6 +13130,10 @@
     <flowAccesses>
         <enabled>false</enabled>
         <flow>OpptyLinetoQuoteLineCreation</flow>
+    </flowAccesses>
+    <flowAccesses>
+        <enabled>false</enabled>
+        <flow>OrderLineProcess</flow>
     </flowAccesses>
     <flowAccesses>
         <enabled>false</enabled>

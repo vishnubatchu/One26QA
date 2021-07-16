@@ -1,3 +1,8 @@
+/**
+* Created by : Akhilesh
+* Date : 2nd June 2021
+* Description: This iterable class is created for UpdateGlobalParentLookupsBatch batch class
+*/
 public class updateGlobalParentCustomIterable implements Iterable<sObject> {
    public Iterator<sObject> iterator(){
       List<sObject> scope = new List<sObject>();

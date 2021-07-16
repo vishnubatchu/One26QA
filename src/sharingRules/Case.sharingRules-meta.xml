@@ -26,6 +26,30 @@
             <value>Comcast Case</value>
         </criteriaItems>
     </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>WebToCase_AMD</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>WebToCase-AMD</label>
+        <sharedTo>
+            <role>Advanced_Materials</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>CreatedById</field>
+            <operation>equals</operation>
+            <value>0051B00000DcWHH</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingOwnerRules>
+        <fullName>After_Market_Sharing</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>After Market Sharing</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>Sales_Rep_Engineer_Military_Domestic</roleAndSubordinatesInternal>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>Director_Sales_Mktg</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
     <sharingOwnerRules>
         <fullName>Aftermarket</fullName>
         <accessLevel>Read</accessLevel>
@@ -35,6 +59,83 @@
         </sharedTo>
         <sharedFrom>
             <roleAndSubordinatesInternal>Director_of_Sales_Marketing</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Aftermarket_Sharing_Rep</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Aftermarket Sharing Rep</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>Sales_Rep_Engineer_Aftermarket</roleAndSubordinatesInternal>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>Director_Sales_Mktg</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Aftermarket_Sharing_Ter_Mgr</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Aftermarket Sharing Ter Mgr</label>
+        <sharedTo>
+            <role>Regional_Manager_Aftermarket</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>Director_Sales_Mktg</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Asia_Sharing</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Asia Sharing</label>
+        <sharedTo>
+            <role>Regional_Manager_Asia</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>Director_Sales_Mktg</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Asia_Sharing_Rep</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Asia Sharing - Rep</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>US_Sales_Rep_Engineer_Asia</roleAndSubordinatesInternal>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>Director_Sales_Mktg</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Europe_Sharing</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Europe Sharing</label>
+        <sharedTo>
+            <role>Regional_Manager_Europe</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>Director_Sales_Mktg</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Europe_Sharing_Rep</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Europe Sharing - Rep</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>Sales_Rep_Engineer_Europe</roleAndSubordinatesInternal>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>Director_Sales_Mktg</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Suzhou_Sharing</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Suzhou Sharing</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>Suzhou_Sales_Manager_OEM</roleAndSubordinatesInternal>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>Suzhou_Sales_Manager_OEM</roleAndSubordinatesInternal>
         </sharedFrom>
     </sharingOwnerRules>
 </SharingRules>

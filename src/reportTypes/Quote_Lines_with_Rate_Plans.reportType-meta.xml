@@ -641,7 +641,7 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Owner_Email__c</field>
+            <field>OwnerEmail__c</field>
             <table>Quote</table>
         </columns>
         <columns>

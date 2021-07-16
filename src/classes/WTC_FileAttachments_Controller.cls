@@ -1,4 +1,4 @@
-public with sharing class WTC_FileAttachments_Controller {
+public class WTC_FileAttachments_Controller {
 
     // The maximum number of file inputs that appear on the page
     final Integer NUM_FILE_INPUTS = 10;
@@ -108,7 +108,7 @@ public with sharing class WTC_FileAttachments_Controller {
                       				ContentDocumentId = cv.ContentDocumentId, 
                                    	LinkedEntityId = caseId));
                 }
-                insert cdLinks;
+                //insert cdLinks;
                 //End - In order to link the documents with case
                 System.debug('[-] Inserted ' + toInsert.size() + ' atts');
                 toInsert = null;

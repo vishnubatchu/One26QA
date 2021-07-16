@@ -2,10 +2,10 @@
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>52.0</apiVersion>
     <assignments>
-        <name>Set_Contact_Record</name>
-        <label>Set Contact Record</label>
-        <locationX>969</locationX>
-        <locationY>637</locationY>
+        <name>Set_Account_ownerId_as_Contactshare_UserId</name>
+        <label>Set Account ownerId as Contactshare UserId</label>
+        <locationX>861</locationX>
+        <locationY>672</locationY>
         <assignmentItems>
             <assignToReference>contactRecord</assignToReference>
             <operator>Assign</operator>
@@ -13,13 +13,75 @@
                 <elementReference>$Record</elementReference>
             </value>
         </assignmentItems>
+        <assignmentItems>
+            <assignToReference>ContactShareUserId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Account.OwnerId</elementReference>
+            </value>
+        </assignmentItems>
         <connector>
             <targetReference>Create_ContactShare_record</targetReference>
         </connector>
     </assignments>
+    <assignments>
+        <name>Set_Account_s_ownerId_as_UserId_to_query</name>
+        <label>Set Account&apos;s ownerId as UserId to query</label>
+        <locationX>1154</locationX>
+        <locationY>328</locationY>
+        <assignmentItems>
+            <assignToReference>ContactShareUserId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record__Prior.Account.OwnerId</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Get_ContactShare_Record</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Set_Global_Ultimate_parent_ownerId_as_ContactShare_UserId</name>
+        <label>Set Global Ultimate parent ownerId as ContactShare UserId</label>
+        <locationX>1040</locationX>
+        <locationY>508</locationY>
+        <assignmentItems>
+            <assignToReference>contactRecord</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>ContactShareUserId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Account.Global_Ultimate_Parent__r.OwnerId</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Create_ContactShare_record</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Set_Global_Ultimate_parent_ownerId_as_UserId_to_query</name>
+        <label>Set Global Ultimate parent ownerId as UserId to query</label>
+        <locationX>1249</locationX>
+        <locationY>189</locationY>
+        <assignmentItems>
+            <assignToReference>ContactShareUserId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record__Prior.Account.Global_Ultimate_Parent__r.OwnerId</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Get_ContactShare_Record</targetReference>
+        </connector>
+    </assignments>
     <decisions>
-        <name>Check_if_Account_and_it_s_Global_Ultimate_parent_are_not_null</name>
-        <label>Check if Account and it&apos;s Global Ultimate parent are not null</label>
+        <name>Check_if_Account_is_not_null</name>
+        <label>Check if Account is not null</label>
         <locationX>836</locationX>
         <locationY>468</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
@@ -47,10 +109,46 @@
                     <elementReference>$Record.OwnerId</elementReference>
                 </rightValue>
             </conditions>
+            <conditions>
+                <leftValueReference>$Record.Account.RecordType.Name</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Global Parent</stringValue>
+                </rightValue>
+            </conditions>
             <connector>
-                <targetReference>Set_Contact_Record</targetReference>
+                <targetReference>Set_Global_Ultimate_parent_ownerId_as_ContactShare_UserId</targetReference>
             </connector>
             <label>Account and it&apos;s Global Ultimate parent are not null</label>
+        </rules>
+        <rules>
+            <name>Account_is_not_null_and_is_global_parent</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.AccountId</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Account.RecordType.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Global Parent</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Account.OwnerId</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record.OwnerId</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Account_ownerId_as_Contactshare_UserId</targetReference>
+            </connector>
+            <label>Account is not null and is global parent</label>
         </rules>
     </decisions>
     <decisions>
@@ -85,7 +183,7 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Check_if_Account_and_it_s_Global_Ultimate_parent_are_not_null</targetReference>
+                <targetReference>Check_if_Account_is_not_null</targetReference>
             </connector>
             <label>Owner is changed</label>
         </rules>
@@ -120,7 +218,7 @@
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>Previous_Account_was_blank_Or_Previous_Account_s_Global_Parent_was_null</name>
-            <conditionLogic>1 OR (2 AND 3)</conditionLogic>
+            <conditionLogic>1 OR (2 AND 3 AND 4)</conditionLogic>
             <conditions>
                 <leftValueReference>$Record__Prior.AccountId</leftValueReference>
                 <operator>IsNull</operator>
@@ -142,8 +240,15 @@
                     <booleanValue>true</booleanValue>
                 </rightValue>
             </conditions>
+            <conditions>
+                <leftValueReference>$Record__Prior.Account.RecordType.Name</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Global Parent</stringValue>
+                </rightValue>
+            </conditions>
             <connector>
-                <targetReference>Check_if_Account_and_it_s_Global_Ultimate_parent_are_not_null</targetReference>
+                <targetReference>Check_if_Account_is_not_null</targetReference>
             </connector>
             <label>Previous Account was blank Or Previous Account&apos;s Global Parent was null</label>
         </rules>
@@ -164,10 +269,39 @@
                     <booleanValue>false</booleanValue>
                 </rightValue>
             </conditions>
+            <conditions>
+                <leftValueReference>$Record__Prior.Account.RecordType.Name</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Global Parent</stringValue>
+                </rightValue>
+            </conditions>
             <connector>
-                <targetReference>Get_ContactShare_Record</targetReference>
+                <targetReference>Set_Global_Ultimate_parent_ownerId_as_UserId_to_query</targetReference>
             </connector>
             <label>Previous Account&apos;s Global Parent was not null</label>
+        </rules>
+        <rules>
+            <name>Previous_Account_s_record_type_was_Global_Parent</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record__Prior.AccountId</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record__Prior.Account.RecordType.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Global Parent</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Account_s_ownerId_as_UserId_to_query</targetReference>
+            </connector>
+            <label>Previous Account&apos;s record type was Global Parent</label>
         </rules>
     </decisions>
     <decisions>
@@ -187,7 +321,7 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Check_if_Account_and_it_s_Global_Ultimate_parent_are_not_null</targetReference>
+                <targetReference>Check_if_Account_is_not_null</targetReference>
             </connector>
             <label>Record is created</label>
         </rules>
@@ -238,7 +372,7 @@
         <name>Create_ContactShare_record</name>
         <label>Create ContactShare record</label>
         <locationX>1248</locationX>
-        <locationY>621</locationY>
+        <locationY>623</locationY>
         <inputAssignments>
             <field>ContactAccessLevel</field>
             <value>
@@ -260,7 +394,7 @@
         <inputAssignments>
             <field>UserOrGroupId</field>
             <value>
-                <elementReference>contactRecord.Account.Global_Ultimate_Parent__r.OwnerId</elementReference>
+                <elementReference>ContactShareUserId</elementReference>
             </value>
         </inputAssignments>
         <object>ContactShare</object>
@@ -272,15 +406,15 @@
         <locationX>1665</locationX>
         <locationY>458</locationY>
         <connector>
-            <targetReference>Check_if_Account_and_it_s_Global_Ultimate_parent_are_not_null</targetReference>
+            <targetReference>Check_if_Account_is_not_null</targetReference>
         </connector>
         <inputReference>Get_ContactShare_Record</inputReference>
     </recordDeletes>
     <recordLookups>
         <name>Get_ContactShare_Record</name>
         <label>Get ContactShare Record</label>
-        <locationX>1371</locationX>
-        <locationY>263</locationY>
+        <locationX>1395</locationX>
+        <locationY>283</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Check_if_queried_ContactShare_list_is_empty</targetReference>
@@ -297,7 +431,7 @@
             <field>UserOrGroupId</field>
             <operator>EqualTo</operator>
             <value>
-                <elementReference>$Record__Prior.Account.Global_Ultimate_Parent__r.Owner.Id</elementReference>
+                <elementReference>ContactShareUserId</elementReference>
             </value>
         </filters>
         <filters>
@@ -336,5 +470,12 @@
         <isInput>false</isInput>
         <isOutput>false</isOutput>
         <objectType>Contact</objectType>
+    </variables>
+    <variables>
+        <name>ContactShareUserId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
     </variables>
 </Flow>

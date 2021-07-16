@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RMAnoRequiredforHW</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISPICKVAL(Disposition__c  , &apos;Hardware&apos;)  &amp;&amp;  ISBLANK(RMA_Order_Number__c  ) &amp;&amp;  RecordType.DeveloperName = &apos;Comcast_Case&apos;</errorConditionFormula>
+    <errorMessage>RMA No# Should be provided for Hard Ware Issue.</errorMessage>
+</ValidationRule>

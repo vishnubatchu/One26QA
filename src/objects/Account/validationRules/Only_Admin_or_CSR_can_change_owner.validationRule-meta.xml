@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Only_Admin_or_CSR_can_change_owner</fullName>
-    <active>true</active>
+    <active>false</active>
     <errorConditionFormula>AND(
   ISCHANGED(OwnerId),
   $Profile.Name  =  &quot;System Administrator&quot;, $Profile.Name  =  &quot;User Profile 1&quot;

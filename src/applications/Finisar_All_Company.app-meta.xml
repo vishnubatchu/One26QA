@@ -65,14 +65,13 @@
     </actionOverrides>
     <brand>
         <headerColor>#0070D2</headerColor>
-        <logoVersion>1</logoVersion>
         <shouldOverrideOrgTheme>true</shouldOverrideOrgTheme>
     </brand>
     <description>This is the app for the Finisar Salesforce Org</description>
     <formFactors>Large</formFactors>
     <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
     <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
-    <label>Finisar - All Company</label>
+    <label>II-VI - All Company</label>
     <navType>Console</navType>
     <profileActionOverrides>
         <actionName>View</actionName>

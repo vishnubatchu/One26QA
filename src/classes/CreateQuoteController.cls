@@ -11,7 +11,7 @@ public with sharing class CreateQuoteController {
         Id qtRecordTypeId = Schema.SObjectType.Quote.getRecordTypeInfosByDeveloperName().get('Quote_Record_Type').getRecordTypeId();
         Quote newQte;
         pageReference pgRef ;
-        List<OpportunityLineItem> oppLines = [SELECT Id,name, OpportunityId, Product2Id, Description, Quantity, UnitPrice,CurrencyIsoCode,Description__c,
+        List<OpportunityLineItem> oppLines = [SELECT Id,name, OpportunityId , Product2Id, Description, Quantity, UnitPrice,CurrencyIsoCode,Description__c,
                                               PriceBookEntryId, Additional_Specifications__c, II_VI_DE_Long_Description__c, Long_Description_English__c,
                                               Long_Description_French__c, Alternate_Description__c, Request_Date__c, Ship_Date__c, Lead_Time__c, Rich_Text_Deutsch__c,
                                               Rich_Text_English__c,SortOrder 
@@ -41,7 +41,7 @@ public with sharing class CreateQuoteController {
                                                         Lead_Time__c = oLine.Lead_Time__c,
                                                         Rich_Text_English__c = oLine.Rich_Text_English__c,
                                                         Rich_Text_Deutsch__c = oLine.Rich_Text_Deutsch__c,
-                                                        SortOrder__c = oLine.SortOrder);
+                                                        SortOrder__c = oLine.SortOrder,CurrencyIsoCode=newQte.CurrencyIsoCode);
                 oppQteLineMap.put(oLine.Id, qLine);
                 //qLines.add(qLine);
             }

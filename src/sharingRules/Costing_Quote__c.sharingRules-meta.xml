@@ -1,6 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
     <sharingCriteriaRules>
+        <fullName>CE_Sharing</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>CE Sharing</label>
+        <sharedTo>
+            <group>IR_CE</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Department__c</field>
+            <operation>equals</operation>
+            <value>CE</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CS_Sharing</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>CS Sharing</label>
+        <sharedTo>
+            <group>IR_CS</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Department__c</field>
+            <operation>equals</operation>
+            <value>CS</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CTG_Sharing</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>CTG Sharing</label>
+        <sharedTo>
+            <group>IR_CTG</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Department__c</field>
+            <operation>equals</operation>
+            <value>CTG</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>DMG_Sharing</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>DMG Sharing</label>
+        <sharedTo>
+            <group>IR_DMG</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Department__c</field>
+            <operation>equals</operation>
+            <value>DMG</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
         <fullName>Dpt_DT</fullName>
         <accessLevel>Edit</accessLevel>
         <label>Dpt: DT</label>
@@ -11,6 +63,58 @@
             <field>Department__c</field>
             <operation>equals</operation>
             <value>DT</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>GSC_Sharing</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>GSC Sharing</label>
+        <sharedTo>
+            <group>IR_GSC</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Department__c</field>
+            <operation>equals</operation>
+            <value>GSC</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>MQ_Sharing</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>MQ Sharing</label>
+        <sharedTo>
+            <group>IR_MQ</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Department__c</field>
+            <operation>equals</operation>
+            <value>MQ</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>OF_Sharing</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>OF Sharing</label>
+        <sharedTo>
+            <group>IR_OF</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Department__c</field>
+            <operation>equals</operation>
+            <value>OF</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>QA_Sharing</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>QA Sharing</label>
+        <sharedTo>
+            <group>IR_QA</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Department__c</field>
+            <operation>equals</operation>
+            <value>QA</value>
         </criteriaItems>
     </sharingCriteriaRules>
     <sharingCriteriaRules>

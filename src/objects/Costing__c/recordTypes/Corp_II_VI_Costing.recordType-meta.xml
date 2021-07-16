@@ -19,6 +19,17 @@
         </values>
     </picklistValues>
     <picklistValues>
+        <picklist>Legacy_Salesforce_Org__c</picklist>
+        <values>
+            <fullName>Corp II-VI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marlow</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
         <picklist>Marekting_Status__c</picklist>
         <values>
             <fullName>Complete - Notify Sales</fullName>

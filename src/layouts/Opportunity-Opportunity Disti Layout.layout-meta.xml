@@ -333,11 +333,12 @@
         <excludeButtons>AddProduct</excludeButtons>
         <excludeButtons>ChoosePricebook</excludeButtons>
         <fields>Product2</fields>
-        <fields>Marketing_PN__c</fields>
         <fields>Quantity</fields>
         <fields>UnitPrice</fields>
-        <fields>SUBTOTAL</fields>
-        <fields>ProductCode</fields>
+        <fields>Description__c</fields>
+        <fields>ServiceDate</fields>
+        <fields>Description</fields>
+        <fields>ListPrice</fields>
         <relatedList>RelatedLineItemList</relatedList>
     </relatedLists>
     <relatedLists>

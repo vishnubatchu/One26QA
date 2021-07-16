@@ -26,6 +26,11 @@
                 <default>false</default>
                 <label>Marlow</label>
             </value>
+            <value>
+                <fullName>Photonics</fullName>
+                <default>false</default>
+                <label>Photonics</label>
+            </value>
         </valueSetDefinition>
     </valueSet>
 </CustomField>

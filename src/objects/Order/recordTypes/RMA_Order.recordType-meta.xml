@@ -6,6 +6,17 @@
     <description>This is the record type for orders that come in of type RMA</description>
     <label>RMA Order</label>
     <picklistValues>
+        <picklist>Legacy_Salesforce_Org__c</picklist>
+        <values>
+            <fullName>Corp II-VI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marlow</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
         <picklist>SAP_Order_Type__c</picklist>
         <values>
             <fullName>Free-of-Charge</fullName>

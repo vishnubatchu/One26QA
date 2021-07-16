@@ -9,7 +9,8 @@ Parent Account lookup cannot be null
 The Record Type of the Account in the Parent Account lookup must equal “Global Parent”</description>
     <errorConditionFormula>AND(
 AND(  RecordType.DeveloperName =&apos;Account&apos;,
-NOT(ISPICKVAL(Source_System__c ,&apos;Oracle-EBS&apos;))
+NOT(ISPICKVAL(Source_System__c ,&apos;Oracle-EBS&apos;)),
+NOT(TEXT(Source_System__c)=&quot;&quot;)
 ),
 OR(ISBLANK(ParentId), AND(NOT(ISBLANK(ParentId)),NOT( Parent.RecordType.DeveloperName =&apos;Global_Parent&apos;))
 )

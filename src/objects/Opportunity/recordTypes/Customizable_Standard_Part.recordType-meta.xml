@@ -1457,6 +1457,28 @@
         </values>
     </picklistValues>
     <picklistValues>
+        <picklist>Legacy_Salesforce_Org__c</picklist>
+        <values>
+            <fullName>Corp II-VI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marlow</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Legacy__c</picklist>
+        <values>
+            <fullName>Corp II-VI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marlow</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
         <picklist>Lost_Cancelled_Rejected_Reason__c</picklist>
         <values>
             <fullName>Alternative Technology Chosen</fullName>
@@ -2636,6 +2658,10 @@
     </picklistValues>
     <picklistValues>
         <picklist>Type</picklist>
+        <values>
+            <fullName>Existing Business %E2%80%93 Demand Already Forecasted</fullName>
+            <default>false</default>
+        </values>
         <values>
             <fullName>Existing Business - Follow-on</fullName>
             <default>false</default>

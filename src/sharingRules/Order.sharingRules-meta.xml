@@ -40,6 +40,19 @@
         </criteriaItems>
     </sharingCriteriaRules>
     <sharingCriteriaRules>
+        <fullName>Sharing_to_Common_access</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Sharing to Common access</label>
+        <sharedTo>
+            <group>Common_Order_access_Group</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>CreatedById</field>
+            <operation>notEqual</operation>
+            <value>null</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
         <fullName>WSSOrderSharing</fullName>
         <accessLevel>Edit</accessLevel>
         <label>WSSOrderSharing</label>

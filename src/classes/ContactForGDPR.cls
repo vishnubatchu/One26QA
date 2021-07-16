@@ -222,7 +222,7 @@ return null;
                    }
                    mail.setToAddresses(New List <String> {contactCreatorEmail});
                    mail.setWhatId(c.Id);
-                   mail.setTargetObjectId(c.CreatedById);
+                   mail.setTargetObjectId(c.Id);
                    mail.setSaveAsActivity(false);
                    mail.setOrgWideEmailAddressId(owea.get(0).Id);
                   // mail.setBccAddresses(new String[] {Label.dataservice,Label.GDPR_Email_Service_Address});
@@ -233,7 +233,7 @@ return null;
                }
         }
         if(mailList != null && !mailList.isEmpty()){
-            Messaging.sendEmail(mailList, false);
+            Messaging.sendEmail(mailList, true);
         }
         if(updateIndividual!= null && !updateIndividual.isEmpty()){
             update updateIndividual;

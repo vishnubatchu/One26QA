@@ -43,6 +43,10 @@
                 <field>Legacy_Company__c</field>
             </layoutItems>
             <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Legacy_Profile_Name__c</field>
+            </layoutItems>
+            <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>Profile_Name__c</field>
             </layoutItems>
@@ -51,10 +55,6 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Email_External_Id__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Legacy_Profile_Name__c</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>

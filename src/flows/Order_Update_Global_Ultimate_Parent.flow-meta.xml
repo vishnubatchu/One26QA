@@ -78,7 +78,7 @@
         <defaultConnectorLabel>default</defaultConnectorLabel>
         <rules>
             <name>myRule_3</name>
-            <conditionLogic>(1 AND 2) OR (1 AND 3 AND 4)</conditionLogic>
+            <conditionLogic>(1 AND 2) OR (1 AND 3 AND 4) and 5</conditionLogic>
             <conditions>
                 <processMetadataValues>
                     <name>inputDataType</name>
@@ -209,6 +209,37 @@
                     <booleanValue>true</booleanValue>
                 </rightValue>
             </conditions>
+            <conditions>
+                <processMetadataValues>
+                    <name>inputDataType</name>
+                    <value>
+                        <stringValue>Boolean</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>leftHandSideType</name>
+                    <value>
+                        <stringValue>Boolean</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>operatorDataType</name>
+                    <value>
+                        <stringValue>Boolean</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>rightHandSideType</name>
+                    <value>
+                        <stringValue>Boolean</stringValue>
+                    </value>
+                </processMetadataValues>
+                <leftValueReference>myVariable_current.Integration_Flag__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
             <connector>
                 <targetReference>myRule_3_A1</targetReference>
             </connector>
@@ -221,16 +252,16 @@
             <value>
                 <stringValue>OR(AND(ISNEW(),NOT(ISBLANK([Order].AccountId )),NOT(ISBLANK([Order].Account.Global_Ultimate_Parent__c )),[Order].Account.Global_Ultimate_Parent__r.RecordType.DeveloperName  = &apos;Global_Parent&apos;),
 AND(ISCHANGED([Order].AccountId),NOT(ISBLANK([Order].AccountId )),NOT(ISBLANK([Order].Account.Global_Ultimate_Parent__c )),[Order].Account.Global_Ultimate_Parent__r.RecordType.DeveloperName  = &apos;Global_Parent&apos;)
-)</stringValue>
+) &amp;&amp; [Order].Integration_Flag__c </stringValue>
             </value>
         </processMetadataValues>
         <name>formula_myRule_1</name>
         <dataType>Boolean</dataType>
         <expression>OR(AND(ISNEW(),NOT(ISBLANK({!myVariable_current.AccountId} )),NOT(ISBLANK({!myVariable_current.Account.Global_Ultimate_Parent__c} )),{!myVariable_current.Account.Global_Ultimate_Parent__r.RecordType.DeveloperName}  = &apos;Global_Parent&apos;),
 AND(ISCHANGED({!myVariable_current.AccountId}),NOT(ISBLANK({!myVariable_current.AccountId} )),NOT(ISBLANK({!myVariable_current.Account.Global_Ultimate_Parent__c} )),{!myVariable_current.Account.Global_Ultimate_Parent__r.RecordType.DeveloperName}  = &apos;Global_Parent&apos;)
-)</expression>
+) &amp;&amp; {!myVariable_current.Integration_Flag__c}</expression>
     </formulas>
-    <interviewLabel>Order_Update_Global_Ultimate_Parent-3_InterviewLabel</interviewLabel>
+    <interviewLabel>Order_Update_Global_Ultimate_Parent-4_InterviewLabel</interviewLabel>
     <label>Order - Update Global Ultimate Parent</label>
     <processMetadataValues>
         <name>ObjectType</name>

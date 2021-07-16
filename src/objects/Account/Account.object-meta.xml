@@ -274,14 +274,13 @@
         <searchFilterFields>ACCOUNT.ADDRESS2_ZIP</searchFilterFields>
         <searchFilterFields>ACCOUNT.ADDRESS2_COUNTRY</searchFilterFields>
         <searchResultsAdditionalFields>ACCOUNT.NAME</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>Glovia_Region__c</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>ACCOUNT.URL</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>ACCOUNT.ADDRESS1_STREET</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>ACCOUNT.ADDRESS1_CITY</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>ACCOUNT.ADDRESS1_STATE</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>ACCOUNT.ADDRESS1_ZIP</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>ACCOUNT.ADDRESS1_COUNTRY</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>PARENT_NAME</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>ACCOUNT.RECORDTYPE</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>Source_System__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Price_List__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Sales_Channel_Display_Code__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Display_Shipping_Country__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CORE.USERS.ALIAS</searchResultsAdditionalFields>
     </searchLayouts>
     <sharingModel>Read</sharingModel>
 </CustomObject>

@@ -3896,6 +3896,17 @@
         </values>
     </picklistValues>
     <picklistValues>
+        <picklist>Legacy_Salesforce_Org__c</picklist>
+        <values>
+            <fullName>Corp II-VI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marlow</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
         <picklist>Legacy_Salesforce_System__c</picklist>
         <values>
             <fullName>II-VI Corp</fullName>

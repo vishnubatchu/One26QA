@@ -27,7 +27,7 @@
         <label>General Inquiry</label>
         <name>General_Inquiry</name>
     </approvalStep>
-    <emailTemplate>unfiled$public/Approve_Request_CC_case</emailTemplate>
+    <emailTemplate>Comcast_Emails/CC_Request_Approval_Email_Template</emailTemplate>
     <enableMobileDeviceAccess>false</enableMobileDeviceAccess>
     <entryCriteria>
         <criteriaItems>

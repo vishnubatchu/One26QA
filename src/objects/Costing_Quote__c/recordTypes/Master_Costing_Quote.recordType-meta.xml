@@ -705,6 +705,17 @@
         </values>
     </picklistValues>
     <picklistValues>
+        <picklist>Legacy_Salesforce_Org__c</picklist>
+        <values>
+            <fullName>Corp II-VI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marlow</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
         <picklist>No_Quote_Reason__c</picklist>
         <values>
             <fullName>Bevel tolerance</fullName>

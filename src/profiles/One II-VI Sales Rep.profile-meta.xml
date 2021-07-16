@@ -123,7 +123,7 @@
     </classAccesses>
     <classAccesses>
         <apexClass>AddRatePlanController</apexClass>
-        <enabled>false</enabled>
+        <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
         <apexClass>AddRatePlanControllerTest</apexClass>
@@ -203,11 +203,11 @@
     </classAccesses>
     <classAccesses>
         <apexClass>CloneOppWithDiffCurrecny_Controller</apexClass>
-        <enabled>false</enabled>
+        <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
         <apexClass>CloneOpportunityExtension</apexClass>
-        <enabled>false</enabled>
+        <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
         <apexClass>CloneOpportunityExtensionTest</apexClass>
@@ -287,7 +287,7 @@
     </classAccesses>
     <classAccesses>
         <apexClass>CreateOrderedPartsForOpp</apexClass>
-        <enabled>false</enabled>
+        <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
         <apexClass>CreateOrderedPartsForOppTest</apexClass>
@@ -295,7 +295,7 @@
     </classAccesses>
     <classAccesses>
         <apexClass>CreateOrderedPartsForOrder</apexClass>
-        <enabled>false</enabled>
+        <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
         <apexClass>CreateOrderedPartsForOrderTest</apexClass>
@@ -303,7 +303,7 @@
     </classAccesses>
     <classAccesses>
         <apexClass>CreateOrderedPartsForQuote</apexClass>
-        <enabled>false</enabled>
+        <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
         <apexClass>CreateOrderedPartsForQuoteTest</apexClass>
@@ -327,7 +327,7 @@
     </classAccesses>
     <classAccesses>
         <apexClass>CreateTransferQuote_Controller</apexClass>
-        <enabled>false</enabled>
+        <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
         <apexClass>CreateTransferQuote_ControllerTest</apexClass>
@@ -459,6 +459,10 @@
     </classAccesses>
     <classAccesses>
         <apexClass>IndividualRecordHelper</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>InsertSharedRecordIterable</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -707,7 +711,7 @@
     </classAccesses>
     <classAccesses>
         <apexClass>OpportunityTriggerHelper</apexClass>
-        <enabled>false</enabled>
+        <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
         <apexClass>OpportunityTriggerTest</apexClass>
@@ -767,7 +771,7 @@
     </classAccesses>
     <classAccesses>
         <apexClass>OrderRatePlan_Controller</apexClass>
-        <enabled>false</enabled>
+        <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
         <apexClass>OrderlineOwnerupdate</apexClass>
@@ -851,7 +855,7 @@
     </classAccesses>
     <classAccesses>
         <apexClass>QuoteRatePlan_Controller</apexClass>
-        <enabled>false</enabled>
+        <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
         <apexClass>QuoteRatePlan_ControllerTest</apexClass>
@@ -1035,7 +1039,7 @@
     </classAccesses>
     <classAccesses>
         <apexClass>WTC_Case_Controller</apexClass>
-        <enabled>false</enabled>
+        <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
         <apexClass>WTC_Case_Controller_Test</apexClass>
@@ -1043,7 +1047,7 @@
     </classAccesses>
     <classAccesses>
         <apexClass>WTC_FileAttachments_Controller</apexClass>
-        <enabled>false</enabled>
+        <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
         <apexClass>WTC_Test</apexClass>
@@ -1067,10 +1071,6 @@
     </classAccesses>
     <classAccesses>
         <apexClass>createIndividulforOldRecordsBatchTest</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>inshertSHaredRecordIterable</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -1507,6 +1507,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Account.Legacy_Salesforce_Org__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Account.Legacy_Salesforce_System__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -1686,7 +1691,7 @@
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
+        <editable>false</editable>
         <field>Account.Salesforce_Legacy_Id__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -3061,6 +3066,11 @@
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>true</editable>
+        <field>Contact.Legacy_Salesforce_Org__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>false</editable>
         <field>Contact.MailingAddress</field>
         <readable>false</readable>
@@ -3461,6 +3471,11 @@
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>true</editable>
+        <field>Costing_Quote__c.Legacy_Salesforce_Org__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>false</editable>
         <field>Costing_Quote__c.MOQ__c</field>
         <readable>false</readable>
@@ -3661,6 +3676,11 @@
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>true</editable>
+        <field>Costing__c.Legacy_Salesforce_Org__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>false</editable>
         <field>Costing__c.Marekting_Status__c</field>
         <readable>false</readable>
@@ -3731,9 +3751,9 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
+        <editable>false</editable>
         <field>Costing__c.Special_Requirements__c</field>
-        <readable>true</readable>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
@@ -3974,6 +3994,11 @@
         <editable>false</editable>
         <field>Event.IsVisibleInSelfService</field>
         <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Event.Legacy_Salesforce_Org__c</field>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -4736,9 +4761,9 @@
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
+        <editable>true</editable>
         <field>Lead.Contact_Text__c</field>
-        <readable>false</readable>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
@@ -4844,6 +4869,11 @@
         <editable>false</editable>
         <field>Lead.Lead_Source_Text__c</field>
         <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Lead.Legacy_Salesforce_Org__c</field>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
@@ -5911,6 +5941,11 @@
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>true</editable>
+        <field>Meeting_Reports__c.Legacy_Salesforce_Org__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>false</editable>
         <field>Meeting_Reports__c.Location__c</field>
         <readable>false</readable>
@@ -6272,6 +6307,16 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Opportunity.Legacy_Salesforce_Org__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Opportunity.Legacy__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Opportunity.Lost_Cancelled_Rejected_Reason__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -6386,6 +6431,11 @@
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>true</editable>
+        <field>Opportunity.Order_Created__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>false</editable>
         <field>Opportunity.PBCR__c</field>
         <readable>false</readable>
@@ -6416,9 +6466,9 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
+        <editable>true</editable>
         <field>Opportunity.Primary_Shipping_Contact__c</field>
-        <readable>false</readable>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -7143,6 +7193,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Order.Legacy_Salesforce_Id__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Order.Legacy_Salesforce_Org__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -8752,6 +8807,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Product2.Hierarchy_Division__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Product2.II_VI_DE_Long_Description__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -8794,6 +8854,11 @@
         <editable>false</editable>
         <field>Product2.Legacy_Part_No__c</field>
         <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Product2.Legacy_Salesforce_Org__c</field>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
@@ -9402,6 +9467,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Quote.Legacy_Salesforce_Org__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Quote.Link_to_Quote_on_Server__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -9477,7 +9547,7 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>Quote.Owner_Email__c</field>
+        <field>Quote.OwnerEmail__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -9566,9 +9636,9 @@
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
+        <editable>false</editable>
         <field>Quote.Quote_Expiration_Date__c</field>
-        <readable>true</readable>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -10056,9 +10126,9 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
+        <editable>true</editable>
         <field>Quote_Item__c.Product__c</field>
-        <readable>false</readable>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
@@ -11204,6 +11274,11 @@
         <editable>false</editable>
         <field>Task.IsVisibleInSelfService</field>
         <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Task.Legacy_Salesforce_Org__c</field>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -12950,6 +13025,10 @@
     </flowAccesses>
     <flowAccesses>
         <enabled>false</enabled>
+        <flow>Close_CC_Case</flow>
+    </flowAccesses>
+    <flowAccesses>
+        <enabled>false</enabled>
         <flow>Comcast_Case_process</flow>
     </flowAccesses>
     <flowAccesses>
@@ -12975,6 +13054,10 @@
     <flowAccesses>
         <enabled>false</enabled>
         <flow>CreateCostingQuote</flow>
+    </flowAccesses>
+    <flowAccesses>
+        <enabled>false</enabled>
+        <flow>Create_Order</flow>
     </flowAccesses>
     <flowAccesses>
         <enabled>false</enabled>
@@ -13047,6 +13130,10 @@
     <flowAccesses>
         <enabled>false</enabled>
         <flow>OpptyLinetoQuoteLineCreation</flow>
+    </flowAccesses>
+    <flowAccesses>
+        <enabled>false</enabled>
+        <flow>OrderLineProcess</flow>
     </flowAccesses>
     <flowAccesses>
         <enabled>false</enabled>
@@ -14001,7 +14088,7 @@
     <objectPermissions>
         <allowCreate>false</allowCreate>
         <allowDelete>false</allowDelete>
-        <allowEdit>false</allowEdit>
+        <allowEdit>true</allowEdit>
         <allowRead>true</allowRead>
         <modifyAllRecords>false</modifyAllRecords>
         <object>Pricebook2</object>
@@ -14113,7 +14200,7 @@
     </pageAccesses>
     <pageAccesses>
         <apexPage>CreateTransferQuote</apexPage>
-        <enabled>false</enabled>
+        <enabled>true</enabled>
     </pageAccesses>
     <pageAccesses>
         <apexPage>CustomMetadataLoader</apexPage>
@@ -14177,11 +14264,11 @@
     </pageAccesses>
     <pageAccesses>
         <apexPage>OpportunityRatePlan</apexPage>
-        <enabled>false</enabled>
+        <enabled>true</enabled>
     </pageAccesses>
     <pageAccesses>
         <apexPage>OrderRatePlan</apexPage>
-        <enabled>false</enabled>
+        <enabled>true</enabled>
     </pageAccesses>
     <pageAccesses>
         <apexPage>QuoteNewButtonPage</apexPage>
@@ -14193,7 +14280,7 @@
     </pageAccesses>
     <pageAccesses>
         <apexPage>QuoteRatePlan</apexPage>
-        <enabled>false</enabled>
+        <enabled>true</enabled>
     </pageAccesses>
     <pageAccesses>
         <apexPage>QuoteTemplate</apexPage>
@@ -14292,12 +14379,12 @@
     <recordTypeVisibilities>
         <default>false</default>
         <recordType>Case.AdvMat</recordType>
-        <visible>true</visible>
+        <visible>false</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>false</default>
         <recordType>Case.AdvMat_Unconfirmed</recordType>
-        <visible>true</visible>
+        <visible>false</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>true</default>
@@ -14318,7 +14405,7 @@
     <recordTypeVisibilities>
         <default>false</default>
         <recordType>Case.HY</recordType>
-        <visible>true</visible>
+        <visible>false</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>false</default>
@@ -14723,6 +14810,10 @@
     <userPermissions>
         <enabled>true</enabled>
         <name>TransactionalEmailSend</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>TransferAnyEntity</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>

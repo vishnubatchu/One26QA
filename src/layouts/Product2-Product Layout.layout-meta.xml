@@ -17,6 +17,10 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
+                <field>Location__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
                 <field>Status__c</field>
             </layoutItems>
             <layoutItems>
@@ -118,6 +122,10 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Standard_From_Vietnam__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Hierarchy_Division__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>

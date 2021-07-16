@@ -57,7 +57,8 @@ public with sharing class CreateTransferQuote_Controller{
                                                         Lead_Time__c = oLine.Lead_Time__c,
                                                         Rich_Text_English__c = oLine.Rich_Text_English__c,
                                                         Rich_Text_Deutsch__c = oLine.Rich_Text_Deutsch__c,
-                                                        SortOrder__c  = oLine.SortOrder
+                                                        SortOrder__c  = oLine.SortOrder,
+                                                        CurrencyIsoCode=newQte.CurrencyIsoCode
                                                        );
                 oppQteLineMap.put(oLine.Id, qLine);
             }

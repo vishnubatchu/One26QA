@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IncidentIdRequiredforSW</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISPICKVAL(Disposition__c  , &apos;Software&apos;)  &amp;&amp;  ISBLANK(Incident_ID__c) &amp;&amp;  RecordType.DeveloperName = &apos;Comcast_Case&apos;</errorConditionFormula>
+    <errorMessage>Incident ID# should be provided for SW issue.</errorMessage>
+</ValidationRule>

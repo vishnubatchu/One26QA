@@ -1,8 +1,8 @@
 trigger OpportunityTrigger on Opportunity (before update , before insert , after update , after insert) {
-    
      if(trigger.isUpdate && trigger.isAfter){
-        if(!OpportunityTriggerHelper.orderCreated)
-            OpportunityTriggerHelper.createOrderonClosedOpps(trigger.oldMap, trigger.new);
+         //Commented the below code since Order creation logic is moved to flow.
+        /*if(!OpportunityTriggerHelper.orderCreated)
+            OpportunityTriggerHelper.createOrderonClosedOpps(trigger.oldMap, trigger.new);*/
     }
      Opportunity_Handler handler = new Opportunity_Handler(); 
      if(Trigger.isBefore && Trigger.isUpdate) 

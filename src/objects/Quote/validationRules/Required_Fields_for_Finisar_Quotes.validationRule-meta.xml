@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Required_Fields_for_Finisar_Quotes</fullName>
+    <active>false</active>
+    <description>&apos;Primary Sales Person&apos; &amp; &apos;Justification&apos; fields are required when the legacy company is finisar</description>
+    <errorConditionFormula>AND(ISPICKVAL($User.Legacy_Company__c,&apos;Finisar&apos;),OR(ISBLANK(PrimarySalesperson__c),LEN (Justification__c)= 0))</errorConditionFormula>
+    <errorMessage>Primary Sales Person and Justification are mandatory fields</errorMessage>
+</ValidationRule>

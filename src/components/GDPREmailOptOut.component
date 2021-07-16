@@ -11,7 +11,7 @@
         </p>
         <br/>
         <p>
-            <a href="mailto:{!$Label.GDPR_Email_Address}?subject=RE:Opt-Out Contact {!recordEmail}&body=Opt Out %0A%0A For Finisar Use Only: [{!recordId}]"> Click here</a> if you do not wish to receive email communications regarding II-VI’s promotions, offers, products and services.
+            <a href="mailto:{!$Label.GDPR_Email_Address}?subject=RE:Opt-Out Contact &body=Opt Out %0A%0A For Finisar Use Only: [{!recordId}]"> Click here</a> if you do not wish to receive email communications regarding II-VI’s promotions, offers, products and services.
         </p>
         <br/>
         <!--p>

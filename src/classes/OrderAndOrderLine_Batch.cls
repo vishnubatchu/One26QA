@@ -5,7 +5,7 @@
 * populates 'Global_Ultimate_Account__c' on order with the same value in Order.AccountId.Global_Ultimate_Parent__c 
 * and also inserts share records for the Order & OrderLine linked/associated Account's Global Parent Account owner   
 */
-public class OrderAndOrderLine_Batch implements Database.Batchable<sObject>,Database.Stateful{
+public class OrderAndOrderLine_Batch implements Database.Batchable<sObject>,Database.Stateful,Schedulable{
     List<OrderAndOrderLineBatch_Helper.CustomError> finalErrorList=new List<OrderAndOrderLineBatch_Helper.CustomError>();
     string csvHeader = 'Record Id,Object Name,Operation, Error \n';
     string mainContent = csvHeader;
@@ -46,5 +46,12 @@ public class OrderAndOrderLine_Batch implements Database.Batchable<sObject>,Data
             }
             EmailUtil.sendEmailWithAttachment(mainContent,'ErrorList.csv',System.Label.Global_Parent_Owner_Account_Update_Batch_Notification_EmaildId,'OrderAndOrderLine_Batch Errors','PFA error file attached.');
         }
+    }
+    
+    //This method schedules the batch to run everyday
+    public void execute(SchedulableContext sc) 
+    {
+            OrderAndOrderLine_Batch batchObj = new OrderAndOrderLine_Batch();
+            Database.executeBatch(batchObj);
     }
 }
